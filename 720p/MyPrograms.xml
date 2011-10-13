@@ -1,0 +1,32 @@
+<window id="1">
+	<defaultcontrol always="true">500</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<views>50,51,52</views>
+	
+	<controls>
+		<control type="group">	
+			<include>BackgroundDefault</include>
+			<include condition="[!IsEmpty(Skin.String(CustomProgramsBGPath)) + [Skin.String(CustomProgramsBGType,) | Skin.String(CustomProgramsBGType,2) | Skin.String(CustomProgramsBGType,3)]]
+			+ Skin.HasSetting(ApplyAllProgramsCustomBG)">BackgroundPrograms</include>
+			<include condition="!Skin.HasSetting(DisableVideoPlayingBG)">BackgroundVideoPlaying</include>
+			<include condition="!Skin.HasSetting(DisableMusicPlayingBG)">BackgroundMusicPlaying</include>
+			<include>BackgroundOpenCloseAnim</include>
+		</control>
+
+		<control type="group">     
+			<include>IconView</include> <!-- 50 -->
+			<include>BigIconView</include> <!-- 51 -->
+			<include>ListView</include> <!-- 52 -->
+		</control>
+		
+		<include condition="!Skin.HasSetting(EnableKioskMode)">MediaMenuBar</include>
+		
+		<control type="group">
+			<description>Top Bar Area</description>
+			<include>TopBarImage</include>
+			<include>TopBarOpenCloseAnim</include>
+			<include>BreadCrumbPrograms</include>
+			<include>Notifications</include>
+		</control>
+	</controls>		
+</window>
