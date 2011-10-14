@@ -8,7 +8,7 @@
 			<include>DropDownMenuCloseHitRect</include>
 		</control>
 		
-		<control type="grouplist" id="900"> <!-- 3080 -->
+		<control type="grouplist" id="900"> <!-- 3084 -->
 			<description>View Options Menu</description>
 			<posx>299</posx>
 			<posy>80</posy>
@@ -794,6 +794,30 @@
 				<selected>Skin.HasSetting(HideEpisodesListInfo3Fanart)</selected>
 				<onclick>Skin.ToggleSetting(HideEpisodesListInfo3Fanart)</onclick>
 				<visible>Skin.String(CurrentViewMode,94) + Container.Content(Episodes)</visible>
+			</control>
+			<control type="radiobutton" id="3084">
+				<description>Thumbs Info Hide Label (Music)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31042]</label>
+				<selected>Skin.HasSetting(HideMusicThumbsInfoLabel)</selected>
+				<onclick>Skin.ToggleSetting(HideMusicThumbsInfoLabel)</onclick>	
+				<visible>Skin.String(CurrentViewMode,98) + Container.Content(Albums)</visible>
+			</control>
+			<control type="radiobutton" id="3085">
+				<description>Thumbs Info Hide Label (Movies)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31042]</label>
+				<selected>Skin.HasSetting(HideMoviesThumbsInfoLabel)</selected>
+				<onclick>Skin.ToggleSetting(HideMoviesThumbsInfoLabel)</onclick>	
+				<visible>Skin.String(CurrentViewMode,97) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="3086">
+				<description>Thumbs Info Hide Label (TVShows)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31042]</label>
+				<selected>Skin.HasSetting(HideTVShowsThumbsInfoLabel)</selected>
+				<onclick>Skin.ToggleSetting(HideTVShowsThumbsInfoLabel)</onclick>	
+				<visible>Skin.String(CurrentViewMode,100) + Container.Content(TVShows)</visible>
 			</control>
 			<control type="radiobutton" id="3072">
 				<description>Thumbs Info Hide Description (Music)</description>

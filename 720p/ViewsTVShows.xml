@@ -2731,6 +2731,25 @@
 				<!--<include>InfoPaneImage</include>-->
 				<include>InfoPaneMediaDetails</include>
 				<include>BottomPaneOpenCloseAnim</include>
+				
+				<control type="group">
+					<visible>!Skin.HasSetting(HideTVShowsThumbsInfoLabel)</visible>
+					
+					<control type="label">
+						<include>InfoPaneItemTitle</include>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					
+					<control type="image">
+						<posx>590</posx>
+						<posy>24</posy>
+						<width>100</width>
+						<height>16</height>	
+						<texture></texture>
+						<texture background="true">$INFO[ListItem.StarRating]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+				</control>
 			</control>	
 
 			<include>ViewsDialogPopUpScreenDim</include>
