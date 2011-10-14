@@ -1086,8 +1086,7 @@
 				<selected>!Skin.HasSetting(DoNotUseStarRatingTVShows)</selected>
 				<onclick>Skin.ToggleSetting(DoNotUseStarRatingTVShows)</onclick>
 				<visible>[Skin.String(CurrentViewMode,52) + Window.IsActive(VideoLibrary) + Container.Content(TVShows)]
-				| Skin.String(CurrentViewMode,61) | [Skin.String(CurrentViewMode,65) + !Skin.HasSetting(UseTVShowsPosterCover)] 
-				| Skin.String(CurrentViewMode,76)] + Container.Content(TVShows)</visible>
+				| Skin.String(CurrentViewMode,61) | Skin.String(CurrentViewMode,65) | Skin.String(CurrentViewMode,76)] + Container.Content(TVShows)</visible>
 			</control>
 			<control type="radiobutton" id="2076">
 				<description>Do Not Use Star Rating (Episodes)</description>
