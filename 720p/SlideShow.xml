@@ -26,15 +26,6 @@
 					<visible>Window.IsActive(VideoScan) | Window.IsActive(MusicScan)</visible>
 					<include>NotificationPulseAnim</include>
 				</control>
-				<control type="image">
-					<posx>-4</posx>
-					<posy>2</posy>
-					<width>43</width>
-					<height>43</height>	
-					<texture>gui/notification-clock.png</texture>
-					<aspectratio>keep</aspectratio>
-					<bordersize>4</bordersize>
-				</control>
 				<control type="label">
 					<posx>-4</posx>
 					<posy>22</posy>

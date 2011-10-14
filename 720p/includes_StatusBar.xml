@@ -147,15 +147,6 @@
 				<visible>Window.IsActive(VolumeBar) | Window.IsActive(MuteBug)</visible>
 			</control>
 			<include condition="!Skin.HasSetting(DisableWeather) + Skin.HasSetting(ApplyAllWeather)">WeatherNotification</include>
-			<control type="image">
-				<posx>-4</posx>
-				<posy>1</posy>
-				<width>43</width>
-				<height>43</height>	
-				<texture>gui/notification-clock.png</texture>
-				<aspectratio>keep</aspectratio>
-				<bordersize>4</bordersize>
-			</control>
 			<control type="label">
 				<posx>-4</posx>
 				<posy>21</posy>
