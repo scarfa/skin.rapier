@@ -2103,7 +2103,7 @@
 			<control type="label">
 				<description>Label</description>
 				<posx>60</posx>
-				<posy>16</posy>
+				<posy>22</posy>
 				<width>455</width>
 				<font>ListFont</font>
 				<textcolor>ListColor</textcolor>
@@ -2114,34 +2114,22 @@
 			<control type="label">
 				<description>Label2</description>
 				<posx>60</posx>
-				<posy>53</posy>
+				<posy>47</posy>
 				<width>455</width>
 				<font>ListFont2</font>
 				<textcolor>ListColor2</textcolor>
 				<shadowcolor>ShadowColor</shadowcolor>
 				<aligny>center</aligny>				
-				<label>$INFO[ListItem.Episode,, $LOCALIZE[20360]]$INFO[ListItem.Studio,  •  ,]</label>
-			</control>
-			<control type="label">
-				<description>Year</description>
-				<posx>610</posx>
-				<posy>53</posy>
-				<width>100</width>
-				<font>ListFont2</font>
-				<textcolor>ListColor3</textcolor>
-				<shadowcolor>ShadowColor</shadowcolor>
-				<align>right</align>
-				<aligny>center</aligny>				
-				<label>$INFO[ListItem.Year]</label>
+				<label>$INFO[ListItem.Year]$INFO[ListItem.Episode,  •  , $LOCALIZE[20360]]</label>
 			</control>
 			<control type="label">
 				<description>Rating</description>
 				<posx>610</posx>
-				<posy>16</posy>
+				<posy>22</posy>
 				<width>100</width>
 				<font>ListFont</font>
 				<textcolor>ListColor</textcolor>
-				<shadowcolor>ShadowColor</shadowcolor>
+				<shadowcolor>ShadowColor3</shadowcolor>
 				<label>$INFO[ListItem.Rating]</label>
 				<align>right</align>
 				<aligny>center</aligny>
@@ -2150,7 +2138,7 @@
 			<control type="image">
 				<description>Star Rating</description>
 				<posx>510</posx>
-				<posy>10</posy>
+				<posy>16</posy>
 				<width>100</width>
 				<height>16</height>		
 				<texture background="true">$INFO[ListItem.StarRating]</texture>
@@ -2160,13 +2148,14 @@
 			</control>
 			<control type="image">
 				<description>Overlay</description>
-				<posx>23</posx>
-				<posy>43</posy>
+				<posx>589</posx>
+				<posy>41</posy>
 				<width>20</width>
 				<height>20</height>
 				<texture background="true">$INFO[ListItem.Overlay]</texture>
 				<aspectratio align="right">keep</aspectratio>
 				<visible>!Skin.HasSetting(HideTVShowsListInfo2Overlay)</visible>
+				<include>ListViewOverlayFadeAnim</include>
 			</control>	
 		</itemlayout>	
 	</include>
@@ -2229,7 +2218,7 @@
 				<control type="label">
 					<description>Label</description>
 					<posx>60</posx>
-					<posy>16</posy>
+					<posy>22</posy>
 					<width>455</width>
 					<font>ListFont</font>
 					<textcolor>SelectedColor</textcolor>
@@ -2241,33 +2230,21 @@
 				<control type="label">
 					<description>Label2</description>
 					<posx>60</posx>
-					<posy>53</posy>
+					<posy>47</posy>
 					<width>455</width>
 					<font>ListFont2</font>
 					<textcolor>ListColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<aligny>center</aligny>				
-					<label>$INFO[ListItem.Episode,, $LOCALIZE[20360]]$INFO[ListItem.Studio,  •  ,]</label>
-				</control>
-				<control type="label">
-					<description>Year</description>
-					<posx>610</posx>
-					<posy>53</posy>
-					<width>100</width>
-					<font>ListFont2</font>
-					<textcolor>ListColor3</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<align>right</align>
-					<aligny>center</aligny>				
-					<label>$INFO[ListItem.Year]</label>
+					<label>$INFO[ListItem.Year]$INFO[ListItem.Episode,  •  , $LOCALIZE[20360]]</label>
 				</control>
 				<control type="label">
 					<description>Rating</description>
 					<posx>610</posx>
-					<posy>16</posy>
+					<posy>22</posy>
 					<width>100</width>
 					<font>ListFont</font>
-					<textcolor>ListColor</textcolor>
+					<textcolor>ListColor3</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<label>$INFO[ListItem.Rating]</label>
 					<align>right</align>
@@ -2277,7 +2254,7 @@
 				<control type="image">
 					<description>Star Rating</description>
 					<posx>510</posx>
-					<posy>10</posy>
+					<posy>16</posy>
 					<width>100</width>
 					<height>16</height>		
 					<texture background="true">$INFO[ListItem.StarRating]</texture>
@@ -2287,14 +2264,15 @@
 				</control>
 				<control type="image">
 					<description>Overlay</description>
-					<posx>23</posx>
-					<posy>43</posy>
+					<posx>589</posx>
+					<posy>41</posy>
 					<width>20</width>
 					<height>20</height>
 					<texture background="true">$INFO[ListItem.Overlay]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!Skin.HasSetting(HideTVShowsListInfo2Overlay)</visible>
 					<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
+					<include>ListViewOverlayFadeAnim</include>
 				</control>
 			</control>
 		</focusedlayout>					
@@ -2357,7 +2335,7 @@
 				<control type="image">
 					<description>Star Rating</description>
 					<posx>510</posx>
-					<posy>10</posy>
+					<posy>16</posy>
 					<width>100</width>
 					<height>16</height>		
 					<texture background="true">$INFO[ListItem.StarRating]</texture>
@@ -2478,7 +2456,7 @@
 				<control type="image">
 					<description>Star Rating</description>
 					<posx>510</posx>
-					<posy>10</posy>
+					<posy>16</posy>
 					<width>100</width>
 					<height>16</height>		
 					<texture background="true">$INFO[ListItem.StarRating]</texture>

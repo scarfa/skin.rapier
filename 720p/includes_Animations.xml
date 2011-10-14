@@ -380,6 +380,10 @@
 		<animation effect="fade" end="80" condition="true">Conditional</animation>
 	</include>
 	
+	<include name="ListViewOverlayFadeAnim">
+		<animation effect="fade" end="80" condition="true">Conditional</animation>
+	</include>
+	
 	<include name="MediaInfoListScrollAnim">
 		<animation effect="slide" start="0,-35" time="200" tween="quadratic" easing="out" reversible="false" condition="Container(901).OnNext">Focus</animation>
 		<animation effect="slide" start="0,35" time="200" tween="quadratic" easing="out" reversible="false" condition="Container(901).OnPrevious">Focus</animation>

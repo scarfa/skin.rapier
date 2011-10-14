@@ -2226,7 +2226,7 @@
 				<control type="label">
 					<description>Label</description>
 					<posx>80</posx>
-					<posy>16</posy>
+					<posy>22</posy>
 					<width>435</width>
 					<font>ListFont</font>
 					<textcolor>ListColor</textcolor>
@@ -2237,33 +2237,21 @@
 				<control type="label">
 					<description>Label2</description>
 					<posx>80</posx>
-					<posy>53</posy>
+					<posy>47</posy>
 					<width>435</width>
 					<font>ListFont2</font>
 					<textcolor>ListColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<aligny>center</aligny>				
-					<label>$INFO[ListItem.Artist]$INFO[ListItem.Genre,  •  ,]</label>
-				</control>
-				<control type="label">
-					<description>Year</description>
-					<posx>610</posx>
-					<posy>53</posy>
-					<width>100</width>
-					<font>ListFont2</font>
-					<textcolor>ListColor3</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<align>right</align>
-					<aligny>center</aligny>				
-					<info>ListItem.Year</info>
+					<label>$INFO[ListItem.Year]$INFO[ListItem.Artist,  •  ,]</label>
 				</control>
 				<control type="label">
 					<description>Rating</description>
 					<posx>610</posx>
-					<posy>16</posy>
+					<posy>22</posy>
 					<width>100</width>
 					<font>ListFont</font>
-					<textcolor>ListColor</textcolor>
+					<textcolor>ListColor3</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<label>$INFO[ListItem.Rating]</label>
 					<align>right</align>
@@ -2273,7 +2261,7 @@
 				<control type="image">
 					<description>Star Rating</description>
 					<posx>510</posx>
-					<posy>10</posy>
+					<posy>16</posy>
 					<width>100</width>
 					<height>16</height>		
 					<texture background="true">$INFO[ListItem.StarRating]</texture>
@@ -2287,7 +2275,7 @@
 				<control type="label">
 					<description>Label</description>
 					<posx>80</posx>
-					<posy>16</posy>
+					<posy>22</posy>
 					<width>435</width>
 					<font>ListFont</font>
 					<textcolor>ListColor</textcolor>
@@ -2298,33 +2286,21 @@
 				<control type="label">
 					<description>Label2</description>
 					<posx>80</posx>
-					<posy>53</posy>
+					<posy>47</posy>
 					<width>435</width>
 					<font>ListFont2</font>
 					<textcolor>ListColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<aligny>center</aligny>				
-					<label>$INFO[ListItem.Duration,, $LOCALIZE[31003]]$INFO[ListItem.Artist,  •  ,]$INFO[ListItem.Album,  •  ,]</label>
-				</control>
-				<control type="label">
-					<description>Year</description>
-					<posx>610</posx>
-					<posy>53</posy>
-					<width>100</width>
-					<font>ListFont2</font>
-					<textcolor>ListColor3</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<align>right</align>
-					<aligny>center</aligny>				
-					<info>ListItem.Year</info>
+					<label>$INFO[ListItem.Duration,, $LOCALIZE[31003]]$INFO[ListItem.Artist,  •  ,]</label>
 				</control>
 				<control type="label">
 					<description>Rating</description>
 					<posx>610</posx>
-					<posy>16</posy>
+					<posy>22</posy>
 					<width>100</width>
 					<font>ListFont</font>
-					<textcolor>ListColor</textcolor>
+					<textcolor>ListColor3</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<label>$INFO[ListItem.Rating]</label>
 					<align>right</align>
@@ -2334,7 +2310,7 @@
 				<control type="image">
 					<description>Star Rating</description>
 					<posx>510</posx>
-					<posy>10</posy>
+					<posy>16</posy>
 					<width>100</width>
 					<height>16</height>		
 					<texture background="true">$INFO[ListItem.StarRating]</texture>
@@ -2348,7 +2324,7 @@
 				<control type="label">
 					<description>Label</description>
 					<posx>80</posx>
-					<posy>16</posy>
+					<posy>22</posy>
 					<width>435</width>
 					<font>ListFont</font>
 					<textcolor>ListColor</textcolor>
@@ -2359,7 +2335,7 @@
 				<control type="label">
 					<description>Label2 (Born)</description>
 					<posx>80</posx>
-					<posy>53</posy>
+					<posy>47</posy>
 					<width>435</width>
 					<font>ListFont2</font>
 					<textcolor>ListColor2</textcolor>
@@ -2371,7 +2347,7 @@
 				<control type="label">
 					<description>Label2 (Formed)</description>
 					<posx>80</posx>
-					<posy>53</posy>
+					<posy>47</posy>
 					<width>435</width>
 					<font>ListFont2</font>
 					<textcolor>ListColor2</textcolor>
@@ -2455,7 +2431,7 @@
 				<control type="label">
 					<description>Label</description>
 					<posx>80</posx>
-					<posy>16</posy>
+					<posy>22</posy>
 					<width>435</width>
 					<font>ListFont</font>
 					<textcolor>SelectedColor</textcolor>
@@ -2467,33 +2443,21 @@
 				<control type="label">
 					<description>Label2</description>
 					<posx>80</posx>
-					<posy>53</posy>
+					<posy>47</posy>
 					<width>435</width>
 					<font>ListFont2</font>
 					<textcolor>ListColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<aligny>center</aligny>				
-					<label>$INFO[ListItem.Artist]$INFO[ListItem.Genre,  •  ,]</label>
-				</control>
-				<control type="label">
-					<description>Year</description>
-					<posx>610</posx>
-					<posy>53</posy>
-					<width>100</width>
-					<font>ListFont2</font>
-					<textcolor>ListColor3</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<align>right</align>
-					<aligny>center</aligny>				
-					<info>ListItem.Year</info>
+					<label>$INFO[ListItem.Year]$INFO[ListItem.Artist,  •  ,]</label>
 				</control>
 				<control type="label">
 					<description>Rating</description>
 					<posx>610</posx>
-					<posy>16</posy>
+					<posy>22</posy>
 					<width>100</width>
 					<font>ListFont</font>
-					<textcolor>ListColor</textcolor>
+					<textcolor>ListColor3</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<label>$INFO[ListItem.Rating]</label>
 					<align>right</align>
@@ -2503,7 +2467,7 @@
 				<control type="image">
 					<description>Star Rating</description>
 					<posx>510</posx>
-					<posy>10</posy>
+					<posy>16</posy>
 					<width>100</width>
 					<height>16</height>		
 					<texture background="true">$INFO[ListItem.StarRating]</texture>
@@ -2518,7 +2482,7 @@
 				<control type="label">
 					<description>Label</description>
 					<posx>80</posx>
-					<posy>16</posy>
+					<posy>22</posy>
 					<width>435</width>
 					<font>ListFont</font>
 					<textcolor>SelectedColor</textcolor>
@@ -2530,33 +2494,21 @@
 				<control type="label">
 					<description>Label2</description>
 					<posx>80</posx>
-					<posy>53</posy>
+					<posy>47</posy>
 					<width>435</width>
 					<font>ListFont2</font>
 					<textcolor>ListColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<aligny>center</aligny>				
-					<label>$INFO[ListItem.Duration,, $LOCALIZE[31003]]$INFO[ListItem.Artist,  •  ,]$INFO[ListItem.Album,  •  ,]</label>
-				</control>
-				<control type="label">
-					<description>Year</description>
-					<posx>610</posx>
-					<posy>53</posy>
-					<width>100</width>
-					<font>ListFont2</font>
-					<textcolor>ListColor3</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<align>right</align>
-					<aligny>center</aligny>				
-					<info>ListItem.Year</info>
+					<label>$INFO[ListItem.Duration,, $LOCALIZE[31003]]$INFO[ListItem.Artist,  •  ,]</label>
 				</control>
 				<control type="label">
 					<description>Rating</description>
 					<posx>610</posx>
-					<posy>16</posy>
+					<posy>22</posy>
 					<width>100</width>
 					<font>ListFont</font>
-					<textcolor>ListColor</textcolor>
+					<textcolor>ListColor3</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<label>$INFO[ListItem.Rating]</label>
 					<align>right</align>
@@ -2566,7 +2518,7 @@
 				<control type="image">
 					<description>Star Rating</description>
 					<posx>510</posx>
-					<posy>10</posy>
+					<posy>16</posy>
 					<width>100</width>
 					<height>16</height>		
 					<texture background="true">$INFO[ListItem.StarRating]</texture>
@@ -2581,7 +2533,7 @@
 				<control type="label">
 					<description>Label</description>
 					<posx>80</posx>
-					<posy>16</posy>
+					<posy>22</posy>
 					<width>435</width>
 					<font>ListFont</font>
 					<textcolor>SelectedColor</textcolor>
@@ -2593,7 +2545,7 @@
 				<control type="label">
 					<description>Label2 (Born)</description>
 					<posx>80</posx>
-					<posy>53</posy>
+					<posy>47</posy>
 					<width>435</width>
 					<font>ListFont2</font>
 					<textcolor>ListColor2</textcolor>
@@ -2605,7 +2557,7 @@
 				<control type="label">
 					<description>Label2 (Formed)</description>
 					<posx>80</posx>
-					<posy>53</posy>
+					<posy>47</posy>
 					<width>435</width>
 					<font>ListFont2</font>
 					<textcolor>ListColor2</textcolor>
