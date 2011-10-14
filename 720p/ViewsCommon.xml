@@ -791,7 +791,7 @@
 				<posy>22</posy>
 				<width>100</width>
 				<font>ListFont</font>
-				<textcolor>ListColor</textcolor>
+				<textcolor>ListColor3</textcolor>
 				<shadowcolor>ShadowColor</shadowcolor>
 				<label>$INFO[ListItem.Rating]</label>
 				<align>right</align>
@@ -886,7 +886,7 @@
 				<posy>22</posy>
 				<width>100</width>
 				<font>ListFont</font>
-				<textcolor>ListColor</textcolor>
+				<textcolor>ListColor3</textcolor>
 				<shadowcolor>ShadowColor</shadowcolor>
 				<label>$INFO[ListItem.Rating]</label>
 				<align>right</align>
@@ -1052,7 +1052,7 @@
 				<posy>22</posy>
 				<width>100</width>
 				<font>ListFont</font>
-				<textcolor>ListColor</textcolor>
+				<textcolor>ListColor3</textcolor>
 				<shadowcolor>ShadowColor</shadowcolor>
 				<label>$INFO[ListItem.Rating]</label>
 				<align>right</align>
@@ -1136,7 +1136,7 @@
 				<posy>22</posy>
 				<width>100</width>
 				<font>ListFont</font>
-				<textcolor>ListColor</textcolor>
+				<textcolor>ListColor3</textcolor>
 				<shadowcolor>ShadowColor</shadowcolor>
 				<label>$INFO[ListItem.Rating]</label>
 				<align>right</align>
@@ -1509,7 +1509,7 @@
 					<posy>22</posy>
 					<width>100</width>
 					<font>ListFont</font>
-					<textcolor>ListColor</textcolor>
+					<textcolor>ListColor3</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<label>$INFO[ListItem.Rating]</label>
 					<align>right</align>
@@ -1597,7 +1597,7 @@
 					<posy>22</posy>
 					<width>100</width>
 					<font>ListFont</font>
-					<textcolor>ListColor</textcolor>
+					<textcolor>ListColor3</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<label>$INFO[ListItem.Rating]</label>
 					<align>right</align>
@@ -1749,7 +1749,7 @@
 					<posy>22</posy>
 					<width>100</width>
 					<font>ListFont</font>
-					<textcolor>ListColor</textcolor>
+					<textcolor>ListColor3</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<label>$INFO[ListItem.Rating]</label>
 					<align>right</align>
@@ -1826,7 +1826,7 @@
 					<posy>22</posy>
 					<width>100</width>
 					<font>ListFont</font>
-					<textcolor>ListColor</textcolor>
+					<textcolor>ListColor3</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<label>$INFO[ListItem.Rating]</label>
 					<align>right</align>

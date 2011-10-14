@@ -2128,7 +2128,7 @@
 				<posy>22</posy>
 				<width>100</width>
 				<font>ListFont</font>
-				<textcolor>ListColor</textcolor>
+				<textcolor>ListColor3</textcolor>
 				<shadowcolor>ShadowColor3</shadowcolor>
 				<label>$INFO[ListItem.Rating]</label>
 				<align>right</align>
