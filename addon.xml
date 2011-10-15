@@ -2,7 +2,7 @@
 <addon
   id="skin.rapier"
   version="4.00"
-  name="Rapier 4"
+  name="Rapier"
   provider-name="Scarfa">
   <requires>
     <import addon="xbmc.gui" version="2.11"/>
