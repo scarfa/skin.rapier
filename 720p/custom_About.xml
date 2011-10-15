@@ -221,7 +221,7 @@
 				<height>40</height>
 				<align>center</align>
 				<include>InfoPaneHeadLabel2</include>
-				<label>[UPPERCASE]For the full license, contributions made to this work, and any pertinent information, please refer to the readme.txt[/UPPERCASE]</label>
+				<label>[UPPERCASE]For the full license, contributions made to this work, and any pertinent information, please refer to the license.txt and readme.txt[/UPPERCASE]</label>
 			</control>
 			<include>BottomPaneOpenCloseAnim</include>
 		</control>
