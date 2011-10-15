@@ -3244,17 +3244,11 @@
 					<control type="label">
 						<include>InfoPaneItemTitle</include>
 						<label>$INFO[ListItem.Album]</label>
-						<visible>Container.Content(Albums)</visible>
 					</control>
 					
-					<control type="image">
-						<posx>590</posx>
-						<posy>24</posy>
-						<width>100</width>
-						<height>16</height>	
-						<texture></texture>
-						<texture background="true">$INFO[ListItem.StarRating]</texture>
-						<aspectratio>keep</aspectratio>
+					<control type="label">
+						<include>InfoPaneItemTitle2</include>
+						<label>$INFO[ListItem.Artist]</label>
 					</control>
 				</control>
 			</control>	
