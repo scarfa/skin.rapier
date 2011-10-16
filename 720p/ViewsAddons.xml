@@ -178,7 +178,7 @@
 						<font>WideListFont2</font>
 						<textcolor>ListColor3</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
-						<label>$INFO[ListItem.Label2]</label>
+						<label>$INFO[ListItem.Property(Addon.Status)]</label>
 						<align>right</align>
 						<aligny>center</aligny>
 					</control>
@@ -332,7 +332,7 @@
 						<font>WideListFont2</font>
 						<textcolor>SelectedColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
-						<label>$INFO[ListItem.Label2]</label>
+						<label>$INFO[ListItem.Property(Addon.Status)]</label>
 						<align>right</align>
 						<aligny>center</aligny>
 					</control>
