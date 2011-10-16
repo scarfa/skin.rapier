@@ -2,7 +2,7 @@
 	<defaultcontrol always="true">9999</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<previouswindow>Home</previouswindow>
-	<views>50,51,52,54,53,71,75,58,66,95,97,56,76,61,65,100,74,73,68,94,69,63,90,91,92,93</views>
+	<views>50,51,52,54,53,71,75,58,66,95,97,56,76,61,65,100,74,73,68,94,69,63,90,91,93</views>
 	
 	<controls>
 		<control type="group">
@@ -49,7 +49,6 @@
 			<include>AlbumThumbsView</include> <!-- 63 -->
 			<include>AddonsWideListView</include> <!-- 90 -->
 			<include>AddonsListInfoView</include> <!-- 91 -->
-			<include>AddonsListInfoView2</include> <!-- 92 -->
 			<include>AddonsWrapListInfoView</include> <!-- 93 -->
 		</control>
 		

@@ -2,7 +2,7 @@
 	<defaultcontrol always="true">500</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<previouswindow>Home</previouswindow>
-	<views>50,51,52,63,77,62,67,96,98,64,70</views>
+	<views>50,51,52,63,77,62,67,96,98,64,70,90,91,93</views>
 	
 	<controls>	
 		<control type="group">
@@ -29,6 +29,9 @@
 			<include>MusicThumbsInfoView</include> <!-- 98 -->
 			<include>MusicWrapListInfoView</include> <!-- 64 -->
 			<include>MusicWallView</include> <!-- 70 -->
+			<include>AddonsWideListView</include> <!-- 90 -->
+			<include>AddonsListInfoView</include> <!-- 91 -->
+			<include>AddonsWrapListInfoView</include> <!-- 93 -->
 		</control>	
 		
 		<include condition="!Skin.HasSetting(EnableKioskMode)">MediaMenuBar</include>

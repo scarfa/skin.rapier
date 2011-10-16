@@ -1,7 +1,7 @@
 <window id="2">
     <defaultcontrol always="true">500</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>50,51,52</views>
+	<views>50,51,52,90,91,93</views>
 	
 	<controls>
 		<control type="group">	
@@ -17,6 +17,9 @@
 			<include>IconView</include> <!-- 50 -->
 			<include>BigIconView</include> <!-- 51 -->
 			<include>ListView</include> <!-- 52 -->
+			<include>AddonsWideListView</include> <!-- 90 -->
+			<include>AddonsListInfoView</include> <!-- 91 -->
+			<include>AddonsWrapListInfoView</include> <!-- 93 -->
 		</control>
 		
 		<include condition="!Skin.HasSetting(EnableKioskMode)">MediaMenuBar</include>
