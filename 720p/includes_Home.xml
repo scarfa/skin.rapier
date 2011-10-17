@@ -282,6 +282,22 @@
 		<thumb>special://profile/Thumbnails/Video/Fanart</thumb>
 	</include>
 	
+	<include name="HomeProgramsCustomBGPath">
+		<thumb>$INFO[Skin.String(CustomProgramsBGPath)]</thumb>
+	</include>
+	
+	<include name="HomePicturesCustomBGPath">
+		<thumb>$INFO[Skin.String(CustomPicturesBGPath)]</thumb>
+	</include>
+	
+	<include name="HomeGeneralCustomBGPath">
+		<thumb>$INFO[Skin.String(CustomGeneralBGPath)]</thumb>
+	</include>
+	
+	<include name="HomeSystemCustomBGPath">
+		<thumb>$INFO[Skin.String(CustomSystemBGPath)]</thumb>
+	</include>
+	
 	<include name="HomeCustomCategory1">
 		<item id="7">
 			<label>-</label>
@@ -582,7 +598,7 @@
 					<description>Programs Category</description>
 					<label>programs</label>
 					<icon>homecategories/$INFO[System.Language]/programs-text-nofocus.png</icon>
-					<thumb>$INFO[Skin.String(CustomProgramsBGPath)]</thumb>
+					<include condition="Skin.String(CustomProgramsBGType,2) | Skin.String(CustomProgramsBGType,3) | Skin.String(CustomProgramsBGType,)">HomeProgramsCustomBGPath</include>
 					<onclick>ActivateWindow(Programs)</onclick>	
 					<visible>!Skin.HasSetting(HideProgramsCategory)</visible>
 				</item>
@@ -590,7 +606,7 @@
 					<description>Pictures Category</description>
 					<label>pictures</label>
 					<icon>homecategories/$INFO[System.Language]/pictures-text-nofocus.png</icon>
-					<thumb>$INFO[Skin.String(CustomPicturesBGPath)]</thumb>
+					<include condition="Skin.String(CustomPicturesBGType,2) | Skin.String(CustomPicturesBGType,3) | Skin.String(CustomPicturesBGType,)">HomePicturesCustomBGPath</include>
 					<onclick>ActivateWindow(Pictures)</onclick>
 					<visible>!Skin.HasSetting(HidePicturesCategory)</visible>
 				</item>
@@ -606,7 +622,7 @@
 					<description>General Category</description>
 					<label>general</label>
 					<icon>homecategories/$INFO[System.Language]/general-text-nofocus.png</icon>
-					<thumb>$INFO[Skin.String(CustomGeneralBGPath)]</thumb>
+					<include condition="Skin.String(CustomGeneralBGType,2) | Skin.String(CustomGeneralBGType,3) | Skin.String(CustomGeneralBGType,)">HomeGeneralCustomBGPath</include>
 					<onclick>ActivateWindow(Filemanager)</onclick>		
 					<visible>!Skin.HasSetting(HideGeneralCategory)</visible>
 				</item>	
@@ -614,7 +630,7 @@
 					<description>System Category</description>
 					<label>system</label>
 					<icon>homecategories/$INFO[System.Language]/system-text-nofocus.png</icon>
-					<thumb>$INFO[Skin.String(CustomSystemBGPath)]</thumb>
+					<include condition="Skin.String(CustomSystemBGType,2) | Skin.String(CustomSystemBGType,3) | Skin.String(CustomSystemBGType,)">HomeSystemCustomBGPath</include>
 					<onclick>ActivateWindow(AppearanceSettings)</onclick>    
 					<visible>!Skin.HasSetting(HideSystemCategory)</visible>
 				</item>					
