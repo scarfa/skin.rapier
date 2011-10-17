@@ -11,6 +11,10 @@ DOWNLOAD:
 
 http://tvnca.deviantart.com/#/d29r42w
 
+DEVELOPMENT:
+
+https://github.com/scarfa/skin.rapier
+
 SUPPORT: 
 
 http://blog.xbmc.org/forum/forumdisplay.php?f=120
