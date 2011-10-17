@@ -985,7 +985,7 @@
 					<width>235</width>
 					<height>340</height>
 					<itemgap>15</itemgap>
-					<onup>4272</onup>
+					<onup>4271</onup>
 					<ondown>4270</ondown>
 					<onleft>Skin.Reset(ExpandCustomGeneralBGSettings)</onleft>
 					<onleft>Skin.Reset(ExpandedSettings)</onleft>
@@ -1037,15 +1037,6 @@
 						<onclick>Skin.SetPath(CustomGeneralBGPath)</onclick>
 						<visible>Skin.String(CustomGeneralBGType,3)</visible>
 					</control>
-					<control type="togglebutton" id="4272">
-						<description>Dim Background</description>
-						<include>SettingsContentRadioBtn</include>
-						<label>$LOCALIZE[33068] $LOCALIZE[31059]</label>
-						<altlabel>$LOCALIZE[33068] $LOCALIZE[31060]</altlabel>
-						<usealttexture>Skin.HasSetting(DimGeneralBackgroundHigh)</usealttexture>
-						<onclick>Skin.ToggleSetting(DimGeneralBackgroundHigh)</onclick>
-						<visible>Skin.String(CustomGeneralBGType,2) | Skin.String(CustomGeneralBGType,3) | Skin.String(CustomGeneralBGType,)</visible>
-					</control>
 				</control>
 				
 				<control type="button">
@@ -1089,7 +1080,7 @@
 					<width>235</width>
 					<height>340</height>
 					<itemgap>15</itemgap>
-					<onup>4282</onup>
+					<onup>4281</onup>
 					<ondown>4280</ondown>
 					<onleft>Skin.Reset(ExpandCustomSystemBGSettings)</onleft>
 					<onleft>Skin.Reset(ExpandedSettings)</onleft>
@@ -1140,15 +1131,6 @@
 						<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(CustomSystemBGPath)][/COLOR]</label>
 						<onclick>Skin.SetPath(CustomSystemBGPath)</onclick>
 						<visible>Skin.String(CustomSystemBGType,3)</visible>
-					</control>
-					<control type="togglebutton" id="4282">
-						<description>Dim Background</description>
-						<include>SettingsContentRadioBtn</include>
-						<label>$LOCALIZE[33068] $LOCALIZE[31059]</label>
-						<altlabel>$LOCALIZE[33068] $LOCALIZE[31060]</altlabel>
-						<usealttexture>Skin.HasSetting(DimSystemBackgroundHigh)</usealttexture>
-						<onclick>Skin.ToggleSetting(DimSystemBackgroundHigh)</onclick>
-						<visible>Skin.String(CustomSystemBGType,2) | Skin.String(CustomSystemBGType,3) | Skin.String(CustomSystemBGType,)</visible>
 					</control>
 				</control>
 				
