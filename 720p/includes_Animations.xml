@@ -1,5 +1,5 @@
 <includes>
-<!--//// COMMON /////////////////////////////////////////////////////////////////////////////////-->
+	<!--//// COMMON ///////////////////////////////////////////////////////////////////////////////////-->
 
 	<include name="BackgroundOpenCloseAnim"> 
 		<animation effect="fade" start="40" end="100" time="600">WindowOpen</animation> 
@@ -210,8 +210,8 @@
 		<animation effect="fade" start="0" end="100" time="600">VisibleChange</animation>
 	</include>
 
-<!--//// HOME ///////////////////////////////////////////////////////////////////////////////////-->
-	
+	<!--//// HOME /////////////////////////////////////////////////////////////////////////////////////-->
+
 	<include name="HomeMenuOpenCloseAnim">
 		<animation effect="fade" end="100" time="650">WindowOpen</animation> 
 		<animation effect="fade" end="0" time="650">WindowClose</animation>	
@@ -270,7 +270,7 @@
 	</include>
 	
 	<include name="HomeSubMenuItemOpenCloseAnim">
-		<animation type="Visible" reversible="false"condition="Container(850).OnNext">
+		<animation type="Visible" reversible="false" condition="Container(850).OnNext">
 			<effect type="fade" end="100" time="250" delay="100"/>
 			<effect type="slide" start="100,0" time="300" tween="circle" easing="out" delay="100"/>
 		</animation>
@@ -346,7 +346,7 @@
 		<animation effect="fade" start="0" end="100" time="600">VisibleChange</animation>
 	</include>
 	
-<!--//// MEDIA /////////////////////////////////////////////////////////////////////////////-->	
+	<!--//// MEDIA ////////////////////////////////////////////////////////////////////////////////////-->	
 
 	<include name="MenuOpenCloseAnim">
 		<animation type="WindowOpen">
@@ -406,21 +406,21 @@
 	<include name="ListViewCoverFocusAnim">
 		<animation type="Focus" reversible="false">
 			<effect effect="fade" start="0" end="100" delay="100" time="100"/>
-			<effect type="zoom" start="60" end="100" time="300" delay="100"center="auto" easing="out" tween="back"/>
+			<effect type="zoom" start="60" end="100" time="300" delay="100" center="auto" easing="out" tween="back"/>
 		</animation>
 	</include>
 	
 	<include name="WideListViewCoverFocusAnim">
 		<animation type="Focus" reversible="false">
 			<effect effect="fade" start="0" end="100" delay="100" time="100"/>
-			<effect type="zoom" start="80" end="100" time="300" delay="100"center="auto" easing="out" tween="back"/>
+			<effect type="zoom" start="80" end="100" time="300" delay="100" center="auto" easing="out" tween="back"/>
 		</animation>
 	</include>
 	
 	<include name="WideListViewBannerFocusAnim">
 		<animation type="Focus" reversible="false">
 			<effect effect="fade" start="0" end="100" delay="100" time="100"/>
-			<effect type="zoom" start="90" end="100" time="300" delay="100"center="auto" easing="out" tween="back"/>
+			<effect type="zoom" start="90" end="100" time="300" delay="100" center="auto" easing="out" tween="back"/>
 		</animation>
 	</include>
 	

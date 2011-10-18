@@ -1,4 +1,5 @@
 <includes>
+	<!--//// START WIDE LIST VIEW /////////////////////////////////////////////////////////////////////-->
 	<include name="MoviesWideListView">
 		<control type="group" id="500">	
 	        <defaultcontrol always="true">75</defaultcontrol>
@@ -377,7 +378,9 @@
 			<include>ViewsDialogPopUpScreenDim</include>
 		</control>
 	</include>
-	<!---------------------------------------------------------------------------------------------------------------------------------------------------->	
+	<!--//// END WIDE LIST VIEW ///////////////////////////////////////////////////////////////////////-->
+
+	<!--//// START LIST INFO VIEW /////////////////////////////////////////////////////////////////////-->
 	<include name="MoviesListInfoView">
 		<control type="group" id="500">			    
 			<defaultcontrol always="true">58</defaultcontrol>
@@ -732,7 +735,9 @@
 			<include>ViewsDialogPopUpScreenDim</include>
 		</control>	
 	</include>
-	<!---------------------------------------------------------------------------------------------------------------------------------------------------->	
+	<!--//// END LIST INFO VIEW ///////////////////////////////////////////////////////////////////////-->
+
+	<!--//// START LIST INFO 2 VIEW ///////////////////////////////////////////////////////////////////-->
 	<include name="MoviesListInfoView2">	
 		<control type="group" id="500">	
 	        <defaultcontrol always="true">66</defaultcontrol>
@@ -1184,7 +1189,7 @@
 				<textcolor>ListColor2</textcolor>
 				<shadowcolor>ShadowColor</shadowcolor>
 				<aligny>center</aligny>				
-				<label>$INFO[ListItem.Year]$INFO[ListItem.Director,  •  ,]</label>
+				<label>$INFO[ListItem.Year]$INFO[ListItem.Director,  -  ,]</label>
 			</control>
 			<control type="label">
 				<description>Rating</description>
@@ -1299,7 +1304,7 @@
 					<textcolor>ListColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<aligny>center</aligny>				
-					<label>$INFO[ListItem.Year]$INFO[ListItem.Director,  •  ,]</label>
+					<label>$INFO[ListItem.Year]$INFO[ListItem.Director,  -  ,]</label>
 				</control>
 				<control type="label">
 					<description>Rating</description>
@@ -1339,7 +1344,9 @@
 			</control>
 		</focusedlayout>					
 	</include>
-	<!---------------------------------------------------------------------------------------------------------------------------------------------------->	
+	<!--//// END LIST INFO 2 VIEW /////////////////////////////////////////////////////////////////////-->
+
+	<!--//// START LIST INFO 3 VIEW ///////////////////////////////////////////////////////////////////-->
 	<include name="MoviesListInfoView3">	
 		<control type="group" id="500">	
 	        <defaultcontrol always="true">95</defaultcontrol>
@@ -1677,7 +1684,9 @@
 			<include>ViewsDialogPopUpScreenDim</include>
 		</control>		
 	</include>
-	<!---------------------------------------------------------------------------------------------------------------------------------------------------->	
+	<!--//// END LIST INFO 3 VIEW /////////////////////////////////////////////////////////////////////-->
+
+	<!--//// START THUMBS INFO VIEW ///////////////////////////////////////////////////////////////////-->
 	<include name="MoviesThumbsInfoView">	
 		<control type="group" id="500">	
 	        <defaultcontrol always="true">97</defaultcontrol>
@@ -2083,7 +2092,9 @@
 			<include>ViewsDialogPopUpScreenDim</include>
 		</control>		
 	</include>
-	<!---------------------------------------------------------------------------------------------------------------------------------------------------->	
+	<!--//// END THUMBS INFO VIEW /////////////////////////////////////////////////////////////////////-->
+
+	<!--//// START WRAP LIST INFO VIEW ////////////////////////////////////////////////////////////////-->
 	<include name="MoviesWrapListInfoView">
 		<control type="group" id="500">	
 		    <defaultcontrol always="true">53</defaultcontrol>
@@ -2869,7 +2880,9 @@
 			
 		<include>WrapInfoViewScrollbar</include>
 	</include>
-	<!---------------------------------------------------------------------------------------------------------------------------------------------------->	
+	<!--//// END WRAP LIST INFO VIEW //////////////////////////////////////////////////////////////////-->
+
+	<!--//// START WALL VIEW //////////////////////////////////////////////////////////////////////////-->
 	<include name="MoviesWallView">
 		<control type="group" id="500">	
 		    <defaultcontrol always="true">69</defaultcontrol>
@@ -3105,4 +3118,5 @@
 			<include>ViewsDialogPopUpScreenDim</include>
 		</control>
 	</include>
+	<!--//// END WALL VIEW ////////////////////////////////////////////////////////////////////////////-->
 </includes>

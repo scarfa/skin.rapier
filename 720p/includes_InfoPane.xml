@@ -148,7 +148,7 @@
 			
 			<control type="label">
 				<include>InfoPaneHeadLabel2</include>
-				<label>$INFO[Window(Home).Property(Movies.Count),, $LOCALIZE[20342] $LOCALIZE[20161]]$INFO[Window(Home).Property(Movies.Watched),  •  , $LOCALIZE[16102]]</label>
+				<label>$INFO[Window(Home).Property(Movies.Count),, $LOCALIZE[20342] $LOCALIZE[20161]]$INFO[Window(Home).Property(Movies.Watched),  -  , $LOCALIZE[16102]]</label>
 			</control>
 		</control>
 		
@@ -159,13 +159,13 @@
 				
 			<control type="label">
 				<include>InfoPaneHeadLabel2</include>
-				<label>$INFO[Window(Home).Property(TVShows.Count),, $LOCALIZE[20343] $LOCALIZE[20161]]$INFO[Window(Home).Property(TVShows.Watched),  •  , $LOCALIZE[16102]]</label>
+				<label>$INFO[Window(Home).Property(TVShows.Count),, $LOCALIZE[20343] $LOCALIZE[20161]]$INFO[Window(Home).Property(TVShows.Watched),  -  , $LOCALIZE[16102]]</label>
 			</control>
 		</control>
 		
 		<control type="label">
 			<include>InfoPaneHeadLabel2</include>
-			<label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]$INFO[ListItem.Property(WatchedEpisodes),  •  , $LOCALIZE[16102]]</label>
+			<label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]$INFO[ListItem.Property(WatchedEpisodes),  -  , $LOCALIZE[16102]]</label>
 			<visible>Container.Content(Seasons)</visible>
 		</control>
 		
@@ -185,7 +185,7 @@
 					
 			<control type="label">
 				<include>InfoPaneHeadLabel2</include>
-				<label>$INFO[Window(Home).Property(MusicVideos.Count),, $LOCALIZE[20389] $LOCALIZE[20161]]$INFO[Window(Home).Property(MusicVideos.Watched),  •  , $LOCALIZE[16102]]</label>
+				<label>$INFO[Window(Home).Property(MusicVideos.Count),, $LOCALIZE[20389] $LOCALIZE[20161]]$INFO[Window(Home).Property(MusicVideos.Watched),  -  , $LOCALIZE[16102]]</label>
 			</control>
 		</control>
 	</include>
@@ -197,7 +197,7 @@
 				
 			<control type="label">
 				<include>InfoPaneHeadLabel2</include>
-				<label>$INFO[Window(Home).Property(Music.AlbumsCount),, $LOCALIZE[132] $LOCALIZE[20161]]$INFO[Window(Home).Property(Music.SongsCount),  •  , $LOCALIZE[134]]</label>
+				<label>$INFO[Window(Home).Property(Music.AlbumsCount),, $LOCALIZE[132] $LOCALIZE[20161]]$INFO[Window(Home).Property(Music.SongsCount),  -  , $LOCALIZE[134]]</label>
 			</control>
 		</control>
 
@@ -227,7 +227,7 @@
 			
 			<control type="label">
 				<include>InfoPaneHeadLabel2</include>
-				<label>$INFO[Window(Home).Property(MusicVideos.Count),, $LOCALIZE[20389] $LOCALIZE[20161]]$INFO[Window(Home).Property(MusicVideos.Watched),  •  , $LOCALIZE[16102]]</label>
+				<label>$INFO[Window(Home).Property(MusicVideos.Count),, $LOCALIZE[20389] $LOCALIZE[20161]]$INFO[Window(Home).Property(MusicVideos.Watched),  -  , $LOCALIZE[16102]]</label>
 			</control>
 		</control>
 	</include>

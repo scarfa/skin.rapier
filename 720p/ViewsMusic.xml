@@ -1,4 +1,5 @@
 <includes>
+	<!--//// START WIDE LIST VIEW /////////////////////////////////////////////////////////////////////-->
 	<include name="MusicWideListView">
 		<control type="group" id="500">	
 	        <defaultcontrol always="true">77</defaultcontrol>
@@ -938,7 +939,9 @@
 			<include>ViewsDialogPopUpScreenDim</include>
 		</control>
 	</include>
-	<!---------------------------------------------------------------------------------------------------------------------------------------------------->
+	<!--//// END WIDE LIST VIEW ///////////////////////////////////////////////////////////////////////-->
+	
+	<!--//// START LIST INFO VIEW /////////////////////////////////////////////////////////////////////-->
 	<include name="MusicListInfoView">
 		<control type="group" id="500">			    
 			<defaultcontrol always="true">62</defaultcontrol>
@@ -1492,7 +1495,9 @@
 			<include>ViewsDialogPopUpScreenDim</include>
 		</control>	
 	</include>
-	<!---------------------------------------------------------------------------------------------------------------------------------------------------->
+	<!--//// END LIST INFO VIEW ///////////////////////////////////////////////////////////////////////-->
+	
+	<!--//// START LIST INFO 2 VIEW ///////////////////////////////////////////////////////////////////-->
 	<include name="MusicListInfoView2">	
 		<control type="group" id="500">	
 	        <defaultcontrol always="true">67</defaultcontrol>
@@ -2243,7 +2248,7 @@
 					<textcolor>ListColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<aligny>center</aligny>				
-					<label>$INFO[ListItem.Year]$INFO[ListItem.Artist,  •  ,]</label>
+					<label>$INFO[ListItem.Year]$INFO[ListItem.Artist,  -  ,]</label>
 				</control>
 				<control type="label">
 					<description>Rating</description>
@@ -2292,7 +2297,7 @@
 					<textcolor>ListColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<aligny>center</aligny>				
-					<label>$INFO[ListItem.Duration,, $LOCALIZE[31003]]$INFO[ListItem.Artist,  •  ,]</label>
+					<label>$INFO[ListItem.Duration,, $LOCALIZE[31003]]$INFO[ListItem.Artist,  -  ,]</label>
 				</control>
 				<control type="label">
 					<description>Rating</description>
@@ -2449,7 +2454,7 @@
 					<textcolor>ListColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<aligny>center</aligny>				
-					<label>$INFO[ListItem.Year]$INFO[ListItem.Artist,  •  ,]</label>
+					<label>$INFO[ListItem.Year]$INFO[ListItem.Artist,  -  ,]</label>
 				</control>
 				<control type="label">
 					<description>Rating</description>
@@ -2500,7 +2505,7 @@
 					<textcolor>ListColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<aligny>center</aligny>				
-					<label>$INFO[ListItem.Duration,, $LOCALIZE[31003]]$INFO[ListItem.Artist,  •  ,]</label>
+					<label>$INFO[ListItem.Duration,, $LOCALIZE[31003]]$INFO[ListItem.Artist,  -  ,]</label>
 				</control>
 				<control type="label">
 					<description>Rating</description>
@@ -2569,7 +2574,9 @@
 			</control>
 		</focusedlayout>						
 	</include>
-	<!---------------------------------------------------------------------------------------------------------------------------------------------------->	
+	<!--//// END LIST INFO 2 VIEW /////////////////////////////////////////////////////////////////////-->
+
+	<!--//// START LIST INFO 3 VIEW ///////////////////////////////////////////////////////////////////-->
 	<include name="MusicListInfoView3">	
 		<control type="group" id="500">	
 	        <defaultcontrol always="true">96</defaultcontrol>
@@ -2885,7 +2892,9 @@
 			<include>ViewsDialogPopUpScreenDim</include>
 		</control>		
 	</include>
-	<!---------------------------------------------------------------------------------------------------------------------------------------------------->	
+	<!--//// END LIST INFO 3 VIEW /////////////////////////////////////////////////////////////////////-->
+
+	<!--//// START THUMBS INFO VIEW ///////////////////////////////////////////////////////////////////-->
 	<include name="MusicThumbsInfoView">	
 		<control type="group" id="500">	
 	        <defaultcontrol always="true">98</defaultcontrol>
@@ -3256,7 +3265,9 @@
 			<include>ViewsDialogPopUpScreenDim</include>
 		</control>		
 	</include>
-	<!---------------------------------------------------------------------------------------------------------------------------------------------------->
+	<!--//// END THUMBS INFO VIEW /////////////////////////////////////////////////////////////////////-->
+
+	<!--//// START WRAP LIST INFO VIEW ////////////////////////////////////////////////////////////////-->
 	<include name="MusicWrapListInfoView">
 		<control type="group" id="500">	
 		    <defaultcontrol always="true">64</defaultcontrol>
@@ -3976,7 +3987,9 @@
 			
 		<include>WrapInfoViewScrollbar</include>
 	</include>
-	<!---------------------------------------------------------------------------------------------------------------------------------------------------->	
+	<!--//// END WRAP LIST INFO VIEW //////////////////////////////////////////////////////////////////-->
+
+	<!--//// START WALL VIEW //////////////////////////////////////////////////////////////////////////-->
 	<include name="MusicWallView">
 		<control type="group" id="500">	
 		    <defaultcontrol always="true">70</defaultcontrol>
@@ -4150,4 +4163,5 @@
 			<include>ViewsDialogPopUpScreenDim</include>	
 		</control>
 	</include>
+	<!--//// END WALL VIEW ////////////////////////////////////////////////////////////////////////////-->
 </includes>

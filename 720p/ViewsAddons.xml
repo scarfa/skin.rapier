@@ -1,4 +1,5 @@
 <includes>
+	<!--//// START WIDE LIST VIEW /////////////////////////////////////////////////////////////////////-->
 	<include name="AddonsWideListView">
 		<control type="group" id="500">	
 	        <defaultcontrol always="true">90</defaultcontrol>
@@ -363,8 +364,10 @@
 			<include>ViewsDialogPopUpScreenDim</include>	
 		</control>
 	</include>
-	<!---------------------------------------------------------------------------------------------------------------------------------------------------->
-		<include name="AddonsListInfoView">
+	<!--//// END WIDE LIST VIEW ///////////////////////////////////////////////////////////////////////-->
+	
+	<!--//// START LIST INFO VIEW /////////////////////////////////////////////////////////////////////-->
+	<include name="AddonsListInfoView">
 		<control type="group" id="500">			    
 			<defaultcontrol always="true">91</defaultcontrol>
 			<visible>Control.IsVisible(91)</visible>
@@ -686,7 +689,9 @@
 			<include>ViewsDialogPopUpScreenDim</include>
 		</control>	
 	</include>
-	<!---------------------------------------------------------------------------------------------------------------------------------------------------->
+	<!--//// END LIST INFO VIEW ///////////////////////////////////////////////////////////////////////-->
+	
+	<!--//// START WRAP LIST INFO VIEW ////////////////////////////////////////////////////////////////-->
 	<include name="AddonsWrapListInfoView">
 		<control type="group" id="500">	
 		    <defaultcontrol always="true">93</defaultcontrol>
@@ -1404,4 +1409,5 @@
 			
 		<include>WrapInfoViewScrollbar</include>
 	</include>
+	<!--//// END WRAP LIST INFO VIEW //////////////////////////////////////////////////////////////////-->
 </includes>

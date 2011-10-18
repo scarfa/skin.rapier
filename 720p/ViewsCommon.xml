@@ -1,4 +1,5 @@
 <includes>
+	<!--//// START ICON VIEW //////////////////////////////////////////////////////////////////////////-->
 	<include name="IconView">
 		<control type="group" id="500">	
 		    <defaultcontrol always="true">50</defaultcontrol>
@@ -178,7 +179,9 @@
 			<include>ViewsDialogPopUpScreenDim</include>
 		</control>		
 	</include>
-	<!---------------------------------------------------------------------------------------------------------------------------------------------------->
+	<!--//// END ICON VIEW ////////////////////////////////////////////////////////////////////////////-->
+	
+	<!--//// START BIG ICON VIEW //////////////////////////////////////////////////////////////////////-->
 	<include name="BigIconView">	
 		<control type="group" id="500">	
 	        <defaultcontrol always="true">51</defaultcontrol>
@@ -350,7 +353,9 @@
 			<include>ViewsDialogPopUpScreenDim</include>
 		</control>		
 	</include>
-	<!---------------------------------------------------------------------------------------------------------------------------------------------------->	
+	<!--//// END BIG ICON VIEW ////////////////////////////////////////////////////////////////////////-->
+
+	<!--//// START LIST VIEW //////////////////////////////////////////////////////////////////////////-->
 	<include name="ListView">
 		<control type="group" id="500">			    
 			<defaultcontrol always="true">52</defaultcontrol>
@@ -687,7 +692,7 @@
 				<textcolor>ListColor2</textcolor>
 				<shadowcolor>ShadowColor</shadowcolor>
 				<aligny>center</aligny>				
-				<label>$INFO[ListItem.Year]$INFO[ListItem.Director,  •  ,]</label>
+				<label>$INFO[ListItem.Year]$INFO[ListItem.Director,  -  ,]</label>
 			</control>
 			<control type="label">
 				<description>Rating</description>
@@ -783,7 +788,7 @@
 				<textcolor>ListColor2</textcolor>
 				<shadowcolor>ShadowColor</shadowcolor>
 				<aligny>center</aligny>				
-				<label>$INFO[ListItem.Year]$INFO[ListItem.Episode,  •  , $LOCALIZE[20360]]</label>
+				<label>$INFO[ListItem.Year]$INFO[ListItem.Episode,  -  , $LOCALIZE[20360]]</label>
 			</control>
 			<control type="label">
 				<description>Rating</description>
@@ -878,7 +883,7 @@
 				<textcolor>ListColor2</textcolor>
 				<shadowcolor>ShadowColor</shadowcolor>
 				<aligny>center</aligny>				
-				<label>$INFO[ListItem.Duration,, $LOCALIZE[31003]]$INFO[ListItem.Episode,  •  $LOCALIZE[20359] ,]</label>
+				<label>$INFO[ListItem.Duration,, $LOCALIZE[31003]]$INFO[ListItem.Episode,  -  $LOCALIZE[20359] ,]</label>
 			</control>
 			<control type="label">
 				<description>Rating</description>
@@ -973,7 +978,7 @@
 				<textcolor>ListColor2</textcolor>
 				<shadowcolor>ShadowColor</shadowcolor>
 				<aligny>center</aligny>				
-				<label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]$INFO[ListItem.Property(WatchedEpisodes),  •  , $LOCALIZE[16102]]</label>
+				<label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]$INFO[ListItem.Property(WatchedEpisodes),  -  , $LOCALIZE[16102]]</label>
 			</control>
 			<control type="image">
 				<description>Overlay</description>
@@ -1044,7 +1049,7 @@
 				<textcolor>ListColor2</textcolor>
 				<shadowcolor>ShadowColor</shadowcolor>
 				<aligny>center</aligny>				
-				<label>$INFO[ListItem.Year]$INFO[ListItem.Artist,  •  ,]</label>
+				<label>$INFO[ListItem.Year]$INFO[ListItem.Artist,  -  ,]</label>
 			</control>
 			<control type="label">
 				<description>Rating</description>
@@ -1128,7 +1133,7 @@
 				<textcolor>ListColor2</textcolor>
 				<shadowcolor>ShadowColor</shadowcolor>
 				<aligny>center</aligny>				
-				<label>$INFO[ListItem.Duration,, $LOCALIZE[31003]]$INFO[ListItem.Artist,  •  ,]</label>
+				<label>$INFO[ListItem.Duration,, $LOCALIZE[31003]]$INFO[ListItem.Artist,  -  ,]</label>
 			</control>
 			<control type="label">
 				<description>Rating</description>
@@ -1285,7 +1290,7 @@
 				<textcolor>ListColor2</textcolor>
 				<shadowcolor>ShadowColor</shadowcolor>
 				<aligny>center</aligny>				
-				<label>$INFO[ListItem.Property(Addon.Version)]$INFO[ListItem.Property(Addon.Creator),  •  ,]</label>
+				<label>$INFO[ListItem.Property(Addon.Version)]$INFO[ListItem.Property(Addon.Creator),  -  ,]</label>
 			</control>
 			<control type="label">
 				<description>Status (Addons)</description>
@@ -1412,7 +1417,7 @@
 					<textcolor>ListColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<aligny>center</aligny>				
-					<label>$INFO[ListItem.Year]$INFO[ListItem.Director,  •  ,]</label>
+					<label>$INFO[ListItem.Year]$INFO[ListItem.Director,  -  ,]</label>
 				</control>
 				<control type="label">
 					<description>Rating</description>
@@ -1501,7 +1506,7 @@
 					<textcolor>ListColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<aligny>center</aligny>				
-					<label>$INFO[ListItem.Year]$INFO[ListItem.Episode,  •  , $LOCALIZE[20360]]</label>
+					<label>$INFO[ListItem.Year]$INFO[ListItem.Episode,  -  , $LOCALIZE[20360]]</label>
 				</control>
 				<control type="label">
 					<description>Rating</description>
@@ -1589,7 +1594,7 @@
 					<textcolor>ListColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<aligny>center</aligny>				
-					<label>$INFO[ListItem.Duration,, $LOCALIZE[31003]]$INFO[ListItem.Episode,  •  $LOCALIZE[20359] ,]</label>
+					<label>$INFO[ListItem.Duration,, $LOCALIZE[31003]]$INFO[ListItem.Episode,  -  $LOCALIZE[20359] ,]</label>
 				</control>
 				<control type="label">
 					<description>Rating</description>
@@ -1677,7 +1682,7 @@
 					<textcolor>ListColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<aligny>center</aligny>				
-					<label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]$INFO[ListItem.Property(WatchedEpisodes),  •  , $LOCALIZE[16102]]</label>
+					<label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]$INFO[ListItem.Property(WatchedEpisodes),  -  , $LOCALIZE[16102]]</label>
 				</control>
 				<control type="image">
 					<description>Overlay</description>
@@ -1741,7 +1746,7 @@
 					<textcolor>ListColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<aligny>center</aligny>				
-					<label>$INFO[ListItem.Year]$INFO[ListItem.Artist,  •  ,]</label>
+					<label>$INFO[ListItem.Year]$INFO[ListItem.Artist,  -  ,]</label>
 				</control>
 				<control type="label">
 					<description>Rating</description>
@@ -1818,7 +1823,7 @@
 					<textcolor>ListColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<aligny>center</aligny>				
-					<label>$INFO[ListItem.Duration,, $LOCALIZE[31003]]$INFO[ListItem.Artist,  •  ,]</label>
+					<label>$INFO[ListItem.Duration,, $LOCALIZE[31003]]$INFO[ListItem.Artist,  -  ,]</label>
 				</control>
 				<control type="label">
 					<description>Rating</description>
@@ -1961,7 +1966,7 @@
 					<textcolor>ListColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<aligny>center</aligny>				
-					<label>$INFO[ListItem.Property(Addon.Version)]$INFO[ListItem.Property(Addon.Creator),  •  ,]</label>
+					<label>$INFO[ListItem.Property(Addon.Version)]$INFO[ListItem.Property(Addon.Creator),  -  ,]</label>
 				</control>
 				<control type="label">
 					<description>Status (Addons)</description>
@@ -2071,7 +2076,9 @@
 			<aspectratio>stretch</aspectratio>
 		</control>
 	</include>
-	<!---------------------------------------------------------------------------------------------------------------------------------------------------->	
+	<!--//// END LIST VIEW ////////////////////////////////////////////////////////////////////////////-->
+	
+	<!--//// START DVD THUMBS VIEW ////////////////////////////////////////////////////////////////////-->
 	<include name="DVDThumbsView">	
 		<control type="group" id="500">	
 	        <defaultcontrol always="true">54</defaultcontrol>
@@ -2365,7 +2372,9 @@
 			</focusedlayout>			
 		</control>
 	</include>
-	<!---------------------------------------------------------------------------------------------------------------------------------------------------->		
+	<!--//// END DVD THUMBS VIEW //////////////////////////////////////////////////////////////////////-->
+
+	<!--//// START ALBUM THUMBS VIEW //////////////////////////////////////////////////////////////////-->
 	<include name="AlbumThumbsView">	
 		<control type="group" id="500">	
 	        <defaultcontrol always="true">63</defaultcontrol>
@@ -2698,4 +2707,5 @@
 			</focusedlayout>			
 		</control>
 	</include>
+	<!--//// START ALBUM THUMBS VIEW //////////////////////////////////////////////////////////////////-->
 </includes>

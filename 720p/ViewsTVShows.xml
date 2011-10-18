@@ -1,4 +1,5 @@
 <includes>
+	<!--//// START WIDE ICON VIEW /////////////////////////////////////////////////////////////////////-->
 	<include name="TVShowsWideIconView">	
 		<control type="group" id="500">	
 	        <defaultcontrol always="true">56</defaultcontrol>
@@ -210,7 +211,9 @@
 			<include>ViewsDialogPopUpScreenDim</include>
 		</control>		
 	</include>
-	<!---------------------------------------------------------------------------------------------------------------------------------------------------->	
+	<!--//// END WIDE ICON VIEW ///////////////////////////////////////////////////////////////////////-->
+
+	<!--//// START WIDE LIST VIEW /////////////////////////////////////////////////////////////////////-->
 	<include name="TVShowsWideListView">
 		<control type="group" id="500">	
 	        <defaultcontrol always="true">76</defaultcontrol>
@@ -343,7 +346,7 @@
 					<font>WideListFont</font>
 					<textcolor>ListColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<label>$INFO[ListItem.Title][COLOR=ListColor2]$INFO[ListItem.Year,  •  ,][/COLOR]</label>
+					<label>$INFO[ListItem.Title][COLOR=ListColor2]$INFO[ListItem.Year,  -  ,][/COLOR]</label>
 					<aligny>center</aligny>
 				</control>
 				<control type="label">
@@ -450,7 +453,7 @@
 					<font>WideListFont</font>
 					<textcolor>ListColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<label>$INFO[ListItem.Title][COLOR=ListColor2]$INFO[ListItem.Year,  •  ,][/COLOR]</label>
+					<label>$INFO[ListItem.Title][COLOR=ListColor2]$INFO[ListItem.Year,  -  ,][/COLOR]</label>
 					<aligny>center</aligny>
 				</control>
 				<control type="label">
@@ -598,7 +601,7 @@
 					<font>WideListFont</font>
 					<textcolor>SelectedColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<label>$INFO[ListItem.Title]$INFO[ListItem.Year,  •  ,]</label>
+					<label>$INFO[ListItem.Title]$INFO[ListItem.Year,  -  ,]</label>
 					<aligny>center</aligny>
 					<scroll>yes</scroll>
 				</control>
@@ -725,7 +728,7 @@
 					<font>WideListFont</font>
 					<textcolor>SelectedColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<label>$INFO[ListItem.Title]$INFO[ListItem.Year,  •  ,]</label>
+					<label>$INFO[ListItem.Title]$INFO[ListItem.Year,  -  ,]</label>
 					<aligny>center</aligny>
 					<scroll>yes</scroll>
 				</control>
@@ -1122,7 +1125,9 @@
 			</control>
 		</focusedlayout>		
 	</include>
-	<!---------------------------------------------------------------------------------------------------------------------------------------------------->	
+	<!--//// END WIDE LIST VIEW ///////////////////////////////////////////////////////////////////////-->
+	
+	<!--//// START LIST INFO VIEW /////////////////////////////////////////////////////////////////////-->
 	<include name="TVShowsListInfoView">
 		<control type="group" id="500">			    
 			<defaultcontrol always="true">61</defaultcontrol>
@@ -1659,7 +1664,9 @@
 			</control>
 		</control>
 	</include>
-	<!---------------------------------------------------------------------------------------------------------------------------------------------------->
+	<!--//// END LIST INFO VIEW ///////////////////////////////////////////////////////////////////////-->
+
+	<!--//// START LIST INFO 2 VIEW ///////////////////////////////////////////////////////////////////-->
 	<include name="TVShowsListInfoView2">	
 		<control type="group" id="500">	
 	        <defaultcontrol always="true">65</defaultcontrol>
@@ -2120,7 +2127,7 @@
 				<textcolor>ListColor2</textcolor>
 				<shadowcolor>ShadowColor</shadowcolor>
 				<aligny>center</aligny>				
-				<label>$INFO[ListItem.Year]$INFO[ListItem.Episode,  •  , $LOCALIZE[20360]]</label>
+				<label>$INFO[ListItem.Year]$INFO[ListItem.Episode,  -  , $LOCALIZE[20360]]</label>
 			</control>
 			<control type="label">
 				<description>Rating</description>
@@ -2236,7 +2243,7 @@
 					<textcolor>ListColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<aligny>center</aligny>				
-					<label>$INFO[ListItem.Year]$INFO[ListItem.Episode,  •  , $LOCALIZE[20360]]</label>
+					<label>$INFO[ListItem.Year]$INFO[ListItem.Episode,  -  , $LOCALIZE[20360]]</label>
 				</control>
 				<control type="label">
 					<description>Rating</description>
@@ -2513,7 +2520,9 @@
 			</control>
 		</focusedlayout>					
 	</include>
-	<!---------------------------------------------------------------------------------------------------------------------------------------------------->	
+	<!--//// END LIST INFO 2 VIEW /////////////////////////////////////////////////////////////////////-->
+
+	<!--//// START THUMBS INFO VIEW ///////////////////////////////////////////////////////////////////-->
 	<include name="TVShowsThumbsInfoView">	
 		<control type="group" id="500">	
 	        <defaultcontrol always="true">100</defaultcontrol>
@@ -3059,4 +3068,5 @@
 			</focusedlayout>
 		</control>
 	</include>
+	<!--//// END THUMBS INFO VIEW /////////////////////////////////////////////////////////////////////-->
 </includes>

@@ -53,7 +53,7 @@
 					<font>DefaultFont</font>
 					<textcolor>WhiteColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<label>[B]to Share[/B] — to copy, distribute and transmit the work</label>
+					<label>[B]to Share[/B] -- to copy, distribute and transmit the work</label>
 				</control>
 				
 				<control type="label">
@@ -62,7 +62,7 @@
 					<font>DefaultFont</font>
 					<textcolor>WhiteColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<label>[B]to Remix[/B] — to adapt the work</label>
+					<label>[B]to Remix[/B] -- to adapt the work</label>
 				</control>
 			</control>
 			
@@ -91,7 +91,7 @@
 					<font>DefaultFont</font>
 					<textcolor>WhiteColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<label>[B]Attribution[/B] — You must attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work).</label>
+					<label>[B]Attribution[/B] -- You must attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work).</label>
 				</control>
 				
 				<control type="image">
@@ -107,7 +107,7 @@
 					<font>DefaultFont</font>
 					<textcolor>WhiteColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<label>[B]Noncommercial[/B] — You may not use this work for commercial purposes.</label>
+					<label>[B]Noncommercial[/B] -- You may not use this work for commercial purposes.</label>
 				</control>
 				
 				<control type="image">
@@ -123,7 +123,7 @@
 					<font>DefaultFont</font>
 					<textcolor>WhiteColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<label>[B]Share Alike[/B] — If you alter, transform, or build upon this work, you may distribute the resulting work only under the same or similar license to this one.</label>
+					<label>[B]Share Alike[/B] -- If you alter, transform, or build upon this work, you may distribute the resulting work only under the same or similar license to this one.</label>
 				</control>
 			</control>
 			
@@ -147,7 +147,7 @@
 					<font>DefaultFont</font>
 					<textcolor>WhiteColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<label>[B]Waiver[/B] — Any of the above conditions can be waived if you get permission from the copyright holder.</label>
+					<label>[B]Waiver[/B] -- Any of the above conditions can be waived if you get permission from the copyright holder.</label>
 				</control>
 				
 				<control type="textbox">
@@ -157,7 +157,7 @@
 					<font>DefaultFont</font>
 					<textcolor>WhiteColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<label>[B]Public Domain[/B] — Where the work or any of its elements is in the public domain under applicable law, that status is in no way affected by the license.</label>
+					<label>[B]Public Domain[/B] -- Where the work or any of its elements is in the public domain under applicable law, that status is in no way affected by the license.</label>
 				</control>
 				
 				<control type="textbox">
@@ -167,7 +167,7 @@
 					<font>DefaultFont</font>
 					<textcolor>WhiteColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<label>[B]Other Rights[/B] — In no way are any of the following rights affected by the license:</label>
+					<label>[B]Other Rights[/B] -- In no way are any of the following rights affected by the license:</label>
 				</control>
 				
 				<control type="textbox">
@@ -177,7 +177,7 @@
 					<font>DefaultFont</font>
 					<textcolor>WhiteColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<label>•  Your fair dealing or fair use rights, or other applicable copyright exceptions and limitations;</label>
+					<label>-  Your fair dealing or fair use rights, or other applicable copyright exceptions and limitations;</label>
 				</control>
 				
 				<control type="textbox">
@@ -187,7 +187,7 @@
 					<font>DefaultFont</font>
 					<textcolor>WhiteColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<label>•  The author's moral rights;</label>
+					<label>-  The author's moral rights;</label>
 				</control>
 				
 				<control type="textbox">
@@ -197,7 +197,7 @@
 					<font>DefaultFont</font>
 					<textcolor>WhiteColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<label>•  Rights other persons may have either in the work itself or in how the work is used, such as publicity or privacy rights.</label>
+					<label>-  Rights other persons may have either in the work itself or in how the work is used, such as publicity or privacy rights.</label>
 				</control>
 			</control>
 		</control>

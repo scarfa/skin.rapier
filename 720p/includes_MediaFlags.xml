@@ -664,8 +664,6 @@
 		</control>
 	</include>
 	
-	<!---------------------------------------------------------------------------------------------------------------------------------------------------->	
-	
 	<include name="VideoSourceAltMediaFlags">
 		<control type="image">
 			<description>Blu-ray</description>
