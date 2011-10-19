@@ -201,6 +201,44 @@
 		</control>
 	</include>
 	
+	<include name="WrapInfo2ViewScrollbar">
+		<control type="group" id="150">	
+			<control type="scrollbar" id="920">
+				<posx>485</posx>
+				<posy>415</posy>
+				<width>765</width>
+				<height>12</height>
+				<orientation>horizontal</orientation>
+				<texturesliderbar border="2">controls/scrollbar-slider-horz-nofocus.png</texturesliderbar>
+				<texturesliderbarfocus border="2">controls/scrollbar-slider-horz-focus.png</texturesliderbarfocus>
+				<textureslidernib>-</textureslidernib>
+				<textureslidernibfocus>-</textureslidernibfocus>
+				<animation effect="fade" start="100" end="0" time="150" condition="!Skin.HasSetting(ShowWrapInfoView2Scrollbar) + !ControlGroup(150).HasFocus">Conditional</animation>
+				<onup>500</onup>
+				<ondown>-</ondown>
+			</control>
+		</control>
+	</include>
+
+	<include name="WrapInfo3ViewScrollbar">
+		<control type="group" id="150">	
+			<control type="scrollbar" id="921">
+				<posx>485</posx>
+				<posy>425</posy>
+				<width>765</width>
+				<height>12</height>
+				<orientation>horizontal</orientation>
+				<texturesliderbar border="2">controls/scrollbar-slider-horz-nofocus.png</texturesliderbar>
+				<texturesliderbarfocus border="2">controls/scrollbar-slider-horz-focus.png</texturesliderbarfocus>
+				<textureslidernib>-</textureslidernib>
+				<textureslidernibfocus>-</textureslidernibfocus>
+				<animation effect="fade" start="100" end="0" time="150" condition="!Skin.HasSetting(ShowWrapInfoView3Scrollbar) + !ControlGroup(150).HasFocus">Conditional</animation>
+				<onup>500</onup>
+				<ondown>-</ondown>
+			</control>
+		</control>
+	</include>
+	
 	<include name="WallViewScrollbar">
 		<control type="group" id="150">		
 			<control type="scrollbar" id="909">
