@@ -45,6 +45,7 @@
 <string id="32024">Reloading Skin...</string>
 <string id="32025">Reset Skin</string>
 <string id="32026">All skin settings will revert to default settings. Press to confirm.</string>
+<string id="32027">Publisher</string>
 
 <!-- view types -->
 <string id="31103">Icon</string>
@@ -59,6 +60,10 @@
 <string id="31114">Wide List</string>
 <string id="31115">List Info 3</string>
 <string id="31116">Thumbs Info</string>
+<string id="31117">Wrap Info 2</string>
+<string id="31118">Wrap Info 3</string>
+<string id="31119">Thumbs Info 2</string>
+<string id="31120">Thumbs Info 3</string>
 
 <!-- skin settings general -->
 <string id="31021">Hide Bottom Info Pane</string>
