@@ -149,6 +149,14 @@
 				<onclick>Dialog.Close(3002)</onclick>
 				<visible>Substring(Container.FolderPath,addons:,Left)</visible>
 			</control>
+			<control type="button" id="4001">
+				<description>List Media Info (Programs)</description>
+				<include>DropDownMenuViewModeBtn</include>
+				<label>$LOCALIZE[31111]</label>
+				<onclick>Container.SetViewMode(590)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
 			<control type="button" id="17">
 				<description>List Media Info 2 (Movies)</description>
 				<include>DropDownMenuViewModeBtn</include>
@@ -156,6 +164,14 @@
 				<onclick>Container.SetViewMode(66)</onclick>
 				<onclick>Dialog.Close(3002)</onclick>
 				<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+			</control>
+			<control type="button" id="4002">
+				<description>List Media Info 2 (Programs)</description>
+				<include>DropDownMenuViewModeBtn</include>
+				<label>$LOCALIZE[31112]</label>
+				<onclick>Container.SetViewMode(591)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
 			</control>
 			<control type="button" id="18">
 				<description>List Media Info 2 (TVShows)</description>
@@ -205,6 +221,14 @@
 				<onclick>Dialog.Close(3002)</onclick>
 				<visible>Window.IsActive(MusicLibrary) + Container.Content(Albums)</visible>
 			</control>
+			<control type="button" id="4003">
+				<description>List Media Info 3 (Programs)</description>
+				<include>DropDownMenuViewModeBtn</include>
+				<label>$LOCALIZE[31115]</label>
+				<onclick>Container.SetViewMode(592)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
 			<control type="button" id="30">
 				<description>Thumbs Media Info (Movies)</description>
 				<include>DropDownMenuViewModeBtn</include>
@@ -212,6 +236,30 @@
 				<onclick>Container.SetViewMode(97)</onclick>
 				<onclick>Dialog.Close(3002)</onclick>
 				<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+			</control>
+			<control type="button" id="4004">
+				<description>Thumbs Media Info (Programs)</description>
+				<include>DropDownMenuViewModeBtn</include>
+				<label>$LOCALIZE[31116]</label>
+				<onclick>Container.SetViewMode(593)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="button" id="4005">
+				<description>Thumbs Media Info 2 (Programs)</description>
+				<include>DropDownMenuViewModeBtn</include>
+				<label>$LOCALIZE[31119]</label>
+				<onclick>Container.SetViewMode(594)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="button" id="4006">
+				<description>Thumbs Media Info 3 (Programs)</description>
+				<include>DropDownMenuViewModeBtn</include>
+				<label>$LOCALIZE[31120]</label>
+				<onclick>Container.SetViewMode(595)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
 			</control>
 			<control type="button" id="31">
 				<description>Thumbs Media Info (TVShows)</description>
@@ -252,6 +300,30 @@
 				<onclick>Container.SetViewMode(93)</onclick>
 				<onclick>Dialog.Close(3002)</onclick>
 				<visible>Substring(Container.FolderPath,addons:,Left)</visible>
+			</control>
+			<control type="button" id="4007">
+				<description>Wrap List Media Info (Programs)</description>
+				<include>DropDownMenuViewModeBtn</include>
+				<label>$LOCALIZE[31106]</label>
+				<onclick>Container.SetViewMode(596)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="button" id="4008">
+				<description>Wrap List Media Info 2 (Programs)</description>
+				<include>DropDownMenuViewModeBtn</include>
+				<label>$LOCALIZE[31117]</label>
+				<onclick>Container.SetViewMode(597)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="button" id="4009">
+				<description>Wrap List Media Info 3 (Programs)</description>
+				<include>DropDownMenuViewModeBtn</include>
+				<label>$LOCALIZE[31118]</label>
+				<onclick>Container.SetViewMode(598)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
 			</control>
 			<control type="button" id="26">
 				<description>Wall (Movies)</description>
@@ -372,6 +444,69 @@
 				<texture>gui/view-wall.png</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>Container.Content(Movies) | Container.Content(Albums)</visible>
+			</control>
+			<control type="image">
+				<posx>18</posx>
+				<height>40</height>
+				<texture>gui/view-list-info-2.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="image">
+				<posx>18</posx>
+				<height>40</height>
+				<texture>gui/view-list-info-2.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="image">
+				<posx>18</posx>
+				<height>40</height>
+				<texture>gui/view-list-info-2.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="image">
+				<posx>18</posx>
+				<height>40</height>
+				<texture>gui/view-thumbs-info.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="image">
+				<posx>18</posx>
+				<height>40</height>
+				<texture>gui/view-thumbs-info.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="image">
+				<posx>18</posx>
+				<height>40</height>
+				<texture>gui/view-thumbs-info.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="image">
+				<posx>18</posx>
+				<height>40</height>
+				<texture>gui/view-wrap-info.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="image">
+				<posx>18</posx>
+				<height>40</height>
+				<texture>gui/view-wrap-info.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="image">
+				<posx>18</posx>
+				<height>40</height>
+				<texture>gui/view-wrap-info.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
 			</control>
 		</control>
 	</controls>	
