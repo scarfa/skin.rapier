@@ -1,6 +1,6 @@
 <includes>
 	<include name="VideoSourceMediaFlags">
-		<control type="image">
+		<control type="image" id="600">
 			<description>Blu-ray</description>
 			<width>57</width>
 			<height>41</height>
@@ -9,7 +9,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.filename,.bluray) | substring(ListItem.filename,.blu-ray) | substring(ListItem.filename,.brrip)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="601">
 			<description>HD DVD</description>
 			<width>96</width>
 			<height>41</height>
@@ -18,7 +18,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.filename,.hddvd) | substring(ListItem.filename,.hd-dvd)</visible>
 		</control>
-			<control type="image">
+			<control type="image" id="602">
 			<description>DVD</description>
 			<width>65</width>
 			<height>41</height>
@@ -28,7 +28,7 @@
 			<visible>substring(ListItem.filename,.sddvd) | substring(ListItem.filename,.iso,right) | substring(ListItem.filename,.img,right) 
 			| substring(ListItem.filename,.ifo,right) | substring(ListItem.filename,.vob,right)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="603">
 			<description>HDTV</description>
 			<width>87</width>
 			<height>41</height>
@@ -37,7 +37,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.filename,.hdtv) | substring(ListItem.filename,.hdrip)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="604">
 			<description>SDTV</description>
 			<width>87</width>
 			<height>41</height>
@@ -46,7 +46,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.filename,.sdtv)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="605">
 			<description>DVD Rip</description>
 			<width>65</width>
 			<height>41</height>
@@ -55,7 +55,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.filename,.dvdrip)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="606">
 			<description>DVD R5</description>
 			<width>65</width>
 			<height>41</height>
@@ -64,7 +64,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.filename,.dvdr5) | substring(ListItem.filename,.r5)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="607">
 			<description>DVD Screener</description>
 			<width>65</width>
 			<height>41</height>
@@ -73,7 +73,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.filename,.dvdscreener) | substring(ListItem.filename,.dvdscr) | substring(ListItem.filename,.screener)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="608">
 			<description>Telesync</description>
 			<width>48</width>
 			<height>41</height>
@@ -82,7 +82,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.filename,.telesync) | substring(ListItem.filename,.ts.)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="609">
 			<description>Cam</description>
 			<width>48</width>
 			<height>41</height>
@@ -94,7 +94,7 @@
 	</include>
 	
 	<include name="VideoCodecMediaFlags">
-		<control type="image">
+		<control type="image" id="610">
 			<description>Xvid Codec</description>
 			<width>67</width>
 			<height>41</height>
@@ -103,7 +103,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.VideoCodec,xvid)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="611">
 			<description>Divx Codec</description>
 			<width>78</width>
 			<height>41</height>
@@ -112,7 +112,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.VideoCodec,divx) | substring(ListItem.VideoCodec,div3) | substring(ListItem.VideoCodec,div4) | substring(ListItem.VideoCodec,div5) | substring(ListItem.VideoCodec,dx50)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="612">
 			<description>H264 Codec</description>
 			<width>72</width>
 			<height>41</height>
@@ -121,7 +121,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.VideoCodec,h264) | substring(ListItem.VideoCodec,x264)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="613">
 			<description>AVC1 Codec</description>
 			<width>72</width>
 			<height>41</height>
@@ -130,7 +130,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.VideoCodec,avc1)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="614">
 			<description>WVC1 Codec</description>
 			<width>90</width>
 			<height>41</height>
@@ -139,7 +139,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.VideoCodec,wvc1) | substring(ListItem.VideoCodec,vc-1)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="615">
 			<description>MPEG-1 Codec</description>
 			<width>67</width>
 			<height>41</height>
@@ -148,7 +148,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.VideoCodec,mpeg1video)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="616">
 			<description>MPEG-2 Codec</description>
 			<width>67</width>
 			<height>41</height>
@@ -157,7 +157,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.VideoCodec,mpeg2video) | substring(ListItem.VideoCodec,mpeg video) | substring(ListItem.VideoCodec,mpeg2)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="617">
 			<description>MPEG-4 Codec</description>
 			<width>67</width>
 			<height>41</height>
@@ -166,7 +166,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.VideoCodec,mpeg-4 visual) | substring(ListItem.VideoCodec,mp4v)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="618">
 			<description>Sorenson Video Codec</description>
 			<width>42</width>
 			<height>41</height>
@@ -175,7 +175,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.VideoCodec,svq3)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="619">
 			<description>Flash Video Codec</description>
 			<width>26</width>
 			<height>41</height>
@@ -184,7 +184,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.VideoCodec,flv)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="620">
 			<description>Video Resolution</description>
 			<posx>-5</posx>
 			<width>56</width>
@@ -194,7 +194,7 @@
 			<texture>$INFO[ListItem.VideoResolution,flagging/default/video/,.png]</texture>
 			<visible>!IsEmpty(ListItem.VideoCodec) + !Skin.HasSetting(HideVideoResMediaFlag)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="621">
 			<description>Right Border</description>
 			<posx>-5</posx>
 			<width>5</width>
@@ -207,7 +207,7 @@
 	</include>
 	
 	<include name="AudioMediaFlags">
-		<control type="image">
+		<control type="image" id="622">
 			<description>MP3 Codec</description>
 			<width>64</width>
 			<height>41</height>
@@ -216,7 +216,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.AudioCodec,mp3)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="623">
 			<description>MP2 Codec</description>
 			<width>62</width>
 			<height>41</height>
@@ -225,7 +225,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.AudioCodec,mp2)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="624">
 			<description>MP1 Codec</description>
 			<width>62</width>
 			<height>41</height>
@@ -234,7 +234,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.AudioCodec,mp1)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="625">
 			<description>DTS Codec</description>
 			<width>69</width>
 			<height>41</height>
@@ -243,7 +243,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.AudioCodec,dca)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="626">
 			<description>AAC Codec</description>
 			<width>47</width>
 			<height>41</height>
@@ -252,7 +252,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.AudioCodec,aac)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="627">
 			<description>Dolby Digital/AC3 Codec</description>
 			<width>77</width>
 			<height>41</height>
@@ -261,7 +261,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,ac-3)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="628">
 			<description>TrueHD Codec</description>
 			<width>70</width>
 			<height>41</height>
@@ -270,7 +270,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.AudioCodec,truehd)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="629">
 			<description>WMA STD V2/WMA Pro Codec</description>
 			<width>127</width>
 			<height>41</height>
@@ -279,7 +279,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.AudioCodec,wmav2) | substring(ListItem.AudioCodec,wmapro)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="630">
 			<description>FLAC Codec</description>
 			<width>56</width>
 			<height>41</height>
@@ -288,7 +288,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.AudioCodec,flac)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="631">
 			<description>Vorbis Codec</description>
 			<width>49</width>
 			<height>41</height>
@@ -297,7 +297,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.AudioCodec,vorbis)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="632">
 			<description>Audio Channels</description>
 			<posx>-5</posx>
 			<width>50</width>
@@ -310,7 +310,7 @@
 	</include>
 	
 	<include name="AspectMediaFlags">
-		<control type="image">
+		<control type="image" id="633">
 			<description>Aspect Ratio</description>
 			<width>58</width>
 			<height>41</height>
@@ -322,7 +322,7 @@
 	</include>
 
 	<include name="RatingMediaFlags">
-		<control type="image">
+		<control type="image" id="634">
 			<description>Rated General</description>
 			<width>30</width>
 			<height>41</height>
@@ -331,7 +331,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.MPAA,Rated G)</visible>  
 		</control>
-		<control type="image">
+		<control type="image" id="635">
 			<description>Rated PG</description>
 			<width>47</width>
 			<height>41</height>
@@ -340,7 +340,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.MPAA,Rated PG) + !substring(ListItem.MPAA,Rated PG-13)</visible>  
 		</control>
-		<control type="image">
+		<control type="image" id="636">
 			<description>Rated PG-13</description>
 			<width>74</width>
 			<height>41</height>
@@ -349,7 +349,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.MPAA,Rated PG-13)</visible>  
 		</control>
-		<control type="image">
+		<control type="image" id="637">
 			<description>Rated R</description>
 			<width>40</width>
 			<height>41</height>
@@ -358,7 +358,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.MPAA,Rated R)</visible>  
 		</control>
-		<control type="image">
+		<control type="image" id="638">
 			<description>Rated NC-17</description>
 			<width>74</width>
 			<height>41</height>
@@ -370,7 +370,7 @@
 	</include>
 	
 	<include name="PlayerVideoMediaFlags">
-		<control type="image">
+		<control type="image" id="639">
 			<description>Xvid Codec</description>
 			<width>67</width>
 			<height>41</height>
@@ -379,7 +379,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.VideoCodec,xvid)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="640">
 			<description>Divx Codec</description>
 			<width>78</width>
 			<height>41</height>
@@ -388,7 +388,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) | substring(VideoPlayer.VideoCodec,dx50)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="641">
 			<description>H264 Codec</description>
 			<width>72</width>
 			<height>41</height>
@@ -397,7 +397,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.VideoCodec,h264) | substring(VideoPlayer.VideoCodec,x264)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="642">
 			<description>AVC1 Codec</description>
 			<width>72</width>
 			<height>41</height>
@@ -406,7 +406,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.VideoCodec,avc1)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="643">
 			<description>WVC1 Codec</description>
 			<width>90</width>
 			<height>41</height>
@@ -415,7 +415,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.VideoCodec,wvc1) | substring(VideoPlayer.VideoCodec,vc-1)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="644">
 			<description>MPEG-1 Codec</description>
 			<width>67</width>
 			<height>41</height>
@@ -424,7 +424,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.VideoCodec,mpeg1video)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="645">
 			<description>MPEG-2 Codec</description>
 			<width>67</width>
 			<height>41</height>
@@ -433,7 +433,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.VideoCodec,mpeg2video) | substring(VideoPlayer.VideoCodec,mpeg video) | substring(VideoPlayer.VideoCodec,mpeg2)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="646">
 			<description>MPEG-4 Codec</description>
 			<width>67</width>
 			<height>41</height>
@@ -442,7 +442,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.VideoCodec,mpeg-4 visual) | substring(VideoPlayer.VideoCodec,mp4v)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="647">
 			<description>Sorenson Video Codec</description>
 			<width>42</width>
 			<height>41</height>
@@ -451,7 +451,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.VideoCodec,svq3)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="648">
 			<description>Flash Video Codec</description>
 			<width>26</width>
 			<height>41</height>
@@ -460,7 +460,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.VideoCodec,flv)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="649">
 			<description>Video Resolution</description>
 			<posx>-5</posx>
 			<width>56</width>
@@ -470,7 +470,7 @@
 			<texture>$INFO[VideoPlayer.VideoResolution,flagging/default/video/,.png]</texture>
 			<visible>!IsEmpty(VideoPlayer.VideoCodec) + !Skin.HasSetting(HideVideoResMediaFlag)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="650">
 			<description>Right Border</description>
 			<posx>-5</posx>
 			<width>5</width>
@@ -483,7 +483,7 @@
 	</include>
 	
 	<include name="PlayerAudioMediaFlags">
-		<control type="image">
+		<control type="image" id="651">
 			<description>MP3 Codec</description>
 			<width>64</width>
 			<height>41</height>
@@ -492,7 +492,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.AudioCodec,mp3)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="652">
 			<description>MP2 Codec</description>
 			<width>62</width>
 			<height>41</height>
@@ -501,7 +501,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.AudioCodec,mp2)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="653">
 			<description>MP1 Codec</description>
 			<width>62</width>
 			<height>41</height>
@@ -510,7 +510,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.AudioCodec,mp1)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="654">
 			<description>DTS Codec</description>
 			<width>69</width>
 			<height>41</height>
@@ -519,7 +519,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.AudioCodec,dca)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="655">
 			<description>AAC Codec</description>
 			<width>47</width>
 			<height>41</height>
@@ -528,7 +528,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.AudioCodec,aac)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="656">
 			<description>Dolby Digital/AC3 Codec</description>
 			<width>77</width>
 			<height>41</height>
@@ -537,7 +537,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.AudioCodec,ac3) | substring(VideoPlayer.AudioCodec,ac-3)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="657">
 			<description>WMA STD V2/WMA Pro Codec</description>
 			<width>127</width>
 			<height>41</height>
@@ -546,7 +546,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.AudioCodec,wmav2) | substring(VideoPlayer.AudioCodec,wmapro)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="658">
 			<description>FLAC Codec</description>
 			<width>56</width>
 			<height>41</height>
@@ -555,7 +555,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.AudioCodec,flac)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="659">
 			<description>Vorbis Codec</description>
 			<width>49</width>
 			<height>41</height>
@@ -564,7 +564,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.AudioCodec,vorbis)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="660">
 			<description>Audio Channels</description>
 			<posx>-5</posx>
 			<width>50</width>
@@ -577,7 +577,7 @@
 	</include>
 	
 	<include name="PlayerRatingMediaFlags">
-		<control type="image">
+		<control type="image" id="661">
 			<description>Rated General</description>
 			<width>30</width>
 			<height>41</height>
@@ -586,7 +586,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.MPAA,Rated G)</visible>  
 		</control>
-		<control type="image">
+		<control type="image" id="662">
 			<description>Rated PG</description>
 			<width>47</width>
 			<height>41</height>
@@ -595,7 +595,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.MPAA,Rated PG) + !substring(VideoPlayer.MPAA,Rated PG-13)</visible>  
 		</control>
-		<control type="image">
+		<control type="image" id="663">
 			<description>Rated PG-13</description>
 			<width>74</width>
 			<height>41</height>
@@ -604,7 +604,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.MPAA,Rated PG-13)</visible>  
 		</control>
-		<control type="image">
+		<control type="image" id="664">
 			<description>Rated R</description>
 			<width>40</width>
 			<height>41</height>
@@ -613,7 +613,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.MPAA,Rated R)</visible>  
 		</control>
-		<control type="image">
+		<control type="image" id="665">
 			<description>Rated NC-17</description>
 			<width>74</width>
 			<height>41</height>
@@ -625,7 +625,7 @@
 	</include>
 	
 	<include name="VideoInfoStudioMediaFlag">
-		<control type="image">
+		<control type="image" id="666">
 			<description>Studio</description>
 			<posx>254</posx>
 			<posy>635</posy>
@@ -642,7 +642,7 @@
 		<control type="group">
 			<visible>!IsEmpty(ListItem.Studio) + !Window.IsActive(VideoScan) + !Window.IsActive(MusicScan) + !Window.IsActive(InfoDialog)</visible>
 			
-			<control type="image">
+			<control type="image" id="667">
 				<posx>1182</posx>
 				<posy>0</posy>
 				<width>68</width>
@@ -651,7 +651,7 @@
 				<include>MediaFlagFadeAnim</include>
 			</control>
 					
-			<control type="image">
+			<control type="image" id="668">
 				<description>Studio Flag</description>
 				<posx>1182</posx>
 				<posy>0</posy>
@@ -665,7 +665,7 @@
 	</include>
 	
 	<include name="VideoSourceAltMediaFlags">
-		<control type="image">
+		<control type="image" id="669">
 			<description>Blu-ray</description>
 			<width>57</width>
 			<height>41</height>
@@ -674,7 +674,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.filename,.bluray) | substring(ListItem.filename,.blu-ray) | substring(ListItem.filename,.brrip)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="670">
 			<description>HD DVD</description>
 			<width>96</width>
 			<height>41</height>
@@ -683,7 +683,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.filename,.hddvd) | substring(ListItem.filename,.hd-dvd)</visible>
 		</control>
-			<control type="image">
+			<control type="image" id="671">
 			<description>DVD</description>
 			<width>65</width>
 			<height>41</height>
@@ -693,7 +693,7 @@
 			<visible>substring(ListItem.filename,.sddvd) | substring(ListItem.filename,.iso,right) | substring(ListItem.filename,.img,right) 
 			| substring(ListItem.filename,.ifo,right) | substring(ListItem.filename,.vob,right)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="672">
 			<description>HDTV</description>
 			<width>87</width>
 			<height>41</height>
@@ -702,7 +702,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.filename,.hdtv) | substring(ListItem.filename,.hdrip)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="673">
 			<description>SDTV</description>
 			<width>87</width>
 			<height>41</height>
@@ -711,7 +711,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.filename,.sdtv)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="674">
 			<description>DVD Rip</description>
 			<width>65</width>
 			<height>41</height>
@@ -720,7 +720,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.filename,.dvdrip)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="675">
 			<description>DVD R5</description>
 			<width>65</width>
 			<height>41</height>
@@ -729,7 +729,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.filename,.dvdr5) | substring(ListItem.filename,.r5)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="676">
 			<description>DVD Screener</description>
 			<width>65</width>
 			<height>41</height>
@@ -738,7 +738,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.filename,.dvdscreener) | substring(ListItem.filename,.dvdscr) | substring(ListItem.filename,.screener)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="677">
 			<description>Telesync</description>
 			<width>48</width>
 			<height>41</height>
@@ -747,7 +747,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.filename,.telesync) | substring(ListItem.filename,.ts.)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="678">
 			<description>Cam</description>
 			<width>48</width>
 			<height>41</height>
@@ -759,7 +759,7 @@
 	</include>
 	
 	<include name="VideoCodecAltMediaFlags">
-		<control type="image">
+		<control type="image" id="679">
 			<description>Xvid Codec</description>
 			<width>67</width>
 			<height>41</height>
@@ -768,7 +768,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.VideoCodec,xvid)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="680">
 			<description>Divx Codec</description>
 			<width>78</width>
 			<height>41</height>
@@ -777,7 +777,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.VideoCodec,divx) | substring(ListItem.VideoCodec,div3) | substring(ListItem.VideoCodec,div4) | substring(ListItem.VideoCodec,div5) | substring(ListItem.VideoCodec,dx50)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="681">
 			<description>H264 Codec</description>
 			<width>72</width>
 			<height>41</height>
@@ -786,7 +786,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.VideoCodec,h264) | substring(ListItem.VideoCodec,x264)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="682">
 			<description>AVC1 Codec</description>
 			<width>72</width>
 			<height>41</height>
@@ -795,7 +795,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.VideoCodec,avc1)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="683">
 			<description>WVC1 Codec</description>
 			<width>90</width>
 			<height>41</height>
@@ -804,7 +804,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.VideoCodec,wvc1) | substring(ListItem.VideoCodec,vc-1)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="684">
 			<description>MPEG-1 Codec</description>
 			<width>67</width>
 			<height>41</height>
@@ -813,7 +813,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.VideoCodec,mpeg1video)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="685">
 			<description>MPEG-2 Codec</description>
 			<width>67</width>
 			<height>41</height>
@@ -822,7 +822,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.VideoCodec,mpeg2video) | substring(ListItem.VideoCodec,mpeg video) | substring(ListItem.VideoCodec,mpeg2)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="686">
 			<description>MPEG-4 Codec</description>
 			<width>67</width>
 			<height>41</height>
@@ -831,7 +831,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.VideoCodec,mpeg-4 visual) | substring(ListItem.VideoCodec,mp4v)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="687">
 			<description>Sorenson Video Codec</description>
 			<width>42</width>
 			<height>41</height>
@@ -840,7 +840,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.VideoCodec,svq3)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="688">
 			<description>Flash Video Codec</description>
 			<width>26</width>
 			<height>41</height>
@@ -849,7 +849,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.VideoCodec,flv)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="689">
 			<description>Video Resolution</description>
 			<posx>-5</posx>
 			<width>56</width>
@@ -859,7 +859,7 @@
 			<texture>$INFO[ListItem.VideoResolution,flagging/white/video/,.png]</texture>
 			<visible>!IsEmpty(ListItem.VideoCodec) + !Skin.HasSetting(HideVideoResMediaFlag)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="690">
 			<description>Right Border</description>
 			<posx>-5</posx>
 			<width>5</width>
@@ -872,7 +872,7 @@
 	</include>
 	
 	<include name="AudioAltMediaFlags">
-		<control type="image">
+		<control type="image" id="691">
 			<description>MP3 Codec</description>
 			<width>64</width>
 			<height>41</height>
@@ -881,7 +881,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.AudioCodec,mp3)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="692">
 			<description>MP2 Codec</description>
 			<width>62</width>
 			<height>41</height>
@@ -890,7 +890,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.AudioCodec,mp2)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="693">
 			<description>MP1 Codec</description>
 			<width>62</width>
 			<height>41</height>
@@ -899,7 +899,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.AudioCodec,mp1)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="694">
 			<description>DTS Codec</description>
 			<width>69</width>
 			<height>41</height>
@@ -908,7 +908,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.AudioCodec,dca)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="695">
 			<description>AAC Codec</description>
 			<width>47</width>
 			<height>41</height>
@@ -917,7 +917,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.AudioCodec,aac)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="696">
 			<description>Dolby Digital/AC3 Codec</description>
 			<width>77</width>
 			<height>41</height>
@@ -926,7 +926,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,ac-3)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="697">
 			<description>TrueHD Codec</description>
 			<width>70</width>
 			<height>41</height>
@@ -935,7 +935,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.AudioCodec,truehd)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="698">
 			<description>WMA STD V2/WMA Pro Codec</description>
 			<width>127</width>
 			<height>41</height>
@@ -944,7 +944,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.AudioCodec,wmav2) | substring(ListItem.AudioCodec,wmapro)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="699">
 			<description>FLAC Codec</description>
 			<width>56</width>
 			<height>41</height>
@@ -953,7 +953,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.AudioCodec,flac)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="700">
 			<description>Vorbis Codec</description>
 			<width>49</width>
 			<height>41</height>
@@ -962,7 +962,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.AudioCodec,vorbis)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="701">
 			<description>Audio Channels</description>
 			<posx>-5</posx>
 			<width>50</width>
@@ -975,7 +975,7 @@
 	</include>
 	
 	<include name="AspectAltMediaFlags">
-		<control type="image">
+		<control type="image" id="702">
 			<description>Aspect Ratio</description>
 			<width>58</width>
 			<height>41</height>
@@ -987,7 +987,7 @@
 	</include>
 
 	<include name="RatingAltMediaFlags">
-		<control type="image">
+		<control type="image" id="703">
 			<description>Rated General</description>
 			<width>30</width>
 			<height>41</height>
@@ -996,7 +996,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.MPAA,Rated G)</visible>  
 		</control>
-		<control type="image">
+		<control type="image" id="704">
 			<description>Rated PG</description>
 			<width>47</width>
 			<height>41</height>
@@ -1005,7 +1005,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.MPAA,Rated PG) + !substring(ListItem.MPAA,Rated PG-13)</visible>  
 		</control>
-		<control type="image">
+		<control type="image" id="705">
 			<description>Rated PG-13</description>
 			<width>74</width>
 			<height>41</height>
@@ -1014,7 +1014,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.MPAA,Rated PG-13)</visible>  
 		</control>
-		<control type="image">
+		<control type="image" id="706">
 			<description>Rated R</description>
 			<width>40</width>
 			<height>41</height>
@@ -1023,7 +1023,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.MPAA,Rated R)</visible>  
 		</control>
-		<control type="image">
+		<control type="image" id="707">
 			<description>Rated NC-17</description>
 			<width>74</width>
 			<height>41</height>
@@ -1035,7 +1035,7 @@
 	</include>
 	
 	<include name="PlayerVideoAltMediaFlags">
-		<control type="image">
+		<control type="image" id="708">
 			<description>Xvid Codec</description>
 			<width>67</width>
 			<height>41</height>
@@ -1044,7 +1044,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.VideoCodec,xvid)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="709">
 			<description>Divx Codec</description>
 			<width>78</width>
 			<height>41</height>
@@ -1053,7 +1053,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) | substring(VideoPlayer.VideoCodec,dx50)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="710">
 			<description>H264 Codec</description>
 			<width>72</width>
 			<height>41</height>
@@ -1062,7 +1062,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.VideoCodec,h264) | substring(VideoPlayer.VideoCodec,x264)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="711">
 			<description>AVC1 Codec</description>
 			<width>72</width>
 			<height>41</height>
@@ -1071,7 +1071,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.VideoCodec,avc1)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="712">
 			<description>WVC1 Codec</description>
 			<width>90</width>
 			<height>41</height>
@@ -1080,7 +1080,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.VideoCodec,wvc1) | substring(VideoPlayer.VideoCodec,vc-1)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="713">
 			<description>MPEG-1 Codec</description>
 			<width>67</width>
 			<height>41</height>
@@ -1089,7 +1089,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.VideoCodec,mpeg1video)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="714">
 			<description>MPEG-2 Codec</description>
 			<width>67</width>
 			<height>41</height>
@@ -1098,7 +1098,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.VideoCodec,mpeg2video) | substring(VideoPlayer.VideoCodec,mpeg video) | substring(VideoPlayer.VideoCodec,mpeg2)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="715">
 			<description>MPEG-4 Codec</description>
 			<width>67</width>
 			<height>41</height>
@@ -1107,7 +1107,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.VideoCodec,mpeg-4 visual) | substring(VideoPlayer.VideoCodec,mp4v)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="716">
 			<description>Sorenson Video Codec</description>
 			<width>42</width>
 			<height>41</height>
@@ -1116,7 +1116,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.VideoCodec,svq3)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="717">
 			<description>Flash Video Codec</description>
 			<width>26</width>
 			<height>41</height>
@@ -1125,7 +1125,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.VideoCodec,flv)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="718">
 			<description>Video Resolution</description>
 			<posx>-5</posx>
 			<width>56</width>
@@ -1135,7 +1135,7 @@
 			<texture>$INFO[VideoPlayer.VideoResolution,flagging/white/video/,.png]</texture>
 			<visible>!IsEmpty(VideoPlayer.VideoCodec) + !Skin.HasSetting(HideVideoResMediaFlag)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="719">
 			<description>Right Border</description>
 			<posx>-5</posx>
 			<width>5</width>
@@ -1148,7 +1148,7 @@
 	</include>
 	
 	<include name="PlayerAudioAltMediaFlags">
-		<control type="image">
+		<control type="image" id="720">
 			<description>MP3 Codec</description>
 			<width>64</width>
 			<height>41</height>
@@ -1157,7 +1157,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.AudioCodec,mp3)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="721">
 			<description>MP2 Codec</description>
 			<width>62</width>
 			<height>41</height>
@@ -1166,7 +1166,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.AudioCodec,mp2)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="722">
 			<description>MP1 Codec</description>
 			<width>62</width>
 			<height>41</height>
@@ -1175,7 +1175,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.AudioCodec,mp1)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="723">
 			<description>DTS Codec</description>
 			<width>69</width>
 			<height>41</height>
@@ -1184,7 +1184,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.AudioCodec,dca)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="724">
 			<description>AAC Codec</description>
 			<width>47</width>
 			<height>41</height>
@@ -1193,7 +1193,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.AudioCodec,aac)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="725">
 			<description>Dolby Digital/AC3 Codec</description>
 			<width>77</width>
 			<height>41</height>
@@ -1202,7 +1202,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.AudioCodec,ac3) | substring(VideoPlayer.AudioCodec,ac-3)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="726">
 			<description>WMA STD V2/WMA Pro Codec</description>
 			<width>127</width>
 			<height>41</height>
@@ -1211,7 +1211,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.AudioCodec,wmav2) | substring(VideoPlayer.AudioCodec,wmapro)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="727">
 			<description>FLAC Codec</description>
 			<width>56</width>
 			<height>41</height>
@@ -1220,7 +1220,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.AudioCodec,flac)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="728">
 			<description>Vorbis Codec</description>
 			<width>49</width>
 			<height>41</height>
@@ -1229,7 +1229,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.AudioCodec,vorbis)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="729">
 			<description>Audio Channels</description>
 			<posx>-5</posx>
 			<width>50</width>
@@ -1242,7 +1242,7 @@
 	</include>
 	
 	<include name="PlayerRatingAltMediaFlags">
-		<control type="image">
+		<control type="image" id="730">
 			<description>Rated General</description>
 			<width>30</width>
 			<height>41</height>
@@ -1251,7 +1251,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.MPAA,Rated G)</visible>  
 		</control>
-		<control type="image">
+		<control type="image" id="731">
 			<description>Rated PG</description>
 			<width>47</width>
 			<height>41</height>
@@ -1260,7 +1260,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.MPAA,Rated PG) + !substring(VideoPlayer.MPAA,Rated PG-13)</visible>  
 		</control>
-		<control type="image">
+		<control type="image" id="732">
 			<description>Rated PG-13</description>
 			<width>74</width>
 			<height>41</height>
@@ -1269,7 +1269,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.MPAA,Rated PG-13)</visible>  
 		</control>
-		<control type="image">
+		<control type="image" id="733">
 			<description>Rated R</description>
 			<width>40</width>
 			<height>41</height>
@@ -1278,7 +1278,7 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.MPAA,Rated R)</visible>  
 		</control>
-		<control type="image">
+		<control type="image" id="734">
 			<description>Rated NC-17</description>
 			<width>74</width>
 			<height>41</height>
@@ -1290,7 +1290,7 @@
 	</include>
 	
 	<include name="VideoInfoStudioAltMediaFlag">
-		<control type="image">
+		<control type="image" id="735">
 			<description>Studio</description>
 			<posx>254</posx>
 			<posy>635</posy>
@@ -1307,7 +1307,7 @@
 		<control type="group">
 			<visible>!IsEmpty(ListItem.Studio) + !Window.IsActive(VideoScan) + !Window.IsActive(MusicScan) + !Window.IsActive(InfoDialog)</visible>
 			
-			<control type="image">
+			<control type="image" id="736">
 				<posx>1182</posx>
 				<posy>0</posy>
 				<width>68</width>
@@ -1316,7 +1316,7 @@
 				<include>MediaFlagFadeAnim</include>
 			</control>
 					
-			<control type="image">
+			<control type="image" id="737">
 				<description>Studio Flag</description>
 				<posx>1182</posx>
 				<posy>0</posy>
