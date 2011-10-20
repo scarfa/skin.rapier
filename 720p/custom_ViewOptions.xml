@@ -458,6 +458,14 @@
 				<onclick>Skin.ToggleSetting(HideEpisodesListInfoPlot)</onclick>
 				<visible>Skin.String(CurrentViewMode,73) + Container.Content(Episodes)</visible>
 			</control>
+			<control type="radiobutton" id="4021">
+				<description>List Info Hide Plot (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31044]</label>
+				<selected>Skin.HasSetting(HideProgramsListInfoPlot)</selected>
+				<onclick>Skin.ToggleSetting(HideProgramsListInfoPlot)</onclick>
+				<visible>Skin.String(CurrentViewMode,590) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
 			<control type="radiobutton" id="1037">
 				<description>List Info Do Not Auto Scroll Description (Music)</description>
 				<include>DropDownMenuRadioBtn</include>
@@ -493,6 +501,15 @@
 				<onclick>Skin.ToggleSetting(DoNotAutoScrollEpisodesListInfoPlot)</onclick>
 				<enable>!Skin.HasSetting(HideEpisodesListInfoPlot)</enable>
 				<visible>Skin.String(CurrentViewMode,73) + Container.Content(Episodes)</visible>
+			</control>
+			<control type="radiobutton" id="4022">
+				<description>List Info Do Not Auto Scroll Plot (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31401]</label>
+				<selected>!Skin.HasSetting(DoNotAutoScrollProgramsListInfoPlot)</selected>
+				<onclick>Skin.ToggleSetting(DoNotAutoScrollProgramsListInfoPlot)</onclick>
+				<enable>!Skin.HasSetting(HideProgramsListInfoPlot)</enable>
+				<visible>Skin.String(CurrentViewMode,590) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
 			</control>
 			<control type="radiobutton" id="3046">
 				<description>List Info TV Show Logo (TVShows)</description>
@@ -545,6 +562,14 @@
 				<onclick>Skin.ToggleSetting(HideAddonsListInfoFanart)</onclick>
 				<visible>Skin.String(CurrentViewMode,91) + Substring(Container.FolderPath,addons:,Left)</visible>
 			</control>
+			<control type="radiobutton" id="4023">
+				<description>List Info Hide Fanart (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31043]</label>
+				<selected>Skin.HasSetting(HideProgramsListInfoFanart)</selected>
+				<onclick>Skin.ToggleSetting(HideProgramsListInfoFanart)</onclick>
+				<visible>Skin.String(CurrentViewMode,590) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
 			<control type="radiobutton" id="1009">
 				<description>List Info 2 Hide Description (Music)</description>
 				<include>DropDownMenuRadioBtn</include>
@@ -576,6 +601,14 @@
 				<selected>Skin.HasSetting(HideEpisodesListInfo2Plot)</selected>
 				<onclick>Skin.ToggleSetting(HideEpisodesListInfo2Plot)</onclick>
 				<visible>Skin.String(CurrentViewMode,68) + Container.Content(Episodes)</visible>
+			</control>
+			<control type="radiobutton" id="4031">
+				<description>List Info 2 Hide Plot (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31044]</label>
+				<selected>Skin.HasSetting(HideProgramsListInfo2Plot)</selected>
+				<onclick>Skin.ToggleSetting(HideProgramsListInfo2Plot)</onclick>
+				<visible>Skin.String(CurrentViewMode,591) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
 			</control>
 			<control type="radiobutton" id="1010">
 				<description>List Info 2 Do Not Auto Scroll Description (Music)</description>
@@ -612,6 +645,15 @@
 				<onclick>Skin.ToggleSetting(DoNotAutoScrollEpisodesListInfo2Plot)</onclick>
 				<enable>!Skin.HasSetting(HideEpisodesListInfo2Plot)</enable>
 				<visible>Skin.String(CurrentViewMode,68) + Container.Content(Episodes)</visible>
+			</control>
+			<control type="radiobutton" id="4032">
+				<description>List Info 2 Do Not Auto Scroll Plot (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31401]</label>
+				<selected>!Skin.HasSetting(DoNotAutoScrollProgramsListInfo2Plot)</selected>
+				<onclick>Skin.ToggleSetting(DoNotAutoScrollProgramsListInfo2Plot)</onclick>
+				<enable>!Skin.HasSetting(HideProgramsListInfo2Plot)</enable>
+				<visible>Skin.String(CurrentViewMode,591) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
 			</control>
 			<control type="radiobutton" id="2016">
 				<description>List Info 2 Hide Overlay (Movies)</description>
@@ -700,6 +742,14 @@
 				<onclick>Skin.ToggleSetting(HideEpisodesListInfo2Fanart)</onclick>
 				<visible>Skin.String(CurrentViewMode,68) + Container.Content(Episodes)</visible>
 			</control>
+			<control type="radiobutton" id="4033">
+				<description>List Info 2 Hide Fanart (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31043]</label>
+				<selected>Skin.HasSetting(HideProgramsListInfo2Fanart)</selected>
+				<onclick>Skin.ToggleSetting(HideProgramsListInfo2Fanart)</onclick>
+				<visible>Skin.String(CurrentViewMode,591) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
 			<control type="radiobutton" id="3031">
 				<description>List Info 3 Hide Description (Music)</description>
 				<include>DropDownMenuRadioBtn</include>
@@ -723,6 +773,14 @@
 				<selected>Skin.HasSetting(HideEpisodesListInfo3Plot)</selected>
 				<onclick>Skin.ToggleSetting(HideEpisodesListInfo3Plot)</onclick>
 				<visible>Skin.String(CurrentViewMode,94) + Container.Content(Episodes)</visible>
+			</control>
+			<control type="radiobutton" id="4041">
+				<description>List Info 3 Hide Plot (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31044]</label>
+				<selected>Skin.HasSetting(HideProgramsListInfo3Plot)</selected>
+				<onclick>Skin.ToggleSetting(HideProgramsListInfo3Plot)</onclick>
+				<visible>Skin.String(CurrentViewMode,592) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
 			</control>
 			<control type="radiobutton" id="3032">
 				<description>List Info 3 Do Not Auto Scroll Description (Music)</description>
@@ -750,6 +808,15 @@
 				<onclick>Skin.ToggleSetting(DoNotAutoScrollEpisodesListInfo3Plot)</onclick>
 				<enable>!Skin.HasSetting(HideEpisodesListInfo3Plot)</enable>
 				<visible>Skin.String(CurrentViewMode,94) + Container.Content(Episodes)</visible>
+			</control>
+			<control type="radiobutton" id="4042">
+				<description>List Info 3 Do Not Auto Scroll Plot (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31401]</label>
+				<selected>!Skin.HasSetting(DoNotAutoScrollProgramsListInfo3Plot)</selected>
+				<onclick>Skin.ToggleSetting(DoNotAutoScrollProgramsListInfo3Plot)</onclick>
+				<enable>!Skin.HasSetting(HideProgramsListInfo3Plot)</enable>
+				<visible>Skin.String(CurrentViewMode,592) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
 			</control>
 			<control type="radiobutton" id="3039">
 				<description>List Info 3 Extra Thumbs (Movies)</description>
@@ -795,6 +862,14 @@
 				<onclick>Skin.ToggleSetting(HideEpisodesListInfo3Fanart)</onclick>
 				<visible>Skin.String(CurrentViewMode,94) + Container.Content(Episodes)</visible>
 			</control>
+			<control type="radiobutton" id="4043">
+				<description>List Info 3 Hide Fanart (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31043]</label>
+				<selected>Skin.HasSetting(HideProgramsListInfo3Fanart)</selected>
+				<onclick>Skin.ToggleSetting(HideProgramsListInfo3Fanart)</onclick>
+				<visible>Skin.String(CurrentViewMode,592) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
 			<control type="radiobutton" id="3084">
 				<description>Thumbs Info Hide Label (Music)</description>
 				<include>DropDownMenuRadioBtn</include>
@@ -819,6 +894,14 @@
 				<onclick>Skin.ToggleSetting(HideTVShowsThumbsInfoLabel)</onclick>	
 				<visible>Skin.String(CurrentViewMode,100) + Container.Content(TVShows)</visible>
 			</control>
+			<control type="radiobutton" id="4051">
+				<description>Thumbs Info Hide Label (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31042]</label>
+				<selected>Skin.HasSetting(HideProgramsThumbsInfoLabel)</selected>
+				<onclick>Skin.ToggleSetting(HideProgramsThumbsInfoLabel)</onclick>	
+				<visible>Skin.String(CurrentViewMode,593) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
 			<control type="radiobutton" id="3072">
 				<description>Thumbs Info Hide Description (Music)</description>
 				<include>DropDownMenuRadioBtn</include>
@@ -842,6 +925,14 @@
 				<selected>Skin.HasSetting(HideTVShowsThumbsInfoPlot)</selected>
 				<onclick>Skin.ToggleSetting(HideTVShowsThumbsInfoPlot)</onclick>
 				<visible>Skin.String(CurrentViewMode,100) + Container.Content(TVShows)</visible>
+			</control>
+			<control type="radiobutton" id="4052">
+				<description>Thumbs Info Hide Plot (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31044]</label>
+				<selected>Skin.HasSetting(HideProgramsThumbsInfoPlot)</selected>
+				<onclick>Skin.ToggleSetting(HideProgramsThumbsInfoPlot)</onclick>
+				<visible>Skin.String(CurrentViewMode,593) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
 			</control>
 			<control type="radiobutton" id="3073">
 				<description>Thumbs Info Do Not Auto Scroll Description (Music)</description>
@@ -869,6 +960,15 @@
 				<onclick>Skin.ToggleSetting(DoNotAutoScrollTVShowsThumbsInfoPlot)</onclick>
 				<enable>!Skin.HasSetting(HideTVShowsThumbsInfoPlot)</enable>
 				<visible>Skin.String(CurrentViewMode,100) + Container.Content(TVShows)</visible>
+			</control>
+			<control type="radiobutton" id="4053">
+				<description>Thumbs Info Do Not Auto Scroll Plot (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31401]</label>
+				<selected>!Skin.HasSetting(DoNotAutoScrollProgramsThumbsInfoPlot)</selected>
+				<onclick>Skin.ToggleSetting(DoNotAutoScrollProgramsThumbsInfoPlot)</onclick>
+				<enable>!Skin.HasSetting(HideProgramsThumbsInfoPlot)</enable>
+				<visible>Skin.String(CurrentViewMode,593) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
 			</control>
 			<control type="radiobutton" id="3069">
 				<description>Thumbs Info Hide Overlay (Movies)</description>
@@ -920,6 +1020,80 @@
 				<onclick>Skin.ToggleSetting(HideTVShowsThumbsInfoFanart)</onclick>
 				<visible>Skin.String(CurrentViewMode,100) + Container.Content(TVShows)</visible>
 			</control>
+			<control type="radiobutton" id="4054">
+				<description>Thumbs Info Hide Fanart (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31043]</label>
+				<selected>Skin.HasSetting(HideProgramsThumbsInfoFanart)</selected>
+				<onclick>Skin.ToggleSetting(HideProgramsThumbsInfoFanart)</onclick>
+				<visible>Skin.String(CurrentViewMode,593) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="radiobutton" id="4061">
+				<description>Thumbs Info 2 Hide Label (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31042]</label>
+				<selected>Skin.HasSetting(HideProgramsThumbsInfo2Label)</selected>
+				<onclick>Skin.ToggleSetting(HideProgramsThumbsInfo2Label)</onclick>	
+				<visible>Skin.String(CurrentViewMode,594) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="radiobutton" id="4062">
+				<description>Thumbs Info 2 Hide Plot (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31044]</label>
+				<selected>Skin.HasSetting(HideProgramsThumbsInfo2Plot)</selected>
+				<onclick>Skin.ToggleSetting(HideProgramsThumbsInfo2Plot)</onclick>
+				<visible>Skin.String(CurrentViewMode,594) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="radiobutton" id="4063">
+				<description>Thumbs Info 2 Do Not Auto Scroll Plot (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31401]</label>
+				<selected>!Skin.HasSetting(DoNotAutoScrollProgramsThumbsInfo2Plot)</selected>
+				<onclick>Skin.ToggleSetting(DoNotAutoScrollProgramsThumbsInfo2Plot)</onclick>
+				<enable>!Skin.HasSetting(HideProgramsThumbsInfo2Plot)</enable>
+				<visible>Skin.String(CurrentViewMode,594) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="radiobutton" id="4064">
+				<description>Thumbs Info 2 Hide Fanart (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31043]</label>
+				<selected>Skin.HasSetting(HideProgramsThumbsInfo2Fanart)</selected>
+				<onclick>Skin.ToggleSetting(HideProgramsThumbsInfo2Fanart)</onclick>
+				<visible>Skin.String(CurrentViewMode,594) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="radiobutton" id="4071">
+				<description>Thumbs Info 3 Hide Label (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31042]</label>
+				<selected>Skin.HasSetting(HideProgramsThumbsInfo3Label)</selected>
+				<onclick>Skin.ToggleSetting(HideProgramsThumbsInfo3Label)</onclick>	
+				<visible>Skin.String(CurrentViewMode,595) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="radiobutton" id="4072">
+				<description>Thumbs Info 3 Hide Plot (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31044]</label>
+				<selected>Skin.HasSetting(HideProgramsThumbsInfo3Plot)</selected>
+				<onclick>Skin.ToggleSetting(HideProgramsThumbsInfo3Plot)</onclick>
+				<visible>Skin.String(CurrentViewMode,595) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="radiobutton" id="4073">
+				<description>Thumbs Info 3 Do Not Auto Scroll Plot (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31401]</label>
+				<selected>!Skin.HasSetting(DoNotAutoScrollProgramsThumbsInfo3Plot)</selected>
+				<onclick>Skin.ToggleSetting(DoNotAutoScrollProgramsThumbsInfo3Plot)</onclick>
+				<enable>!Skin.HasSetting(HideProgramsThumbsInfo3Plot)</enable>
+				<visible>Skin.String(CurrentViewMode,595) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="radiobutton" id="4074">
+				<description>Thumbs Info 3 Hide Fanart (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31043]</label>
+				<selected>Skin.HasSetting(HideProgramsThumbsInfo3Fanart)</selected>
+				<onclick>Skin.ToggleSetting(HideProgramsThumbsInfo3Fanart)</onclick>
+				<visible>Skin.String(CurrentViewMode,595) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
 			<control type="radiobutton" id="1015">
 				<description>Wrap List Info Enable Compact Mode (Music)</description>
 				<include>DropDownMenuRadioBtn</include>
@@ -935,6 +1109,14 @@
 				<selected>Skin.HasSetting(EnableMoviesWrapListInfoCompactMode)</selected>
 				<onclick>Skin.ToggleSetting(EnableMoviesWrapListInfoCompactMode)</onclick>
 				<visible>Container.Content(Movies) + Skin.String(CurrentViewMode,53)</visible>
+			</control>
+			<control type="radiobutton" id="4081">
+				<description>Wrap List Info Enable Compact Mode (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31414]</label>
+				<selected>Skin.HasSetting(EnableProgramsWrapListInfoCompactMode)</selected>
+				<onclick>Skin.ToggleSetting(EnableProgramsWrapListInfoCompactMode)</onclick>
+				<visible>Skin.String(CurrentViewMode,596) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
 			</control>
 			<control type="radiobutton" id="1017">
 				<description>Wrap List Info Hide Description (Music)</description>
@@ -954,6 +1136,15 @@
 				<enable>!Skin.HasSetting(EnableMoviesWrapListInfoCompactMode)</enable>
 				<visible>Container.Content(Movies) + Skin.String(CurrentViewMode,53)</visible>
 			</control>
+			<control type="radiobutton" id="4082">
+				<description>Wrap List Info Hide Plot (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31044]</label>
+				<selected>Skin.HasSetting(HideProgramsWrapListInfoPlot)</selected>
+				<onclick>Skin.ToggleSetting(HideProgramsWrapListInfoPlot)</onclick>
+				<enable>!Skin.HasSetting(EnableProgramsWrapListInfoCompactMode)</enable>
+				<visible>Skin.String(CurrentViewMode,596) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
 			<control type="radiobutton" id="1018">
 				<description>Wrap List Info Do Not Auto Scroll Description (Music)</description>
 				<include>DropDownMenuRadioBtn</include>
@@ -971,6 +1162,15 @@
 				<onclick>Skin.ToggleSetting(DoNotAutoScrollMoviesWrapListInfoPlot)</onclick>
 				<enable>!Skin.HasSetting(HideMoviesWrapListInfoPlot) + !Skin.HasSetting(EnableMoviesWrapListInfoCompactMode)</enable>
 				<visible>Container.Content(Movies) + Skin.String(CurrentViewMode,53)</visible>
+			</control>
+			<control type="radiobutton" id="4083">
+				<description>Wrap List Info Do Not Auto Scroll Plot (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31401]</label>
+				<selected>!Skin.HasSetting(DoNotAutoScrollProgramsWrapListInfoPlot)</selected>
+				<onclick>Skin.ToggleSetting(DoNotAutoScrollProgramsWrapListInfoPlot)</onclick>
+				<enable>!Skin.HasSetting(HideProgramsWrapListInfoPlot) + !Skin.HasSetting(EnableProgramsWrapListInfoCompactMode)</enable>
+				<visible>Skin.String(CurrentViewMode,596) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
 			</control>
 			<control type="radiobutton" id="2025">
 				<description>Wrap List Info Hide Overlay (Movies)</description>
@@ -1003,6 +1203,82 @@
 				<selected>Skin.HasSetting(HideAddonsWrapListInfoFanart)</selected>
 				<onclick>Skin.ToggleSetting(HideAddonsWrapListInfoFanart)</onclick>
 				<visible>Skin.String(CurrentViewMode,93) + Substring(Container.FolderPath,addons:,Left)</visible>
+			</control>
+			<control type="radiobutton" id="4084">
+				<description>Wrap List Info Hide Fanart (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31043]</label>
+				<selected>Skin.HasSetting(HideProgramsWrapListInfoFanart)</selected>
+				<onclick>Skin.ToggleSetting(HideProgramsWrapListInfoFanart)</onclick>
+				<visible>Skin.String(CurrentViewMode,596) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="radiobutton" id="4091">
+				<description>Wrap List Info 2 Enable Compact Mode (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31414]</label>
+				<selected>Skin.HasSetting(EnableProgramsWrapListInfo2CompactMode)</selected>
+				<onclick>Skin.ToggleSetting(EnableProgramsWrapListInfo2CompactMode)</onclick>
+				<visible>Skin.String(CurrentViewMode,597) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="radiobutton" id="4092">
+				<description>Wrap List Info 2 Hide Plot (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31044]</label>
+				<selected>Skin.HasSetting(HideProgramsWrapListInfo2Plot)</selected>
+				<onclick>Skin.ToggleSetting(HideProgramsWrapListInfo2Plot)</onclick>
+				<enable>!Skin.HasSetting(EnableProgramsWrapListInfo2CompactMode)</enable>
+				<visible>Skin.String(CurrentViewMode,597) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="radiobutton" id="4093">
+				<description>Wrap List Info 2 Do Not Auto Scroll Plot (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31401]</label>
+				<selected>!Skin.HasSetting(DoNotAutoScrollProgramsWrapListInfo2Plot)</selected>
+				<onclick>Skin.ToggleSetting(DoNotAutoScrollProgramsWrapListInfo2Plot)</onclick>
+				<enable>!Skin.HasSetting(HideProgramsWrapListInfo2Plot) + !Skin.HasSetting(EnableProgramsWrapListInfo2CompactMode)</enable>
+				<visible>Skin.String(CurrentViewMode,597) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="radiobutton" id="4094">
+				<description>Wrap List Info 2 Hide Fanart (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31043]</label>
+				<selected>Skin.HasSetting(HideProgramsWrapListInfo2Fanart)</selected>
+				<onclick>Skin.ToggleSetting(HideProgramsWrapListInfo2Fanart)</onclick>
+				<visible>Skin.String(CurrentViewMode,597) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="radiobutton" id="4101">
+				<description>Wrap List Info 3 Enable Compact Mode (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31414]</label>
+				<selected>Skin.HasSetting(EnableProgramsWrapListInfo3CompactMode)</selected>
+				<onclick>Skin.ToggleSetting(EnableProgramsWrapListInfo3CompactMode)</onclick>
+				<visible>Skin.String(CurrentViewMode,598) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="radiobutton" id="4102">
+				<description>Wrap List Info 3 Hide Plot (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31044]</label>
+				<selected>Skin.HasSetting(HideProgramsWrapListInfo3Plot)</selected>
+				<onclick>Skin.ToggleSetting(HideProgramsWrapListInfo3Plot)</onclick>
+				<enable>!Skin.HasSetting(EnableProgramsWrapListInfo3CompactMode)</enable>
+				<visible>Skin.String(CurrentViewMode,598) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="radiobutton" id="4103">
+				<description>Wrap List Info 3 Do Not Auto Scroll Plot (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31401]</label>
+				<selected>!Skin.HasSetting(DoNotAutoScrollProgramsWrapListInfo3Plot)</selected>
+				<onclick>Skin.ToggleSetting(DoNotAutoScrollProgramsWrapListInfo3Plot)</onclick>
+				<enable>!Skin.HasSetting(HideProgramsWrapListInfo3Plot) + !Skin.HasSetting(EnableProgramsWrapListInfo3CompactMode)</enable>
+				<visible>Skin.String(CurrentViewMode,598) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="radiobutton" id="4104">
+				<description>Wrap List Info 3 Hide Fanart (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31043]</label>
+				<selected>Skin.HasSetting(HideProgramsWrapListInfo3Fanart)</selected>
+				<onclick>Skin.ToggleSetting(HideProgramsWrapListInfo3Fanart)</onclick>
+				<visible>Skin.String(CurrentViewMode,598) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
 			</control>
 			<control type="radiobutton" id="1033">
 				<description>Wall Do Not Dim Cover (Music)</description>
@@ -1246,6 +1522,78 @@
 				<onclick>Skin.ToggleSetting(ShowWallViewScrollbar)</onclick>
 				<visible>Skin.String(CurrentViewMode,70) | Skin.String(CurrentViewMode,69)</visible>
 			</control>
+			<control type="radiobutton" id="4024">
+				<description>List Info Hide Scrollbar (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31025]</label>
+				<selected>Skin.HasSetting(HideListInfoView2Scrollbar)</selected>
+				<onclick>Skin.ToggleSetting(HideListInfoView2Scrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,590)</visible>
+			</control>
+			<control type="radiobutton" id="4034">
+				<description>List Info 2 Hide Scrollbar (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31025]</label>
+				<selected>Skin.HasSetting(HideListInfoView2Scrollbar)</selected>
+				<onclick>Skin.ToggleSetting(HideListInfoView2Scrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,591)</visible>
+			</control>
+			<control type="radiobutton" id="4044">
+				<description>List Info 3 Hide Scrollbar (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31025]</label>
+				<selected>Skin.HasSetting(HideListInfoView2Scrollbar)</selected>
+				<onclick>Skin.ToggleSetting(HideListInfoView2Scrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,592)</visible>
+			</control>
+			<control type="radiobutton" id="4055">
+				<description>Thumbs Info Hide Scrollbar (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31025]</label>
+				<selected>Skin.HasSetting(HideThumbsInfoViewScrollbar)</selected>
+				<onclick>Skin.ToggleSetting(HideThumbsInfoViewScrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,593)</visible>
+			</control>
+			<control type="radiobutton" id="4065">
+				<description>Thumbs Info 2 Hide Scrollbar (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31025]</label>
+				<selected>Skin.HasSetting(HideThumbsInfoViewScrollbar)</selected>
+				<onclick>Skin.ToggleSetting(HideThumbsInfoViewScrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,594)</visible>
+			</control>
+			<control type="radiobutton" id="4075">
+				<description>Thumbs Info 3 Hide Scrollbar (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31025]</label>
+				<selected>Skin.HasSetting(HideThumbsInfoViewScrollbar)</selected>
+				<onclick>Skin.ToggleSetting(HideThumbsInfoViewScrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,595)</visible>
+			</control>
+			<control type="radiobutton" id="4085">
+				<description>Wrap Info Hide Scrollbar (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31025]</label>
+				<selected>!Skin.HasSetting(ShowWrapInfoViewScrollbar)</selected>
+				<onclick>Skin.ToggleSetting(ShowWrapInfoViewScrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,596)</visible>
+			</control>
+			<control type="radiobutton" id="4095">
+				<description>Wrap Info 2 Hide Scrollbar (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31025]</label>
+				<selected>!Skin.HasSetting(ShowWrapInfoView2Scrollbar)</selected>
+				<onclick>Skin.ToggleSetting(ShowWrapInfoView2Scrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,597)</visible>
+			</control>
+			<control type="radiobutton" id="4105">
+				<description>Wrap Info 3 Hide Scrollbar (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31025]</label>
+				<selected>!Skin.HasSetting(ShowWrapInfoView3Scrollbar)</selected>
+				<onclick>Skin.ToggleSetting(ShowWrapInfoView3Scrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,598)</visible>
+			</control>
 			<control type="button" id="3023">
 				<description>Add-on Options Header</description>
 				<include>DropDownMenuHeader</include>
@@ -1271,6 +1619,36 @@
 				<visible>Control.IsVisible(3050) | Control.IsVisible(3052) | Control.IsVisible(3018) | Control.IsVisible(3019)
 				| Control.IsVisible(1006) | Control.IsVisible(1012) | Control.IsVisible(2010) | Control.IsVisible(2017) 
 				| Control.IsVisible(2044) | Control.IsVisible(2050) | Control.IsVisible(3008) | Control.IsVisible(3012)</visible>
+			</control>
+			<control type="button" id="4025">
+				<description>List Info View Styles Header (Programs)</description>
+				<include>DropDownMenuHeader</include>
+				<label>$LOCALIZE[31206]</label>
+				<visible>Control.IsVisible(4026)</visible>
+			</control>
+			<control type="button" id="4035">
+				<description>List Info 2 View Styles Header (Programs)</description>
+				<include>DropDownMenuHeader</include>
+				<label>$LOCALIZE[31206]</label>
+				<visible>Control.IsVisible(4036)</visible>
+			</control>
+			<control type="button" id="4045">
+				<description>List Info 3 View Styles Header (Programs)</description>
+				<include>DropDownMenuHeader</include>
+				<label>$LOCALIZE[31206]</label>
+				<visible>Control.IsVisible(4046)</visible>
+			</control>
+			<control type="button" id="4086">
+				<description>Wrap Info View Styles Header (Programs)</description>
+				<include>DropDownMenuHeader</include>
+				<label>$LOCALIZE[31206]</label>
+				<visible>Control.IsVisible(4087)</visible>
+			</control>
+			<control type="button" id="4096">
+				<description>Wrap Info 2 View Styles Header (Programs)</description>
+				<include>DropDownMenuHeader</include>
+				<label>$LOCALIZE[31206]</label>
+				<visible>Control.IsVisible(4097)</visible>
 			</control>
 			<control type="radiobutton" id="3050">
 				<description>Common DVD Thumbs Use Style 1</description>
@@ -1349,6 +1727,39 @@
 				<onclick>Container.SetViewMode(52)</onclick>
 				<visible>Skin.String(CurrentViewMode,52)</visible>
 			</control>
+			<control type="radiobutton" id="4026">
+				<description>List Info Use Style 1 (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31418]</label>
+				<selected>Skin.String(ProgramsListInfoStyle,1)</selected>
+				<onclick>Skin.SetString(ProgramsListInfoStyle,1)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<include>ReloadSkinNotification</include>
+				<onclick>Container.SetViewMode(590)</onclick>
+				<visible>Skin.String(CurrentViewMode,590) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="radiobutton" id="4027">
+				<description>List Info Use Style 2 (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31417]</label>
+				<selected>Skin.String(ProgramsListInfoStyle,2) | Skin.String(ProgramsListInfoStyle,)</selected>
+				<onclick>Skin.SetString(ProgramsListInfoStyle,2)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<include>ReloadSkinNotification</include>
+				<onclick>Container.SetViewMode(590)</onclick>
+				<visible>Skin.String(CurrentViewMode,590) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="radiobutton" id="4028">
+				<description>List Info Use Style 3 (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[20395]</label>
+				<selected>Skin.String(ProgramsListInfoStyle,3)</selected>
+				<onclick>Skin.SetString(ProgramsListInfoStyle,3)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<include>ReloadSkinNotification</include>
+				<onclick>Container.SetViewMode(590)</onclick>
+				<visible>Skin.String(CurrentViewMode,590) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
 			<control type="radiobutton" id="1006">
 				<description>List Info 2 Use Style 1 (Music)</description>
 				<include>DropDownMenuRadioBtn</include>
@@ -1381,6 +1792,72 @@
 				<include>ReloadSkinNotification</include>
 				<onclick>Container.SetViewMode(67)</onclick>
 				<visible>Skin.String(CurrentViewMode,67) + [Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)]</visible>
+			</control>
+			<control type="radiobutton" id="4036">
+				<description>List Info 2 Use Style 1 (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31418]</label>
+				<selected>Skin.String(ProgramsListInfo2Style,1)</selected>
+				<onclick>Skin.SetString(ProgramsListInfo2Style,1)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<include>ReloadSkinNotification</include>
+				<onclick>Container.SetViewMode(591)</onclick>
+				<visible>Skin.String(CurrentViewMode,591) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="radiobutton" id="4037">
+				<description>List Info 2 Use Style 2 (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31417]</label>
+				<selected>Skin.String(ProgramsListInfo2Style,2) | Skin.String(ProgramsListInfo2Style,)</selected>
+				<onclick>Skin.SetString(ProgramsListInfo2Style,2)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<include>ReloadSkinNotification</include>
+				<onclick>Container.SetViewMode(591)</onclick>
+				<visible>Skin.String(CurrentViewMode,591) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="radiobutton" id="4038">
+				<description>List Info 2 Use Style 3 (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[20395]</label>
+				<selected>Skin.String(ProgramsListInfo2Style,3)</selected>
+				<onclick>Skin.SetString(ProgramsListInfo2Style,3)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<include>ReloadSkinNotification</include>
+				<onclick>Container.SetViewMode(591)</onclick>
+				<visible>Skin.String(CurrentViewMode,591) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="radiobutton" id="4046">
+				<description>List Info 3 Use Style 1 (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31418]</label>
+				<selected>Skin.String(ProgramsListInfo3Style,1)</selected>
+				<onclick>Skin.SetString(ProgramsListInfo3Style,1)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<include>ReloadSkinNotification</include>
+				<onclick>Container.SetViewMode(592)</onclick>
+				<visible>Skin.String(CurrentViewMode,592) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="radiobutton" id="4047">
+				<description>List Info 3 Use Style 2 (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31417]</label>
+				<selected>Skin.String(ProgramsListInfo3Style,2) | Skin.String(ProgramsListInfo3Style,)</selected>
+				<onclick>Skin.SetString(ProgramsListInfo3Style,2)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<include>ReloadSkinNotification</include>
+				<onclick>Container.SetViewMode(592)</onclick>
+				<visible>Skin.String(CurrentViewMode,592) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="radiobutton" id="4048">
+				<description>List Info 3 Use Style 3 (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[20395]</label>
+				<selected>Skin.String(ProgramsListInfo3Style,3)</selected>
+				<onclick>Skin.SetString(ProgramsListInfo3Style,3)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<include>ReloadSkinNotification</include>
+				<onclick>Container.SetViewMode(592)</onclick>
+				<visible>Skin.String(CurrentViewMode,592) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
 			</control>
 			<control type="radiobutton" id="1012">
 				<description>Wrap List Info Use Style 1 (Music)</description>
@@ -1573,6 +2050,46 @@
 				<onclick>ReloadSkin()</onclick>
 				<include>ReloadSkinNotification</include>
 				<visible>Skin.String(CurrentViewMode,93) + Substring(Container.FolderPath,addons:,Left)</visible>
+			</control>
+			<control type="radiobutton" id="4087">
+				<description>Wrap List Info Use Style 1 (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31418]</label>
+				<selected>Skin.String(ProgramsWrapListInfoStyle,1) | Skin.String(ProgramsWrapListInfoStyle,)</selected>
+				<onclick>Skin.SetString(ProgramsWrapListInfoStyle,1)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<include>ReloadSkinNotification</include>
+				<visible>Skin.String(CurrentViewMode,596) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="radiobutton" id="4088">
+				<description>Wrap List Info Use Style 2 (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31413]</label>
+				<selected>Skin.String(ProgramsWrapListInfoStyle,2)</selected>
+				<onclick>Skin.SetString(ProgramsWrapListInfoStyle,2)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<include>ReloadSkinNotification</include>
+				<visible>Skin.String(CurrentViewMode,596) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="radiobutton" id="4097">
+				<description>Wrap List Info 2 Use Style 1 (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31418]</label>
+				<selected>Skin.String(ProgramsWrapListInfo2Style,1) | Skin.String(ProgramsWrapListInfo2Style,)</selected>
+				<onclick>Skin.SetString(ProgramsWrapListInfo2Style,1)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<include>ReloadSkinNotification</include>
+				<visible>Skin.String(CurrentViewMode,597) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
+			</control>
+			<control type="radiobutton" id="4098">
+				<description>Wrap List Info 2 Use Style 2 (Programs)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31413]</label>
+				<selected>Skin.String(ProgramsWrapListInfo2Style,2)</selected>
+				<onclick>Skin.SetString(ProgramsWrapListInfo2Style,2)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<include>ReloadSkinNotification</include>
+				<visible>Skin.String(CurrentViewMode,597) + Substring(Container.FolderPath,plugin://plugin.program)</visible>
 			</control>
 			<control type="image" id="781">
 				<include>DropDownMenuBottomBorder</include>
