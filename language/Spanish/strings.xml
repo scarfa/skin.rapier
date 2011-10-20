@@ -44,7 +44,8 @@
 <string id="31023">Restablecer configuración de Piel...</string>
 <string id="32024">Recargar Piel...</string>
 <string id="32025">Reiniciar Piel</string>
-<string id="32026">Todos los ajustes de la piel volverá a la configuración predeterminada. Pulse para confirmar.</string>
+<string id="32026">Los ajustes de piel volverá a la configuración por defecto. Pulse para confirmar.</string>
+<string id="32027">Editor</string>
 
 <!-- view types -->
 <string id="31103">Icon</string>
@@ -59,6 +60,10 @@
 <string id="31114">Wide List</string>
 <string id="31115">List Info 3</string>
 <string id="31116">Thumbs Info</string>
+<string id="31117">Wrap Info 2</string>
+<string id="31118">Wrap Info 3</string>
+<string id="31119">Thumbs Info 2</string>
+<string id="31120">Thumbs Info 3</string>
 
 <!-- skin settings general -->
 <string id="31021">Ocultar Panel Información</string>
