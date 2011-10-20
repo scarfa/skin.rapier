@@ -7,6 +7,7 @@
 	<include file="ViewsTVShows.xml"/>
 	<include file="ViewsEpisodes.xml"/>
 	<include file="ViewsAddons.xml"/>
+	<include file="ViewsPrograms.xml"/>
 	<include file="includes_Home.xml"/>
 	<include file="includes_InfoPane.xml"/>
 	<include file="includes_MenuBar.xml"/>
