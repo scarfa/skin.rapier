@@ -107,5 +107,6 @@ UNLESS OTHERWISE MUTUALLY AGREED TO BY THE PARTIES IN WRITING AND TO THE FULLEST
 
 ---------- THANKS ---------------------------------------------------------------------------
 
-- XBMC team for creating and maintaining such a wonderful program that has given me so much joy for a number of years. Thanks also to the skinners before me who paved the way with their awesome skins.
-- lambda of the XBMC community for fleshing out the program views.
+- The XBMC team for creating and maintaining such a wonderful program that has given me so much joy for a number of years.
+- The skinners before me who paved the way with their awesome skins.
+- Lambda of the XBMC community for fleshing out the program views.
