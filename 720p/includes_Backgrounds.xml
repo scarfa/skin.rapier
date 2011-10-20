@@ -315,6 +315,24 @@
 		</control>
 	</include>
 	
+	<include name="BackgroundProgramsFanart">
+		<control type="group">
+			<include condition="![Skin.HasSetting(DisableMusicPlayingBG) | Skin.HasSetting(DisableVideoPlayingBG)]">IsMediaPlayingCondition</include>
+			<visible>[Control.IsVisible(590) + !Skin.HasSetting(HideProgramsListInfoFanart)]
+			| [Control.IsVisible(591) + !Skin.HasSetting(HideProgramsListInfo2Fanart)]
+			| [Control.IsVisible(592) + !Skin.HasSetting(HideProgramsListInfo3Fanart)]
+			| [Control.IsVisible(593) + !Skin.HasSetting(HideProgramsThumbsInfoFanart)]
+			| [Control.IsVisible(594) + !Skin.HasSetting(HideProgramsThumbsInfo2Fanart)]
+			| [Control.IsVisible(595) + !Skin.HasSetting(HideProgramsThumbsInfo3Fanart)]
+			| [Control.IsVisible(596) + !Skin.HasSetting(HideProgramsWrapListInfoFanart)]
+			| [Control.IsVisible(597) + !Skin.HasSetting(HideProgramsWrapListInfo2Fanart)]
+			| [Control.IsVisible(598) + !Skin.HasSetting(HideProgramsWrapListInfo3Fanart)]</visible>			
+			<include>BackgroundVisibleAnim</include>
+			<include>FanartImage</include>
+			<include>FanartDim</include>
+		</control>
+	</include>
+	
 	<include name="FanartImage">
 		<control type="largeimage">
 			<include>BackgroundSize</include>
