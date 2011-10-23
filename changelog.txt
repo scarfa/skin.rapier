@@ -1,5 +1,5 @@
 ------------------------
-Rapier v4.00 (18-Oct-11)
+Rapier v4.0.0 (18-Oct-11)
 ------------------------
 
 * complete redesign for dharma

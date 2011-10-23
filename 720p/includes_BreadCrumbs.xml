@@ -1027,7 +1027,7 @@
 			<control type="label">
 				<description>Rapier</description>
 				<include>BreadCrumbLabel</include>
-				<label>[UPPERCASE]Rapier 4.00[/UPPERCASE]</label>
+				<label>[UPPERCASE]Rapier 4.0.0[/UPPERCASE]</label>
 				<include>BreadCrumbSlideLvl3Anim</include>
 			</control>
 			<control type="image">
