@@ -28,70 +28,70 @@
 				<description>Genres</description>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[135]</label>
-				<onclick>ActivateWindow(VideoLibrary,MovieGenres)</onclick>
+				<onclick>ActivateWindow(Videos,MovieGenres)</onclick>
 				<onclick>Dialog.Close(3004)</onclick>
 			</control>
 			<control type="button" id="2">
 				<description>Title</description>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[556]</label>
-				<onclick>ActivateWindow(VideoLibrary,MovieTitles)</onclick>
+				<onclick>ActivateWindow(Videos,MovieTitles)</onclick>
 				<onclick>Dialog.Close(3004)</onclick>
 			</control>	
 			<control type="button" id="3">
 				<description>Year</description>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[345]</label>
-				<onclick>ActivateWindow(VideoLibrary,MovieYears)</onclick>
+				<onclick>ActivateWindow(Videos,MovieYears)</onclick>
 				<onclick>Dialog.Close(3004)</onclick>
 			</control>
 			<control type="button" id="4">
 				<description>Actors</description>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[344]</label>
-				<onclick>ActivateWindow(VideoLibrary,MovieActors)</onclick>
+				<onclick>ActivateWindow(Videos,MovieActors)</onclick>
 				<onclick>Dialog.Close(3004)</onclick>
 			</control>
 			<control type="button" id="5">
 				<description>Directors</description>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[20348]</label>
-				<onclick>ActivateWindow(VideoLibrary,MovieDirectors)</onclick>
+				<onclick>ActivateWindow(Videos,MovieDirectors)</onclick>
 				<onclick>Dialog.Close(3004)</onclick>
 			</control>	
 			<control type="button" id="6">
 				<description>Studios</description>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[20388]</label>
-				<onclick>ActivateWindow(VideoLibrary,MovieStudios)</onclick>
+				<onclick>ActivateWindow(Videos,MovieStudios)</onclick>
 				<onclick>Dialog.Close(3004)</onclick>
 			</control>
 			<control type="button" id="8">
 				<description>Countries</description>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[20451]</label>
-				<onclick>ActivateWindow(VideoLibrary,MovieCountries)</onclick>
+				<onclick>ActivateWindow(Videos,MovieCountries)</onclick>
 				<onclick>Dialog.Close(3004)</onclick>
 			</control>		
 			<control type="button" id="7">
 				<description>Recently Added Movies</description>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[20386]</label>
-				<onclick>ActivateWindow(VideoLibrary,RecentlyAddedMovies)</onclick>
+				<onclick>ActivateWindow(Videos,RecentlyAddedMovies)</onclick>
 				<onclick>Dialog.Close(3004)</onclick>
 			</control>
 			<control type="button" id="22">
 				<description>Playlists</description>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[136]</label>
-				<onclick>ActivateWindow(VideoLibrary,Playlists)</onclick>
+				<onclick>ActivateWindow(Videos,Playlists)</onclick>
 				<onclick>Dialog.Close(3004)</onclick>
 			</control>
 			<control type="button" id="23">
 				<description>Video Add-ons</description>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[1037]</label>
-				<onclick>ActivateWindow(VideoLibrary,Plugins)</onclick>
+				<onclick>ActivateWindow(Videos,Plugins)</onclick>
 				<onclick>Dialog.Close(3004)</onclick>
 			</control>
 			<control type="image" id="781">
@@ -119,56 +119,56 @@
 				<description>Genres</description>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[135]</label>
-				<onclick>ActivateWindow(VideoLibrary,TVShowGenres)</onclick>
+				<onclick>ActivateWindow(Videos,TVShowGenres)</onclick>
 				<onclick>Dialog.Close(3004)</onclick>
 			</control>
 			<control type="button" id="2">
 				<description>Title</description>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[556]</label>
-				<onclick>ActivateWindow(VideoLibrary,TVShowTitles)</onclick>
+				<onclick>ActivateWindow(Videos,TVShowTitles)</onclick>
 				<onclick>Dialog.Close(3004)</onclick>
 			</control>
 			<control type="button" id="3">
 				<description>Year</description>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[345]</label>
-				<onclick>ActivateWindow(VideoLibrary,TVShowYears)</onclick>
+				<onclick>ActivateWindow(Videos,TVShowYears)</onclick>
 				<onclick>Dialog.Close(3004)</onclick>
 			</control>
 			<control type="button" id="4">
 				<description>Actors</description>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[344]</label>
-				<onclick>ActivateWindow(VideoLibrary,TVShowActors)</onclick>
+				<onclick>ActivateWindow(Videos,TVShowActors)</onclick>
 				<onclick>Dialog.Close(3004)</onclick>
 			</control>
 			<control type="button" id="5">
 				<description>Studios</description>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[20388]</label>
-				<onclick>ActivateWindow(VideoLibrary,TVShowStudios)</onclick>
+				<onclick>ActivateWindow(Videos,TVShowStudios)</onclick>
 				<onclick>Dialog.Close(3004)</onclick>
 			</control>
 			<control type="button" id="6">
 				<description>Recently Added Episodes</description>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[20387]</label>
-				<onclick>ActivateWindow(VideoLibrary,RecentlyAddedEpisodes)</onclick>
+				<onclick>ActivateWindow(Videos,RecentlyAddedEpisodes)</onclick>
 				<onclick>Dialog.Close(3004)</onclick>
 			</control>
 			<control type="button" id="22">
 				<description>Playlists</description>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[136]</label>
-				<onclick>ActivateWindow(VideoLibrary,Playlists)</onclick>
+				<onclick>ActivateWindow(Videos,Playlists)</onclick>
 				<onclick>Dialog.Close(3004)</onclick>
 			</control>
 			<control type="button" id="23">
 				<description>Video Plugins</description>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[1037]</label>
-				<onclick>ActivateWindow(VideoLibrary,Plugins)</onclick>
+				<onclick>ActivateWindow(Videos,Plugins)</onclick>
 				<onclick>Dialog.Close(3004)</onclick>
 			</control>
 			<control type="image" id="781">
@@ -196,70 +196,70 @@
 				<description>Genres</description>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[135]</label>
-				<onclick>ActivateWindow(VideoLibrary,MusicVideoGenres)</onclick>
+				<onclick>ActivateWindow(Videos,MusicVideoGenres)</onclick>
 				<onclick>Dialog.Close(3004)</onclick>
 			</control>
 			<control type="button" id="2">
 				<description>Title</description>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[556]</label>
-				<onclick>ActivateWindow(VideoLibrary,MusicVideoTitles)</onclick>
+				<onclick>ActivateWindow(Videos,MusicVideoTitles)</onclick>
 				<onclick>Dialog.Close(3004)</onclick>
 			</control>	
 			<control type="button" id="3">
 				<description>Year</description>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[345]</label>
-				<onclick>ActivateWindow(VideoLibrary,MusicVideoYears)</onclick>
+				<onclick>ActivateWindow(Videos,MusicVideoYears)</onclick>
 				<onclick>Dialog.Close(3004)</onclick>
 			</control>
 			<control type="button" id="4">
 				<description>Artists</description>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[133]</label>
-				<onclick>ActivateWindow(VideoLibrary,MusicVideoArtists)</onclick>
+				<onclick>ActivateWindow(Videos,MusicVideoArtists)</onclick>
 				<onclick>Dialog.Close(3004)</onclick>
 			</control>
 			<control type="button" id="5">
 				<description>Albums</description>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[132]</label>
-				<onclick>ActivateWindow(VideoLibrary,MusicVideoAlbums)</onclick>
+				<onclick>ActivateWindow(Videos,MusicVideoAlbums)</onclick>
 				<onclick>Dialog.Close(3004)</onclick>
 			</control>
 			<control type="button" id="6">
 				<description>Directors</description>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[20348]</label>
-				<onclick>ActivateWindow(VideoLibrary,MusicVideoDirectors)</onclick>
+				<onclick>ActivateWindow(Videos,MusicVideoDirectors)</onclick>
 				<onclick>Dialog.Close(3004)</onclick>
 			</control>	
 			<control type="button" id="7">
 				<description>Studios</description>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[20388]</label>
-				<onclick>ActivateWindow(VideoLibrary,MusicVideoStudios)</onclick>
+				<onclick>ActivateWindow(Videos,MusicVideoStudios)</onclick>
 				<onclick>Dialog.Close(3004)</onclick>
 			</control>	
 			<control type="button" id="8">
 				<description>Recently Added Music Videos</description>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[20390]</label>
-				<onclick>ActivateWindow(VideoLibrary,RecentlyAddedMusicVideos)</onclick>
+				<onclick>ActivateWindow(Videos,RecentlyAddedMusicVideos)</onclick>
 				<onclick>Dialog.Close(3004)</onclick>
 			</control>
 			<control type="button" id="22">
 				<description>Playlists</description>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[136]</label>
-				<onclick>ActivateWindow(VideoLibrary,Playlists)</onclick>
+				<onclick>ActivateWindow(Videos,Playlists)</onclick>
 				<onclick>Dialog.Close(3004)</onclick>
 			</control>
 			<control type="button" id="23">
 				<description>Video Add-ons</description>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[1037]</label>
-				<onclick>ActivateWindow(VideoLibrary,Plugins)</onclick>
+				<onclick>ActivateWindow(Videos,Plugins)</onclick>
 				<onclick>Dialog.Close(3004)</onclick>
 			</control>
 			<control type="image" id="781">

@@ -573,7 +573,7 @@
 					<icon>homecategories/$INFO[System.Language]/videos-text-nofocus.png</icon>
 					<include condition="Skin.String(CustomVideosBGType,2) | Skin.String(CustomVideosBGType,3) | Skin.String(CustomVideosBGType,)">HomeVideosCustomBGPath</include>
 					<include condition="Skin.String(CustomVideosBGType,4)">HomeVideosFanartBGPath</include>
-					<onclick>ActivateWindow(VideoFiles)</onclick>	
+					<onclick>ActivateWindow(Videos,Files)</onclick>	
 					<visible>!Skin.HasSetting(HideVideosCategory)</visible>
 				</item>
 				<item id="3">
@@ -582,7 +582,7 @@
 					<icon>homecategories/$INFO[System.Language]/movies-text-nofocus.png</icon>
 					<include condition="Skin.String(CustomMoviesBGType,2) | Skin.String(CustomMoviesBGType,3) | Skin.String(CustomMoviesBGType,)">HomeMoviesCustomBGPath</include>
 					<include condition="Skin.String(CustomMoviesBGType,4)">HomeMoviesFanartBGPath</include>
-					<onclick>ActivateWindow(VideoLibrary,MovieTitles,Return)</onclick>  
+					<onclick>ActivateWindow(Videos,MovieTitles,Return)</onclick>  
 					<visible>!Skin.HasSetting(HideMoviesCategory) + Library.HasContent(Movies)</visible>
 				</item>
 				<item id="4">
@@ -591,7 +591,7 @@
 					<icon>homecategories/$INFO[System.Language]/tvshows-text-nofocus.png</icon>
 					<include condition="Skin.String(CustomTVShowsBGType,2) | Skin.String(CustomTVShowsBGType,3) | Skin.String(CustomTVShowsBGType,)">HomeTVShowsCustomBGPath</include>
 					<include condition="Skin.String(CustomTVShowsBGType,4)">HomeTVShowsFanartBGPath</include>
-					<onclick>ActivateWindow(VideoLibrary,TVShowTitles,Return)</onclick>
+					<onclick>ActivateWindow(Videos,TVShowTitles,Return)</onclick>
 					<visible>!Skin.HasSetting(HideTVShowsCategory) + Library.HasContent(TVShows)</visible>
 				</item>
 				<item id="5">
@@ -875,7 +875,7 @@
 					<item id="2">
 						<description>Movies</description>
 						<label>$LOCALIZE[20342]</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieTitles,Return)</onclick>
+						<onclick>ActivateWindow(Videos,MovieTitles,Return)</onclick>
 						<visible>!Skin.HasSetting(EditVideosSubMenuBtn2)</visible>
 					</item>
 					<item id="2">
@@ -887,7 +887,7 @@
 					<item id="3">
 						<description>TV Shows</description>
 						<label>$LOCALIZE[20343]</label>
-						<onclick>ActivateWindow(VideoLibrary,TVShowTitles,Return)</onclick>
+						<onclick>ActivateWindow(Videos,TVShowTitles,Return)</onclick>
 						<visible>!Skin.HasSetting(EditVideosSubMenuBtn3)</visible>
 					</item>
 					<item id="3">
@@ -899,7 +899,7 @@
 					<item id="4">
 						<description>Music Videos</description>
 						<label>$LOCALIZE[20389]</label>
-						<onclick>ActivateWindow(VideoLibrary,MusicVideoTitles,Return)</onclick>
+						<onclick>ActivateWindow(Videos,MusicVideoTitles,Return)</onclick>
 						<visible>!Skin.HasSetting(EditVideosSubMenuBtn4)</visible>
 					</item>
 					<item id="4">
@@ -911,7 +911,7 @@
 					<item id="5">
 						<description>Playlists</description>
 						<label>$LOCALIZE[136]</label>
-						<onclick>ActivateWindow(VideoLibrary,Playlists,Return)</onclick>
+						<onclick>ActivateWindow(Videos,Playlists,Return)</onclick>
 						<visible>!Skin.HasSetting(EditVideosSubMenuBtn5)</visible>
 					</item>
 					<item id="5">
@@ -935,7 +935,7 @@
 					<item id="7">
 						<description>Video Add-ons</description>
 						<label>$LOCALIZE[24001]</label>
-						<onclick>ActivateWindow(VideoLibrary,Addons,Return)</onclick>
+						<onclick>ActivateWindow(Videos,Addons,Return)</onclick>
 						<visible>!Skin.HasSetting(EditVideosSubMenuBtn7)</visible>
 					</item>
 					<item id="7">
@@ -963,7 +963,7 @@
 					<item id="1">
 						<description>Genres</description>
 						<label>$LOCALIZE[135]</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieGenres,Return)</onclick>
+						<onclick>ActivateWindow(Videos,MovieGenres,Return)</onclick>
 						<visible>!Skin.HasSetting(EditMoviesSubMenuBtn1)</visible>
 					</item>
 					<item id="1">
@@ -975,7 +975,7 @@
 					<item id="2">
 						<description>Year</description>
 						<label>$LOCALIZE[345]</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieYears,Return)</onclick>
+						<onclick>ActivateWindow(Videos,MovieYears,Return)</onclick>
 						<visible>!Skin.HasSetting(EditMoviesSubMenuBtn2)</visible>
 					</item>
 					<item id="2">
@@ -987,7 +987,7 @@
 					<item id="3">
 						<description>Actors</description>
 						<label>$LOCALIZE[344]</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieActors,Return)</onclick>
+						<onclick>ActivateWindow(Videos,MovieActors,Return)</onclick>
 						<visible>!Skin.HasSetting(EditMoviesSubMenuBtn3)</visible>
 					</item>
 					<item id="3">
@@ -999,7 +999,7 @@
 					<item id="4">
 						<description>Directors</description>
 						<label>$LOCALIZE[20348]</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieDirectors,Return)</onclick>
+						<onclick>ActivateWindow(Videos,MovieDirectors,Return)</onclick>
 						<visible>!Skin.HasSetting(EditMoviesSubMenuBtn4)</visible>
 					</item>
 					<item id="4">
@@ -1011,7 +1011,7 @@
 					<item id="5">
 						<description>Studios</description>
 						<label>$LOCALIZE[20388]</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieStudios,Return)</onclick>	
+						<onclick>ActivateWindow(Videos,MovieStudios,Return)</onclick>	
 						<visible>!Skin.HasSetting(EditMoviesSubMenuBtn5)</visible>
 					</item>
 					<item id="5">
@@ -1023,7 +1023,7 @@
 					<item id="6">
 						<description>Countries</description>
 						<label>$LOCALIZE[20451]</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieCountries,Return)</onclick>	
+						<onclick>ActivateWindow(Videos,MovieCountries,Return)</onclick>	
 						<visible>!Skin.HasSetting(EditMoviesSubMenuBtn6)</visible>
 					</item>
 					<item id="6">
@@ -1035,7 +1035,7 @@
 					<item id="7">
 						<description>Recently Added Movies</description>
 						<label>$LOCALIZE[31303]</label>
-						<onclick>ActivateWindow(VideoLibrary,RecentlyAddedMovies,Return)</onclick>
+						<onclick>ActivateWindow(Videos,RecentlyAddedMovies,Return)</onclick>
 						<visible>!Skin.HasSetting(EditMoviesSubMenuBtn7)</visible>
 					</item>
 					<item id="7">
@@ -1063,7 +1063,7 @@
 					<item id="1">
 						<description>Genres</description>
 						<label>$LOCALIZE[135]</label>
-						<onclick>ActivateWindow(VideoLibrary,TVShowGenres,Return)</onclick>
+						<onclick>ActivateWindow(Videos,TVShowGenres,Return)</onclick>
 						<visible>!Skin.HasSetting(EditTVShowsSubMenuBtn1)</visible>
 					</item>
 					<item id="1">
@@ -1075,7 +1075,7 @@
 					<item id="2">
 						<description>Year</description>
 						<label>$LOCALIZE[345]</label>
-						<onclick>ActivateWindow(VideoLibrary,TVShowYears,Return)</onclick>
+						<onclick>ActivateWindow(Videos,TVShowYears,Return)</onclick>
 						<visible>!Skin.HasSetting(EditTVShowsSubMenuBtn2)</visible>
 					</item>
 					<item id="2">
@@ -1087,7 +1087,7 @@
 					<item id="3">
 						<description>Actors</description>
 						<label>$LOCALIZE[344]</label>
-						<onclick>ActivateWindow(VideoLibrary,TVShowActors,Return)</onclick>
+						<onclick>ActivateWindow(Videos,TVShowActors,Return)</onclick>
 						<visible>!Skin.HasSetting(EditTVShowsSubMenuBtn3)</visible>
 					</item>
 					<item id="3">
@@ -1099,7 +1099,7 @@
 					<item id="4">
 						<description>Studios</description>
 						<label>$LOCALIZE[20388]</label>
-						<onclick>ActivateWindow(VideoLibrary,TVShowStudios,Return)</onclick>
+						<onclick>ActivateWindow(Videos,TVShowStudios,Return)</onclick>
 						<visible>!Skin.HasSetting(EditTVShowsSubMenuBtn4)</visible>
 					</item>
 					<item id="4">
@@ -1111,7 +1111,7 @@
 					<item id="5">
 						<description>Recently Added Episodes</description>
 						<label>$LOCALIZE[31303]</label>
-						<onclick>ActivateWindow(VideoLibrary,RecentlyAddedEpisodes,Return)</onclick>
+						<onclick>ActivateWindow(Videos,RecentlyAddedEpisodes,Return)</onclick>
 						<visible>!Skin.HasSetting(EditTVShowsSubMenuBtn5)</visible>
 					</item>
 					<item id="5">

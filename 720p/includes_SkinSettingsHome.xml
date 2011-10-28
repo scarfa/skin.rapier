@@ -2370,7 +2370,7 @@
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(VideosSubMenuBtn1Path)][/COLOR]</label>
 							<onclick>Skin.SetAddon(VideosSubMenuBtn1Path,xbmc.python.pluginsource)</onclick>
-							<onclick>Skin.SetString(VideosSubMenuBtn1Param,ActivateWindow(VideoLibrary,plugin://$INFO[Skin.String(VideosSubMenuBtn1Path)],Return))</onclick>
+							<onclick>Skin.SetString(VideosSubMenuBtn1Param,ActivateWindow(Videos,plugin://$INFO[Skin.String(VideosSubMenuBtn1Path)],Return))</onclick>
 							<visible>Skin.String(VideosSubMenuBtn1Type,Plugin)</visible>
 						</control>
 						<control type="button" id="2333">
@@ -2477,7 +2477,7 @@
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(VideosSubMenuBtn2Path)][/COLOR]</label>
 							<onclick>Skin.SetAddon(VideosSubMenuBtn2Path,xbmc.python.pluginsource)</onclick>
-							<onclick>Skin.SetString(VideosSubMenuBtn2Param,ActivateWindow(VideoLibrary,plugin://$INFO[Skin.String(VideosSubMenuBtn2Path)],Return))</onclick>
+							<onclick>Skin.SetString(VideosSubMenuBtn2Param,ActivateWindow(Videos,plugin://$INFO[Skin.String(VideosSubMenuBtn2Path)],Return))</onclick>
 							<visible>Skin.String(VideosSubMenuBtn2Type,Plugin)</visible>
 						</control>
 						<control type="button" id="2333">
@@ -2584,7 +2584,7 @@
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(VideosSubMenuBtn3Path)][/COLOR]</label>
 							<onclick>Skin.SetAddon(VideosSubMenuBtn3Path,xbmc.python.pluginsource)</onclick>
-							<onclick>Skin.SetString(VideosSubMenuBtn3Param,ActivateWindow(VideoLibrary,plugin://$INFO[Skin.String(VideosSubMenuBtn3Path)],Return))</onclick>
+							<onclick>Skin.SetString(VideosSubMenuBtn3Param,ActivateWindow(Videos,plugin://$INFO[Skin.String(VideosSubMenuBtn3Path)],Return))</onclick>
 							<visible>Skin.String(VideosSubMenuBtn3Type,Plugin)</visible>
 						</control>
 						<control type="button" id="2333">
@@ -2691,7 +2691,7 @@
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(VideosSubMenuBtn4Path)][/COLOR]</label>
 							<onclick>Skin.SetAddon(VideosSubMenuBtn4Path,xbmc.python.pluginsource)</onclick>
-							<onclick>Skin.SetString(VideosSubMenuBtn4Param,ActivateWindow(VideoLibrary,plugin://$INFO[Skin.String(VideosSubMenuBtn4Path)],Return))</onclick>
+							<onclick>Skin.SetString(VideosSubMenuBtn4Param,ActivateWindow(Videos,plugin://$INFO[Skin.String(VideosSubMenuBtn4Path)],Return))</onclick>
 							<visible>Skin.String(VideosSubMenuBtn4Type,Plugin)</visible>
 						</control>
 						<control type="button" id="2333">
@@ -2798,7 +2798,7 @@
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(VideosSubMenuBtn5Path)][/COLOR]</label>
 							<onclick>Skin.SetAddon(VideosSubMenuBtn5Path,xbmc.python.pluginsource)</onclick>
-							<onclick>Skin.SetString(VideosSubMenuBtn5Param,ActivateWindow(VideoLibrary,plugin://$INFO[Skin.String(VideosSubMenuBtn5Path)],Return))</onclick>
+							<onclick>Skin.SetString(VideosSubMenuBtn5Param,ActivateWindow(Videos,plugin://$INFO[Skin.String(VideosSubMenuBtn5Path)],Return))</onclick>
 							<visible>Skin.String(VideosSubMenuBtn5Type,Plugin)</visible>
 						</control>
 						<control type="button" id="2333">
@@ -2905,7 +2905,7 @@
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(VideosSubMenuBtn6Path)][/COLOR]</label>
 							<onclick>Skin.SetAddon(VideosSubMenuBtn6Path,xbmc.python.pluginsource)</onclick>
-							<onclick>Skin.SetString(VideosSubMenuBtn6Param,ActivateWindow(VideoLibrary,plugin://$INFO[Skin.String(VideosSubMenuBtn6Path)],Return))</onclick>
+							<onclick>Skin.SetString(VideosSubMenuBtn6Param,ActivateWindow(Videos,plugin://$INFO[Skin.String(VideosSubMenuBtn6Path)],Return))</onclick>
 							<visible>Skin.String(VideosSubMenuBtn6Type,Plugin)</visible>
 						</control>
 						<control type="button" id="2333">
@@ -3012,7 +3012,7 @@
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(VideosSubMenuBtn7Path)][/COLOR]</label>
 							<onclick>Skin.SetAddon(VideosSubMenuBtn7Path,xbmc.python.pluginsource)</onclick>
-							<onclick>Skin.SetString(VideosSubMenuBtn7Param,ActivateWindow(VideoLibrary,plugin://$INFO[Skin.String(VideosSubMenuBtn7Path)],Return))</onclick>
+							<onclick>Skin.SetString(VideosSubMenuBtn7Param,ActivateWindow(Videos,plugin://$INFO[Skin.String(VideosSubMenuBtn7Path)],Return))</onclick>
 							<visible>Skin.String(VideosSubMenuBtn7Type,Plugin)</visible>
 						</control>
 						<control type="button" id="2333">
@@ -3209,7 +3209,7 @@
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(MoviesSubMenuBtn1Path)][/COLOR]</label>
 							<onclick>Skin.SetAddon(MoviesSubMenuBtn1Path,xbmc.python.pluginsource)</onclick>
-							<onclick>Skin.SetString(MoviesSubMenuBtn1Param,ActivateWindow(VideoLibrary,plugin://$INFO[Skin.String(MoviesSubMenuBtn1Path)],Return))</onclick>
+							<onclick>Skin.SetString(MoviesSubMenuBtn1Param,ActivateWindow(Videos,plugin://$INFO[Skin.String(MoviesSubMenuBtn1Path)],Return))</onclick>
 							<visible>Skin.String(MoviesSubMenuBtn1Type,Plugin)</visible>
 						</control>
 						<control type="button" id="2333">
@@ -3316,7 +3316,7 @@
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(MoviesSubMenuBtn2Path)][/COLOR]</label>
 							<onclick>Skin.SetAddon(MoviesSubMenuBtn2Path,xbmc.python.pluginsource)</onclick>
-							<onclick>Skin.SetString(MoviesSubMenuBtn2Param,ActivateWindow(VideoLibrary,plugin://$INFO[Skin.String(MoviesSubMenuBtn2Path)],Return))</onclick>
+							<onclick>Skin.SetString(MoviesSubMenuBtn2Param,ActivateWindow(Videos,plugin://$INFO[Skin.String(MoviesSubMenuBtn2Path)],Return))</onclick>
 							<visible>Skin.String(MoviesSubMenuBtn2Type,Plugin)</visible>
 						</control>
 						<control type="button" id="2333">
@@ -3423,7 +3423,7 @@
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(MoviesSubMenuBtn3Path)][/COLOR]</label>
 							<onclick>Skin.SetAddon(MoviesSubMenuBtn3Path,xbmc.python.pluginsource)</onclick>
-							<onclick>Skin.SetString(MoviesSubMenuBtn3Param,ActivateWindow(VideoLibrary,plugin://$INFO[Skin.String(MoviesSubMenuBtn3Path)],Return))</onclick>
+							<onclick>Skin.SetString(MoviesSubMenuBtn3Param,ActivateWindow(Videos,plugin://$INFO[Skin.String(MoviesSubMenuBtn3Path)],Return))</onclick>
 							<visible>Skin.String(MoviesSubMenuBtn3Type,Plugin)</visible>
 						</control>
 						<control type="button" id="2333">
@@ -3530,7 +3530,7 @@
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(MoviesSubMenuBtn4Path)][/COLOR]</label>
 							<onclick>Skin.SetAddon(MoviesSubMenuBtn4Path,xbmc.python.pluginsource)</onclick>
-							<onclick>Skin.SetString(MoviesSubMenuBtn4Param,ActivateWindow(VideoLibrary,plugin://$INFO[Skin.String(MoviesSubMenuBtn4Path)],Return))</onclick>
+							<onclick>Skin.SetString(MoviesSubMenuBtn4Param,ActivateWindow(Videos,plugin://$INFO[Skin.String(MoviesSubMenuBtn4Path)],Return))</onclick>
 							<visible>Skin.String(MoviesSubMenuBtn4Type,Plugin)</visible>
 						</control>
 						<control type="button" id="2333">
@@ -3637,7 +3637,7 @@
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(MoviesSubMenuBtn5Path)][/COLOR]</label>
 							<onclick>Skin.SetAddon(MoviesSubMenuBtn5Path,xbmc.python.pluginsource)</onclick>
-							<onclick>Skin.SetString(MoviesSubMenuBtn5Param,ActivateWindow(VideoLibrary,plugin://$INFO[Skin.String(MoviesSubMenuBtn5Path)],Return))</onclick>
+							<onclick>Skin.SetString(MoviesSubMenuBtn5Param,ActivateWindow(Videos,plugin://$INFO[Skin.String(MoviesSubMenuBtn5Path)],Return))</onclick>
 							<visible>Skin.String(MoviesSubMenuBtn5Type,Plugin)</visible>
 						</control>
 						<control type="button" id="2333">
@@ -3744,7 +3744,7 @@
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(MoviesSubMenuBtn6Path)][/COLOR]</label>
 							<onclick>Skin.SetAddon(MoviesSubMenuBtn6Path,xbmc.python.pluginsource)</onclick>
-							<onclick>Skin.SetString(MoviesSubMenuBtn6Param,ActivateWindow(VideoLibrary,plugin://$INFO[Skin.String(MoviesSubMenuBtn6Path)],Return))</onclick>
+							<onclick>Skin.SetString(MoviesSubMenuBtn6Param,ActivateWindow(Videos,plugin://$INFO[Skin.String(MoviesSubMenuBtn6Path)],Return))</onclick>
 							<visible>Skin.String(MoviesSubMenuBtn6Type,Plugin)</visible>
 						</control>
 						<control type="button" id="2333">
@@ -3851,7 +3851,7 @@
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(MoviesSubMenuBtn7Path)][/COLOR]</label>
 							<onclick>Skin.SetAddon(MoviesSubMenuBtn7Path,xbmc.python.pluginsource)</onclick>
-							<onclick>Skin.SetString(MoviesSubMenuBtn7Param,ActivateWindow(VideoLibrary,plugin://$INFO[Skin.String(MoviesSubMenuBtn7Path)],Return))</onclick>
+							<onclick>Skin.SetString(MoviesSubMenuBtn7Param,ActivateWindow(Videos,plugin://$INFO[Skin.String(MoviesSubMenuBtn7Path)],Return))</onclick>
 							<visible>Skin.String(MoviesSubMenuBtn7Type,Plugin)</visible>
 						</control>
 						<control type="button" id="2333">
@@ -4048,7 +4048,7 @@
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(TVShowsSubMenuBtn1Path)][/COLOR]</label>
 							<onclick>Skin.SetAddon(TVShowsSubMenuBtn1Path,xbmc.python.pluginsource)</onclick>
-							<onclick>Skin.SetString(TVShowsSubMenuBtn1Param,ActivateWindow(VideoLibrary,plugin://$INFO[Skin.String(TVShowsSubMenuBtn1Path)],Return))</onclick>
+							<onclick>Skin.SetString(TVShowsSubMenuBtn1Param,ActivateWindow(Videos,plugin://$INFO[Skin.String(TVShowsSubMenuBtn1Path)],Return))</onclick>
 							<visible>Skin.String(TVShowsSubMenuBtn1Type,Plugin)</visible>
 						</control>
 						<control type="button" id="2333">
@@ -4155,7 +4155,7 @@
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(TVShowsSubMenuBtn2Path)][/COLOR]</label>
 							<onclick>Skin.SetAddon(TVShowsSubMenuBtn2Path,xbmc.python.pluginsource)</onclick>
-							<onclick>Skin.SetString(TVShowsSubMenuBtn2Param,ActivateWindow(VideoLibrary,plugin://$INFO[Skin.String(TVShowsSubMenuBtn2Path)],Return))</onclick>
+							<onclick>Skin.SetString(TVShowsSubMenuBtn2Param,ActivateWindow(Videos,plugin://$INFO[Skin.String(TVShowsSubMenuBtn2Path)],Return))</onclick>
 							<visible>Skin.String(TVShowsSubMenuBtn2Type,Plugin)</visible>
 						</control>
 						<control type="button" id="2333">
@@ -4262,7 +4262,7 @@
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(TVShowsSubMenuBtn3Path)][/COLOR]</label>
 							<onclick>Skin.SetAddon(TVShowsSubMenuBtn3Path,xbmc.python.pluginsource)</onclick>
-							<onclick>Skin.SetString(TVShowsSubMenuBtn3Param,ActivateWindow(VideoLibrary,plugin://$INFO[Skin.String(TVShowsSubMenuBtn3Path)],Return))</onclick>
+							<onclick>Skin.SetString(TVShowsSubMenuBtn3Param,ActivateWindow(Videos,plugin://$INFO[Skin.String(TVShowsSubMenuBtn3Path)],Return))</onclick>
 							<visible>Skin.String(TVShowsSubMenuBtn3Type,Plugin)</visible>
 						</control>
 						<control type="button" id="2333">
@@ -4369,7 +4369,7 @@
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(TVShowsSubMenuBtn4Path)][/COLOR]</label>
 							<onclick>Skin.SetAddon(TVShowsSubMenuBtn4Path,xbmc.python.pluginsource)</onclick>
-							<onclick>Skin.SetString(TVShowsSubMenuBtn4Param,ActivateWindow(VideoLibrary,plugin://$INFO[Skin.String(TVShowsSubMenuBtn4Path)],Return))</onclick>
+							<onclick>Skin.SetString(TVShowsSubMenuBtn4Param,ActivateWindow(Videos,plugin://$INFO[Skin.String(TVShowsSubMenuBtn4Path)],Return))</onclick>
 							<visible>Skin.String(TVShowsSubMenuBtn4Type,Plugin)</visible>
 						</control>
 						<control type="button" id="2333">
@@ -4476,7 +4476,7 @@
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(TVShowsSubMenuBtn5Path)][/COLOR]</label>
 							<onclick>Skin.SetAddon(TVShowsSubMenuBtn5Path,xbmc.python.pluginsource)</onclick>
-							<onclick>Skin.SetString(TVShowsSubMenuBtn5Param,ActivateWindow(VideoLibrary,plugin://$INFO[Skin.String(TVShowsSubMenuBtn5Path)],Return))</onclick>
+							<onclick>Skin.SetString(TVShowsSubMenuBtn5Param,ActivateWindow(Videos,plugin://$INFO[Skin.String(TVShowsSubMenuBtn5Path)],Return))</onclick>
 							<visible>Skin.String(TVShowsSubMenuBtn5Type,Plugin)</visible>
 						</control>
 						<control type="button" id="2333">
@@ -4583,7 +4583,7 @@
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(TVShowsSubMenuBtn6Path)][/COLOR]</label>
 							<onclick>Skin.SetAddon(TVShowsSubMenuBtn6Path,xbmc.python.pluginsource)</onclick>
-							<onclick>Skin.SetString(TVShowsSubMenuBtn6Param,ActivateWindow(VideoLibrary,plugin://$INFO[Skin.String(TVShowsSubMenuBtn6Path)],Return))</onclick>
+							<onclick>Skin.SetString(TVShowsSubMenuBtn6Param,ActivateWindow(Videos,plugin://$INFO[Skin.String(TVShowsSubMenuBtn6Path)],Return))</onclick>
 							<visible>Skin.String(TVShowsSubMenuBtn6Type,Plugin)</visible>
 						</control>
 						<control type="button" id="2333">
@@ -4690,7 +4690,7 @@
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(TVShowsSubMenuBtn7Path)][/COLOR]</label>
 							<onclick>Skin.SetAddon(TVShowsSubMenuBtn7Path,xbmc.python.pluginsource)</onclick>
-							<onclick>Skin.SetString(TVShowsSubMenuBtn7Param,ActivateWindow(VideoLibrary,plugin://$INFO[Skin.String(TVShowsSubMenuBtn7Path)],Return))</onclick>
+							<onclick>Skin.SetString(TVShowsSubMenuBtn7Param,ActivateWindow(Videos,plugin://$INFO[Skin.String(TVShowsSubMenuBtn7Path)],Return))</onclick>
 							<visible>Skin.String(TVShowsSubMenuBtn7Type,Plugin)</visible>
 						</control>
 						<control type="button" id="2333">
