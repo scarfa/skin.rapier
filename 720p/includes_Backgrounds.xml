@@ -301,7 +301,7 @@
 	<include name="BackgroundAddonsFanart">
 		<control type="group">
 			<include condition="![Skin.HasSetting(DisableMusicPlayingBG) | Skin.HasSetting(DisableVideoPlayingBG)]">IsMediaPlayingCondition</include>
-			<visible>Substring(Container.FolderPath,addons:,Left)</visible>
+			<visible>Substring(Container.FolderPath,addons:)</visible>
 			<visible>Window.IsActive(AddonInformation)
 			| [Control.IsVisible(63) + Skin.HasSetting(ShowAddonsThumbnailFanart)]
 			| [Control.IsVisible(52) + !Skin.HasSetting(HideAddonsListFanart)] 

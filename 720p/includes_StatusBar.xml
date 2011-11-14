@@ -9,7 +9,7 @@
 			<align>right</align>
 			<orientation>horizontal</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
-			<control type="image">
+			<control type="image" id="5555">
 				<width>43</width>
 				<height>43</height>	
 				<texture border="8">gui/notification-audio.png</texture>
@@ -18,7 +18,7 @@
 				<visible>Player.HasAudio + !Window.IsActive(Home)</visible>
 				<include condition="System.HasAddon(script.tvtunes) + Window.IsActive(VideoLibrary)">TVTunesDisableVizCond</include>
 			</control>
-			<control type="label">
+			<control type="label" id="5556">
 				<description>Audio Playing Line 1</description>
 				<posy>3</posy>
 				<width>210</width>
@@ -32,7 +32,7 @@
 				<visible>Player.HasAudio + !Window.IsActive(Home)</visible>
 				<include condition="System.HasAddon(script.tvtunes) + Window.IsActive(VideoLibrary)">TVTunesDisableVizCond</include>
 			</control>			
-			<control type="fadelabel">
+			<control type="fadelabel" id="5557">
 				<description>Audio Playing Line 2</description>
 				<posx>-214</posx>
 				<posy>20</posy>
@@ -51,7 +51,7 @@
 				<visible>Player.HasAudio + !Window.IsActive(Home)</visible>
 				<include condition="System.HasAddon(script.tvtunes) + Window.IsActive(VideoLibrary)">TVTunesDisableVizCond</include>
 			</control>
-			<control type="image">
+			<control type="image" id="5558">
 				<width>43</width>
 				<height>43</height>	
 				<texture border="8">gui/notification-video.png</texture>
@@ -59,9 +59,9 @@
 				<aspectratio>keep</aspectratio>
 				<visible>Player.HasVideo + !Window.IsActive(Home)</visible>
 			</control>
-			<control type="label">
+			<control type="label" id="5559">
 				<description>Video Playing Line 1</description>
-				<posy>3</posy>
+				<posy>2</posy>
 				<width>210</width>
 				<height>16</height>
 				<font>NowPlayingFont</font>	
@@ -72,7 +72,7 @@
 				<scrollsuffix> - </scrollsuffix>
 				<visible>Player.HasVideo + !Window.IsActive(Home)</visible>
 			</control>
-			<control type="fadelabel">
+			<control type="fadelabel" id="5560">
 				<description>Video Playing Line 2</description>
 				<posx>-214</posx>
 				<posy>20</posy>
@@ -81,7 +81,7 @@
 				<font>NowPlayingFont2</font>	
 				<textcolor>StatusBarColor2</textcolor>
 				<label>$INFO[VideoPlayer.Genre]</label>
-				<label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
+				<label>[B]$INFO[Player.Time] / $INFO[Player.Duration][/B]</label>
 				<aligny>top</aligny>
 				<scroll>yes</scroll>
 				<scrollout>false</scrollout>
@@ -90,9 +90,9 @@
 				<visible>Player.HasVideo + !Window.IsActive(Home)</visible>
 			</control>
 			<control type="image">
-				<width>4</width>
+				<width>6</width>
 			</control>
-			<control type="image">
+			<control type="image" id="5561">
 				<description>Media Scanning</description>
 				<posy>1</posy>
 				<width>43</width>
@@ -103,7 +103,7 @@
 				<visible>[Window.IsActive(VideoScan) | Window.IsActive(MusicScan)] + !Window.IsActive(Home)</visible>
 				<include>NotificationPulseAnim</include>
 			</control>
-			<control type="button">
+			<control type="button" id="5562">
 				<description>DVD</description>
 				<posy>6</posy>
 				<width>33</width>
@@ -113,7 +113,7 @@
 				<onclick>PlayDVD()</onclick>
 				<visible>System.HasMediaDVD</visible>
 			</control>
-			<control type="image">
+			<control type="image" id="5563">
 				<description>Volume</description>
 				<width>128</width>
 				<height>43</height>	
@@ -122,7 +122,7 @@
 				<aspectratio>keep</aspectratio>
 				<visible>Window.IsActive(VolumeBar) + !Window.IsActive(MuteBug)</visible>
 			</control>
-			<control type="image">
+			<control type="image" id="5564">
 				<description>Volume Mute</description>
 				<width>53</width>
 				<height>43</height>	
@@ -131,7 +131,7 @@
 				<aspectratio>keep</aspectratio>
 				<visible>Window.IsActive(MuteBug)</visible>
 			</control>
-			<control type="progress">
+			<control type="progress" id="5565">
 				<description>Volume Progress</description>
 				<posx>-86</posx>
 				<posy>7</posy>
@@ -143,24 +143,24 @@
 				<visible>Window.IsActive(VolumeBar) + !Window.IsActive(MuteBug)</visible>
 			</control>
 			<control type="image">
-				<width>4</width>
-				<visible>Window.IsActive(VolumeBar) | Window.IsActive(MuteBug)</visible>
+				<width>6</width>
+				<visible>Control.IsVisible(5561) | Control.IsVisible(5562) | Control.IsVisible(5563) | Control.IsVisible(5564)</visible>
 			</control>
 			<include condition="!Skin.HasSetting(DisableWeather) + Skin.HasSetting(ApplyAllWeather)">WeatherNotification</include>
-			<control type="label">
-				<posx>-4</posx>
+			<control type="label" id="5566">
+				<posx>0</posx>
 				<posy>21</posy>
 				<width min="25" max="250">auto</width>
 				<font>NotificationFont</font>
-				<textcolor>StatusBarColor</textcolor>
-				<label>$INFO[System.Time]</label>
+				<textcolor>BreadCrumbColor</textcolor>
+				<label>[UPPERCASE]$INFO[System.Date][CR][B]$INFO[System.Time][/B][/UPPERCASE]</label>
 				<aligny>center</aligny>
 			</control>
 		</control>
 	</include>
 	
 	<include name="WeatherNotification">
-		<control type="image">
+		<control type="image" id="5567">
 			<posy>1</posy>
 			<width>43</width>
 			<height>43</height>	
@@ -169,11 +169,11 @@
 			<aspectratio>keep</aspectratio>
 			<visible>!Window.IsActive(Home) + !IsEmpty(Weather.Conditions)</visible>
 		</control>
-		<control type="label">
+		<control type="label" id="5568">
 			<posy>21</posy>
 			<width min="25" max="250">auto</width>
 			<font>NotificationFont</font>
-			<textcolor>StatusBarColor</textcolor>
+			<textcolor>BreadCrumbColor</textcolor>
 			<label>$INFO[Weather.Temperature]  </label>
 			<aligny>center</aligny>
 			<visible>!Window.IsActive(Home) + !IsEmpty(Weather.Conditions)</visible>

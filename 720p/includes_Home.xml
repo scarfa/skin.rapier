@@ -1427,7 +1427,7 @@
 				
 			<control type="rss">
 				<description>RSS Feed</description>
-				<width>1042</width>
+				<width>1020</width>
 				<height>44</height>
 				<font>RSSFont</font>
 				<urlset>1</urlset>
@@ -1439,7 +1439,7 @@
 			
 			<control type="rss">
 				<description>RSS Feed</description>
-				<width>915</width>
+				<width>895</width>
 				<height>44</height>
 				<font>RSSFont</font>
 				<urlset>1</urlset>
@@ -1451,7 +1451,7 @@
 			
 			<control type="rss">
 				<description>RSS Feed</description>
-				<width>980</width>
+				<width>960</width>
 				<height>44</height>
 				<font>RSSFont</font>
 				<urlset>1</urlset>
@@ -1463,7 +1463,7 @@
 			
 			<control type="rss">
 				<description>RSS Feed</description>
-				<width>1005</width>
+				<width>980</width>
 				<height>44</height>
 				<font>RSSFont</font>
 				<urlset>1</urlset>
@@ -1475,7 +1475,7 @@
 			
 			<control type="rss">
 				<description>RSS Feed</description>
-				<width>875</width>
+				<width>855</width>
 				<height>44</height>
 				<font>RSSFont</font>
 				<urlset>1</urlset>
@@ -1487,7 +1487,7 @@
 			
 			<control type="rss">
 				<description>RSS Feed</description>
-				<width>940</width>
+				<width>920</width>
 				<height>44</height>
 				<font>RSSFont</font>
 				<urlset>1</urlset>

@@ -31,7 +31,7 @@
 					<posy>22</posy>
 					<width min="25" max="250">auto</width>
 					<font>FSInfoTitleFont</font>
-					<textcolor>StatusBarColor</textcolor>
+					<textcolor>BreadCrumbColor</textcolor>
 					<label>$INFO[System.Time]</label>
 					<aligny>center</aligny>
 				</control>

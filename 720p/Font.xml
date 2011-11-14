@@ -76,12 +76,12 @@
 		<font>
 			<name>BreadCrumbFont</name>
 			<filename>default-bold-caps.ttf</filename>
-			<size>25</size>
-		</font>	
+			<size>16</size>
+		</font>
 		<font>
 			<name>NotificationFont</name>
 			<filename>default-bold-caps.ttf</filename>
-			<size>25</size>
+			<size>14</size>
 		</font>	
 		<font>
 			<name>NowPlayingFont</name>
@@ -90,7 +90,7 @@
 		</font>		
 		<font>
 			<name>NowPlayingFont2</name>
-			<filename>default-caps.ttf</filename>
+			<filename>default-bold-caps.ttf</filename>
 			<size>14</size>
 		</font>	
 		<!-- Menu Bar -->

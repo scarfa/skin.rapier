@@ -30,7 +30,7 @@
 				<onclick>Container.SetSortMethod(1)</onclick>
 				<onclick>Dialog.Close(3003)</onclick>
 				<visible>!Container.Content(Albums) + !Container.Content(MusicVideos) + ![Window.IsActive(VideoLibrary) + Container.Content(Movies)] 
-					+ !Substring(Container.FolderPath,addons:,Left) + !Container.Content(TVShows) + !IsEmpty(Container.FolderPath)</visible>
+					+ !Substring(Container.FolderPath,addons:) + !Container.Content(TVShows) + !IsEmpty(Container.FolderPath)</visible>
 			</control>
 			<control type="button" id="17">
 				<description>Name</description>
@@ -46,7 +46,7 @@
 				<label>$LOCALIZE[551]</label>
 				<onclick>Container.SetSortMethod(33)</onclick>
 				<onclick>Dialog.Close(3003)</onclick>
-				<visible>Substring(Container.FolderPath,addons:,Left)</visible>
+				<visible>Substring(Container.FolderPath,addons:)</visible>
 			</control>
 			<control type="button" id="27">
 				<description>Name</description>
@@ -70,7 +70,7 @@
 				<label>$LOCALIZE[552]</label>
 				<onclick>Container.SetSortMethod(3)</onclick>
 				<onclick>Dialog.Close(3003)</onclick>
-				<visible>Substring(Container.FolderPath,addons:,Left)</visible>
+				<visible>Substring(Container.FolderPath,addons:)</visible>
 			</control>
 			<control type="button" id="2">
 				<description>Type</description>
@@ -102,7 +102,7 @@
 				<label>$LOCALIZE[559]</label>
 				<onclick>Container.SetSortMethod(21)</onclick>
 				<onclick>Dialog.Close(3003)</onclick>
-				<visible>Substring(Container.FolderPath,special://profile/playlists/,Left)</visible>
+				<visible>Substring(Container.FolderPath,special://profile/playlists/)</visible>
 			</control>
 			<control type="button" id="14">
 				<description>Title</description>
