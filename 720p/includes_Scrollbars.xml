@@ -88,6 +88,18 @@
 			</control>
 		</control>
 	</include>
+
+	<include name="ColumnsViewScrollbar">
+		<control type="group" id="150">	
+			<control type="scrollbar" id="904">
+				<posx>1223</posx>
+				<posy>35</posy>
+				<height>374</height>
+				<onleft>500</onleft>
+				<animation effect="fade" start="100" end="0" time="150" condition="!Skin.HasSetting(ShowColumnsViewScrollbar) + !ControlGroup(150).HasFocus">Conditional</animation>
+			</control>
+		</control>
+	</include>
 	
 	<include name="ListInfoViewScrollbar">
 		<control type="group" id="150">

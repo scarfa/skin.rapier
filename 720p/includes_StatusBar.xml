@@ -42,6 +42,7 @@
 				<textcolor>StatusBarColor2</textcolor>
 				<label>$INFO[MusicPlayer.Artist]</label>
 				<label>$INFO[MusicPlayer.Album] $INFO[MusicPlayer.Year,(,)]</label>
+				<label>$INFO[MusicPlayer.ChannelName]</label>
 				<label>$INFO[MusicPlayer.Time] / $INFO[Player.Duration]</label>
 				<aligny>top</aligny>
 				<scroll>yes</scroll>
@@ -82,6 +83,7 @@
 				<textcolor>StatusBarColor2</textcolor>
 				<label>$INFO[VideoPlayer.TVShowTitle]</label>
 				<label>$INFO[VideoPlayer.Genre]</label>
+				<label>$INFO[VideoPlayer.ChannelName]</label>
 				<label>[B]$INFO[Player.Time] / $INFO[Player.Duration][/B]</label>
 				<aligny>top</aligny>
 				<scroll>yes</scroll>

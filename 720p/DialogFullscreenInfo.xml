@@ -228,7 +228,7 @@
 			</control>
 	
 			<control type="group">		
-				<visible>[VideoPlayer.Content(Episodes) | VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(LiveTV)] + Window.IsActive(FullScreenVideo)</visible>
+				<visible>[VideoPlayer.Content(Episodes) | VideoPlayer.Content(MusicVideos)] + Window.IsActive(FullScreenVideo)</visible>
 				
 				<control type="image">
 					<description>Cover</description>
@@ -350,6 +350,69 @@
 						<textcolor>MediaInfoItemColor2</textcolor>
 						<label>$INFO[Player.Chapter] $INFO[Player.ChapterCount,/ ] $INFO[Player.ChapterName,- ,]</label>
 						<scroll>yes</scroll>
+					</control>
+				</control>
+			</control>
+			
+			<control type="group">
+				<visible>VideoPlayer.Content(LiveTV) + Window.IsActive(FullScreenVideo)</visible>
+
+				<control type="image">
+					<description>Cover</description>
+					<posx>55</posx>
+					<posy>11</posy>
+					<width>185</width>
+					<height>104</height>
+					<texture diffuse="covers/player-tv-cover-border.png">$INFO[VideoPlayer.Cover]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+
+				<control type="group">			
+					<posx>260</posx>
+
+					<control type="grouplist">
+						<posy>5</posy>
+						<width>781</width>
+						<height>50</height>
+						<itemgap>5</itemgap>
+						<usecontrolcoords>true</usecontrolcoords>
+						<orientation>horizontal</orientation>
+						<control type="label">
+							<description>Title (LiveTV)</description>
+							<width min="50" max="671">auto</width>
+							<height>50</height>
+							<font>FSInfoTitleFont</font>
+							<textcolor>MediaInfoTitleColor</textcolor>
+							<label>[UPPERCASE]$INFO[VideoPlayer.Title][/UPPERCASE]</label>
+							<scroll>yes</scroll>
+						</control>
+					</control>
+
+					<control type="label">
+						<description>Channel Name</description>
+						<posy>35</posy>
+						<width>781</width>
+						<font>FSInfoFont</font>
+						<textcolor>MediaInfoTitleColor2</textcolor>
+						<label>[UPPERCASE]$INFO[VideoPlayer.ChannelName][/UPPERCASE]</label>
+					</control>
+
+					<control type="grouplist">
+						<description>Media Flags Area</description>
+						<posy>72</posy>
+						<width>781</width>
+						<height>41</height>
+						<itemgap>5</itemgap>
+						<align>left</align>
+						<usecontrolcoords>true</usecontrolcoords>
+						<orientation>horizontal</orientation>
+						<include>MediaFlagFadeAnim</include>
+						<include condition="!Skin.HasSetting(UseAltMediaFlagTheme)">PlayerVideoMediaFlags</include>
+						<include condition="Skin.HasSetting(UseAltMediaFlagTheme)">PlayerVideoAltMediaFlags</include>
+						<include condition="!Skin.HasSetting(UseAltMediaFlagTheme)">PlayerAudioMediaFlags</include>
+						<include condition="Skin.HasSetting(UseAltMediaFlagTheme)">PlayerAudioAltMediaFlags</include>
+						<include condition="!Skin.HasSetting(UseAltMediaFlagTheme)">PlayerRatingMediaFlags</include>
+						<include condition="Skin.HasSetting(UseAltMediaFlagTheme)">PlayerRatingAltMediaFlags</include>
 					</control>
 				</control>
 			</control>

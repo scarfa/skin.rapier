@@ -60,6 +60,16 @@
 					<onclick>Skin.SetBool(ExpandedSettings)</onclick>
 					<onclick>Control.SetFocus(941)</onclick>
 				</control>
+				<control type="radiobutton" id="4012">
+					<description>Customize PVR Background Settings</description>
+					<include>SettingsContentExpandBtn</include>
+					<label>$LOCALIZE[32028]</label>
+					<selected>Skin.HasSetting(ExpandCustomPVRBGSettings)</selected>
+					<onclick>Skin.SetBool(ExpandCustomPVRBGSettings)</onclick>
+					<onclick>Skin.SetBool(ExpandedSettings)</onclick>
+					<onclick>Control.SetFocus(9941)</onclick>
+					<visible>!Skin.HasSetting(HidePVR)</visible>
+				</control>
 				<control type="radiobutton" id="4002">
 					<description>Customize Videos Background Settings</description>
 					<include>SettingsContentExpandBtn</include>
@@ -341,6 +351,120 @@
 					<onclick>Skin.Reset(ExpandCustomMusicBGSettings)</onclick>
 					<onclick>Skin.Reset(ExpandedSettings)</onclick>
 					<onclick>Control.SetFocus(4001)</onclick>
+				</control>
+			</control>
+
+			<control type="group" id="855">
+				<description>Expanded PVR Background Area</description>
+				<visible>Skin.HasSetting(ExpandCustomPVRBGSettings)</visible>
+				<include>ExpandedSettingsOpenCloseAnim</include>
+
+				<control type="button">
+					<description>Title</description>
+					<include>SettingsHeaderBtn</include>
+					<label>$LOCALIZE[31604] - $LOCALIZE[32028]</label>
+				</control>
+
+				<include>CustomImagePreviewBG</include>
+
+				<control type="multiimage">
+					<include>CustomImagePreview</include>
+					<imagepath background="true" fallback="background-default.png">$INFO[Skin.String(CustomDefaultBGPath)]</imagepath>
+					<visible>Skin.String(CustomPVRBGType,1)</visible>
+					<include>CustomImagePreviewOpenCloseAnim</include>
+				</control>
+
+				<control type="multiimage">
+					<include>CustomImagePreview</include>
+					<imagepath background="true" fallback=".">$INFO[Skin.String(CustomPVRBGPath)]</imagepath>
+					<visible>Skin.String(CustomPVRBGType,2) | Skin.String(CustomPVRBGType,3) | Skin.String(CustomPVRBGType,)</visible>
+					<include>CustomImagePreviewOpenCloseAnim</include>
+				</control>
+
+				<control type="grouplist" id="9941">		
+					<posx>520</posx>
+					<posy>65</posy>
+					<width>235</width>
+					<height>340</height>
+					<itemgap>15</itemgap>
+					<onup>94213</onup>
+					<ondown>94210</ondown>
+					<onleft>19941</onleft>
+					<control type="radiobutton" id="94110">
+						<description>Default</description>
+						<include>SettingsCustomBGRadioBtn</include>
+						<selected>Skin.String(CustomPVRBGType,1)</selected>
+						<onclick>Skin.SetString(CustomPVRBGType,1)</onclick>
+						<onclick>Skin.SetString(CustomPVRBGPath,background-pvr.png)</onclick>
+						<label>$LOCALIZE[31058]</label>
+					</control>
+					<control type="radiobutton" id="94111">
+						<description>Single Image</description>
+						<include>SettingsCustomBGRadioBtn</include>
+						<selected>Skin.String(CustomPVRBGType,2) | Skin.String(CustomPVRBGType,)</selected>
+						<onclick>Skin.SetString(CustomPVRBGType,2)</onclick>
+						<onclick>Skin.SetString(CustomPVRBGPath,background-pvr.png)</onclick>
+						<label>$LOCALIZE[31056]</label>
+					</control>
+					<control type="radiobutton" id="94112">
+						<description>Multi Image</description>
+						<include>SettingsCustomBGRadioBtn</include>
+						<selected>Skin.String(CustomPVRBGType,3)</selected>
+						<onclick>Skin.SetString(CustomPVRBGType,3)</onclick>
+						<onclick>Skin.SetString(CustomPVRBGPath,background-pvr.png)</onclick>
+						<label>$LOCALIZE[31057]</label>
+					</control>
+				</control>
+
+				<control type="grouplist" id="9921">
+					<posy>379</posy>
+					<onup>94112</onup>
+					<ondown>94110</ondown>
+					<onleft>19941</onleft>
+					<control type="button" id="94210">
+						<description>Single Image Path</description>
+						<include>SettingsContentBtn</include>
+						<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(CustomPVRBGPath)][/COLOR]</label>
+						<onclick>Skin.SetImage(CustomPVRBGPath)</onclick>
+						<visible>Skin.String(CustomPVRBGType,2) | Skin.String(CustomPVRBGType,)</visible>
+					</control>
+					<control type="button" id="94211">
+						<description>Multi Image Path</description>
+						<include>SettingsContentBtn</include>
+						<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(CustomPVRBGPath)][/COLOR]</label>
+						<onclick>Skin.SetPath(CustomPVRBGPath)</onclick>
+						<visible>Skin.String(CustomPVRBGType,3)</visible>
+					</control>
+					<control type="togglebutton" id="94212">
+						<description>Dim Background</description>
+						<include>SettingsContentRadioBtn</include>
+						<label>$LOCALIZE[33068] $LOCALIZE[31059]</label>
+						<altlabel>$LOCALIZE[33068] $LOCALIZE[31060]</altlabel>
+						<usealttexture>Skin.HasSetting(DimPVRBackgroundHigh)</usealttexture>
+						<onclick>Skin.ToggleSetting(DimPVRBackgroundHigh)</onclick>
+						<visible>Skin.String(CustomPVRBGType,2) | Skin.String(CustomPVRBGType,3) | Skin.String(CustomPVRBGType,)</visible>
+					</control>
+					<control type="togglebutton" id="94213">
+						<description>Apply To All Windows</description>
+						<include>SettingsContentRadioBtn</include>
+						<label>$LOCALIZE[33068] $LOCALIZE[31052] $LOCALIZE[32028]</label>
+						<altlabel>$LOCALIZE[33068] $LOCALIZE[31051]</altlabel>
+						<usealttexture>!Skin.HasSetting(ApplyAllPVRCustomBG)</usealttexture>
+						<onclick>Skin.ToggleSetting(ApplyAllPVRCustomBG)</onclick>
+						<visible>Skin.String(CustomPVRBGType,2) | Skin.String(CustomPVRBGType,3) | Skin.String(CustomPVRBGType,)</visible>
+					</control>
+				</control>
+
+				<control type="button" id="19941">
+					<description>Back</description>
+					<include>SettingsBackBtn</include>
+					<onright>9941</onright>
+					<onleft>Skin.Reset(ExpandCustomPVRBGSettings)</onleft>
+					<onleft>Skin.Reset(ExpandedSettings)</onleft>
+					<onleft>Control.SetFocus(4012)</onleft>					
+					<onclick>Skin.Reset(ExpandCustomPVRBGSettings)</onclick>
+					<onclick>Skin.Reset(ExpandedSettings)</onclick>
+					<onclick>Control.SetFocus(4012)</onclick>
 				</control>
 			</control>
 			

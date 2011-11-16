@@ -25,6 +25,7 @@
 
 			<control type="grouplist" id="201">
 				<description>Player Settings Controls</description>
+				<visible>!VideoPlayer.Content(LiveTV)</visible>
 				<posx>57</posx>
 				<posy>21</posy>
 				<width>300</width>
@@ -168,6 +169,7 @@
 		
 			<control type="grouplist" id="202">
 				<description>Player Controls</description>
+				<visible>!VideoPlayer.Content(LiveTV)</visible>
 				<posx>489</posx>
 				<posy>14</posy>
 				<width>310</width>
@@ -240,6 +242,153 @@
 					<texturefocus>osd/osd-skip-next-focus.png</texturefocus>
 					<texturenofocus>osd/osd-skip-next-nofocus.png</texturenofocus>
 					<onclick>PlayerControl(Next)</onclick>
+					<pulseonselect>false</pulseonselect>
+				</control>
+			</control>
+
+			<control type="grouplist" id="201">
+				<visible>VideoPlayer.Content(LiveTV)</visible>
+				<description>Player Settings Controls</description>
+				<posx>57</posx>
+				<posy>21</posy>
+				<width>300</width>
+				<height>35</height>
+				<itemgap>10</itemgap>
+				<orientation>horizontal</orientation>	
+				<onup>-</onup>
+				<ondown>-</ondown>
+				<onleft>109</onleft>
+				<onright>110</onright>
+				<control type="button" id="100">
+					<description>Exit Fullscreen</description>
+					<width>35</width>
+					<height>35</height>
+					<font>-</font>
+					<label>$LOCALIZE[13012]</label>
+					<texturefocus>osd/osd-exit-fullscreen-focus.png</texturefocus>
+					<texturenofocus>osd/osd-exit-fullscreen-nofocus.png</texturenofocus>
+					<onclick>Dialog.Close(VideoOSD,true)</onclick>
+					<onclick>FullScreen</onclick>
+					<pulseonselect>false</pulseonselect>
+				</control>		
+				<control type="button" id="101">
+					<description>Teletext</description>
+					<width>35</width>
+					<height>35</height>
+					<font>-</font>
+					<label>Teletext</label>
+					<texturefocus>osd/osd-teletext-focus.png</texturefocus>
+					<texturenofocus>osd/osd-teletext-nofocus.png</texturenofocus>
+					<onclick>ActivateWindow(Teletext)</onclick>
+					<pulseonselect>false</pulseonselect>
+				</control>
+				<control type="button" id="116">
+					<visible>false</visible>
+				</control>
+				<control type="button" id="102">
+					<description>Audio Settings</description>
+					<width>35</width>
+					<height>35</height>
+					<font>-</font>
+					<label>$LOCALIZE[13396]</label>
+					<texturefocus>osd/osd-audio-settings-focus.png</texturefocus>
+					<texturenofocus>osd/osd-audio-settings-nofocus.png</texturenofocus>
+					<onclick>ActivateWindow(OSDAudioSettings)</onclick>
+					<pulseonselect>false</pulseonselect>
+				</control>		
+				<control type="button" id="103">
+					<description>Video Settings</description>
+					<width>35</width>
+					<height>35</height>
+					<font>-</font>
+					<label>$LOCALIZE[13395]</label>
+					<texturefocus>osd/osd-video-settings-focus.png</texturefocus>
+					<texturenofocus>osd/osd-video-settings-nofocus.png</texturenofocus>
+					<onclick>ActivateWindow(OSDVideoSettings)</onclick>
+					<pulseonselect>false</pulseonselect>
+				</control>
+				<control type="button" id="115">
+					<visible>false</visible>
+				</control>
+			</control>
+
+			<control type="grouplist" id="202">
+				<visible>VideoPlayer.Content(LiveTV)</visible>
+				<description>Player Controls</description>
+				<posx>489</posx>
+				<posy>14</posy>
+				<width>310</width>
+				<height>50</height>
+				<itemgap>10</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
+				<orientation>horizontal</orientation>	
+				<onup>-</onup>
+				<ondown>-</ondown>
+				<onleft>112</onleft>
+				<onright>100</onright>
+				<control type="button" id="106">
+					<description>Guide</description>
+					<posy>5</posy>
+					<width>40</width>
+					<height>40</height>
+					<texturefocus>osd/osd-epg-focus.png</texturefocus>
+					<texturenofocus>osd/osd-epg-nofocus.png</texturenofocus>
+					<onclick>ActivateWindow(PVROSDGuide)</onclick>
+					<onclick>Dialog.Close(VideoOSD)</onclick>
+					<pulseonselect>false</pulseonselect>
+				</control>
+				<control type="button" id="105">
+					<description>Channels</description>
+					<posy>5</posy>
+					<width>40</width>
+					<height>40</height>
+					<texturefocus>osd/osd-channel-list-focus.png</texturefocus>
+					<texturenofocus>osd/osd-channel-list-nofocus.png</texturenofocus>
+					<onclick>ActivateWindow(PVROSDChannels)</onclick>
+					<onclick>Dialog.Close(VideoOSD)</onclick>
+					<pulseonselect>false</pulseonselect>
+				</control>				
+				<control type="button" id="104">
+					<description>Stop</description>
+					<posy>2</posy>
+					<width>46</width>
+					<height>46</height>
+					<texturefocus>osd/osd-stop-focus.png</texturefocus>
+					<texturenofocus>osd/osd-stop-nofocus.png</texturenofocus>
+					<onclick>PlayerControl(Stop)</onclick>
+					<pulseonselect>false</pulseonselect>
+				</control>
+				<control type="togglebutton" id="107">
+					<description>Play/Pause</description>
+					<posy>2</posy>
+					<width>46</width>
+					<height>46</height>
+					<texturefocus>osd/osd-pause-focus.png</texturefocus>
+					<texturenofocus>osd/osd-pause-nofocus.png</texturenofocus>
+					<alttexturefocus>osd/osd-play-focus.png</alttexturefocus>
+					<alttexturenofocus>osd/osd-play-nofocus.png</alttexturenofocus>
+					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+					<onclick>PlayerControl(Play)</onclick>
+					<pulseonselect>false</pulseonselect>
+				</control>
+				<control type="button" id="108">
+					<description>Next Channel</description>
+					<posy>5</posy>
+					<width>40</width>
+					<height>40</height>
+					<texturefocus>osd/osd-channel-up-focus.png</texturefocus>
+					<texturenofocus>osd/osd-channel-up-nofocus.png</texturenofocus>
+					<onclick>PlayerControl(Next)</onclick>
+					<pulseonselect>false</pulseonselect>
+				</control>		
+				<control type="button" id="109">
+					<description>Previous Channel</description>
+					<posy>5</posy>
+					<width>40</width>
+					<height>40</height>
+					<texturefocus>osd/osd-channel-down-focus.png</texturefocus>
+					<texturenofocus>osd/osd-channel-down-nofocus.png</texturenofocus>
+					<onclick>PlayerControl(Previous)</onclick>
 					<pulseonselect>false</pulseonselect>
 				</control>
 			</control>

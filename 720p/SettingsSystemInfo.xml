@@ -63,6 +63,12 @@
 					<include>SettingsCatBtn</include>
 					<label>$LOCALIZE[13281]</label>
 				</control>
+				<control type="button" id="99">
+					<Description>PVR</Description>
+					<posy>185</posy>
+					<include>SettingsCatBtn</include>
+					<label>$LOCALIZE[19191]</label>
+				</control>
 			</control>
 			
 			<control type="grouplist" id="900">		

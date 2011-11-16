@@ -12,7 +12,7 @@
 		<include>SmallMediaInfoDialogBox</include>
 		
 		<control type="group">
-			<visible>Player.HasVideo + !VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos)</visible>
+			<visible>Player.HasVideo + !VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos) + !VideoPlayer.Content(LiveTV)</visible>
 			
 			<control type="label" id="1">
 				<include>SmallMediaInfoDialogTitle</include>
@@ -629,6 +629,137 @@
 			</control>
 		</control>
 		
+		<control type="group">
+			<visible>!Player.HasAudio + VideoPlayer.Content(LiveTV)</visible>
+
+			<control type="label" id="1">
+				<include>SmallMediaInfoDialogTitle</include>
+				<label>$LOCALIZE[13350]</label>
+			</control>
+
+			<control type="label" id="2">
+				<include>SmallMediaInfoDialogTitle2</include>
+				<label>$INFO[VideoPlayer.Title]</label>
+			</control>
+
+			<control type="image">
+				<posx>DialogMarginOffsetX</posx>
+				<posy>DialogMarginOffsetY</posy>
+				<width>275</width>
+				<height>275</height>
+				<texture border="5">controls/button-nofocus.png</texture>
+			</control>
+
+			<control type="image">
+				<description>Cover</description>
+				<posx>DialogMarginOffsetX</posx>
+				<posy>DialogMarginOffsetY</posy>
+				<width>275</width>
+				<height>275</height>
+				<texture>$INFO[VideoPlayer.Cover]</texture>
+				<bordersize>5</bordersize>
+				<aspectratio>keep</aspectratio>
+			</control>
+
+			<control type="panel" id="901">
+				<posx>315</posx>
+				<posy>DialogMarginOffsetY</posy>
+				<width>500</width>
+				<height>280</height>
+				<viewtype label="">list</viewtype>
+				<scrolltime>200</scrolltime>
+				<onleft>202</onleft>
+				<onright>202</onright>
+				<onup>901</onup>
+				<ondown>901</ondown>
+				<itemlayout height="40" width="500">	
+					<control type="image">
+						<width>500</width>
+						<height>35</height>
+						<texture border="5">controls/button-nofocus.png</texture>
+					</control>		
+					<control type="label">
+						<posx>5</posx>
+						<width>170</width>
+						<height>35</height>
+						<font>DefaultHeadFont</font>
+						<textcolor>MediaInfoItemColor</textcolor>
+						<selectedcolor>SelectedColor</selectedcolor>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>175</posx>
+						<width>320</width>
+						<height>35</height>
+						<font>DefaultFontB</font>
+						<textcolor>MediaInfoItemColor2</textcolor>
+						<selectedcolor>SelectedColor</selectedcolor>
+						<aligny>center</aligny>
+						<label fallback="31000">$INFO[ListItem.Label2]</label>
+					</control>		
+				</itemlayout>				
+				<focusedlayout height="40" width="500">
+					<control type="image">
+						<width>500</width>
+						<height>35</height>
+						<texture border="5">controls/button-focus.png</texture>
+					</control>									
+					<control type="label">
+						<posx>5</posx>
+						<width>170</width>
+						<height>35</height>
+						<font>DefaultHeadFont</font>
+						<textcolor>SelectedColor</textcolor>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>175</posx>
+						<width>320</width>
+						<height>35</height>
+						<font>DefaultFontB</font>
+						<textcolor>SelectedColor</textcolor>
+						<aligny>center</aligny>
+						<label fallback="31000">$INFO[ListItem.Label2]</label>
+						<scroll>yes</scroll>
+					</control>		
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<description>Now</description>
+						<label>$LOCALIZE[13350]</label>
+						<label2>$INFO[VideoPlayer.Title]</label2>
+						<onclick>-</onclick>
+					</item>
+					<item id="2">
+						<description>Genre</description>
+						<label>$LOCALIZE[515]</label>
+						<label2>$INFO[VideoPlayer.Genre]</label2>
+						<onclick>-</onclick>
+					</item>
+					<item id="3">
+						<description>Channel Name</description>
+						<label>$LOCALIZE[19029]</label>
+						<label2>$INFO[VideoPlayer.ChannelName]</label2>
+						<onclick>-</onclick>
+					</item>
+					<item id="4">
+						<description>Channel Number</description>
+						<label>$LOCALIZE[554]</label>
+						<label2>$INFO[VideoPlayer.ChannelNumber]</label2>
+						<onclick>-</onclick>
+					</item>
+					<item id="5">
+						<description>Next</description>
+						<label>$LOCALIZE[19113]</label>
+						<label2>$INFO[VideoPlayer.NextTitle]</label2>
+						<onclick>-</onclick>
+					</item>
+				</content>
+			</control>
+		</control>
+		
 		<control type="label">
 			<description>Duration</description>
 			<posx>DialogMarginOffsetX</posx>
@@ -644,6 +775,7 @@
 		
 		<control type="grouplist" id="202">
 			<description>Player Controls</description>
+			<visible>Player.HasAudio | !VideoPlayer.Content(LiveTV)</visible>
 			<posx>315</posx>
 			<posy>340</posy>
 			<width>500</width>
@@ -829,6 +961,134 @@
 				<alttexturenofocus>osd/osd-random-on-nofocus.png</alttexturenofocus>
 				<onclick>PlayerControl(Random)</onclick>
 				<pulseonselect>false</pulseonselect>
+			</control>
+		</control>
+		
+		<control type="grouplist" id="202">
+			<description>Player Controls</description>
+			<visible>Player.HasVideo + VideoPlayer.Content(LiveTV)</visible>
+			<posx>315</posx>
+			<posy>340</posy>
+			<width>500</width>
+			<height>42</height>
+			<itemgap>10</itemgap>
+			<align>center</align>
+			<usecontrolcoords>true</usecontrolcoords>
+			<orientation>horizontal</orientation>
+			<onup>901</onup>
+			<ondown>-</ondown>
+			<onleft>202</onleft>
+			<onright>202</onright>
+			<control type="button" id="106">
+				<visible>false</visible>
+			</control>
+			<control type="button" id="105">
+				<visible>false</visible>
+			</control>
+			<control type="button" id="104">
+				<description>Stop</description>
+				<width>38</width>
+				<height>38</height>
+				<texturefocus>osd/osd-stop-focus.png</texturefocus>
+				<texturenofocus>osd/osd-stop-nofocus.png</texturenofocus>
+				<onclick>PlayerControl(Stop)</onclick>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<control type="togglebutton" id="107">
+				<description>Pause/Play</description>
+				<width>38</width>
+				<height>38</height>
+				<texturefocus>osd/osd-pause-focus.png</texturefocus>
+				<texturenofocus>osd/osd-pause-nofocus.png</texturenofocus>
+				<alttexturefocus>osd/osd-play-focus.png</alttexturefocus>
+				<alttexturenofocus>osd/osd-play-nofocus.png</alttexturenofocus>
+				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+				<onclick>PlayerControl(Play)</onclick>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<control type="button" id="108">
+				<description>Next Channel</description>
+				<width>38</width>
+				<height>38</height>
+				<texturefocus>osd/osd-channel-up-focus.png</texturefocus>
+				<texturenofocus>osd/osd-channel-up-nofocus.png</texturenofocus>
+				<onclick>PlayerControl(Next)</onclick>
+				<pulseonselect>false</pulseonselect>
+			</control>		
+			<control type="button" id="109">
+				<description>Previous Channel</description>
+				<width>38</width>
+				<height>38</height>
+				<texturefocus>osd/osd-channel-down-focus.png</texturefocus>
+				<texturenofocus>osd/osd-channel-down-nofocus.png</texturenofocus>
+				<onclick>PlayerControl(Previous)</onclick>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<control type="button" id="110">
+				<description>Rec</description>
+				<width>38</width>
+				<height>38</height>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onclick>PlayerControl(Record)</onclick>
+				<visible>Player.CanRecord</visible>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<control type="image" id="111">
+				<description>Rec No Focus</description>
+				<posx>-48</posx>
+				<width>38</width>
+				<height>38</height>
+				<texture>osd/osd-record-nofocus.png</texture>
+				<visible>Player.CanRecord + !Control.HasFocus(110)</visible>
+			</control>
+			<control type="image" id="112">
+				<description>Rec Focus</description>
+				<posx>-48</posx>
+				<width>38</width>
+				<height>38</height>
+				<texture>osd/osd-record-focus.png</texture>
+				<visible>Player.CanRecord + Control.HasFocus(110)</visible>
+			</control>
+			<control type="image" id="113">
+				<description>Rec 2 No Focus</description>
+				<posx>-48</posx>
+				<width>38</width>
+				<height>38</height>
+				<texture>osd/osd-record-2.png</texture>
+				<visible>Player.CanRecord + Player.Recording + !Control.HasFocus(110)</visible>
+			</control>
+			<control type="image" id="114">
+				<description>Rec 2 Focus</description>
+				<posx>-48</posx>
+				<width>38</width>
+				<height>38</height>
+				<texture>osd/osd-record-focus.png</texture>
+				<visible>Player.CanRecord + Player.Recording + Control.HasFocus(110)</visible>
+			</control>
+			<control type="button" id="250">
+				<visible>false</visible>
+			</control>
+			<control type="image" id="251">
+				<visible>false</visible>
+			</control>
+			<control type="image" id="252">
+				<visible>false</visible>
+			</control>
+			<control type="image" id="253">
+				<visible>false</visible>
+			</control>
+			<control type="image" id="254">
+				<visible>false</visible>
+			</control>
+			<control type="image" id="255">
+				<visible>false</visible>
+			</control>
+			<control type="image" id="256">
+				<visible>false</visible>
+			</control>
+			<control type="togglebutton" id="257">
+				<visible>false</visible>
 			</control>
 		</control>
 	</controls>

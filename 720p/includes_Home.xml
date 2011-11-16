@@ -193,12 +193,25 @@
 		
 		<control type="button" id="6109">
 			<include>RedirectBtn</include>
+			<onfocus>Skin.SetString(CustomPVRBGPath,background-pvr.png)</onfocus>
+			<onfocus>Control.SetFocus(6110)</onfocus>
+			<visible>IsEmpty(Skin.String(CustomPVRBGPath))</visible>
+		</control>
+		
+		<control type="button" id="6109">
+			<include>RedirectBtn</include>
+			<onfocus>Control.SetFocus(6110)</onfocus>
+			<visible>!IsEmpty(Skin.String(CustomPVRBGPath))</visible>
+		</control>
+		
+		<control type="button" id="6110">
+			<include>RedirectBtn</include>
 			<onfocus>Skin.SetString(CustomDefaultBGPath,background-default.png)</onfocus>
 			<onfocus>Control.SetFocus(6900)</onfocus>
 			<visible>IsEmpty(Skin.String(CustomDefaultBGPath))</visible>
 		</control>
 		
-		<control type="button" id="6109">
+		<control type="button" id="6110">
 			<include>RedirectBtn</include>
 			<onfocus>Control.SetFocus(6900)</onfocus>
 			<visible>!IsEmpty(Skin.String(CustomDefaultBGPath))</visible>
@@ -783,6 +796,14 @@
 					<onclick>ActivateWindow(Music)</onclick>
 					<visible>!Skin.HasSetting(HideMusicCategory)</visible>
 				</item>
+				<item id="50">
+					<description>PVR Category</description>
+					<label>pvr</label>
+					<icon>homecategories/$INFO[System.Language]/pvr-text-nofocus.png</icon>
+					<thumb>$INFO[Skin.String(CustomPVRBGPath)]</thumb>
+					<onclick>ActivateWindow(PVR)</onclick>
+					<visible>!Skin.HasSetting(HidePVRCategory) + !Skin.HasSetting(HidePVR) + System.GetBool(pvrmanager.enabled)</visible>
+				</item>
 				<item id="2">
 					<description>Videos Category</description>
 					<label>videos</label>
@@ -898,6 +919,15 @@
 				<texture fallback="home-music-icon.png">$INFO[Skin.String(MusicCategoryIconPath)]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>Container(850).HasFocus(1)</visible>
+				<include>HomeMenuIconAnim</include>
+			</control>
+
+			<control type="image">
+				<description>PVR Icon</description>
+				<include>HomeMenuIconDim</include>
+				<texture fallback="home-pvr-icon.png">$INFO[Skin.String(PVRCategoryIconPath)]</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Container(850).HasFocus(50)</visible>
 				<include>HomeMenuIconAnim</include>
 			</control>
 			
@@ -1371,6 +1401,58 @@
 						<label fallback="31214">$INFO[Skin.String(TVShowsSubMenuBtn7Label)]</label>
 						<onclick>$INFO[Skin.String(TVShowsSubMenuBtn7Param)]</onclick>
 						<visible>Skin.HasSetting(EditTVShowsSubMenuBtn7)</visible>
+					</item>
+				</content>						
+			</control>
+
+			<control type="list" id="110">
+				<description>PVR Menu Bar</description>
+				<posx>10</posx>
+				<width>1260</width>
+				<height>34</height>
+				<onup>-</onup>
+				<ondown>850</ondown>
+				<orientation>horizontal</orientation>
+				<visible>Container(850).HasFocus(50)</visible>
+				<include>HomeSubMenuItemOpenCloseAnim</include>
+				<include>HomeSubMenuItemsCenterAlignAnim</include>
+				<include>HomeSubMenuItemLayout</include>
+				<content>
+					<item id="1">
+						<description>TV Channels</description>
+						<label>$LOCALIZE[19019]</label>
+						<onclick>ActivateWindow(PVR)</onclick>
+						<onclick>Setfocus(32)</onclick>
+						<onclick>Setfocus(11)</onclick>
+					</item>
+					<item id="2">
+						<description>Guide</description>
+						<label>$LOCALIZE[19069]</label>
+						<onclick>ActivateWindow(PVR)</onclick>
+						<onclick>Setfocus(31)</onclick>
+						<onclick>Setfocus(11)</onclick>
+					</item>
+					<item id="3">
+						<description>Recordings</description>
+						<label>$LOCALIZE[19163]</label>
+						<onclick>ActivateWindow(PVR)</onclick>
+						<onclick>Setfocus(34)</onclick>
+						<onclick>Setfocus(13)</onclick>
+					</item>
+					<item id="4">
+						<description>Timer</description>
+						<label>$LOCALIZE[19040]</label>
+						<onclick>ActivateWindow(PVR)</onclick>
+						<onclick>Setfocus(35)</onclick>
+						<onclick>Setfocus(14)</onclick>
+					</item>
+					<item id="5">
+						<description>Radio Channels</description>
+						<label>$LOCALIZE[19024]</label>
+						<onclick>ActivateWindow(PVR)</onclick>
+						<onclick>Setfocus(33)</onclick>
+						<onclick>Setfocus(12)</onclick>
+						<visible>false</visible>
 					</item>
 				</content>						
 			</control>
@@ -2758,9 +2840,73 @@
 						</control>
 					</control>
 				</control>
+
+				<control type="group">
+					<visible>VideoPlayer.Content(LiveTV)</visible>
+					<control type="image">
+						<description>Cover</description>
+						<posx>15</posx>
+						<posy>27</posy>
+						<width>176</width>
+						<height>110</height>
+						<texture diffuse="covers/home-panel-episode-cover-border.png" background="true" fallback="DefaultVideo.png">$INFO[VideoPlayer.Cover]</texture>
+						<bordersize>4</bordersize>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="label">
+						<description>Title</description>
+						<posx>203</posx>
+						<posy>9</posy>
+						<width>272</width>
+						<font>PanelTitleFont</font>
+						<textcolor>MediaInfoTitleColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>[UPPERCASE]$LOCALIZE[13350][/UPPERCASE]</label>
+					</control>
+					<control type="grouplist">
+						<posx>203</posx>
+						<posy>47</posy>
+						<itemgap>10</itemgap>
+						<usecontrolcoords>true</usecontrolcoords>
+						<control type="label">
+							<description>Video Title</description>
+							<width>272</width>
+							<height>12</height>
+							<font>PanelInfoHeadFont</font>
+							<textcolor>DefaultColor3</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<label>$INFO[VideoPlayer.Title]</label>
+							<scroll>yes</scroll>
+						</control>
+						<control type="label">
+							<description>Elapsed/Duration Time</description>
+							<posy>5</posy>
+							<width>272</width>
+							<height>12</height>
+							<font>PanelInfoHeadFont</font>
+							<textcolor>WhiteColor</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<aligny>center</aligny>
+							<label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
+							<aligny>center</aligny>
+							<visible>!Player.Seeking</visible>
+						</control>
+						<control type="label">
+							<description>Show/Year</description>
+							<posy>9</posy>
+							<width>272</width>
+							<height>12</height>
+							<font>PanelInfoFont</font>
+							<textcolor>MediaInfoItemColor2</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<label>$INFO[VideoPlayer.ChannelName]</label>
+							<scroll>yes</scroll>
+						</control>
+					</control>
+				</control>
 				
 				<control type="group">
-					<visible>VideoPlayer.Content(Episodes) | !VideoPlayer.Content(Movies)</visible>
+					<visible>VideoPlayer.Content(Episodes) | [!VideoPlayer.Content(Movies) + !VideoPlayer.Content(LiveTV)]</visible>
 				
 					<control type="image">
 						<description>Cover</description>
