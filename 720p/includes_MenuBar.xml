@@ -112,6 +112,12 @@
 		<texturenofocus>-</texturenofocus>		
 	</include>
 	
+	<include name="MenuBarSettingsBtn2">
+		<width>139</width>
+		<textwidth>128</textwidth>
+		<include>MenuBarSettingsBtn</include>
+	</include>
+	
 	<include name="DropDownMenuBtn">	
 		<width>212</width>
 		<height>40</height>
@@ -619,7 +625,8 @@
 			<include>MenuBarBtnOpenCloseAnim</include>
 			<control type="button" id="101">
 				<description>Appearance</description>
-				<include>MenuBarSettingsBtn</include>
+				<include condition="Skin.HasSetting(HidePVR)">MenuBarSettingsBtn</include>
+				<include condition="!Skin.HasSetting(HidePVR)">MenuBarSettingsBtn2</include>
 				<label>[UPPERCASE]$LOCALIZE[480][/UPPERCASE]</label>
 				<onclick>ReplaceWindow(AppearanceSettings)</onclick>	
 			</control>	
@@ -628,7 +635,8 @@
 			</control>
 			<control type="button" id="104">
 				<description>Music</description>
-				<include>MenuBarSettingsBtn</include>
+				<include condition="Skin.HasSetting(HidePVR)">MenuBarSettingsBtn</include>
+				<include condition="!Skin.HasSetting(HidePVR)">MenuBarSettingsBtn2</include>
 				<label>[UPPERCASE]$LOCALIZE[2][/UPPERCASE]</label>
 				<onclick>ReplaceWindow(MusicSettings)</onclick>	
 			</control>
@@ -637,16 +645,30 @@
 			</control>
 			<control type="button" id="105">
 				<description>Videos</description>
-				<include>MenuBarSettingsBtn</include>
+				<include condition="Skin.HasSetting(HidePVR)">MenuBarSettingsBtn</include>
+				<include condition="!Skin.HasSetting(HidePVR)">MenuBarSettingsBtn2</include>
 				<label>[UPPERCASE]$LOCALIZE[3][/UPPERCASE]</label>
 				<onclick>ReplaceWindow(VideosSettings)</onclick>	
 			</control>
 			<control type="image" id="120">
 				<include>MenuBarSeparator</include>
 			</control>
+			<control type="button" id="110">
+				<description>PVR</description>
+				<include condition="Skin.HasSetting(HidePVR)">MenuBarSettingsBtn</include>
+				<include condition="!Skin.HasSetting(HidePVR)">MenuBarSettingsBtn2</include>
+				<label>[UPPERCASE]$LOCALIZE[32028][/UPPERCASE]</label>
+				<onclick>ReplaceWindow(PVRSettings)</onclick>
+				<visible>!Skin.HasSetting(HidePVR)</visible>
+			</control>
+			<control type="image" id="124">
+				<include>MenuBarSeparator</include>
+				<visible>!Skin.HasSetting(HidePVR)</visible>
+			</control>
 			<control type="button" id="103">
 				<description>Pictures</description>
-				<include>MenuBarSettingsBtn</include>
+				<include condition="Skin.HasSetting(HidePVR)">MenuBarSettingsBtn</include>
+				<include condition="!Skin.HasSetting(HidePVR)">MenuBarSettingsBtn2</include>
 				<label>[UPPERCASE]$LOCALIZE[1][/UPPERCASE]</label>
 				<onclick>ReplaceWindow(PicturesSettings)</onclick>	
 			</control>
@@ -655,7 +677,8 @@
 			</control>
 			<control type="button" id="106">
 				<description>Weather</description>
-				<include>MenuBarSettingsBtn</include>
+				<include condition="Skin.HasSetting(HidePVR)">MenuBarSettingsBtn</include>
+				<include condition="!Skin.HasSetting(HidePVR)">MenuBarSettingsBtn2</include>
 				<label>[UPPERCASE]$LOCALIZE[8][/UPPERCASE]</label>
 				<onclick>ReplaceWindow(WeatherSettings)</onclick>	
 			</control>
@@ -664,7 +687,8 @@
 			</control>
 			<control type="button" id="107">
 				<description>Network</description>
-				<include>MenuBarSettingsBtn</include>
+				<include condition="Skin.HasSetting(HidePVR)">MenuBarSettingsBtn</include>
+				<include condition="!Skin.HasSetting(HidePVR)">MenuBarSettingsBtn2</include>
 				<label>[UPPERCASE]$LOCALIZE[13279][/UPPERCASE]</label>
 				<onclick>ReplaceWindow(NetworkSettings)</onclick>	
 			</control>
@@ -673,7 +697,8 @@
 			</control>
 			<control type="button" id="108">
 				<description>System</description>
-				<include>MenuBarSettingsBtn</include>
+				<include condition="Skin.HasSetting(HidePVR)">MenuBarSettingsBtn</include>
+				<include condition="!Skin.HasSetting(HidePVR)">MenuBarSettingsBtn2</include>
 				<label>[UPPERCASE]$LOCALIZE[13000][/UPPERCASE]</label>
 				<onclick>ReplaceWindow(SystemSettings)</onclick>	
 			</control>
@@ -682,7 +707,8 @@
 			</control>
 			<control type="button" id="109">
 				<description>Skin</description>
-				<include>MenuBarSettingsBtn</include>
+				<include condition="Skin.HasSetting(HidePVR)">MenuBarSettingsBtn</include>
+				<include condition="!Skin.HasSetting(HidePVR)">MenuBarSettingsBtn2</include>
 				<label>[UPPERCASE]$LOCALIZE[166][/UPPERCASE]</label>
 				<onclick>ReplaceWindow(3001)</onclick>	
 			</control>
@@ -728,6 +754,230 @@
 				<include>MenuBarSeparator</include>
 			</control>
 		</control>	
+	</include>
+
+	<include name="PVRMenuBar">
+		<control type="group" id="505">
+			<description>Menu Bar Area</description>
+			<posy>MenuBarOffsetY</posy>
+			<include>MenuBarImage</include>
+			<include>MenuBarOpenCloseAnim</include>
+			<include>DefaultPVRMenuBar</include>
+			<visible allowhiddenfocus="true">ControlGroup(505).HasFocus</visible>
+		</control>
+	</include>
+
+	<include name="DefaultPVRMenuBar">
+		<control type="group" id="850">
+			<control type="grouplist" id="563">
+				<description>Menu Bar Icon Buttons</description>
+				<posx>5</posx>
+				<posy>0</posy>
+				<width>150</width>
+				<height>MenuBarHeight</height>
+				<orientation>horizontal</orientation>
+				<itemgap>0</itemgap>
+				<onup>-</onup>
+				<ondown>500</ondown>
+				<onleft>212</onleft>
+				<onright>212</onright>
+				<control type="button" id="345">
+					<description>Shutdown</description>
+					<include>MenuBarIconBtn</include>
+					<texturefocus>gui/menu-bar-power-focus.png</texturefocus>
+					<texturenofocus>gui/menu-bar-power-nofocus.png</texturenofocus>
+					<onclick>ActivateWindow(ShutdownMenu)</onclick>
+				</control>
+				<control type="button" id="346">
+					<description>Favourites</description>
+					<include>MenuBarIconBtn</include>
+					<texturefocus>gui/menu-bar-favourites-focus.png</texturefocus>
+					<texturenofocus>gui/menu-bar-favourites-nofocus.png</texturenofocus>
+					<onclick>ActivateWindow(Favourites)</onclick>
+				</control>
+				<control type="togglebutton" id="347">
+					<description>Extra Options</description>
+					<include>MenuBarIconBtn</include>
+					<texturefocus>gui/menu-bar-options-focus.png</texturefocus>
+					<texturenofocus>gui/menu-bar-options-nofocus.png</texturenofocus>
+					<alttexturefocus>gui/menu-bar-options-focus2.png</alttexturefocus>
+					<alttexturenofocus>gui/menu-bar-options-nofocus2.png</alttexturenofocus>
+					<usealttexture>Skin.HasSetting(PVRMenuBarExtraOptions)</usealttexture>
+					<onclick>Skin.ToggleSetting(PVRMenuBarExtraOptions)</onclick>
+				</control>
+			</control>
+
+			<control type="group">      				
+				<include>PVRMenuBarOptions</include>
+				<include>MenuBarOptionsSwitchAnim</include>
+				<visible>!Skin.HasSetting(PVRMenuBarExtraOptions)</visible>
+			</control>
+
+			<control type="group">   			
+				<include>PVRMenuBarExtraOptions</include>
+				<include>MenuBarOptionsSwitchAnim</include>
+				<visible>Skin.HasSetting(PVRMenuBarExtraOptions)</visible>
+			</control>		
+		</control>
+	</include>	
+
+	<include name="PVRMenuBarOptions">
+		<control type="grouplist" id="212">
+			<posx>99</posx>
+			<posy>0</posy>
+			<width>ScreenWidth</width>
+			<height>MenuBarHeight</height>
+			<itemgap>0</itemgap>
+			<onup>-</onup>
+			<ondown>500</ondown>
+			<onleft>347</onleft>
+			<onright>345</onright>
+			<orientation>horizontal</orientation>
+			<usecontrolcoords>true</usecontrolcoords>
+			<include>MenuBarBtnOpenCloseAnim</include>
+			<visible>ControlGroup(505).HasFocus</visible>
+			<control type="image" id="350">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="32">
+				<description>TV Channels</description>
+				<include>MenuBarBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[19023][/UPPERCASE]</label>
+			</control>
+			<control type="image" id="351">
+				<include>MenuBarSeparator</include>
+				<visible>!Skin.HasSetting(HideLiveRadio)</visible>
+			</control>
+			<control type="button" id="33">
+				<description>Radio Channels</description>
+				<include>MenuBarBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[19024][/UPPERCASE]</label>
+				<visible>!Skin.HasSetting(HideLiveRadio)</visible>
+			</control>
+			<control type="image" id="438">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="31">
+				<description>TV Guide</description>
+				<include>MenuBarBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[19222]: $LOCALIZE[19030][/UPPERCASE]</label>
+			</control>
+			<control type="image" id="352">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="36">
+				<description>Search</description>
+				<include>MenuBarBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[137][/UPPERCASE]</label>
+			</control>
+			<control type="image" id="355">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="35">
+				<description>Timers</description>
+				<include>MenuBarBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[19040][/UPPERCASE]</label>
+			</control>
+			<control type="image" id="353">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="34">
+				<description>Recordings</description>
+				<include>MenuBarBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[19163][/UPPERCASE]</label>
+			</control>
+			<control type="image" id="356">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="37">
+				<description>Settings</description>
+				<include>MenuBarBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[10004][/UPPERCASE]</label>
+				<onclick>ActivateWindow(PVRSettings)</onclick>
+			</control>
+		</control>
+
+		<control type="button" id="2">
+			<visible>false</visible>
+		</control>
+
+		<control type="button" id="3">
+			<visible>false</visible>
+		</control>
+	</include>
+
+	<include name="PVRMenuBarExtraOptions">
+		<control type="grouplist" id="212">
+			<posx>99</posx>
+			<posy>0</posy>
+			<width>ScreenWidth</width>
+			<height>MenuBarHeight</height>
+			<itemgap>0</itemgap>
+			<onup>-</onup>
+			<ondown>500</ondown>
+			<onleft>347</onleft>
+			<onright>345</onright>
+			<orientation>horizontal</orientation>
+			<usecontrolcoords>true</usecontrolcoords>
+			<include>MenuBarBtnOpenCloseAnim</include>
+			<visible>ControlGroup(505).HasFocus</visible>
+			<control type="image" id="99">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="radiobutton" id="475">
+				<description>Hide Radio (PVR)</description>
+				<include>MenuBarRadioBtn</include>
+				<label>$LOCALIZE[32030]</label>
+				<selected>Skin.HasSetting(HideLiveRadio)</selected>
+				<onclick>Skin.ToggleSetting(HideLiveRadio)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<include>ReloadSkinNotification</include>
+			</control>
+			<control type="image" id="101">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="radiobutton" id="476">
+				<description>Hide Plot (PVR)</description>
+				<include>MenuBarRadioBtn</include>
+				<label>$LOCALIZE[31044]</label>
+				<selected>Skin.HasSetting(HideLiveTVPlot)</selected>
+				<onclick>Skin.ToggleSetting(HideLiveTVPlot)</onclick>
+			</control>
+			<control type="image" id="102">
+				<include>MenuBarSeparator</include>
+			</control>	
+			<control type="radiobutton" id="477">
+				<description>Do Not Auto Scroll Plot (PVR)</description>
+				<include>MenuBarRadioBtn</include>
+				<label>$LOCALIZE[31401]</label>
+				<selected>!Skin.HasSetting(DoNotAutoScrollLiveTVPlot)</selected>
+				<onclick>Skin.ToggleSetting(DoNotAutoScrollLiveTVPlot)</onclick>
+				<enable>!Skin.HasSetting(HideLiveTVPlot)</enable>
+			</control>
+			<control type="image" id="103">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="radiobutton" id="478">
+				<description>List Hide Scrollbar (PVR)</description>
+				<include>MenuBarRadioBtn</include>
+				<label>$LOCALIZE[31025]</label>
+				<selected>Skin.HasSetting(HideListInfoView2Scrollbar)</selected>
+				<onclick>Skin.ToggleSetting(HideListInfoView2Scrollbar)</onclick>
+			</control>
+			<control type="image" id="104">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="radiobutton" id="479">
+				<description>Columns Hide Scrollbar (PVR)</description>
+				<include>MenuBarRadioBtn</include>
+				<label>$LOCALIZE[31025] 2</label>
+				<selected>!Skin.HasSetting(ShowColumnsViewScrollbar)</selected>
+				<onclick>Skin.ToggleSetting(ShowColumnsViewScrollbar)</onclick>
+			</control>
+			<control type="image" id="105">
+				<include>MenuBarSeparator</include>
+			</control>
+		</control>		
 	</include>
 	
 	<include name="ProfileSettingsMenuBar">

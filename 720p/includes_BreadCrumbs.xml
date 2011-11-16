@@ -750,6 +750,50 @@
 			</control>
 		</control>
 	</include>
+
+	<include name="BreadCrumbPVR">
+		<control type="grouplist">
+			<posx>10</posx>
+			<posy>StatusBarPosY</posy>
+			<height>43</height>
+			<width>740</width>
+			<itemgap>8</itemgap>
+			<orientation>horizontal</orientation>
+			<usecontrolcoords>true</usecontrolcoords>
+			<control type="button">
+				<include>BreadCrumbHomeIcon</include>
+				<include>BreadCrumbSlideLvl1Anim</include>
+			</control>
+			<control type="image">
+				<include>BreadCrumbSeparator</include>
+				<include>BreadCrumbSlideLvl1Anim</include>
+			</control>
+			<control type="label" id="5501">
+				<description>Pictures</description>
+				<include>BreadCrumbLabel</include>
+				<label>[UPPERCASE]$LOCALIZE[32028][/UPPERCASE]</label>
+				<include>BreadCrumbSlideLvl2Anim</include>
+			</control>
+			<control type="image">
+				<include>BreadCrumbSeparator</include>
+				<include>BreadCrumbSlideLvl2Anim</include>
+			</control>
+			<control type="label" id="29">
+				<include>BreadCrumbLabel</include>
+				<include>BreadCrumbSlideLvl3Anim</include>
+			</control>
+			<control type="image">
+				<visible>!IsEmpty(Control.GetLabel(30))</visible>
+				<include>BreadCrumbSeparator</include>
+				<include>BreadCrumbSlideLvl3Anim</include>
+			</control>
+			<control type="label" id="30">
+				<visible>!IsEmpty(Control.GetLabel(30))</visible>
+				<include>BreadCrumbLabel</include>
+				<include>BreadCrumbSlideLvl4Anim</include>
+			</control>
+		</control>
+	</include>
 	
 	<include name="BreadCrumbSettings">
 		<control type="grouplist">

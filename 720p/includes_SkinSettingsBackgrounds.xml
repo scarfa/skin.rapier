@@ -60,6 +60,16 @@
 					<onclick>Skin.SetBool(ExpandedSettings)</onclick>
 					<onclick>Control.SetFocus(941)</onclick>
 				</control>
+				<control type="radiobutton" id="4012">
+					<description>Customize PVR Background Settings</description>
+					<include>SettingsContentExpandBtn</include>
+					<label>$LOCALIZE[32028]</label>
+					<selected>Skin.HasSetting(ExpandCustomPVRBGSettings)</selected>
+					<onclick>Skin.SetBool(ExpandCustomPVRBGSettings)</onclick>
+					<onclick>Skin.SetBool(ExpandedSettings)</onclick>
+					<onclick>Control.SetFocus(9941)</onclick>
+					<visible>!Skin.HasSetting(HidePVR)</visible>
+				</control>
 				<control type="radiobutton" id="4002">
 					<description>Customize Videos Background Settings</description>
 					<include>SettingsContentExpandBtn</include>
@@ -154,9 +164,7 @@
 					<itemgap>15</itemgap>
 					<onup>4202</onup>
 					<ondown>4200</ondown>
-					<onleft>Skin.Reset(ExpandCustomDefaultBGSettings)</onleft>
-					<onleft>Skin.Reset(ExpandedSettings)</onleft>
-					<onleft>Control.SetFocus(4000)</onleft>
+					<onleft>1949</onleft>
 					<control type="radiobutton" id="4100">
 						<description>Single Image</description>
 						<include>SettingsCustomBGRadioBtn</include>
@@ -179,9 +187,7 @@
 					<posy>379</posy>
 					<onup>4101</onup>
 					<ondown>4100</ondown>
-					<onleft>Skin.Reset(ExpandCustomDefaultBGSettings)</onleft>
-					<onleft>Skin.Reset(ExpandedSettings)</onleft>
-					<onleft>Control.SetFocus(4000)</onleft>
+					<onleft>1949</onleft>
 					<control type="button" id="4200">
 						<description>Single Image Path</description>
 						<include>SettingsContentBtn</include>
@@ -206,11 +212,16 @@
 					</control>
 				</control>
 				
-				<control type="button">
+				<control type="button" id="1949">
 					<description>Back</description>
 					<include>SettingsBackBtn</include>
+					<onright>949</onright>
+					<onleft>Skin.Reset(ExpandCustomDefaultBGSettings)</onleft>
+					<onleft>Skin.Reset(ExpandedSettings)</onleft>
+					<onleft>Control.SetFocus(4000)</onleft>
 					<onclick>Skin.Reset(ExpandCustomDefaultBGSettings)</onclick>
 					<onclick>Skin.Reset(ExpandedSettings)</onclick>
+					<onclick>Control.SetFocus(4000)</onclick>
 				</control>
 			</control>
 			
@@ -256,9 +267,7 @@
 					<itemgap>15</itemgap>
 					<onup>4213</onup>
 					<ondown>4210</ondown>
-					<onleft>Skin.Reset(ExpandCustomMusicBGSettings)</onleft>
-					<onleft>Skin.Reset(ExpandedSettings)</onleft>
-					<onleft>Control.SetFocus(4001)</onleft>
+					<onleft>1941</onleft>
 					<control type="radiobutton" id="4110">
 						<description>Default</description>
 						<include>SettingsCustomBGRadioBtn</include>
@@ -297,9 +306,7 @@
 					<posy>379</posy>
 					<onup>4113</onup>
 					<ondown>4110</ondown>
-					<onleft>Skin.Reset(ExpandCustomMusicBGSettings)</onleft>
-					<onleft>Skin.Reset(ExpandedSettings)</onleft>
-					<onleft>Control.SetFocus(4001)</onleft>
+					<onleft>1941</onleft>
 					<control type="button" id="4210">
 						<description>Single Image Path</description>
 						<include>SettingsContentBtn</include>
@@ -334,11 +341,130 @@
 					</control>	
 				</control>
 				
-				<control type="button">
+				<control type="button" id="1941">
 					<description>Back</description>
 					<include>SettingsBackBtn</include>
+					<onright>941</onright>
+					<onleft>Skin.Reset(ExpandCustomMusicBGSettings)</onleft>
+					<onleft>Skin.Reset(ExpandedSettings)</onleft>
+					<onleft>Control.SetFocus(4001)</onleft>
 					<onclick>Skin.Reset(ExpandCustomMusicBGSettings)</onclick>
 					<onclick>Skin.Reset(ExpandedSettings)</onclick>
+					<onclick>Control.SetFocus(4001)</onclick>
+				</control>
+			</control>
+
+			<control type="group" id="855">
+				<description>Expanded PVR Background Area</description>
+				<visible>Skin.HasSetting(ExpandCustomPVRBGSettings)</visible>
+				<include>ExpandedSettingsOpenCloseAnim</include>
+
+				<control type="button">
+					<description>Title</description>
+					<include>SettingsHeaderBtn</include>
+					<label>$LOCALIZE[31604] - $LOCALIZE[32028]</label>
+				</control>
+
+				<include>CustomImagePreviewBG</include>
+
+				<control type="multiimage">
+					<include>CustomImagePreview</include>
+					<imagepath background="true" fallback="background-default.png">$INFO[Skin.String(CustomDefaultBGPath)]</imagepath>
+					<visible>Skin.String(CustomPVRBGType,1)</visible>
+					<include>CustomImagePreviewOpenCloseAnim</include>
+				</control>
+
+				<control type="multiimage">
+					<include>CustomImagePreview</include>
+					<imagepath background="true" fallback=".">$INFO[Skin.String(CustomPVRBGPath)]</imagepath>
+					<visible>Skin.String(CustomPVRBGType,2) | Skin.String(CustomPVRBGType,3) | Skin.String(CustomPVRBGType,)</visible>
+					<include>CustomImagePreviewOpenCloseAnim</include>
+				</control>
+
+				<control type="grouplist" id="9941">		
+					<posx>520</posx>
+					<posy>65</posy>
+					<width>235</width>
+					<height>340</height>
+					<itemgap>15</itemgap>
+					<onup>94213</onup>
+					<ondown>94210</ondown>
+					<onleft>19941</onleft>
+					<control type="radiobutton" id="94110">
+						<description>Default</description>
+						<include>SettingsCustomBGRadioBtn</include>
+						<selected>Skin.String(CustomPVRBGType,1)</selected>
+						<onclick>Skin.SetString(CustomPVRBGType,1)</onclick>
+						<onclick>Skin.SetString(CustomPVRBGPath,background-pvr.png)</onclick>
+						<label>$LOCALIZE[31058]</label>
+					</control>
+					<control type="radiobutton" id="94111">
+						<description>Single Image</description>
+						<include>SettingsCustomBGRadioBtn</include>
+						<selected>Skin.String(CustomPVRBGType,2) | Skin.String(CustomPVRBGType,)</selected>
+						<onclick>Skin.SetString(CustomPVRBGType,2)</onclick>
+						<onclick>Skin.SetString(CustomPVRBGPath,background-pvr.png)</onclick>
+						<label>$LOCALIZE[31056]</label>
+					</control>
+					<control type="radiobutton" id="94112">
+						<description>Multi Image</description>
+						<include>SettingsCustomBGRadioBtn</include>
+						<selected>Skin.String(CustomPVRBGType,3)</selected>
+						<onclick>Skin.SetString(CustomPVRBGType,3)</onclick>
+						<onclick>Skin.SetString(CustomPVRBGPath,background-pvr.png)</onclick>
+						<label>$LOCALIZE[31057]</label>
+					</control>
+				</control>
+
+				<control type="grouplist" id="9921">
+					<posy>379</posy>
+					<onup>94112</onup>
+					<ondown>94110</ondown>
+					<onleft>19941</onleft>
+					<control type="button" id="94210">
+						<description>Single Image Path</description>
+						<include>SettingsContentBtn</include>
+						<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(CustomPVRBGPath)][/COLOR]</label>
+						<onclick>Skin.SetImage(CustomPVRBGPath)</onclick>
+						<visible>Skin.String(CustomPVRBGType,2) | Skin.String(CustomPVRBGType,)</visible>
+					</control>
+					<control type="button" id="94211">
+						<description>Multi Image Path</description>
+						<include>SettingsContentBtn</include>
+						<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(CustomPVRBGPath)][/COLOR]</label>
+						<onclick>Skin.SetPath(CustomPVRBGPath)</onclick>
+						<visible>Skin.String(CustomPVRBGType,3)</visible>
+					</control>
+					<control type="togglebutton" id="94212">
+						<description>Dim Background</description>
+						<include>SettingsContentRadioBtn</include>
+						<label>$LOCALIZE[33068] $LOCALIZE[31059]</label>
+						<altlabel>$LOCALIZE[33068] $LOCALIZE[31060]</altlabel>
+						<usealttexture>Skin.HasSetting(DimPVRBackgroundHigh)</usealttexture>
+						<onclick>Skin.ToggleSetting(DimPVRBackgroundHigh)</onclick>
+						<visible>Skin.String(CustomPVRBGType,2) | Skin.String(CustomPVRBGType,3) | Skin.String(CustomPVRBGType,)</visible>
+					</control>
+					<control type="togglebutton" id="94213">
+						<description>Apply To All Windows</description>
+						<include>SettingsContentRadioBtn</include>
+						<label>$LOCALIZE[33068] $LOCALIZE[31052] $LOCALIZE[32028]</label>
+						<altlabel>$LOCALIZE[33068] $LOCALIZE[31051]</altlabel>
+						<usealttexture>!Skin.HasSetting(ApplyAllPVRCustomBG)</usealttexture>
+						<onclick>Skin.ToggleSetting(ApplyAllPVRCustomBG)</onclick>
+						<visible>Skin.String(CustomPVRBGType,2) | Skin.String(CustomPVRBGType,3) | Skin.String(CustomPVRBGType,)</visible>
+					</control>
+				</control>
+
+				<control type="button" id="19941">
+					<description>Back</description>
+					<include>SettingsBackBtn</include>
+					<onright>9941</onright>
+					<onleft>Skin.Reset(ExpandCustomPVRBGSettings)</onleft>
+					<onleft>Skin.Reset(ExpandedSettings)</onleft>
+					<onleft>Control.SetFocus(4012)</onleft>					
+					<onclick>Skin.Reset(ExpandCustomPVRBGSettings)</onclick>
+					<onclick>Skin.Reset(ExpandedSettings)</onclick>
+					<onclick>Control.SetFocus(4012)</onclick>
 				</control>
 			</control>
 			
@@ -384,9 +510,7 @@
 					<itemgap>15</itemgap>
 					<onup>4223</onup>
 					<ondown>4220</ondown>
-					<onleft>Skin.Reset(ExpandCustomVideosBGSettings)</onleft>
-					<onleft>Skin.Reset(ExpandedSettings)</onleft>
-					<onleft>Control.SetFocus(4002)</onleft>
+					<onleft>1942</onleft>
 					<control type="radiobutton" id="4120">
 						<description>Default</description>
 						<include>SettingsCustomBGRadioBtn</include>
@@ -425,9 +549,7 @@
 					<posy>379</posy>
 					<onup>4123</onup>
 					<ondown>4120</ondown>
-					<onleft>Skin.Reset(ExpandCustomVideosBGSettings)</onleft>
-					<onleft>Skin.Reset(ExpandedSettings)</onleft>
-					<onleft>Control.SetFocus(4002)</onleft>
+					<onleft>1942</onleft>
 					<control type="button" id="4220">
 						<description>Single Image Path</description>
 						<include>SettingsContentBtn</include>
@@ -462,11 +584,16 @@
 					</control>
 				</control>
 				
-				<control type="button">
+				<control type="button" id="1942">
 					<description>Back</description>
 					<include>SettingsBackBtn</include>
+					<onright>942</onright>
+					<onleft>Skin.Reset(ExpandCustomVideosBGSettings)</onleft>
+					<onleft>Skin.Reset(ExpandedSettings)</onleft>
+					<onleft>Control.SetFocus(4002)</onleft>
 					<onclick>Skin.Reset(ExpandCustomVideosBGSettings)</onclick>
 					<onclick>Skin.Reset(ExpandedSettings)</onclick>
+					<onclick>Control.SetFocus(4002)</onclick>
 				</control>
 			</control>
 			
@@ -512,9 +639,7 @@
 					<itemgap>15</itemgap>
 					<onup>4233</onup>
 					<ondown>4230</ondown>
-					<onleft>Skin.Reset(ExpandCustomMoviesBGSettings)</onleft>
-					<onleft>Skin.Reset(ExpandedSettings)</onleft>
-					<onleft>Control.SetFocus(4003)</onleft>
+					<onleft>1943</onleft>
 					<control type="radiobutton" id="4130">
 						<description>Default</description>
 						<include>SettingsCustomBGRadioBtn</include>
@@ -553,9 +678,7 @@
 					<posy>379</posy>
 					<onup>4133</onup>
 					<ondown>4130</ondown>
-					<onleft>Skin.Reset(ExpandCustomMoviesBGSettings)</onleft>
-					<onleft>Skin.Reset(ExpandedSettings)</onleft>
-					<onleft>Control.SetFocus(4003)</onleft>
+					<onleft>1943</onleft>
 					<control type="button" id="4230">
 						<description>Single Image Path</description>
 						<include>SettingsContentBtn</include>
@@ -590,11 +713,16 @@
 					</control>
 				</control>
 				
-				<control type="button">
+				<control type="button" id="1943">
 					<description>Back</description>
 					<include>SettingsBackBtn</include>
+					<onright>943</onright>
+					<onleft>Skin.Reset(ExpandCustomMoviesBGSettings)</onleft>
+					<onleft>Skin.Reset(ExpandedSettings)</onleft>
+					<onleft>Control.SetFocus(4003)</onleft>
 					<onclick>Skin.Reset(ExpandCustomMoviesBGSettings)</onclick>
 					<onclick>Skin.Reset(ExpandedSettings)</onclick>
+					<onclick>Control.SetFocus(4003)</onclick>
 				</control>
 			</control>
 			
@@ -640,9 +768,7 @@
 					<itemgap>15</itemgap>
 					<onup>4243</onup>
 					<ondown>4240</ondown>
-					<onleft>Skin.Reset(ExpandCustomTVShowsBGSettings)</onleft>
-					<onleft>Skin.Reset(ExpandedSettings)</onleft>
-					<onleft>Control.SetFocus(4004)</onleft>
+					<onleft>1944</onleft>
 					<control type="radiobutton" id="4140">
 						<description>Default</description>
 						<include>SettingsCustomBGRadioBtn</include>
@@ -681,9 +807,7 @@
 					<posy>379</posy>
 					<onup>4143</onup>
 					<ondown>4140</ondown>
-					<onleft>Skin.Reset(ExpandCustomTVShowsBGSettings)</onleft>
-					<onleft>Skin.Reset(ExpandedSettings)</onleft>
-					<onleft>Control.SetFocus(4004)</onleft>
+					<onleft>1944</onleft>
 					<control type="button" id="4240">
 						<description>Single Image Path</description>
 						<include>SettingsContentBtn</include>
@@ -718,11 +842,16 @@
 					</control>
 				</control>
 				
-				<control type="button">
+				<control type="button" id="1944">
 					<description>Back</description>
 					<include>SettingsBackBtn</include>
+					<onright>944</onright>
+					<onleft>Skin.Reset(ExpandCustomTVShowsBGSettings)</onleft>
+					<onleft>Skin.Reset(ExpandedSettings)</onleft>
+					<onleft>Control.SetFocus(4004)</onleft>
 					<onclick>Skin.Reset(ExpandCustomTVShowsBGSettings)</onclick>
 					<onclick>Skin.Reset(ExpandedSettings)</onclick>
+					<onclick>Control.SetFocus(4004)</onclick>
 				</control>
 			</control>
 			
@@ -761,9 +890,7 @@
 					<itemgap>15</itemgap>
 					<onup>4253</onup>
 					<ondown>4250</ondown>
-					<onleft>Skin.Reset(ExpandCustomProgramsBGSettings)</onleft>
-					<onleft>Skin.Reset(ExpandedSettings)</onleft>
-					<onleft>Control.SetFocus(4005)</onleft>
+					<onleft>1945</onleft>
 					<control type="radiobutton" id="4150">
 						<description>Default</description>
 						<include>SettingsCustomBGRadioBtn</include>
@@ -794,9 +921,7 @@
 					<posy>379</posy>
 					<onup>4152</onup>
 					<ondown>4150</ondown>
-					<onleft>Skin.Reset(ExpandCustomProgramsBGSettings)</onleft>
-					<onleft>Skin.Reset(ExpandedSettings)</onleft>
-					<onleft>Control.SetFocus(4005)</onleft>
+					<onleft>1945</onleft>
 					<control type="button" id="4250">
 						<description>Single Image Path</description>
 						<include>SettingsContentBtn</include>
@@ -831,11 +956,16 @@
 					</control>
 				</control>
 				
-				<control type="button">
+				<control type="button" id="1945">
 					<description>Back</description>
 					<include>SettingsBackBtn</include>
+					<onright>945</onright>
+					<onleft>Skin.Reset(ExpandCustomProgramsBGSettings)</onleft>
+					<onleft>Skin.Reset(ExpandedSettings)</onleft>
+					<onleft>Control.SetFocus(4005)</onleft>
 					<onclick>Skin.Reset(ExpandCustomProgramsBGSettings)</onclick>
 					<onclick>Skin.Reset(ExpandedSettings)</onclick>
+					<onclick>Control.SetFocus(4005)</onclick>
 				</control>
 			</control>
 			
@@ -874,9 +1004,7 @@
 					<itemgap>15</itemgap>
 					<onup>4263</onup>
 					<ondown>4260</ondown>
-					<onleft>Skin.Reset(ExpandCustomPicturesBGSettings)</onleft>
-					<onleft>Skin.Reset(ExpandedSettings)</onleft>
-					<onleft>Control.SetFocus(4006)</onleft>
+					<onleft>1946</onleft>
 					<control type="radiobutton" id="4160">
 						<description>Default</description>
 						<include>SettingsCustomBGRadioBtn</include>
@@ -907,9 +1035,7 @@
 					<posy>379</posy>
 					<onup>4162</onup>
 					<ondown>4160</ondown>
-					<onleft>Skin.Reset(ExpandCustomPicturesBGSettings)</onleft>
-					<onleft>Skin.Reset(ExpandedSettings)</onleft>
-					<onleft>Control.SetFocus(4006)</onleft>
+					<onleft>1946</onleft>
 					<control type="button" id="4260">
 						<description>Single Image Path</description>
 						<include>SettingsContentBtn</include>
@@ -944,11 +1070,16 @@
 					</control>
 				</control>
 				
-				<control type="button">
+				<control type="button" id="1946">
 					<description>Back</description>
 					<include>SettingsBackBtn</include>
+					<onright>946</onright>
+					<onleft>Skin.Reset(ExpandCustomPicturesBGSettings)</onleft>
+					<onleft>Skin.Reset(ExpandedSettings)</onleft>
+					<onleft>Control.SetFocus(4006)</onleft> 
 					<onclick>Skin.Reset(ExpandCustomPicturesBGSettings)</onclick>
 					<onclick>Skin.Reset(ExpandedSettings)</onclick>
+					<onclick>Control.SetFocus(4006)</onclick>
 				</control>
 			</control>
 			
@@ -987,9 +1118,7 @@
 					<itemgap>15</itemgap>
 					<onup>4271</onup>
 					<ondown>4270</ondown>
-					<onleft>Skin.Reset(ExpandCustomGeneralBGSettings)</onleft>
-					<onleft>Skin.Reset(ExpandedSettings)</onleft>
-					<onleft>Control.SetFocus(4007)</onleft>
+					<onleft>1947</onleft>
 					<control type="radiobutton" id="4170">
 						<description>Default</description>
 						<include>SettingsCustomBGRadioBtn</include>
@@ -1020,9 +1149,7 @@
 					<posy>379</posy>
 					<onup>4172</onup>
 					<ondown>4170</ondown>
-					<onleft>Skin.Reset(ExpandCustomGeneralBGSettings)</onleft>
-					<onleft>Skin.Reset(ExpandedSettings)</onleft>
-					<onleft>Control.SetFocus(4007)</onleft>
+					<onleft>1947</onleft>
 					<control type="button" id="4270">
 						<description>Single Image Path</description>
 						<include>SettingsContentBtn</include>
@@ -1039,11 +1166,16 @@
 					</control>
 				</control>
 				
-				<control type="button">
+				<control type="button" id="1947">
 					<description>Back</description>
 					<include>SettingsBackBtn</include>
+					<onright>947</onright>
+					<onleft>Skin.Reset(ExpandCustomGeneralBGSettings)</onleft>
+					<onleft>Skin.Reset(ExpandedSettings)</onleft>
+					<onleft>Control.SetFocus(4007)</onleft>
 					<onclick>Skin.Reset(ExpandCustomGeneralBGSettings)</onclick>
 					<onclick>Skin.Reset(ExpandedSettings)</onclick>
+					<onclick>Control.SetFocus(4007)</onclick>
 				</control>
 			</control>
 			
@@ -1082,9 +1214,7 @@
 					<itemgap>15</itemgap>
 					<onup>4281</onup>
 					<ondown>4280</ondown>
-					<onleft>Skin.Reset(ExpandCustomSystemBGSettings)</onleft>
-					<onleft>Skin.Reset(ExpandedSettings)</onleft>
-					<onleft>Control.SetFocus(4008)</onleft>
+					<onleft>1948</onleft>
 					<control type="radiobutton" id="4180">
 						<description>Default</description>
 						<include>SettingsCustomBGRadioBtn</include>
@@ -1115,9 +1245,7 @@
 					<posy>379</posy>
 					<onup>4182</onup>
 					<ondown>4180</ondown>
-					<onleft>Skin.Reset(ExpandCustomSystemBGSettings)</onleft>
-					<onleft>Skin.Reset(ExpandedSettings)</onleft>
-					<onleft>Control.SetFocus(4008)</onleft>
+					<onleft>1948</onleft>
 					<control type="button" id="4280">
 						<description>Single Image Path</description>
 						<include>SettingsContentBtn</include>
@@ -1134,11 +1262,16 @@
 					</control>
 				</control>
 				
-				<control type="button">
+				<control type="button" id="1948">
 					<description>Back</description>
 					<include>SettingsBackBtn</include>
+					<onright>948</onright>
+					<onleft>Skin.Reset(ExpandCustomSystemBGSettings)</onleft>
+					<onleft>Skin.Reset(ExpandedSettings)</onleft>
+					<onleft>Control.SetFocus(4008)</onleft>
 					<onclick>Skin.Reset(ExpandCustomSystemBGSettings)</onclick>
 					<onclick>Skin.Reset(ExpandedSettings)</onclick>
+					<onclick>Control.SetFocus(4008)</onclick>
 				</control>
 			</control>
 		</control>

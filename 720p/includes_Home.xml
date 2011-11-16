@@ -193,12 +193,25 @@
 		
 		<control type="button" id="6109">
 			<include>RedirectBtn</include>
+			<onfocus>Skin.SetString(CustomPVRBGPath,background-pvr.png)</onfocus>
+			<onfocus>Control.SetFocus(6110)</onfocus>
+			<visible>IsEmpty(Skin.String(CustomPVRBGPath))</visible>
+		</control>
+		
+		<control type="button" id="6109">
+			<include>RedirectBtn</include>
+			<onfocus>Control.SetFocus(6110)</onfocus>
+			<visible>!IsEmpty(Skin.String(CustomPVRBGPath))</visible>
+		</control>
+		
+		<control type="button" id="6110">
+			<include>RedirectBtn</include>
 			<onfocus>Skin.SetString(CustomDefaultBGPath,background-default.png)</onfocus>
 			<onfocus>Control.SetFocus(6900)</onfocus>
 			<visible>IsEmpty(Skin.String(CustomDefaultBGPath))</visible>
 		</control>
 		
-		<control type="button" id="6109">
+		<control type="button" id="6110">
 			<include>RedirectBtn</include>
 			<onfocus>Control.SetFocus(6900)</onfocus>
 			<visible>!IsEmpty(Skin.String(CustomDefaultBGPath))</visible>
@@ -370,6 +383,78 @@
 		</item>
 	</include>
 	
+	<include name="HomeCustomCategory9">
+		<item id="17">
+			<label>-</label>
+			<icon fallback="homecategories/custom9-text-nofocus.png">$INFO[Skin.String(Custom9NoFocusImagePath)]</icon>
+			<thumb>$INFO[Skin.String(Custom9BackgroundImagePath)]</thumb>
+			<onclick>$INFO[Skin.String(Custom9BtnParam)]</onclick>
+		</item>
+	</include>
+	
+	<include name="HomeCustomCategory10">
+		<item id="18">
+			<label>-</label>
+			<icon fallback="homecategories/custom10-text-nofocus.png">$INFO[Skin.String(Custom10NoFocusImagePath)]</icon>
+			<thumb>$INFO[Skin.String(Custom10BackgroundImagePath)]</thumb>
+			<onclick>$INFO[Skin.String(Custom10BtnParam)]</onclick>
+		</item>
+	</include>
+	
+	<include name="HomeCustomCategory11">
+		<item id="19">
+			<label>-</label>
+			<icon fallback="homecategories/custom11-text-nofocus.png">$INFO[Skin.String(Custom11NoFocusImagePath)]</icon>
+			<thumb>$INFO[Skin.String(Custom11BackgroundImagePath)]</thumb>
+			<onclick>$INFO[Skin.String(Custom11BtnParam)]</onclick>
+		</item>
+	</include>
+	
+	<include name="HomeCustomCategory12">
+		<item id="20">
+			<label>-</label>
+			<icon fallback="homecategories/custom12-text-nofocus.png">$INFO[Skin.String(Custom12NoFocusImagePath)]</icon>
+			<thumb>$INFO[Skin.String(Custom12BackgroundImagePath)]</thumb>
+			<onclick>$INFO[Skin.String(Custom12BtnParam)]</onclick>
+		</item>
+	</include>
+	
+	<include name="HomeCustomCategory13">
+		<item id="21">
+			<label>-</label>
+			<icon fallback="homecategories/custom13-text-nofocus.png">$INFO[Skin.String(Custom13NoFocusImagePath)]</icon>
+			<thumb>$INFO[Skin.String(Custom13BackgroundImagePath)]</thumb>
+			<onclick>$INFO[Skin.String(Custom13BtnParam)]</onclick>
+		</item>
+	</include>
+	
+	<include name="HomeCustomCategory14">
+		<item id="22">
+			<label>-</label>
+			<icon fallback="homecategories/custom14-text-nofocus.png">$INFO[Skin.String(Custom14NoFocusImagePath)]</icon>
+			<thumb>$INFO[Skin.String(Custom14BackgroundImagePath)]</thumb>
+			<onclick>$INFO[Skin.String(Custom14BtnParam)]</onclick>
+		</item>
+	</include>
+	
+	<include name="HomeCustomCategory15">
+		<item id="23">
+			<label>-</label>
+			<icon fallback="homecategories/custom15-text-nofocus.png">$INFO[Skin.String(Custom15NoFocusImagePath)]</icon>
+			<thumb>$INFO[Skin.String(Custom15BackgroundImagePath)]</thumb>
+			<onclick>$INFO[Skin.String(Custom15BtnParam)]</onclick>
+		</item>
+	</include>
+	
+	<include name="HomeCustomCategory16">
+		<item id="24">
+			<label>-</label>
+			<icon fallback="homecategories/custom16-text-nofocus.png">$INFO[Skin.String(Custom16NoFocusImagePath)]</icon>
+			<thumb>$INFO[Skin.String(Custom16BackgroundImagePath)]</thumb>
+			<onclick>$INFO[Skin.String(Custom16BtnParam)]</onclick>
+		</item>
+	</include>
+	
 	<include name="HomeCategoryFocusImage">
 		<posx>490</posx>
 		<posy>30</posy>
@@ -442,6 +527,70 @@
 			<include>HomeCategoryFocusImage</include>
 			<texture fallback="homecategories/custom8-text-focus.png">$INFO[Skin.String(Custom8FocusImagePath)]</texture>			
 			<visible>Container(850).HasFocus(14)</visible>
+		</control>
+	</include>
+	
+	<include name="HomeCustomCategoryFocus9">
+		<control type="image">	
+			<include>HomeCategoryFocusImage</include>
+			<texture fallback="homecategories/custom9-text-focus.png">$INFO[Skin.String(Custom9FocusImagePath)]</texture>			
+			<visible>Container(850).HasFocus(17)</visible>
+		</control>
+	</include>
+	
+	<include name="HomeCustomCategoryFocus10">
+		<control type="image">	
+			<include>HomeCategoryFocusImage</include>
+			<texture fallback="homecategories/custom10-text-focus.png">$INFO[Skin.String(Custom10FocusImagePath)]</texture>			
+			<visible>Container(850).HasFocus(18)</visible>
+		</control>
+	</include>
+	
+	<include name="HomeCustomCategoryFocus11">
+		<control type="image">	
+			<include>HomeCategoryFocusImage</include>
+			<texture fallback="homecategories/custom11-text-focus.png">$INFO[Skin.String(Custom11FocusImagePath)]</texture>			
+			<visible>Container(850).HasFocus(19)</visible>
+		</control>
+	</include>
+	
+	<include name="HomeCustomCategoryFocus12">
+		<control type="image">	
+			<include>HomeCategoryFocusImage</include>
+			<texture fallback="homecategories/custom12-text-focus.png">$INFO[Skin.String(Custom12FocusImagePath)]</texture>			
+			<visible>Container(850).HasFocus(20)</visible>
+		</control>
+	</include>
+	
+	<include name="HomeCustomCategoryFocus13">
+		<control type="image">	
+			<include>HomeCategoryFocusImage</include>
+			<texture fallback="homecategories/custom13-text-focus.png">$INFO[Skin.String(Custom13FocusImagePath)]</texture>			
+			<visible>Container(850).HasFocus(21)</visible>
+		</control>
+	</include>
+	
+	<include name="HomeCustomCategoryFocus14">
+		<control type="image">	
+			<include>HomeCategoryFocusImage</include>
+			<texture fallback="homecategories/custom14-text-focus.png">$INFO[Skin.String(Custom14FocusImagePath)]</texture>			
+			<visible>Container(850).HasFocus(22)</visible>
+		</control>
+	</include>
+	
+	<include name="HomeCustomCategoryFocus15">
+		<control type="image">	
+			<include>HomeCategoryFocusImage</include>
+			<texture fallback="homecategories/custom15-text-focus.png">$INFO[Skin.String(Custom15FocusImagePath)]</texture>			
+			<visible>Container(850).HasFocus(23)</visible>
+		</control>
+	</include>
+	
+	<include name="HomeCustomCategoryFocus16">
+		<control type="image">	
+			<include>HomeCategoryFocusImage</include>
+			<texture fallback="homecategories/custom16-text-focus.png">$INFO[Skin.String(Custom16FocusImagePath)]</texture>			
+			<visible>Container(850).HasFocus(24)</visible>
 		</control>
 	</include>
 	
@@ -525,6 +674,86 @@
 		</control>
 	</include>
 	
+	<include name="HomeCustomIcon9">
+		<control type="image">
+			<include>HomeMenuIconDim</include>
+			<texture>$INFO[Skin.String(Custom9IconPath)]</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>Container(850).HasFocus(17)</visible>
+			<include>HomeMenuIconAnim</include>
+		</control>
+	</include>
+	
+	<include name="HomeCustomIcon10">
+		<control type="image">
+			<include>HomeMenuIconDim</include>
+			<texture>$INFO[Skin.String(Custom10IconPath)]</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>Container(850).HasFocus(18)</visible>
+			<include>HomeMenuIconAnim</include>
+		</control>
+	</include>
+	
+	<include name="HomeCustomIcon11">
+		<control type="image">
+			<include>HomeMenuIconDim</include>
+			<texture>$INFO[Skin.String(Custom11IconPath)]</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>Container(850).HasFocus(19)</visible>
+			<include>HomeMenuIconAnim</include>
+		</control>
+	</include>
+	
+	<include name="HomeCustomIcon12">
+		<control type="image">
+			<include>HomeMenuIconDim</include>
+			<texture>$INFO[Skin.String(Custom12IconPath)]</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>Container(850).HasFocus(20)</visible>
+			<include>HomeMenuIconAnim</include>
+		</control>
+	</include>
+	
+	<include name="HomeCustomIcon13">
+		<control type="image">
+			<include>HomeMenuIconDim</include>
+			<texture>$INFO[Skin.String(Custom13IconPath)]</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>Container(850).HasFocus(21)</visible>
+			<include>HomeMenuIconAnim</include>
+		</control>
+	</include>
+	
+	<include name="HomeCustomIcon14">
+		<control type="image">
+			<include>HomeMenuIconDim</include>
+			<texture>$INFO[Skin.String(Custom14IconPath)]</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>Container(850).HasFocus(22)</visible>
+			<include>HomeMenuIconAnim</include>
+		</control>
+	</include>
+	
+	<include name="HomeCustomIcon15">
+		<control type="image">
+			<include>HomeMenuIconDim</include>
+			<texture>$INFO[Skin.String(Custom15IconPath)]</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>Container(850).HasFocus(23)</visible>
+			<include>HomeMenuIconAnim</include>
+		</control>
+	</include>
+	
+	<include name="HomeCustomIcon16">
+		<control type="image">
+			<include>HomeMenuIconDim</include>
+			<texture>$INFO[Skin.String(Custom16IconPath)]</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>Container(850).HasFocus(24)</visible>
+			<include>HomeMenuIconAnim</include>
+		</control>
+	</include>
+	
 	<include name="HomeMenu">
 		<control type="wraplist" id="850">
 			<description>Home Menu</description>
@@ -566,6 +795,14 @@
 					<include condition="Skin.String(CustomMusicBGType,4)">HomeMusicFanartBGPath</include>
 					<onclick>ActivateWindow(Music)</onclick>
 					<visible>!Skin.HasSetting(HideMusicCategory)</visible>
+				</item>
+				<item id="50">
+					<description>PVR Category</description>
+					<label>pvr</label>
+					<icon>homecategories/$INFO[System.Language]/pvr-text-nofocus.png</icon>
+					<thumb>$INFO[Skin.String(CustomPVRBGPath)]</thumb>
+					<onclick>ActivateWindow(PVR)</onclick>
+					<visible>!Skin.HasSetting(HidePVRCategory) + !Skin.HasSetting(HidePVR) + System.GetBool(pvrmanager.enabled)</visible>
 				</item>
 				<item id="2">
 					<description>Videos Category</description>
@@ -618,6 +855,14 @@
 				<include condition="Skin.HasSetting(EnableCustomCategory6)">HomeCustomCategory6</include>
 				<include condition="Skin.HasSetting(EnableCustomCategory7)">HomeCustomCategory7</include>
 				<include condition="Skin.HasSetting(EnableCustomCategory8)">HomeCustomCategory8</include>
+				<include condition="Skin.HasSetting(EnableCustomCategory9)">HomeCustomCategory9</include>
+				<include condition="Skin.HasSetting(EnableCustomCategory10)">HomeCustomCategory10</include>
+				<include condition="Skin.HasSetting(EnableCustomCategory11)">HomeCustomCategory11</include>
+				<include condition="Skin.HasSetting(EnableCustomCategory12)">HomeCustomCategory12</include>
+				<include condition="Skin.HasSetting(EnableCustomCategory13)">HomeCustomCategory13</include>
+				<include condition="Skin.HasSetting(EnableCustomCategory14)">HomeCustomCategory14</include>
+				<include condition="Skin.HasSetting(EnableCustomCategory15)">HomeCustomCategory15</include>
+				<include condition="Skin.HasSetting(EnableCustomCategory16)">HomeCustomCategory16</include>
 				<item id="15">
 					<description>General Category</description>
 					<label>general</label>
@@ -651,6 +896,14 @@
 		<include condition="Skin.HasSetting(EnableCustomCategory6)">HomeCustomCategoryFocus6</include>
 		<include condition="Skin.HasSetting(EnableCustomCategory7)">HomeCustomCategoryFocus7</include>
 		<include condition="Skin.HasSetting(EnableCustomCategory8)">HomeCustomCategoryFocus8</include>
+		<include condition="Skin.HasSetting(EnableCustomCategory9)">HomeCustomCategoryFocus9</include>
+		<include condition="Skin.HasSetting(EnableCustomCategory10)">HomeCustomCategoryFocus10</include>
+		<include condition="Skin.HasSetting(EnableCustomCategory11)">HomeCustomCategoryFocus11</include>
+		<include condition="Skin.HasSetting(EnableCustomCategory12)">HomeCustomCategoryFocus12</include>
+		<include condition="Skin.HasSetting(EnableCustomCategory13)">HomeCustomCategoryFocus13</include>
+		<include condition="Skin.HasSetting(EnableCustomCategory14)">HomeCustomCategoryFocus14</include>
+		<include condition="Skin.HasSetting(EnableCustomCategory15)">HomeCustomCategoryFocus15</include>
+		<include condition="Skin.HasSetting(EnableCustomCategory16)">HomeCustomCategoryFocus16</include>
 	</include>
 	
 	<include name="HomeCategoryIcons">
@@ -666,6 +919,15 @@
 				<texture fallback="home-music-icon.png">$INFO[Skin.String(MusicCategoryIconPath)]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>Container(850).HasFocus(1)</visible>
+				<include>HomeMenuIconAnim</include>
+			</control>
+
+			<control type="image">
+				<description>PVR Icon</description>
+				<include>HomeMenuIconDim</include>
+				<texture fallback="home-pvr-icon.png">$INFO[Skin.String(PVRCategoryIconPath)]</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Container(850).HasFocus(50)</visible>
 				<include>HomeMenuIconAnim</include>
 			</control>
 			
@@ -740,6 +1002,14 @@
 			<include condition="Skin.HasSetting(EnableCustomCategory6)">HomeCustomIcon6</include>
 			<include condition="Skin.HasSetting(EnableCustomCategory7)">HomeCustomIcon7</include>
 			<include condition="Skin.HasSetting(EnableCustomCategory8)">HomeCustomIcon8</include>
+			<include condition="Skin.HasSetting(EnableCustomCategory9)">HomeCustomIcon9</include>
+			<include condition="Skin.HasSetting(EnableCustomCategory10)">HomeCustomIcon10</include>
+			<include condition="Skin.HasSetting(EnableCustomCategory11)">HomeCustomIcon11</include>
+			<include condition="Skin.HasSetting(EnableCustomCategory12)">HomeCustomIcon12</include>
+			<include condition="Skin.HasSetting(EnableCustomCategory13)">HomeCustomIcon13</include>
+			<include condition="Skin.HasSetting(EnableCustomCategory14)">HomeCustomIcon14</include>
+			<include condition="Skin.HasSetting(EnableCustomCategory15)">HomeCustomIcon15</include>
+			<include condition="Skin.HasSetting(EnableCustomCategory16)">HomeCustomIcon16</include>
 		</control>
 	</include>
 	
@@ -1134,6 +1404,58 @@
 					</item>
 				</content>						
 			</control>
+
+			<control type="list" id="110">
+				<description>PVR Menu Bar</description>
+				<posx>10</posx>
+				<width>1260</width>
+				<height>34</height>
+				<onup>-</onup>
+				<ondown>850</ondown>
+				<orientation>horizontal</orientation>
+				<visible>Container(850).HasFocus(50)</visible>
+				<include>HomeSubMenuItemOpenCloseAnim</include>
+				<include>HomeSubMenuItemsCenterAlignAnim</include>
+				<include>HomeSubMenuItemLayout</include>
+				<content>
+					<item id="1">
+						<description>TV Channels</description>
+						<label>$LOCALIZE[19019]</label>
+						<onclick>ActivateWindow(PVR)</onclick>
+						<onclick>Setfocus(32)</onclick>
+						<onclick>Setfocus(11)</onclick>
+					</item>
+					<item id="2">
+						<description>Guide</description>
+						<label>$LOCALIZE[19069]</label>
+						<onclick>ActivateWindow(PVR)</onclick>
+						<onclick>Setfocus(31)</onclick>
+						<onclick>Setfocus(11)</onclick>
+					</item>
+					<item id="3">
+						<description>Recordings</description>
+						<label>$LOCALIZE[19163]</label>
+						<onclick>ActivateWindow(PVR)</onclick>
+						<onclick>Setfocus(34)</onclick>
+						<onclick>Setfocus(13)</onclick>
+					</item>
+					<item id="4">
+						<description>Timer</description>
+						<label>$LOCALIZE[19040]</label>
+						<onclick>ActivateWindow(PVR)</onclick>
+						<onclick>Setfocus(35)</onclick>
+						<onclick>Setfocus(14)</onclick>
+					</item>
+					<item id="5">
+						<description>Radio Channels</description>
+						<label>$LOCALIZE[19024]</label>
+						<onclick>ActivateWindow(PVR)</onclick>
+						<onclick>Setfocus(33)</onclick>
+						<onclick>Setfocus(12)</onclick>
+						<visible>false</visible>
+					</item>
+				</content>						
+			</control>
 			
 			<control type="list" id="110">
 				<description>Programs Menu Bar</description>
@@ -1262,6 +1584,934 @@
 					</item>
 				</content>						
 			</control>
+			
+			<control type="list" id="110">
+				<description>Category 1 Menu Bar</description>
+				<posx>10</posx>
+				<width>1260</width>
+				<height>34</height>
+				<onup>-</onup>
+				<ondown>850</ondown>
+				<orientation>horizontal</orientation>
+				<visible>Container(850).HasFocus(7)</visible>
+				<include>HomeSubMenuItemOpenCloseAnim</include>
+				<include>HomeSubMenuItemsCenterAlignAnim</include>
+				<include>HomeSubMenuItemLayout</include>
+				<content>
+					<item id="1">
+						<description>Category 1 Button 1</description>
+						<label fallback="31208">$INFO[Skin.String(Custom1SubMenuBtn1Label)]</label>
+						<onclick>$INFO[Skin.String(Custom1SubMenuBtn1Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom1SubMenuBtn1)</visible>
+					</item>
+					<item id="1">
+						<description>Category 1 Button 2</description>
+						<label fallback="31209">$INFO[Skin.String(Custom1SubMenuBtn2Label)]</label>
+						<onclick>$INFO[Skin.String(Custom1SubMenuBtn2Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom1SubMenuBtn2)</visible>
+					</item>
+					<item id="1">
+						<description>Category 1 Button 3</description>
+						<label fallback="31210">$INFO[Skin.String(Custom1SubMenuBtn3Label)]</label>
+						<onclick>$INFO[Skin.String(Custom1SubMenuBtn3Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom1SubMenuBtn3)</visible>
+					</item>
+					<item id="1">
+						<description>Category 1 Button 4</description>
+						<label fallback="31211">$INFO[Skin.String(Custom1SubMenuBtn4Label)]</label>
+						<onclick>$INFO[Skin.String(Custom1SubMenuBtn4Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom1SubMenuBtn4)</visible>
+					</item>
+					<item id="1">
+						<description>Category 1 Button 5</description>
+						<label fallback="31212">$INFO[Skin.String(Custom1SubMenuBtn5Label)]</label>
+						<onclick>$INFO[Skin.String(Custom1SubMenuBtn5Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom1SubMenuBtn5)</visible>
+					</item>
+					<item id="1">
+						<description>Category 1 Button 6</description>
+						<label fallback="31213">$INFO[Skin.String(Custom1SubMenuBtn6Label)]</label>
+						<onclick>$INFO[Skin.String(Custom1SubMenuBtn6Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom1SubMenuBtn6)</visible>
+					</item>
+					<item id="1">
+						<description>Category 1 Button 7</description>
+						<label fallback="31214">$INFO[Skin.String(Custom1SubMenuBtn7Label)]</label>
+						<onclick>$INFO[Skin.String(Custom1SubMenuBtn7Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom1SubMenuBtn7)</visible>
+					</item>
+				</content>						
+			</control>
+
+			<control type="list" id="110">
+				<description>Category 2 Menu Bar</description>
+				<posx>10</posx>
+				<width>1260</width>
+				<height>34</height>
+				<onup>-</onup>
+				<ondown>850</ondown>
+				<orientation>horizontal</orientation>
+				<visible>Container(850).HasFocus(8)</visible>
+				<include>HomeSubMenuItemOpenCloseAnim</include>
+				<include>HomeSubMenuItemsCenterAlignAnim</include>
+				<include>HomeSubMenuItemLayout</include>
+				<content>
+					<item id="1">
+						<description>Category 2 Button 1</description>
+						<label fallback="31208">$INFO[Skin.String(Custom2SubMenuBtn1Label)]</label>
+						<onclick>$INFO[Skin.String(Custom2SubMenuBtn1Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom2SubMenuBtn1)</visible>
+					</item>
+					<item id="1">
+						<description>Category 2 Button 2</description>
+						<label fallback="31209">$INFO[Skin.String(Custom2SubMenuBtn2Label)]</label>
+						<onclick>$INFO[Skin.String(Custom2SubMenuBtn2Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom2SubMenuBtn2)</visible>
+					</item>
+					<item id="1">
+						<description>Category 2 Button 3</description>
+						<label fallback="31210">$INFO[Skin.String(Custom2SubMenuBtn3Label)]</label>
+						<onclick>$INFO[Skin.String(Custom2SubMenuBtn3Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom2SubMenuBtn3)</visible>
+					</item>
+					<item id="1">
+						<description>Category 2 Button 4</description>
+						<label fallback="31211">$INFO[Skin.String(Custom2SubMenuBtn4Label)]</label>
+						<onclick>$INFO[Skin.String(Custom2SubMenuBtn4Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom2SubMenuBtn4)</visible>
+					</item>
+					<item id="1">
+						<description>Category 2 Button 5</description>
+						<label fallback="31212">$INFO[Skin.String(Custom2SubMenuBtn5Label)]</label>
+						<onclick>$INFO[Skin.String(Custom2SubMenuBtn5Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom2SubMenuBtn5)</visible>
+					</item>
+					<item id="1">
+						<description>Category 2 Button 6</description>
+						<label fallback="31213">$INFO[Skin.String(Custom2SubMenuBtn6Label)]</label>
+						<onclick>$INFO[Skin.String(Custom2SubMenuBtn6Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom2SubMenuBtn6)</visible>
+					</item>
+					<item id="1">
+						<description>Category 2 Button 7</description>
+						<label fallback="31214">$INFO[Skin.String(Custom2SubMenuBtn7Label)]</label>
+						<onclick>$INFO[Skin.String(Custom2SubMenuBtn7Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom2SubMenuBtn7)</visible>
+					</item>
+				</content>						
+			</control>
+
+			<control type="list" id="110">
+				<description>Category 3 Menu Bar</description>
+				<posx>10</posx>
+				<width>1260</width>
+				<height>34</height>
+				<onup>-</onup>
+				<ondown>850</ondown>
+				<orientation>horizontal</orientation>
+				<visible>Container(850).HasFocus(9)</visible>
+				<include>HomeSubMenuItemOpenCloseAnim</include>
+				<include>HomeSubMenuItemsCenterAlignAnim</include>
+				<include>HomeSubMenuItemLayout</include>
+				<content>
+					<item id="1">
+						<description>Category 3 Button 1</description>
+						<label fallback="31208">$INFO[Skin.String(Custom3SubMenuBtn1Label)]</label>
+						<onclick>$INFO[Skin.String(Custom3SubMenuBtn1Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom3SubMenuBtn1)</visible>
+					</item>
+					<item id="1">
+						<description>Category 3 Button 2</description>
+						<label fallback="31209">$INFO[Skin.String(Custom3SubMenuBtn2Label)]</label>
+						<onclick>$INFO[Skin.String(Custom3SubMenuBtn2Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom3SubMenuBtn2)</visible>
+					</item>
+					<item id="1">
+						<description>Category 3 Button 3</description>
+						<label fallback="31210">$INFO[Skin.String(Custom3SubMenuBtn3Label)]</label>
+						<onclick>$INFO[Skin.String(Custom3SubMenuBtn3Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom3SubMenuBtn3)</visible>
+					</item>
+					<item id="1">
+						<description>Category 3 Button 4</description>
+						<label fallback="31211">$INFO[Skin.String(Custom3SubMenuBtn4Label)]</label>
+						<onclick>$INFO[Skin.String(Custom3SubMenuBtn4Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom3SubMenuBtn4)</visible>
+					</item>
+					<item id="1">
+						<description>Category 3 Button 5</description>
+						<label fallback="31212">$INFO[Skin.String(Custom3SubMenuBtn5Label)]</label>
+						<onclick>$INFO[Skin.String(Custom3SubMenuBtn5Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom3SubMenuBtn5)</visible>
+					</item>
+					<item id="1">
+						<description>Category 3 Button 6</description>
+						<label fallback="31213">$INFO[Skin.String(Custom3SubMenuBtn6Label)]</label>
+						<onclick>$INFO[Skin.String(Custom3SubMenuBtn6Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom3SubMenuBtn6)</visible>
+					</item>
+					<item id="1">
+						<description>Category 3 Button 7</description>
+						<label fallback="31214">$INFO[Skin.String(Custom3SubMenuBtn7Label)]</label>
+						<onclick>$INFO[Skin.String(Custom3SubMenuBtn7Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom3SubMenuBtn7)</visible>
+					</item>
+				</content>						
+			</control>
+
+			<control type="list" id="110">
+				<description>Category 4 Menu Bar</description>
+				<posx>10</posx>
+				<width>1260</width>
+				<height>34</height>
+				<onup>-</onup>
+				<ondown>850</ondown>
+				<orientation>horizontal</orientation>
+				<visible>Container(850).HasFocus(10)</visible>
+				<include>HomeSubMenuItemOpenCloseAnim</include>
+				<include>HomeSubMenuItemsCenterAlignAnim</include>
+				<include>HomeSubMenuItemLayout</include>
+				<content>
+					<item id="1">
+						<description>Category 4 Button 1</description>
+						<label fallback="31208">$INFO[Skin.String(Custom4SubMenuBtn1Label)]</label>
+						<onclick>$INFO[Skin.String(Custom4SubMenuBtn1Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom4SubMenuBtn1)</visible>
+					</item>
+					<item id="1">
+						<description>Category 4 Button 2</description>
+						<label fallback="31209">$INFO[Skin.String(Custom4SubMenuBtn2Label)]</label>
+						<onclick>$INFO[Skin.String(Custom4SubMenuBtn2Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom4SubMenuBtn2)</visible>
+					</item>
+					<item id="1">
+						<description>Category 4 Button 3</description>
+						<label fallback="31210">$INFO[Skin.String(Custom4SubMenuBtn3Label)]</label>
+						<onclick>$INFO[Skin.String(Custom4SubMenuBtn3Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom4SubMenuBtn3)</visible>
+					</item>
+					<item id="1">
+						<description>Category 4 Button 4</description>
+						<label fallback="31211">$INFO[Skin.String(Custom4SubMenuBtn4Label)]</label>
+						<onclick>$INFO[Skin.String(Custom4SubMenuBtn4Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom4SubMenuBtn4)</visible>
+					</item>
+					<item id="1">
+						<description>Category 4 Button 5</description>
+						<label fallback="31212">$INFO[Skin.String(Custom4SubMenuBtn5Label)]</label>
+						<onclick>$INFO[Skin.String(Custom4SubMenuBtn5Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom4SubMenuBtn5)</visible>
+					</item>
+					<item id="1">
+						<description>Category 4 Button 6</description>
+						<label fallback="31213">$INFO[Skin.String(Custom4SubMenuBtn6Label)]</label>
+						<onclick>$INFO[Skin.String(Custom4SubMenuBtn6Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom4SubMenuBtn6)</visible>
+					</item>
+					<item id="1">
+						<description>Category 4 Button 7</description>
+						<label fallback="31214">$INFO[Skin.String(Custom4SubMenuBtn7Label)]</label>
+						<onclick>$INFO[Skin.String(Custom4SubMenuBtn7Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom4SubMenuBtn7)</visible>
+					</item>
+				</content>						
+			</control>
+
+			<control type="list" id="110">
+				<description>Category 5 Menu Bar</description>
+				<posx>10</posx>
+				<width>1260</width>
+				<height>34</height>
+				<onup>-</onup>
+				<ondown>850</ondown>
+				<orientation>horizontal</orientation>
+				<visible>Container(850).HasFocus(11)</visible>
+				<include>HomeSubMenuItemOpenCloseAnim</include>
+				<include>HomeSubMenuItemsCenterAlignAnim</include>
+				<include>HomeSubMenuItemLayout</include>
+				<content>
+					<item id="1">
+						<description>Category 5 Button 1</description>
+						<label fallback="31208">$INFO[Skin.String(Custom5SubMenuBtn1Label)]</label>
+						<onclick>$INFO[Skin.String(Custom5SubMenuBtn1Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom5SubMenuBtn1)</visible>
+					</item>
+					<item id="1">
+						<description>Category 5 Button 2</description>
+						<label fallback="31209">$INFO[Skin.String(Custom5SubMenuBtn2Label)]</label>
+						<onclick>$INFO[Skin.String(Custom5SubMenuBtn2Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom5SubMenuBtn2)</visible>
+					</item>
+					<item id="1">
+						<description>Category 5 Button 3</description>
+						<label fallback="31210">$INFO[Skin.String(Custom5SubMenuBtn3Label)]</label>
+						<onclick>$INFO[Skin.String(Custom5SubMenuBtn3Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom5SubMenuBtn3)</visible>
+					</item>
+					<item id="1">
+						<description>Category 5 Button 4</description>
+						<label fallback="31211">$INFO[Skin.String(Custom5SubMenuBtn4Label)]</label>
+						<onclick>$INFO[Skin.String(Custom5SubMenuBtn4Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom5SubMenuBtn4)</visible>
+					</item>
+					<item id="1">
+						<description>Category 5 Button 5</description>
+						<label fallback="31212">$INFO[Skin.String(Custom5SubMenuBtn5Label)]</label>
+						<onclick>$INFO[Skin.String(Custom5SubMenuBtn5Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom5SubMenuBtn5)</visible>
+					</item>
+					<item id="1">
+						<description>Category 5 Button 6</description>
+						<label fallback="31213">$INFO[Skin.String(Custom5SubMenuBtn6Label)]</label>
+						<onclick>$INFO[Skin.String(Custom5SubMenuBtn6Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom5SubMenuBtn6)</visible>
+					</item>
+					<item id="1">
+						<description>Category 5 Button 7</description>
+						<label fallback="31214">$INFO[Skin.String(Custom5SubMenuBtn7Label)]</label>
+						<onclick>$INFO[Skin.String(Custom5SubMenuBtn7Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom5SubMenuBtn7)</visible>
+					</item>
+				</content>						
+			</control>
+ 
+			<control type="list" id="110">
+				<description>Category 6 Menu Bar</description>
+				<posx>10</posx>
+				<width>1260</width>
+				<height>34</height>
+				<onup>-</onup>
+				<ondown>850</ondown>
+				<orientation>horizontal</orientation>
+				<visible>Container(850).HasFocus(12)</visible>
+				<include>HomeSubMenuItemOpenCloseAnim</include>
+				<include>HomeSubMenuItemsCenterAlignAnim</include>
+				<include>HomeSubMenuItemLayout</include>
+				<content>
+					<item id="1">
+						<description>Category 6 Button 1</description>
+						<label fallback="31208">$INFO[Skin.String(Custom6SubMenuBtn1Label)]</label>
+						<onclick>$INFO[Skin.String(Custom6SubMenuBtn1Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom6SubMenuBtn1)</visible>
+					</item>
+					<item id="1">
+						<description>Category 6 Button 2</description>
+						<label fallback="31209">$INFO[Skin.String(Custom6SubMenuBtn2Label)]</label>
+						<onclick>$INFO[Skin.String(Custom6SubMenuBtn2Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom6SubMenuBtn2)</visible>
+					</item>
+					<item id="1">
+						<description>Category 6 Button 3</description>
+						<label fallback="31210">$INFO[Skin.String(Custom6SubMenuBtn3Label)]</label>
+						<onclick>$INFO[Skin.String(Custom6SubMenuBtn3Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom6SubMenuBtn3)</visible>
+					</item>
+					<item id="1">
+						<description>Category 6 Button 4</description>
+						<label fallback="31211">$INFO[Skin.String(Custom6SubMenuBtn4Label)]</label>
+						<onclick>$INFO[Skin.String(Custom6SubMenuBtn4Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom6SubMenuBtn4)</visible>
+					</item>
+					<item id="1">
+						<description>Category 6 Button 5</description>
+						<label fallback="31212">$INFO[Skin.String(Custom6SubMenuBtn5Label)]</label>
+						<onclick>$INFO[Skin.String(Custom6SubMenuBtn5Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom6SubMenuBtn5)</visible>
+					</item>
+					<item id="1">
+						<description>Category 6 Button 6</description>
+						<label fallback="31213">$INFO[Skin.String(Custom6SubMenuBtn6Label)]</label>
+						<onclick>$INFO[Skin.String(Custom6SubMenuBtn6Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom6SubMenuBtn6)</visible>
+					</item>
+					<item id="1">
+						<description>Category 6 Button 7</description>
+						<label fallback="31214">$INFO[Skin.String(Custom6SubMenuBtn7Label)]</label>
+						<onclick>$INFO[Skin.String(Custom6SubMenuBtn7Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom6SubMenuBtn7)</visible>
+					</item>
+				</content>						
+			</control>
+
+			<control type="list" id="110">
+				<description>Category 7 Menu Bar</description>
+				<posx>10</posx>
+				<width>1260</width>
+				<height>34</height>
+				<onup>-</onup>
+				<ondown>850</ondown>
+				<orientation>horizontal</orientation>
+				<visible>Container(850).HasFocus(13)</visible>
+				<include>HomeSubMenuItemOpenCloseAnim</include>
+				<include>HomeSubMenuItemsCenterAlignAnim</include>
+				<include>HomeSubMenuItemLayout</include>
+				<content>
+					<item id="1">
+						<description>Category 7 Button 1</description>
+						<label fallback="31208">$INFO[Skin.String(Custom7SubMenuBtn1Label)]</label>
+						<onclick>$INFO[Skin.String(Custom7SubMenuBtn1Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom7SubMenuBtn1)</visible>
+					</item>
+					<item id="1">
+						<description>Category 7 Button 2</description>
+						<label fallback="31209">$INFO[Skin.String(Custom7SubMenuBtn2Label)]</label>
+						<onclick>$INFO[Skin.String(Custom7SubMenuBtn2Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom7SubMenuBtn2)</visible>
+					</item>
+					<item id="1">
+						<description>Category 7 Button 3</description>
+						<label fallback="31210">$INFO[Skin.String(Custom7SubMenuBtn3Label)]</label>
+						<onclick>$INFO[Skin.String(Custom7SubMenuBtn3Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom7SubMenuBtn3)</visible>
+					</item>
+					<item id="1">
+						<description>Category 7 Button 4</description>
+						<label fallback="31211">$INFO[Skin.String(Custom7SubMenuBtn4Label)]</label>
+						<onclick>$INFO[Skin.String(Custom7SubMenuBtn4Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom7SubMenuBtn4)</visible>
+					</item>
+					<item id="1">
+						<description>Category 7 Button 5</description>
+						<label fallback="31212">$INFO[Skin.String(Custom7SubMenuBtn5Label)]</label>
+						<onclick>$INFO[Skin.String(Custom7SubMenuBtn5Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom7SubMenuBtn5)</visible>
+					</item>
+					<item id="1">
+						<description>Category 7 Button 6</description>
+						<label fallback="31213">$INFO[Skin.String(Custom7SubMenuBtn6Label)]</label>
+						<onclick>$INFO[Skin.String(Custom7SubMenuBtn6Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom7SubMenuBtn6)</visible>
+					</item>
+					<item id="1">
+						<description>Category 7 Button 7</description>
+						<label fallback="31214">$INFO[Skin.String(Custom7SubMenuBtn7Label)]</label>
+						<onclick>$INFO[Skin.String(Custom7SubMenuBtn7Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom7SubMenuBtn7)</visible>
+					</item>
+				</content>						
+			</control>
+
+			<control type="list" id="110">
+				<description>Category 8 Menu Bar</description>
+				<posx>10</posx>
+				<width>1260</width>
+				<height>34</height>
+				<onup>-</onup>
+				<ondown>850</ondown>
+				<orientation>horizontal</orientation>
+				<visible>Container(850).HasFocus(14)</visible>
+				<include>HomeSubMenuItemOpenCloseAnim</include>
+				<include>HomeSubMenuItemsCenterAlignAnim</include>
+				<include>HomeSubMenuItemLayout</include>
+				<content>
+					<item id="1">
+						<description>Category 8 Button 1</description>
+						<label fallback="31208">$INFO[Skin.String(Custom8SubMenuBtn1Label)]</label>
+						<onclick>$INFO[Skin.String(Custom8SubMenuBtn1Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom8SubMenuBtn1)</visible>
+					</item>
+					<item id="1">
+						<description>Category 8 Button 2</description>
+						<label fallback="31209">$INFO[Skin.String(Custom8SubMenuBtn2Label)]</label>
+						<onclick>$INFO[Skin.String(Custom8SubMenuBtn2Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom8SubMenuBtn2)</visible>
+					</item>
+					<item id="1">
+						<description>Category 8 Button 3</description>
+						<label fallback="31210">$INFO[Skin.String(Custom8SubMenuBtn3Label)]</label>
+						<onclick>$INFO[Skin.String(Custom8SubMenuBtn3Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom8SubMenuBtn3)</visible>
+					</item>
+					<item id="1">
+						<description>Category 8 Button 4</description>
+						<label fallback="31211">$INFO[Skin.String(Custom8SubMenuBtn4Label)]</label>
+						<onclick>$INFO[Skin.String(Custom8SubMenuBtn4Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom8SubMenuBtn4)</visible>
+					</item>
+					<item id="1">
+						<description>Category 8 Button 5</description>
+						<label fallback="31212">$INFO[Skin.String(Custom8SubMenuBtn5Label)]</label>
+						<onclick>$INFO[Skin.String(Custom8SubMenuBtn5Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom8SubMenuBtn5)</visible>
+					</item>
+					<item id="1">
+						<description>Category 8 Button 6</description>
+						<label fallback="31213">$INFO[Skin.String(Custom8SubMenuBtn6Label)]</label>
+						<onclick>$INFO[Skin.String(Custom8SubMenuBtn6Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom8SubMenuBtn6)</visible>
+					</item>
+					<item id="1">
+						<description>Category 8 Button 7</description>
+						<label fallback="31214">$INFO[Skin.String(Custom8SubMenuBtn7Label)]</label>
+						<onclick>$INFO[Skin.String(Custom8SubMenuBtn7Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom8SubMenuBtn7)</visible>
+					</item>
+				</content>						
+			</control>
+
+			<control type="list" id="110">
+				<description>Category 9 Menu Bar</description>
+				<posx>10</posx>
+				<width>1260</width>
+				<height>34</height>
+				<onup>-</onup>
+				<ondown>850</ondown>
+				<orientation>horizontal</orientation>
+				<visible>Container(850).HasFocus(17)</visible>
+				<include>HomeSubMenuItemOpenCloseAnim</include>
+				<include>HomeSubMenuItemsCenterAlignAnim</include>
+				<include>HomeSubMenuItemLayout</include>
+				<content>
+					<item id="1">
+						<description>Category 9 Button 1</description>
+						<label fallback="31208">$INFO[Skin.String(Custom9SubMenuBtn1Label)]</label>
+						<onclick>$INFO[Skin.String(Custom9SubMenuBtn1Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom9SubMenuBtn1)</visible>
+					</item>
+					<item id="1">
+						<description>Category 9 Button 2</description>
+						<label fallback="31209">$INFO[Skin.String(Custom9SubMenuBtn2Label)]</label>
+						<onclick>$INFO[Skin.String(Custom9SubMenuBtn2Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom9SubMenuBtn2)</visible>
+					</item>
+					<item id="1">
+						<description>Category 9 Button 3</description>
+						<label fallback="31210">$INFO[Skin.String(Custom9SubMenuBtn3Label)]</label>
+						<onclick>$INFO[Skin.String(Custom9SubMenuBtn3Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom9SubMenuBtn3)</visible>
+					</item>
+					<item id="1">
+						<description>Category 9 Button 4</description>
+						<label fallback="31211">$INFO[Skin.String(Custom9SubMenuBtn4Label)]</label>
+						<onclick>$INFO[Skin.String(Custom9SubMenuBtn4Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom9SubMenuBtn4)</visible>
+					</item>
+					<item id="1">
+						<description>Category 9 Button 5</description>
+						<label fallback="31212">$INFO[Skin.String(Custom9SubMenuBtn5Label)]</label>
+						<onclick>$INFO[Skin.String(Custom9SubMenuBtn5Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom9SubMenuBtn5)</visible>
+					</item>
+					<item id="1">
+						<description>Category 9 Button 6</description>
+						<label fallback="31213">$INFO[Skin.String(Custom9SubMenuBtn6Label)]</label>
+						<onclick>$INFO[Skin.String(Custom9SubMenuBtn6Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom9SubMenuBtn6)</visible>
+					</item>
+					<item id="1">
+						<description>Category 9 Button 7</description>
+						<label fallback="31214">$INFO[Skin.String(Custom9SubMenuBtn7Label)]</label>
+						<onclick>$INFO[Skin.String(Custom9SubMenuBtn7Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom9SubMenuBtn7)</visible>
+					</item>
+				</content>						
+			</control>
+
+			<control type="list" id="110">
+				<description>Category 10 Menu Bar</description>
+				<posx>10</posx>
+				<width>1260</width>
+				<height>34</height>
+				<onup>-</onup>
+				<ondown>850</ondown>
+				<orientation>horizontal</orientation>
+				<visible>Container(850).HasFocus(18)</visible>
+				<include>HomeSubMenuItemOpenCloseAnim</include>
+				<include>HomeSubMenuItemsCenterAlignAnim</include>
+				<include>HomeSubMenuItemLayout</include>
+				<content>
+					<item id="1">
+						<description>Category 10 Button 1</description>
+						<label fallback="31208">$INFO[Skin.String(Custom10SubMenuBtn1Label)]</label>
+						<onclick>$INFO[Skin.String(Custom10SubMenuBtn1Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom10SubMenuBtn1)</visible>
+					</item>
+					<item id="1">
+						<description>Category 10 Button 2</description>
+						<label fallback="31209">$INFO[Skin.String(Custom10SubMenuBtn2Label)]</label>
+						<onclick>$INFO[Skin.String(Custom10SubMenuBtn2Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom10SubMenuBtn2)</visible>
+					</item>
+					<item id="1">
+						<description>Category 10 Button 3</description>
+						<label fallback="31210">$INFO[Skin.String(Custom10SubMenuBtn3Label)]</label>
+						<onclick>$INFO[Skin.String(Custom10SubMenuBtn3Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom10SubMenuBtn3)</visible>
+					</item>
+					<item id="1">
+						<description>Category 10 Button 4</description>
+						<label fallback="31211">$INFO[Skin.String(Custom10SubMenuBtn4Label)]</label>
+						<onclick>$INFO[Skin.String(Custom10SubMenuBtn4Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom10SubMenuBtn4)</visible>
+					</item>
+					<item id="1">
+						<description>Category 10 Button 5</description>
+						<label fallback="31212">$INFO[Skin.String(Custom10SubMenuBtn5Label)]</label>
+						<onclick>$INFO[Skin.String(Custom10SubMenuBtn5Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom10SubMenuBtn5)</visible>
+					</item>
+					<item id="1">
+						<description>Category 10 Button 6</description>
+						<label fallback="31213">$INFO[Skin.String(Custom10SubMenuBtn6Label)]</label>
+						<onclick>$INFO[Skin.String(Custom10SubMenuBtn6Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom10SubMenuBtn6)</visible>
+					</item>
+					<item id="1">
+						<description>Category 10 Button 7</description>
+						<label fallback="31214">$INFO[Skin.String(Custom10SubMenuBtn7Label)]</label>
+						<onclick>$INFO[Skin.String(Custom10SubMenuBtn7Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom10SubMenuBtn7)</visible>
+					</item>
+				</content>						
+			</control>
+
+			<control type="list" id="110">
+				<description>Category 11 Menu Bar</description>
+				<posx>10</posx>
+				<width>1260</width>
+				<height>34</height>
+				<onup>-</onup>
+				<ondown>850</ondown>
+				<orientation>horizontal</orientation>
+				<visible>Container(850).HasFocus(19)</visible>
+				<include>HomeSubMenuItemOpenCloseAnim</include>
+				<include>HomeSubMenuItemsCenterAlignAnim</include>
+				<include>HomeSubMenuItemLayout</include>
+				<content>
+					<item id="1">
+						<description>Category 11 Button 1</description>
+						<label fallback="31208">$INFO[Skin.String(Custom11SubMenuBtn1Label)]</label>
+						<onclick>$INFO[Skin.String(Custom11SubMenuBtn1Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom11SubMenuBtn1)</visible>
+					</item>
+					<item id="1">
+						<description>Category 11 Button 2</description>
+						<label fallback="31209">$INFO[Skin.String(Custom11SubMenuBtn2Label)]</label>
+						<onclick>$INFO[Skin.String(Custom11SubMenuBtn2Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom11SubMenuBtn2)</visible>
+					</item>
+					<item id="1">
+						<description>Category 11 Button 3</description>
+						<label fallback="31210">$INFO[Skin.String(Custom11SubMenuBtn3Label)]</label>
+						<onclick>$INFO[Skin.String(Custom11SubMenuBtn3Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom11SubMenuBtn3)</visible>
+					</item>
+					<item id="1">
+						<description>Category 11 Button 4</description>
+						<label fallback="31211">$INFO[Skin.String(Custom11SubMenuBtn4Label)]</label>
+						<onclick>$INFO[Skin.String(Custom11SubMenuBtn4Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom11SubMenuBtn4)</visible>
+					</item>
+					<item id="1">
+						<description>Category 11 Button 5</description>
+						<label fallback="31212">$INFO[Skin.String(Custom11SubMenuBtn5Label)]</label>
+						<onclick>$INFO[Skin.String(Custom11SubMenuBtn5Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom11SubMenuBtn5)</visible>
+					</item>
+					<item id="1">
+						<description>Category 11 Button 6</description>
+						<label fallback="31213">$INFO[Skin.String(Custom11SubMenuBtn6Label)]</label>
+						<onclick>$INFO[Skin.String(Custom11SubMenuBtn6Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom11SubMenuBtn6)</visible>
+					</item>
+					<item id="1">
+						<description>Category 11 Button 7</description>
+						<label fallback="31214">$INFO[Skin.String(Custom11SubMenuBtn7Label)]</label>
+						<onclick>$INFO[Skin.String(Custom11SubMenuBtn7Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom11SubMenuBtn7)</visible>
+					</item>
+				</content>						
+			</control>
+
+			<control type="list" id="110">
+				<description>Category 12 Menu Bar</description>
+				<posx>10</posx>
+				<width>1260</width>
+				<height>34</height>
+				<onup>-</onup>
+				<ondown>850</ondown>
+				<orientation>horizontal</orientation>
+				<visible>Container(850).HasFocus(20)</visible>
+				<include>HomeSubMenuItemOpenCloseAnim</include>
+				<include>HomeSubMenuItemsCenterAlignAnim</include>
+				<include>HomeSubMenuItemLayout</include>
+				<content>
+					<item id="1">
+						<description>Category 12 Button 1</description>
+						<label fallback="31208">$INFO[Skin.String(Custom12SubMenuBtn1Label)]</label>
+						<onclick>$INFO[Skin.String(Custom12SubMenuBtn1Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom12SubMenuBtn1)</visible>
+					</item>
+					<item id="1">
+						<description>Category 12 Button 2</description>
+						<label fallback="31209">$INFO[Skin.String(Custom12SubMenuBtn2Label)]</label>
+						<onclick>$INFO[Skin.String(Custom12SubMenuBtn2Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom12SubMenuBtn2)</visible>
+					</item>
+					<item id="1">
+						<description>Category 12 Button 3</description>
+						<label fallback="31210">$INFO[Skin.String(Custom12SubMenuBtn3Label)]</label>
+						<onclick>$INFO[Skin.String(Custom12SubMenuBtn3Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom12SubMenuBtn3)</visible>
+					</item>
+					<item id="1">
+						<description>Category 12 Button 4</description>
+						<label fallback="31211">$INFO[Skin.String(Custom12SubMenuBtn4Label)]</label>
+						<onclick>$INFO[Skin.String(Custom12SubMenuBtn4Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom12SubMenuBtn4)</visible>
+					</item>
+					<item id="1">
+						<description>Category 12 Button 5</description>
+						<label fallback="31212">$INFO[Skin.String(Custom12SubMenuBtn5Label)]</label>
+						<onclick>$INFO[Skin.String(Custom12SubMenuBtn5Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom12SubMenuBtn5)</visible>
+					</item>
+					<item id="1">
+						<description>Category 12 Button 6</description>
+						<label fallback="31213">$INFO[Skin.String(Custom12SubMenuBtn6Label)]</label>
+						<onclick>$INFO[Skin.String(Custom12SubMenuBtn6Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom12SubMenuBtn6)</visible>
+					</item>
+					<item id="1">
+						<description>Category 12 Button 7</description>
+						<label fallback="31214">$INFO[Skin.String(Custom12SubMenuBtn7Label)]</label>
+						<onclick>$INFO[Skin.String(Custom12SubMenuBtn7Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom12SubMenuBtn7)</visible>
+					</item>
+				</content>						
+			</control>
+
+			<control type="list" id="110">
+				<description>Category 13 Menu Bar</description>
+				<posx>10</posx>
+				<width>1260</width>
+				<height>34</height>
+				<onup>-</onup>
+				<ondown>850</ondown>
+				<orientation>horizontal</orientation>
+				<visible>Container(850).HasFocus(21)</visible>
+				<include>HomeSubMenuItemOpenCloseAnim</include>
+				<include>HomeSubMenuItemsCenterAlignAnim</include>
+				<include>HomeSubMenuItemLayout</include>
+				<content>
+					<item id="1">
+						<description>Category 13 Button 1</description>
+						<label fallback="31208">$INFO[Skin.String(Custom13SubMenuBtn1Label)]</label>
+						<onclick>$INFO[Skin.String(Custom13SubMenuBtn1Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom13SubMenuBtn1)</visible>
+					</item>
+					<item id="1">
+						<description>Category 13 Button 2</description>
+						<label fallback="31209">$INFO[Skin.String(Custom13SubMenuBtn2Label)]</label>
+						<onclick>$INFO[Skin.String(Custom13SubMenuBtn2Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom13SubMenuBtn2)</visible>
+					</item>
+					<item id="1">
+						<description>Category 13 Button 3</description>
+						<label fallback="31210">$INFO[Skin.String(Custom13SubMenuBtn3Label)]</label>
+						<onclick>$INFO[Skin.String(Custom13SubMenuBtn3Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom13SubMenuBtn3)</visible>
+					</item>
+					<item id="1">
+						<description>Category 13 Button 4</description>
+						<label fallback="31211">$INFO[Skin.String(Custom13SubMenuBtn4Label)]</label>
+						<onclick>$INFO[Skin.String(Custom13SubMenuBtn4Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom13SubMenuBtn4)</visible>
+					</item>
+					<item id="1">
+						<description>Category 13 Button 5</description>
+						<label fallback="31212">$INFO[Skin.String(Custom13SubMenuBtn5Label)]</label>
+						<onclick>$INFO[Skin.String(Custom13SubMenuBtn5Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom13SubMenuBtn5)</visible>
+					</item>
+					<item id="1">
+						<description>Category 13 Button 6</description>
+						<label fallback="31213">$INFO[Skin.String(Custom13SubMenuBtn6Label)]</label>
+						<onclick>$INFO[Skin.String(Custom13SubMenuBtn6Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom13SubMenuBtn6)</visible>
+					</item>
+					<item id="1">
+						<description>Category 13 Button 7</description>
+						<label fallback="31214">$INFO[Skin.String(Custom13SubMenuBtn7Label)]</label>
+						<onclick>$INFO[Skin.String(Custom13SubMenuBtn7Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom13SubMenuBtn7)</visible>
+					</item>
+				</content>						
+			</control>
+
+			<control type="list" id="110">
+				<description>Category 14 Menu Bar</description>
+				<posx>10</posx>
+				<width>1260</width>
+				<height>34</height>
+				<onup>-</onup>
+				<ondown>850</ondown>
+				<orientation>horizontal</orientation>
+				<visible>Container(850).HasFocus(22)</visible>
+				<include>HomeSubMenuItemOpenCloseAnim</include>
+				<include>HomeSubMenuItemsCenterAlignAnim</include>
+				<include>HomeSubMenuItemLayout</include>
+				<content>
+					<item id="1">
+						<description>Category 14 Button 1</description>
+						<label fallback="31208">$INFO[Skin.String(Custom14SubMenuBtn1Label)]</label>
+						<onclick>$INFO[Skin.String(Custom14SubMenuBtn1Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom14SubMenuBtn1)</visible>
+					</item>
+					<item id="1">
+						<description>Category 14 Button 2</description>
+						<label fallback="31209">$INFO[Skin.String(Custom14SubMenuBtn2Label)]</label>
+						<onclick>$INFO[Skin.String(Custom14SubMenuBtn2Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom14SubMenuBtn2)</visible>
+					</item>
+					<item id="1">
+						<description>Category 14 Button 3</description>
+						<label fallback="31210">$INFO[Skin.String(Custom14SubMenuBtn3Label)]</label>
+						<onclick>$INFO[Skin.String(Custom14SubMenuBtn3Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom14SubMenuBtn3)</visible>
+					</item>
+					<item id="1">
+						<description>Category 14 Button 4</description>
+						<label fallback="31211">$INFO[Skin.String(Custom14SubMenuBtn4Label)]</label>
+						<onclick>$INFO[Skin.String(Custom14SubMenuBtn4Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom14SubMenuBtn4)</visible>
+					</item>
+					<item id="1">
+						<description>Category 14 Button 5</description>
+						<label fallback="31212">$INFO[Skin.String(Custom14SubMenuBtn5Label)]</label>
+						<onclick>$INFO[Skin.String(Custom14SubMenuBtn5Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom14SubMenuBtn5)</visible>
+					</item>
+					<item id="1">
+						<description>Category 14 Button 6</description>
+						<label fallback="31213">$INFO[Skin.String(Custom14SubMenuBtn6Label)]</label>
+						<onclick>$INFO[Skin.String(Custom14SubMenuBtn6Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom14SubMenuBtn6)</visible>
+					</item>
+					<item id="1">
+						<description>Category 14 Button 7</description>
+						<label fallback="31214">$INFO[Skin.String(Custom14SubMenuBtn7Label)]</label>
+						<onclick>$INFO[Skin.String(Custom14SubMenuBtn7Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom14SubMenuBtn7)</visible>
+					</item>
+				</content>						
+			</control>
+
+			<control type="list" id="110">
+				<description>Category 15 Menu Bar</description>
+				<posx>10</posx>
+				<width>1260</width>
+				<height>34</height>
+				<onup>-</onup>
+				<ondown>850</ondown>
+				<orientation>horizontal</orientation>
+				<visible>Container(850).HasFocus(23)</visible>
+				<include>HomeSubMenuItemOpenCloseAnim</include>
+				<include>HomeSubMenuItemsCenterAlignAnim</include>
+				<include>HomeSubMenuItemLayout</include>
+				<content>
+					<item id="1">
+						<description>Category 15 Button 1</description>
+						<label fallback="31208">$INFO[Skin.String(Custom15SubMenuBtn1Label)]</label>
+						<onclick>$INFO[Skin.String(Custom15SubMenuBtn1Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom15SubMenuBtn1)</visible>
+					</item>
+					<item id="1">
+						<description>Category 15 Button 2</description>
+						<label fallback="31209">$INFO[Skin.String(Custom15SubMenuBtn2Label)]</label>
+						<onclick>$INFO[Skin.String(Custom15SubMenuBtn2Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom15SubMenuBtn2)</visible>
+					</item>
+					<item id="1">
+						<description>Category 15 Button 3</description>
+						<label fallback="31210">$INFO[Skin.String(Custom15SubMenuBtn3Label)]</label>
+						<onclick>$INFO[Skin.String(Custom15SubMenuBtn3Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom15SubMenuBtn3)</visible>
+					</item>
+					<item id="1">
+						<description>Category 15 Button 4</description>
+						<label fallback="31211">$INFO[Skin.String(Custom15SubMenuBtn4Label)]</label>
+						<onclick>$INFO[Skin.String(Custom15SubMenuBtn4Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom15SubMenuBtn4)</visible>
+					</item>
+					<item id="1">
+						<description>Category 15 Button 5</description>
+						<label fallback="31212">$INFO[Skin.String(Custom15SubMenuBtn5Label)]</label>
+						<onclick>$INFO[Skin.String(Custom15SubMenuBtn5Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom15SubMenuBtn5)</visible>
+					</item>
+					<item id="1">
+						<description>Category 15 Button 6</description>
+						<label fallback="31213">$INFO[Skin.String(Custom15SubMenuBtn6Label)]</label>
+						<onclick>$INFO[Skin.String(Custom15SubMenuBtn6Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom15SubMenuBtn6)</visible>
+					</item>
+					<item id="1">
+						<description>Category 15 Button 7</description>
+						<label fallback="31214">$INFO[Skin.String(Custom15SubMenuBtn7Label)]</label>
+						<onclick>$INFO[Skin.String(Custom15SubMenuBtn7Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom15SubMenuBtn7)</visible>
+					</item>
+				</content>						
+			</control>
+
+			<control type="list" id="110">
+				<description>Category 16 Menu Bar</description>
+				<posx>10</posx>
+				<width>1260</width>
+				<height>34</height>
+				<onup>-</onup>
+				<ondown>850</ondown>
+				<orientation>horizontal</orientation>
+				<visible>Container(850).HasFocus(24)</visible>
+				<include>HomeSubMenuItemOpenCloseAnim</include>
+				<include>HomeSubMenuItemsCenterAlignAnim</include>
+				<include>HomeSubMenuItemLayout</include>
+				<content>
+					<item id="1">
+						<description>Category 16 Button 1</description>
+						<label fallback="31208">$INFO[Skin.String(Custom16SubMenuBtn1Label)]</label>
+						<onclick>$INFO[Skin.String(Custom16SubMenuBtn1Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom16SubMenuBtn1)</visible>
+					</item>
+					<item id="1">
+						<description>Category 16 Button 2</description>
+						<label fallback="31209">$INFO[Skin.String(Custom16SubMenuBtn2Label)]</label>
+						<onclick>$INFO[Skin.String(Custom16SubMenuBtn2Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom16SubMenuBtn2)</visible>
+					</item>
+					<item id="1">
+						<description>Category 16 Button 3</description>
+						<label fallback="31210">$INFO[Skin.String(Custom16SubMenuBtn3Label)]</label>
+						<onclick>$INFO[Skin.String(Custom16SubMenuBtn3Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom16SubMenuBtn3)</visible>
+					</item>
+					<item id="1">
+						<description>Category 16 Button 4</description>
+						<label fallback="31211">$INFO[Skin.String(Custom16SubMenuBtn4Label)]</label>
+						<onclick>$INFO[Skin.String(Custom16SubMenuBtn4Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom16SubMenuBtn4)</visible>
+					</item>
+					<item id="1">
+						<description>Category 16 Button 5</description>
+						<label fallback="31212">$INFO[Skin.String(Custom16SubMenuBtn5Label)]</label>
+						<onclick>$INFO[Skin.String(Custom16SubMenuBtn5Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom16SubMenuBtn5)</visible>
+					</item>
+					<item id="1">
+						<description>Category 16 Button 6</description>
+						<label fallback="31213">$INFO[Skin.String(Custom16SubMenuBtn6Label)]</label>
+						<onclick>$INFO[Skin.String(Custom16SubMenuBtn6Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom16SubMenuBtn6)</visible>
+					</item>
+					<item id="1">
+						<description>Category 16 Button 7</description>
+						<label fallback="31214">$INFO[Skin.String(Custom16SubMenuBtn7Label)]</label>
+						<onclick>$INFO[Skin.String(Custom16SubMenuBtn7Param)]</onclick>
+						<visible>Skin.HasSetting(EditCustom16SubMenuBtn7)</visible>
+					</item>
+				</content>						
+			</control>		
 		</control>
 	</include>
 	
@@ -1590,9 +2840,73 @@
 						</control>
 					</control>
 				</control>
+
+				<control type="group">
+					<visible>VideoPlayer.Content(LiveTV)</visible>
+					<control type="image">
+						<description>Cover</description>
+						<posx>15</posx>
+						<posy>27</posy>
+						<width>176</width>
+						<height>110</height>
+						<texture diffuse="covers/home-panel-episode-cover-border.png" background="true" fallback="DefaultVideo.png">$INFO[VideoPlayer.Cover]</texture>
+						<bordersize>4</bordersize>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="label">
+						<description>Title</description>
+						<posx>203</posx>
+						<posy>9</posy>
+						<width>272</width>
+						<font>PanelTitleFont</font>
+						<textcolor>MediaInfoTitleColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>[UPPERCASE]$LOCALIZE[13350][/UPPERCASE]</label>
+					</control>
+					<control type="grouplist">
+						<posx>203</posx>
+						<posy>47</posy>
+						<itemgap>10</itemgap>
+						<usecontrolcoords>true</usecontrolcoords>
+						<control type="label">
+							<description>Video Title</description>
+							<width>272</width>
+							<height>12</height>
+							<font>PanelInfoHeadFont</font>
+							<textcolor>DefaultColor3</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<label>$INFO[VideoPlayer.Title]</label>
+							<scroll>yes</scroll>
+						</control>
+						<control type="label">
+							<description>Elapsed/Duration Time</description>
+							<posy>5</posy>
+							<width>272</width>
+							<height>12</height>
+							<font>PanelInfoHeadFont</font>
+							<textcolor>WhiteColor</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<aligny>center</aligny>
+							<label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
+							<aligny>center</aligny>
+							<visible>!Player.Seeking</visible>
+						</control>
+						<control type="label">
+							<description>Show/Year</description>
+							<posy>9</posy>
+							<width>272</width>
+							<height>12</height>
+							<font>PanelInfoFont</font>
+							<textcolor>MediaInfoItemColor2</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<label>$INFO[VideoPlayer.ChannelName]</label>
+							<scroll>yes</scroll>
+						</control>
+					</control>
+				</control>
 				
 				<control type="group">
-					<visible>VideoPlayer.Content(Episodes) | !VideoPlayer.Content(Movies)</visible>
+					<visible>VideoPlayer.Content(Episodes) | [!VideoPlayer.Content(Movies) + !VideoPlayer.Content(LiveTV)]</visible>
 				
 					<control type="image">
 						<description>Cover</description>

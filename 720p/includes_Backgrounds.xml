@@ -193,6 +193,25 @@
 		</control>
 	</include>
 
+	<include name="BackgroundPVR">		
+		<control type="group">
+			<include condition="![Skin.HasSetting(DisableMusicPlayingBG) | Skin.HasSetting(DisableVideoPlayingBG)]">IsMediaPlayingCondition</include>
+			
+			<control type="multiimage">
+				<description>Custom Background</description>
+				<include>BackgroundSize</include>
+				<imagepath background="true">$INFO[Skin.String(CustomPVRBGPath)]</imagepath>
+				<aspectratio>scale</aspectratio>
+				<timeperimage>10000</timeperimage>
+				<fadetime>BackgroundCrossfadeTime</fadetime>
+				<randomize>true</randomize>
+				<include condition="Skin.HasSetting(AnimateBackground)">CustomBackgroundAnim</include>
+			</control>
+
+			<include>PVRBackgroundDim</include>
+		</control>
+	</include>
+
 	<include name="BackgroundMusicPlaying">
 		<control type="group">
 			<visible>Player.HasAudio</visible>
@@ -461,6 +480,14 @@
 			<include>BackgroundDim</include>
 			<animation effect="fade" end="60" reversible="false" condition="!Skin.HasSetting(DimPicturesBackgroundHigh)">Conditional</animation>
 			<animation effect="fade" end="85" reversible="false" condition="Skin.HasSetting(DimPicturesBackgroundHigh)">Conditional</animation>
+		</control>
+	</include>
+
+	<include name="PVRBackgroundDim">
+		<control type="image">
+			<include>BackgroundDim</include>
+			<animation effect="fade" end="60" reversible="false" condition="!Skin.HasSetting(DimPVRBackgroundHigh)">Conditional</animation>
+			<animation effect="fade" end="85" reversible="false" condition="Skin.HasSetting(DimPVRBackgroundHigh)">Conditional</animation>
 		</control>
 	</include>
 
