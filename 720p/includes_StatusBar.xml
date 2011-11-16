@@ -80,6 +80,7 @@
 				<height>16</height>
 				<font>NowPlayingFont2</font>	
 				<textcolor>StatusBarColor2</textcolor>
+				<label>$INFO[VideoPlayer.TVShowTitle]</label>
 				<label>$INFO[VideoPlayer.Genre]</label>
 				<label>[B]$INFO[Player.Time] / $INFO[Player.Duration][/B]</label>
 				<aligny>top</aligny>
@@ -148,12 +149,25 @@
 			</control>
 			<include condition="!Skin.HasSetting(DisableWeather) + Skin.HasSetting(ApplyAllWeather)">WeatherNotification</include>
 			<control type="label" id="5566">
-				<posx>0</posx>
-				<posy>21</posy>
 				<width min="25" max="250">auto</width>
-				<font>NotificationFont</font>
+				<height>42</height>
+				<font>BreadCrumbFont</font>
 				<textcolor>BreadCrumbColor</textcolor>
-				<label>[UPPERCASE]$INFO[System.Date][CR][B]$INFO[System.Time][/B][/UPPERCASE]</label>
+				<label>[UPPERCASE]$INFO[System.Date][/UPPERCASE] </label>
+				<aligny>center</aligny>
+			</control>
+			<control type="image">
+				<posy>3</posy>
+				<width>3</width>
+				<height>39</height>
+				<texture border="0,12,0,13">gui/status-bar-separator.png</texture>		
+			</control>
+			<control type="label" id="5569">
+				<width min="25" max="250">auto</width>
+				<height>42</height>
+				<font>BreadCrumbFont</font>
+				<textcolor>BreadCrumbColor</textcolor>
+				<label> [UPPERCASE][B]$INFO[System.Time][/B][/UPPERCASE]</label>
 				<aligny>center</aligny>
 			</control>
 		</control>

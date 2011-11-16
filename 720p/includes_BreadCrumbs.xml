@@ -20,7 +20,7 @@
 	
 	<include name="BreadCrumbLabel">
 	    <width min="10" max="350">auto</width>
-		<height>43</height>
+		<height>42</height>
 		<font>BreadCrumbFont</font>
 		<textcolor>BreadCrumbColor</textcolor>
 		<aligny>center</aligny>
@@ -31,7 +31,7 @@
 		<control type="grouplist">
 			<posx>10</posx>
 			<posy>StatusBarPosY</posy>
-			<height>42</height>
+			<height>43</height>
 			<width>740</width>
 			<itemgap>8</itemgap>
 			<orientation>horizontal</orientation>
@@ -48,7 +48,7 @@
 			<control type="label" id="5501">
 				<description>Videos</description>
 				<include>BreadCrumbLabel</include>
-				<label>[UPPERCASE][B][B]$LOCALIZE[3][/B][/UPPERCASE]</label>
+				<label>[UPPERCASE][B]$LOCALIZE[3][/B][/UPPERCASE]</label>
 				<visible>IsEmpty(Container.FolderPath) | Container.Content(Files) | Container.Content(Addons) | Substring(Container.FolderPath,plugin:)
 				| Substring(Container.FolderPath,videodb://4/) | Substring(Container.FolderPath,videodb://5/) | Substring(Container.FolderPath,videodb://6/)
 				| Substring(Container.FolderPath,.xsp,Right)</visible>
@@ -57,7 +57,7 @@
 			<control type="label" id="5502">
 				<description>Movies</description>
 				<include>BreadCrumbLabel</include>
-				<label>[UPPERCASE][B][B]$LOCALIZE[20342][/B][/UPPERCASE]</label>
+				<label>[UPPERCASE][B]$LOCALIZE[20342][/B][/UPPERCASE]</label>
 				<visible>[Container.Content(Movies) | Substring(Container.FolderPath,videodb://1/)]
 				+ ![Substring(Container.FolderPath,videodb://4/) | Substring(Container.FolderPath,.xsp,Right)]</visible>
 				<include>BreadCrumbSlideLvl2Anim</include>
@@ -65,7 +65,7 @@
 			<control type="label" id="5503">
 				<description>TV Shows</description>
 				<include>BreadCrumbLabel</include>
-				<label>[UPPERCASE][B][B]$LOCALIZE[20343][/B][/UPPERCASE]</label>
+				<label>[UPPERCASE][B]$LOCALIZE[20343][/B][/UPPERCASE]</label>
 				<visible>[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons) | Substring(Container.FolderPath,videodb://2/)]
 				+ ![Substring(Container.FolderPath,videodb://5/) | Substring(Container.FolderPath,.xsp,Right)]</visible>
 				<include>BreadCrumbSlideLvl2Anim</include>
@@ -73,7 +73,7 @@
 			<control type="label" id="5504">
 				<description>Music Videos</description>
 				<include>BreadCrumbLabel</include>
-				<label>[UPPERCASE][B][B]$LOCALIZE[20389][/B][/UPPERCASE]</label>
+				<label>[UPPERCASE][B]$LOCALIZE[20389][/B][/UPPERCASE]</label>
 				<visible>[Container.Content(MusicVideos) | Substring(Container.FolderPath,videodb://3/) | Substring(Container.FolderPath,videodb://6/)]
 				+ ![Substring(Container.FolderPath,videodb://6/) | Substring(Container.FolderPath,.xsp,Right)]</visible>
 				<include>BreadCrumbSlideLvl2Anim</include>
@@ -184,14 +184,14 @@
 			<control type="label" id="5519">
 				<description>TV Show Title</description>
 				<include>BreadCrumbLabel</include>
-				<label>[UPPERCASE][B][B]$INFO[ListItem.TVShowTitle][/B][/UPPERCASE]</label>
+				<label>[UPPERCASE][B]$INFO[ListItem.TVShowTitle][/B][/UPPERCASE]</label>
 				<visible>!IsEmpty(ListItem.TVShowTitle) + !StringCompare(Container.FolderPath,videodb://5/) + [Container.Content(Seasons) | Container.Content(Episodes)]</visible>
 				<include>BreadCrumbSlideLvl3Anim</include>
 			</control>
 			<control type="label" id="5520">
 				<description>TV Show Title</description>
 				<include>BreadCrumbLabel</include>
-				<label>[UPPERCASE][B][B]$INFO[ListItem(-1).TVShowTitle][/B][/UPPERCASE]</label>
+				<label>[UPPERCASE][B]$INFO[ListItem(-1).TVShowTitle][/B][/UPPERCASE]</label>
 				<visible>IsEmpty(ListItem.TVShowTitle) + !StringCompare(Container.FolderPath,videodb://5/) + [Container.Content(Seasons) | Container.Content(Episodes)]</visible>
 				<include>BreadCrumbSlideLvl3Anim</include>
 			</control>

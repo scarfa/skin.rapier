@@ -76,7 +76,7 @@
 		<font>
 			<name>BreadCrumbFont</name>
 			<filename>default-bold-caps.ttf</filename>
-			<size>16</size>
+			<size>18</size>
 		</font>
 		<font>
 			<name>NotificationFont</name>
@@ -289,7 +289,7 @@
 		<font>
 			<name>RSSFont</name>
 			<filename>default-caps.ttf</filename>
-			<size>21</size>
+			<size>18</size>
 		</font>
 		<font>
 			<name>FileManagerInfoFont</name>
