@@ -451,7 +451,20 @@
 						<onclick>Skin.ToggleSetting(HideGeneralCategory)</onclick>
 					</control>
 				</control>
-
+				
+				<control type="radiobutton" id="2309">
+					<description>PVR</description>
+					<posx>220</posx>
+					<posy>130</posy>
+					<include>ExpandedSettingsRadioBtn</include>
+					<label>$LOCALIZE[32028]</label>
+					<selected>Skin.HasSetting(HidePVRCategory)</selected>
+					<onclick>Skin.ToggleSetting(HidePVRCategory)</onclick>
+					<visible>!Skin.HasSetting(HidePVR)</visible>
+					<onup>2308</onup>
+					<ondown>2308</ondown>
+					<onleft>938</onleft>
+				</control>
 				<control type="radiobutton" id="2308">
 					<description>System</description>
 					<posx>220</posx>
@@ -460,8 +473,8 @@
 					<label>$LOCALIZE[13000]</label>
 					<selected>Skin.HasSetting(HideSystemCategory)</selected>
 					<onclick>Skin.ToggleSetting(HideSystemCategory)</onclick>
-					<onup>-</onup>
-					<ondown>-</ondown>
+					<onup>2309</onup>
+					<ondown>2309</ondown>
 					<onleft>938</onleft>
 				</control>
 
@@ -512,6 +525,13 @@
 						<include>ExpandedSettingsListBtn</include>
 						<label>$LOCALIZE[3] - [COLOR=DefaultColor2]$INFO[Skin.String(VideosCategoryIconPath)][/COLOR]</label>
 						<onclick>Skin.SetImage(VideosCategoryIconPath)</onclick>
+					</control>
+					<control type="button" id="2309">
+						<description>PVR</description>
+						<include>ExpandedSettingsListBtn</include>
+						<label>$LOCALIZE[32028] - [COLOR=DefaultColor2]$INFO[Skin.String(PVRCategoryIconPath)][/COLOR]</label>
+						<onclick>Skin.SetImage(PVRCategoryIconPath)</onclick>
+						<enable>!Skin.HasSetting(HidePVR)</enable>
 					</control>
 					<control type="button" id="2303">
 						<description>Movies</description>
@@ -566,6 +586,13 @@
 					<include>ExpandedSettingsImagePreview</include>
 					<texture>$INFO[Skin.String(MusicCategoryIconPath)]</texture>
 					<visible>ControlGroup(940).HasFocus(2301)</visible>
+				</control>
+
+				<control type="image">
+					<posy>65</posy>
+					<include>ExpandedSettingsImagePreview</include>
+					<texture>$INFO[Skin.String(PVRCategoryIconPath)]</texture>
+					<visible>ControlGroup(940).HasFocus(2309)</visible>
 				</control>
 
 				<control type="image">
