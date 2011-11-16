@@ -39,13 +39,6 @@
 				<include>InfoPaneNotifyLabel2</include>
 				<label>$INFO[Control.GetLabel(402)]</label>
 			</control>
-			
-			<control type="progress">
-				<description>Progressbar</description>
-				<posx>19</posx>
-				<posy>58</posy>
-				<width>396</width>
-			</control>
 		</control>
 		
 		<control type="group">
@@ -77,13 +70,6 @@
 				<control type="label">
 					<include>InfoPaneNotifyLabel2</include>
 					<label>$INFO[Control.GetLabel(402)]</label>
-				</control>
-				
-				<control type="progress">
-					<description>Progressbar</description>
-					<posx>19</posx>
-					<posy>58</posy>
-					<width>396</width>
 				</control>
 			</control>
 		</control>
