@@ -76,8 +76,7 @@
 		<font>MenuBarBtnFont</font>	
 		<textcolor>ButtonColor</textcolor>
 		<focusedcolor>ButtonFocusColor</focusedcolor>
-		<aligny>top</aligny>
-		<textoffsety>9</textoffsety>
+		<aligny>center</aligny>
 		<textoffsetx>13</textoffsetx>
 		<textwidth>134</textwidth>
 		<align>left</align>
@@ -731,7 +730,17 @@
 			<include>MenuBarBtnOpenCloseAnim</include>
 			<control type="spincontrolex" id="3">
 				<description>Select Location</description>
-				<include>MenuBarSpinBtn</include>
+				<width>260</width>
+				<height>MenuBarHeight</height>	
+				<font>MenuBarBtnFont</font>	
+				<textcolor>ButtonColor</textcolor>
+				<focusedcolor>ButtonFocusColor</focusedcolor>
+				<aligny>center</aligny>
+				<textoffsetx>13</textoffsetx>
+				<textwidth>166</textwidth>
+				<align>left</align>
+				<texturefocus border="4">gui/menu-bar-button-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>	
 			</control>	
 			<control type="image" id="116">
 				<include>MenuBarSeparator</include>

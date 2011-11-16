@@ -1,5 +1,5 @@
 <window id="2600">
-	<defaultcontrol always="true">3</defaultcontrol>
+	<defaultcontrol always="true">755</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	
 	<controls>
@@ -9,11 +9,25 @@
 			<include condition="!Skin.HasSetting(DisableMusicPlayingBG)">BackgroundMusicPlaying</include>
 			<include>BackgroundOpenCloseAnim</include>
 		</control>
-
+		
+		<control type="button" id="755">
+			<include>RedirectBtn</include>
+			<onfocus>Control.SetFocus(3)</onfocus>
+			<visible>!IsEmpty(Weather.Plugin)</visible>
+		</control>
+		
+		<control type="button" id="755">
+			<include>RedirectBtn</include>
+			<onfocus>Notification($LOCALIZE[31310],$LOCALIZE[31311],15000,)</onfocus>
+			<onfocus>Control.SetFocus(3)</onfocus>
+			<visible>IsEmpty(Weather.Plugin)</visible>
+		</control>
+		
 		<control type="group">		
 			<posx>92</posx>
 			<posy>120</posy>
 			<include>ControlsOpenCloseAnim</include>
+			<visible>!IsEmpty(Weather.Plugin)</visible>
 
 			<control type="label">
 				<description>Weather Location</description>
@@ -189,6 +203,8 @@
 			<posx>400</posx>
 			<posy>120</posy>
 			<include>ControlsOpenCloseAnim</include>
+			<visible>!IsEmpty(Weather.Plugin)</visible>
+
 			
 			<control type="group">
 				<control type="label" id="31">
@@ -478,6 +494,19 @@
 			<include>MenuBarImage</include>
 			<include>MenuBarOpenCloseAnim</include>	
 			<include>MyWeatherMenuBar</include>
+			<visible>!IsEmpty(Weather.Plugin)</visible>
+
+			<control type="label">
+				<posx>1270</posx>
+				<width>550</width>
+				<height>MenuBarHeight</height>	
+				<font>MenuBarBtnFont</font>	
+				<textcolor>GreyColor2</textcolor>
+				<label>Weather provided by: $INFO[Window(Weather).Property(WeatherProvider)]</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<visible>!IsEmpty(Window(Weather).Property(WeatherProvider))</visible>
+			</control>
 		</control>
 		
 		<control type="group">

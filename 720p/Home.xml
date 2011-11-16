@@ -14,7 +14,7 @@
 
 		<include condition="!Skin.HasSetting(HideRecentlyAddedHomePanel) + System.HasAddon(script.recentlyadded)">RecentlyAddedPanel</include>
 		<include condition="!Skin.HasSetting(HideNowPlayingHomePanel)">NowPlayingPanel</include>
-		<include condition="!Skin.HasSetting(HideWeatherHomePanel) + !Skin.HasSetting(DisableWeather)">WeatherPanel</include>
+		<include condition="!Skin.HasSetting(HideWeatherHomePanel) + !Skin.HasSetting(DisableWeather) + !IsEmpty(Weather.Plugin)">WeatherPanel</include>
 		<include condition="!Skin.HasSetting(HideSystemInfoHomePanel)">SystemInfoPanel</include>
 		<include condition="!Skin.HasSetting(HideHomeCategoryIcons)">HomeCategoryIcons</include>
 		<include>DialogPopUpScreenDim</include>	

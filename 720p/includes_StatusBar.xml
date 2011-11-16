@@ -146,16 +146,16 @@
 				<visible>Window.IsActive(VolumeBar) + !Window.IsActive(MuteBug)</visible>
 			</control>
 			<control type="image">
-				<width>6</width>
-				<visible>Control.IsVisible(5561) | Control.IsVisible(5562) | Control.IsVisible(5563) | Control.IsVisible(5564)</visible>
+				<width>3</width>
+				<visible>Control.IsVisible(5563)</visible>
 			</control>
-			<include condition="!Skin.HasSetting(DisableWeather) + Skin.HasSetting(ApplyAllWeather)">WeatherNotification</include>
+			<include condition="!IsEmpty(Weather.Plugin) + !Window.IsActive(Home) + !Skin.HasSetting(DisableWeather) + !Window.IsVisible(Weather) + Skin.HasSetting(ApplyAllWeather)">WeatherNotification</include>
 			<control type="label" id="5566">
 				<width min="25" max="250">auto</width>
 				<height>42</height>
 				<font>BreadCrumbFont</font>
 				<textcolor>BreadCrumbColor</textcolor>
-				<label>[UPPERCASE]$INFO[System.Date][/UPPERCASE] </label>
+				<label> [UPPERCASE]$INFO[System.Date][/UPPERCASE] </label>
 				<aligny>center</aligny>
 			</control>
 			<control type="image">
@@ -183,16 +183,23 @@
 			<texture>$INFO[Weather.Conditions]</texture>
 			<bordersize>6</bordersize>
 			<aspectratio>keep</aspectratio>
-			<visible>!Window.IsActive(Home) + !IsEmpty(Weather.Conditions)</visible>
+			<visible>!IsEmpty(Weather.Conditions)</visible>
 		</control>
 		<control type="label" id="5568">
 			<posy>21</posy>
 			<width min="25" max="250">auto</width>
-			<font>NotificationFont</font>
+			<font>BreadCrumbFont</font>
 			<textcolor>BreadCrumbColor</textcolor>
-			<label>$INFO[Weather.Temperature]  </label>
+			<label> $INFO[Weather.Temperature] </label>
 			<aligny>center</aligny>
-			<visible>!Window.IsActive(Home) + !IsEmpty(Weather.Conditions)</visible>
+			<visible>!IsEmpty(Weather.Conditions)</visible>
+		</control>
+		<control type="image">
+			<posy>3</posy>
+			<width>3</width>
+			<height>39</height>
+			<texture border="0,12,0,13">gui/status-bar-separator.png</texture>
+			<visible>Control.IsVisible(5567) | Control.IsVisible(5568)</visible>
 		</control>
 	</include>
 </includes>

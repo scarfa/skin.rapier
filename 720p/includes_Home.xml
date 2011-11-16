@@ -2677,7 +2677,7 @@
 				
 			<control type="rss">
 				<description>RSS Feed</description>
-				<width>890</width>
+				<width>880</width>
 				<height>44</height>
 				<font>RSSFont</font>
 				<urlset>1</urlset>
@@ -2689,7 +2689,7 @@
 			
 			<control type="rss">
 				<description>RSS Feed</description>
-				<width>765</width>
+				<width>755</width>
 				<height>44</height>
 				<font>RSSFont</font>
 				<urlset>1</urlset>
@@ -2701,7 +2701,7 @@
 			
 			<control type="rss">
 				<description>RSS Feed</description>
-				<width>830</width>
+				<width>820</width>
 				<height>44</height>
 				<font>RSSFont</font>
 				<urlset>1</urlset>
@@ -2713,7 +2713,7 @@
 			
 			<control type="rss">
 				<description>RSS Feed</description>
-				<width>850</width>
+				<width>840</width>
 				<height>44</height>
 				<font>RSSFont</font>
 				<urlset>1</urlset>
@@ -2725,7 +2725,7 @@
 			
 			<control type="rss">
 				<description>RSS Feed</description>
-				<width>725</width>
+				<width>715</width>
 				<height>44</height>
 				<font>RSSFont</font>
 				<urlset>1</urlset>
@@ -2737,7 +2737,7 @@
 			
 			<control type="rss">
 				<description>RSS Feed</description>
-				<width>790</width>
+				<width>780</width>
 				<height>44</height>
 				<font>RSSFont</font>
 				<urlset>1</urlset>
@@ -3668,7 +3668,7 @@
 				<font>PanelTitleFont</font>
 				<textcolor>MediaInfoTitleColor</textcolor>
 				<shadowcolor>ShadowColor</shadowcolor>
-				<label>[UPPERCASE]$INFO[Weather.Location][/UPPERCASE]</label>
+				<label>[UPPERCASE]$INFO[Window(Weather).Property(Location)][/UPPERCASE]</label>
 			</control>
 				
 			<control type="grouplist">
