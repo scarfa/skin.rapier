@@ -1,0 +1,213 @@
+<window id="610">
+	<defaultcontrol always="true">11</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>778</posx>
+		<posy>50</posy>
+	</coordinates>
+	<include>DialogOpenCloseAnim</include>
+	<controls>
+		<control type="group">
+
+			<control type="image">
+				<width>480</width>
+				<height>600</height>
+				<texture border="50,70,50,75">panels/dialog-background3.png</texture>
+			</control>
+
+			<control type="button">
+				<posx>440</posx>
+				<include>DialogCloseBtn</include>
+			</control>
+
+			<control type="label">
+				<description>header label</description>
+				<width>430</width>
+				<label>$LOCALIZE[19023] - $INFO[VideoPlayer.ChannelGroup]</label>
+				<include>DialogTitle</include>
+			</control>
+
+			<control type="list" id="11">
+				<posx>30</posx>
+				<posy>50</posy>
+				<width>420</width>
+				<height>518</height>
+				<onup>11</onup>
+				<ondown>11</ondown>
+				<onleft>150</onleft>
+				<onright>150</onright>
+				<pagecontrol>70</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="74">
+					<control type="image">
+						<posx>0</posx>
+						<width>420</width>
+						<height>74</height>	
+						<texture border="0,0,10,2">views/list-separator.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<description>Cover</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>63</width>
+						<height>73</height>
+						<bordertexture border="7">covers/cover-case-nofocus.png</bordertexture>
+						<bordersize>5</bordersize>
+						<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
+						<!-- <animation effect="fade" end="40" condition="true">Conditional</animation> -->
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="label">
+						<description>Label</description>
+						<posx>70</posx>
+						<posy>22</posy>
+						<width>245</width>
+						<font>ListFont</font>
+						<textcolor>ListColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$INFO[ListItem.Title]</label>
+						<aligny>center</aligny>
+					</control>
+					<control type="label">
+						<description>Label2</description>
+						<posx>70</posx>
+						<posy>47</posy>
+						<width>245</width>
+						<font>ListFont2</font>
+						<textcolor>ListColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>				
+						<label>$INFO[ListItem.ChannelNumber] - $INFO[ListItem.Label]</label>
+						<aligny>center</aligny>
+					</control>
+					<control type="image">
+						<posx>380</posx>
+						<posy>26</posy>
+						<width>22</width>
+						<height>22</height>
+						<texture>pvr/status_none.png</texture>
+						<colordiffuse>ListColor</colordiffuse>
+						<visible>![ListItem.HasTimer | ListItem.IsRecording]</visible>
+					</control>
+					<control type="image">
+						<posx>380</posx>
+						<posy>26</posy>
+						<width>22</width>
+						<height>22</height>
+						<texture>pvr/status_timer.png</texture>
+						<colordiffuse>ListColor</colordiffuse>
+						<visible>ListItem.HasTimer</visible>
+					</control>
+					<control type="image">
+						<posx>380</posx>
+						<posy>26</posy>
+						<width>22</width>
+						<height>22</height>
+						<texture>pvr/status_recording.png</texture>
+						<colordiffuse>ListColor</colordiffuse>
+						<visible>ListItem.IsRecording</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="74">	
+					<control type="image">
+						<posx>0</posx>
+						<width>420</width>
+						<height>74</height>	
+						<texture border="0,0,10,2">views/list-separator.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<width>420</width>
+						<height>73</height>
+						<texture border="4">views/list-focus.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>Control.HasFocus(11)</visible>
+						<include>ListViewSelectFadeAnim</include>
+						<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewScrollAnim2</include>
+						<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewScrollAnim</include>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<width>420</width>
+						<height>73</height>
+						<texture border="4">views/list-alt-focus.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>!Control.HasFocus(11)</visible>
+						<include>ListViewSelectFadeAnim2</include>
+					</control>
+					<control type="image">
+						<description>Cover</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>63</width>
+						<height>73</height>
+						<bordertexture border="7">covers/cover-case-nofocus.png</bordertexture>
+						<bordersize>5</bordersize>
+						<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+						<include>ListViewCoverFocusAnim</include>
+					</control>
+					<control type="group">
+						<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+						<control type="label">
+							<description>Label</description>
+							<posx>70</posx>
+							<posy>22</posy>
+							<width>245</width>
+							<font>ListFont</font>
+							<textcolor>SelectedColor</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<label>$INFO[ListItem.Title]</label>
+							<aligny>center</aligny>
+							<scroll>yes</scroll>
+						</control>
+						<control type="label">
+							<description>Label2</description>
+							<posx>70</posx>
+							<posy>47</posy>
+							<width>245</width>
+							<font>ListFont2</font>
+							<textcolor>ListColor2</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>			
+							<label>$INFO[ListItem.ChannelNumber] - $INFO[ListItem.Label]</label>
+							<aligny>center</aligny>	
+						</control>
+					</control>
+					<control type="image">
+						<posx>380</posx>
+						<posy>26</posy>
+						<width>22</width>
+						<height>22</height>
+						<texture>pvr/status_none.png</texture>
+						<visible>![ListItem.HasTimer | ListItem.IsRecording]</visible>
+					</control>
+					<control type="image">
+						<posx>380</posx>
+						<posy>26</posy>
+						<width>22</width>
+						<height>22</height>
+						<texture>pvr/status_timer.png</texture>
+						<visible>ListItem.HasTimer</visible>
+					</control>
+					<control type="image">
+						<posx>380</posx>
+						<posy>26</posy>
+						<width>22</width>
+						<height>22</height>
+						<texture>pvr/status_recording.png</texture>
+						<visible>ListItem.IsRecording</visible>
+					</control>
+				</focusedlayout>
+			</control>
+
+			<control type="scrollbar" id="150">
+				<visible>false</visible>
+			</control>
+			<control type="label">
+				<visible>false</visible>
+			</control>
+
+		</control>
+	</controls>
+</window>
