@@ -8,6 +8,7 @@
 	<include file="ViewsEpisodes.xml"/>
 	<include file="ViewsAddons.xml"/>
 	<include file="ViewsPrograms.xml"/>
+	<include file="ViewsPVR.xml"/>
 	<include file="includes_Home.xml"/>
 	<include file="includes_InfoPane.xml"/>
 	<include file="includes_MenuBar.xml"/>
@@ -115,7 +116,7 @@
 	</include>
 	
 	<include name="FSMediaInfoPanel">
-		<control type="image">
+		<control type="image" id="1">
 			<posx>22</posx>
 			<width>1236</width>
 			<height>136</height>
