@@ -153,6 +153,7 @@
 					<onclick>Skin.ResetSettings</onclick>
 					<onclick>Skin.SetString(CustomDefaultBGPath,background-default.png)</onclick>
 					<onclick>Skin.SetString(CustomMusicBGPath,background-music.png)</onclick>
+					<onclick>Skin.SetString(CustomPVRBGPath,background-pvr.png)</onclick>
 					<onclick>Skin.SetString(CustomVideosBGPath,background-videos.png)</onclick>
 					<onclick>Skin.SetString(CustomMoviesBGPath,background-movies.png)</onclick>
 					<onclick>Skin.SetString(CustomTVShowsBGPath,background-tvshows.png)</onclick>
