@@ -44,7 +44,7 @@
 						<width>128</width>
 						<height>128</height>
 						<bordersize>10</bordersize>
-						<texture background="true">music/$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 						<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -89,7 +89,7 @@
 							<width>128</width>
 							<height>128</height>
 							<bordersize>10</bordersize>
-							<texture background="true">music/$INFO[ListItem.Icon]</texture>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
 							<visible>IsEmpty(ListItem.Thumb)</visible>
 							<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -191,7 +191,7 @@
 						<width>128</width>
 						<height>128</height>
 						<bordersize>10</bordersize>
-						<texture background="true">music/$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 						<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -236,7 +236,7 @@
 							<width>128</width>
 							<height>128</height>
 							<bordersize>10</bordersize>
-							<texture background="true">music/$INFO[ListItem.Icon]</texture>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
 							<visible>IsEmpty(ListItem.Thumb)</visible>
 							<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -338,7 +338,7 @@
 						<width>128</width>
 						<height>128</height>
 						<bordersize>10</bordersize>
-						<texture background="true">music/$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 						<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -383,7 +383,7 @@
 							<width>128</width>
 							<height>128</height>
 							<bordersize>10</bordersize>
-							<texture background="true">music/$INFO[ListItem.Icon]</texture>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
 							<visible>IsEmpty(ListItem.Thumb)</visible>
 							<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -491,7 +491,7 @@
 						<width>128</width>
 						<height>128</height>
 						<bordersize>10</bordersize>
-						<texture background="true">music/$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 						<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
@@ -526,7 +526,7 @@
 							<width>128</width>
 							<height>128</height>
 							<bordersize>10</bordersize>
-							<texture background="true">music/$INFO[ListItem.Icon]</texture>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
 							<visible>IsEmpty(ListItem.Thumb)</visible>
 							<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
@@ -647,7 +647,7 @@
 						<width>128</width>
 						<height>128</height>
 						<bordersize>10</bordersize>
-						<texture background="true">music/$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 						<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
@@ -682,7 +682,7 @@
 							<width>128</width>
 							<height>128</height>
 							<bordersize>10</bordersize>
-							<texture background="true">music/$INFO[ListItem.Icon]</texture>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
 							<visible>IsEmpty(ListItem.Thumb)</visible>
 							<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
@@ -802,7 +802,7 @@
 						<width>128</width>
 						<height>128</height>
 						<bordersize>10</bordersize>
-						<texture background="true">music/$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 						<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
@@ -837,7 +837,7 @@
 							<width>128</width>
 							<height>128</height>
 							<bordersize>10</bordersize>
-							<texture background="true">music/$INFO[ListItem.Icon]</texture>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
 							<visible>IsEmpty(ListItem.Thumb)</visible>
 							<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
@@ -1330,7 +1330,7 @@
 						<posy>6</posy>
 						<width>23</width>
 						<height>23</height>
-						<texture background="true">music/$INFO[ListItem.ActualIcon].png</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 						<aspectratio>stretch</aspectratio>
 						<include>ListViewIconFadeAnim</include>
 					</control>
@@ -1416,7 +1416,7 @@
 							<posy>6</posy>
 							<width>23</width>
 							<height>23</height>
-							<texture background="true">music/$INFO[ListItem.ActualIcon].png</texture>
+							<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 							<aspectratio>stretch</aspectratio>
 						</control>
 						<control type="image">
@@ -2028,7 +2028,7 @@
 				<posy>6</posy>
 				<width>23</width>
 				<height>23</height>
-				<texture background="true">music/$INFO[ListItem.ActualIcon].png</texture>
+				<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 				<aspectratio>stretch</aspectratio>
 				<include>ListViewIconFadeAnim</include>
 			</control>
@@ -2117,7 +2117,7 @@
 					<posy>6</posy>
 					<width>23</width>
 					<height>23</height>
-					<texture background="true">music/$INFO[ListItem.ActualIcon].png</texture>
+					<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>
 				<control type="image">
@@ -2209,7 +2209,7 @@
 				<width>73</width>
 				<height>73</height>
 				<bordersize>10</bordersize>
-				<texture background="true">music/$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -2413,7 +2413,7 @@
 				<width>73</width>
 				<height>73</height>
 				<bordersize>10</bordersize>
-				<texture background="true">music/$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>	
@@ -2801,7 +2801,7 @@
 						<posy>6</posy>
 						<width>23</width>
 						<height>23</height>
-						<texture background="true">music/$INFO[ListItem.ActualIcon].png</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 						<aspectratio>stretch</aspectratio>
 						<include>ListViewIconFadeAnim</include>
 					</control>					
@@ -2850,7 +2850,7 @@
 						<posy>6</posy>
 						<width>23</width>
 						<height>23</height>
-						<texture background="true">music/$INFO[ListItem.ActualIcon].png</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 						<aspectratio>stretch</aspectratio>
 					</control>
 					<control type="label">
@@ -3138,7 +3138,7 @@
 						<width>129</width>
 						<height>129</height>
 						<bordersize>20</bordersize>
-						<texture background="true">music/$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 						<animation effect="fade" end="50" condition="true">Conditional</animation>
@@ -3221,7 +3221,7 @@
 						<width>129</width>
 						<height>129</height>
 						<bordersize>20</bordersize>
-						<texture background="true">music/$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 				</focusedlayout>
@@ -3519,7 +3519,7 @@
 					<description>Default Cover</description>
 					<width>150</width>
 					<height>150</height>
-					<texture background="true">music/$INFO[ListItem.Icon]</texture>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<bordersize>22</bordersize>
 					<aspectratio>keep</aspectratio>
 					<visible>IsEmpty(ListItem.Thumb)</visible>
@@ -3571,7 +3571,7 @@
 						<description>Default Cover</description>
 						<width>150</width>
 						<height>150</height>
-						<texture background="true">music/$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<bordersize>22</bordersize>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
@@ -3621,7 +3621,7 @@
 						<description>Default Cover</description>
 						<width>150</width>
 						<height>150</height>
-						<texture background="true">music/$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<bordersize>22</bordersize>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
@@ -3861,7 +3861,7 @@
 					<description>Default Cover</description>
 					<width>216</width>
 					<height>216</height>
-					<texture background="true">music/$INFO[ListItem.Icon]</texture>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<bordersize>30</bordersize>
 					<aspectratio>keep</aspectratio>
 					<animation effect="fade" end="30" condition="true">Conditional</animation>
@@ -3913,7 +3913,7 @@
 						<description>Default Cover</description>
 						<width>216</width>
 						<height>216</height>
-						<texture background="true">music/$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<bordersize>30</bordersize>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
@@ -3963,7 +3963,7 @@
 						<description>Default Cover</description>
 						<width>216</width>
 						<height>216</height>
-						<texture background="true">music/$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<bordersize>30</bordersize>
 						<aspectratio>keep</aspectratio>
 						<animation effect="fade" end="30" condition="true">Conditional</animation>
@@ -4031,7 +4031,7 @@
 						<width>214</width>
 						<height>225</height>
 						<bordersize>40</bordersize>
-						<texture background="true">music/$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 						<animation effect="fade" end="70" condition="true">Conditional</animation>
 					</control>
@@ -4121,7 +4121,7 @@
 						<width>214</width>
 						<height>225</height>
 						<bordersize>40</bordersize>
-						<texture background="true">music/$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 				</focusedlayout>

@@ -617,7 +617,7 @@
 						<posy>6</posy>
 						<width>23</width>
 						<height>23</height>
-						<texture background="true">movies/$INFO[ListItem.Overlay]</texture>
+						<texture background="true">watched/videos/$INFO[ListItem.Overlay]</texture>
 						<aspectratio>stretch</aspectratio>
 						<include>ListViewIconFadeAnim</include>
 					</control>	
@@ -703,7 +703,7 @@
 							<posy>6</posy>
 							<width>23</width>
 							<height>23</height>
-							<texture background="true">movies/$INFO[ListItem.Overlay]</texture>
+							<texture background="true">watched/videos/$INFO[ListItem.Overlay]</texture>
 							<aspectratio>stretch</aspectratio>
 						</control>	
 					</control>
@@ -1029,7 +1029,7 @@
 				<posy>6</posy>
 				<width>23</width>
 				<height>23</height>
-				<texture background="true">movies/$INFO[ListItem.Overlay]</texture>
+				<texture background="true">watched/videos/$INFO[ListItem.Overlay]</texture>
 				<aspectratio>stretch</aspectratio>
 				<include>ListViewIconFadeAnim</include>
 			</control>	
@@ -1118,7 +1118,7 @@
 					<posy>6</posy>
 					<width>23</width>
 					<height>23</height>
-					<texture background="true">movies/$INFO[ListItem.Overlay]</texture>
+					<texture background="true">watched/videos/$INFO[ListItem.Overlay]</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>	
 			</control>
@@ -1594,7 +1594,7 @@
 						<posy>6</posy>
 						<width>23</width>
 						<height>23</height>
-						<texture background="true">movies/$INFO[ListItem.Overlay]</texture>
+						<texture background="true">watched/videos/$INFO[ListItem.Overlay]</texture>
 						<aspectratio>stretch</aspectratio>
 						<include>ListViewIconFadeAnim</include>
 					</control>	
@@ -1654,7 +1654,7 @@
 						<posy>6</posy>
 						<width>23</width>
 						<height>23</height>
-						<texture background="true">movies/$INFO[ListItem.Overlay]</texture>
+						<texture background="true">watched/videos/$INFO[ListItem.Overlay]</texture>
 						<aspectratio>stretch</aspectratio>
 					</control>	
 				</focusedlayout>		

@@ -61,7 +61,7 @@
 				<description>TV Shows Poster Default Cover Image</description>
 				<width>300</width>
 				<height>300</height>
-				<texture>tv/$INFO[ListItem.Icon]</texture>
+				<texture>$INFO[ListItem.Icon]</texture>
 				<bordertexture border="4">covers/cover-case2.png</bordertexture>
 				<bordersize>60</bordersize>
 				<aspectratio>keep</aspectratio>
@@ -74,7 +74,7 @@
 				<posy>-10</posy>
 				<width>980</width>
 				<height>181</height>
-				<texture>tv/$INFO[ListItem.Icon]</texture>
+				<texture>$INFO[ListItem.Icon]</texture>
 				<bordertexture border="4">covers/cover-case2.png</bordertexture>
 				<bordersize>20</bordersize>
 				<aspectratio>keep</aspectratio>

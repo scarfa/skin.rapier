@@ -1799,7 +1799,7 @@
 						<width>129</width>
 						<height>129</height>
 						<bordersize>20</bordersize>
-						<texture background="true">music/$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 						<animation effect="fade" end="50" condition="true">Conditional</animation>
@@ -2123,7 +2123,7 @@
 						<width>155</width>
 						<height>129</height>
 						<bordersize>20</bordersize>
-						<texture background="true">music/$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 						<animation effect="fade" end="50" condition="true">Conditional</animation>

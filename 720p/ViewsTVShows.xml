@@ -63,7 +63,7 @@
 							<width>590</width>
 							<height>127</height>
 							<bordersize>20</bordersize>
-							<texture background="true">tv/$INFO[ListItem.Icon]</texture>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<visible>IsEmpty(ListItem.Thumb)</visible>
 							<animation effect="fade" end="60" condition="true">Conditional</animation>
 						</control>
@@ -145,7 +145,7 @@
 							<width>590</width>
 							<height>127</height>
 							<bordersize>20</bordersize>
-							<texture background="true">tv/$INFO[ListItem.Icon]</texture>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<visible>IsEmpty(ListItem.Thumb)</visible>
 						</control>
 						<control type="image">
@@ -332,7 +332,7 @@
 					<width>104</width>
 					<height>104</height>
 					<bordersize>10</bordersize>
-					<texture background="true">tv/$INFO[ListItem.Icon]</texture>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio>keep</aspectratio>
 					<visible>IsEmpty(ListItem.Thumb)</visible>
 					<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -587,7 +587,7 @@
 					<width>104</width>
 					<height>104</height>
 					<bordersize>10</bordersize>
-					<texture background="true">tv/$INFO[ListItem.Icon]</texture>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio>keep</aspectratio>
 					<visible>IsEmpty(ListItem.Thumb)</visible>
 					<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
@@ -814,7 +814,7 @@
 				<width>94</width>
 				<height>128</height>
 				<bordersize>10</bordersize>
-				<texture background="true">tv/$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -859,7 +859,7 @@
 					<width>94</width>
 					<height>128</height>
 					<bordersize>10</bordersize>
-					<texture background="true">tv/$INFO[ListItem.Icon]</texture>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio>keep</aspectratio>
 					<visible>IsEmpty(ListItem.Thumb)</visible>
 					<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -990,7 +990,7 @@
 				<width>94</width>
 				<height>128</height>
 				<bordersize>10</bordersize>
-				<texture background="true">tv/$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
@@ -1025,7 +1025,7 @@
 					<width>94</width>
 					<height>128</height>
 					<bordersize>10</bordersize>
-					<texture background="true">tv/$INFO[ListItem.Icon]</texture>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio>keep</aspectratio>
 					<visible>IsEmpty(ListItem.Thumb)</visible>
 					<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
@@ -1173,7 +1173,7 @@
 						<posy>6</posy>
 						<width>23</width>
 						<height>23</height>
-						<texture background="true">tv/$INFO[ListItem.ActualIcon].png</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 						<aspectratio>stretch</aspectratio>
 						<visible>IsEmpty(ListItem.Title)</visible>
 						<include>ListViewIconFadeAnim</include>
@@ -1219,7 +1219,7 @@
 						<posy>6</posy>
 						<width>23</width>
 						<height>23</height>
-						<texture background="true">tv/$INFO[ListItem.Overlay]</texture>
+						<texture background="true">watched/tv/$INFO[ListItem.Overlay]</texture>
 						<aspectratio>stretch</aspectratio>
 						<include>ListViewIconFadeAnim</include>
 					</control>	
@@ -1259,7 +1259,7 @@
 							<posy>6</posy>
 							<width>23</width>
 							<height>23</height>
-							<texture background="true">tv/$INFO[ListItem.ActualIcon].png</texture>
+							<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 							<aspectratio>stretch</aspectratio>
 							<visible>IsEmpty(ListItem.Title)</visible>
 						</control>
@@ -1305,7 +1305,7 @@
 							<posy>6</posy>
 							<width>23</width>
 							<height>23</height>
-							<texture background="true">tv/$INFO[ListItem.Overlay]</texture>
+							<texture background="true">watched/tv/$INFO[ListItem.Overlay]</texture>
 							<aspectratio>stretch</aspectratio>
 						</control>	
 					</control>
@@ -1364,7 +1364,7 @@
 					<posy>334</posy>
 					<width>671</width>
 					<height>130</height>
-					<texture background="true">tv/$INFO[ListItem.Icon]</texture>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<bordersize>15</bordersize>	
 					<aspectratio>keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
@@ -1537,7 +1537,7 @@
 				<posy>335</posy>
 				<width>178</width>
 				<height>251</height>
-				<texture background="true">tv/$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<bordersize>30</bordersize>	
 				<aspectratio>keep</aspectratio>
 				<fadetime>IconCrossfadeTime</fadetime>
@@ -1921,7 +1921,7 @@
 				<posy>6</posy>
 				<width>23</width>
 				<height>23</height>
-				<texture background="true">tv/$INFO[ListItem.ActualIcon].png</texture>
+				<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>IsEmpty(ListItem.Title)</visible>
 				<include>ListViewIconFadeAnim</include>
@@ -1967,7 +1967,7 @@
 				<posy>6</posy>
 				<width>23</width>
 				<height>23</height>
-				<texture background="true">tv/$INFO[ListItem.Overlay]</texture>
+				<texture background="true">watched/tv/$INFO[ListItem.Overlay]</texture>
 				<aspectratio>stretch</aspectratio>
 				<include>ListViewIconFadeAnim</include>
 			</control>	
@@ -2010,7 +2010,7 @@
 					<posy>6</posy>
 					<width>23</width>
 					<height>23</height>
-					<texture background="true">tv/$INFO[ListItem.ActualIcon].png</texture>
+					<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 					<aspectratio>stretch</aspectratio>
 					<visible>IsEmpty(ListItem.Title)</visible>
 				</control>
@@ -2056,7 +2056,7 @@
 					<posy>6</posy>
 					<width>23</width>
 					<height>23</height>
-					<texture background="true">tv/$INFO[ListItem.Overlay]</texture>
+					<texture background="true">watched/tv/$INFO[ListItem.Overlay]</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>	
 			</control>
@@ -2102,7 +2102,7 @@
 				<width>53</width>
 				<height>73</height>
 				<bordersize>5</bordersize>
-				<texture background="true">tv/$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -2215,7 +2215,7 @@
 				<width>53</width>
 				<height>73</height>
 				<bordersize>5</bordersize>
-				<texture background="true">tv/$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
@@ -2334,7 +2334,7 @@
 					<width>114</width>
 					<height>114</height>
 					<bordersize>20</bordersize>
-					<texture background="true">tv/$INFO[ListItem.Icon]</texture>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio>keep</aspectratio>
 					<visible>IsEmpty(ListItem.Thumb)</visible>
 					<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -2456,7 +2456,7 @@
 					<width>114</width>
 					<height>114</height>
 					<bordersize>20</bordersize>
-					<texture background="true">tv/$INFO[ListItem.Icon]</texture>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio>keep</aspectratio>
 					<visible>IsEmpty(ListItem.Thumb)</visible>
 				</control>				
@@ -2814,7 +2814,7 @@
 					<width>129</width>
 					<height>172</height>
 					<bordersize>12</bordersize>
-					<texture background="true">tv/$INFO[ListItem.Icon]</texture>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio>keep</aspectratio>
 					<visible>IsEmpty(ListItem.Thumb)</visible>
 					<animation effect="fade" end="50" condition="true">Conditional</animation>
@@ -2917,7 +2917,7 @@
 					<width>129</width>
 					<height>172</height>
 					<bordersize>12</bordersize>
-					<texture background="true">tv/$INFO[ListItem.Icon]</texture>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
 				<control type="image">

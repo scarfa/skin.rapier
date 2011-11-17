@@ -488,7 +488,7 @@
 				<posy>6</posy>
 				<width>23</width>
 				<height>23</height>
-				<texture background="true">movies/$INFO[ListItem.Overlay]</texture>
+				<texture background="true">watched/videos/$INFO[ListItem.Overlay]</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>Container.Content(Movies) | Container.Content(MusicVideos) | Window.IsActive(VideoPlaylist)</visible>
 				<include>ListViewIconFadeAnim</include>
@@ -499,7 +499,7 @@
 				<posy>6</posy>
 				<width>23</width>
 				<height>23</height>
-				<texture background="true">tv/$INFO[ListItem.Overlay]</texture>
+				<texture background="true">watched/tv/$INFO[ListItem.Overlay]</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>Container.Content(TVShows) | Container.Content(Episodes)</visible>
 				<include>ListViewIconFadeAnim</include>
@@ -510,7 +510,7 @@
 				<posy>6</posy>
 				<width>23</width>
 				<height>23</height>
-				<texture background="true">seasons/$INFO[ListItem.Overlay]</texture>
+				<texture background="true">watched/seasons/$INFO[ListItem.Overlay]</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>Container.Content(Seasons)</visible>
 				<include>ListViewIconFadeAnim</include>
@@ -606,7 +606,7 @@
 					<posy>6</posy>
 					<width>23</width>
 					<height>23</height>
-					<texture background="true">movies/$INFO[ListItem.Overlay]</texture>
+					<texture background="true">watched/videos/$INFO[ListItem.Overlay]</texture>
 					<aspectratio>stretch</aspectratio>
 					<visible>Container.Content(Movies) | Container.Content(MusicVideos) | Window.IsActive(VideoPlaylist)</visible>
 				</control>
@@ -616,7 +616,7 @@
 					<posy>6</posy>
 					<width>23</width>
 					<height>23</height>
-					<texture background="true">tv/$INFO[ListItem.Overlay]</texture>
+					<texture background="true">watched/tv/$INFO[ListItem.Overlay]</texture>
 					<aspectratio>stretch</aspectratio>
 					<visible>Container.Content(TVShows) | Container.Content(Episodes)</visible>
 				</control>	
@@ -626,7 +626,7 @@
 					<posy>6</posy>
 					<width>23</width>
 					<height>23</height>
-					<texture background="true">seasons/$INFO[ListItem.Overlay]</texture>
+					<texture background="true">watched/seasons/$INFO[ListItem.Overlay]</texture>
 					<aspectratio>stretch</aspectratio>
 					<visible>Container.Content(Seasons)</visible>
 				</control>	
@@ -763,7 +763,7 @@
 				<width>53</width>
 				<height>73</height>
 				<bordersize>5</bordersize>
-				<texture background="true">tv/$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -858,7 +858,7 @@
 				<width>97</width>
 				<height>73</height>
 				<bordersize>5</bordersize>
-				<texture background="true">tv/$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -1024,7 +1024,7 @@
 				<width>73</width>
 				<height>73</height>
 				<bordersize>10</bordersize>
-				<texture background="true">music/$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -1108,7 +1108,7 @@
 				<width>73</width>
 				<height>73</height>
 				<bordersize>10</bordersize>
-				<texture background="true">music/$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -1478,7 +1478,7 @@
 				<width>53</width>
 				<height>73</height>
 				<bordersize>5</bordersize>
-				<texture background="true">tv/$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
@@ -1566,7 +1566,7 @@
 				<width>97</width>
 				<height>73</height>
 				<bordersize>5</bordersize>
-				<texture background="true">tv/$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
@@ -1718,7 +1718,7 @@
 				<width>73</width>
 				<height>73</height>
 				<bordersize>10</bordersize>
-				<texture background="true">music/$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
@@ -1795,7 +1795,7 @@
 				<width>73</width>
 				<height>73</height>
 				<bordersize>10</bordersize>
-				<texture background="true">music/$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
@@ -2473,97 +2473,45 @@
 					<width>231</width>
 					<height>231</height>
 					<bordersize>45</bordersize>
-					<texture background="true">music/$INFO[ListItem.Icon]</texture>
-					<aspectratio>keep</aspectratio>
-					<visible>IsEmpty(ListItem.Thumb) + Container.Content(Albums)</visible>
-					<animation effect="fade" end="40" condition="true">Conditional</animation>	
-				</control>	
-				<control type="image">
-					<description>Default Cover</description>
-					<posx>10</posx>
-					<posy>0</posy>
-					<width>231</width>
-					<height>231</height>
-					<bordersize>45</bordersize>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio>keep</aspectratio>
-					<visible>IsEmpty(ListItem.Thumb) + !Container.Content(Albums)</visible>
-					<animation effect="fade" end="40" condition="true">Conditional</animation>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+					<animation effect="fade" end="40" condition="true">Conditional</animation>	
 				</control>
 			</itemlayout>															
 			<focusedlayout height="270" width="249">
 				<control type="group">
-					<visible>Container.Content(Albums)</visible>						
-					<control type="group">
-						<animation effect="zoom" end="108" center="auto" time="100">Focus</animation>
-						<animation effect="zoom" start="108" end="100" center="auto" time="100">UnFocus</animation>
-						<control type="image">
-							<description>Cover Case</description>
-							<posx>10</posx>
-							<posy>0</posy>
-							<width>231</width>
-							<height>231</height>
-							<texture background="true" border="14">covers/cover-case-thumbnail-focus.png</texture>
-							<include>AlbumThumbViewItemFocusAnim</include>
-						</control>
-						<control type="image">
-							<description>Cover</description>
-							<posx>10</posx>
-							<posy>0</posy>
-							<width>231</width>
-							<height>231</height>
-							<bordersize>14</bordersize>
-							<texture background="true">$INFO[ListItem.Thumb]</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
-						<control type="image">
-							<description>Default Cover</description>
-							<posx>10</posx>
-							<posy>0</posy>
-							<width>231</width>
-							<height>231</height>
-							<bordersize>45</bordersize>
-							<texture background="true">music/$INFO[ListItem.Icon]</texture>
-							<aspectratio>keep</aspectratio>
-							<visible>IsEmpty(ListItem.Thumb)</visible>
-						</control>
+					<animation effect="zoom" end="108" center="auto" time="100">Focus</animation>
+					<animation effect="zoom" start="108" end="100" center="auto" time="100">UnFocus</animation>
+					<control type="image">
+						<description>Cover Case</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>231</width>
+						<height>231</height>
+						<texture background="true" border="14">covers/cover-case-thumbnail-focus.png</texture>
+						<include>AlbumThumbViewItemFocusAnim</include>
 					</control>
-				</control>
-				<control type="group">
-					<visible>!Container.Content(Albums)</visible>	
-					<control type="group">
-						<animation effect="zoom" end="108" center="auto" time="100">Focus</animation>
-						<animation effect="zoom" start="108" end="100" center="auto" time="100">UnFocus</animation>
-						<control type="image">
-							<description>Cover Case</description>
-							<posx>10</posx>
-							<posy>0</posy>
-							<width>231</width>
-							<height>231</height>
-							<texture background="true" border="14">covers/cover-case-thumbnail-focus.png</texture>
-							<include>AlbumThumbViewItemFocusAnim</include>
-						</control>
-						<control type="image">
-							<description>Cover</description>
-							<posx>10</posx>
-							<posy>0</posy>
-							<width>231</width>
-							<height>231</height>
-							<bordersize>14</bordersize>
-							<texture background="true">$INFO[ListItem.Thumb]</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
-						<control type="image">
-							<description>Default Cover</description>
-							<posx>10</posx>
-							<posy>0</posy>
-							<width>231</width>
-							<height>231</height>
-							<bordersize>45</bordersize>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
-							<aspectratio>keep</aspectratio>
-							<visible>IsEmpty(ListItem.Thumb)</visible>
-						</control>
+					<control type="image">
+						<description>Cover</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>231</width>
+						<height>231</height>
+						<bordersize>14</bordersize>
+						<texture background="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<description>Default Cover</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>231</width>
+						<height>231</height>
+						<bordersize>45</bordersize>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
 					</control>
 				</control>
 			</focusedlayout>			
@@ -2611,97 +2559,45 @@
 					<width>168</width>
 					<height>168</height>
 					<bordersize>33</bordersize>
-					<texture background="true">music/$INFO[ListItem.Icon]</texture>
-					<aspectratio>keep</aspectratio>
-					<visible>IsEmpty(ListItem.Thumb) + Container.Content(Albums)</visible>
-					<animation effect="fade" end="40" condition="true">Conditional</animation>	
-				</control>	
-				<control type="image">
-					<description>Default Cover</description>
-					<posx>5</posx>
-					<posy>0</posy>
-					<width>168</width>
-					<height>168</height>
-					<bordersize>33</bordersize>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio>keep</aspectratio>
-					<visible>IsEmpty(ListItem.Thumb) + !Container.Content(Albums)</visible>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
 					<animation effect="fade" end="40" condition="true">Conditional</animation>
 				</control>
 			</itemlayout>															
-			<focusedlayout height="177" width="177">
+			<focusedlayout height="177" width="177">					
 				<control type="group">
-					<visible>Container.Content(Albums)</visible>						
-					<control type="group">
-						<animation effect="zoom" end="109" center="auto" time="100">Focus</animation>
-						<animation effect="zoom" start="109" end="100" center="auto" time="100">UnFocus</animation>
-						<control type="image">
-							<description>Cover Case</description>
-							<posx>5</posx>
-							<posy>0</posy>
-							<width>168</width>
-							<height>168</height>
-							<texture background="true" border="14">covers/cover-case-thumbnail-focus.png</texture>
-							<include>AlbumThumbViewItemFocusAnim</include>
-						</control>
-						<control type="image">
-							<description>Cover</description>
-							<posx>5</posx>
-							<posy>0</posy>
-							<width>168</width>
-							<height>168</height>
-							<bordersize>12</bordersize>
-							<texture background="true">$INFO[ListItem.Thumb]</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
-						<control type="image">
-							<description>Default Cover</description>
-							<posx>5</posx>
-							<posy>0</posy>
-							<width>168</width>
-							<height>168</height>
-							<bordersize>33</bordersize>
-							<texture background="true">music/$INFO[ListItem.Icon]</texture>
-							<aspectratio>keep</aspectratio>
-							<visible>IsEmpty(ListItem.Thumb)</visible>
-						</control>
+					<animation effect="zoom" end="116" center="auto" time="100">Focus</animation>
+					<animation effect="zoom" start="116" end="100" center="auto" time="100">UnFocus</animation>
+					<control type="image">
+						<description>Cover Case</description>
+						<posx>5</posx>
+						<posy>0</posy>
+						<width>168</width>
+						<height>168</height>
+						<texture background="true" border="14">covers/cover-case-thumbnail-focus.png</texture>
+						<include>AlbumThumbViewItemFocusAnim</include>
 					</control>
-				</control>
-				<control type="group">
-					<visible>!Container.Content(Albums)</visible>	
-					<control type="group">
-						<animation effect="zoom" end="116" center="auto" time="100">Focus</animation>
-						<animation effect="zoom" start="116" end="100" center="auto" time="100">UnFocus</animation>
-						<control type="image">
-							<description>Cover Case</description>
-							<posx>5</posx>
-							<posy>0</posy>
-							<width>168</width>
-							<height>168</height>
-							<texture background="true" border="14">covers/cover-case-thumbnail-focus.png</texture>
-							<include>AlbumThumbViewItemFocusAnim</include>
-						</control>
-						<control type="image">
-							<description>Cover</description>
-							<posx>5</posx>
-							<posy>0</posy>
-							<width>168</width>
-							<height>168</height>
-							<bordersize>12</bordersize>
-							<texture background="true">$INFO[ListItem.Thumb]</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
-						<control type="image">
-							<description>Default Cover</description>
-							<posx>5</posx>
-							<posy>0</posy>
-							<width>168</width>
-							<height>168</height>
-							<bordersize>33</bordersize>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
-							<aspectratio>keep</aspectratio>
-							<visible>IsEmpty(ListItem.Thumb)</visible>
-						</control>
+					<control type="image">
+						<description>Cover</description>
+						<posx>5</posx>
+						<posy>0</posy>
+						<width>168</width>
+						<height>168</height>
+						<bordersize>12</bordersize>
+						<texture background="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<description>Default Cover</description>
+						<posx>5</posx>
+						<posy>0</posy>
+						<width>168</width>
+						<height>168</height>
+						<bordersize>33</bordersize>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
 					</control>
 				</control>
 			</focusedlayout>			
