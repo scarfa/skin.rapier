@@ -149,7 +149,7 @@
 				<width>3</width>
 				<visible>Control.IsVisible(5563)</visible>
 			</control>
-			<include condition="!IsEmpty(Weather.Plugin) + !Window.IsActive(Home) + !Skin.HasSetting(DisableWeather) + !Window.IsVisible(Weather) + Skin.HasSetting(ApplyAllWeather)">WeatherNotification</include>
+			<include condition="!IsEmpty(Weather.Plugin) + !Skin.HasSetting(DisableWeather) + !Window.IsVisible(Weather) + Skin.HasSetting(ApplyAllWeather)">WeatherNotification</include>
 			<control type="label" id="5566">
 				<width min="25" max="250">auto</width>
 				<height>42</height>
@@ -183,7 +183,7 @@
 			<texture>$INFO[Weather.Conditions]</texture>
 			<bordersize>6</bordersize>
 			<aspectratio>keep</aspectratio>
-			<visible>!IsEmpty(Weather.Conditions)</visible>
+			<visible>!Window.IsActive(Home) + !IsEmpty(Weather.Conditions)</visible>
 		</control>
 		<control type="label" id="5568">
 			<posy>21</posy>
@@ -192,7 +192,7 @@
 			<textcolor>BreadCrumbColor</textcolor>
 			<label> $INFO[Weather.Temperature] </label>
 			<aligny>center</aligny>
-			<visible>!IsEmpty(Weather.Conditions)</visible>
+			<visible>!Window.IsActive(Home) + !IsEmpty(Weather.Conditions)</visible>
 		</control>
 		<control type="image">
 			<posy>3</posy>
