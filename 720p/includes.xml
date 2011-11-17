@@ -580,37 +580,6 @@
 		</control>
 	</include>
 	
-	<include name="PvrHomeVisible">
-		<visible>!Skin.HasSetting(HidePVRCategory) + System.GetBool(pvrmanager.enabled) 
-		+ [system.hasaddon(pvr.fortherecord.argus) 
-		| system.hasaddon(pvr.fortherecord.argus-rtsp) 
-		| system.hasaddon(pvr.hts) 
-		| system.hasaddon(pvr.mythtv) 
-		| system.hasaddon(pvr.team-mediaportal.tvserver) 
-		| system.hasaddon(pvr.team-mediaportal.tvserver-tsreader) 
-		| system.hasaddon(pvr.vdr.vnsi)]</visible>
-	</include>
-	
-	<include name="PvrVisible">
-		<visible>[system.hasaddon(pvr.fortherecord.argus) 
-		| system.hasaddon(pvr.fortherecord.argus-rtsp) 
-		| system.hasaddon(pvr.hts) 
-		| system.hasaddon(pvr.mythtv) 
-		| system.hasaddon(pvr.team-mediaportal.tvserver) 
-		| system.hasaddon(pvr.team-mediaportal.tvserver-tsreader) 
-		| system.hasaddon(pvr.vdr.vnsi)]</visible>
-	</include>
-	
-	<include name="PvrInvisible">
-		<visible>![system.hasaddon(pvr.fortherecord.argus)
-		| system.hasaddon(pvr.fortherecord.argus-rtsp) 
-		| system.hasaddon(pvr.hts) 
-		| system.hasaddon(pvr.mythtv) 
-		| system.hasaddon(pvr.team-mediaportal.tvserver) 
-		| system.hasaddon(pvr.team-mediaportal.tvserver-tsreader) 
-		| system.hasaddon(pvr.vdr.vnsi)]</visible>
-	</include>
-	
 	<include name="RedirectBtn">
 		<posx>-1</posx>
 		<posy>-1</posy>

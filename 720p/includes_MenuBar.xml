@@ -609,8 +609,24 @@
 	</include>
 	
 	<include name="SettingsMenuBar">
+		<include condition="![system.hasaddon(pvr.fortherecord.argus)
+		| system.hasaddon(pvr.fortherecord.argus-rtsp) 
+		| system.hasaddon(pvr.hts) 
+		| system.hasaddon(pvr.mythtv) 
+		| system.hasaddon(pvr.team-mediaportal.tvserver) 
+		| system.hasaddon(pvr.team-mediaportal.tvserver-tsreader) 
+		| system.hasaddon(pvr.vdr.vnsi)]">SettingsDefaultMenuBar</include>
+		<include condition="[system.hasaddon(pvr.fortherecord.argus)
+		| system.hasaddon(pvr.fortherecord.argus-rtsp) 
+		| system.hasaddon(pvr.hts) 
+		| system.hasaddon(pvr.mythtv) 
+		| system.hasaddon(pvr.team-mediaportal.tvserver) 
+		| system.hasaddon(pvr.team-mediaportal.tvserver-tsreader) 
+		| system.hasaddon(pvr.vdr.vnsi)]">SettingsPVRMenuBar</include>
+	</include>
+	
+	<include name="SettingsDefaultMenuBar">
 		<control type="grouplist" id="850">
-			<include>PvrInvisible</include>
 			<posx>2</posx>
 			<posy>0</posy>
 			<width>1278</width>
@@ -693,9 +709,10 @@
 				<onclick>ReplaceWindow(3001)</onclick>	
 			</control>
 		</control>
- 
+	</include>
+	
+	<include name="SettingsPVRMenuBar">
 		<control type="grouplist" id="850">
-			<include>PvrVisible</include>
 			<posx>2</posx>
 			<posy>0</posy>
 			<width>1278</width>
