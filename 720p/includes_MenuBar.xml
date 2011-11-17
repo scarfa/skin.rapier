@@ -610,6 +610,7 @@
 	
 	<include name="SettingsMenuBar">
 		<control type="grouplist" id="850">
+			<include>PvrInvisible</include>
 			<posx>2</posx>
 			<posy>0</posy>
 			<width>1278</width>
@@ -624,8 +625,7 @@
 			<include>MenuBarBtnOpenCloseAnim</include>
 			<control type="button" id="101">
 				<description>Appearance</description>
-				<include condition="Skin.HasSetting(HidePVR)">MenuBarSettingsBtn</include>
-				<include condition="!Skin.HasSetting(HidePVR)">MenuBarSettingsBtn2</include>
+				<include>MenuBarSettingsBtn</include>
 				<label>[UPPERCASE]$LOCALIZE[480][/UPPERCASE]</label>
 				<onclick>ReplaceWindow(AppearanceSettings)</onclick>	
 			</control>	
@@ -634,8 +634,7 @@
 			</control>
 			<control type="button" id="104">
 				<description>Music</description>
-				<include condition="Skin.HasSetting(HidePVR)">MenuBarSettingsBtn</include>
-				<include condition="!Skin.HasSetting(HidePVR)">MenuBarSettingsBtn2</include>
+				<include>MenuBarSettingsBtn</include>
 				<label>[UPPERCASE]$LOCALIZE[2][/UPPERCASE]</label>
 				<onclick>ReplaceWindow(MusicSettings)</onclick>	
 			</control>
@@ -644,30 +643,16 @@
 			</control>
 			<control type="button" id="105">
 				<description>Videos</description>
-				<include condition="Skin.HasSetting(HidePVR)">MenuBarSettingsBtn</include>
-				<include condition="!Skin.HasSetting(HidePVR)">MenuBarSettingsBtn2</include>
+				<include>MenuBarSettingsBtn</include>
 				<label>[UPPERCASE]$LOCALIZE[3][/UPPERCASE]</label>
 				<onclick>ReplaceWindow(VideosSettings)</onclick>	
 			</control>
 			<control type="image" id="120">
 				<include>MenuBarSeparator</include>
 			</control>
-			<control type="button" id="110">
-				<description>PVR</description>
-				<include condition="Skin.HasSetting(HidePVR)">MenuBarSettingsBtn</include>
-				<include condition="!Skin.HasSetting(HidePVR)">MenuBarSettingsBtn2</include>
-				<label>[UPPERCASE]$LOCALIZE[32028][/UPPERCASE]</label>
-				<onclick>ReplaceWindow(PVRSettings)</onclick>
-				<visible>!Skin.HasSetting(HidePVR)</visible>
-			</control>
-			<control type="image" id="124">
-				<include>MenuBarSeparator</include>
-				<visible>!Skin.HasSetting(HidePVR)</visible>
-			</control>
 			<control type="button" id="103">
 				<description>Pictures</description>
-				<include condition="Skin.HasSetting(HidePVR)">MenuBarSettingsBtn</include>
-				<include condition="!Skin.HasSetting(HidePVR)">MenuBarSettingsBtn2</include>
+				<include>MenuBarSettingsBtn</include>
 				<label>[UPPERCASE]$LOCALIZE[1][/UPPERCASE]</label>
 				<onclick>ReplaceWindow(PicturesSettings)</onclick>	
 			</control>
@@ -676,8 +661,7 @@
 			</control>
 			<control type="button" id="106">
 				<description>Weather</description>
-				<include condition="Skin.HasSetting(HidePVR)">MenuBarSettingsBtn</include>
-				<include condition="!Skin.HasSetting(HidePVR)">MenuBarSettingsBtn2</include>
+				<include>MenuBarSettingsBtn</include>
 				<label>[UPPERCASE]$LOCALIZE[8][/UPPERCASE]</label>
 				<onclick>ReplaceWindow(WeatherSettings)</onclick>	
 			</control>
@@ -686,8 +670,7 @@
 			</control>
 			<control type="button" id="107">
 				<description>Network</description>
-				<include condition="Skin.HasSetting(HidePVR)">MenuBarSettingsBtn</include>
-				<include condition="!Skin.HasSetting(HidePVR)">MenuBarSettingsBtn2</include>
+				<include>MenuBarSettingsBtn</include>
 				<label>[UPPERCASE]$LOCALIZE[13279][/UPPERCASE]</label>
 				<onclick>ReplaceWindow(NetworkSettings)</onclick>	
 			</control>
@@ -696,8 +679,7 @@
 			</control>
 			<control type="button" id="108">
 				<description>System</description>
-				<include condition="Skin.HasSetting(HidePVR)">MenuBarSettingsBtn</include>
-				<include condition="!Skin.HasSetting(HidePVR)">MenuBarSettingsBtn2</include>
+				<include>MenuBarSettingsBtn</include>
 				<label>[UPPERCASE]$LOCALIZE[13000][/UPPERCASE]</label>
 				<onclick>ReplaceWindow(SystemSettings)</onclick>	
 			</control>
@@ -706,8 +688,101 @@
 			</control>
 			<control type="button" id="109">
 				<description>Skin</description>
-				<include condition="Skin.HasSetting(HidePVR)">MenuBarSettingsBtn</include>
-				<include condition="!Skin.HasSetting(HidePVR)">MenuBarSettingsBtn2</include>
+				<include>MenuBarSettingsBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[166][/UPPERCASE]</label>
+				<onclick>ReplaceWindow(3001)</onclick>	
+			</control>
+		</control>
+ 
+		<control type="grouplist" id="850">
+			<include>PvrVisible</include>
+			<posx>2</posx>
+			<posy>0</posy>
+			<width>1278</width>
+			<height>MenuBarHeight</height>
+			<itemgap>0</itemgap>
+			<onup>-</onup>
+			<ondown>9001</ondown>
+			<onleft>850</onleft>
+			<onright>850</onright>
+			<orientation>horizontal</orientation>
+			<usecontrolcoords>true</usecontrolcoords>
+			<include>MenuBarBtnOpenCloseAnim</include>
+			<control type="button" id="101">
+				<description>Appearance</description>
+				<include>MenuBarSettingsBtn2</include>
+				<label>[UPPERCASE]$LOCALIZE[480][/UPPERCASE]</label>
+				<onclick>ReplaceWindow(AppearanceSettings)</onclick>	
+			</control>	
+			<control type="image" id="116">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="104">
+				<description>Music</description>
+				<include>MenuBarSettingsBtn2</include>
+				<label>[UPPERCASE]$LOCALIZE[2][/UPPERCASE]</label>
+				<onclick>ReplaceWindow(MusicSettings)</onclick>	
+			</control>
+			<control type="image" id="119">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="105">
+				<description>Videos</description>
+				<include>MenuBarSettingsBtn2</include>
+				<label>[UPPERCASE]$LOCALIZE[3][/UPPERCASE]</label>
+				<onclick>ReplaceWindow(VideosSettings)</onclick>	
+			</control>
+			<control type="image" id="120">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="110">
+				<description>PVR</description>
+				<include>MenuBarSettingsBtn2</include>
+				<label>[UPPERCASE]$LOCALIZE[32028][/UPPERCASE]</label>
+				<onclick>ReplaceWindow(PVRSettings)</onclick>
+			</control>
+			<control type="image" id="124">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="103">
+				<description>Pictures</description>
+				<include>MenuBarSettingsBtn2</include>
+				<label>[UPPERCASE]$LOCALIZE[1][/UPPERCASE]</label>
+				<onclick>ReplaceWindow(PicturesSettings)</onclick>	
+			</control>
+			<control type="image" id="118">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="106">
+				<description>Weather</description>
+				<include>MenuBarSettingsBtn2</include>
+				<label>[UPPERCASE]$LOCALIZE[8][/UPPERCASE]</label>
+				<onclick>ReplaceWindow(WeatherSettings)</onclick>	
+			</control>
+			<control type="image" id="121">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="107">
+				<description>Network</description>
+				<include>MenuBarSettingsBtn2</include>
+				<label>[UPPERCASE]$LOCALIZE[13279][/UPPERCASE]</label>
+				<onclick>ReplaceWindow(NetworkSettings)</onclick>	
+			</control>
+			<control type="image" id="122">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="108">
+				<description>System</description>
+				<include>MenuBarSettingsBtn2</include>
+				<label>[UPPERCASE]$LOCALIZE[13000][/UPPERCASE]</label>
+				<onclick>ReplaceWindow(SystemSettings)</onclick>	
+			</control>
+			<control type="image" id="123">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="109">
+				<description>Skin</description>
+				<include>MenuBarSettingsBtn2</include>
 				<label>[UPPERCASE]$LOCALIZE[166][/UPPERCASE]</label>
 				<onclick>ReplaceWindow(3001)</onclick>	
 			</control>
@@ -936,7 +1011,7 @@
 			<control type="radiobutton" id="475">
 				<description>Hide Radio (PVR)</description>
 				<include>MenuBarRadioBtn</include>
-				<label>$LOCALIZE[32030]</label>
+				<label>$LOCALIZE[32029]</label>
 				<selected>Skin.HasSetting(HideLiveRadio)</selected>
 				<onclick>Skin.ToggleSetting(HideLiveRadio)</onclick>
 				<onclick>ReloadSkin()</onclick>

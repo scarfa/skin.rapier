@@ -68,7 +68,7 @@
 					<onclick>Skin.SetBool(ExpandCustomPVRBGSettings)</onclick>
 					<onclick>Skin.SetBool(ExpandedSettings)</onclick>
 					<onclick>Control.SetFocus(9941)</onclick>
-					<visible>!Skin.HasSetting(HidePVR)</visible>
+					<include>PvrVisible</include>
 				</control>
 				<control type="radiobutton" id="4002">
 					<description>Customize Videos Background Settings</description>

@@ -33,12 +33,6 @@
 			<control type="label" id="31">
 				<include>InfoPaneNotifyLabel2</include>
 			</control>
-			<control type="progress" id="32">
-				<description>Progressbar</description>
-				<posx>19</posx>
-				<posy>58</posy>
-				<width>396</width>
-			</control>
 		</control>
 		
 		<control type="group">
