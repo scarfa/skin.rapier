@@ -802,7 +802,7 @@
 					<icon>homecategories/$INFO[System.Language]/pvr-text-nofocus.png</icon>
 					<thumb>$INFO[Skin.String(CustomPVRBGPath)]</thumb>
 					<onclick>ActivateWindow(PVR)</onclick>
-					<visible>!Skin.HasSetting(HidePVRCategory) + !Skin.HasSetting(HidePVR) + System.GetBool(pvrmanager.enabled)</visible>
+					<include>PvrHomeVisible</include>
 				</item>
 				<item id="2">
 					<description>Videos Category</description>
