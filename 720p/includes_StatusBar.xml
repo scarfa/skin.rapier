@@ -151,11 +151,11 @@
 			</control>
 			<include condition="!IsEmpty(Weather.Plugin) + !Skin.HasSetting(DisableWeather) + !Window.IsVisible(Weather) + Skin.HasSetting(ApplyAllWeather)">WeatherNotification</include>
 			<control type="label" id="5566">
-				<width min="25" max="250">auto</width>
+				<width min="25" max="200">auto</width>
 				<height>42</height>
 				<font>BreadCrumbFont</font>
 				<textcolor>BreadCrumbColor</textcolor>
-				<label> [UPPERCASE]$INFO[System.Date][/UPPERCASE] </label>
+				<label> [UPPERCASE]$INFO[System.Date(ddd. d mmm. yyyy)][/UPPERCASE] </label>
 				<aligny>center</aligny>
 			</control>
 			<control type="image">
@@ -165,7 +165,7 @@
 				<texture border="0,12,0,13">gui/status-bar-separator.png</texture>		
 			</control>
 			<control type="label" id="5569">
-				<width min="25" max="250">auto</width>
+				<width min="25" max="100">auto</width>
 				<height>42</height>
 				<font>BreadCrumbFont</font>
 				<textcolor>BreadCrumbColor</textcolor>
