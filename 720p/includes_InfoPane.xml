@@ -57,7 +57,7 @@
 	<include name="InfoPaneNotifyLabel2">
 		<posx>57</posx>
 		<posy>33</posy>
-		<width>359</width>
+		<width>358</width>
 		<font>InfoPaneFont2</font>
 		<textcolor>InfoPaneColor2</textcolor>
 		<shadowcolor>ShadowColor</shadowcolor>
