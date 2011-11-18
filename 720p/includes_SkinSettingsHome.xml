@@ -359,7 +359,6 @@
 					<label>$LOCALIZE[31072]</label>
 					<selected>Skin.HasSetting(HideRecentlyAddedHomePanel)</selected>
 					<onclick>Skin.ToggleSetting(HideRecentlyAddedHomePanel)</onclick>
-					<enable>System.HasAddon(script.recentlyadded)</enable>
 				</control>
 				<control type="radiobutton" id="2019">
 					<description>Hide Weather Info Panel</description>

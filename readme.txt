@@ -30,7 +30,6 @@ node and choose "Install from zip file" and select the Rapier zip file.
 Manual installation can be done by moving the skin.rapier folder inside the zip file into your addons folder of your XBMC profile.
 Please make sure you have the following scripts installed when doing it manually: 
 
-script.recentlyadded v2.0.5
 script.favourites v1.0.5
 script.logo-downloader v2.3.0
 

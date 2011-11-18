@@ -12,7 +12,7 @@
 			<include>BackgroundOpenCloseAnim</include>	
 		</control>
 
-		<include condition="!Skin.HasSetting(HideRecentlyAddedHomePanel) + System.HasAddon(script.recentlyadded)">RecentlyAddedPanel</include>
+		<include condition="!Skin.HasSetting(HideRecentlyAddedHomePanel)">RecentlyAddedPanel</include>
 		<include condition="!Skin.HasSetting(HideNowPlayingHomePanel)">NowPlayingPanel</include>
 		<include condition="!Skin.HasSetting(HideWeatherHomePanel) + !Skin.HasSetting(DisableWeather) + !IsEmpty(Weather.Plugin)">WeatherPanel</include>
 		<include condition="!Skin.HasSetting(HideSystemInfoHomePanel)">SystemInfoPanel</include>

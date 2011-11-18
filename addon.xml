@@ -6,7 +6,6 @@
   provider-name="Scarfa">
   <requires>
     <import addon="xbmc.gui" version="2.11"/>
-    <import addon="script.recentlyadded" version="2.0.5"/>
     <import addon="script.favourites" version="1.0.5"/>
     <import addon="script.logo-downloader" version="2.3.0"/>
   </requires>
