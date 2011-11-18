@@ -9,6 +9,7 @@
 	</coordinates>
 	<controls>
 		<control type="group">
+		<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(PVRGroupManager)">Conditional</animation>
 			<control type="image">
 				<width>890</width>
 				<height>550</height>
