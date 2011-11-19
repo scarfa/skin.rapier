@@ -16,42 +16,42 @@
 		<!--EPG INFO-->
 
 		<control type="group">
-			<posx>175</posx>
-			<posy>510</posy>
+			<posx>40</posx>
+			<posy>490</posy>
 			<include>ControlsOpenCloseAnim</include>
 			<control type="image" id="503">
-				<width>128</width>
-				<height>64</height>
-				<aspectratio align="right">keep</aspectratio>
+				<posx>15</posx>
+				<width>205</width>
+				<height>205</height>
+				<aspectratio aligny="top">keep</aspectratio>
 				<fadetime>IconCrossfadeTime</fadetime>
 			</control>
 
 			<control type="grouplist">
-				<posx>185</posx>
+				<posx>240</posx>
 				<itemgap>0</itemgap>
 				<control type="label" id="500">
-					<width>830</width>
+					<width>700</width>
 					<height>25</height>
 					<font>FullMediaInfoTitleFont</font>
-					<textcolor>GreyColor2</textcolor>
+					<textcolor>MediaInfoTitleColor</textcolor>
 					<aligny>center</aligny>
 				</control>
 
 				<control type="label" id="501">
-					<width>830</width>
+					<width>700</width>
 					<height>19</height>
 					<aligny>center</aligny>
 					<font>FullMediaInfoFont</font>
-					<textcolor>DefaultColor2</textcolor>
+					<textcolor>MediaInfoItemColor</textcolor>
 				</control>
 
 				<control type="label">
-					<label/>
 					<height>5</height>
 				</control>
 
 				<control type="label" id="502">
-					<width>860</width>
+					<width>960</width>
 					<height>110</height>
 					<font>MediaInfoDescFont</font>
 					<textcolor>MediaInfoColor</textcolor>
@@ -65,96 +65,74 @@
 		<!--TIME AND DATE LABELS-->
 
 		<control type="group">
-			<posx>120</posx>
-			<posy>166</posy>
+			<posx>40</posx>
+			<posy>146</posy>
 			<include>ControlsOpenCloseAnim</include>
-
-			<control type="group">
-				<posx>0</posx>
-				<control type="image">
-					<width>235</width>
-					<height>29</height>
-					<texture border="8">pvr/column-focus.png</texture>
-					<colordiffuse>dd0c2134</colordiffuse>
-				</control>
-
-				<control type="label" id="104">
-					<description>Date Label</description>
-					<posx>15</posx>
-					<width>220</width>
-					<height>29</height>
-					<font>WideListFont2</font>
-					<textcolor>GreyColor2</textcolor>
-					<selectedcolor>GreyColor2</selectedcolor>
-					<aligny>center</aligny>
-					<align>left</align>
-					<label>Current Date</label>
-				</control>
+			
+			<control type="image">
+				<width>235</width>
+				<height>29</height>
+				<texture border="8">pvr/column-left.png</texture>
+				<colordiffuse>dd0c2134</colordiffuse>
 			</control>
 
+			<control type="label" id="104">
+				<description>Date Label</description>
+				<posx>15</posx>
+				<width>310</width>
+				<height>29</height>
+				<font>WideListFont</font>
+				<textcolor>DefaultColor3</textcolor>
+				<selectedcolor>SelectedColor</selectedcolor>
+				<aligny>center</aligny>
+				<align>left</align>
+				<label>Current Date</label>
+			</control>
+			
 			<control type="group">
 				<posx>240</posx>
+				
 				<control type="image">
-					<width>304</width>
+					<width>1030</width>
 					<height>29</height>
-					<texture border="8">pvr/column-focus.png</texture>
+					<texture border="8" flipx="true">pvr/column-left.png</texture>
 					<colordiffuse>dd0c2134</colordiffuse>
 				</control>
-
+				
 				<control type="label" id="101">
 					<description>Time 1 Label</description>
 					<posx>15</posx>
-					<width>285</width>
+					<width>310</width>
 					<height>29</height>
-					<font>WideListFont2</font>
-					<textcolor>GreyColor2</textcolor>
-					<selectedcolor>GreyColor2</selectedcolor>
+					<font>WideListFont</font>
+					<textcolor>DefaultColor3</textcolor>
+					<selectedcolor>SelectedColor</selectedcolor>
 					<aligny>center</aligny>
 					<align>left</align>
 					<label>Time 1</label>
 				</control>
-			</control>
-
-			<control type="group">
-				<posx>549</posx>
-				<control type="image">
-					<width>304</width>
-					<height>29</height>
-					<texture border="8">pvr/column-focus.png</texture>
-					<colordiffuse>dd0c2134</colordiffuse>
-				</control>
 
 				<control type="label" id="102">
 					<description>Time 2 Label</description>
-					<posx>15</posx>
-					<width>285</width>
+					<posx>360</posx>
+					<width>310</width>
 					<height>29</height>
-					<font>WideListFont2</font>
-					<textcolor>GreyColor2</textcolor>
-					<selectedcolor>GreyColor2</selectedcolor>
+					<font>WideListFont</font>
+					<textcolor>DefaultColor3</textcolor>
+					<selectedcolor>SelectedColor</selectedcolor>
 					<aligny>center</aligny>
 					<align>left</align>
 					<label>Time 2</label>
 				</control>
-			</control>
-
-			<control type="group">
-				<posx>858</posx>
-				<control type="image">
-					<width>304</width>
-					<height>29</height>
-					<texture border="8">pvr/column-focus.png</texture>
-					<colordiffuse>dd0c2134</colordiffuse>
-				</control>
 
 				<control type="label" id="103">
 					<description>Time 3 Label</description>
-					<posx>15</posx>
-					<width>285</width>
+					<posx>705</posx>
+					<width>310</width>
 					<height>29</height>
-					<font>WideListFont2</font>
-					<textcolor>GreyColor2</textcolor>
-					<selectedcolor>GreyColor2</selectedcolor>
+					<font>WideListFont</font>
+					<textcolor>DefaultColor3</textcolor>
+					<selectedcolor>SelectedColor</selectedcolor>
 					<aligny>center</aligny>
 					<align>left</align>
 					<label>Time 3</label>
@@ -165,44 +143,44 @@
 		<!--TIME LINES-->
 
 		<control type="group" id="111">
-			<posx>360</posx>
-			<posy>200</posy>
-			<width>940</width>
+			<posx>280</posx>
+			<posy>180</posy>
+			<width>1030</width>
 			<height>40</height>
 		</control>
 
 		<control type="group" id="112">
-			<posx>360</posx>
-			<posy>245</posy>
-			<width>940</width>
+			<posx>280</posx>
+			<posy>225</posy>
+			<width>1030</width>
 			<height>40</height>
 		</control>
 
 		<control type="group" id="113">
-			<posx>360</posx>
-			<posy>290</posy>
-			<width>940</width>
+			<posx>280</posx>
+			<posy>270</posy>
+			<width>1030</width>
 			<height>40</height>
 		</control>
 
 		<control type="group" id="114">
-			<posx>360</posx>
-			<posy>335</posy>
-			<width>940</width>
+			<posx>280</posx>
+			<posy>315</posy>
+			<width>1030</width>
 			<height>40</height>
 		</control>
 
 		<control type="group" id="115">
-			<posx>360</posx>
-			<posy>380</posy>
-			<width>940</width>
+			<posx>280</posx>
+			<posy>360</posy>
+			<width>1030</width>
 			<height>40</height>
 		</control>
 
 		<control type="group" id="116">
-			<posx>360</posx>
-			<posy>425</posy>
-			<width>940</width>
+			<posx>280</posx>
+			<posy>405</posy>
+			<width>1030</width>
 			<height>40</height>
 		</control>
 
@@ -210,8 +188,8 @@
 
 		<control type="image" id="120">
 			<description>Time Bar</description>
-			<posx>360</posx>
-			<posy>200</posy>
+			<posx>280</posx>
+			<posy>180</posy>
 			<width>22</width>
 			<height>265</height>
 		</control>
@@ -219,8 +197,8 @@
 		<!--CHANNEL BUTTONS AND LABELS-->
 
 		<control type="group">
-			<posx>120</posx>
-			<posy>200</posy>
+			<posx>40</posx>
+			<posy>180</posy>
 			<control type="image">
 				<width>235</width>
 				<height>40</height>
@@ -233,9 +211,9 @@
 				<posx>220</posx>
 				<width>150</width>
 				<height>40</height>
-				<font>WideListFont2</font>
-				<textcolor>WhiteColor</textcolor>
-				<selectedcolor>DefaultColor3</selectedcolor>
+				<font>ListFont</font>
+				<textcolor>DefaultColor2</textcolor>
+				<selectedcolor>SelectedColor</selectedcolor>
 				<align>right</align>
 				<aligny>center</aligny>
 			</control>
@@ -245,16 +223,16 @@
 				<posx>15</posx>
 				<width>235</width>
 				<height>40</height>
-				<font>WrapListFont</font>
-				<textcolor>GreyColor2</textcolor>
-				<selectedcolor>DefaultColor3</selectedcolor>
+				<font>ListFont2</font>
+				<textcolor>DefaultColor2</textcolor>
+				<selectedcolor>SelectedColor</selectedcolor>
 				<aligny>center</aligny>
 			</control>
 		</control>
 
 		<control type="group">
-			<posx>120</posx>
-			<posy>245</posy>
+			<posx>40</posx>
+			<posy>225</posy>
 			<control type="image">
 				<width>235</width>
 				<height>40</height>
@@ -267,9 +245,9 @@
 				<posx>220</posx>
 				<width>150</width>
 				<height>40</height>
-				<font>WideListFont2</font>
-				<textcolor>WhiteColor</textcolor>
-				<selectedcolor>DefaultColor3</selectedcolor>
+				<font>ListFont</font>
+				<textcolor>DefaultColor2</textcolor>
+				<selectedcolor>SelectedColor</selectedcolor>
 				<align>right</align>
 				<aligny>center</aligny>
 			</control>
@@ -279,16 +257,16 @@
 				<posx>15</posx>
 				<width>235</width>
 				<height>40</height>
-				<font>WrapListFont</font>
-				<textcolor>GreyColor2</textcolor>
-				<selectedcolor>DefaultColor3</selectedcolor>
+				<font>ListFont2</font>
+				<textcolor>DefaultColor2</textcolor>
+				<selectedcolor>SelectedColor</selectedcolor>
 				<aligny>center</aligny>
 			</control>
 		</control>
 
 		<control type="group">
-			<posx>120</posx>
-			<posy>290</posy>
+			<posx>40</posx>
+			<posy>270</posy>
 			<control type="image">
 				<width>235</width>
 				<height>40</height>
@@ -301,9 +279,9 @@
 				<posx>220</posx>
 				<width>150</width>
 				<height>40</height>
-				<font>WideListFont2</font>
-				<textcolor>WhiteColor</textcolor>
-				<selectedcolor>DefaultColor3</selectedcolor>
+				<font>ListFont</font>
+				<textcolor>DefaultColor2</textcolor>
+				<selectedcolor>SelectedColor</selectedcolor>
 				<align>right</align>
 				<aligny>center</aligny>
 			</control>
@@ -313,16 +291,16 @@
 				<posx>15</posx>
 				<width>235</width>
 				<height>40</height>
-				<font>WrapListFont</font>
-				<textcolor>GreyColor2</textcolor>
-				<selectedcolor>DefaultColor3</selectedcolor>
+				<font>ListFont2</font>
+				<textcolor>DefaultColor2</textcolor>
+				<selectedcolor>SelectedColor</selectedcolor>
 				<aligny>center</aligny>
 			</control>
 		</control>
 
 		<control type="group">
-			<posx>120</posx>
-			<posy>335</posy>
+			<posx>40</posx>
+			<posy>315</posy>
 			<control type="image">
 				<width>235</width>
 				<height>40</height>
@@ -335,9 +313,9 @@
 				<posx>220</posx>
 				<width>150</width>
 				<height>40</height>
-				<font>WideListFont2</font>
-				<textcolor>WhiteColor</textcolor>
-				<selectedcolor>DefaultColor3</selectedcolor>
+				<font>ListFont</font>
+				<textcolor>DefaultColor2</textcolor>
+				<selectedcolor>SelectedColor</selectedcolor>
 				<align>right</align>
 				<aligny>center</aligny>
 			</control>
@@ -347,16 +325,16 @@
 				<posx>15</posx>
 				<width>235</width>
 				<height>40</height>
-				<font>WrapListFont</font>
-				<textcolor>GreyColor2</textcolor>
-				<selectedcolor>DefaultColor3</selectedcolor>
+				<font>ListFont2</font>
+				<textcolor>DefaultColor2</textcolor>
+				<selectedcolor>SelectedColor</selectedcolor>
 				<aligny>center</aligny>
 			</control>
 		</control>
 
 		<control type="group">
-			<posx>120</posx>
-			<posy>380</posy>
+			<posx>40</posx>
+			<posy>360</posy>
 			<control type="image">
 				<width>235</width>
 				<height>40</height>
@@ -369,9 +347,9 @@
 				<posx>220</posx>
 				<width>150</width>
 				<height>40</height>
-				<font>WideListFont2</font>
-				<textcolor>WhiteColor</textcolor>
-				<selectedcolor>DefaultColor3</selectedcolor>
+				<font>ListFont</font>
+				<textcolor>DefaultColor2</textcolor>
+				<selectedcolor>SelectedColor</selectedcolor>
 				<align>right</align>
 				<aligny>center</aligny>
 			</control>
@@ -381,16 +359,16 @@
 				<posx>15</posx>
 				<width>235</width>
 				<height>40</height>
-				<font>WrapListFont</font>
-				<textcolor>GreyColor2</textcolor>
-				<selectedcolor>DefaultColor3</selectedcolor>
+				<font>ListFont2</font>
+				<textcolor>DefaultColor2</textcolor>
+				<selectedcolor>SelectedColor</selectedcolor>
 				<aligny>center</aligny>
 			</control>
 		</control>
 
 		<control type="group">
-			<posx>120</posx>
-			<posy>425</posy>
+			<posx>40</posx>
+			<posy>405</posy>
 			<control type="image">
 				<width>235</width>
 				<height>40</height>
@@ -403,9 +381,9 @@
 				<posx>220</posx>
 				<width>150</width>
 				<height>40</height>
-				<font>WideListFont2</font>
-				<textcolor>WhiteColor</textcolor>
-				<selectedcolor>DefaultColor3</selectedcolor>
+				<font>ListFont</font>
+				<textcolor>DefaultColor2</textcolor>
+				<selectedcolor>SelectedColor</selectedcolor>
 				<align>right</align>
 				<aligny>center</aligny>
 			</control>
@@ -415,9 +393,9 @@
 				<posx>15</posx>
 				<width>235</width>
 				<height>40</height>
-				<font>WrapListFont</font>
-				<textcolor>GreyColor2</textcolor>
-				<selectedcolor>DefaultColor3</selectedcolor>
+				<font>ListFont2</font>
+				<textcolor>DefaultColor2</textcolor>
+				<selectedcolor>SelectedColor</selectedcolor>
 				<aligny>center</aligny>
 			</control>
 		</control>
