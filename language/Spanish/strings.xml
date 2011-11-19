@@ -20,7 +20,7 @@
 <string id="31308">Comics</string>
 <string id="31309">Últimas Reproducciones</string>
 <string id="31310">El Proveedor Del Tiempo No Se Ha Establecido</string>
-<string id="31311">Compruebe Su Configuración del Tiempo Y Asegurese Que El Add-on Está Instalado</string>
+<string id="31311">Compruebe Su Configuración Del Tiempo Y Asegurese Que El Add-on Está Instalado</string>
 <string id="31202">Entradas</string>
 <string id="31203">No encontrado.</string>
 <string id="31204">Ninguna descripción.</string>
@@ -48,6 +48,8 @@
 <string id="32025">Reiniciar Piel</string>
 <string id="32026">Los ajustes de piel volverá a la configuración por defecto. Pulse para confirmar.</string>
 <string id="32027">Editor</string>
+<string id="32028">TV</string>
+<string id="32029">Ocultar Radio</string>
 
 <!-- view types -->
 <string id="31103">Icon</string>
