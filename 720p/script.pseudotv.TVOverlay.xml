@@ -1,0 +1,175 @@
+<window>
+	<allowoverlay>no</allowoverlay>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+
+	<controls>
+		<control type="image" id="101">
+			<visible>false</visible>
+		</control>
+
+		<control type="image" id="103">
+			<description>Channel Bug</description>
+			<posx>220r</posx>
+			<posy>120r</posy>
+			<width>150</width>
+			<height>100</height>
+			<aspectratio>keep</aspectratio>
+			<texture></texture>
+			<animation effect="fade" start="40" end="40" condition="True">Conditional</animation>
+		</control>
+
+		<control type="group" id="102">
+			<visible>![Window.IsActive(SliderDialog) | Window.IsActive(InfoDialog) | Window.IsActive(VolumeBar)] + Window.IsActive(FullScreenVideo)</visible>
+			<include>FSMediaInfoPanel</include>
+			<include>FSMediaInfoOpenCloseAnim</include>
+
+			<control type="grouplist">
+				<posx>875</posx>
+				<posy>0</posy>
+				<height>43</height>
+				<width>350</width>
+				<usecontrolcoords>true</usecontrolcoords>
+				<orientation>horizontal</orientation>
+				<align>right</align>
+				<control type="image">
+					<description>Media Scanning</description>
+					<posy>2</posy>
+					<width>43</width>
+					<height>43</height>	
+					<texture>gui/notification-downloading.png</texture>
+					<bordersize>4</bordersize>
+					<aspectratio>keep</aspectratio>
+					<visible>Window.IsActive(VideoScan) | Window.IsActive(MusicScan)</visible>
+					<include>NotificationPulseAnim</include>
+				</control>
+				<control type="label">
+					<posx>-4</posx>
+					<posy>22</posy>
+					<width min="25" max="250">auto</width>
+					<font>FSInfoTitleFont</font>
+					<textcolor>BreadCrumbColor</textcolor>
+					<label>$INFO[System.Time]</label>
+					<aligny>center</aligny>
+				</control>
+			</control>
+
+			<control type="group">
+				<control type="image" id="506">
+					<description>Channel Logo</description>
+					<posx>55</posx>
+					<posy>11</posy>
+					<width>185</width>
+					<height>104</height>
+					<aspectratio>keep</aspectratio>
+				</control>
+
+				<control type="group">			
+					<posx>260</posx>
+
+					<control type="grouplist">
+						<posy>5</posy>
+						<width>781</width>
+						<height>50</height>
+						<itemgap>5</itemgap>
+						<usecontrolcoords>true</usecontrolcoords>
+						<orientation>horizontal</orientation>
+						<control type="label" id="502">
+							<visible>false</visible>
+						</control>
+						<control type="label" id="503">
+							<visible>false</visible>
+						</control>
+						<control type="label">
+							<description>Title/Year</description>
+							<width min="50" max="671">auto</width>
+							<height>50</height>
+							<font>FSInfoTitleFont</font>
+							<textcolor>MediaInfoTitleColor</textcolor>
+							<label>[UPPERCASE]$INFO[VideoPlayer.Title] $INFO[VideoPlayer.Year,(,)][/UPPERCASE]</label>
+							<visible>VideoPlayer.Content(Movies)</visible>
+							<scroll>yes</scroll>
+						</control>
+						<control type="label">
+							<description>Title</description>
+							<width min="50" max="671">auto</width>
+							<height>50</height>
+							<font>FSInfoTitleFont</font>
+							<textcolor>MediaInfoTitleColor</textcolor>
+							<label>[UPPERCASE]$INFO[VideoPlayer.Title][/UPPERCASE]</label>
+							<visible>!VideoPlayer.Content(Movies)</visible>
+							<scroll>yes</scroll>
+						</control>
+						<control type="image">
+							<description>Star Rating</description>
+							<posy>2</posy>
+							<width>100</width>
+							<height>32</height>		
+							<texture>$INFO[Player.StarRating]</texture>
+							<aspectratio align="left">keep</aspectratio>
+							<animation effect="fade" end="70" condition="true">Conditional</animation>
+						</control>
+					</control>
+
+					<control type="label">
+						<description>Genre</description>
+						<posy>35</posy>
+						<width>781</width>
+						<font>FSInfoFont</font>
+						<textcolor>MediaInfoTitleColor2</textcolor>
+						<label>[UPPERCASE]$INFO[VideoPlayer.Genre][/UPPERCASE]</label>
+						<visible>![VideoPlayer.Content(Episodes) | VideoPlayer.Content(MusicVideos)]</visible>
+					</control>
+
+					<control type="label">
+						<description>TV Show/Year/Season/Episode</description>
+						<posy>35</posy>
+						<width>781</width>
+						<font>FSInfoFont</font>
+						<textcolor>MediaInfoTitleColor2</textcolor>
+						<label>[UPPERCASE]$INFO[VideoPlayer.TVShowTitle] $INFO[VideoPlayer.Year,(,)] $INFO[VideoPlayer.Season,- $LOCALIZE[20373]: ] $INFO[VideoPlayer.Episode,- $LOCALIZE[20359]: ][/UPPERCASE]</label>
+						<visible>VideoPlayer.Content(Episodes)</visible>
+					</control>
+
+					<control type="label">
+						<description>Artist/Studio</description>
+						<posy>35</posy>
+						<width>781</width>
+						<font>FSInfoFont</font>
+						<textcolor>MediaInfoTitleColor2</textcolor>
+						<label>[UPPERCASE]$INFO[VideoPlayer.TVShowTitle] $INFO[VideoPlayer.Year,(,)] $INFO[VideoPlayer.Season,- $LOCALIZE[20373]: ] $INFO[VideoPlayer.Episode,- $LOCALIZE[20359]: ][/UPPERCASE]</label>
+						<visible>VideoPlayer.Content(MusicVideos)</visible>
+					</control>
+
+					<control type="label" id="504">
+						<visible>false</visible>
+					</control>
+					<control type="label" id="505">
+						<visible>false</visible>
+					</control>
+
+					<control type="grouplist">
+						<description>Media Flags Area</description>
+						<posy>72</posy>
+						<width>781</width>
+						<height>41</height>
+						<itemgap>5</itemgap>
+						<align>left</align>
+						<usecontrolcoords>true</usecontrolcoords>
+						<orientation>horizontal</orientation>
+						<include>MediaFlagFadeAnim</include>
+						<include condition="!Skin.HasSetting(UseAltMediaFlagTheme)">PlayerVideoMediaFlags</include>
+						<include condition="Skin.HasSetting(UseAltMediaFlagTheme)">PlayerVideoAltMediaFlags</include>
+						<include condition="!Skin.HasSetting(UseAltMediaFlagTheme)">PlayerAudioMediaFlags</include>
+						<include condition="Skin.HasSetting(UseAltMediaFlagTheme)">PlayerAudioAltMediaFlags</include>
+						<include condition="!Skin.HasSetting(UseAltMediaFlagTheme)">PlayerRatingMediaFlags</include>
+						<include condition="Skin.HasSetting(UseAltMediaFlagTheme)">PlayerRatingAltMediaFlags</include>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>
