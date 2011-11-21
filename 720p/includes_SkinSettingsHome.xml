@@ -806,6 +806,8 @@
 							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[31081] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn1NoFocusImagePath][/COLOR]</label>
+							<onclick>Skin.SetString(ExtraCategoriesPath,special://skin/extras/)</onclick>
+							<onclick>Skin.SetImage(ExtraCategoriesPath)</onclick>
 							<onclick>$VAR[AddMoreCategoryBtn1NoFocusImagePathClick]</onclick>
 						</control>
 						<control type="button" id="2336">
@@ -813,6 +815,8 @@
 							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[31082] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn1FocusImagePath][/COLOR]</label>
+							<onclick>Skin.SetString(ExtraCategoriesPath,special://skin/extras/)</onclick>
+							<onclick>Skin.SetImage(ExtraCategoriesPath)</onclick>
 							<onclick>$VAR[AddMoreCategoryBtn1FocusImagePathClick]</onclick>
 						</control>
 						<control type="button" id="2337">
@@ -954,6 +958,8 @@
 							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[31081] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn2NoFocusImagePath][/COLOR]</label>
+							<onclick>Skin.SetString(ExtraCategoriesPath,special://skin/extras/)</onclick>
+							<onclick>Skin.SetImage(ExtraCategoriesPath)</onclick>
 							<onclick>$VAR[AddMoreCategoryBtn2NoFocusImagePathClick]</onclick>
 						</control>
 						<control type="button" id="2336">
@@ -961,6 +967,8 @@
 							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[31082] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn2FocusImagePath][/COLOR]</label>
+							<onclick>Skin.SetString(ExtraCategoriesPath,special://skin/extras/)</onclick>
+							<onclick>Skin.SetImage(ExtraCategoriesPath)</onclick>
 							<onclick>$VAR[AddMoreCategoryBtn2FocusImagePathClick]</onclick>
 						</control>
 						<control type="button" id="2337">
@@ -1102,6 +1110,8 @@
 							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[31081] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn3NoFocusImagePath][/COLOR]</label>
+							<onclick>Skin.SetString(ExtraCategoriesPath,special://skin/extras/)</onclick>
+							<onclick>Skin.SetImage(ExtraCategoriesPath)</onclick>
 							<onclick>$VAR[AddMoreCategoryBtn3NoFocusImagePathClick]</onclick>
 						</control>
 						<control type="button" id="2336">
@@ -1109,6 +1119,8 @@
 							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[31082] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn3FocusImagePath][/COLOR]</label>
+							<onclick>Skin.SetString(ExtraCategoriesPath,special://skin/extras/)</onclick>
+							<onclick>Skin.SetImage(ExtraCategoriesPath)</onclick>
 							<onclick>$VAR[AddMoreCategoryBtn3FocusImagePathClick]</onclick>
 						</control>
 						<control type="button" id="2337">
@@ -1250,6 +1262,8 @@
 							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[31081] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn4NoFocusImagePath][/COLOR]</label>
+							<onclick>Skin.SetString(ExtraCategoriesPath,special://skin/extras/)</onclick>
+							<onclick>Skin.SetImage(ExtraCategoriesPath)</onclick>
 							<onclick>$VAR[AddMoreCategoryBtn4NoFocusImagePathClick]</onclick>
 						</control>
 						<control type="button" id="2336">
@@ -1257,6 +1271,8 @@
 							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[31082] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn4FocusImagePath][/COLOR]</label>
+							<onclick>Skin.SetString(ExtraCategoriesPath,special://skin/extras/)</onclick>
+							<onclick>Skin.SetImage(ExtraCategoriesPath)</onclick>
 							<onclick>$VAR[AddMoreCategoryBtn4FocusImagePathClick]</onclick>
 						</control>
 						<control type="button" id="2337">
@@ -2353,12 +2369,12 @@
 	</variable>
 
 	<variable name="AddMoreCategoryBtn1NoFocusImagePathClick">
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings)">Skin.SetImage(Custom1NoFocusImagePath)</value>
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2)">Skin.SetImage(Custom5NoFocusImagePath)</value>
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3)">Skin.SetImage(Custom9NoFocusImagePath)</value>
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4)">Skin.SetImage(Custom13NoFocusImagePath)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom1NoFocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom5NoFocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom9NoFocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom13NoFocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
 	</variable>
-
+	
 	<variable name="AddMoreCategoryBtn1FocusImagePath">
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings)">$INFO[Skin.String(Custom1FocusImagePath)]</value>
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2)">$INFO[Skin.String(Custom5FocusImagePath)]</value>
@@ -2367,10 +2383,10 @@
 	</variable>
 
 	<variable name="AddMoreCategoryBtn1FocusImagePathClick">
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings)">Skin.SetImage(Custom1FocusImagePath)</value>
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2)">Skin.SetImage(Custom5FocusImagePath)</value>
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3)">Skin.SetImage(Custom9FocusImagePath)</value>
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4)">Skin.SetImage(Custom13FocusImagePath)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom1FocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom5FocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom9FocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom13FocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
 	</variable>
 
 	<variable name="AddMoreCategoryBtn1BackgroundImagePath">
@@ -2553,10 +2569,10 @@
 	</variable>
 
 	<variable name="AddMoreCategoryBtn2NoFocusImagePathClick">
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings)">Skin.SetImage(Custom2NoFocusImagePath)</value>
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2)">Skin.SetImage(Custom6NoFocusImagePath)</value>
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3)">Skin.SetImage(Custom10NoFocusImagePath)</value>
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4)">Skin.SetImage(Custom14NoFocusImagePath)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom2NoFocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom6NoFocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom10NoFocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom14NoFocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
 	</variable>
 
 	<variable name="AddMoreCategoryBtn2FocusImagePath">
@@ -2567,10 +2583,10 @@
 	</variable>
 
 	<variable name="AddMoreCategoryBtn2FocusImagePathClick">
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings)">Skin.SetImage(Custom2FocusImagePath)</value>
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2)">Skin.SetImage(Custom6FocusImagePath)</value>
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3)">Skin.SetImage(Custom10FocusImagePath)</value>
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4)">Skin.SetImage(Custom14FocusImagePath)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom2FocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom6FocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom10FocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom14FocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
 	</variable>
 
 	<variable name="AddMoreCategoryBtn2BackgroundImagePath">
@@ -2753,10 +2769,10 @@
 	</variable>
 
 	<variable name="AddMoreCategoryBtn3NoFocusImagePathClick">
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings)">Skin.SetImage(Custom3NoFocusImagePath)</value>
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2)">Skin.SetImage(Custom7NoFocusImagePath)</value>
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3)">Skin.SetImage(Custom11NoFocusImagePath)</value>
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4)">Skin.SetImage(Custom15NoFocusImagePath)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom3NoFocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom7NoFocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom11NoFocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom15NoFocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
 	</variable>
 
 	<variable name="AddMoreCategoryBtn3FocusImagePath">
@@ -2767,10 +2783,10 @@
 	</variable>
 
 	<variable name="AddMoreCategoryBtn3FocusImagePathClick">
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings)">Skin.SetImage(Custom3FocusImagePath)</value>
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2)">Skin.SetImage(Custom7FocusImagePath)</value>
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3)">Skin.SetImage(Custom11FocusImagePath)</value>
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4)">Skin.SetImage(Custom15FocusImagePath)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom3FocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom7FocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom11FocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom15FocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
 	</variable>
 
 	<variable name="AddMoreCategoryBtn3BackgroundImagePath">
@@ -2953,10 +2969,10 @@
 	</variable>
 
 	<variable name="AddMoreCategoryBtn4NoFocusImagePathClick">
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings)">Skin.SetImage(Custom4NoFocusImagePath)</value>
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2)">Skin.SetImage(Custom8NoFocusImagePath)</value>
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3)">Skin.SetImage(Custom12NoFocusImagePath)</value>
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4)">Skin.SetImage(Custom16NoFocusImagePath)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom4NoFocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom8NoFocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom12NoFocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom16NoFocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
 	</variable>
 
 	<variable name="AddMoreCategoryBtn4FocusImagePath">
@@ -2967,10 +2983,10 @@
 	</variable>
 
 	<variable name="AddMoreCategoryBtn4FocusImagePathClick">
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings)">Skin.SetImage(Custom4FocusImagePath)</value>
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2)">Skin.SetImage(Custom8FocusImagePath)</value>
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3)">Skin.SetImage(Custom12FocusImagePath)</value>
-		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4)">Skin.SetImage(Custom16FocusImagePath)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom4FocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom8FocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom12FocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + !StringCompare(Skin.String(ExtraCategoriesPath),special://skin/extras/)">Skin.SetString(Custom16FocusImagePath,$INFO[Skin.String(ExtraCategoriesPath)])</value>
 	</variable>
 
 	<variable name="AddMoreCategoryBtn4BackgroundImagePath">
