@@ -140,7 +140,7 @@
 				<label>$LOCALIZE[31042]</label>
 				<selected>Skin.HasSetting(HideAlbumThumbsLabel)</selected>
 				<onclick>Skin.ToggleSetting(HideAlbumThumbsLabel)</onclick>	
-				<visible>Skin.String(CurrentViewMode,63) + [Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists) | Substring(Container.FolderPath,addons:)]</visible>
+				<visible>Skin.String(CurrentViewMode,63) + [Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists) | Container.Content(Addons)]</visible>
 			</control>
 			<control type="radiobutton" id="3082">
 				<description>Thumbnail Show Rating (Movies)</description>
@@ -188,7 +188,7 @@
 				<label>$LOCALIZE[31043]</label>
 				<selected>!Skin.HasSetting(ShowAddonsThumbnailFanart)</selected>
 				<onclick>Skin.ToggleSetting(ShowAddonsThumbnailFanart)</onclick>	
-				<visible>Skin.String(CurrentViewMode,63) + Substring(Container.FolderPath,addons:)</visible>
+				<visible>Skin.String(CurrentViewMode,63) + Container.Content(Addons)</visible>
 			</control>
 			<control type="radiobutton" id="3041">
 				<description>List Extra Thumbs (Movies) (Episodes)</description>
@@ -281,7 +281,7 @@
 				<label>$LOCALIZE[31043]</label>
 				<selected>Skin.HasSetting(HideAddonsListFanart)</selected>
 				<onclick>Skin.ToggleSetting(HideAddonsListFanart)</onclick>
-				<visible>Skin.String(CurrentViewMode,52) + Substring(Container.FolderPath,addons:)</visible>
+				<visible>Skin.String(CurrentViewMode,52) + Container.Content(Addons)</visible>
 			</control>
 			<control type="radiobutton" id="1095">
 				<description>Wide List Hide Description (Music)</description>
@@ -424,7 +424,7 @@
 				<label>$LOCALIZE[31043]</label>
 				<selected>Skin.HasSetting(HideAddonsWideListFanart)</selected>
 				<onclick>Skin.ToggleSetting(HideAddonsWideListFanart)</onclick>
-				<visible>Skin.String(CurrentViewMode,90) + Substring(Container.FolderPath,addons:)</visible>
+				<visible>Skin.String(CurrentViewMode,90) + Container.Content(Addons)</visible>
 			</control>
 			<control type="radiobutton" id="1036">
 				<description>List Info Hide Description (Music)</description>
@@ -560,7 +560,7 @@
 				<label>$LOCALIZE[31043]</label>
 				<selected>Skin.HasSetting(HideAddonsListInfoFanart)</selected>
 				<onclick>Skin.ToggleSetting(HideAddonsListInfoFanart)</onclick>
-				<visible>Skin.String(CurrentViewMode,91) + Substring(Container.FolderPath,addons:)</visible>
+				<visible>Skin.String(CurrentViewMode,91) + Container.Content(Addons)</visible>
 			</control>
 			<control type="radiobutton" id="4023">
 				<description>List Info Hide Fanart (Programs)</description>
@@ -1202,7 +1202,7 @@
 				<label>$LOCALIZE[31043]</label>
 				<selected>Skin.HasSetting(HideAddonsWrapListInfoFanart)</selected>
 				<onclick>Skin.ToggleSetting(HideAddonsWrapListInfoFanart)</onclick>
-				<visible>Skin.String(CurrentViewMode,93) + Substring(Container.FolderPath,addons:)</visible>
+				<visible>Skin.String(CurrentViewMode,93) + Container.Content(Addons)</visible>
 			</control>
 			<control type="radiobutton" id="4084">
 				<description>Wrap List Info Hide Fanart (Programs)</description>
@@ -1445,7 +1445,7 @@
 				<label>$LOCALIZE[31025]</label>
 				<selected>!Skin.HasSetting(ShowThumbnailViewScrollbar)</selected>
 				<onclick>Skin.ToggleSetting(ShowThumbnailViewScrollbar)</onclick>
-				<visible>Skin.String(CurrentViewMode,63) + [Window.IsActive(MusicLibrary) | Substring(Container.FolderPath,addons:)]</visible>
+				<visible>Skin.String(CurrentViewMode,63) + [Window.IsActive(MusicLibrary) | Container.Content(Addons)]</visible>
 			</control>
 			<control type="radiobutton" id="2062">
 				<description>Thumbnail Hide Scrollbar</description>
@@ -2018,7 +2018,7 @@
 				<onclick>ReloadSkin()</onclick>
 				<include>ReloadSkinNotification</include>
 				<onclick>Container.SetViewMode(92)</onclick>
-				<visible>Skin.String(CurrentViewMode,92) + Substring(Container.FolderPath,addons:)</visible>
+				<visible>Skin.String(CurrentViewMode,92) + Container.Content(Addons)</visible>
 			</control>
 			<control type="radiobutton" id="3009">
 				<description>List Info 2 Use Style 2 (Addons)</description>
@@ -2029,7 +2029,7 @@
 				<onclick>ReloadSkin()</onclick>
 				<include>ReloadSkinNotification</include>
 				<onclick>Container.SetViewMode(92)</onclick>
-				<visible>Skin.String(CurrentViewMode,92) + Substring(Container.FolderPath,addons:)</visible>
+				<visible>Skin.String(CurrentViewMode,92) + Container.Content(Addons)</visible>
 			</control>
 			<control type="radiobutton" id="3012">
 				<description>Wrap List Info Use Style 1 (Addons)</description>
@@ -2039,7 +2039,7 @@
 				<onclick>Skin.SetString(AddonsWrapInfoStyle,1)</onclick>
 				<onclick>ReloadSkin()</onclick>
 				<include>ReloadSkinNotification</include>
-				<visible>Skin.String(CurrentViewMode,93) + Substring(Container.FolderPath,addons:)</visible>
+				<visible>Skin.String(CurrentViewMode,93) + Container.Content(Addons)</visible>
 			</control>
 			<control type="radiobutton" id="3013">
 				<description>Wrap List Info Use Style 2 (Addons)</description>
@@ -2049,7 +2049,7 @@
 				<onclick>Skin.SetString(AddonsWrapInfoStyle,2)</onclick>
 				<onclick>ReloadSkin()</onclick>
 				<include>ReloadSkinNotification</include>
-				<visible>Skin.String(CurrentViewMode,93) + Substring(Container.FolderPath,addons:)</visible>
+				<visible>Skin.String(CurrentViewMode,93) + Container.Content(Addons)</visible>
 			</control>
 			<control type="radiobutton" id="4087">
 				<description>Wrap List Info Use Style 1 (Programs)</description>

@@ -1233,7 +1233,7 @@
 				<visible>!IsEmpty(ListItem.Property(Artist_Formed))</visible>
 			</control>
 		</itemlayout>
-		<itemlayout condition="Substring(Container.FolderPath,addons:)" height="74">
+		<itemlayout condition="Container.Content(Addons)" height="74">
 			<include>ListTallStyleNoFocus</include>
 			<control type="image">
 				<description>Cover</description>
@@ -1917,7 +1917,7 @@
 				</control>
 			</control>
 		</focusedlayout>
-		<focusedlayout condition="Substring(Container.FolderPath,addons:)" height="74">
+		<focusedlayout condition="Container.Content(Addons)" height="74">
 			<include>ListTallStyleFocus</include>
 			<control type="image">
 				<description>Cover</description>
@@ -2445,7 +2445,7 @@
 			<ondown>63</ondown>
 			<onleft>850</onleft>
 			<onright>150</onright>
-			<visible>Container.Content(Albums) | Container.Content(Songs) | Substring(Container.FolderPath,addons:)</visible>
+			<visible>Container.Content(Albums) | Container.Content(Songs) | Container.Content(Addons)</visible>
 			<itemlayout height="270" width="249">	
 				<control type="image">
 					<description>Cover Case</description>
@@ -2531,7 +2531,7 @@
 			<ondown>63</ondown>
 			<onleft>850</onleft>
 			<onright>150</onright>
-			<visible>Container.Content(Albums) | Container.Content(Songs) | Substring(Container.FolderPath,addons:)</visible>
+			<visible>Container.Content(Albums) | Container.Content(Songs) | Container.Content(Addons)</visible>
 			<itemlayout height="177" width="177">	
 				<control type="image">
 					<description>Cover Case</description>

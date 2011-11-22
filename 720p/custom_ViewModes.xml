@@ -59,7 +59,7 @@
 				<label>$LOCALIZE[31107]</label>
 				<onclick>Container.SetViewMode(63)</onclick>
 				<onclick>Dialog.Close(3002)</onclick>
-				<visible>Container.Content(Albums) | Container.Content(Songs) | Window.IsActive(MusicPlaylist) | Substring(Container.FolderPath,addons:)</visible>
+				<visible>Container.Content(Albums) | Container.Content(Songs) | Window.IsActive(MusicPlaylist) | Container.Content(Addons)</visible>
 			</control>
 			<control type="button" id="6">
 				<description>List</description>
@@ -107,7 +107,7 @@
 				<label>$LOCALIZE[31114]</label>
 				<onclick>Container.SetViewMode(90)</onclick>
 				<onclick>Dialog.Close(3002)</onclick>
-				<visible>Substring(Container.FolderPath,addons:)</visible>
+				<visible>Container.Content(Addons)</visible>
 			</control>
 			<control type="button" id="12">
 				<description>List Media Info (Movies)</description>
@@ -147,7 +147,7 @@
 				<label>$LOCALIZE[31111]</label>
 				<onclick>Container.SetViewMode(91)</onclick>
 				<onclick>Dialog.Close(3002)</onclick>
-				<visible>Substring(Container.FolderPath,addons:)</visible>
+				<visible>Container.Content(Addons)</visible>
 			</control>
 			<control type="button" id="4001">
 				<description>List Media Info (Programs)</description>
@@ -299,7 +299,7 @@
 				<label>$LOCALIZE[31106]</label>
 				<onclick>Container.SetViewMode(93)</onclick>
 				<onclick>Dialog.Close(3002)</onclick>
-				<visible>Substring(Container.FolderPath,addons:)</visible>
+				<visible>Container.Content(Addons)</visible>
 			</control>
 			<control type="button" id="4007">
 				<description>Wrap List Media Info (Programs)</description>
@@ -381,7 +381,7 @@
 				<texture>gui/view-thumbnail.png</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>Container.Content(Movies) | Container.Content(Seasons) | [Container.Content(TVShows) + Skin.HasSetting(UseTVShowsPosterCover)]
-				| Container.Content(Albums) | Container.Content(Songs) | Window.IsActive(MusicPlaylist) | Substring(Container.FolderPath,addons:)</visible>
+				| Container.Content(Albums) | Container.Content(Songs) | Window.IsActive(MusicPlaylist) | Container.Content(Addons)</visible>
 			</control>
 			<control type="image">
 				<posx>18</posx>
@@ -396,7 +396,7 @@
 				<aspectratio>keep</aspectratio>
 				<visible>[Window.IsActive(VideoLibrary) + [Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Episodes)]]
 				| [Window.IsActive(MusicLibrary) + [Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)]]
-				| Window.IsActive(MusicPlaylist) | Substring(Container.FolderPath,addons:)</visible>
+				| Window.IsActive(MusicPlaylist) | Container.Content(Addons)</visible>
 			</control>
 			<control type="image">
 				<posx>18</posx>
@@ -405,7 +405,7 @@
 				<aspectratio>keep</aspectratio>
 				<visible>[Window.IsActive(VideoLibrary) + [Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Episodes)]] 
 				| [Window.IsActive(MusicLibrary) + [Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)]]
-				| Substring(Container.FolderPath,addons:)</visible>
+				| Container.Content(Addons)</visible>
 			</control>
 			<control type="image">
 				<posx>18</posx>
@@ -436,7 +436,7 @@
 				<texture>gui/view-wrap-info.png</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>[Window.IsActive(VideoLibrary) + Container.Content(Movies)] | [Window.IsActive(MusicLibrary) + Container.Content(Albums)]
-				| Substring(Container.FolderPath,addons:)</visible>
+				| Container.Content(Addons)</visible>
 			</control>
 			<control type="image">
 				<posx>18</posx>
