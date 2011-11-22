@@ -230,7 +230,7 @@
 				<posx>90</posx>
 				<width>176</width>
 				<height>34</height>
-				<font>MenuBarBtnFont</font>
+				<font>HomeSubMenuBtnFont</font>
 				<textcolor>HomeSubMenuColor</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -242,7 +242,7 @@
 				<posx>90</posx>
 				<width>176</width>
 				<height>34</height>
-				<font>MenuBarBtnFont</font>
+				<font>HomeSubMenuBtnFont</font>
 				<textcolor>SelectedColor2</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -253,7 +253,7 @@
 				<posx>90</posx>
 				<width>176</width>
 				<height>34</height>
-				<font>MenuBarBtnFont</font>
+				<font>HomeSubMenuBtnFont</font>
 				<textcolor>HomeSubMenuColor</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
