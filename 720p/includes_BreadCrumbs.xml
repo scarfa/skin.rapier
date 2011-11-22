@@ -59,7 +59,7 @@
 				<include>BreadCrumbLabel</include>
 				<label>[UPPERCASE][B]$LOCALIZE[20342][/B][/UPPERCASE]</label>
 				<visible>[Container.Content(Movies) | Substring(Container.FolderPath,videodb://1/)]
-				+ ![Substring(Container.FolderPath,videodb://4/) | Substring(Container.FolderPath,.xsp,Right)]</visible>
+				+ ![Substring(Container.FolderPath,videodb://4/) | Substring(Container.FolderPath,.xsp,Right) | Substring(Container.FolderPath,plugin:)]</visible>
 				<include>BreadCrumbSlideLvl2Anim</include>
 			</control>			
 			<control type="label" id="5503">
@@ -67,7 +67,7 @@
 				<include>BreadCrumbLabel</include>
 				<label>[UPPERCASE][B]$LOCALIZE[20343][/B][/UPPERCASE]</label>
 				<visible>[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons) | Substring(Container.FolderPath,videodb://2/)]
-				+ ![Substring(Container.FolderPath,videodb://5/) | Substring(Container.FolderPath,.xsp,Right)]</visible>
+				+ ![Substring(Container.FolderPath,videodb://5/) | Substring(Container.FolderPath,.xsp,Right) | Substring(Container.FolderPath,plugin:)]</visible>
 				<include>BreadCrumbSlideLvl2Anim</include>
 			</control>		
 			<control type="label" id="5504">
@@ -75,7 +75,7 @@
 				<include>BreadCrumbLabel</include>
 				<label>[UPPERCASE][B]$LOCALIZE[20389][/B][/UPPERCASE]</label>
 				<visible>[Container.Content(MusicVideos) | Substring(Container.FolderPath,videodb://3/) | Substring(Container.FolderPath,videodb://6/)]
-				+ ![Substring(Container.FolderPath,videodb://6/) | Substring(Container.FolderPath,.xsp,Right)]</visible>
+				+ ![Substring(Container.FolderPath,videodb://6/) | Substring(Container.FolderPath,.xsp,Right) | Substring(Container.FolderPath,plugin:)]</visible>
 				<include>BreadCrumbSlideLvl2Anim</include>
 			</control>
 			<control type="image">
