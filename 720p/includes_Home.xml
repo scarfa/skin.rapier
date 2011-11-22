@@ -1022,6 +1022,7 @@
 	
 	<include name="HomeSubMenus">
 		<control type="group" id="851">
+			<posy>2</posy>
 			<animation effect="fade" start="100" end="25" time="400" condition="!ControlGroup(851).HasFocus">Conditional</animation>
 
 			<control type="list" id="110">
@@ -2524,6 +2525,7 @@
 	
 	<include name="HomeSystemSubMenus">
 		<control type="group" id="852">
+			<posy>2</posy>
 			<animation effect="fade" start="100" end="25" time="400" condition="!ControlGroup(852).HasFocus">Conditional</animation>
 			
 			<control type="list" id="110">
