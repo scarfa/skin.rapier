@@ -1,12 +1,10 @@
 <includes>
-	<!--//// START LIST VIEWS ///////////////////////////////////////////////////////////////////-->
+	<!--//// START LIST INFO VIEWS //////////////////////////////////////////////////////////////-->
 	<include name="LiveTVChannelView">	
 		<control type="group" id="500">	
 			<defaultcontrol always="true">11</defaultcontrol>
 			<visible>Control.IsVisible(11)</visible>
 			<include>MediaViewOpenCloseAnim</include>
-
-			<include>LiveTVListInfo</include>
 
 			<control type="list" id="11">
 				<posx>605</posx>
@@ -40,8 +38,6 @@
 			<visible>Control.IsVisible(12)</visible>
 			<include>MediaViewOpenCloseAnim</include>
 
-			<include>LiveTVListInfo</include>
-
 			<control type="list" id="12">
 				<posx>605</posx>
 				<posy>110</posy>
@@ -74,8 +70,6 @@
 			<visible>Control.IsVisible(13)</visible>
 			<include>MediaViewOpenCloseAnim</include> 
 
-			<include>LiveTVListInfo</include>
-
 			<control type="list" id="13">
 				<posx>605</posx>
 				<posy>110</posy>
@@ -102,23 +96,24 @@
 		</control>		
 	</include>
 
-	<include name="LiveTVListInfo">
-		<control type="image">
-			<posx>30</posx>
-			<posy>106</posy>
-			<width>1220</width>
-			<height>525</height>
-			<texture border="7">panels/content-panel.png</texture>
-			<include>PanelFadeAnim</include>
-		</control>
-
+	<include name="LiveTVListInfoStyleCommonItems">
 		<control type="group">
+			<visible>Control.IsVisible(11) | Control.IsVisible(12)
+			| Control.IsVisible(13)</visible>
+
+			<control type="image">
+				<posx>30</posx>
+				<posy>106</posy>
+				<width>1220</width>
+				<height>525</height>
+				<texture border="7">panels/content-panel.png</texture>
+				<include>PanelFadeAnim</include>
+			</control>
 
 			<control type="group">
 				<description>Cover Area</description>
 				<posx>40</posx>
 				<posy>116</posy>
-
 				<control type="image">
 					<description>Media Info Background</description>
 					<width>554</width>
@@ -157,6 +152,7 @@
 				</control>
 
 				<control type="videowindow">
+					<description>Video</description>
 					<posx>4</posx>
 					<posy>4</posy>
 					<width>546</width>
@@ -170,7 +166,6 @@
 				<description>Media Info Area</description>
 				<posx>42</posx>
 				<posy>434</posy>
-
 				<control type="grouplist">
 					<description>Title</description>
 					<posx>10</posx>
@@ -346,6 +341,7 @@
 				<texture border="0,0,10,2">views/list-separator.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
+
 			<control type="image">
 				<description>Cover</description>
 				<posx>0</posx>
@@ -356,7 +352,8 @@
 				<bordersize>5</bordersize>
 				<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
 				<aspectratio>keep</aspectratio>
-			</control>							
+			</control>
+
 			<control type="label">
 				<description>Label</description>
 				<posx>80</posx>
@@ -369,6 +366,7 @@
 				<aligny>center</aligny>
 				<visible>Control.IsVisible(11) | Control.IsVisible(12)</visible>
 			</control>
+
 			<control type="label">
 				<description>Label2</description>
 				<posx>80</posx>
@@ -381,6 +379,7 @@
 				<label>$INFO[ListItem.Title]</label>
 				<visible>Control.IsVisible(11) | Control.IsVisible(12)</visible>
 			</control>
+
 			<control type="label">
 				<description>Label</description>
 				<posx>80</posx>
@@ -393,6 +392,7 @@
 				<aligny>center</aligny>
 				<visible>Control.IsVisible(13)</visible>
 			</control>
+
 			<control type="label">
 				<description>Label2</description>
 				<posx>80</posx>
@@ -405,6 +405,7 @@
 				<label>$INFO[ListItem.StartDate]$INFO[ListItem.StartTime, - ]</label>
 				<visible>Control.IsVisible(13)</visible>
 			</control>
+
 			<control type="image">
 				<posx>580</posx>
 				<posy>26</posy>
@@ -444,6 +445,7 @@
 				<texture border="0,0,10,2">views/list-separator.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
+
 			<control type="image">
 				<posx>0</posx>
 				<width>620</width>
@@ -454,6 +456,7 @@
 				<include>ListViewSelectFadeAnim</include>
 				<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewScrollAnim</include>
 			</control>
+
 			<control type="image">
 				<posx>0</posx>
 				<width>620</width>
@@ -463,6 +466,7 @@
 				<visible>!Control.HasFocus(11) | !Control.HasFocus(12) | !Control.HasFocus(13)</visible>
 				<include>ListViewSelectFadeAnim2</include>
 			</control>
+
 			<control type="image">
 				<description>Cover</description>
 				<posx>0</posx>
@@ -474,7 +478,8 @@
 				<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
 				<aspectratio>keep</aspectratio>
 				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
-			</control>	
+			</control>
+
 			<control type="group">
 				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
 				<control type="label">
@@ -490,6 +495,7 @@
 					<scroll>yes</scroll>
 					<visible>Control.IsVisible(11) | Control.IsVisible(12)</visible>
 				</control>
+
 				<control type="label">
 					<description>Label2</description>
 					<posx>80</posx>
@@ -502,6 +508,7 @@
 					<label>$INFO[ListItem.Title]</label>
 					<visible>Control.IsVisible(11) | Control.IsVisible(12)</visible>
 				</control>
+
 				<control type="label">
 					<description>Label</description>
 					<posx>80</posx>
@@ -515,6 +522,7 @@
 					<scroll>yes</scroll>
 					<visible>Control.IsVisible(13)</visible>
 				</control>
+
 				<control type="label">
 					<description>Label2</description>
 					<posx>80</posx>
@@ -528,6 +536,7 @@
 					<visible>Control.IsVisible(13)</visible>
 				</control>	
 			</control>
+
 			<control type="image">
 				<posx>580</posx>
 				<posy>26</posy>
@@ -554,22 +563,34 @@
 			</control>
 		</focusedlayout>					
 	</include>
-	<!--//// END LIST VIEWS /////////////////////////////////////////////////////////////////////-->
+	<!--//// END LIST INFO VIEWS ////////////////////////////////////////////////////////////////-->
 
-	<!--//// START TIMELINE VIEW ////////////////////////////////////////////////////////////////-->
-	<include name="EPGTimelineView">
+	<!--//// START COLUMN INFO VIEWS ////////////////////////////////////////////////////////////-->
+	<include name="LiveTVEPGTimelineView">		
 		<control type="group" id="500">
-			<posx>39</posx>
+			<posx>40</posx>
 			<posy>110</posy>
 			<defaultcontrol always="true">10</defaultcontrol>
 			<visible>Control.IsVisible(10)</visible>
 			<include>MediaViewOpenCloseAnim</include>
 
-			<include>LiveTVEPGInfo</include>
+			<control type="image">
+				<width>215</width>
+				<height>30</height>
+				<texture border="8">pvr/column-left.png</texture>
+				<colordiffuse>dd0c2134</colordiffuse>
+			</control>			
+			<control type="image">
+				<posx>220</posx>
+				<width>1030</width>
+				<height>30</height>
+				<texture border="8" flipx="true">pvr/column-left.png</texture>
+				<colordiffuse>dd0c2134</colordiffuse>
+			</control>
 
 			<control type="epggrid" id="10">
 				<width>1240</width>
-				<height>413</height>
+				<height>370</height>
 				<pagecontrol>10</pagecontrol>
 				<scrolltime>350</scrolltime>
 				<timeblocks>40</timeblocks>
@@ -578,98 +599,87 @@
 				<onright>31</onright>
 				<onup>10</onup>
 				<ondown>10</ondown>
-
-				<rulerlayout height="35" width="42">
-					<control type="image" id="1">
-						<width>47</width>
-						<height>29</height>
-						<posx>0</posx>
-						<posy>0</posy>
-						<texture border="8">pvr/column-focus.png</texture>
-						<colordiffuse>dd0c2134</colordiffuse>
-					</control>
-
-					<control type="label" id="2">
-						<posx>10</posx>
-						<posy>0</posy>
-						<width>34</width>
-						<height>29</height>
-						<font>font13</font>
-						<textcolor>GreyColor2</textcolor>
-						<selectedcolor>GreyColor2</selectedcolor>
+				<rulerlayout height="34" width="42">
+					<control type="label">
+						<description>Date</description>
+						<posx>15</posx>
+						<width>310</width>
+						<height>30</height>
 						<aligny>center</aligny>
 						<align>left</align>
+						<font>WideListFont</font>
+						<textcolor>DefaultColor3</textcolor>
+						<selectedcolor>SelectedColor</selectedcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</rulerlayout>
 
 				<channellayout height="42" width="220">
 					<animation effect="fade" start="110" time="200">UnFocus</animation>
-					<control type="image" id="1">
-						<posx>0</posx>
-						<posy>0</posy>
+					<control type="image">
 						<width>215</width>
 						<height>38</height>
 						<texture border="8">pvr/column-left.png</texture>
 						<colordiffuse>dd0c2134</colordiffuse>
 					</control>
 
-					<control type="label" id="1">
+					<control type="label">
+						<description>Channel Number</description>
 						<posx>15</posx>
-						<posy>6</posy>
 						<width>215</width>
 						<height>38</height>
-						<font>WrapListFont</font>
-						<textcolor>GreyColor2</textcolor>
-						<selectedcolor>DefaultColor3</selectedcolor>
-						<label>$INFO[ListItem.ChannelNumber]</label>
+						<aligny>center</aligny>
+						<font>ListFont2</font>
+						<textcolor>DefaultColor2</textcolor>
+						<selectedcolor>SelectedColor</selectedcolor>
+						<label>$INFO[ListItem.ChannelNumber]</label>		
 					</control>
 
-					<control type="label" id="1">
+					<control type="label">
+						<description>Channel Name</description>
 						<posx>200</posx>
-						<posy>7</posy>
 						<width>150</width>
 						<height>38</height>
-						<font>font18</font>
-						<textcolor>WhiteColor</textcolor>
-						<selectedcolor>DefaultColor3</selectedcolor>
 						<align>right</align>
+						<aligny>center</aligny>
+						<font>ListFont</font>
+						<textcolor>DefaultColor2</textcolor>
+						<selectedcolor>SelectedColor</selectedcolor>
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
 				</channellayout>
 
 				<focusedchannellayout height="42" width="220">
 					<animation effect="fade" start="110" time="200">OnFocus</animation>
-					<control type="image" id="1">
-						<posx>0</posx>
-						<posy>0</posy>
+					<control type="image">
 						<width>215</width>
 						<height>38</height>
-						<texture border="8">pvr/column-focus.png</texture>
+						<texture border="8">pvr/column-left.png</texture>
 						<colordiffuse>ff000000</colordiffuse>
 					</control>
 
-					<control type="label" id="1">
+					<control type="label">
+						<description>Channel Number</description>
 						<posx>15</posx>
-						<posy>6</posy>
 						<width>215</width>
 						<height>38</height>
-						<font>WrapListFont</font>
-						<textcolor>GreyColor2</textcolor>
-						<selectedcolor>DefaultColor3</selectedcolor>
-						<label>$INFO[ListItem.ChannelNumber]</label>
+						<aligny>center</aligny>
+						<font>ListFont2</font>
+						<textcolor>DefaultColor2</textcolor>
+						<selectedcolor>SelectedColor</selectedcolor>
+						<label>$INFO[ListItem.ChannelNumber]</label>		
 					</control>
 
-					<control type="label" id="1">
+					<control type="label">
+						<description>Channel Name</description>
 						<posx>200</posx>
-						<posy>7</posy>
 						<width>150</width>
 						<height>38</height>
-						<font>font18</font>
-						<textcolor>WhiteColor</textcolor>
-						<selectedcolor>DefaultColor3</selectedcolor>
 						<align>right</align>
-						<selectedcolor>selected</selectedcolor>
+						<aligny>center</aligny>
+						<font>ListFont</font>
+						<textcolor>DefaultColor2</textcolor>
+						<selectedcolor>SelectedColor</selectedcolor>
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
 				</focusedchannellayout>
@@ -781,11 +791,11 @@
 						<posx>8</posx>
 						<width>85</width>
 						<height>38</height>
-						<font>WideListFont2</font>
-						<textcolor>WhiteColor</textcolor>
-						<selectedcolor>SelectedColor</selectedcolor>
 						<aligny>center</aligny>
 						<align>left</align>
+						<font>ListFont</font>
+						<textcolor>WhiteColor</textcolor>
+						<selectedcolor>SelectedColor</selectedcolor>
 						<info>ListItem.Label</info>
 						<visible>!ListItem.HasTimer</visible>
 					</control>
@@ -794,11 +804,11 @@
 						<posx>40</posx>
 						<width>20</width>
 						<height>38</height>
-						<font>WideListFont2</font>
-						<textcolor>WhiteColor</textcolor>
-						<selectedcolor>SelectedColor</selectedcolor>
 						<aligny>center</aligny>
 						<align>left</align>
+						<font>ListFont</font>
+						<textcolor>WhiteColor</textcolor>
+						<selectedcolor>SelectedColor</selectedcolor>
 						<info>ListItem.Label</info>
 						<visible>ListItem.HasTimer</visible>
 					</control>
@@ -827,7 +837,7 @@
 					<control type="image" id="2">
 						<width>98</width>
 						<height>38</height>
-						<texture border="8">pvr/column-focus.png</texture>
+						<texture border="8">pvr/column.png</texture>
 						<colordiffuse>ff000000</colordiffuse>
 					</control>
 
@@ -835,11 +845,11 @@
 						<posx>8</posx>
 						<width>85</width>
 						<height>38</height>
-						<font>WideListFont2</font>
-						<textcolor>WhiteColor</textcolor>
-						<selectedcolor>SelectedColor</selectedcolor>
 						<aligny>center</aligny>
 						<align>left</align>
+						<font>ListFont</font>
+						<textcolor>WhiteColor</textcolor>
+						<selectedcolor>SelectedColor</selectedcolor>
 						<info>ListItem.Label</info>
 						<visible>!ListItem.HasTimer</visible>
 					</control>
@@ -848,11 +858,11 @@
 						<posx>40</posx>
 						<width>20</width>
 						<height>38</height>
-						<font>WideListFont2</font>
-						<textcolor>WhiteColor</textcolor>
-						<selectedcolor>SelectedColor</selectedcolor>
 						<aligny>center</aligny>
 						<align>left</align>
+						<font>ListFont</font>
+						<textcolor>WhiteColor</textcolor>
+						<selectedcolor>SelectedColor</selectedcolor>
 						<info>ListItem.Label</info>
 						<visible>ListItem.HasTimer</visible>
 					</control>
@@ -880,9 +890,122 @@
 		</control>
 	</include>
 
-	<include name="LiveTVEPGInfo">
+	<include name="LiveTVGuideNowNextView">
+		<control type="group" id="500">
+			<posx>40</posx>
+			<posy>110</posy>
+			<defaultcontrol always="true">16</defaultcontrol>
+			<visible>Control.IsVisible(16)</visible>
+			<include>MediaViewOpenCloseAnim</include>
+			<include>LiveTVColumnsInfo2StyleHeaderItems</include>
+
+			<control type="list" id="16">
+				<posy>34</posy>
+				<width>1220</width>
+				<height>336</height>
+				<onup>16</onup>
+				<ondown>16</ondown>
+				<onleft>850</onleft>
+				<onright>150</onright>
+				<pagecontrol>904</pagecontrol>
+				<preloaditems>2</preloaditems>
+				<include>LiveTVColumnsInfo2StyleItemLayout</include>
+				<include>LiveTVColumnsInfo2StyleFocusedLayout</include>
+			</control>
+
+			<include>ColumnsViewScrollbar</include>
+			<include>ViewsDialogPopUpScreenDim</include>
+		</control>
+	</include>
+
+	<include name="LiveTVGuideChannelView">
+		<control type="group" id="500">
+			<posx>40</posx>
+			<posy>110</posy>
+			<defaultcontrol always="true">15</defaultcontrol>
+			<visible>Control.IsVisible(15)</visible>
+			<include>MediaViewOpenCloseAnim</include>
+			<include>LiveTVColumnsInfoStyleHeaderItems</include>
+
+			<control type="list" id="15">
+				<posy>34</posy>
+				<width>1220</width>
+				<height>336</height>
+				<onup>15</onup>
+				<ondown>15</ondown>
+				<onleft>850</onleft>
+				<onright>150</onright>
+				<pagecontrol>904</pagecontrol>
+				<preloaditems>2</preloaditems>
+				<include>LiveTVColumnsInfoStyleItemLayout</include>
+				<include>LiveTVColumnsInfoStyleFocusedLayout</include>
+			</control>
+
+			<include>ColumnsViewScrollbar</include>
+			<include>ViewsDialogPopUpScreenDim</include>
+		</control>
+	</include>
+
+	<include name="LiveTVSearchView">
+		<control type="group" id="500">
+			<posx>40</posx>
+			<posy>110</posy>
+			<defaultcontrol always="true">17</defaultcontrol>
+			<visible>Control.IsVisible(17)</visible>
+			<include>MediaViewOpenCloseAnim</include>
+			<include>LiveTVColumnsInfoStyleHeaderItems</include>
+
+			<control type="list" id="17">
+				<posy>34</posy>
+				<width>1220</width>
+				<height>336</height>
+				<onup>17</onup>
+				<ondown>17</ondown>
+				<onleft>850</onleft>
+				<onright>150</onright>
+				<pagecontrol>904</pagecontrol>
+				<preloaditems>2</preloaditems>
+				<include>LiveTVColumnsInfoStyleItemLayout</include>
+				<include>LiveTVColumnsInfoStyleFocusedLayout</include>
+			</control>
+
+			<include>ColumnsViewScrollbar</include>
+			<include>ViewsDialogPopUpScreenDim</include>
+		</control>
+	</include>
+
+	<include name="LiveTVTimersView">
+		<control type="group" id="500">
+			<posx>40</posx>
+			<posy>110</posy>
+			<defaultcontrol always="true">14</defaultcontrol>
+			<visible>Control.IsVisible(14)</visible>
+			<include>MediaViewOpenCloseAnim</include>
+			<include>LiveTVColumnsInfoStyleHeaderItems</include>
+
+			<control type="list" id="14">
+				<posy>34</posy>
+				<width>1220</width>
+				<height>336</height>
+				<onup>14</onup>
+				<ondown>14</ondown>
+				<onleft>850</onleft>
+				<onright>150</onright>
+				<pagecontrol>904</pagecontrol>
+				<preloaditems>2</preloaditems>
+				<include>LiveTVColumnsInfoStyleItemLayout</include>
+				<include>LiveTVColumnsInfoStyleFocusedLayout</include>
+			</control>
+
+			<include>ColumnsViewScrollbar</include>
+			<include>ViewsDialogPopUpScreenDim</include>
+		</control>
+	</include>
+
+	<include name="LiveTVColumnsInfoStyleCommonItems">
 		<control type="group">
-			<posy>430</posy>
+			<posx>40</posx>
+			<posy>510</posy>
 			<visible>Control.IsVisible(10) | Control.IsVisible(15)
 			| Control.IsVisible(16) | Control.IsVisible(17)</visible>
 
@@ -898,6 +1021,7 @@
 					<animation effect="fade" end="50" condition="true">Conditional</animation>
 				</control>
 				<control type="videowindow">
+					<description>Video</description>
 					<posx>4</posx>
 					<posy>4</posy>
 					<width>207</width>
@@ -907,11 +1031,12 @@
 			</control>
 
 			<control type="image">
-				<posx>39</posx>
-				<width>128</width>
-				<height>64</height>
+				<description>Logo</description>
+				<posx>15</posx>
+				<width>185</width>
+				<height>185</height>
 				<texture>$INFO[ListItem.Icon]</texture>
-				<aspectratio align="right">keep</aspectratio>
+				<aspectratio aligny="top">keep</aspectratio>
 				<fadetime>IconCrossfadeTime</fadetime>
 				<visible>[!Window.IsActive(601) + !Window.IsActive(603) + !Window.IsActive(606)]
 				+ [!Player.HasVideo | Control.IsVisible(17)]</visible>
@@ -922,29 +1047,30 @@
 				<posy>0</posy>
 				<itemgap>0</itemgap>
 				<visible>!Window.IsActive(601) + !Window.IsActive(603) + !Window.IsActive(606)</visible>
-				<control type="label" id="1">
+				<control type="label">
+					<description>Title</description>
 					<width>700</width>
 					<height>25</height>
-					<font>FullMediaInfoTitleFont</font>
-					<textcolor>GreyColor2</textcolor>
 					<aligny>center</aligny>
-					<label>$INFO[ListItem.Title]</label>
+					<font>FullMediaInfoTitleFont</font>
+					<textcolor>MediaInfoTitleColor</textcolor>
+					<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
 				</control>
-				<control type="label" id="1">
+				<control type="label">
+					<description>Info</description>
 					<width>700</width>
 					<height>19</height>
 					<aligny>center</aligny>
 					<font>FullMediaInfoFont</font>
-					<textcolor>DefaultColor2</textcolor>
+					<textcolor>MediaInfoItemColor</textcolor>
 					<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]$INFO[ListItem.Genre,  -  ]</label>
 				</control>
-				<control type="label" id="1">
-					<label/>
+				<control type="label">
 					<height>5</height>
 				</control>
 				<control type="textbox">
 					<description>Plot</description>
-					<width>950</width>
+					<width>980</width>
 					<height>70</height>
 					<font>MediaInfoDescFont</font>
 					<textcolor>MediaInfoColor</textcolor>
@@ -959,220 +1085,100 @@
 			</control>
 		</control>
 	</include>
-	<!--//// END TIMELINE VIEW //////////////////////////////////////////////////////////////////-->
 
-	<!--//// START COLUMN VIEWS /////////////////////////////////////////////////////////////////-->
-	<include name="LiveTVGuideNowNextView">
-		<control type="group" id="500">
-			<posx>39</posx>
-			<posy>110</posy>
-			<defaultcontrol always="true">16</defaultcontrol>
-			<visible>Control.IsVisible(16)</visible>
-			<include>MediaViewOpenCloseAnim</include>
-
-			<include>LiveTVColumns2</include>
-			<include>LiveTVEPGInfo</include>
-
-			<control type="list" id="16">
-				<posy>35</posy>
-				<width>1220</width>
-				<height>378</height>
-				<onup>16</onup>
-				<ondown>16</ondown>
-				<onleft>850</onleft>
-				<onright>150</onright>
-				<pagecontrol>904</pagecontrol>
-				<preloaditems>2</preloaditems>
-				<include>LiveTVListColumns2StyleItemLayout</include>
-				<include>LiveTVListColumns2StyleFocusedLayout</include>
-			</control>
-
-			<include>ColumnsViewScrollbar</include>
-			<include>ViewsDialogPopUpScreenDim</include>
-		</control>
-	</include>
-
-	<include name="LiveTVGuideChannelView">
-		<control type="group" id="500">
-			<posx>39</posx>
-			<posy>110</posy>
-			<defaultcontrol always="true">15</defaultcontrol>
-			<visible>Control.IsVisible(15)</visible>
-			<include>MediaViewOpenCloseAnim</include>
-
-			<include>LiveTVColumns</include>
-			<include>LiveTVEPGInfo</include>
-
-			<control type="list" id="15">
-				<posy>35</posy>
-				<width>1220</width>
-				<height>378</height>
-				<onup>15</onup>
-				<ondown>15</ondown>
-				<onleft>850</onleft>
-				<onright>150</onright>
-				<pagecontrol>904</pagecontrol>
-				<preloaditems>2</preloaditems>
-				<include>LiveTVListColumnsStyleItemLayout</include>
-				<include>LiveTVListColumnsStyleFocusedLayout</include>
-			</control>
-
-			<include>ColumnsViewScrollbar</include>
-			<include>ViewsDialogPopUpScreenDim</include>
-		</control>
-	</include>
-
-	<include name="LiveTVSearchView">
-		<control type="group" id="500">
-			<posx>39</posx>
-			<posy>110</posy>
-			<defaultcontrol always="true">17</defaultcontrol>
-			<visible>Control.IsVisible(17)</visible>
-			<include>MediaViewOpenCloseAnim</include>
-
-			<include>LiveTVColumns</include>
-			<include>LiveTVEPGInfo</include>
-
-			<control type="list" id="17">
-				<posy>35</posy>
-				<width>1220</width>
-				<height>378</height>
-				<onup>17</onup>
-				<ondown>17</ondown>
-				<onleft>850</onleft>
-				<onright>150</onright>
-				<pagecontrol>904</pagecontrol>
-				<preloaditems>2</preloaditems>
-				<include>LiveTVListColumnsStyleItemLayout</include>
-				<include>LiveTVListColumnsStyleFocusedLayout</include>
-			</control>
-
-			<include>ColumnsViewScrollbar</include>
-			<include>ViewsDialogPopUpScreenDim</include>
-		</control>
-	</include>
-
-	<include name="LiveTVTimersView">
-		<control type="group" id="500">
-			<posx>39</posx>
-			<posy>110</posy>
-			<defaultcontrol always="true">14</defaultcontrol>
-			<visible>Control.IsVisible(14)</visible>
-			<include>MediaViewOpenCloseAnim</include>
-
-			<include>LiveTVColumns</include>
-
-			<control type="list" id="14">
-				<posy>35</posy>
-				<width>1220</width>
-				<height>378</height>
-				<onup>14</onup>
-				<ondown>14</ondown>
-				<onleft>850</onleft>
-				<onright>150</onright>
-				<pagecontrol>904</pagecontrol>
-				<preloaditems>2</preloaditems>
-				<include>LiveTVListColumnsStyleItemLayout</include>
-				<include>LiveTVListColumnsStyleFocusedLayout</include>
-			</control>
-
-			<include>ColumnsViewScrollbar</include>
-			<include>ViewsDialogPopUpScreenDim</include>
-		</control>
-	</include>
-
-	<include name="LiveTVColumns">
+	<include name="LiveTVColumnsInfoStyleHeaderItems">
 		<control type="group">
+			<description>Channel Area</description>
 			<control type="image">
-				<posx>0</posx>
 				<width>215</width>
-				<height>29</height>
-				<texture border="8">pvr/column-focus.png</texture>
+				<height>30</height>
+				<texture border="8">pvr/column-left.png</texture>
 				<colordiffuse>dd0c2134</colordiffuse>
 			</control>
 			<control type="label">
 				<posx>10</posx>
 				<width>215</width>
-				<height>29</height>
-				<font>font13</font>
-				<textcolor>GreyColor2</textcolor>
-				<selectedcolor>GreyColor2</selectedcolor>
+				<height>30</height>
 				<aligny>center</aligny>
 				<align>left</align>
+				<font>WideListFont</font>
+				<textcolor>DefaultColor3</textcolor>
+				<selectedcolor>SelectedColor</selectedcolor>
 				<label>$LOCALIZE[19148]</label>
 			</control>
 		</control>
 
 		<control type="group">
+			<description>Title Area</description>
+			<posx>220</posx>
 			<control type="image">
-				<posx>220</posx>
-				<width>650</width>
-				<height>29</height>
-				<texture border="8">pvr/column-focus.png</texture>
+				<width>660</width>
+				<height>30</height>
+				<texture border="8">pvr/column.png</texture>
 				<colordiffuse>dd0c2134</colordiffuse>
 			</control>
 			<control type="label">
-				<posx>230</posx>
-				<width>650</width>
+				<posx>10</posx>
+				<width>660</width>
 				<width>200</width>
-				<height>29</height>
-				<font>font13</font>
-				<textcolor>GreyColor2</textcolor>
-				<selectedcolor>GreyColor2</selectedcolor>
+				<height>30</height>
 				<aligny>center</aligny>
 				<align>left</align>
+				<font>WideListFont</font>
+				<textcolor>DefaultColor3</textcolor>
+				<selectedcolor>SelectedColor</selectedcolor>
 				<label>$LOCALIZE[369]</label>
 			</control>
 		</control>
 
 		<control type="group">
+			<description>Time Area</description>
+			<posx>884</posx>
 			<control type="image">
-				<posx>874</posx>
-				<width>130</width>
-				<height>29</height>
-				<texture border="8">pvr/column-focus.png</texture>
+				<width>136</width>
+				<height>30</height>
+				<texture border="8">pvr/column.png</texture>
 				<colordiffuse>dd0c2134</colordiffuse>
 			</control>
 			<control type="label">
-				<posx>884</posx>
-				<width>130</width>
-				<height>29</height>
-				<font>font13</font>
-				<textcolor>GreyColor2</textcolor>
-				<selectedcolor>GreyColor2</selectedcolor>
+				<posx>10</posx>
+				<width>136</width>
+				<height>30</height>
 				<aligny>center</aligny>
 				<align>left</align>
+				<font>WideListFont</font>
+				<textcolor>DefaultColor3</textcolor>
+				<selectedcolor>SelectedColor</selectedcolor>
 				<label>$LOCALIZE[555]</label>
 			</control>
 		</control>
 
 		<control type="group">
+			<description>Date Area</description>
+			<posx>1024</posx>
 			<control type="image">
-				<posx>1008</posx>
-				<width>170</width>
-				<height>29</height>
-				<texture border="8">pvr/column-focus.png</texture>
+				<width>176</width>
+				<height>30</height>
+				<texture border="8" flipx="true">pvr/column-left.png</texture>
 				<colordiffuse>dd0c2134</colordiffuse>
 			</control>
 			<control type="label">
-				<posx>1018</posx>
-				<width>170</width>
-				<height>29</height>
-				<font>font13</font>
-				<textcolor>GreyColor2</textcolor>
-				<selectedcolor>GreyColor2</selectedcolor>
+				<posx>10</posx>
+				<width>176</width>
+				<height>30</height>
 				<aligny>center</aligny>
 				<align>left</align>
+				<font>WideListFont</font>
+				<textcolor>DefaultColor3</textcolor>
+				<selectedcolor>SelectedColor</selectedcolor>
 				<label>$LOCALIZE[552]</label>
 			</control>
 		</control>
 	</include>
 
-	<include name="LiveTVListColumnsStyleItemLayout">
+	<include name="LiveTVColumnsInfoStyleItemLayout">
 		<itemlayout height="42">
-			<control type="image" id="1">
-				<posx>0</posx>
-				<posy>0</posy>
+			<control type="image">
 				<width>215</width>
 				<height>38</height>
 				<texture border="8">pvr/column-left.png</texture>
@@ -1181,247 +1187,131 @@
 
 			<control type="image">
 				<posx>220</posx>
-				<width>650</width>
+				<width>660</width>
 				<height>38</height>
 				<texture border="8">pvr/column.png</texture>
 				<colordiffuse>ff2d5a83</colordiffuse>
 			</control>
 
 			<control type="image">
-				<posx>874</posx>
-				<width>130</width>
+				<posx>884</posx>
+				<width>136</width>
 				<height>38</height>
 				<texture border="8">pvr/column.png</texture>
 				<colordiffuse>ff2d5a83</colordiffuse>
 			</control>
 
 			<control type="image">
-				<posx>1008</posx>
-				<width>170</width>
+				<posx>1024</posx>
+				<width>176</width>
 				<height>38</height>
-				<texture border="8">pvr/column-right.png</texture>
+				<texture border="8" flipx="true">pvr/column-left.png</texture>
 				<colordiffuse>ff2d5a83</colordiffuse>
 			</control>
 
-			<control type="group">
-				<posx>838</posx>
-				<posy>8</posy>
-				<visible>Control.IsVisible(15) | Control.IsVisible(17)</visible>
-				<control type="image">
-					<width>22</width>
-					<height>22</height>
-					<texture>pvr/status_none.png</texture>
-					<colordiffuse>ffffffff</colordiffuse>
-					<visible>![ListItem.HasTimer | ListItem.IsRecording] + !StringCompare(ListItem.ChannelName,) + !StringCompare(ListItem.Title,)</visible>
-				</control>
-				<control type="image">
-					<width>22</width>
-					<height>22</height>
-					<texture>pvr/status_timer.png</texture>
-					<colordiffuse>ffffffff</colordiffuse>
-					<visible>ListItem.HasTimer</visible>
-				</control>
-				<control type="image">
-					<width>22</width>
-					<height>22</height>
-					<texture>pvr/status_recording.png</texture>
-					<colordiffuse>ffffffff</colordiffuse>
-					<visible>ListItem.IsRecording</visible>
-				</control>
-			</control>
-
-			<control type="group">
-				<posx>838</posx>
-				<posy>8</posy>
-				<visible>Control.IsVisible(14)</visible>
-				<control type="image">
-					<width>22</width>
-					<height>22</height>
-					<texture>pvr/status_none.png</texture>
-					<colordiffuse>ffffffff</colordiffuse>
-					<visible>!StringCompare(ListItem.Label,$LOCALIZE[19026]) + !StringCompare(ListItem.Comment,$LOCALIZE[305]) + !StringCompare(ListItem.Comment,$LOCALIZE[19162])</visible>
-				</control>
-				<control type="image">
-					<width>22</width>
-					<height>22</height>
-					<texture>pvr/status_enabled.png</texture>
-					<colordiffuse>ffffffff</colordiffuse>
-					<visible>StringCompare(ListItem.Comment,$LOCALIZE[305])</visible>
-				</control>
-				<control type="image">
-					<width>22</width>
-					<height>22</height>
-					<texture>pvr/status_recording.png</texture>
-					<colordiffuse>ffffffff</colordiffuse>
-					<visible>StringCompare(ListItem.Comment,$LOCALIZE[19162])</visible>
-				</control>
-			</control>
-
-			<control type="label">
-				<posx>200</posx>
-				<posy>7</posy>
-				<width>150</width>
-				<height>38</height>
-				<font>font18</font>
-				<textcolor>WhiteColor</textcolor>
-				<selectedcolor>DefaultColor3</selectedcolor>
-				<align>right</align>
-				<label>$INFO[ListItem.ChannelName]</label>
-			</control>
-
-			<control type="label">
-				<posx>230</posx>
-				<posy>8</posy>
-				<width>553</width>
-				<height>38</height>
-				<font>WideListFont2</font>
-				<textcolor>WhiteColor</textcolor>
-				<selectedcolor>SelectedColor</selectedcolor>
-				<info>ListItem.Title</info>
-				<visible>Control.IsVisible(15) | Control.IsVisible(17)</visible>
-			</control>
-
-			<control type="label">
-				<posx>230</posx>
-				<posy>8</posy>
-				<width>553</width>
-				<height>38</height>
-				<font>WideListFont2</font>
-				<textcolor>WhiteColor</textcolor>
-				<selectedcolor>SelectedColor</selectedcolor>
-				<info>ListItem.Label</info>
-				<visible>Control.IsVisible(14)</visible>
-			</control>
-
-			<control type="label">
-				<posx>884</posx>
-				<posy>8</posy>
-				<width>553</width>
-				<height>38</height>
-				<font>WideListFont2</font>
-				<textcolor>WhiteColor</textcolor>
-				<selectedcolor>SelectedColor</selectedcolor>
-				<info>ListItem.StartTime</info>
-				<visible>Control.IsVisible(15) | Control.IsVisible(17)</visible>
-			</control>
-
-			<control type="label">
-				<posx>884</posx>
-				<posy>8</posy>
-				<width>553</width>
-				<height>38</height>
-				<font>WideListFont2</font>
-				<textcolor>WhiteColor</textcolor>
-				<selectedcolor>SelectedColor</selectedcolor>
-				<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label>
-				<visible>Control.IsVisible(14)</visible>
-			</control>
-
-			<control type="label">
-				<posx>1018</posx>
-				<posy>8</posy>
-				<width>440</width>
-				<height>38</height>
-				<font>WideListFont2</font>
-				<textcolor>WhiteColor</textcolor>
-				<selectedcolor>SelectedColor</selectedcolor>
-				<info>ListItem.StartDate</info>
-			</control>
+			<include>LiveTVColumnsInfoStyleCommonLayout</include>
 		</itemlayout>
 	</include>
 
-	<include name="LiveTVListColumnsStyleFocusedLayout">
+	<include name="LiveTVColumnsInfoStyleFocusedLayout">
 		<focusedlayout height="42">
-			<control type="image" id="1">
-				<posx>0</posx>
-				<posy>0</posy>
+			<control type="image">
 				<width>215</width>
 				<height>38</height>
-				<texture border="8">pvr/column-focus.png</texture>
+				<texture border="8">pvr/column-left.png</texture>
 				<colordiffuse>ff000000</colordiffuse>
 			</control>
 
 			<control type="image">
 				<posx>220</posx>
-				<width>958</width>
+				<width>980</width>
 				<height>38</height>
-				<texture border="8">pvr/column-focus.png</texture>
+				<texture border="8" flipx="true">pvr/column-left.png</texture>
 				<colordiffuse>ff000000</colordiffuse>
 			</control>
 
-			<control type="group">
-				<posx>838</posx>
-				<posy>8</posy>
-				<visible>Control.IsVisible(15) | Control.IsVisible(17)</visible>
-				<control type="image">
-					<width>22</width>
-					<height>22</height>
-					<texture>pvr/status_none.png</texture>
-					<colordiffuse>ffffffff</colordiffuse>
-					<visible>![ListItem.HasTimer | ListItem.IsRecording] + !StringCompare(ListItem.ChannelName,) + !StringCompare(ListItem.Title,)</visible>
-				</control>
-				<control type="image">
-					<width>22</width>
-					<height>22</height>
-					<texture>pvr/status_timer.png</texture>
-					<colordiffuse>ffffffff</colordiffuse>
-					<visible>ListItem.HasTimer</visible>
-				</control>
-				<control type="image">
-					<width>22</width>
-					<height>22</height>
-					<texture>pvr/status_recording.png</texture>
-					<colordiffuse>ffffffff</colordiffuse>
-					<visible>ListItem.IsRecording</visible>
-				</control>
-			</control>
+			<include>LiveTVColumnsInfoStyleCommonLayout</include>
+		</focusedlayout>
+	</include>
 
-			<control type="group">
-				<posx>838</posx>
-				<posy>8</posy>
-				<visible>Control.IsVisible(14)</visible>
-				<control type="image">
-					<width>22</width>
-					<height>22</height>
-					<texture>pvr/status_none.png</texture>
-					<colordiffuse>ffffffff</colordiffuse>
-					<visible>!StringCompare(ListItem.Label,$LOCALIZE[19026]) + !StringCompare(ListItem.Comment,$LOCALIZE[305]) + !StringCompare(ListItem.Comment,$LOCALIZE[19162])</visible>
-				</control>
-				<control type="image">
-					<width>22</width>
-					<height>22</height>
-					<texture>pvr/status_enabled.png</texture>
-					<colordiffuse>ffffffff</colordiffuse>
-					<visible>StringCompare(ListItem.Comment,$LOCALIZE[305])</visible>
-				</control>
-				<control type="image">
-					<width>22</width>
-					<height>22</height>
-					<texture>pvr/status_recording.png</texture>
-					<colordiffuse>ffffffff</colordiffuse>
-					<visible>StringCompare(ListItem.Comment,$LOCALIZE[19162])</visible>
-				</control>
+	<include name="LiveTVColumnsInfoStyleCommonLayout">
+		<control type="group">
+			<description>Record Area</description>
+			<posx>848</posx>
+			<posy>8</posy>
+			<visible>Control.IsVisible(15) | Control.IsVisible(17)</visible>
+			<control type="image">
+				<width>22</width>
+				<height>22</height>
+				<texture>pvr/status_none.png</texture>
+				<colordiffuse>ffffffff</colordiffuse>
+				<visible>![ListItem.HasTimer | ListItem.IsRecording] + !StringCompare(ListItem.ChannelName,) + !StringCompare(ListItem.Title,)</visible>
 			</control>
+			<control type="image">
+				<width>22</width>
+				<height>22</height>
+				<texture>pvr/status_timer.png</texture>
+				<colordiffuse>ffffffff</colordiffuse>
+				<visible>ListItem.HasTimer</visible>
+			</control>
+			<control type="image">
+				<width>22</width>
+				<height>22</height>
+				<texture>pvr/status_recording.png</texture>
+				<colordiffuse>ffffffff</colordiffuse>
+				<visible>ListItem.IsRecording</visible>
+			</control>
+		</control>
 
+		<control type="group">
+			<description>Record Area</description>
+			<posx>848</posx>
+			<posy>8</posy>
+			<visible>Control.IsVisible(14)</visible>
+			<control type="image">
+				<width>22</width>
+				<height>22</height>
+				<texture>pvr/status_none.png</texture>
+				<colordiffuse>ffffffff</colordiffuse>
+				<visible>!StringCompare(ListItem.Label,$LOCALIZE[19026]) + !StringCompare(ListItem.Comment,$LOCALIZE[305]) + !StringCompare(ListItem.Comment,$LOCALIZE[19162])</visible>
+			</control>
+			<control type="image">
+				<width>22</width>
+				<height>22</height>
+				<texture>pvr/status_enabled.png</texture>
+				<colordiffuse>ffffffff</colordiffuse>
+				<visible>StringCompare(ListItem.Comment,$LOCALIZE[305])</visible>
+			</control>
+			<control type="image">
+				<width>22</width>
+				<height>22</height>
+				<texture>pvr/status_recording.png</texture>
+				<colordiffuse>ffffffff</colordiffuse>
+				<visible>StringCompare(ListItem.Comment,$LOCALIZE[19162])</visible>
+			</control>
+		</control>
+
+		<control type="label">
+			<description>Channel</description>
+			<posx>200</posx>
+			<width>150</width>
+			<height>38</height>
+			<aligny>center</aligny>
+			<align>right</align>
+			<font>ListFont</font>
+			<textcolor>DefaultColor2</textcolor>
+			<selectedcolor>SelectedColor</selectedcolor>
+			<label>$INFO[ListItem.ChannelName]</label>
+		</control>
+
+		<control type="group">
+			<description>Title</description>
+			<posx>230</posx>
 			<control type="label">
-				<posx>200</posx>
-				<posy>7</posy>
-				<width>150</width>
-				<height>38</height>
-				<font>font18</font>
-				<textcolor>WhiteColor</textcolor>
-				<selectedcolor>DefaultColor3</selectedcolor>
-				<align>right</align>
-				<selectedcolor>selected</selectedcolor>
-				<label>$INFO[ListItem.ChannelName]</label>
-			</control>
-
-			<control type="label">
-				<posx>230</posx>
-				<posy>8</posy>
 				<width>553</width>
 				<height>38</height>
-				<font>WideListFont2</font>
+				<aligny>center</aligny>
+				<font>ListFont</font>
 				<textcolor>WhiteColor</textcolor>
 				<selectedcolor>SelectedColor</selectedcolor>
 				<info>ListItem.Title</info>
@@ -1429,23 +1319,25 @@
 			</control>
 
 			<control type="label">
-				<posx>230</posx>
-				<posy>8</posy>
 				<width>553</width>
 				<height>38</height>
-				<font>WideListFont2</font>
+				<aligny>center</aligny>
+				<font>ListFont</font>
 				<textcolor>WhiteColor</textcolor>
 				<selectedcolor>SelectedColor</selectedcolor>
 				<info>ListItem.Label</info>
 				<visible>Control.IsVisible(14)</visible>
 			</control>
+		</control>
 
+		<control type="group">
+			<description>Time</description>
+			<posx>894</posx>
 			<control type="label">
-				<posx>884</posx>
-				<posy>8</posy>
 				<width>553</width>
 				<height>38</height>
-				<font>WideListFont2</font>
+				<aligny>center</aligny>
+				<font>ListFont</font>
 				<textcolor>WhiteColor</textcolor>
 				<selectedcolor>SelectedColor</selectedcolor>
 				<info>ListItem.StartTime</info>
@@ -1453,122 +1345,122 @@
 			</control>
 
 			<control type="label">
-				<posx>884</posx>
-				<posy>8</posy>
 				<width>553</width>
 				<height>38</height>
-				<font>WideListFont2</font>
+				<aligny>center</aligny>
+				<font>ListFont</font>
 				<textcolor>WhiteColor</textcolor>
 				<selectedcolor>SelectedColor</selectedcolor>
 				<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label>
 				<visible>Control.IsVisible(14)</visible>
 			</control>
+		</control>
 
-			<control type="label">
-				<posx>1018</posx>
-				<posy>8</posy>
-				<width>440</width>
-				<height>38</height>
-				<font>WideListFont2</font>
-				<textcolor>WhiteColor</textcolor>
-				<selectedcolor>SelectedColor</selectedcolor>
-				<info>ListItem.StartDate</info>
-			</control>
-		</focusedlayout>
+		<control type="label">
+			<description>Date</description>
+			<posx>1034</posx>
+			<width>440</width>
+			<height>38</height>
+			<aligny>center</aligny>
+			<font>ListFont</font>
+			<textcolor>WhiteColor</textcolor>
+			<selectedcolor>SelectedColor</selectedcolor>
+			<info>ListItem.StartDate</info>
+		</control>
 	</include>
 
-	<include name="LiveTVColumns2">
+	<include name="LiveTVColumnsInfo2StyleHeaderItems">
 		<control type="group">
+			<description>Channel Area</description>
 			<control type="image">
-				<posx>0</posx>
 				<width>215</width>
-				<height>29</height>
-				<texture border="8">pvr/column-focus.png</texture>
+				<height>30</height>
+				<texture border="8">pvr/column-left.png</texture>
 				<colordiffuse>dd0c2134</colordiffuse>
 			</control>
 			<control type="label">
 				<posx>10</posx>
 				<width>215</width>
-				<height>29</height>
-				<font>font13</font>
-				<textcolor>GreyColor2</textcolor>
-				<selectedcolor>GreyColor2</selectedcolor>
+				<height>30</height>
 				<aligny>center</aligny>
 				<align>left</align>
+				<font>WideListFont</font>
+				<textcolor>DefaultColor3</textcolor>
+				<selectedcolor>SelectedColor</selectedcolor>
 				<label>$LOCALIZE[19148]</label>
 			</control>
 		</control>
 
 		<control type="group">
+			<description>Title Area</description>
+			<posx>220</posx>
 			<control type="image">
-				<posx>220</posx>
-				<width>690</width>
-				<height>29</height>
-				<texture border="8">pvr/column-focus.png</texture>
+				<width>700</width>
+				<height>30</height>
+				<texture border="8">pvr/column.png</texture>
 				<colordiffuse>dd0c2134</colordiffuse>
 			</control>
 			<control type="label">
-				<posx>230</posx>
-				<width>690</width>
-				<width>200</width>
-				<height>29</height>
-				<font>font13</font>
-				<textcolor>GreyColor2</textcolor>
-				<selectedcolor>GreyColor2</selectedcolor>
+				<posx>10</posx>
+				<width>700</width>
+				<height>30</height>
 				<aligny>center</aligny>
 				<align>left</align>
+				<font>WideListFont</font>
+				<textcolor>DefaultColor3</textcolor>
+				<selectedcolor>SelectedColor</selectedcolor>
 				<label>$LOCALIZE[369]</label>
 			</control>
 		</control>
 
 		<control type="group">
+			<description>Time Area</description>
+			<posx>924</posx>
 			<control type="image">
-				<posx>914</posx>
-				<width>130</width>
-				<height>29</height>
-				<texture border="8">pvr/column-focus.png</texture>
+				<width>136</width>
+				<height>30</height>
+				<texture border="8">pvr/column.png</texture>
 				<colordiffuse>dd0c2134</colordiffuse>
 			</control>
 			<control type="label">
-				<posx>924</posx>
-				<width>130</width>
-				<height>29</height>
-				<font>font13</font>
-				<textcolor>GreyColor2</textcolor>
-				<selectedcolor>GreyColor2</selectedcolor>
+				<posx>10</posx>
+				<width>136</width>
+				<height>30</height>
 				<aligny>center</aligny>
 				<align>left</align>
+				<font>WideListFont</font>
+				<textcolor>DefaultColor3</textcolor>
+				<selectedcolor>SelectedColor</selectedcolor>
 				<label>$LOCALIZE[555]</label>
 			</control>
 		</control>
 
 		<control type="group">
+			<description>Duration Area</description>
+			<posx>1064</posx>
 			<control type="image">
-				<posx>1048</posx>
-				<width>130</width>
-				<height>29</height>
-				<texture border="8">pvr/column-focus.png</texture>
+				<width>136</width>
+				<height>30</height>
+				<texture border="8" flipx="true">pvr/column-left.png</texture>
 				<colordiffuse>dd0c2134</colordiffuse>
 			</control>
 			<control type="label">
-				<posx>1058</posx>
-				<width>130</width>
-				<height>29</height>
-				<font>font13</font>
-				<textcolor>GreyColor2</textcolor>
-				<selectedcolor>GreyColor2</selectedcolor>
+				<posx>10</posx>
+				<width>136</width>
+				<height>30</height>
 				<aligny>center</aligny>
 				<align>left</align>
+				<font>WideListFont</font>
+				<textcolor>DefaultColor3</textcolor>
+				<selectedcolor>SelectedColor</selectedcolor>
 				<label>$LOCALIZE[180]</label>
 			</control>
 		</control>
 	</include>
 
-	<include name="LiveTVListColumns2StyleItemLayout">
+	<include name="LiveTVColumnsInfo2StyleItemLayout">
 		<itemlayout height="42">
-			<control type="image" id="1">
-				<posx>0</posx>
-				<posy>0</posy>
+			<control type="image">
 				<width>215</width>
 				<height>38</height>
 				<texture border="8">pvr/column-left.png</texture>
@@ -1577,214 +1469,141 @@
 
 			<control type="image">
 				<posx>220</posx>
-				<width>690</width>
+				<width>700</width>
 				<height>38</height>
 				<texture border="8">pvr/column.png</texture>
 				<colordiffuse>ff2d5a83</colordiffuse>
 			</control>
 
 			<control type="image">
-				<posx>914</posx>
-				<width>130</width>
-				<height>38</height>
-				<texture border="8">pvr/column.png</texture>
-				<colordiffuse>ff2d5a83</colordiffuse>
-			</control>
-
-			<control type="image">
-				<posx>1048</posx>
-				<width>130</width>
-				<height>38</height>
-				<texture border="8">pvr/column-right.png</texture>
-				<colordiffuse>ff2d5a83</colordiffuse>
-			</control>
-
-			<control type="group">
-				<posx>878</posx>
-				<posy>8</posy>
-				<control type="image">
-					<width>22</width>
-					<height>22</height>
-					<texture>pvr/status_none.png</texture>
-					<colordiffuse>ffffffff</colordiffuse>
-					<visible>![ListItem.HasTimer | ListItem.IsRecording] + !StringCompare(ListItem.ChannelName,) + !StringCompare(ListItem.Title,)</visible>
-				</control>
-				<control type="image">
-					<width>22</width>
-					<height>22</height>
-					<texture>pvr/status_timer.png</texture>
-					<colordiffuse>ffffffff</colordiffuse>
-					<visible>ListItem.HasTimer</visible>
-				</control>
-				<control type="image">
-					<width>22</width>
-					<height>22</height>
-					<texture>pvr/status_recording.png</texture>
-					<colordiffuse>ffffffff</colordiffuse>
-					<visible>ListItem.IsRecording</visible>
-				</control>
-			</control>
-
-			<control type="label">
-				<posx>15</posx>
-				<posy>6</posy>
-				<width>215</width>
-				<height>38</height>
-				<font>WrapListFont</font>
-				<textcolor>GreyColor2</textcolor>
-				<selectedcolor>DefaultColor3</selectedcolor>
-				<label>$INFO[ListItem.ChannelNumber]</label>
-			</control>
-
-			<control type="label">
-				<posx>200</posx>
-				<posy>7</posy>
-				<width>150</width>
-				<height>38</height>
-				<font>font18</font>
-				<textcolor>WhiteColor</textcolor>
-				<selectedcolor>DefaultColor3</selectedcolor>
-				<align>right</align>
-				<label>$INFO[ListItem.ChannelName]</label>
-			</control>
-
-			<control type="label">
-				<posx>230</posx>
-				<posy>8</posy>
-				<width>553</width>
-				<height>38</height>
-				<font>WideListFont2</font>
-				<textcolor>WhiteColor</textcolor>
-				<selectedcolor>SelectedColor</selectedcolor>
-				<info>ListItem.Title</info>
-			</control>
-
-			<control type="label">
 				<posx>924</posx>
-				<posy>8</posy>
-				<width>553</width>
+				<width>136</width>
 				<height>38</height>
-				<font>WideListFont2</font>
-				<textcolor>WhiteColor</textcolor>
-				<selectedcolor>SelectedColor</selectedcolor>
-				<info>ListItem.StartTime</info>
+				<texture border="8">pvr/column.png</texture>
+				<colordiffuse>ff2d5a83</colordiffuse>
 			</control>
 
-			<control type="label">
-				<posx>1058</posx>
-				<posy>8</posy>
-				<width>400</width>
+			<control type="image">
+				<posx>1064</posx>
+				<width>136</width>
 				<height>38</height>
-				<font>WideListFont2</font>
-				<textcolor>WhiteColor</textcolor>
-				<selectedcolor>SelectedColor</selectedcolor>
-				<info>ListItem.Duration</info>
+				<texture border="8" flipx="true">pvr/column-left.png</texture>
+				<colordiffuse>ff2d5a83</colordiffuse>
 			</control>
+
+			<include>LiveTVColumnsInfo2StyleCommonLayout</include>
 		</itemlayout>
 	</include>
 
-	<include name="LiveTVListColumns2StyleFocusedLayout">
+	<include name="LiveTVColumnsInfo2StyleFocusedLayout">
 		<focusedlayout height="42">
 			<control type="image" id="1">
-				<posx>0</posx>
-				<posy>0</posy>
 				<width>215</width>
 				<height>38</height>
-				<texture border="8">pvr/column-focus.png</texture>
+				<texture border="8">pvr/column-left.png</texture>
 				<colordiffuse>ff000000</colordiffuse>
 			</control>
 
 			<control type="image">
 				<posx>220</posx>
-				<width>958</width>
+				<width>980</width>
 				<height>38</height>
-				<texture border="8">pvr/column-focus.png</texture>
+				<texture border="8" flipx="true">pvr/column-left.png</texture>
 				<colordiffuse>ff000000</colordiffuse>
 			</control>
 
-			<control type="group">
-				<posx>878</posx>
-				<posy>8</posy>
-				<control type="image">
-					<width>22</width>
-					<height>22</height>
-					<texture>pvr/status_none.png</texture>
-					<colordiffuse>ffffffff</colordiffuse>
-					<visible>![ListItem.HasTimer | ListItem.IsRecording] + !StringCompare(ListItem.ChannelName,) + !StringCompare(ListItem.Title,)</visible>
-				</control>
-				<control type="image">
-					<width>22</width>
-					<height>22</height>
-					<texture>pvr/status_timer.png</texture>
-					<colordiffuse>ffffffff</colordiffuse>
-					<visible>ListItem.HasTimer</visible>
-				</control>
-				<control type="image">
-					<width>22</width>
-					<height>22</height>
-					<texture>pvr/status_recording.png</texture>
-					<colordiffuse>ffffffff</colordiffuse>
-					<visible>ListItem.IsRecording</visible>
-				</control>
-			</control>
-
-			<control type="label">
-				<posx>15</posx>
-				<posy>6</posy>
-				<width>215</width>
-				<height>38</height>
-				<font>WrapListFont</font>
-				<textcolor>GreyColor2</textcolor>
-				<selectedcolor>DefaultColor3</selectedcolor>
-				<label>$INFO[ListItem.ChannelNumber]</label>
-			</control>
-
-			<control type="label">
-				<posx>200</posx>
-				<posy>7</posy>
-				<width>150</width>
-				<height>38</height>
-				<font>font18</font>
-				<textcolor>WhiteColor</textcolor>
-				<selectedcolor>DefaultColor3</selectedcolor>
-				<align>right</align>
-				<selectedcolor>selected</selectedcolor>
-				<label>$INFO[ListItem.ChannelName]</label>
-			</control>
-
-			<control type="label">
-				<posx>230</posx>
-				<posy>8</posy>
-				<width>553</width>
-				<height>38</height>
-				<font>WideListFont2</font>
-				<textcolor>WhiteColor</textcolor>
-				<selectedcolor>SelectedColor</selectedcolor>
-				<info>ListItem.Title</info>
-			</control>
-
-			<control type="label">
-				<posx>924</posx>
-				<posy>8</posy>
-				<width>553</width>
-				<height>38</height>
-				<font>WideListFont2</font>
-				<textcolor>WhiteColor</textcolor>
-				<selectedcolor>SelectedColor</selectedcolor>
-				<info>ListItem.StartTime</info>
-			</control>
-
-			<control type="label">
-				<posx>1058</posx>
-				<posy>8</posy>
-				<width>400</width>
-				<height>38</height>
-				<font>WideListFont2</font>
-				<textcolor>WhiteColor</textcolor>
-				<selectedcolor>SelectedColor</selectedcolor>
-				<info>ListItem.Duration</info>
-			</control>
+			<include>LiveTVColumnsInfo2StyleCommonLayout</include>
 		</focusedlayout>
 	</include>
-	<!--//// END COLUMN VIEWS ///////////////////////////////////////////////////////////////////-->
+
+	<include name="LiveTVColumnsInfo2StyleCommonLayout">
+		<control type="group">
+			<description>Record Area</description>
+			<posx>888</posx>
+			<posy>8</posy>
+			<control type="image">
+				<width>22</width>
+				<height>22</height>
+				<texture>pvr/status_none.png</texture>
+				<colordiffuse>ffffffff</colordiffuse>
+				<visible>![ListItem.HasTimer | ListItem.IsRecording] + !StringCompare(ListItem.ChannelName,) + !StringCompare(ListItem.Title,)</visible>
+			</control>
+			<control type="image">
+				<width>22</width>
+				<height>22</height>
+				<texture>pvr/status_timer.png</texture>
+				<colordiffuse>ffffffff</colordiffuse>
+				<visible>ListItem.HasTimer</visible>
+			</control>
+			<control type="image">
+				<width>22</width>
+				<height>22</height>
+				<texture>pvr/status_recording.png</texture>
+				<colordiffuse>ffffffff</colordiffuse>
+				<visible>ListItem.IsRecording</visible>
+			</control>
+		</control>
+
+		<control type="label">
+			<description>Channel Number</description>
+			<posx>15</posx>
+			<width>215</width>
+			<height>38</height>
+			<aligny>center</aligny>
+			<font>ListFont2</font>
+			<textcolor>DefaultColor2</textcolor>
+			<selectedcolor>SelectedColor</selectedcolor>
+			<label>$INFO[ListItem.ChannelNumber]</label>
+		</control>
+
+		<control type="label">
+			<description>Channel Name</description>
+			<posx>200</posx>
+			<width>150</width>
+			<height>38</height>
+			<align>right</align>
+			<aligny>center</aligny>
+			<font>ListFont</font>
+			<textcolor>DefaultColor2</textcolor>
+			<selectedcolor>SelectedColor</selectedcolor>
+			<label>$INFO[ListItem.ChannelName]</label>
+		</control>
+
+		<control type="label">
+			<description>Title</description>
+			<posx>230</posx>
+			<width>553</width>
+			<height>38</height>
+			<aligny>center</aligny>
+			<font>ListFont</font>
+			<textcolor>WhiteColor</textcolor>
+			<selectedcolor>SelectedColor</selectedcolor>
+			<info>ListItem.Title</info>
+		</control>
+
+		<control type="label">
+			<description>Time</description>
+			<posx>934</posx>
+			<width>553</width>
+			<height>38</height>
+			<aligny>center</aligny>
+			<font>ListFont</font>
+			<textcolor>WhiteColor</textcolor>
+			<selectedcolor>SelectedColor</selectedcolor>
+			<info>ListItem.StartTime</info>
+		</control>
+
+		<control type="label">
+			<description>Duration</description>
+			<posx>1074</posx>
+			<width>400</width>
+			<height>38</height>
+			<aligny>center</aligny>
+			<font>ListFont</font>
+			<textcolor>WhiteColor</textcolor>
+			<selectedcolor>SelectedColor</selectedcolor>
+			<info>ListItem.Duration</info>
+		</control>
+	</include>
+	<!--//// END COLUMN INFO VIEWS //////////////////////////////////////////////////////////////-->
 </includes>
