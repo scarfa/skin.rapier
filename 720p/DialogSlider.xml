@@ -4,7 +4,7 @@
 	
 	<coordinates>
 		<system>1</system>
-		<origin x="520" y="645">true</origin>
+		<origin x="526" y="645">true</origin>
 	</coordinates>
 	
 	<controls>		
@@ -12,7 +12,7 @@
 		
 		<control type="label" id="12">
 			<description>Slider Value</description>
-			<posx>30</posx>
+			<posx>24</posx>
 			<posy>10</posy>
 			<width>180</width>
 			<align>center</align>
@@ -23,7 +23,7 @@
 		
 		<control type="slider" id="11">
 			<description>Slider</description>
-			<posx>40</posx>
+			<posx>34</posx>
 			<posy>40</posy>
 			<width>160</width>
 			<height>24</height>

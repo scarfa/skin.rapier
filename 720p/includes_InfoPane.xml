@@ -5,7 +5,7 @@
 			<posy>-25</posy>
 			<width>1320</width>
 			<height>95</height>
-			<texture border="18,18,18,0">gui/info-pane-background.png</texture>
+			<texture border="8">panels/panel.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>	
 	</include>
