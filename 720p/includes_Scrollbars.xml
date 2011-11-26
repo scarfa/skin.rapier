@@ -94,7 +94,7 @@
 			<control type="scrollbar" id="904">
 				<posx>1223</posx>
 				<posy>35</posy>
-				<height>374</height>
+				<height>332</height>
 				<onleft>500</onleft>
 				<animation effect="fade" start="100" end="0" time="150" condition="!Skin.HasSetting(ShowColumnsViewScrollbar) + !ControlGroup(150).HasFocus">Conditional</animation>
 			</control>
