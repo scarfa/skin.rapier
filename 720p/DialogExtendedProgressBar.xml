@@ -11,7 +11,7 @@
 		</control>
 		
 		<control type="group">
-			<posx>824</posx>
+			<posx>818</posx>
 			<posy>640</posy>
 			<visible>!Window.IsVisible(Home) + !Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(AddonInformation)
 			+ !Window.IsActive(FullscreenVideo) + !Window.IsActive(Visualisation)</visible>
@@ -20,7 +20,7 @@
 			<control type="image">
 				<width>434</width>
 				<height>105</height>
-				<texture border="18,18,18,0">gui/info-pane-background.png</texture>
+				<texture border="8">panels/panel.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
 			<control type="image">
@@ -86,6 +86,5 @@
 				<width>382</width>
 			</control>
 		</control>
-		
 	</controls>
 </window>

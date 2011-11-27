@@ -176,7 +176,7 @@
 		<font>
 			<name>FSInfoFont</name>
 			<filename>default-caps.ttf</filename>
-			<size>18</size>
+			<size>16</size>
 		</font>
 		<font>
 			<name>FSInfoFont2</name>

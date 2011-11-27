@@ -11,7 +11,7 @@
 		<control type="group">
 			<include>SettingsDialogBox</include>
 			<include>DialogOpenCloseAnim</include>
-			<animation effect="slide" end="-378,10" condition="Window.IsActive(FullScreenVideo) | Window.IsActive(Visualisation)">Conditional</animation>
+			<animation effect="slide" end="-378,-4" condition="Window.IsActive(FullScreenVideo) | Window.IsActive(Visualisation)">Conditional</animation>
 
 			<control type="label" id="1">
 				<include>SettingsDialogTitle</include>

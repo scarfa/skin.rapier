@@ -130,39 +130,66 @@
 			<animation effect="fade" end="68" condition="true">Conditional</animation>
 		</control>
 	</include>
+	
+	<include name="FSTopPanel">
+		<control type="image" id="1">
+			<posx>28</posx>
+			<posy>-10</posy>
+			<width>1224</width>
+			<height>120</height>
+			<texture border="8">panels/panel.png</texture>
+		</control>
+	</include>
+	
+	<include name="FSMediaInfoPanel">
+		<control type="image">
+			<width>1224</width>
+			<height>350</height>
+			<texture border="8">panels/panel.png</texture>
+		</control>
+		
+		<control type="image">
+			<posx>4</posx>
+			<posy>4</posy>
+			<width>1216</width>
+			<height>70</height>
+			<texture border="8">panels/panel-content-border.png</texture>
+		</control>
+	</include>
 
 	<include name="PlayerControlsPanel">
 		<control type="image">
-			<posx>22</posx>
-			<width>1236</width>
-			<height>90</height>
-			<texture border="18,18,18,0">gui/info-pane-background.png</texture>
+			<posx>28</posx>
+			<width>1224</width>
+			<height>75</height>
+			<texture border="8">panels/panel.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>	
 	</include>
 	
-	<include name="FSMediaInfoPanel">
-		<control type="image" id="1">
-			<posx>22</posx>
-			<width>1236</width>
-			<height>136</height>
-			<texture flipy="true" border="18,0,18,18">gui/info-pane-background.png</texture>
-		</control>
+	<include name="FSSeekBar">
+		<control type="image">
+			<posx>6</posx>
+			<width>474</width>
+			<height>75</height>
+			<texture border="8">panels/panel.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>	
 	</include>
 	
 	<include name="LoginScreenPaneImage">	
 		<control type="image">
-			<posx>22</posx>
-			<width>1236</width>
-			<height>50</height>
-			<texture border="18,18,18,0">gui/info-pane-background.png</texture>
+			<posx>28</posx>
+			<width>1224</width>
+			<height>75</height>
+			<texture border="8">panels/panel.png</texture>
 		</control>	
 	</include>
 
 	<include name="LoginScreenPaneDetails">
 		<control type="label">
 			<posx>47</posx>
-			<posy>28</posy>
+			<posy>25</posy>
 			<font>DefaultHeadFont</font>
 			<textcolor>GreyColor2</textcolor>
 			<aligny>center</aligny>
@@ -171,7 +198,7 @@
 		
 		<control type="grouplist" id="213">
 			<posx>1121</posx>
-			<posy>13</posy>
+			<posy>10</posy>
 			<orientation>horizontal</orientation>
 			<onup>52</onup>
 			<onleft>213</onleft>
@@ -450,7 +477,7 @@
 			<description>2X</description>
 			<posy>18</posy>
 			<font>OSDFont</font>
-			<textcolor>DisabledColor</textcolor>
+			<textcolor>DefaultColor3</textcolor>
 			<textoffsetx>5</textoffsetx>
 			<aligny>center</aligny>
 			<label>+2X</label>
@@ -461,7 +488,7 @@
 			<description>4X</description>
 			<posy>18</posy>
 			<font>OSDFont</font>
-			<textcolor>DisabledColor</textcolor>
+			<textcolor>DefaultColor3</textcolor>
 			<textoffsetx>5</textoffsetx>
 			<aligny>center</aligny>
 			<label>+4X</label>
@@ -472,7 +499,7 @@
 			<description>8X</description>
 			<posy>18</posy>
 			<font>OSDFont</font>
-			<textcolor>DisabledColor</textcolor>
+			<textcolor>DefaultColor3</textcolor>
 			<textoffsetx>5</textoffsetx>
 			<aligny>center</aligny>
 			<label>+8X</label>
@@ -483,7 +510,7 @@
 			<description>16X</description>
 			<posy>18</posy>
 			<font>OSDFont</font>
-			<textcolor>DisabledColor</textcolor>
+			<textcolor>DefaultColor3</textcolor>
 			<textoffsetx>5</textoffsetx>
 			<aligny>center</aligny>
 			<label>+16X</label>
@@ -494,7 +521,7 @@
 			<description>32X</description>
 			<posy>18</posy>
 			<font>OSDFont</font>
-			<textcolor>DisabledColor</textcolor>
+			<textcolor>DefaultColor3</textcolor>
 			<textoffsetx>5</textoffsetx>
 			<aligny>center</aligny>
 			<label>+32X</label>
@@ -506,7 +533,7 @@
 			<description>2X</description>
 			<posy>18</posy>
 			<font>OSDFont</font>
-			<textcolor>DisabledColor</textcolor>
+			<textcolor>DefaultColor3</textcolor>
 			<textoffsetx>5</textoffsetx>
 			<aligny>center</aligny>
 			<label>-2X</label>
@@ -517,7 +544,7 @@
 			<description>4X</description>
 			<posy>18</posy>
 			<font>OSDFont</font>
-			<textcolor>DisabledColor</textcolor>
+			<textcolor>DefaultColor3</textcolor>
 			<textoffsetx>5</textoffsetx>
 			<aligny>center</aligny>
 			<label>-4X</label>
@@ -528,7 +555,7 @@
 			<description>8X</description>
 			<posy>18</posy>
 			<font>OSDFont</font>
-			<textcolor>DisabledColor</textcolor>
+			<textcolor>DefaultColor3</textcolor>
 			<textoffsetx>5</textoffsetx>
 			<aligny>center</aligny>
 			<label>-8X</label>
@@ -539,7 +566,7 @@
 			<description>16X</description>
 			<posy>18</posy>
 			<font>OSDFont</font>
-			<textcolor>DisabledColor</textcolor>
+			<textcolor>DefaultColor3</textcolor>
 			<textoffsetx>5</textoffsetx>
 			<aligny>center</aligny>
 			<label>-16X</label>
@@ -550,7 +577,7 @@
 			<description>32X</description>
 			<posy>18</posy>
 			<font>OSDFont</font>
-			<textcolor>DisabledColor</textcolor>
+			<textcolor>DefaultColor3</textcolor>
 			<textoffsetx>5</textoffsetx>
 			<aligny>center</aligny>
 			<label>-32X</label>
@@ -625,4 +652,30 @@
 	<include name="ReloadSkinNotification">
 		<onclick>Notification($LOCALIZE[32024],$LOCALIZE[31219],3000,)</onclick>
 	</include>
+	
+	<variable name="FSInfoLabel1">
+		<value condition="VideoPlayer.Content(Movies) | VideoPlayer.Content(MusicVideos)">$INFO[VideoPlayer.Genre]</value>
+		<value condition="VideoPlayer.Content(Episodes)">$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Season, (,]$INFO[VideoPlayer.Episode,x,)]</value> 
+		<value condition="VideoPlayer.Content(LiveTV)">$INFO[VideoPlayer.ChannelName]</value>
+	</variable>
+	
+	<variable name="FSInfoLabel2">
+		<value condition="VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes)">$LOCALIZE[20339]:</value>
+		<value condition="VideoPlayer.Content(MusicVideos)">$LOCALIZE[557]:</value>
+	</variable>
+	
+	<variable name="FSInfoLabel2Val">
+		<value condition="VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes)">$INFO[VideoPlayer.Director]</value>
+		<value condition="VideoPlayer.Content(MusicVideos)">$INFO[VideoPlayer.Artist]</value>
+	</variable>
+	
+	<variable name="FSInfoLabel3">
+		<value condition="VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes)">$LOCALIZE[20417]:</value>
+		<value condition="VideoPlayer.Content(MusicVideos)">$LOCALIZE[558]:</value>
+	</variable>
+	
+	<variable name="FSInfoLabel3Val">
+		<value condition="VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes)">$INFO[VideoPlayer.Writer]</value>
+		<value condition="VideoPlayer.Content(MusicVideos)">$INFO[VideoPlayer.Album]</value>
+	</variable>
 </includes>

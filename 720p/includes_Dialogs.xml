@@ -412,9 +412,9 @@
 	
 	<include name="SliderDialogBox">
 		<control type="image">
-			<width>240</width>
+			<width>228</width>
 			<height>90</height>
-			<texture border="18,18,18,0">gui/info-pane-background.png</texture>
+			<texture border="8">panels/panel.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>	
 	</include>

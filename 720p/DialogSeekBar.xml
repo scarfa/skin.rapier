@@ -1,34 +1,38 @@
 <window id="115">
 	<defaultcontrol>-</defaultcontrol>
 	
-	<visible>[Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Paused | Player.Caching]
-		+ !Window.IsVisible(VideoOSD) + !Window.IsVisible(MusicOSD) + !Skin.HasSetting(HideSeekBarOSD)</visible>		
+	<visible>[Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Paused | Player.Caching | Window.IsActive(FullscreenInfo) | Player.ShowInfo]
+		+ ![Window.IsVisible(VideoOSD) | Window.IsVisible(MusicOSD) | Skin.HasSetting(HideSeekBarOSD)]</visible>		
 			
 	<controls>
 		<control type="group" id="682">
 			<posx>772</posx>
 			<posy>655</posy>
-			<visible>Window.IsActive(FullScreenVideo) | Window.IsActive(Visualisation)</visible>
+			<visible>Window.IsActive(FullscreenVideo) | Window.IsActive(Visualisation]</visible>
+			<include>FSSeekBar</include>
 			<include>BottomPaneOpenCloseAnim</include>
 			
-			<control type="image">
-				<width>486</width>
-				<height>90</height>
-				<texture border="18,18,18,0">gui/info-pane-background.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>	
-			
+			<control type="progress">
+				<description>Progressbar Cache</description>
+				<posx>37</posx>
+				<posy>39</posy>
+				<width>412</width>
+				<midtexture border="2">controls/scrollbar-slider-horz-nofocus.png</midtexture>
+				<info>Player.ProgressCache</info>
+				<animation effect="fade" end="20" condition="true">Conditional</animation>
+			</control>
+				
 			<control type="progress">
 				<description>Progressbar</description>
 				<posx>37</posx>
-				<posy>43</posy>
+				<posy>39</posy>
 				<width>412</width>
 				<info>Player.Progress</info>
 			</control>
 			
 			<control type="grouplist">
 				<posx>37</posx>
-				<posy>10</posy>
+				<posy>6</posy>
 				<height>40</height>
 				<width>260</width>
 				<usecontrolcoords>true</usecontrolcoords>
@@ -59,7 +63,7 @@
 			<control type="grouplist">
 				<description>Finish Time</description>
 				<posx>249</posx>
-				<posy>10</posy>
+				<posy>6</posy>
 				<height>40</height>
 				<width>200</width>
 				<usecontrolcoords>true</usecontrolcoords>
@@ -87,7 +91,7 @@
 			<control type="grouplist">
 				<description>Playlist</description>
 				<posx>249</posx>
-				<posy>10</posy>
+				<posy>6</posy>
 				<height>40</height>
 				<width>200</width>
 				<usecontrolcoords>true</usecontrolcoords>
