@@ -142,13 +142,13 @@
 	</include>
 	
 	<include name="FSMediaInfoPanel">
-		<control type="image">
+		<control type="image" id="1">
 			<width>1224</width>
 			<height>350</height>
 			<texture border="8">panels/panel.png</texture>
 		</control>
 		
-		<control type="image">
+		<control type="image" id="1">
 			<posx>4</posx>
 			<posy>4</posy>
 			<width>1216</width>
@@ -662,20 +662,24 @@
 	<variable name="FSInfoLabel2">
 		<value condition="VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes)">$LOCALIZE[20339]:</value>
 		<value condition="VideoPlayer.Content(MusicVideos)">$LOCALIZE[557]:</value>
+		<value condition="VideoPlayer.Content(LiveTV)">$LOCALIZE[19127]:</value>
 	</variable>
 	
 	<variable name="FSInfoLabel2Val">
 		<value condition="VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes)">$INFO[VideoPlayer.Director]</value>
 		<value condition="VideoPlayer.Content(MusicVideos)">$INFO[VideoPlayer.Artist]</value>
+		<value condition="VideoPlayer.Content(LiveTV)">$INFO[VideoPlayer.EndTime]</value>
 	</variable>
 	
 	<variable name="FSInfoLabel3">
 		<value condition="VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes)">$LOCALIZE[20417]:</value>
 		<value condition="VideoPlayer.Content(MusicVideos)">$LOCALIZE[558]:</value>
+		<value condition="VideoPlayer.Content(LiveTV)">$LOCALIZE[19113]:</value>
 	</variable>
 	
 	<variable name="FSInfoLabel3Val">
 		<value condition="VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes)">$INFO[VideoPlayer.Writer]</value>
 		<value condition="VideoPlayer.Content(MusicVideos)">$INFO[VideoPlayer.Album]</value>
+		<value condition="VideoPlayer.Content(LiveTV)">$INFO[VideoPlayer.NextTitle]</value>
 	</variable>
 </includes>
