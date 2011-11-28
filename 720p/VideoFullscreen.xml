@@ -189,7 +189,7 @@
 					<height>210</height>
 					<bordertexture border="8">panels/panel-content-border.png</bordertexture>
 					<texture diffuse="covers/player-media-cover-border.png">$INFO[VideoPlayer.Cover]</texture>
-					<aspectratio aligny="top">keep</aspectratio>
+					<aspectratio>keep</aspectratio>
 				</control>
 
 				<control type="image" id="1">
