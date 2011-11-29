@@ -26,11 +26,6 @@
 			<filename>default-bold.ttf</filename>
 			<size>16</size>
 		</font>
-		<font>
-			<name>DefaultFontB</name>
-			<filename>default-bold.ttf</filename>
-			<size>16</size>
-		</font>	
 		<!-- Views -->
 		<font>
 			<name>IconFont</name>
