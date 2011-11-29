@@ -755,7 +755,7 @@
 			<control type="button" id="110">
 				<description>PVR</description>
 				<include>MenuBarSettingsBtn2</include>
-				<label>[UPPERCASE]$LOCALIZE[32028][/UPPERCASE]</label>
+				<label>[UPPERCASE]$LOCALIZE[31900][/UPPERCASE]</label>
 				<onclick>ReplaceWindow(PVRSettings)</onclick>
 			</control>
 			<control type="image" id="124">
@@ -1028,7 +1028,7 @@
 			<control type="radiobutton" id="475">
 				<description>Hide Radio (PVR)</description>
 				<include>MenuBarRadioBtn</include>
-				<label>$LOCALIZE[32029]</label>
+				<label>$LOCALIZE[31901]</label>
 				<selected>Skin.HasSetting(HideLiveRadio)</selected>
 				<onclick>Skin.ToggleSetting(HideLiveRadio)</onclick>
 				<onclick>ReloadSkin()</onclick>

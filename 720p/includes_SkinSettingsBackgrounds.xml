@@ -359,7 +359,7 @@
 				<control type="button">
 					<description>Title</description>
 					<include>SettingsHeaderBtn</include>
-					<label>$LOCALIZE[31604] - $LOCALIZE[32028]</label>
+					<label>$LOCALIZE[31604] - $LOCALIZE[31900]</label>
 				</control>
 
 				<include>CustomImagePreviewBG</include>
@@ -444,7 +444,7 @@
 					<control type="togglebutton" id="94213">
 						<description>Apply To All Windows</description>
 						<include>SettingsContentRadioBtn</include>
-						<label>$LOCALIZE[33068] $LOCALIZE[31052] $LOCALIZE[32028]</label>
+						<label>$LOCALIZE[33068] $LOCALIZE[31052] $LOCALIZE[31900]</label>
 						<altlabel>$LOCALIZE[33068] $LOCALIZE[31051]</altlabel>
 						<usealttexture>!Skin.HasSetting(ApplyAllPVRCustomBG)</usealttexture>
 						<onclick>Skin.ToggleSetting(ApplyAllPVRCustomBG)</onclick>
@@ -1298,7 +1298,7 @@
 		<control type="radiobutton" id="4012">
 			<description>Customize PVR Background Settings</description>
 			<include>SettingsContentExpandBtn</include>
-			<label>$LOCALIZE[32028]</label>
+			<label>$LOCALIZE[31900]</label>
 			<selected>Skin.HasSetting(ExpandCustomPVRBGSettings)</selected>
 			<onclick>Skin.SetBool(ExpandCustomPVRBGSettings)</onclick>
 			<onclick>Skin.SetBool(ExpandedSettings)</onclick>

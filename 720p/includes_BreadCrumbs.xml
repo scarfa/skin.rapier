@@ -771,7 +771,7 @@
 			<control type="label" id="5501">
 				<description>PVR</description>
 				<include>BreadCrumbLabel</include>
-				<label>[UPPERCASE]$LOCALIZE[32028][/UPPERCASE]</label>
+				<label>[UPPERCASE]$LOCALIZE[31900][/UPPERCASE]</label>
 				<include>BreadCrumbSlideLvl2Anim</include>
 			</control>
 			<control type="image">
@@ -882,6 +882,13 @@
 				<include>BreadCrumbLabel</include>
 				<label>[UPPERCASE][B]$LOCALIZE[166][/B][/UPPERCASE]</label>
 				<visible>Window.IsActive(3001)</visible>
+				<include>BreadCrumbSlideLvl3Anim</include>
+			</control>
+			<control type="label" id="5510">
+				<description>PVR</description>
+				<include>BreadCrumbLabel</include>
+				<label>[UPPERCASE][B]$LOCALIZE[31900][/B][/UPPERCASE]</label>
+				<visible>Window.IsActive(PVRSettings)</visible>
 				<include>BreadCrumbSlideLvl3Anim</include>
 			</control>
 			<control type="image">

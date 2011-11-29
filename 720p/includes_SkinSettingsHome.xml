@@ -2222,7 +2222,7 @@
 			<posx>220</posx>
 			<posy>130</posy>
 			<include>ExpandedSettingsRadioBtn</include>
-			<label>$LOCALIZE[32028]</label>
+			<label>$LOCALIZE[31900]</label>
 			<selected>Skin.HasSetting(HidePVRCategory)</selected>
 			<onclick>Skin.ToggleSetting(HidePVRCategory)</onclick>
 			<include>PvrVisible</include>
@@ -2236,7 +2236,7 @@
 		<control type="button" id="2309">
 			<description>PVR</description>
 			<include>ExpandedSettingsListBtn</include>
-			<label>$LOCALIZE[32028] - [COLOR=DefaultColor2]$INFO[Skin.String(PVRCategoryIconPath)][/COLOR]</label>
+			<label>$LOCALIZE[31900] - [COLOR=DefaultColor2]$INFO[Skin.String(PVRCategoryIconPath)][/COLOR]</label>
 			<onclick>Skin.SetImage(PVRCategoryIconPath)</onclick>
 		</control>
 	</include>
