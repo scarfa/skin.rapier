@@ -3,7 +3,7 @@
 		<width>120</width>	
 		<textwidth>110</textwidth>
 	</include>
-	
+
 	<include name="DialogTitle">
 		<posx>DialogHeadingOffsetX</posx>
 		<posy>DialogHeadingOffsetY</posy>
@@ -14,7 +14,7 @@
 		<align>center</align>
 		<aligny>center</aligny>
 	</include>
-	
+
 	<include name="DialogTitle2">
 		<posx>DialogHeadingOffsetX</posx>
 		<posy>DialogHeadingOffsetY</posy>
@@ -25,7 +25,7 @@
 		<align>center</align>
 		<aligny>center</aligny>
 	</include>
-	
+
 	<include name="DialogTitle3">
 		<posx>DialogHeadingOffsetX</posx>
 		<posy>DialogHeadingOffsetY</posy>
@@ -36,7 +36,7 @@
 		<align>center</align>
 		<aligny>center</aligny>
 	</include>
-	
+
 	<include name="SmallMediaInfoDialogTitle">
 		<posx>DialogMarginOffsetX</posx>
 		<posy>DialogHeadingOffsetY</posy>
@@ -47,7 +47,7 @@
 		<align>center</align>
 		<aligny>center</aligny>
 	</include>
-	
+
 	<include name="SmallMediaInfoDialogTitle2">
 		<posx>315</posx>
 		<posy>DialogHeadingOffsetY</posy>
@@ -59,7 +59,7 @@
 		<aligny>center</aligny>
 		<scroll>yes</scroll>
 	</include>
-	
+
 	<include name="SettingsDialogTitle">
 		<posx>DialogHeadingOffsetX</posx>
 		<posy>DialogHeadingOffsetY</posy>
@@ -70,7 +70,29 @@
 		<align>center</align>
 		<aligny>center</aligny>
 	</include>
-	
+
+	<include name="DialogHeadLabel">
+		<font>DialogHeadFont</font>
+		<textcolor>DefaultColor2</textcolor>
+		<shadowcolor>ShadowColor</shadowcolor>
+		<focusedcolor>ButtonFocusColor</focusedcolor>
+		<selectedcolor>SelectedColor2</selectedcolor>
+		<disabledcolor>DefaultColor2</disabledcolor>
+		<enable>false</enable>
+		<aligny>center</aligny>
+		<align>left</align>
+	</include>
+
+	<include name="DialogContentLabel">
+		<font>ButtonFont2</font>
+		<textcolor>ButtonColor</textcolor>
+		<shadowcolor>ShadowColor</shadowcolor>
+		<focusedcolor>ButtonFocusColor</focusedcolor>
+		<selectedcolor>SelectedColor2</selectedcolor>
+		<aligny>center</aligny>
+		<align>left</align>
+	</include>
+
 	<include name="DialogMenuBarBtn">
 		<width>170</width>
 		<height>44</height>
@@ -79,7 +101,7 @@
 		<texturefocus border="4">gui/menu-bar-button-focus.png</texturefocus>
 		<texturenofocus>-</texturenofocus>		
 	</include>
-	
+
 	<include name="DialogMenuBarSmallBtn">	
 		<width>150</width>
 		<height>44</height>
@@ -88,7 +110,7 @@
 		<texturefocus border="4">gui/menu-bar-button-focus.png</texturefocus>
 		<texturenofocus>-</texturenofocus>		
 	</include>
-	
+
 	<include name="DialogMenuBarSmallerBtn">	
 		<width>130</width>
 		<height>44</height>
@@ -97,7 +119,7 @@
 		<texturefocus border="4">gui/menu-bar-button-focus.png</texturefocus>
 		<texturenofocus>-</texturenofocus>		
 	</include>
-	
+
 	<include name="DialogMenuBarSmallestBtn">	
 		<width>120</width>
 		<height>44</height>
@@ -106,7 +128,7 @@
 		<texturefocus border="4">gui/menu-bar-button-focus.png</texturefocus>
 		<texturenofocus>-</texturenofocus>		
 	</include>
-	
+
 	<include name="DialogCloseBtn">
 		<posy>13</posy>
 		<width>28</width>
@@ -117,46 +139,46 @@
 		<visible>!Skin.HasSetting(HideDialogCloseBtns) + System.GetBool(input.enablemouse)</visible>
 		<pulseonselect>false</pulseonselect>
 	</include>
-	
+
 	<include name="KeyboardDialogBox">	
 		<control type="image">
 			<width>668</width>
 			<height>411</height>
 			<texture border="50">panels/dialog-background3.png</texture>
 		</control>
-		
+
 		<control type="button">
 			<posx>628</posx>
 			<include>DialogCloseBtn</include>
 		</control>
 	</include>
-	
+
 	<include name="ContentSettingsDialogBox">	
 		<control type="image">
 			<width>670</width>
 			<height>487</height>
 			<texture border="50,70,50,75">panels/dialog-background.png</texture>
 		</control>
-		
+
 		<control type="button">
 			<posx>630</posx>
 			<include>DialogCloseBtn</include>
 		</control>
 	</include>
-	
+
 	<include name="AddonSettingsDialogBox">
 		<control type="image">
 			<width>670</width>
 			<height>487</height>
 			<texture border="50,70,50,75">panels/dialog-background.png</texture>
 		</control>
-		
+
 		<control type="button">
 			<posx>630</posx>
 			<include>DialogCloseBtn</include>
 		</control>
 	</include>
-	
+
 	<include name="ProfileSettingsDialogBox">	
 		<control type="image">
 			<width>670</width>
@@ -169,7 +191,7 @@
 			<include>DialogCloseBtn</include>
 		</control>
 	</include>
-	
+
 	<include name="LockSettingsDialogBox">	
 		<control type="image">
 			<width>670</width>
@@ -182,7 +204,7 @@
 			<include>DialogCloseBtn</include>
 		</control>
 	</include>
-	
+
 	<include name="LoginScreenDialogBox">	
 		<control type="image">
 			<width>670</width>
@@ -195,7 +217,7 @@
 			<include>DialogCloseBtn</include>
 		</control>
 	</include>
-	
+
 	<include name="FileBrowserDialogBox">	
 		<control type="image">
 			<width>670</width>
@@ -208,7 +230,7 @@
 			<include>DialogCloseBtn</include>
 		</control>
 	</include>
-	
+
 	<include name="FavouritesDialogBox">	
 		<control type="image">
 			<width>670</width>
@@ -221,7 +243,7 @@
 			<include>DialogCloseBtn</include>
 		</control>
 	</include>
-	
+
 	<include name="MediaSourceDialogBox">	
 		<control type="image">
 			<width>670</width>
@@ -234,46 +256,46 @@
 			<include>DialogCloseBtn</include>
 		</control>
 	</include>
-	
+
 	<include name="SettingsDialogBox">
 		<control type="image">
 			<width>480</width>
 			<height>520</height>
 			<texture border="50,70,50,75">panels/dialog-background.png</texture>
 		</control>
-		
+
 		<control type="button">
 			<posx>440</posx>
 			<include>DialogCloseBtn</include>
 		</control>
 	</include>
-	
+
 	<include name="XBMCSubtitlesDialogBox">
 		<control type="image">
 			<width>700</width>
 			<height>511</height>
 			<texture border="50,70,50,75">panels/dialog-background.png</texture>
 		</control>
-		
+
 		<control type="button">
 			<posx>660</posx>
 			<include>DialogCloseBtn</include>
 		</control>
 	</include>
-	
+
 	<include name="NumericDialogBox">
 		<control type="image">
 			<width>268</width>
 			<height>341</height>
 			<texture border="50">panels/dialog-background3.png</texture>
 		</control>
-		
+
 		<control type="button">
 			<posx>228</posx>
 			<include>DialogCloseBtn</include>
 		</control>
 	</include>
-	
+
 	<include name="ProgressDialogBox">
 		<control type="image">
 			<width>490</width>
@@ -281,14 +303,14 @@
 			<texture border="50,70,50,75">panels/dialog-background.png</texture>
 		</control>
 	</include>
-	
+
 	<include name="KaraokeSongSelectorDialogBox">
 		<control type="image">
 			<width>490</width>
 			<height>179</height>
 			<texture border="50,70,50,50">panels/dialog-background3.png</texture>
 		</control>
-		
+
 		<control type="button">
 			<posx>450</posx>
 			<include>DialogCloseBtn</include>
@@ -301,13 +323,13 @@
 			<height>217</height>
 			<texture border="50,70,50,50">panels/dialog-background3.png</texture>
 		</control>
-		
+
 		<control type="button">
 			<posx>450</posx>
 			<include>DialogCloseBtn</include>
 		</control>
 	</include>
-	
+
 	<include name="GamepadDialogBox">
 		<control type="image">
 			<width>490</width>
@@ -315,7 +337,7 @@
 			<texture border="50,70,50,50">panels/dialog-background3.png</texture>
 		</control>
 	</include>
-	
+
 	<include name="KaiToastDialogBox">
 		<control type="image">
 			<width>490</width>
@@ -323,7 +345,7 @@
 			<texture border="50">panels/dialog-background4.png</texture>
 		</control>
 	</include>
-	
+
 	<include name="ButtonMenuDialogBox">
 		<control type="image">
 			<width>350</width>
@@ -331,59 +353,59 @@
 			<texture border="50">panels/dialog-background4.png</texture>
 		</control>
 	</include>
-	
+
 	<include name="SmallMediaInfoDialogBox">
 		<control type="image">
 			<width>850</width>
 			<height>390</height>
 			<texture border="50,70,50,75">panels/dialog-background.png</texture>
 		</control>
-		
+
 		<control type="button">
 			<posx>810</posx>
 			<include>DialogCloseBtn</include>
 		</control>
 	</include>
-	
+
 	<include name="SmallMediaInfoDialogBox">
 		<control type="image">
 			<width>850</width>
 			<height>390</height>
 			<texture border="50,70,50,75">panels/dialog-background.png</texture>
 		</control>
-		
+
 		<control type="button">
 			<posx>810</posx>
 			<include>DialogCloseBtn</include>
 		</control>
 	</include>
-	
+
 	<include name="NetworkSetupDialogBox">	
 		<control type="image">
 			<width>670</width>
 			<height>335</height>
 			<texture border="50,70,50,75">panels/dialog-background.png</texture>
 		</control>
-		
+
 		<control type="button">
 			<posx>630</posx>
 			<include>DialogCloseBtn</include>
 		</control>
 	</include>
-	
+
 	<include name="SmartPlaylistEditorDialogBox">	
 		<control type="image">
 			<width>670</width>
 			<height>510</height>
 			<texture border="50,70,50,75">panels/dialog-background.png</texture>
 		</control>	
-		
+
 		<control type="button">
 			<posx>630</posx>
 			<include>DialogCloseBtn</include>
 		</control>
 	</include>
-	
+
 	<include name="SmartPlaylistRuleDialogBox">	
 		<control type="image">
 			<width>670</width>
@@ -396,20 +418,20 @@
 			<include>DialogCloseBtn</include>
 		</control>
 	</include>
-	
+
 	<include name="TextViewerDialogBox">	
 		<control type="image">
 			<width>700</width>
 			<height>511</height>
 			<texture border="50,70,50,50">panels/dialog-background3.png</texture>
 		</control>
-		
+
 		<control type="button">
 			<posx>660</posx>
 			<include>DialogCloseBtn</include>
 		</control>	
 	</include>
-	
+
 	<include name="SliderDialogBox">
 		<control type="image">
 			<width>228</width>
@@ -417,5 +439,79 @@
 			<texture border="8">panels/panel.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>	
+	</include>
+
+	<include name="PVRChannelManagerDialogBox">	
+		<control type="image">
+			<width>870</width>
+			<height>474</height>
+			<texture border="50,70,50,75">panels/dialog-background.png</texture>
+		</control>
+	</include>
+
+	<include name="PVRGroupManagerDialogBox">	
+		<control type="image">
+			<width>870</width>
+			<height>474</height>
+			<texture border="50,70,50,75">panels/dialog-background.png</texture>
+		</control>
+	</include>
+
+	<include name="PVRGuideSearchDialogBox">	
+		<control type="image">
+			<width>875</width>
+			<height>530</height>
+			<texture border="50,70,50,75">panels/dialog-background.png</texture>
+		</control>
+	</include>
+
+	<include name="PVRTimerSettingsDialogBox">	
+		<control type="image">
+			<width>670</width>
+			<height>550</height>
+			<texture border="50,70,50,75">panels/dialog-background.png</texture>
+		</control>
+	</include>
+
+	<include name="PVRGuideInfoDialogBox">	
+		<control type="image">
+			<width>600</width>
+			<height>500</height>
+			<texture border="50,70,50,75">panels/dialog-background.png</texture>
+		</control>
+	</include>
+
+	<include name="PVRRecordingInfoDialogBox">	
+		<control type="image">
+			<width>600</width>
+			<height>500</height>
+			<texture border="50,70,50,75">panels/dialog-background.png</texture>
+		</control>
+	</include>
+
+	<include name="PVRChannelsOSDDialogBox">
+		<control type="image">
+			<width>500</width>
+			<height>606</height>
+			<texture border="50,70,50,75">panels/dialog-background3.png</texture>
+		</control>
+
+		<control type="button">
+			<posx>460</posx>
+			<include>DialogCloseBtn</include>
+		</control>
+	</include>
+
+	<include name="PVRGuideOSDDialogBox">
+		<control type="image">
+			<width>500</width>
+			<height>606</height>
+			<texture border="50,70,50,75">panels/dialog-background3.png</texture>
+		</control>
+
+		<control type="button">
+			<posx>460</posx>
+			<include>DialogCloseBtn</include>
+		</control>
 	</include>
 </includes>

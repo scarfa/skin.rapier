@@ -1,12 +1,12 @@
 <fonts>
 	<fontset id="Default" unicode="true">
 		<!-- Common -->
-	 	<font>
+		<font>
 			<name>font13</name>
 			<filename>default.ttf</filename>
 			<size>16</size>
 		</font>
-	 	<font>
+		<font>
 			<name>font18</name>
 			<filename>default.ttf</filename>
 			<size>17</size>
@@ -19,6 +19,11 @@
 		<font>
 			<name>DefaultFont</name>
 			<filename>default.ttf</filename>
+			<size>16</size>
+		</font>
+		<font>
+			<name>DefaultFontB</name>
+			<filename>default-bold.ttf</filename>
 			<size>16</size>
 		</font>
 		<font>
@@ -235,6 +240,11 @@
 			<name>ButtonFont</name>
 			<filename>gui.ttf</filename>
 			<size>12</size>
+		</font>
+		<font>
+			<name>ButtonFont2</name>
+			<filename>default-bold.ttf</filename>
+			<size>16</size>
 		</font>
 		<font>
 			<name>ProfileNameFont</name>
