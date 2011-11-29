@@ -48,8 +48,6 @@
 <string id="32025">Reiniciar Piel</string>
 <string id="32026">Los ajustes de piel volverá a la configuración por defecto. Pulse para confirmar.</string>
 <string id="32027">Editor</string>
-<string id="32028">TV</string>
-<string id="32029">Ocultar Radio</string>
 
 <!-- view types -->
 <string id="31103">Icon</string>
@@ -163,4 +161,13 @@
 <string id="31500">Mostrar Botón de Subtitulos En OSD</string>
 <string id="31501">Mostrar Botón de Letras En OSD</string>
 <string id="31502">Ejecutar Logo Downloader</string>
+
+<!--temporary strings until PVR related strings are present in xbmc main branch-->
+<string id="31900">TV</string>
+<string id="31901">Ocultar Radio</string>
+<string id="31902">Grupos Disponibles</string>
+<string id="31903">Canales Ocultos</string>
+<string id="31904">Anadir Grupo</string>
+<string id="31905">Renombrar Grupo</string>
+<string id="31906">Eliminar Grupo</string>
 </strings>

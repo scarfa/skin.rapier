@@ -10,7 +10,7 @@
 			<animation effect="fade" end="75" condition="true">Conditional</animation>
 		</control>
 	</include>	
-	
+
 	<include name="HomeSubMenuBarImage">	
 		<control type="image">
 			<posy>0</posy>
@@ -21,7 +21,7 @@
 			<include>HomeSubMenuBarOpenCloseAnim</include>
 		</control>
 	</include>
-	
+
 	<include name="HomeMenuPaneImage">
 		<control type="image">
 			<width>ScreenWidth</width>
@@ -49,12 +49,12 @@
 			<animation effect="fade" end="68" condition="true">Conditional</animation>
 		</control>	
 	</include>
-	
+
 	<include name="HomeMenuIconDim">	
 		<width>256</width>
 		<height>256</height>			
 	</include>
-	
+
 	<include name="HomeNavButtons">
 		<control type="button" id="101">
 			<description>Navigation Move Left</description>
@@ -66,7 +66,7 @@
 			<texturenofocus flipx="true">controls/home-nav-arrow-right-nofocus.png</texturenofocus>
 			<onclick>Control.Message(850,movedown)</onclick>
 		</control>
-		
+
 		<control type="button" id="102">
 			<description>Navigation Move Right</description>
 			<posx>1150</posx>
@@ -78,7 +78,7 @@
 			<onclick>Control.Message(850,moveup)</onclick>
 		</control>
 	</include>
-		
+
 	<include name="HomeTriggers">
 		<control type="button" id="6887">
 			<description>Recently Added Script Trigger</description>
@@ -86,144 +86,144 @@
 			<onfocus>XBMC.RunScript(script.recentlyadded,limit=8&amp;albums=True&amp;totals=True)</onfocus>
 			<onfocus>Control.SetFocus(6100)</onfocus>
 		</control>
-		
+
 		<control type="button" id="6100">
 			<include>RedirectBtn</include>
 			<onfocus>Skin.SetString(CustomMusicBGPath,background-music.png)</onfocus>
 			<onfocus>Control.SetFocus(6102)</onfocus>
 			<visible>IsEmpty(Skin.String(CustomMusicBGPath))</visible>
 		</control>
-		
+
 		<control type="button" id="6100">
 			<include>RedirectBtn</include>
 			<onfocus>Control.SetFocus(6102)</onfocus>
 			<visible>!IsEmpty(Skin.String(CustomMusicBGPath))</visible>
 		</control>
-		
+
 		<control type="button" id="6102">
 			<include>RedirectBtn</include>
 			<onfocus>Skin.SetString(CustomVideosBGPath,background-videos.png)</onfocus>
 			<onfocus>Control.SetFocus(6103)</onfocus>
 			<visible>IsEmpty(Skin.String(CustomVideosBGPath))</visible>
 		</control>
-		
+
 		<control type="button" id="6102">
 			<include>RedirectBtn</include>
 			<onfocus>Control.SetFocus(6103)</onfocus>
 			<visible>!IsEmpty(Skin.String(CustomVideosBGPath))</visible>
 		</control>
-		
+
 		<control type="button" id="6103">
 			<include>RedirectBtn</include>
 			<onfocus>Skin.SetString(CustomMoviesBGPath,background-movies.png)</onfocus>
 			<onfocus>Control.SetFocus(6104)</onfocus>
 			<visible>IsEmpty(Skin.String(CustomMoviesBGPath))</visible>
 		</control>
-		
+
 		<control type="button" id="6103">
 			<include>RedirectBtn</include>
 			<onfocus>Control.SetFocus(6104)</onfocus>
 			<visible>!IsEmpty(Skin.String(CustomMoviesBGPath))</visible>
 		</control>
-		
+
 		<control type="button" id="6104">
 			<include>RedirectBtn</include>
 			<onfocus>Skin.SetString(CustomTVShowsBGPath,background-tvshows.png)</onfocus>
 			<onfocus>Control.SetFocus(6105)</onfocus>
 			<visible>IsEmpty(Skin.String(CustomTVShowsBGPath))</visible>
 		</control>
-		
+
 		<control type="button" id="6104">
 			<include>RedirectBtn</include>
 			<onfocus>Control.SetFocus(6105)</onfocus>
 			<visible>!IsEmpty(Skin.String(CustomTVShowsBGPath))</visible>
 		</control>
-		
+
 		<control type="button" id="6105">
 			<include>RedirectBtn</include>
 			<onfocus>Skin.SetString(CustomProgramsBGPath,background-programs.png)</onfocus>
 			<onfocus>Control.SetFocus(6106)</onfocus>
 			<visible>IsEmpty(Skin.String(CustomProgramsBGPath))</visible>
 		</control>
-		
+
 		<control type="button" id="6105">
 			<include>RedirectBtn</include>
 			<onfocus>Control.SetFocus(6106)</onfocus>
 			<visible>!IsEmpty(Skin.String(CustomProgramsBGPath))</visible>
 		</control>
-		
+
 		<control type="button" id="6106">
 			<include>RedirectBtn</include>
 			<onfocus>Skin.SetString(CustomPicturesBGPath,background-pictures.png)</onfocus>
 			<onfocus>Control.SetFocus(6107)</onfocus>
 			<visible>IsEmpty(Skin.String(CustomPicturesBGPath))</visible>
 		</control>
-		
+
 		<control type="button" id="6106">
 			<include>RedirectBtn</include>
 			<onfocus>Control.SetFocus(6107)</onfocus>
 			<visible>!IsEmpty(Skin.String(CustomPicturesBGPath))</visible>
 		</control>
-		
+
 		<control type="button" id="6107">
 			<include>RedirectBtn</include>
 			<onfocus>Skin.SetString(CustomGeneralBGPath,background-general.png)</onfocus>
 			<onfocus>Control.SetFocus(6108)</onfocus>
 			<visible>IsEmpty(Skin.String(CustomGeneralBGPath))</visible>
 		</control>
-		
+
 		<control type="button" id="6107">
 			<include>RedirectBtn</include>
 			<onfocus>Control.SetFocus(6108)</onfocus>
 			<visible>!IsEmpty(Skin.String(CustomGeneralBGPath))</visible>
 		</control>
-		
+
 		<control type="button" id="6108">
 			<include>RedirectBtn</include>
 			<onfocus>Skin.SetString(CustomSystemBGPath,background-system.png)</onfocus>
 			<onfocus>Control.SetFocus(6109)</onfocus>
 			<visible>IsEmpty(Skin.String(CustomSystemBGPath))</visible>
 		</control>
-		
+
 		<control type="button" id="6108">
 			<include>RedirectBtn</include>
 			<onfocus>Control.SetFocus(6109)</onfocus>
 			<visible>!IsEmpty(Skin.String(CustomSystemBGPath))</visible>
 		</control>
-		
+
 		<control type="button" id="6109">
 			<include>RedirectBtn</include>
 			<onfocus>Skin.SetString(CustomPVRBGPath,background-pvr.png)</onfocus>
 			<onfocus>Control.SetFocus(6110)</onfocus>
 			<visible>IsEmpty(Skin.String(CustomPVRBGPath))</visible>
 		</control>
-		
+
 		<control type="button" id="6109">
 			<include>RedirectBtn</include>
 			<onfocus>Control.SetFocus(6110)</onfocus>
 			<visible>!IsEmpty(Skin.String(CustomPVRBGPath))</visible>
 		</control>
-		
+
 		<control type="button" id="6110">
 			<include>RedirectBtn</include>
 			<onfocus>Skin.SetString(CustomDefaultBGPath,background-default.png)</onfocus>
 			<onfocus>Control.SetFocus(6900)</onfocus>
 			<visible>IsEmpty(Skin.String(CustomDefaultBGPath))</visible>
 		</control>
-		
+
 		<control type="button" id="6110">
 			<include>RedirectBtn</include>
 			<onfocus>Control.SetFocus(6900)</onfocus>
 			<visible>!IsEmpty(Skin.String(CustomDefaultBGPath))</visible>
 		</control>
-		
+
 		<control type="button" id="6900">
 			<include>RedirectBtn</include>
 			<onfocus>Skin.Reset(ShowMediaExtraOptions)</onfocus>
 			<onfocus>Control.SetFocus(850)</onfocus>
 		</control>
 	</include>
-	
+
 	<include name="HomeSubMenuItemLayout">
 		<itemlayout width="180">
 			<control type="label">
@@ -262,55 +262,65 @@
 			</control>							
 		</focusedlayout>
 	</include>
-	
+
 	<include name="HomeMusicCustomBGPath">
 		<thumb>$INFO[Skin.String(CustomMusicBGPath)]</thumb>
 	</include>
-	
+
 	<include name="HomeMusicFanartBGPath">
 		<thumb>special://profile/Thumbnails/Music/Fanart</thumb>
 	</include>
-	
+
 	<include name="HomeVideosCustomBGPath">
 		<thumb>$INFO[Skin.String(CustomVideosBGPath)]</thumb>
 	</include>
-	
+
 	<include name="HomeVideosFanartBGPath">
 		<thumb>special://profile/Thumbnails/Video/Fanart</thumb>
 	</include>
-	
+
 	<include name="HomeMoviesCustomBGPath">
 		<thumb>$INFO[Skin.String(CustomMoviesBGPath)]</thumb>
 	</include>
-	
+
 	<include name="HomeMoviesFanartBGPath">
 		<thumb>special://profile/Thumbnails/Video/Fanart</thumb>
 	</include>
-	
+
 	<include name="HomeTVShowsCustomBGPath">
 		<thumb>$INFO[Skin.String(CustomTVShowsBGPath)]</thumb>
 	</include>
-	
+
 	<include name="HomeTVShowsFanartBGPath">
 		<thumb>special://profile/Thumbnails/Video/Fanart</thumb>
 	</include>
-	
+
 	<include name="HomeProgramsCustomBGPath">
 		<thumb>$INFO[Skin.String(CustomProgramsBGPath)]</thumb>
 	</include>
-	
+
 	<include name="HomePicturesCustomBGPath">
 		<thumb>$INFO[Skin.String(CustomPicturesBGPath)]</thumb>
 	</include>
-	
+
 	<include name="HomeGeneralCustomBGPath">
 		<thumb>$INFO[Skin.String(CustomGeneralBGPath)]</thumb>
 	</include>
-	
+
 	<include name="HomeSystemCustomBGPath">
 		<thumb>$INFO[Skin.String(CustomSystemBGPath)]</thumb>
 	</include>
-	
+
+	<include name="HomePVRCategory">
+		<item id="50">
+			<description>PVR Category</description>
+			<label>pvr</label>
+			<icon>homecategories/$INFO[System.Language]/pvr-text-nofocus.png</icon>
+			<thumb>$INFO[Skin.String(CustomPVRBGPath)]</thumb>
+			<onclick>ActivateWindow(PVR)</onclick>
+		</item>
+	</include>
+
 	<include name="HomeCustomCategory1">
 		<item id="7">
 			<label>-</label>
@@ -319,7 +329,7 @@
 			<onclick>$INFO[Skin.String(Custom1BtnParam)]</onclick>
 		</item>
 	</include>
-	
+
 	<include name="HomeCustomCategory2">
 		<item id="8">
 			<label>-</label>
@@ -328,7 +338,7 @@
 			<onclick>$INFO[Skin.String(Custom2BtnParam)]</onclick>
 		</item>
 	</include>
-	
+
 	<include name="HomeCustomCategory3">
 		<item id="9">
 			<label>-</label>
@@ -337,7 +347,7 @@
 			<onclick>$INFO[Skin.String(Custom3BtnParam)]</onclick>
 		</item>
 	</include>
-	
+
 	<include name="HomeCustomCategory4">
 		<item id="10">
 			<label>-</label>
@@ -346,7 +356,7 @@
 			<onclick>$INFO[Skin.String(Custom4BtnParam)]</onclick>
 		</item>
 	</include>
-	
+
 	<include name="HomeCustomCategory5">
 		<item id="11">
 			<label>-</label>
@@ -355,7 +365,7 @@
 			<onclick>$INFO[Skin.String(Custom5BtnParam)]</onclick>
 		</item>
 	</include>
-	
+
 	<include name="HomeCustomCategory6">
 		<item id="12">
 			<label>-</label>
@@ -364,7 +374,7 @@
 			<onclick>$INFO[Skin.String(Custom6BtnParam)]</onclick>
 		</item>
 	</include>
-	
+
 	<include name="HomeCustomCategory7">
 		<item id="13">
 			<label>-</label>
@@ -373,7 +383,7 @@
 			<onclick>$INFO[Skin.String(Custom7BtnParam)]</onclick>
 		</item>
 	</include>
-	
+
 	<include name="HomeCustomCategory8">
 		<item id="14">
 			<label>-</label>
@@ -382,7 +392,7 @@
 			<onclick>$INFO[Skin.String(Custom8BtnParam)]</onclick>
 		</item>
 	</include>
-	
+
 	<include name="HomeCustomCategory9">
 		<item id="17">
 			<label>-</label>
@@ -391,7 +401,7 @@
 			<onclick>$INFO[Skin.String(Custom9BtnParam)]</onclick>
 		</item>
 	</include>
-	
+
 	<include name="HomeCustomCategory10">
 		<item id="18">
 			<label>-</label>
@@ -400,7 +410,7 @@
 			<onclick>$INFO[Skin.String(Custom10BtnParam)]</onclick>
 		</item>
 	</include>
-	
+
 	<include name="HomeCustomCategory11">
 		<item id="19">
 			<label>-</label>
@@ -409,7 +419,7 @@
 			<onclick>$INFO[Skin.String(Custom11BtnParam)]</onclick>
 		</item>
 	</include>
-	
+
 	<include name="HomeCustomCategory12">
 		<item id="20">
 			<label>-</label>
@@ -418,7 +428,7 @@
 			<onclick>$INFO[Skin.String(Custom12BtnParam)]</onclick>
 		</item>
 	</include>
-	
+
 	<include name="HomeCustomCategory13">
 		<item id="21">
 			<label>-</label>
@@ -427,7 +437,7 @@
 			<onclick>$INFO[Skin.String(Custom13BtnParam)]</onclick>
 		</item>
 	</include>
-	
+
 	<include name="HomeCustomCategory14">
 		<item id="22">
 			<label>-</label>
@@ -436,7 +446,7 @@
 			<onclick>$INFO[Skin.String(Custom14BtnParam)]</onclick>
 		</item>
 	</include>
-	
+
 	<include name="HomeCustomCategory15">
 		<item id="23">
 			<label>-</label>
@@ -445,7 +455,7 @@
 			<onclick>$INFO[Skin.String(Custom15BtnParam)]</onclick>
 		</item>
 	</include>
-	
+
 	<include name="HomeCustomCategory16">
 		<item id="24">
 			<label>-</label>
@@ -454,7 +464,7 @@
 			<onclick>$INFO[Skin.String(Custom16BtnParam)]</onclick>
 		</item>
 	</include>
-	
+
 	<include name="HomeCategoryFocusImage">
 		<posx>490</posx>
 		<posy>30</posy>
@@ -465,7 +475,7 @@
 		<include condition="Skin.HasSetting(ShowHomeNavButtons)">HomeMenuCategoryWithNavBtnFocusAnim</include>
 		<visible>!Container(850).OnNext + !Container(850).OnPrevious</visible>
 	</include>
-	
+
 	<include name="HomeCustomCategoryFocus1">
 		<control type="image">	
 			<include>HomeCategoryFocusImage</include>
@@ -473,7 +483,7 @@
 			<visible>Container(850).HasFocus(7)</visible>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomCategoryFocus2">
 		<control type="image">	
 			<include>HomeCategoryFocusImage</include>
@@ -481,7 +491,7 @@
 			<visible>Container(850).HasFocus(8)</visible>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomCategoryFocus3">
 		<control type="image">	
 			<include>HomeCategoryFocusImage</include>
@@ -489,7 +499,7 @@
 			<visible>Container(850).HasFocus(9)</visible>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomCategoryFocus4">
 		<control type="image">	
 			<include>HomeCategoryFocusImage</include>
@@ -497,7 +507,7 @@
 			<visible>Container(850).HasFocus(10)</visible>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomCategoryFocus5">
 		<control type="image">	
 			<include>HomeCategoryFocusImage</include>
@@ -505,7 +515,7 @@
 			<visible>Container(850).HasFocus(11)</visible>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomCategoryFocus6">
 		<control type="image">	
 			<include>HomeCategoryFocusImage</include>
@@ -513,7 +523,7 @@
 			<visible>Container(850).HasFocus(12)</visible>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomCategoryFocus7">
 		<control type="image">	
 			<include>HomeCategoryFocusImage</include>
@@ -521,7 +531,7 @@
 			<visible>Container(850).HasFocus(13)</visible>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomCategoryFocus8">
 		<control type="image">	
 			<include>HomeCategoryFocusImage</include>
@@ -529,7 +539,7 @@
 			<visible>Container(850).HasFocus(14)</visible>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomCategoryFocus9">
 		<control type="image">	
 			<include>HomeCategoryFocusImage</include>
@@ -537,7 +547,7 @@
 			<visible>Container(850).HasFocus(17)</visible>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomCategoryFocus10">
 		<control type="image">	
 			<include>HomeCategoryFocusImage</include>
@@ -545,7 +555,7 @@
 			<visible>Container(850).HasFocus(18)</visible>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomCategoryFocus11">
 		<control type="image">	
 			<include>HomeCategoryFocusImage</include>
@@ -553,7 +563,7 @@
 			<visible>Container(850).HasFocus(19)</visible>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomCategoryFocus12">
 		<control type="image">	
 			<include>HomeCategoryFocusImage</include>
@@ -561,7 +571,7 @@
 			<visible>Container(850).HasFocus(20)</visible>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomCategoryFocus13">
 		<control type="image">	
 			<include>HomeCategoryFocusImage</include>
@@ -569,7 +579,7 @@
 			<visible>Container(850).HasFocus(21)</visible>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomCategoryFocus14">
 		<control type="image">	
 			<include>HomeCategoryFocusImage</include>
@@ -577,7 +587,7 @@
 			<visible>Container(850).HasFocus(22)</visible>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomCategoryFocus15">
 		<control type="image">	
 			<include>HomeCategoryFocusImage</include>
@@ -585,7 +595,7 @@
 			<visible>Container(850).HasFocus(23)</visible>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomCategoryFocus16">
 		<control type="image">	
 			<include>HomeCategoryFocusImage</include>
@@ -593,7 +603,7 @@
 			<visible>Container(850).HasFocus(24)</visible>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomIcon1">
 		<control type="image">
 			<include>HomeMenuIconDim</include>
@@ -603,7 +613,7 @@
 			<include>HomeMenuIconAnim</include>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomIcon2">
 		<control type="image">
 			<include>HomeMenuIconDim</include>
@@ -613,7 +623,7 @@
 			<include>HomeMenuIconAnim</include>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomIcon3">
 		<control type="image">
 			<include>HomeMenuIconDim</include>
@@ -623,7 +633,7 @@
 			<include>HomeMenuIconAnim</include>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomIcon4">
 		<control type="image">
 			<include>HomeMenuIconDim</include>
@@ -633,7 +643,7 @@
 			<include>HomeMenuIconAnim</include>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomIcon5">
 		<control type="image">
 			<include>HomeMenuIconDim</include>
@@ -643,7 +653,7 @@
 			<include>HomeMenuIconAnim</include>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomIcon6">
 		<control type="image">
 			<include>HomeMenuIconDim</include>
@@ -653,7 +663,7 @@
 			<include>HomeMenuIconAnim</include>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomIcon7">
 		<control type="image">
 			<include>HomeMenuIconDim</include>
@@ -663,7 +673,7 @@
 			<include>HomeMenuIconAnim</include>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomIcon8">
 		<control type="image">
 			<include>HomeMenuIconDim</include>
@@ -673,7 +683,7 @@
 			<include>HomeMenuIconAnim</include>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomIcon9">
 		<control type="image">
 			<include>HomeMenuIconDim</include>
@@ -683,7 +693,7 @@
 			<include>HomeMenuIconAnim</include>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomIcon10">
 		<control type="image">
 			<include>HomeMenuIconDim</include>
@@ -693,7 +703,7 @@
 			<include>HomeMenuIconAnim</include>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomIcon11">
 		<control type="image">
 			<include>HomeMenuIconDim</include>
@@ -703,7 +713,7 @@
 			<include>HomeMenuIconAnim</include>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomIcon12">
 		<control type="image">
 			<include>HomeMenuIconDim</include>
@@ -713,7 +723,7 @@
 			<include>HomeMenuIconAnim</include>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomIcon13">
 		<control type="image">
 			<include>HomeMenuIconDim</include>
@@ -723,7 +733,7 @@
 			<include>HomeMenuIconAnim</include>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomIcon14">
 		<control type="image">
 			<include>HomeMenuIconDim</include>
@@ -733,7 +743,7 @@
 			<include>HomeMenuIconAnim</include>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomIcon15">
 		<control type="image">
 			<include>HomeMenuIconDim</include>
@@ -743,7 +753,7 @@
 			<include>HomeMenuIconAnim</include>
 		</control>
 	</include>
-	
+
 	<include name="HomeCustomIcon16">
 		<control type="image">
 			<include>HomeMenuIconDim</include>
@@ -753,7 +763,7 @@
 			<include>HomeMenuIconAnim</include>
 		</control>
 	</include>
-	
+
 	<include name="HomeMenu">
 		<control type="wraplist" id="850">
 			<description>Home Menu</description>
@@ -796,21 +806,16 @@
 					<onclick>ActivateWindow(Music)</onclick>
 					<visible>!Skin.HasSetting(HideMusicCategory)</visible>
 				</item>
-				<item id="50">
-					<description>PVR Category</description>
-					<label>pvr</label>
-					<icon>homecategories/$INFO[System.Language]/pvr-text-nofocus.png</icon>
-					<thumb>$INFO[Skin.String(CustomPVRBGPath)]</thumb>
-					<onclick>ActivateWindow(PVR)</onclick>
-					<visible>!Skin.HasSetting(HidePVRCategory) + System.GetBool(pvrmanager.enabled) 
-					+ [system.hasaddon(pvr.fortherecord.argus) 
-					| system.hasaddon(pvr.fortherecord.argus-rtsp) 
-					| system.hasaddon(pvr.hts) 
-					| system.hasaddon(pvr.mythtv) 
-					| system.hasaddon(pvr.team-mediaportal.tvserver) 
-					| system.hasaddon(pvr.team-mediaportal.tvserver-tsreader) 
-					| system.hasaddon(pvr.vdr.vnsi)]</visible>
-				</item>
+
+				<include condition="!Skin.HasSetting(HidePVRCategory) + System.GetBool(pvrmanager.enabled) 
+				+ [system.hasaddon(pvr.fortherecord.argus) 
+				| system.hasaddon(pvr.fortherecord.argus-rtsp) 
+				| system.hasaddon(pvr.hts) 
+				| system.hasaddon(pvr.mythtv) 
+				| system.hasaddon(pvr.team-mediaportal.tvserver) 
+				| system.hasaddon(pvr.team-mediaportal.tvserver-tsreader) 
+				| system.hasaddon(pvr.vdr.vnsi)]">HomePVRCategory</include>
+				
 				<item id="2">
 					<description>Videos Category</description>
 					<label>videos</label>
@@ -888,7 +893,7 @@
 				</item>					
 			</content>					
 		</control>
-		
+
 		<control type="image">
 			<Description>Category Focus Image</Description>
 			<include>HomeCategoryFocusImage</include>		
@@ -912,10 +917,10 @@
 		<include condition="Skin.HasSetting(EnableCustomCategory15)">HomeCustomCategoryFocus15</include>
 		<include condition="Skin.HasSetting(EnableCustomCategory16)">HomeCustomCategoryFocus16</include>
 	</include>
-	
+
 	<include name="HomeCategoryIcons">
 		<control type="group">		
-		 	<posx>512</posx>
+			<posx>512</posx>
 			<posy>315</posy>		
 			<visible>!Window.IsActive(PlayerControls) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(NumericInput)</visible>
 			<include>HomeMenuIconOpenCloseAnim</include>
@@ -937,7 +942,7 @@
 				<visible>Container(850).HasFocus(50)</visible>
 				<include>HomeMenuIconAnim</include>
 			</control>
-			
+
 			<control type="image">
 				<description>Videos Icon</description>
 				<include>HomeMenuIconDim</include>
@@ -946,7 +951,7 @@
 				<visible>Container(850).HasFocus(2)</visible>
 				<include>HomeMenuIconAnim</include>
 			</control>
-			
+
 			<control type="image">
 				<description>Movies Icon</description>
 				<include>HomeMenuIconDim</include>
@@ -955,7 +960,7 @@
 				<visible>Container(850).HasFocus(3)</visible>
 				<include>HomeMenuIconAnim</include>
 			</control>
-			
+
 			<control type="image">
 				<description>TV Shows Icon</description>
 				<include>HomeMenuIconDim</include>
@@ -964,7 +969,7 @@
 				<visible>Container(850).HasFocus(4)</visible>
 				<include>HomeMenuIconAnim</include>
 			</control>
-			
+
 			<control type="image">
 				<description>Programs Icon</description>
 				<include>HomeMenuIconDim</include>
@@ -973,7 +978,7 @@
 				<visible>Container(850).HasFocus(5)</visible>
 				<include>HomeMenuIconAnim</include>
 			</control>
-			
+
 			<control type="image">
 				<description>Pictures Icon</description>
 				<include>HomeMenuIconDim</include>
@@ -982,7 +987,7 @@
 				<visible>Container(850).HasFocus(6)</visible>
 				<include>HomeMenuIconAnim</include>
 			</control>
-			
+
 			<control type="image">
 				<description>General Icon</description>
 				<include>HomeMenuIconDim</include>
@@ -991,7 +996,7 @@
 				<visible>Container(850).HasFocus(15)</visible>
 				<include>HomeMenuIconAnim</include>
 			</control>
-			
+
 			<control type="image">
 				<description>System Icon</description>
 				<include>HomeMenuIconDim</include>
@@ -1019,7 +1024,7 @@
 			<include condition="Skin.HasSetting(EnableCustomCategory16)">HomeCustomIcon16</include>
 		</control>
 	</include>
-	
+
 	<include name="HomeSubMenus">
 		<control type="group" id="851">
 			<posy>2</posy>
@@ -1124,7 +1129,7 @@
 					</item>
 				</content>						
 			</control>
-			
+
 			<control type="list" id="110">
 				<description>Videos Menu Bar</description>
 				<posx>10</posx>
@@ -1224,7 +1229,7 @@
 					</item>
 				</content>						
 			</control>
-			
+
 			<control type="list" id="110">
 				<description>Movies Menu Bar</description>
 				<posx>10</posx>
@@ -1324,7 +1329,7 @@
 					</item>
 				</content>						
 			</control>
-			
+
 			<control type="list" id="110">
 				<description>TV Shows Menu Bar</description>
 				<posx>10</posx>
@@ -1464,7 +1469,7 @@
 					</item>
 				</content>						
 			</control>
-			
+
 			<control type="list" id="110">
 				<description>Programs Menu Bar</description>
 				<posx>10</posx>
@@ -1528,7 +1533,7 @@
 					</item>
 				</content>						
 			</control>
-			
+
 			<control type="list" id="110">
 				<description>Pictures Menu Bar</description>
 				<posx>10</posx>
@@ -1592,7 +1597,7 @@
 					</item>
 				</content>						
 			</control>
-			
+
 			<control type="list" id="110">
 				<description>Category 1 Menu Bar</description>
 				<posx>10</posx>
@@ -1882,7 +1887,7 @@
 					</item>
 				</content>						
 			</control>
- 
+
 			<control type="list" id="110">
 				<description>Category 6 Menu Bar</description>
 				<posx>10</posx>
@@ -2522,12 +2527,12 @@
 			</control>		
 		</control>
 	</include>
-	
+
 	<include name="HomeSystemSubMenus">
 		<control type="group" id="852">
 			<posy>2</posy>
 			<animation effect="fade" start="100" end="25" time="400" condition="!ControlGroup(852).HasFocus">Conditional</animation>
-			
+
 			<control type="list" id="110">
 				<description>General Menu Bar</description>
 				<posx>10</posx>
@@ -2603,7 +2608,7 @@
 					</item>
 				</content>						
 			</control>
-			
+
 			<control type="list" id="110">
 				<description>System Menu Bar</description>
 				<posx>10</posx>
@@ -2655,22 +2660,22 @@
 				</content>						
 			</control>
 		</control>
-		
+
 		<control type="group">
 			<visible>Skin.HasSetting(HideHomeSubMenus)</visible>
-		
+
 			<control type="button" id="110">
 				<include>RedirectBtn</include>
 				<onfocus>Control.SetFocus(6888)</onfocus>
 				<visible>Container(850).HasFocus(3)</visible>
 			</control>
-			
+
 			<control type="button" id="110">
 				<include>RedirectBtn</include>
 				<onfocus>Control.SetFocus(6889)</onfocus>
 				<visible>Container(850).HasFocus(4)</visible>
 			</control>
-			
+
 			<control type="button" id="110">
 				<include>RedirectBtn</include>
 				<onfocus>Control.SetFocus(6890)</onfocus>
@@ -2683,7 +2688,7 @@
 		<control type="group">
 			<posy>9</posy>
 			<posx>109</posx>
-				
+
 			<control type="rss">
 				<description>RSS Feed</description>
 				<width>875</width>
@@ -2695,7 +2700,7 @@
 				<headlinecolor>DefaultColor</headlinecolor>
 				<visible>!Window.IsActive(VolumeBar) + !Window.IsActive(MuteBug) + !System.HasMediaDVD</visible>
 			</control>
-			
+
 			<control type="rss">
 				<description>RSS Feed</description>
 				<width>750</width>
@@ -2707,7 +2712,7 @@
 				<headlinecolor>DefaultColor</headlinecolor>
 				<visible>Window.IsActive(VolumeBar) + !Window.IsActive(MuteBug) + !System.HasMediaDVD</visible>
 			</control>
-			
+
 			<control type="rss">
 				<description>RSS Feed</description>
 				<width>815</width>
@@ -2719,7 +2724,7 @@
 				<headlinecolor>DefaultColor</headlinecolor>
 				<visible>!Window.IsActive(VolumeBar) + Window.IsActive(MuteBug) + !System.HasMediaDVD</visible>
 			</control>
-			
+
 			<control type="rss">
 				<description>RSS Feed</description>
 				<width>835</width>
@@ -2731,7 +2736,7 @@
 				<headlinecolor>DefaultColor</headlinecolor>
 				<visible>!Window.IsActive(VolumeBar) + !Window.IsActive(MuteBug) + System.HasMediaDVD</visible>
 			</control>
-			
+
 			<control type="rss">
 				<description>RSS Feed</description>
 				<width>710</width>
@@ -2743,7 +2748,7 @@
 				<headlinecolor>DefaultColor</headlinecolor>
 				<visible>Window.IsActive(VolumeBar) + !Window.IsActive(MuteBug) + System.HasMediaDVD</visible>
 			</control>
-			
+
 			<control type="rss">
 				<description>RSS Feed</description>
 				<width>775</width>
@@ -2757,26 +2762,26 @@
 			</control>
 		</control>
 	</include>
-	
+
 	<include name="NowPlayingPanel">
 		<control type="group">
 			<visible>Player.HasMedia</visible>
-	
+
 			<control type="group">	
 				<posx>5</posx>
 				<posy>105</posy>
 				<visible>Player.HasVideo + !Window.IsActive(PlayerControls) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(NumericInput)</visible>
 				<include>HomeLeftPanelOpenCloseAnim</include>
-				
+
 				<control type="image">
 					<width>490</width>
 					<height>164</height>
 					<texture border="8">panels/panel.png</texture>
 				</control>
-				
+
 				<control type="group">
 					<visible>VideoPlayer.Content(Movies)</visible>
-					
+
 					<control type="image">
 						<description>Cover</description>
 						<posx>15</posx>
@@ -2786,7 +2791,7 @@
 						<texture diffuse="covers/home-panel-movie-cover-border.png" background="true">$INFO[VideoPlayer.cover]</texture>
 						<aspectratio>stretch</aspectratio>
 					</control>
-				
+
 					<control type="label">
 						<description>Title</description>
 						<posx>125</posx>
@@ -2797,7 +2802,7 @@
 						<shadowcolor>ShadowColor</shadowcolor>
 						<label>[UPPERCASE]$LOCALIZE[13350][/UPPERCASE]</label>
 					</control>
-						
+
 					<control type="grouplist">
 						<posx>125</posx>
 						<posy>47</posy>
@@ -2913,10 +2918,10 @@
 						</control>
 					</control>
 				</control>
-				
+
 				<control type="group">
 					<visible>VideoPlayer.Content(Episodes) | [!VideoPlayer.Content(Movies) + !VideoPlayer.Content(LiveTV)]</visible>
-				
+
 					<control type="image">
 						<description>Cover</description>
 						<posx>15</posx>
@@ -2927,7 +2932,7 @@
 						<bordersize>4</bordersize>
 						<aspectratio>keep</aspectratio>
 					</control>
-										
+
 					<control type="label">
 						<description>Title</description>
 						<posx>203</posx>
@@ -2938,7 +2943,7 @@
 						<shadowcolor>ShadowColor</shadowcolor>
 						<label>[UPPERCASE]$LOCALIZE[13350][/UPPERCASE]</label>
 					</control>
-						
+
 					<control type="grouplist">
 						<posx>203</posx>
 						<posy>47</posy>
@@ -2991,19 +2996,19 @@
 					</control>
 				</control>
 			</control>
-			
+
 			<control type="group">
 				<posx>5</posx>
 				<posy>105</posy>
 				<visible>Player.HasAudio + !Window.IsActive(PlayerControls) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(NumericInput)</visible>
 				<include>HomeLeftPanelOpenCloseAnim</include>
-				
+
 				<control type="image">
 					<width>490</width>
 					<height>164</height>
 					<texture border="8">panels/panel.png</texture>
 				</control>
-				
+
 				<control type="image">
 					<description>Cover Border</description>
 					<posx>15</posx>
@@ -3012,7 +3017,7 @@
 					<height>134</height>
 					<texture border="5">panels/panel-content-border.png</texture>
 				</control>
-				
+
 				<control type="image">
 					<description>Cover</description>
 					<posx>15</posx>
@@ -3022,7 +3027,7 @@
 					<texture diffuse="covers/home-panel-album-cover-border.png" background="true">$INFO[MusicPlayer.cover]</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>
-		
+
 				<control type="label">
 					<description>Title</description>
 					<posx>161</posx>
@@ -3033,7 +3038,7 @@
 					<shadowcolor>ShadowColor</shadowcolor>
 					<label>[UPPERCASE]$LOCALIZE[13350][/UPPERCASE]</label>
 				</control>
-					
+
 				<control type="grouplist">
 					<posx>161</posx>
 					<posy>47</posy>
@@ -3089,17 +3094,17 @@
 			</control>
 		</control>
 	</include>
-	
+
 	<include name="RecentlyAddedPanel">
 		<control type="group">
 			<visible>Container(850).HasFocus(3)</visible>
 			<visible>Library.HasContent(Movies) + !Window.IsActive(PlayerControls) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(NumericInput)</visible>
 			<include>HomeRightPanelOpenCloseAnim</include>
-			
+
 			<control type="group">
 				<visible>!IsEmpty(Container(6888).ListItem.ActualIcon) + Control.HasFocus(6888)</visible>
 				<include>RecentlyAddedFanartOpenCloseAnim</include>
-				
+
 				<control type="multiimage">
 					<description>Fanart</description>
 					<include>BackgroundSize</include>
@@ -3111,28 +3116,28 @@
 					<animation effect="fade" start="0" end="100" time="600">VisibleChange</animation>
 					<include condition="Skin.HasSetting(AnimateBackground)">CustomBackgroundAnim</include>
 				</control>
-				
+
 				<include>HomeBackgroundDim</include>
 			</control>
-			
+
 			<control type="group">
 				<posx>495r</posx>
 				<posy>105</posy>
-			
+
 				<control type="image">
 					<width>490</width>
 					<height>164</height>
 					<texture border="8">panels/panel.png</texture>
 					<visible>!Skin.HasSetting(ShowMoreRecentlyAddedMovies)</visible>
 				</control>
-				
+
 				<control type="image">
 					<width>490</width>
 					<height>260</height>
 					<texture border="8">panels/panel.png</texture>
 					<visible>Skin.HasSetting(ShowMoreRecentlyAddedMovies)</visible>
 				</control>
-				
+
 				<control type="multiimage">
 					<description>Cover</description>
 					<posx>377</posx>
@@ -3155,7 +3160,7 @@
 					<shadowcolor>ShadowColor</shadowcolor>
 					<label>[UPPERCASE]$LOCALIZE[20386][/UPPERCASE]</label>
 				</control>
-				
+
 				<control type="list" id="6888">
 					<viewtype label="">list</viewtype>
 					<posx>0</posx>
@@ -3271,16 +3276,16 @@
 				</control>
 			</control>
 		</control>
-			
+
 		<control type="group">
 			<visible>Container(850).HasFocus(4)</visible>
 			<visible>Library.HasContent(TVShows) + !Window.IsActive(PlayerControls) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(NumericInput)</visible>
 			<include>HomeRightPanelOpenCloseAnim</include>
-			
+
 			<control type="group">
 				<visible>!IsEmpty(Container(6889).ListItem.ActualIcon) + Control.HasFocus(6889)</visible>
 				<include>RecentlyAddedFanartOpenCloseAnim</include>
-				
+
 				<control type="multiimage">
 					<description>Fanart</description>
 					<include>BackgroundSize</include>
@@ -3292,28 +3297,28 @@
 					<animation effect="fade" start="0" end="100" time="600">VisibleChange</animation>
 					<include condition="Skin.HasSetting(AnimateBackground)">CustomBackgroundAnim</include>
 				</control>
-				
+
 				<include>HomeBackgroundDim</include>
 			</control>
-			
+
 			<control type="group">
 				<posx>495r</posx>
 				<posy>105</posy>
-				
+
 				<control type="image">
 					<width>490</width>
 					<height>164</height>
 					<texture border="8">panels/panel.png</texture>
 					<visible>!Skin.HasSetting(ShowMoreRecentlyAddedTVShows)</visible>
 				</control>
-				
+
 				<control type="image">
 					<width>490</width>
 					<height>260</height>
 					<texture border="8">panels/panel.png</texture>
 					<visible>Skin.HasSetting(ShowMoreRecentlyAddedTVShows)</visible>
 				</control>
-				
+
 				<control type="multiimage">
 					<description>Cover</description>
 					<posx>299</posx>
@@ -3336,7 +3341,7 @@
 					<shadowcolor>ShadowColor</shadowcolor>
 					<label>[UPPERCASE]$LOCALIZE[20387][/UPPERCASE]</label>
 				</control>
-				
+
 				<control type="list" id="6889">
 					<viewtype label="">list</viewtype>
 					<posx>0</posx>
@@ -3452,16 +3457,16 @@
 				</control>
 			</control>
 		</control>
-		
+
 		<control type="group">
 			<visible>Container(850).HasFocus(1)</visible>
 			<visible>Library.HasContent(Music) + !Window.IsActive(PlayerControls) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(NumericInput)</visible>
 			<include>HomeRightPanelOpenCloseAnim</include>
-			
+
 			<control type="group">
 				<visible>!IsEmpty(Container(6890).ListItem.ActualIcon) + Control.HasFocus(6890)</visible>
 				<include>RecentlyAddedFanartOpenCloseAnim</include>
-				
+
 				<control type="multiimage">
 					<description>Fanart</description>
 					<include>BackgroundSize</include>
@@ -3473,28 +3478,28 @@
 					<animation effect="fade" start="0" end="100" time="600">VisibleChange</animation>
 					<include condition="Skin.HasSetting(AnimateBackground)">CustomBackgroundAnim</include>
 				</control>
-				
+
 				<include>HomeBackgroundDim</include>
 			</control>
-			
+
 			<control type="group">
 				<posx>495r</posx>
 				<posy>105</posy>
-				
+
 				<control type="image">
 					<width>490</width>
 					<height>164</height>
 					<texture border="8">panels/panel.png</texture>
 					<visible>!Skin.HasSetting(ShowMoreRecentlyAddedMusic)</visible>
 				</control>
-				
+
 				<control type="image">
 					<width>490</width>
 					<height>260</height>
 					<texture border="8">panels/panel.png</texture>
 					<visible>Skin.HasSetting(ShowMoreRecentlyAddedMusic)</visible>
 				</control>
-				
+
 				<control type="multiimage">
 					<description>Cover</description>
 					<posx>341</posx>
@@ -3517,7 +3522,7 @@
 					<shadowcolor>ShadowColor</shadowcolor>
 					<label>[UPPERCASE]$LOCALIZE[359][/UPPERCASE]</label>
 				</control>
-				
+
 				<control type="list" id="6890">
 					<viewtype label="">list</viewtype>
 					<posx>0</posx>
@@ -3642,13 +3647,13 @@
 			<visible>Container(850).HasFocus(15)</visible>
 			<visible>!Window.IsActive(PlayerControls) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(NumericInput)</visible>
 			<include>HomeLeftPanelOpenCloseAnim</include>
-			
+
 			<control type="image">
 				<width>490</width>
 				<height>140</height>
 				<texture border="8">panels/panel.png</texture>
 			</control>	
-			
+
 			<control type="image">
 				<description>Cover Border</description>
 				<posx>15</posx>
@@ -3657,7 +3662,7 @@
 				<height>96</height>
 				<texture border="5">panels/panel-content-border.png</texture>
 			</control>
-			
+
 			<control type="image">
 				<description>Cover</description>
 				<posx>15</posx>
@@ -3668,7 +3673,7 @@
 				<texture background="true">$INFO[Weather.Conditions]</texture>
 				<aspectratio>keep</aspectratio>
 			</control>
-			
+
 			<control type="label">
 				<description>Title</description>
 				<posx>157</posx>
@@ -3679,7 +3684,7 @@
 				<shadowcolor>ShadowColor</shadowcolor>
 				<label>[UPPERCASE]$INFO[Window(Weather).Property(Location)][/UPPERCASE]</label>
 			</control>
-				
+
 			<control type="grouplist">
 				<posx>157</posx>
 				<posy>42</posy>
@@ -3730,13 +3735,13 @@
 			<visible>Container(850).HasFocus(16)</visible>
 			<visible>!Window.IsActive(PlayerControls) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(NumericInput)</visible>
 			<include>HomeRightPanelOpenCloseAnim</include>
-			
+
 			<control type="image">
 				<width>490</width>
 				<height>140</height>
 				<texture border="8">panels/panel.png</texture>
 			</control>	
-			
+
 			<control type="image">
 				<description>Cover Border</description>
 				<posx>379</posx>
@@ -3745,7 +3750,7 @@
 				<height>96</height>
 				<texture border="5">panels/panel-content-border.png</texture>
 			</control>
-			
+
 			<control type="image">
 				<description>Cover</description>
 				<posx>379</posx>
@@ -3756,7 +3761,7 @@
 				<texture background="true">settings.png</texture>
 				<aspectratio>keep</aspectratio>
 			</control>
-			
+
 			<control type="label">
 				<description>Title</description>
 				<posx>15</posx>
@@ -3767,7 +3772,7 @@
 				<shadowcolor>ShadowColor</shadowcolor>
 				<label>[UPPERCASE]$LOCALIZE[138][/UPPERCASE]</label>
 			</control>
-				
+
 			<control type="grouplist">
 				<posx>15</posx>
 				<posy>42</posy>

@@ -48,8 +48,6 @@
 <string id="32025">Reset Skin</string>
 <string id="32026">All skin settings will revert to default settings. Press to confirm.</string>
 <string id="32027">Publisher</string>
-<string id="32028">TV</string>
-<string id="32029">Hide Radio</string>
 
 <!-- view types -->
 <string id="31103">Icon</string>
@@ -163,4 +161,13 @@
 <string id="31500">Show Subtitles Button On OSD</string>
 <string id="31501">Show Lyrics Button On OSD</string>
 <string id="31502">Run Logo Downloader</string>
+
+<!--temporary strings until PVR related strings are present in xbmc main branch-->
+<string id="31900">TV</string>
+<string id="31901">Hide Radio</string>
+<string id="31902">Available Groups</string>
+<string id="31903">Hidden Channels</string>
+<string id="31904">Add Group</string>
+<string id="31905">Rename Group</string>
+<string id="31906">Delete Group</string>
 </strings>
