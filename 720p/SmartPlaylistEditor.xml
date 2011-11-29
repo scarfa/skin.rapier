@@ -36,9 +36,7 @@
 					<description>Playlist Name</description>
 					<posy>58</posy>
 					<width>600</width>
-					<font>DialogHeadFont</font>
-					<textcolor>GreyColor</textcolor>
-					<aligny>center</aligny>
+					<include>DialogHeadLabel</include>
 					<label>$LOCALIZE[21433]</label>	
 				</control>
 				
@@ -58,9 +56,7 @@
 					<description>Rules</description>
 					<posy>128</posy>
 					<width>600</width>
-					<font>DialogHeadFont</font>
-					<textcolor>GreyColor</textcolor>
-					<aligny>center</aligny>
+					<include>DialogHeadLabel</include>
 					<label>$LOCALIZE[21434]</label>	
 				</control>
 				
@@ -88,8 +84,8 @@
 								<posx>5</posx>
 								<width>455</width>
 								<height>35</height>
-								<font>DefaultFontB</font>
-								<textcolor>GreyColor2</textcolor>
+								<font>ButtonFont2</font>
+								<textcolor>ButtonColor</textcolor>
 								<aligny>center</aligny>
 								<info>ListItem.Label</info>
 							</control>
@@ -105,8 +101,8 @@
 								<posx>5</posx>
 								<width>455</width>
 								<height>35</height>
-								<font>DefaultFontB</font>
-								<textcolor>SelectedColor</textcolor>
+								<font>ButtonFont2</font>
+								<textcolor>ButtonFocusColor</textcolor>
 								<aligny>center</aligny>
 								<info>ListItem.Label</info>
 							</control>
@@ -144,9 +140,7 @@
 						<description>Items Must Match</description>
 						<posy>278</posy>
 						<width>297</width>
-						<font>DialogHeadFont</font>
-						<textcolor>GreyColor</textcolor>
-						<aligny>center</aligny>
+						<include>DialogHeadLabel</include>
 						<label>$LOCALIZE[21424]</label>	
 					</control>
 					
@@ -166,9 +160,7 @@
 						<posx>302</posx>
 						<posy>278</posy>
 						<width>297</width>
-						<font>DialogHeadFont</font>
-						<textcolor>GreyColor</textcolor>
-						<aligny>center</aligny>
+						<include>DialogHeadLabel</include>
 						<label>$LOCALIZE[21427]</label>	
 					</control>
 					
@@ -190,9 +182,7 @@
 						<description>Order By</description>
 						<posy>348</posy>
 						<width>475</width>
-						<font>DialogHeadFont</font>
-						<textcolor>GreyColor</textcolor>
-						<aligny>center</aligny>
+						<include>DialogHeadLabel</include>
 						<label>$LOCALIZE[21429]</label>	
 					</control>
 				

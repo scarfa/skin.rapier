@@ -293,8 +293,8 @@
 		</font>
 		<font>
 			<name>SpinControlFont</name>
-			<filename>default.ttf</filename>
-			<size>20</size>
+			<filename>gui.ttf</filename>
+			<size>12</size>
 		</font>
 		<font>
 			<name>RSSFont</name>

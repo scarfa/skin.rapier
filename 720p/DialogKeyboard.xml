@@ -35,10 +35,8 @@
 					<posy>20</posy>
 					<width>588</width>	
 					<height>35</height>
-					<font>DefaultFontB</font>
-					<textcolor>GreyColor2</textcolor>
 					<align>center</align>
-					<aligny>center</aligny>
+					<include>DialogContentLabel</include>
 				</control>		
 		
 

@@ -52,40 +52,34 @@
 			<control type="button" id="13">
 				<description>Default Category Button</description>
 				<width>150</width>
-				<font>DefaultFontB</font>
-				<textcolor>DefaultColor2</textcolor>
-				<focusedcolor>SelectedColor</focusedcolor>
 				<align>center</align>
 				<texturenofocus>-</texturenofocus>
+				<enable>true</enable>
+				<include>DialogHeadLabel</include>
 			</control>
 			
 			<control type="button" id="3">
 				<description>Default Button</description>
 				<width>600</width>
-				<font>DefaultFontB</font>
-				<textcolor>GreyColor2</textcolor>
-				<align>left</align>
+				<include>DialogContentLabel</include>
 			</control>
 		
 			<control type="radiobutton" id="4">
 				<description>Default RadioButton</description>
 				<width>600</width>
-				<font>DefaultFontB</font>
-				<textcolor>GreyColor2</textcolor>
+				<include>DialogContentLabel</include>
 			</control>			
 			
 			<control type="spincontrolex" id="5">
 				<description>Default SpinControlex</description>
 				<width>600</width>
-				<font>DefaultFontB</font>
-				<textcolor>GreyColor2</textcolor>
+				<include>DialogContentLabel</include>
 			</control>
 			
 			<control type="sliderex" id="8">
 				<description>Default Slider</description>
 				<width>600</width>
-				<font>DefaultFontB</font>
-				<textcolor>GreyColor2</textcolor>
+				<include>DialogContentLabel</include>
 			</control>
 			
 			<control type="image" id="6">
@@ -98,10 +92,8 @@
 			<control type="label" id="7">
 				<description>Separator</description>
 				<height>35</height>
-				<font>DialogHeadFont</font>
-				<textcolor>GreyColor</textcolor>
 				<align>center</align>
-				<aligny>center</aligny>
+				<include>DialogContentLabel</include>
 			</control>
 
 			<control type="grouplist" id="9001">		

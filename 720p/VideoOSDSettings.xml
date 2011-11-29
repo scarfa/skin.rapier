@@ -23,9 +23,7 @@
 				<posx>DialogMarginOffsetX</posx>
 				<posy>200</posy>
 				<width>410</width>
-				<font>DialogHeadFont</font>
-				<textcolor>GreyColor2</textcolor>
-				<align>center</align>
+				<include>DialogHeadLabel</include>
 				<label>13390</label>
 			</control>
 			
@@ -45,27 +43,22 @@
 			
 			<control type="button" id="7">
 				<description>Default Button</description>
-				<font>DefaultFontB</font>
-				<textcolor>GreyColor2</textcolor>
-				<align>left</align>
+				<include>DialogContentLabel</include>
 			</control>
 			
 			<control type="radiobutton" id="8">
 				<description>Default RadioButton</description>
-				<font>DefaultFontB</font>
-				<textcolor>GreyColor2</textcolor>
+				<include>DialogContentLabel</include>
 			</control>
 			
 			<control type="spincontrolex" id="9">
 				<description>Default SpinControlex</description>
-				<font>DefaultFontB</font>
-				<textcolor>GreyColor2</textcolor>
+				<include>DialogContentLabel</include>
 			</control>
 			
 			<control type="sliderex" id="10">
 				<description>Default Slider</description>
-				<font>DefaultFontB</font>
-				<textcolor>GreyColor2</textcolor>
+				<include>DialogContentLabel</include>
 			</control>
 		
 			<control type="spincontrol" id="101">

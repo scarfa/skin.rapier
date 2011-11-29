@@ -61,7 +61,7 @@
 			<posy>DialogMarginOffsetY</posy>
 			<width>280</width>
 			<font>DialogHeadFont</font>
-			<textcolor>GreyColor2</textcolor>
+			<textcolor>ButtonColor</textcolor>
 			<align>left</align>
 			<label>$INFO[Container(450).ListItem.Label]</label>
 		</control>

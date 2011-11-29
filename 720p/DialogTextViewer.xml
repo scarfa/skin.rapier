@@ -30,7 +30,7 @@
 			<width>609</width>
 			<height>422</height>
 			<font>DefaultFontB</font>
-			<textcolor>GreyColor2</textcolor>
+			<textcolor>ButtonColor</textcolor>
 			<align>justify</align>
 			<pagecontrol>61</pagecontrol>
 		</control>

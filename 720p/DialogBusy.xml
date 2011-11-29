@@ -27,7 +27,8 @@
 				<posy>DialogMarginOffsetY</posy>
 				<width>312</width>
 				<font>DefaultFontB</font>
-				<textcolor>GreyColor2</textcolor>
+				<textcolor>ButtonColor</textcolor>
+				<align>center</align>
 				<label>$LOCALIZE[503]...</label>
 				<scroll>yes</scroll>
 			</control>
@@ -38,7 +39,8 @@
 				<posy>89</posy>
 				<width>312</width>
 				<font>DefaultFontB</font>
-				<textcolor>GreyColor2</textcolor>
+				<textcolor>ButtonColor</textcolor>
+				<align>center</align>
 				<label>$LOCALIZE[20186]</label>
 				<scroll>yes</scroll>
 			</control>

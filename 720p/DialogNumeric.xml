@@ -28,10 +28,7 @@
 				<posx>5</posx>
 				<width>188</width>	
 				<height>35</height>
-				<font>DefaultFontB</font>
-				<textcolor>GreyColor2</textcolor>
-				<disabledcolor>DisabledColor</disabledcolor>
-				<aligny>center</aligny>
+				<include>DialogContentLabel</include>
 			</control>		
 		
 			<control type="group">

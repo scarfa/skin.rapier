@@ -31,7 +31,7 @@
 				<onright>101</onright>
 				<pagecontrol>101</pagecontrol>
 				<font>DefaultFontB</font>
-				<textcolor>SelectedColor</textcolor>
+				<textcolor>ButtonColor</textcolor>
 			</control>
 			
 			<control type="spincontrol" id="101">
@@ -62,7 +62,7 @@
 						<font>DefaultFontB</font>
 						<align>center</align>
 						<aligny>center</aligny>
-						<textcolor>GreyColor2</textcolor>
+						<textcolor>ButtonColor</textcolor>
 						<info>ListItem.Label</info>
 					</control>
 				</itemlayout>
@@ -108,7 +108,7 @@
 						<height>35</height>
 						<font>DefaultFontB</font>
 						<aligny>center</aligny>
-						<textcolor>GreyColor2</textcolor>
+						<textcolor>ButtonColor</textcolor>
 						<info>ListItem.Label</info>
 					</control>
 				</itemlayout>

@@ -39,8 +39,8 @@
 						<posx>8</posx>
 						<width>394</width>
 						<height>35</height>
-						<font>DefaultFontB</font>
-						<textcolor>GreyColor2</textcolor>
+						<font>ButtonFont2</font>
+						<textcolor>ButtonColor</textcolor>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
 					</control>				
@@ -55,8 +55,8 @@
 						<posx>8</posx>
 						<width>394</width>
 						<height>35</height>
-						<font>DefaultFontB</font>
-						<textcolor>SelectedColor</textcolor>
+						<font>ButtonFont2</font>
+						<textcolor>ButtonFocusColor</textcolor>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
 					</control>
@@ -91,8 +91,8 @@
 						<posx>128</posx>
 						<width>274</width>
 						<height>35</height>
-						<font>DefaultFontB</font>
-						<textcolor>GreyColor2</textcolor>
+						<font>ButtonFont2</font>
+						<textcolor>ButtonColor</textcolor>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
 					</control>								
@@ -123,8 +123,8 @@
 						<posx>128</posx>
 						<width>274</width>
 						<height>35</height>
-						<font>DefaultFontB</font>
-						<textcolor>SelectedColor</textcolor>
+						<font>ButtonFont2</font>
+						<textcolor>ButtonFocusColor</textcolor>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
 					</control>

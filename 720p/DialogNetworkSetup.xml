@@ -26,6 +26,7 @@
 					<description>Protocol Picker</description>
 					<width>600</width>
 					<height>35</height>
+					<include>DialogContentLabel</include>
 					<label>$LOCALIZE[1008]</label>
 					<ondown>11</ondown>
 					<onleft>9001</onleft>
@@ -36,9 +37,7 @@
 					<description>Server Name</description>
 					<posy>37</posy>
 					<width>475</width>	
-					<font>DefaultFontB</font>
-					<textcolor>GreyColor2</textcolor>
-					<align>left</align>
+					<include>DialogContentLabel</include>
 					<onup>10</onup>
 					<ondown>16</ondown>
 					<onleft>9001</onleft>
@@ -61,9 +60,7 @@
 					<description>Shared Folder</description>
 					<posy>74</posy>
 					<width>600</width>	
-					<font>DefaultFontB</font>
-					<textcolor>GreyColor2</textcolor>
-					<align>left</align>
+					<include>DialogContentLabel</include>
 					<onup>11</onup>
 					<ondown>13</ondown>
 					<onleft>9001</onleft>
@@ -74,9 +71,7 @@
 					<description>Port</description>
 					<posy>111</posy>
 					<width>600</width>	
-					<font>DefaultFontB</font>
-					<textcolor>GreyColor2</textcolor>
-					<align>left</align>
+					<include>DialogContentLabel</include>
 					<onup>16</onup>
 					<ondown>14</ondown>
 					<onleft>9001</onleft>
@@ -87,9 +82,7 @@
 					<description>Username</description>
 					<posy>148</posy>
 					<width>600</width>	
-					<font>DefaultFontB</font>
-					<textcolor>GreyColor2</textcolor>
-					<align>left</align>
+					<include>DialogContentLabel</include>
 					<label>$LOCALIZE[1014]</label>
 					<onup>13</onup>
 					<ondown>15</ondown>
@@ -101,9 +94,7 @@
 					<description>Password</description>
 					<posy>185</posy>
 					<width>600</width>	
-					<font>DefaultFontB</font>
-					<textcolor>GreyColor2</textcolor>
-					<align>left</align>
+					<include>DialogContentLabel</include>
 					<label>$LOCALIZE[15052]</label>
 					<onup>14</onup>
 					<ondown>9001</ondown>

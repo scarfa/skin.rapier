@@ -35,23 +35,19 @@
 				<control type="button" id="7">
 					<description>Default Button</description>
 					<width>600</width>
-					<font>DefaultFontB</font>
-					<textcolor>GreyColor2</textcolor>
-					<align>left</align>
+					<include>DialogContentLabel</include>
 				</control>
 			
 				<control type="radiobutton" id="8">
 					<description>Default RadioButton</description>
 					<width>600</width>
-					<font>DefaultFontB</font>
-					<textcolor>GreyColor2</textcolor>
+					<include>DialogContentLabel</include>
 				</control>
 				
 				<control type="spincontrolex" id="9">
 					<description>Default SpinControlex</description>
 					<width>600</width>
-					<font>DefaultFontB</font>
-					<textcolor>GreyColor2</textcolor>		
+					<include>DialogContentLabel</include>
 				</control>			
 			</control>
 			

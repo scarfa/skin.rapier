@@ -89,6 +89,7 @@
 		<shadowcolor>ShadowColor</shadowcolor>
 		<focusedcolor>ButtonFocusColor</focusedcolor>
 		<selectedcolor>SelectedColor2</selectedcolor>
+		<disabledcolor>DisabledColor</disabledcolor>
 		<aligny>center</aligny>
 		<align>left</align>
 	</include>

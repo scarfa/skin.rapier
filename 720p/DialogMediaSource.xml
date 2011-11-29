@@ -25,9 +25,7 @@
 					<description>Path</description>
 					<posy>8</posy>
 					<width>600</width>
-					<font>DialogHeadFont</font>
-					<textcolor>GreyColor</textcolor>
-					<aligny>center</aligny>
+					<include>DialogHeadLabel</include>
 					<label>$LOCALIZE[1021]</label>
 				</control>
 				
@@ -54,8 +52,8 @@
 								<posx>5</posx>
 								<width>455</width>
 								<height>35</height>
-								<font>DefaultFontB</font>
-								<textcolor>GreyColor2</textcolor>
+								<font>ButtonFont2</font>
+								<textcolor>ButtonColor</textcolor>
 								<aligny>center</aligny>
 								<info>ListItem.Label</info>
 							</control>
@@ -71,8 +69,8 @@
 								<posx>5</posx>
 								<width>455</width>
 								<height>35</height>
-								<font>DefaultFontB</font>
-								<textcolor>SelectedColor</textcolor>
+								<font>ButtonFont2</font>
+								<textcolor>ButtonFocusColor</textcolor>
 								<aligny>center</aligny>
 								<info>ListItem.Label</info>
 							</control>
@@ -120,9 +118,7 @@
 					<description>Name</description>
 					<posy>163</posy>
 					<width>600</width>
-					<font>DialogHeadFont</font>
-					<textcolor>GreyColor</textcolor>
-					<aligny>center</aligny>
+					<include>DialogHeadLabel</include>
 					<label>$LOCALIZE[1022]</label>
 				</control>
 				
@@ -130,9 +126,7 @@
 					<description>Name Input</description>
 					<posy>175</posy>
 					<width>600</width>	
-					<font>DefaultFontB</font>
-					<textcolor>GreyColor2</textcolor>
-					<align>left</align>
+					<include>DialogContentLabel</include>
 					<onup>245</onup>
 					<ondown>9001</ondown>
 					<onleft>9001</onleft>

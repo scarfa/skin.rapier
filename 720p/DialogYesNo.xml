@@ -22,25 +22,25 @@
 			<itemgap>35</itemgap>
 			<control type="label" id="2">
 				<description>Dialog Line 1</description>
-				<width>420</width>	
+				<width>420</width>
 				<font>DefaultFontB</font>
-				<textcolor>GreyColor2</textcolor>
+				<textcolor>ButtonColor</textcolor>
 				<align>center</align>
 				<scroll>yes</scroll>
 			</control>
 			<control type="label" id="3">
 				<description>Dialog Line 2</description>
-				<width>420</width>	
+				<width>420</width>
 				<font>DefaultFontB</font>
-				<textcolor>GreyColor2</textcolor>
+				<textcolor>ButtonColor</textcolor>
 				<align>center</align>
 				<scroll>yes</scroll>
 			</control>
 			<control type="label" id="4">
 				<description>Dialog Line 3</description>
-				<width>420</width>	
+				<width>420</width>
 				<font>DefaultFontB</font>
-				<textcolor>GreyColor2</textcolor>
+				<textcolor>ButtonColor</textcolor>
 				<align>center</align>
 				<scroll>yes</scroll>
 			</control>

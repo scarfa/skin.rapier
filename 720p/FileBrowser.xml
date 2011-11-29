@@ -24,11 +24,9 @@
 					<description>Path</description>
 					<posy>8</posy>
 					<width>600</width>
-					<font>DialogHeadFont</font>
-					<textcolor>ContentTitleColor</textcolor>
-					<aligny>center</aligny>
 					<haspath>true</haspath>
 					<scroll>yes</scroll>
+					<include>DialogHeadLabel</include>
 				</control>
 				
 				<include>IconFileBrowserScrollbar</include>
@@ -91,8 +89,8 @@
 								<posx>71</posx>
 								<posy>137</posy>
 								<width>133</width>
-								<font>DefaultFontB</font>
-								<textcolor>GreyColor2</textcolor>
+								<font>ButtonFont2</font>
+								<textcolor>ButtonColor</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
 								<info>ListItem.Label</info>
@@ -131,8 +129,8 @@
 								<posx>71</posx>
 								<posy>137</posy>
 								<width>133</width>
-								<font>DefaultFontB</font>
-								<textcolor>SelectedColor</textcolor>
+								<font>ButtonFont2</font>
+								<textcolor>ButtonFocusColor</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
 								<info>ListItem.Label</info>
@@ -178,8 +176,8 @@
 								<posx>35</posx>
 								<width>260</width>
 								<height>35</height>
-								<font>DefaultFontB</font>
-								<textcolor>GreyColor2</textcolor>
+								<font>ButtonFont2</font>
+								<textcolor>ButtonColor</textcolor>
 								<aligny>center</aligny>
 								<info>ListItem.Label</info>
 							</control>
@@ -206,8 +204,8 @@
 									<posx>35</posx>
 									<width>260</width>
 									<height>35</height>
-									<font>DefaultFontB</font>
-									<textcolor>SelectedColor</textcolor>
+									<font>ButtonFont2</font>
+									<textcolor>ButtonFocusColor</textcolor>
 									<aligny>center</aligny>
 									<info>ListItem.Label</info>
 								</control>

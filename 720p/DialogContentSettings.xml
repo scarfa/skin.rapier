@@ -36,9 +36,7 @@
 					<posx>5</posx>
 					<posy>17</posy>
 					<width>400</width>
-					<font>DefaultFontB</font>
-					<textcolor>GreyColor2</textcolor>
-					<aligny>center</aligny>
+					<include>DialogContentLabel</include>
 					<label>$LOCALIZE[20344]</label>
 				</control>
 				
@@ -72,8 +70,8 @@
 							<posx>35</posx>
 							<width>290</width>
 							<height>35</height>
-							<font>DefaultFontB</font>
-							<textcolor>GreyColor2</textcolor>
+							<font>ButtonFont2</font>
+							<textcolor>ButtonColor</textcolor>
 							<aligny>center</aligny>
 							<info>ListItem.Label</info>
 						</control>
@@ -96,8 +94,8 @@
 							<posx>35</posx>
 							<width>290</width>
 							<height>35</height>
-							<font>DefaultFontB</font>
-							<textcolor>SelectedColor</textcolor>
+							<font>ButtonFont2</font>
+							<textcolor>ButtonFocusColor</textcolor>
 							<aligny>center</aligny>
 							<info>ListItem.Label</info>
 						</control>
@@ -129,16 +127,13 @@
 				<control type="button" id="7">
 					<description>Default Button</description>
 					<width>600</width>
-					<font>DefaultFontB</font>
-					<textcolor>GreyColor2</textcolor>
-					<align>left</align>
+					<include>DialogContentLabel</include>
 				</control>
 			
 				<control type="radiobutton" id="8">
 					<description>Default RadioButton</description>
 					<width>600</width>
-					<font>DefaultFontB</font>
-					<textcolor>GreyColor2</textcolor>
+					<include>DialogContentLabel</include>
 				</control>			
 			</control>
 			

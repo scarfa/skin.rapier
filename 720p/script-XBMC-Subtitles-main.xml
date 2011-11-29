@@ -93,9 +93,9 @@
 						<posy>0</posy>
 						<width>80</width>
 						<height>35</height>
-						<font>DefaultFontB</font>
+						<font>ButtonFont2</font>
 						<aligny>center</aligny>
-						<textcolor>GreyColor2</textcolor>
+						<textcolor>ButtonColor</textcolor>
 						<selectedcolor>SelectedColor2</selectedcolor>
 						<info>ListItem.Label</info>
 					</control>			  
@@ -121,9 +121,9 @@
 						<posy>0</posy>
 						<width>339</width>
 						<height>35</height>
-						<font>DefaultFontB</font>
+						<font>ButtonFont2</font>
 						<aligny>center</aligny>
-						<textcolor>GreyColor2</textcolor>
+						<textcolor>ButtonColor</textcolor>
 						<selectedcolor>SelectedColor2</selectedcolor>
 						<info>ListItem.Label2</info>
 					</control>
@@ -160,9 +160,9 @@
 							<posy>0</posy>
 							<width>80</width>
 							<height>35</height>
-							<font>DefaultFontB</font>
+							<font>ButtonFont2</font>
 							<aligny>center</aligny>
-							<textcolor>SelectedColor</textcolor>
+							<textcolor>ButtonFocusColor</textcolor>
 							<selectedcolor>SelectedColor2</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
@@ -188,9 +188,9 @@
 							<posy>0</posy>
 							<width>339</width>
 							<height>35</height>
-							<font>DefaultFontB</font>
+							<font>ButtonFont2</font>
 							<aligny>center</aligny>
-							<textcolor>SelectedColor</textcolor>
+							<textcolor>ButtonFocusColor</textcolor>
 							<selectedcolor>SelectedColor2</selectedcolor>
 							<info>ListItem.Label2</info>
 						</control>

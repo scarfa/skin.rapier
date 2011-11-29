@@ -42,8 +42,8 @@
   					<posy>115</posy>
   					<width>190</width>
   					<height>22</height>
-					<font>DefaultFontB</font>
-					<textcolor>GreyColor2</textcolor>
+					<font>ButtonFont2</font>
+					<textcolor>ButtonColor</textcolor>
   					<align>center</align>	
   					<info>ListItem.Label</info>  					
   				</control>
@@ -63,8 +63,8 @@
   					<posy>115</posy>
   					<width>190</width>
   					<height>22</height>
-					<font>DefaultFontB</font>
-					<textcolor>SelectedColor</textcolor>
+					<font>ButtonFont2</font>
+					<textcolor>ButtonFocusColor</textcolor>
   					<align>center</align>	
   					<info>ListItem.Label</info>  					
   				</control>

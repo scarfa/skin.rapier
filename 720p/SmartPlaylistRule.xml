@@ -26,9 +26,7 @@
 					<description>Match Items Where</description>
 					<posy>8</posy>
 					<width>600</width>
-					<font>DialogHeadFont</font>
-					<textcolor>GreyColor</textcolor>
-					<aligny>center</aligny>
+					<include>DialogHeadLabel</include>
 					<label>$LOCALIZE[21422]</label>
 				</control>
 				
@@ -60,9 +58,7 @@
 						<description>Rule Value</description>
 						<posy>60</posy>
 						<width>475</width>	
-						<font>DefaultFontB</font>
-						<textcolor>GreyColor2</textcolor>
-						<align>left</align>
+						<include>DialogContentLabel</include>
 						<onup>289</onup>
 						<ondown>9001</ondown>
 						<onleft>9001</onleft>

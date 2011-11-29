@@ -20,9 +20,7 @@
 			<posx>DialogMarginOffsetX</posx>
 			<posy>200</posy>
 			<width>410</width>
-			<font>DialogHeadFont</font>
-			<textcolor>GreyColor</textcolor>
-			<align>center</align>
+			<include>DialogHeadLabel</include>
 			<label>$LOCALIZE[13389]</label>
 		</control>
 		
@@ -47,8 +45,8 @@
 					<posx>8</posx>
 					<width>394</width>
 					<height>35</height>
-					<font>DefaultFontB</font>
-					<textcolor>GreyColor2</textcolor>
+					<font>ButtonFont2</font>
+					<textcolor>ButtonColor</textcolor>
 					<disabledcolor>DisabledColor</disabledcolor>
 					<aligny>center</aligny>
 					<info>ListItem.Label</info>
@@ -71,8 +69,8 @@
 					<posx>8</posx>
 					<width>394</width>
 					<height>35</height>
-					<font>DefaultFontB</font>
-					<textcolor>SelectedColor</textcolor>
+					<font>ButtonFont2</font>
+					<textcolor>ButtonFocusColor</textcolor>
 					<disabledcolor>DisabledColor</disabledcolor>
 					<aligny>center</aligny>
 					<info>ListItem.Label</info>
