@@ -3426,55 +3426,63 @@
 					</focusedlayout>
 					<content>
 						<item id="1">
-							<label>$INFO[Window.Property(LatestSong.1.Artist)]$INFO[Window.Property(LatestSong.1.Title),: ,] $INFO[Window.Property(LatestSong.1.Year),(,)]</label>
-							<thumb>$INFO[Window.Property(LatestSong.1.Thumb)]</thumb>
-							<icon>$INFO[Window.Property(LatestSong.1.Fanart)]</icon>
-							<onclick>$INFO[Window.Property(LatestSong.1.Path)]</onclick>
+							<label>$INFO[Window.Property(LatestAlbum.1.Artist)]$INFO[Window.Property(LatestAlbum.1.Title),: ,] $INFO[Window.Property(LatestAlbum.1.Year),(,)]</label>
+							<thumb>$INFO[Window.Property(LatestAlbum.1.Thumb)]</thumb>
+							<icon>$INFO[Window.Property(LatestAlbum.1.Fanart)]</icon>
+							<onclick>Playlist.Clear</onclick>
+							<onclick>PlayMedia(&quot;$INFO[Window.Property(LatestAlbum.1.Path)]&quot;)</onclick>
 						</item>
 						<item id="2">
-							<label>$INFO[Window.Property(LatestSong.2.Artist)]$INFO[Window.Property(LatestSong.2.Title),: ,] $INFO[Window.Property(LatestSong.2.Year),(,)]</label>
-							<thumb>$INFO[Window.Property(LatestSong.2.Thumb)]</thumb>
-							<icon>$INFO[Window.Property(LatestSong.2.Fanart)]</icon>
-							<onclick>$INFO[Window.Property(LatestSong.2.Path)]</onclick>
+							<label>$INFO[Window.Property(LatestAlbum.2.Artist)]$INFO[Window.Property(LatestAlbum.2.Title),: ,] $INFO[Window.Property(LatestAlbum.2.Year),(,)]</label>
+							<thumb>$INFO[Window.Property(LatestAlbum.2.Thumb)]</thumb>
+							<icon>$INFO[Window.Property(LatestAlbum.2.Fanart)]</icon>
+							<onclick>Playlist.Clear</onclick>
+							<onclick>PlayMedia(&quot;$INFO[Window.Property(LatestAlbum.2.Path)]&quot;)</onclick>
 						</item>
 						<item id="3">
-							<label>$INFO[Window.Property(LatestSong.3.Artist)]$INFO[Window.Property(LatestSong.3.Title),: ,] $INFO[Window.Property(LatestSong.3.Year),(,)]</label>
-							<thumb>$INFO[Window.Property(LatestSong.3.Thumb)]</thumb>
-							<icon>$INFO[Window.Property(LatestSong.3.Fanart)]</icon>
-							<onclick>$INFO[Window.Property(LatestSong.3.Path)]</onclick>
+							<label>$INFO[Window.Property(LatestAlbum.3.Artist)]$INFO[Window.Property(LatestAlbum.3.Title),: ,] $INFO[Window.Property(LatestAlbum.3.Year),(,)]</label>
+							<thumb>$INFO[Window.Property(LatestAlbum.3.Thumb)]</thumb>
+							<icon>$INFO[Window.Property(LatestAlbum.3.Fanart)]</icon>
+							<onclick>Playlist.Clear</onclick>
+							<onclick>PlayMedia(&quot;$INFO[Window.Property(LatestAlbum.3.Path)]&quot;)</onclick>
 						</item>
 						<item id="4">
-							<label>$INFO[Window.Property(LatestSong.4.Artist)]$INFO[Window.Property(LatestSong.4.Title),: ,] $INFO[Window.Property(LatestSong.4.Year),(,)]</label>
-							<thumb>$INFO[Window.Property(LatestSong.4.Thumb)]</thumb>
-							<icon>$INFO[Window.Property(LatestSong.4.Fanart)]</icon>
-							<onclick>$INFO[Window.Property(LatestSong.4.Path)]</onclick>
+							<label>$INFO[Window.Property(LatestAlbum.4.Artist)]$INFO[Window.Property(LatestAlbum.4.Title),: ,] $INFO[Window.Property(LatestAlbum.4.Year),(,)]</label>
+							<thumb>$INFO[Window.Property(LatestAlbum.4.Thumb)]</thumb>
+							<icon>$INFO[Window.Property(LatestAlbum.4.Fanart)]</icon>
+							<onclick>Playlist.Clear</onclick>
+							<onclick>PlayMedia(&quot;$INFO[Window.Property(LatestAlbum.4.Path)]&quot;)</onclick>
 						</item>
 						<item id="5">
-							<label>$INFO[Window.Property(LatestSong.5.Artist)]$INFO[Window.Property(LatestSong.5.Title),: ,] $INFO[Window.Property(LatestSong.5.Year),(,)]</label>
-							<thumb>$INFO[Window.Property(LatestSong.5.Thumb)]</thumb>
-							<icon>$INFO[Window.Property(LatestSong.5.Fanart)]</icon>
-							<onclick>$INFO[Window.Property(LatestSong.5.Path)]</onclick>
+							<label>$INFO[Window.Property(LatestAlbum.5.Artist)]$INFO[Window.Property(LatestAlbum.5.Title),: ,] $INFO[Window.Property(LatestAlbum.5.Year),(,)]</label>
+							<thumb>$INFO[Window.Property(LatestAlbum.5.Thumb)]</thumb>
+							<icon>$INFO[Window.Property(LatestAlbum.5.Fanart)]</icon>
+							<onclick>Playlist.Clear</onclick>
+							<onclick>PlayMedia(&quot;$INFO[Window.Property(LatestAlbum.5.Path)]&quot;)</onclick>
 							<visible>Skin.HasSetting(ShowMoreRecentlyAddedMusic)</visible>
 						</item>
 						<item id="6">
-							<label>$INFO[Window.Property(LatestSong.6.Artist)]$INFO[Window.Property(LatestSong.6.Title),: ,] $INFO[Window.Property(LatestSong.6.Year),(,)]</label>
-							<thumb>$INFO[Window.Property(LatestSong.6.Thumb)]</thumb>
-							<icon>$INFO[Window.Property(LatestSong.6.Fanart)]</icon>
-							<onclick>$INFO[Window.Property(LatestSong.6.Path)]</onclick>
+							<label>$INFO[Window.Property(LatestAlbum.6.Artist)]$INFO[Window.Property(LatestAlbum.6.Title),: ,] $INFO[Window.Property(LatestAlbum.6.Year),(,)]</label>
+							<thumb>$INFO[Window.Property(LatestAlbum.6.Thumb)]</thumb>
+							<icon>$INFO[Window.Property(LatestAlbum.6.Fanart)]</icon>
+							<onclick>Playlist.Clear</onclick>
+							<onclick>PlayMedia(&quot;$INFO[Window.Property(LatestAlbum.6.Path)]&quot;)</onclick>
 							<visible>Skin.HasSetting(ShowMoreRecentlyAddedMusic)</visible>
 						</item>
 						<item id="7">
-							<label>$INFO[Window.Property(LatestSong.7.Artist)]$INFO[Window.Property(LatestSong.7.Title),: ,] $INFO[Window.Property(LatestSong.7.Year),(,)]</label>
-							<thumb>$INFO[Window.Property(LatestSong.7.Thumb)]</thumb>
-							<icon>$INFO[Window.Property(LatestSong.7.Fanart)]</icon>
-							<onclick>$INFO[Window.Property(LatestSong.7.Path)]</onclick>
+							<label>$INFO[Window.Property(LatestAlbum.7.Artist)]$INFO[Window.Property(LatestAlbum.7.Title),: ,] $INFO[Window.Property(LatestAlbum.7.Year),(,)]</label>
+							<thumb>$INFO[Window.Property(LatestAlbum.7.Thumb)]</thumb>
+							<icon>$INFO[Window.Property(LatestAlbum.7.Fanart)]</icon>
+							<onclick>Playlist.Clear</onclick>
+							<onclick>PlayMedia(&quot;$INFO[Window.Property(LatestAlbum.7.Path)]&quot;)</onclick>
 							<visible>Skin.HasSetting(ShowMoreRecentlyAddedMusic)</visible>
 						</item>
 						<item id="8">
-							<label>$INFO[Window.Property(LatestSong.8.Artist)]$INFO[Window.Property(LatestSong.8.Title),: ,] $INFO[Window.Property(LatestSong.8.Year),(,)]</label>
-							<thumb>$INFO[Window.Property(LatestSong.8.Thumb)]</thumb>
-							<icon>$INFO[Window.Property(LatestSong.8.Fanart)]</icon>
-							<onclick>$INFO[Window.Property(LatestSong.8.Path)]</onclick>
+							<label>$INFO[Window.Property(LatestAlbum.8.Artist)]$INFO[Window.Property(LatestAlbum.8.Title),: ,] $INFO[Window.Property(LatestAlbum.8.Year),(,)]</label>
+							<thumb>$INFO[Window.Property(LatestAlbum.8.Thumb)]</thumb>
+							<icon>$INFO[Window.Property(LatestAlbum.8.Fanart)]</icon>
+							<onclick>Playlist.Clear</onclick>
+							<onclick>PlayMedia(&quot;$INFO[Window.Property(LatestAlbum.8.Path)]&quot;)</onclick>
 							<visible>Skin.HasSetting(ShowMoreRecentlyAddedMusic)</visible>
 						</item>
 						<item id="11">
