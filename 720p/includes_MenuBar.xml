@@ -333,6 +333,14 @@
 				<label>[UPPERCASE]$INFO[Control.GetLabel(3)][/UPPERCASE]</label>
 				<onclick>ActivateWindow(3003)</onclick>
 				<onclick>Control.SetFocus(500)</onclick>
+				<visible>!Substring(Container.FolderPath,plugin:)</visible>
+			</control>
+			<control type="button" id="439">
+				<description>Sort By</description>
+				<include>MenuBarBigBtn</include>
+				<label>[UPPERCASE]$INFO[Control.GetLabel(3)][/UPPERCASE]</label>
+				<onclick>Container.NextSortMethod</onclick>
+				<visible>Substring(Container.FolderPath,plugin:)</visible>
 			</control>
 			<control type="image" id="352">
 				<include>MenuBarSeparator</include>

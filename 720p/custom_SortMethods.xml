@@ -1,4 +1,4 @@
-<window type="dialog" id="3003"> <!-- 27 -->
+<window type="dialog" id="3003">
 	<defaultcontrol always="true">200</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	
@@ -30,7 +30,7 @@
 				<onclick>Container.SetSortMethod(1)</onclick>
 				<onclick>Dialog.Close(3003)</onclick>
 				<visible>!IsEmpty(Container.FolderPath)</visible>
-				<visible>Container.Content(Songs) | [Window.IsActive(Pictures) + !Substring(Container.FolderPath,plugin:)]</visible>
+				<visible>Container.Content(Songs) | Window.IsActive(Pictures)</visible>
 			</control>
 			<control type="button" id="2">
 				<description>Label (Ignore The)</description>
@@ -47,8 +47,7 @@
 				<onclick>Container.SetSortMethod(3)</onclick>
 				<onclick>Dialog.Close(3003)</onclick>
 				<visible>!IsEmpty(Container.FolderPath)</visible>
-				<visible>Container.Content(Episodes) | Container.Content(Files) | Window.IsActive(Pictures) | Substring(Container.FolderPath,plugin:)
-				| Window.IsActive(AddonBrowser) | Container.Content(Addons)</visible>
+				<visible>Container.Content(Episodes) | Container.Content(Files) | Window.IsActive(Pictures) | Window.IsActive(AddonBrowser) | Container.Content(Addons)</visible>
 			</control>
 			<control type="button" id="4">
 				<description>Size</description>
@@ -57,7 +56,7 @@
 				<onclick>Container.SetSortMethod(4)</onclick>
 				<onclick>Dialog.Close(3003)</onclick>
 				<visible>!IsEmpty(Container.FolderPath)</visible>
-				<visible>Container.Content(Files) | [Window.IsActive(Pictures) + ![Container.Content(Addons) | Substring(Container.FolderPath,plugin:)]]</visible>
+				<visible>Container.Content(Files) | [Window.IsActive(Pictures) + !Container.Content(Addons)]</visible>
 			</control>
 			<control type="button" id="5">
 				<description>File</description>
@@ -66,7 +65,7 @@
 				<onclick>Container.SetSortMethod(5)</onclick>
 				<onclick>Dialog.Close(3003)</onclick>
 				<visible>!IsEmpty(Container.FolderPath)</visible>
-				<visible>Container.Content(Files) | [Window.IsActive(Pictures) + ![Container.Content(Addons) | Substring(Container.FolderPath,plugin:)]]</visible>
+				<visible>Container.Content(Files) | [Window.IsActive(Pictures) + !Container.Content(Addons)]</visible>
 			</control>
 			<control type="button" id="6">
 				<description>Drive Type</description>
@@ -146,7 +145,7 @@
 				<label>$LOCALIZE[515]</label>
 				<onclick>Container.SetSortMethod(15)</onclick>
 				<onclick>Dialog.Close(3003)</onclick>
-				<visible>Container.Content(Movies) + Substring(Container.FolderPath,plugin:)</visible>
+				<visible>false</visible>
 			</control>
 			<control type="button" id="16">
 				<description>Country</description>
@@ -274,7 +273,7 @@
 				<label>$LOCALIZE[572]</label>
 				<onclick>Container.SetSortMethod(31)</onclick>
 				<onclick>Dialog.Close(3003)</onclick>
-				<visible>Container.Content(Movies) + Substring(Container.FolderPath,plugin:)</visible>
+				<visible>false</visible>
 			</control>
 			<control type="button" id="32">
 				<description>Full Path</description>
