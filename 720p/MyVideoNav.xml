@@ -1,8 +1,10 @@
 <window id="25">
-	<defaultcontrol always="true">9999</defaultcontrol>
+	<defaultcontrol always="true">500</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<previouswindow>Home</previouswindow>
 	<views>50,51,52,54,53,71,75,58,66,95,97,56,76,61,65,100,74,73,68,94,69,63,90,91,93</views>
+	<onload>Skin.Reset(ShowMediaExtraOptions)</onload>
+	<onload condition="System.HasAddon(script.tvtunes)">XBMC.RunScript(script.tvtunes,backend=True&amp;loop=False)</onload>
 	
 	<controls>
 		<control type="group">
@@ -19,9 +21,6 @@
 			<include>BackgroundOpenCloseAnim</include>
 		</control>
 		
-		<include condition="System.HasAddon(script.tvtunes)">TVTunesTrigger</include>
-		<include condition="!System.HasAddon(script.tvtunes)">TVTunesNoTrigger</include>
-
 		<control type="group">
 			<visible>!Window.IsActive(MovieInformation)</visible>
 			<include>MediaInfoOpenCloseAnim</include>

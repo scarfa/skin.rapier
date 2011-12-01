@@ -618,21 +618,6 @@
 		</control>
 	</include>
 	
-	<include name="TVTunesTrigger">
-		<control type="button" id="9999">
-			<include>RedirectBtn</include>
-			<onfocus>XBMC.RunScript(script.tvtunes,backend=True&amp;loop=False)</onfocus>
-			<onfocus>SetFocus(500)</onfocus>
-		</control>
-	</include>
-	
-	<include name="TVTunesNoTrigger">
-		<control type="button" id="9999">
-			<include>RedirectBtn</include>
-			<onfocus>SetFocus(500)</onfocus>
-		</control>
-	</include>
-	
 	<include name="RedirectBtn">
 		<posx>-1</posx>
 		<posy>-1</posy>

@@ -2,6 +2,7 @@
 	<defaultcontrol always="true">500</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<views>50,51,52</views>
+	<onload>Skin.Reset(ShowMediaExtraOptions)</onload>
 	
 	<controls>
 		<control type="group">	

@@ -1,6 +1,9 @@
 <window type="dialog" id="3005">
-	<defaultcontrol always="true">999</defaultcontrol>
+	<defaultcontrol always="true">450</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
+	<onload condition="System.HasAddon(script.favourites)">RunScript(script.favourites,playlists=window)</onload>
+	<onload condition="!System.HasAddon(script.favourites)">Notification(Missing Add-on!,Please install script.favourites,5000,)</onload>
+	<onload condition="!System.HasAddon(script.favourites)">Dialog.Close(3005)</onload>
 	
 	<include>DialogOpenCloseAnim</include>
 	
@@ -318,19 +321,6 @@
 					<include>ControlsOpenCloseAnim</include>
 				</control>
 			</control>
-
-			<control type="button" id="999">
-				<include>RedirectBtn</include>
-				<onfocus>RunScript(script.favourites,playlists=window)</onfocus>
-				<onfocus>Control.SetFocus(450)</onfocus>
-			</control>
-		</control>
-		
-		<control type="button" id="999">
-			<include>RedirectBtn</include>
-			<visible>!System.HasAddon(script.favourites)</visible>
-			<onfocus>Notification(Missing Add-on!,Please install script.favourites,5000,)</onfocus>
-			<onfocus>Dialog.Close(3005)</onfocus>
 		</control>
 	</controls>
 </window>

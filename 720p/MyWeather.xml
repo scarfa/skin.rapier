@@ -1,6 +1,7 @@
 <window id="2600">
-	<defaultcontrol always="true">755</defaultcontrol>
+	<defaultcontrol always="true">850</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
+	<onload condition="IsEmpty(Weather.Plugin)">Notification($LOCALIZE[31310],$LOCALIZE[31311],10000,)</onload>
 	
 	<controls>
 		<control type="group"> 	
@@ -8,19 +9,6 @@
 			<include condition="!Skin.HasSetting(DisableVideoPlayingBG)">BackgroundVideoPlaying</include>
 			<include condition="!Skin.HasSetting(DisableMusicPlayingBG)">BackgroundMusicPlaying</include>
 			<include>BackgroundOpenCloseAnim</include>
-		</control>
-		
-		<control type="button" id="755">
-			<include>RedirectBtn</include>
-			<onfocus>Control.SetFocus(3)</onfocus>
-			<visible>!IsEmpty(Weather.Plugin)</visible>
-		</control>
-		
-		<control type="button" id="755">
-			<include>RedirectBtn</include>
-			<onfocus>Notification($LOCALIZE[31310],$LOCALIZE[31311],15000,)</onfocus>
-			<onfocus>Control.SetFocus(3)</onfocus>
-			<visible>IsEmpty(Weather.Plugin)</visible>
 		</control>
 		
 		<control type="group">		
