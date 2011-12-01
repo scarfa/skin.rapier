@@ -110,7 +110,7 @@
 						<posx>5</posx>
 						<width>170</width>
 						<height>35</height>
-						<font>DefaultHeadFont</font>
+						<font>FullMediaInfoFont</font>
 						<textcolor>MediaInfoItemColor</textcolor>
 						<selectedcolor>SelectedColor</selectedcolor>
 						<aligny>center</aligny>
@@ -120,7 +120,7 @@
 						<posx>175</posx>
 						<width>320</width>
 						<height>35</height>
-						<font>DefaultFontB</font>
+						<font>FullMediaInfoFont</font>
 						<textcolor>MediaInfoItemColor2</textcolor>
 						<selectedcolor>SelectedColor</selectedcolor>
 						<aligny>center</aligny>
@@ -137,7 +137,7 @@
 						<posx>5</posx>
 						<width>170</width>
 						<height>35</height>
-						<font>DefaultHeadFont</font>
+						<font>FullMediaInfoFont</font>
 						<textcolor>SelectedColor</textcolor>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
@@ -146,7 +146,7 @@
 						<posx>175</posx>
 						<width>320</width>
 						<height>35</height>
-						<font>DefaultFontB</font>
+						<font>FullMediaInfoFont</font>
 						<textcolor>SelectedColor</textcolor>
 						<aligny>center</aligny>
 						<label fallback="31000">$INFO[ListItem.Label2]</label>
@@ -253,7 +253,7 @@
 						<posx>5</posx>
 						<width>170</width>
 						<height>35</height>
-						<font>DefaultHeadFont</font>
+						<font>FullMediaInfoFont</font>
 						<textcolor>MediaInfoItemColor</textcolor>
 						<selectedcolor>SelectedColor</selectedcolor>
 						<aligny>center</aligny>
@@ -263,7 +263,7 @@
 						<posx>175</posx>
 						<width>320</width>
 						<height>35</height>
-						<font>DefaultFontB</font>
+						<font>FullMediaInfoFont</font>
 						<textcolor>MediaInfoItemColor2</textcolor>
 						<selectedcolor>SelectedColor</selectedcolor>
 						<aligny>center</aligny>
@@ -280,7 +280,7 @@
 						<posx>5</posx>
 						<width>170</width>
 						<height>35</height>
-						<font>DefaultHeadFont</font>
+						<font>FullMediaInfoFont</font>
 						<textcolor>SelectedColor</textcolor>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
@@ -289,7 +289,7 @@
 						<posx>175</posx>
 						<width>320</width>
 						<height>35</height>
-						<font>DefaultFontB</font>
+						<font>FullMediaInfoFont</font>
 						<textcolor>SelectedColor</textcolor>
 						<aligny>center</aligny>
 						<label fallback="31000">$INFO[ListItem.Label2]</label>
@@ -396,7 +396,7 @@
 						<posx>5</posx>
 						<width>170</width>
 						<height>35</height>
-						<font>DefaultHeadFont</font>
+						<font>FullMediaInfoFont</font>
 						<textcolor>MediaInfoItemColor</textcolor>
 						<selectedcolor>SelectedColor</selectedcolor>
 						<aligny>center</aligny>
@@ -406,7 +406,7 @@
 						<posx>175</posx>
 						<width>320</width>
 						<height>35</height>
-						<font>DefaultFontB</font>
+						<font>FullMediaInfoFont</font>
 						<textcolor>MediaInfoItemColor2</textcolor>
 						<selectedcolor>SelectedColor</selectedcolor>
 						<aligny>center</aligny>
@@ -423,7 +423,7 @@
 						<posx>5</posx>
 						<width>170</width>
 						<height>35</height>
-						<font>DefaultHeadFont</font>
+						<font>FullMediaInfoFont</font>
 						<textcolor>SelectedColor</textcolor>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
@@ -432,7 +432,7 @@
 						<posx>175</posx>
 						<width>320</width>
 						<height>35</height>
-						<font>DefaultFontB</font>
+						<font>FullMediaInfoFont</font>
 						<textcolor>SelectedColor</textcolor>
 						<aligny>center</aligny>
 						<label fallback="31000">$INFO[ListItem.Label2]</label>
@@ -539,7 +539,7 @@
 						<posx>5</posx>
 						<width>170</width>
 						<height>35</height>
-						<font>DefaultHeadFont</font>
+						<font>FullMediaInfoFont</font>
 						<textcolor>MediaInfoItemColor</textcolor>
 						<selectedcolor>SelectedColor</selectedcolor>
 						<aligny>center</aligny>
@@ -549,7 +549,7 @@
 						<posx>175</posx>
 						<width>320</width>
 						<height>35</height>
-						<font>DefaultFontB</font>
+						<font>FullMediaInfoFont</font>
 						<textcolor>MediaInfoItemColor2</textcolor>
 						<selectedcolor>SelectedColor</selectedcolor>
 						<aligny>center</aligny>
@@ -566,7 +566,7 @@
 						<posx>5</posx>
 						<width>170</width>
 						<height>35</height>
-						<font>DefaultHeadFont</font>
+						<font>FullMediaInfoFont</font>
 						<textcolor>SelectedColor</textcolor>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
@@ -575,7 +575,7 @@
 						<posx>175</posx>
 						<width>320</width>
 						<height>35</height>
-						<font>DefaultFontB</font>
+						<font>FullMediaInfoFont</font>
 						<textcolor>SelectedColor</textcolor>
 						<aligny>center</aligny>
 						<label fallback="31000">$INFO[ListItem.Label2]</label>
@@ -682,7 +682,7 @@
 						<posx>5</posx>
 						<width>170</width>
 						<height>35</height>
-						<font>DefaultHeadFont</font>
+						<font>FullMediaInfoFont</font>
 						<textcolor>MediaInfoItemColor</textcolor>
 						<selectedcolor>SelectedColor</selectedcolor>
 						<aligny>center</aligny>
@@ -692,7 +692,7 @@
 						<posx>175</posx>
 						<width>320</width>
 						<height>35</height>
-						<font>DefaultFontB</font>
+						<font>FullMediaInfoFont</font>
 						<textcolor>MediaInfoItemColor2</textcolor>
 						<selectedcolor>SelectedColor</selectedcolor>
 						<aligny>center</aligny>
@@ -709,7 +709,7 @@
 						<posx>5</posx>
 						<width>170</width>
 						<height>35</height>
-						<font>DefaultHeadFont</font>
+						<font>FullMediaInfoFont</font>
 						<textcolor>SelectedColor</textcolor>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
@@ -718,7 +718,7 @@
 						<posx>175</posx>
 						<width>320</width>
 						<height>35</height>
-						<font>DefaultFontB</font>
+						<font>FullMediaInfoFont</font>
 						<textcolor>SelectedColor</textcolor>
 						<aligny>center</aligny>
 						<label fallback="31000">$INFO[ListItem.Label2]</label>
@@ -767,7 +767,7 @@
 			<height>42</height>
 			<width>275</width>
 			<font>OSDFont</font>
-			<textcolor>WhiteColor</textcolor>
+			<textcolor>GreyColor</textcolor>
 			<label>$INFO[VideoPlayer.Time] $INFO[Player.Duration,/ ]</label>
 			<align>center</align>
 			<aligny>center</aligny>
