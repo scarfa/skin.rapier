@@ -26,7 +26,7 @@
 				<posx>DialogMarginOffsetX</posx>
 				<posy>60</posy>
 				<width>420</width>
-				<itemgap>35</itemgap>
+				<itemgap>25</itemgap>
 				<control type="label" id="2">
 					<description>Dialog Line 1</description>
 					<width>420</width>
@@ -52,7 +52,15 @@
 					<scroll>yes</scroll>
 				</control>
 			</control>
-
+			
+			<control type="progress">
+				<description>Progressbar</description>
+				<posx>DialogMarginOffsetX</posx>
+				<posy>140</posy>
+				<width>420</width>
+				<info>System.Progressbar</info>
+			</control>
+		
 			<control type="button" id="10">
 				<description>Cancel</description>
 				<posx>160</posx>
