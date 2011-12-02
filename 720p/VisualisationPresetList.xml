@@ -20,6 +20,7 @@
 			<posx>DialogMarginOffsetX</posx>
 			<posy>200</posy>
 			<width>410</width>
+			<align>center</align>
 			<include>DialogHeadLabel</include>
 			<label>$LOCALIZE[13389]</label>
 		</control>
