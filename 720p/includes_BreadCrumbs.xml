@@ -1079,7 +1079,7 @@
 			<control type="label" id="5502">
 				<description>Rapier</description>
 				<include>BreadCrumbLabel</include>
-				<label>[UPPERCASE][B]Rapier 4.0.0[/B][/UPPERCASE]</label>
+				<label>[UPPERCASE][B]Rapier Pre-4.2.0[/B][/UPPERCASE]</label>
 				<include>BreadCrumbSlideLvl3Anim</include>
 			</control>
 			<control type="image">
