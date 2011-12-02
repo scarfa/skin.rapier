@@ -12,10 +12,10 @@
 		<control type="group">	
 			<control type="image" id="997">
 				<description>Context Menu Top</description>
-				<posy>-32</posy>
+				<posy>-50</posy>
 				<width>344</width>
-				<height>32</height>
-				<texture border="40,30,40,0">gui/context-menu-top.png</texture>
+				<height>50</height>
+				<texture border="40,49,40,0">gui/context-menu-top.png</texture>
 			</control>
 			
 			<control type="image" id="999">
@@ -30,15 +30,21 @@
 				<description>Context Menu Bottom</description>
 				<posy>0</posy>
 				<width>344</width>
-				<height>30</height>
-				<texture border="40,0,40,30">gui/context-menu-bottom.png</texture>
+				<height>50</height>
+				<texture flipy="true" border="40,0,40,49">gui/context-menu-top.png</texture>
 			</control>
-
+			
+			<control type="button">
+				<posx>304</posx>
+				<posy>-37</posy>
+				<include>DialogCloseBtn</include>
+			</control>
+		
 			<control type="button" id="1000">
 				<description>Button Template</description>
 				<posx>32</posx>
 				<include>ContextMenuBtn</include>
-			</control>			
+			</control>		
 		</control>		
 	</controls>	
 </window>
