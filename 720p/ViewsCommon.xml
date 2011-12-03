@@ -883,7 +883,7 @@
 				<textcolor>ListColor2</textcolor>
 				<shadowcolor>ShadowColor</shadowcolor>
 				<aligny>center</aligny>				
-				<label>$INFO[ListItem.Duration,, $LOCALIZE[31003]]$INFO[ListItem.Episode,  -  $LOCALIZE[20359] ,]</label>
+				<label>$INFO[ListItem.Season,$LOCALIZE[20373] ,]$INFO[ListItem.Episode,  -  $LOCALIZE[20359] ,]</label>
 			</control>
 			<control type="label">
 				<description>Rating</description>
@@ -1594,7 +1594,7 @@
 					<textcolor>ListColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<aligny>center</aligny>				
-					<label>$INFO[ListItem.Duration,, $LOCALIZE[31003]]$INFO[ListItem.Episode,  -  $LOCALIZE[20359] ,]</label>
+					<label>$INFO[ListItem.Season,$LOCALIZE[20373] ,]$INFO[ListItem.Episode,  -  $LOCALIZE[20359] ,]</label>
 				</control>
 				<control type="label">
 					<description>Rating</description>
