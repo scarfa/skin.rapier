@@ -33,6 +33,13 @@
 				<height>50</height>
 				<texture flipy="true" border="40,0,40,49">gui/context-menu-top.png</texture>
 			</control>
+
+			<control type="label">
+				<posy>-24</posy>
+				<width>264</width>
+				<include>DialogTitle</include>
+				<label>$LOCALIZE[33061]</label>
+			</control>
 			
 			<control type="button">
 				<posx>304</posx>
