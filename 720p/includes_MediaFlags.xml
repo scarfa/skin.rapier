@@ -332,7 +332,7 @@
 			<visible>substring(ListItem.MPAA,Rated G)</visible>  
 		</control>
 		<control type="image" id="635">
-			<description>Rated PG</description>
+			<description>Rated PG</description>l
 			<width>47</width>
 			<height>41</height>
 			<aspectratio>keep</aspectratio>
@@ -366,6 +366,24 @@
 			<texture>flagging/default/ratings/mpaa-nc17.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.MPAA,Rated NC-17)</visible>  
+		</control>
+		<control type="image" id="738">
+			<description>Unrated</description>
+			<width>51</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/default/ratings/unrated.png</texture>
+			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
+			<visible>substring(ListItem.filename,.unrated) | substring(ListItem.foldername,.unrated)</visible>  
+		</control>
+		<control type="image" id="739">
+			<description>No Rating</description>
+			<width>51</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/default/ratings/no-rating.png</texture>
+			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
+			<visible>IsEmpty(ListItem.MPAA)</visible>  
 		</control>
 	</include>
 	
@@ -621,6 +639,15 @@
 			<texture>flagging/default/ratings/mpaa-nc17.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.MPAA,Rated NC-17)</visible>  
+		</control>
+		<control type="image" id="740">
+			<description>No Rating</description>
+			<width>51</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/default/ratings/no-rating.png</texture>
+			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
+			<visible>IsEmpty(VideoPlayer.MPAA)</visible>  
 		</control>
 	</include>
 	
@@ -1032,6 +1059,24 @@
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(ListItem.MPAA,Rated NC-17)</visible>  
 		</control>
+		<control type="image" id="742">
+			<description>Unrated</description>
+			<width>51</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/white/ratings/unrated.png</texture>
+			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
+			<visible>substring(ListItem.filename,.unrated) | substring(ListItem.foldername,.unrated)</visible>  
+		</control>
+		<control type="image" id="743">
+			<description>No Rating</description>
+			<width>51</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/white/ratings/no-rating.png</texture>
+			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
+			<visible>IsEmpty(ListItem.MPAA)</visible>  
+		</control>
 	</include>
 	
 	<include name="PlayerVideoAltMediaFlags">
@@ -1286,6 +1331,15 @@
 			<texture>flagging/white/ratings/mpaa-nc17.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
 			<visible>substring(VideoPlayer.MPAA,Rated NC-17)</visible>  
+		</control>
+		<control type="image" id="741">
+			<description>No Rating</description>
+			<width>51</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/white/ratings/no-rating.png</texture>
+			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
+			<visible>IsEmpty(VideoPlayer.MPAA)</visible>  
 		</control>
 	</include>
 	
