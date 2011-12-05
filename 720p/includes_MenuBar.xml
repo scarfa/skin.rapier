@@ -1338,4 +1338,64 @@
 			</control>
 		</control>		
 	</include>
+	
+	<include name="ProgramsInfoMenuBar">	
+		<control type="grouplist" id="987">
+			<posy>0</posy>
+			<width>ScreenWidth</width>
+			<height>MenuBarHeight</height>
+			<itemgap>0</itemgap>
+			<align>center</align>
+			<orientation>horizontal</orientation>
+			<usecontrolcoords>true</usecontrolcoords>
+			<onup>-</onup>
+			<ondown>901</ondown>
+			<onleft>987</onleft>
+			<onright>987</onright>
+			<include>MenuBarBtnOpenCloseAnim</include>
+			<control type="image" id="115">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="8">
+				<description>Play</description>
+				<include>MenuBarSettingsBtn</include>
+				<onclick>Close</onclick>
+				<onclick>RunPlugin($INFO[ListItem.FileNameAndPath])</onclick>
+				<label>[UPPERCASE]$LOCALIZE[208][/UPPERCASE]</label>
+			</control>
+			<control type="image" id="117">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="5">
+				<description>Get Info</description>
+				<include>MenuBarSettingsBtn</include>
+				<onclick>RunPlugin($INFO[ListItem.FileNameAndPath]/%%GET_INFO%%)</onclick>
+				<label>[UPPERCASE]$LOCALIZE[32029][/UPPERCASE]</label>
+				<enable>!Skin.HasSetting(EnableKioskMode)</enable>
+			</control>	
+			<control type="image" id="116">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="10">
+				<description>Get Thumb</description>
+				<include>MenuBarSettingsBtn</include>
+				<onclick>RunPlugin($INFO[ListItem.FileNameAndPath]/%%GET_THUMB%%)</onclick>
+				<label>[UPPERCASE]$LOCALIZE[13405][/UPPERCASE]</label>	
+				<enable>!Skin.HasSetting(EnableKioskMode)</enable>
+			</control>
+			<control type="image" id="119">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="12">
+				<description>Get Fanart</description>
+				<include>MenuBarSettingsBtn</include>
+				<onclick>RunPlugin($INFO[ListItem.FileNameAndPath]/%%GET_FANART%%)</onclick>
+				<label>[UPPERCASE]$LOCALIZE[20413][/UPPERCASE]</label>
+				<enable>!Skin.HasSetting(EnableKioskMode)</enable>
+			</control>
+			<control type="image" id="120">
+				<include>MenuBarSeparator</include>
+			</control>
+		</control>		
+	</include>
 </includes>

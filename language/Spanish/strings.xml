@@ -48,6 +48,9 @@
 <string id="32025">Reiniciar Piel</string>
 <string id="32026">Los ajustes de piel volverá a la configuración por defecto. Pulse para confirmar.</string>
 <string id="32027">Editor</string>
+<string id="32027">Plataforma</string>
+<string id="32028">Editor</string>
+<string id="32029">Obtener información</string>
 
 <!-- view types -->
 <string id="31103">Icon</string>
