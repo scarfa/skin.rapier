@@ -1,747 +1,605 @@
 <window>
+	<defaultcontrol>102</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<zorder>1</zorder>
+
 	<coordinates>
 		<system>1</system>
-		<posx>0</posx>
-		<posy>0</posy>
+		<origin x="311" y="120">true</origin>
 	</coordinates>
 
 	<controls>
 		<control type="group">
+			<include>PseudotvChannelConfigDialogBox</include>
+			<include>DialogOpenCloseAnim</include>
 			<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(script.pseudotv.AdvancedConfig.xml)">Conditional</animation>
-			<posx>272</posx>
-			<posy>115</posy>
-			<control type="image">
-				<width>737</width>
-				<height>490</height>
-				<texture border="50,70,50,75">panels/dialog-background.png</texture>
-			</control>
-
-			<control type="button">
-				<posx>697</posx>
-				<include>DialogCloseBtn</include>
-			</control>
 
 			<control type="label">
-				<description>header label</description>
-				<width>660</width>
-				<label>Channel Configuration</label>
+				<label>$LOCALIZE[19143]</label>
 				<include>DialogTitle</include>
 			</control>
-		</control>
 
-		<control type="group" id="105">
-			<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(script.pseudotv.AdvancedConfig.xml)">Conditional</animation>
-			<posx>291</posx>
-			<posy>165</posy>
-			<defaultcontrol>102</defaultcontrol>
-			<control type="label">
-				<posx>50</posx>
-				<posy>0</posy>
-				<width>160</width>
-				<height>42</height>
-				<font>MediaInfoFont</font>
-				<textcolor>MediaInfoItemColor</textcolor>
-				<shadowcolor>ShadowColor</shadowcolor>
-				<label>Channel</label>
-				<aligny>center</aligny>
-			</control>
+			<control type="group">
+				<posx>DialogMarginOffsetX</posx>
+				<posy>DialogMarginOffsetY</posy>
 
-			<control type="label">
-				<posx>200</posx>
-				<posy>0</posy>
-				<width>160</width>
-				<height>42</height>
-				<font>MediaInfoFont</font>
-				<textcolor>MediaInfoItemColor</textcolor>
-				<shadowcolor>ShadowColor</shadowcolor>
-				<label>Content</label>
-				<aligny>center</aligny>
-			</control>
+				<control type="group" id="105">
+					<control type="label">
+						<posx>20</posx>
+						<width>140</width>
+						<height>38</height>
+						<label>Channel</label>
+						<include>DialogHeadLabel</include>
+					</control>
 
-			<control type="image">
-				<posx>15</posx>
-				<posy>0</posy>
-				<width>670</width>
-				<height>42</height>	
-				<texture border="0,0,10,2">views/list-separator.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
+					<control type="label">
+						<posx>180</posx>
+						<width>400</width>
+						<height>38</height>
+						<label>Content</label>
+						<include>DialogHeadLabel</include>
+					</control>
 
-			<control type="button" id="901">
-				<posx>535</posx>
-				<posy>388</posy>
-				<width>150</width>
-				<height>42</height>
-				<onclick>PreviousMenu</onclick>
-				<label>Close</label>
-				<onup>102</onup>
-				<ondown>102</ondown>
-			</control>
-
-			<control type="list" id="102">
-				<description>All channels list</description>
-				<posx>0</posx>
-				<posy>45</posy>
-				<width>700</width>
-				<height>336</height>
-				<onup>102</onup>
-				<ondown>102</ondown>
-				<onright>901</onright>
-				<onleft>901</onleft>
-				<pagecontrol>103</pagecontrol>
-				<itemlayout height="42">
 					<control type="image">
-						<posx>15</posx>
-						<width>670</width>
-						<height>42</height>	
+						<width>600</width>
+						<height>38</height>	
 						<texture border="0,0,10,2">views/list-separator.png</texture>
 						<aspectratio>stretch</aspectratio>
 					</control>
 
-					<control type="label">
-						<description>Label</description>
-						<posy>-2</posy>
-						<posx>60</posx>
-						<width>700</width>
-						<height>42</height>
-						<font>ListFont</font>
-						<textcolor>ListColor</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
-						<info>ListItem.Label</info>
-						<aligny>center</aligny>
+					<control type="list" id="102">
+						<description>All channels list</description>
+						<posy>38</posy>
+						<width>600</width>
+						<height>336</height>
+						<onup>102</onup>
+						<ondown>102</ondown>
+						<onright>901</onright>
+						<onleft>901</onleft>
+						<pagecontrol>103</pagecontrol>
+						<itemlayout height="42">
+							<control type="image">
+								<width>600</width>
+								<height>42</height>	
+								<texture border="0,0,10,2">views/list-separator.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+
+							<control type="label">
+								<description>Label</description>
+								<posx>30</posx>
+								<width>140</width>
+								<height>42</height>
+								<info>ListItem.Label</info>
+								<include>DialogContentLabel</include>
+							</control>
+
+							<control type="label">
+								<description>Label2</description>
+								<posx>180</posx>
+								<width>400</width>
+								<height>42</height>			
+								<info>ListItem.Label2</info>
+								<include>DialogContentLabel</include>
+							</control>
+						</itemlayout>
+
+						<focusedlayout height="42">
+							<control type="image">
+								<width>600</width>
+								<height>42</height>	
+								<texture border="0,0,10,2">views/list-separator.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+
+							<control type="image">
+								<width>600</width>
+								<height>41</height>	
+								<texture border="4">views/list-focus.png</texture>
+								<aspectratio>stretch</aspectratio>
+								<visible>Control.HasFocus(102)</visible>
+								<include>ListViewSelectFadeAnim</include>
+							</control>
+
+							<control type="image">
+								<width>600</width>
+								<height>41</height>	
+								<texture border="4">views/list-alt-focus.png</texture>
+								<aspectratio>stretch</aspectratio>
+								<visible>!Control.HasFocus(102)</visible>
+								<include>ListViewSelectFadeAnim2</include>
+							</control>					
+
+							<control type="label">
+								<description>Label</description>
+								<posx>30</posx>
+								<width>140</width>
+								<height>42</height>
+								<include>DialogContentLabel</include>
+								<info>ListItem.Label</info>
+							</control>
+
+							<control type="label">
+								<description>Label2</description>
+								<posx>180</posx>
+								<width>400</width>
+								<height>42</height>
+								<include>DialogContentLabel</include>			
+								<info>ListItem.Label2</info>
+							</control>
+						</focusedlayout>
 					</control>
 
-					<control type="label">
-						<description>Label2</description>
-						<posy>-2</posy>
-						<posx>200</posx>
-						<width>200</width>
-						<height>42</height>
-						<font>ListFont2</font>
-						<textcolor>ListColor2</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>			
-						<info>ListItem.Label2</info>
-						<aligny>center</aligny>
-						<align>left</align>
-					</control>
-				</itemlayout>
+					<control type="grouplist">		
+						<description>Dialog Button Area</description>			
+						<posx>215</posx>
+						<posy>381</posy>
+						<itemgap>0</itemgap>
+						<orientation>horizontal</orientation>
+						<onup>102</onup>
+						<ondown>102</ondown>
+						<control type="button" id="901">
+							<description>OK</description>
+							<include>DialogMenuBarBtn</include>
+							<onclick>PreviousMenu</onclick>
+							<label>Close</label>
+						</control>			
+					</control>	
+				</control>
 
-				<focusedlayout height="42">
+				<control type="group" id="106">
+					<description>Single Channel Area</description>
+					<width>600</width>
+					<height>600</height>
 					<control type="image">
-						<posx>15</posx>
-						<width>670</width>
-						<height>42</height>	
+						<width>600</width>
+						<height>38</height>	
 						<texture border="0,0,10,2">views/list-separator.png</texture>
 						<aspectratio>stretch</aspectratio>
 					</control>
 
-					<control type="image">
-						<posx>15</posx>
-						<width>670</width>
-						<height>41</height>	
-						<texture border="4">views/list-focus.png</texture>
-						<aspectratio>stretch</aspectratio>
-						<visible>Control.HasFocus(102)</visible>
-						<include>ListViewSelectFadeAnim</include>
+					<control type="label" id="104">
+						<posx>20</posx>
+						<width>400</width>
+						<height>38</height>
+						<include>DialogHeadLabel</include>
+					</control>
+
+					<control type="group">
+						<posy>38</posy>
+						<control type="image">
+							<width>600</width>
+							<height>42</height>	
+							<texture border="0,0,10,2">views/list-separator.png</texture>
+							<aspectratio>stretch</aspectratio>
+						</control>
+
+						<control type="label">
+							<posx>20</posx>
+							<width>140</width>
+							<height>42</height>
+							<include>DialogContentLabel</include>
+							<label>Channel Type:</label>
+						</control>
+
+						<control type="label" id="109">
+							<posx>75r</posx>
+							<posy>0</posy>
+							<width>280</width>
+							<height>42</height>
+							<align>right</align>
+							<include>DialogContentLabel</include>
+						</control>
+
+						<control type="button" id="110">
+							<posx>53r</posx>
+							<posy>13</posy>
+							<width>23</width>
+							<height>16</height>
+							<texturefocus flipy="true">controls/arrow-scroll-up-focus.png</texturefocus>
+							<texturenofocus flipy="true">controls/arrow-scroll-up-nofocus.png</texturenofocus>
+							<onleft>111</onleft>
+							<onright>111</onright>
+						</control>
+
+						<control type="button" id="111">
+							<posx>30r</posx>
+							<posy>13</posy>
+							<width>23</width>
+							<height>16</height>
+							<texturefocus>controls/arrow-scroll-up-focus.png</texturefocus>
+							<texturenofocus>controls/arrow-scroll-up-nofocus.png</texturenofocus>
+							<onleft>110</onleft>
+							<onright>110</onright>
+						</control>
 					</control>
 
 					<control type="image">
-						<posx>15</posx>
-						<width>670</width>
-						<height>41</height>	
-						<texture border="4">views/list-alt-focus.png</texture>
+						<posy>80</posy>
+						<width>600</width>
+						<height>42</height>	
+						<texture border="0,0,10,2">views/list-separator.png</texture>
 						<aspectratio>stretch</aspectratio>
-						<visible>!Control.HasFocus(102)</visible>
-						<include>ListViewSelectFadeAnim2</include>
-					</control>					
-
-					<control type="label">
-						<description>Label</description>
-						<posy>-2</posy>
-						<posx>60</posx>
-						<width>700</width>
-						<height>42</height>
-						<font>ListFont</font>
-						<textcolor>SelectedColor</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
-						<info>ListItem.Label</info>
-						<aligny>center</aligny>
+						<visible>Control.IsVisible(120) | Control.IsVisible(121) | Control.IsVisible(122) | Control.IsVisible(123) | Control.IsVisible(124) | Control.IsVisible(125) | Control.IsVisible(126) | Control.IsVisible(127)</visible>
 					</control>
 
-					<control type="label">
-						<description>Label2</description>
-						<posy>-2</posy>
-						<posx>200</posx>
-						<width>200</width>
-						<height>42</height>
-						<font>ListFont</font>
-						<textcolor>SelectedColor</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>			
-						<info>ListItem.Label2</info>
-						<aligny>center</aligny>
-						<align>left</align>
+					<control type="grouplist">		
+						<description>Dialog Button Area</description>			
+						<posx>25</posx>
+						<posy>381</posy>
+						<itemgap>0</itemgap>
+						<orientation>horizontal</orientation>
+						<onup>110</onup>
+						<ondown>106</ondown>
+						<control type="button" id="114">
+							<description>Rules</description>
+							<include>DialogMenuBarSmallBtn</include>			
+							<label>Rules</label>
+						</control>
+						<control type="label" id="1">
+							<width>100</width>
+						</control>
+						<control type="button" id="112">
+							<description>Ok</description>
+							<include>DialogMenuBarSmallBtn</include>			
+							<label>$LOCALIZE[186]</label>
+						</control>
+						<control type="button" id="113">
+							<description>Cancel</description>
+							<include>DialogMenuBarSmallBtn</include>			
+							<label>$LOCALIZE[222]</label>
+						</control>			
 					</control>
-				</focusedlayout>
-			</control>
-		</control>
-
-		<!-- Controls for configuring a single channel -->		
-		<control type="group" id="106">
-			<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(script.pseudotv.AdvancedConfig.xml)">Conditional</animation>
-			<posx>291</posx>
-			<posy>165</posy>
-			<width>670</width>
-			<height>400</height>
-			<control type="image">
-				<posx>15</posx>
-				<posy>0</posy>
-				<width>670</width>
-				<height>42</height>	
-				<texture border="0,0,10,2">views/list-separator.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
-
-			<control type="image">
-				<posx>15</posx>
-				<posy>45</posy>
-				<width>670</width>
-				<height>42</height>	
-				<texture border="0,0,10,2">views/list-separator.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
-
-			<control type="image">
-				<posx>15</posx>
-				<posy>87</posy>
-				<width>670</width>
-				<height>42</height>	
-				<texture border="0,0,10,2">views/list-separator.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<visible>Control.IsVisible(120) | Control.IsVisible(121) | Control.IsVisible(122) | Control.IsVisible(123) | Control.IsVisible(124) | Control.IsVisible(125) | Control.IsVisible(126) | Control.IsVisible(127)</visible>
-			</control>
-
-			<control type="label" id="104">
-				<posx>50</posx>
-				<posy>0</posy>
-				<width>620</width>
-				<height>42</height>
-				<font>MediaInfoFont</font>
-				<textcolor>MediaInfoItemColor</textcolor>
-				<shadowcolor>ShadowColor</shadowcolor>
-				<aligny>center</aligny>
-				<label></label>
-			</control>
-
-			<control type="label">
-				<posx>50</posx>
-				<posy>43</posy>
-				<width>700</width>
-				<height>42</height>
-				<textcolor>SelectedColor</textcolor>
-				<shadowcolor>ShadowColor</shadowcolor>
-				<aligny>center</aligny>
-				<align>left</align>
-				<label>Channel Type:</label>
-			</control>
-
-			<control type="label" id="109">
-				<posx>66r</posx>
-				<posy>43</posy>
-				<width>270</width>
-				<height>42</height>
-				<textcolor>SelectedColor</textcolor>
-				<shadowcolor>ShadowColor</shadowcolor>
-				<aligny>center</aligny>
-				<align>right</align>
-				<label></label>
-			</control>
-
-			<control type="button" id="110">
-				<posx>48r</posx>
-				<posy>52</posy>
-				<width>28</width>
-				<height>28</height>
-				<texturefocus flipy="true">controls/arrow-scroll-up-focus2.png</texturefocus>
-				<texturenofocus flipy="true">controls/arrow-scroll-up-nofocus2.png</texturenofocus>
-				<onleft>111</onleft>
-				<onright>111</onright>
-			</control>
-
-			<control type="button" id="111">
-				<posx>20r</posx>
-				<posy>52</posy>
-				<width>28</width>
-				<height>28</height>
-				<texturefocus>controls/arrow-scroll-up-focus2.png</texturefocus>
-				<texturenofocus>controls/arrow-scroll-up-nofocus2.png</texturenofocus>
-				<onleft>110</onleft>
-				<onright>110</onright>
-			</control>
-
-			<control type="button" id="114">
-				<posx>15</posx>
-				<posy>388</posy>
-				<width>150</width>
-				<height>42</height>				
-				<label>Rules</label>
-				<onup>110</onup>
-				<onleft>113</onleft>
-				<onright>112</onright>
-			</control>
-
-			<control type="button" id="112">
-				<posx>355</posx>
-				<posy>388</posy>
-				<width>150</width>
-				<height>42</height>
-				<label>Ok</label>
-				<onup>110</onup>
-				<onleft>114</onleft>
-				<onright>113</onright>
-			</control>
-
-			<control type="button" id="113">
-				<posx>535</posx>
-				<posy>388</posy>
-				<width>150</width>
-				<height>42</height>
-				<label>Cancel</label>
-				<onup>110</onup>
-				<onleft>112</onleft>
-				<onright>114</onright>
-			</control>
-		</control>
-
-		<control type="group" id="107">
-			<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(script.pseudotv.AdvancedConfig.xml)">Conditional</animation>	
-			<!-- Controls for type Custom Playlist -->
-			<control type="group" id="120">
-				<posx>291</posx>
-				<posy>207</posy>
-				<width>670</width>
-				<height>400</height>
-				<control type="label">
-					<posx>50</posx>
-					<posy>43</posy>
-					<width>700</width>
-					<height>42</height>
-					<textcolor>SelectedColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<aligny>center</aligny>
-					<align>left</align>
-					<label>Playlist:</label>
 				</control>
 
-				<control type="button" id="130">
-					<posx>350r</posx>
-					<posy>52</posy>
-					<width>360</width>
-					<height>30</height>
-					<onup>110</onup>
-					<ondown>112</ondown>
-				</control>
-			</control>
+				<control type="group" id="107">
+					<posy>80</posy>
+					<width>600</width>
+					<height>600</height>
 
-			<!-- Controls for type TV Network -->
-			<control type="group" id="121">
-				<posx>291</posx>
-				<posy>207</posy>
-				<width>670</width>
-				<height>400</height>
-				<control type="label">
-					<posx>50</posx>
-					<posy>43</posy>
-					<width>700</width>
-					<height>42</height>
-					<textcolor>SelectedColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<aligny>center</aligny>
-					<align>left</align>
-					<label>Network:</label>
-				</control>
+					<control type="group" id="120">
+						<description>Custom Playlist Area</description>
+						<control type="label">
+							<posx>20</posx>
+							<width>140</width>
+							<height>42</height>
+							<include>DialogContentLabel</include>
+							<label>Playlist:</label>
+						</control>
 
-				<control type="label" id="142">
-					<posx>66r</posx>
-					<posy>43</posy>
-					<width>270</width>
-					<height>42</height>
-					<textcolor>SelectedColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<aligny>center</aligny>
-					<align>right</align>
-					<label></label>
-				</control>
+						<control type="button" id="130">
+							<posx>350r</posx>
+							<posy>6</posy>
+							<width>345</width>
+							<height>30</height>
+							<onup>110</onup>
+							<ondown>112</ondown>
+						</control>
+					</control>
 
-				<control type="button" id="140">
-					<posx>48r</posx>
-					<posy>52</posy>
-					<width>28</width>
-					<height>28</height>
-					<texturefocus flipy="true">controls/arrow-scroll-up-focus2.png</texturefocus>
-					<texturenofocus flipy="true">controls/arrow-scroll-up-nofocus2.png</texturenofocus>
-					<onup>110</onup>
-					<ondown>112</ondown>
-					<onleft>141</onleft>
-					<onright>141</onright>
-				</control>
+					<control type="group" id="121">
+						<description>TV Network Area</description>
+						<control type="label">
+							<posx>20</posx>
+							<width>140</width>
+							<height>42</height>
+							<include>DialogContentLabel</include>
+							<label>Network:</label>
+						</control>
 
-				<control type="button" id="141">
-					<posx>20r</posx>
-					<posy>52</posy>
-					<width>28</width>
-					<height>28</height>
-					<texturefocus>controls/arrow-scroll-up-focus2.png</texturefocus>
-					<texturenofocus>controls/arrow-scroll-up-nofocus2.png</texturenofocus>
-					<onup>111</onup>
-					<ondown>113</ondown>
-					<onleft>140</onleft>
-					<onright>140</onright>
-				</control>			
-			</control>
+						<control type="label" id="142">
+							<posx>75r</posx>
+							<posy>0</posy>
+							<width>280</width>
+							<height>42</height>
+							<align>right</align>
+							<include>DialogContentLabel</include>
+						</control>
 
-			<!-- Controls for type Movie Studio -->
-			<control type="group" id="122">		
-				<posx>291</posx>
-				<posy>207</posy>
-				<width>670</width>
-				<height>400</height>
-				<control type="label">
-					<posx>50</posx>
-					<posy>43</posy>
-					<width>700</width>
-					<height>42</height>
-					<textcolor>SelectedColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<aligny>center</aligny>
-					<align>left</align>
-					<label>Studio:</label>
-				</control>
+						<control type="button" id="140">
+							<posx>53r</posx>
+							<posy>13</posy>
+							<width>23</width>
+							<height>16</height>
+							<texturefocus flipy="true">controls/arrow-scroll-up-focus.png</texturefocus>
+							<texturenofocus flipy="true">controls/arrow-scroll-up-nofocus.png</texturenofocus>
+							<onup>110</onup>
+							<ondown>112</ondown>
+							<onleft>141</onleft>
+							<onright>141</onright>
+						</control>
 
-				<control type="label" id="152">
-					<posx>66r</posx>
-					<posy>43</posy>
-					<width>270</width>
-					<height>42</height>
-					<textcolor>SelectedColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<aligny>center</aligny>
-					<align>right</align>
-					<label></label>
-				</control>
+						<control type="button" id="141">
+							<posx>30r</posx>
+							<posy>13</posy>
+							<width>23</width>
+							<height>16</height>
+							<texturefocus>controls/arrow-scroll-up-focus.png</texturefocus>
+							<texturenofocus>controls/arrow-scroll-up-nofocus.png</texturenofocus>
+							<onup>111</onup>
+							<ondown>113</ondown>
+							<onleft>140</onleft>
+							<onright>140</onright>
+						</control>			
+					</control>
 
-				<control type="button" id="150">
-					<posx>48r</posx>
-					<posy>52</posy>
-					<width>28</width>
-					<height>28</height>
-					<texturefocus flipy="true">controls/arrow-scroll-up-focus2.png</texturefocus>
-					<texturenofocus flipy="true">controls/arrow-scroll-up-nofocus2.png</texturenofocus>
-					<onup>110</onup>
-					<ondown>112</ondown>
-					<onleft>151</onleft>
-					<onright>151</onright>
-				</control>
+					<control type="group" id="122">
+						<description>Movie Studio Area</description>
+						<control type="label">
+							<posx>20</posx>
+							<width>140</width>
+							<height>42</height>
+							<include>DialogContentLabel</include>
+							<label>Studio:</label>
+						</control>
 
-				<control type="button" id="151">
-					<posx>20r</posx>
-					<posy>52</posy>
-					<width>28</width>
-					<height>28</height>
-					<texturefocus>controls/arrow-scroll-up-focus2.png</texturefocus>
-					<texturenofocus>controls/arrow-scroll-up-nofocus2.png</texturenofocus>
-					<onup>111</onup>
-					<ondown>113</ondown>
-					<onleft>150</onleft>
-					<onright>150</onright>
-				</control>		
-			</control>
+						<control type="label" id="152">
+							<posx>75r</posx>
+							<posy>0</posy>
+							<width>280</width>
+							<height>42</height>
+							<align>right</align>
+							<include>DialogContentLabel</include>
+						</control>
 
-			<!-- Controls for type TV Genre -->
-			<control type="group" id="123">
-				<posx>291</posx>
-				<posy>207</posy>
-				<width>670</width>
-				<height>400</height>
-				<control type="label">
-					<posx>50</posx>
-					<posy>43</posy>
-					<width>700</width>
-					<height>42</height>
-					<textcolor>SelectedColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<aligny>center</aligny>
-					<align>left</align>
-					<label>Genre:</label>
-				</control>
+						<control type="button" id="150">
+							<posx>53r</posx>
+							<posy>13</posy>
+							<width>23</width>
+							<height>16</height>
+							<texturefocus flipy="true">controls/arrow-scroll-up-focus.png</texturefocus>
+							<texturenofocus flipy="true">controls/arrow-scroll-up-nofocus.png</texturenofocus>
+							<onup>110</onup>
+							<ondown>112</ondown>
+							<onleft>151</onleft>
+							<onright>151</onright>
+						</control>
 
-				<control type="label" id="162">
-					<posx>66r</posx>
-					<posy>43</posy>
-					<width>270</width>
-					<height>42</height>
-					<textcolor>SelectedColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<aligny>center</aligny>
-					<align>right</align>
-					<label></label>
-				</control>
+						<control type="button" id="151">
+							<posx>30r</posx>
+							<posy>13</posy>
+							<width>23</width>
+							<height>16</height>
+							<texturefocus>controls/arrow-scroll-up-focus.png</texturefocus>
+							<texturenofocus>controls/arrow-scroll-up-nofocus.png</texturenofocus>
+							<onup>111</onup>
+							<ondown>113</ondown>
+							<onleft>150</onleft>
+							<onright>150</onright>
+						</control>			
+					</control>
 
-				<control type="button" id="160">
-					<posx>48r</posx>
-					<posy>52</posy>
-					<width>28</width>
-					<height>28</height>
-					<texturefocus flipy="true">controls/arrow-scroll-up-focus2.png</texturefocus>
-					<texturenofocus flipy="true">controls/arrow-scroll-up-nofocus2.png</texturenofocus>
-					<onup>110</onup>
-					<ondown>112</ondown>
-					<onleft>161</onleft>
-					<onright>161</onright>
-				</control>
+					<control type="group" id="123">
+						<description>TV Genre Area</description>
+						<control type="label">
+							<posx>20</posx>
+							<width>140</width>
+							<height>42</height>
+							<include>DialogContentLabel</include>
+							<label>Genre:</label>
+						</control>
 
-				<control type="button" id="161">
-					<posx>20r</posx>
-					<posy>52</posy>
-					<width>28</width>
-					<height>28</height>
-					<texturefocus>controls/arrow-scroll-up-focus2.png</texturefocus>
-					<texturenofocus>controls/arrow-scroll-up-nofocus2.png</texturenofocus>
-					<onup>111</onup>
-					<ondown>113</ondown>
-					<onleft>160</onleft>
-					<onright>160</onright>
-				</control>		
-			</control>
+						<control type="label" id="162">
+							<posx>75r</posx>
+							<posy>0</posy>
+							<width>280</width>
+							<height>42</height>
+							<align>right</align>
+							<include>DialogContentLabel</include>
+						</control>
 
-			<!-- Controls for type Movie Genre -->
-			<control type="group" id="124">
-				<posx>291</posx>
-				<posy>207</posy>
-				<width>670</width>
-				<height>400</height>
-				<control type="label">
-					<posx>50</posx>
-					<posy>43</posy>
-					<width>700</width>
-					<height>42</height>
-					<textcolor>SelectedColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<aligny>center</aligny>
-					<align>left</align>
-					<label>Genre:</label>
-				</control>
+						<control type="button" id="160">
+							<posx>53r</posx>
+							<posy>13</posy>
+							<width>23</width>
+							<height>16</height>
+							<texturefocus flipy="true">controls/arrow-scroll-up-focus.png</texturefocus>
+							<texturenofocus flipy="true">controls/arrow-scroll-up-nofocus.png</texturenofocus>
+							<onup>110</onup>
+							<ondown>112</ondown>
+							<onleft>161</onleft>
+							<onright>161</onright>
+						</control>
 
-				<control type="label" id="172">
-					<posx>66r</posx>
-					<posy>43</posy>
-					<width>270</width>
-					<height>42</height>
-					<textcolor>SelectedColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<aligny>center</aligny>
-					<align>right</align>
-					<label></label>
-				</control>
+						<control type="button" id="161">
+							<posx>30r</posx>
+							<posy>13</posy>
+							<width>23</width>
+							<height>16</height>
+							<texturefocus>controls/arrow-scroll-up-focus.png</texturefocus>
+							<texturenofocus>controls/arrow-scroll-up-nofocus.png</texturenofocus>
+							<onup>111</onup>
+							<ondown>113</ondown>
+							<onleft>160</onleft>
+							<onright>160</onright>
+						</control>			
+					</control>
 
-				<control type="button" id="170">
-					<posx>48r</posx>
-					<posy>52</posy>
-					<width>28</width>
-					<height>28</height>
-					<texturefocus flipy="true">controls/arrow-scroll-up-focus2.png</texturefocus>
-					<texturenofocus flipy="true">controls/arrow-scroll-up-nofocus2.png</texturenofocus>
-					<onup>110</onup>
-					<ondown>112</ondown>
-					<onleft>171</onleft>
-					<onright>171</onright>
-				</control>
+					<control type="group" id="124">
+						<description>Movie Genre Area</description>
+						<control type="label">
+							<posx>20</posx>
+							<width>140</width>
+							<height>42</height>
+							<include>DialogContentLabel</include>
+							<label>Genre:</label>
+						</control>
 
-				<control type="button" id="171">
-					<posx>20r</posx>
-					<posy>52</posy>
-					<width>28</width>
-					<height>28</height>
-					<texturefocus>controls/arrow-scroll-up-focus2.png</texturefocus>
-					<texturenofocus>controls/arrow-scroll-up-nofocus2.png</texturenofocus>
-					<onup>111</onup>
-					<ondown>113</ondown>
-					<onleft>170</onleft>
-					<onright>170</onright>
-				</control>		
-			</control>
+						<control type="label" id="172">
+							<posx>75r</posx>
+							<posy>0</posy>
+							<width>280</width>
+							<height>42</height>
+							<align>right</align>
+							<include>DialogContentLabel</include>
+						</control>
 
-			<!-- Controls for type Mixed Genre -->
-			<control type="group" id="125">
-				<posx>291</posx>
-				<posy>207</posy>
-				<width>670</width>
-				<height>400</height>
-				<control type="label">
-					<posx>50</posx>
-					<posy>43</posy>
-					<width>700</width>
-					<height>42</height>
-					<textcolor>SelectedColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<aligny>center</aligny>
-					<align>left</align>
-					<label>Genre:</label>
-				</control>
+						<control type="button" id="170">
+							<posx>53r</posx>
+							<posy>13</posy>
+							<width>23</width>
+							<height>16</height>
+							<texturefocus flipy="true">controls/arrow-scroll-up-focus.png</texturefocus>
+							<texturenofocus flipy="true">controls/arrow-scroll-up-nofocus.png</texturenofocus>
+							<onup>110</onup>
+							<ondown>112</ondown>
+							<onleft>171</onleft>
+							<onright>171</onright>
+						</control>
 
-				<control type="label" id="182">
-					<posx>66r</posx>
-					<posy>43</posy>
-					<width>270</width>
-					<height>42</height>
-					<textcolor>SelectedColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<aligny>center</aligny>
-					<align>right</align>
-					<label></label>
-				</control>
+						<control type="button" id="171">
+							<posx>30r</posx>
+							<posy>13</posy>
+							<width>23</width>
+							<height>16</height>
+							<texturefocus>controls/arrow-scroll-up-focus.png</texturefocus>
+							<texturenofocus>controls/arrow-scroll-up-nofocus.png</texturenofocus>
+							<onup>111</onup>
+							<ondown>113</ondown>
+							<onleft>170</onleft>
+							<onright>170</onright>
+						</control>			
+					</control>
 
-				<control type="button" id="180">
-					<posx>48r</posx>
-					<posy>52</posy>
-					<width>28</width>
-					<height>28</height>
-					<texturefocus flipy="true">controls/arrow-scroll-up-focus2.png</texturefocus>
-					<texturenofocus flipy="true">controls/arrow-scroll-up-nofocus2.png</texturenofocus>
-					<onup>110</onup>
-					<ondown>112</ondown>
-					<onleft>181</onleft>
-					<onright>181</onright>
-				</control>
+					<control type="group" id="125">
+						<description>Mixed Genre Area</description>
+						<control type="label">
+							<posx>20</posx>
+							<width>140</width>
+							<height>42</height>
+							<include>DialogContentLabel</include>
+							<label>Genre:</label>
+						</control>
 
-				<control type="button" id="181">
-					<posx>20r</posx>
-					<posy>52</posy>
-					<width>28</width>
-					<height>28</height>
-					<texturefocus>controls/arrow-scroll-up-focus2.png</texturefocus>
-					<texturenofocus>controls/arrow-scroll-up-nofocus2.png</texturenofocus>
-					<onup>111</onup>
-					<ondown>113</ondown>
-					<onleft>180</onleft>
-					<onright>180</onright>
-				</control>		
-			</control>
+						<control type="label" id="182">
+							<posx>75r</posx>
+							<posy>0</posy>
+							<width>280</width>
+							<height>42</height>
+							<align>right</align>
+							<include>DialogContentLabel</include>
+						</control>
 
-			<!-- Controls for type TV Show -->
-			<control type="group" id="126">
-				<posx>291</posx>
-				<posy>207</posy>
-				<width>670</width>
-				<height>400</height>
-				<control type="label">
-					<posx>50</posx>
-					<posy>43</posy>
-					<width>700</width>
-					<height>42</height>
-					<textcolor>SelectedColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<aligny>center</aligny>
-					<align>left</align>
-					<label>Show:</label>
-				</control>
+						<control type="button" id="180">
+							<posx>53r</posx>
+							<posy>13</posy>
+							<width>23</width>
+							<height>16</height>
+							<texturefocus flipy="true">controls/arrow-scroll-up-focus.png</texturefocus>
+							<texturenofocus flipy="true">controls/arrow-scroll-up-nofocus.png</texturenofocus>
+							<onup>110</onup>
+							<ondown>112</ondown>
+							<onleft>181</onleft>
+							<onright>181</onright>
+						</control>
 
-				<control type="label" id="192">
-					<posx>66r</posx>
-					<posy>43</posy>
-					<width>270</width>
-					<height>42</height>
-					<textcolor>SelectedColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<aligny>center</aligny>
-					<align>right</align>
-					<label></label>
-				</control>
+						<control type="button" id="181">
+							<posx>30r</posx>
+							<posy>13</posy>
+							<width>23</width>
+							<height>16</height>
+							<texturefocus>controls/arrow-scroll-up-focus.png</texturefocus>
+							<texturenofocus>controls/arrow-scroll-up-nofocus.png</texturenofocus>
+							<onup>111</onup>
+							<ondown>113</ondown>
+							<onleft>180</onleft>
+							<onright>180</onright>
+						</control>			
+					</control>
 
-				<control type="button" id="190">
-					<posx>48r</posx>
-					<posy>52</posy>
-					<width>28</width>
-					<height>28</height>
-					<texturefocus flipy="true">controls/arrow-scroll-up-focus2.png</texturefocus>
-					<texturenofocus flipy="true">controls/arrow-scroll-up-nofocus2.png</texturenofocus>
-					<onup>110</onup>
-					<ondown>194</ondown>
-					<onleft>191</onleft>
-					<onright>191</onright>
-				</control>
+					<control type="group" id="126">
+						<description>TV Show Area</description>
+						<control type="label">
+							<posx>20</posx>
+							<width>140</width>
+							<height>42</height>
+							<include>DialogContentLabel</include>
+							<label>Show:</label>
+						</control>
 
-				<control type="button" id="191">
-					<posx>20r</posx>
-					<posy>52</posy>
-					<width>28</width>
-					<height>28</height>
-					<texturefocus>controls/arrow-scroll-up-focus2.png</texturefocus>
-					<texturenofocus>controls/arrow-scroll-up-nofocus2.png</texturenofocus>
-					<onup>111</onup>
-					<ondown>194</ondown>
-					<onleft>190</onleft>
-					<onright>190</onright>
-				</control>		
+						<control type="label" id="192">
+							<posx>75r</posx>
+							<posy>0</posy>
+							<width>280</width>
+							<height>42</height>
+							<align>right</align>
+							<include>DialogContentLabel</include>
+						</control>
 
-				<control type="image">
-					<posx>15</posx>
-					<posy>87</posy>
-					<width>670</width>
-					<height>42</height>	
-					<texture border="0,0,10,2">views/list-separator.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
+						<control type="button" id="190">
+							<posx>53r</posx>
+							<posy>13</posy>
+							<width>23</width>
+							<height>16</height>
+							<texturefocus flipy="true">controls/arrow-scroll-up-focus.png</texturefocus>
+							<texturenofocus flipy="true">controls/arrow-scroll-up-nofocus.png</texturenofocus>
+							<onup>110</onup>
+							<ondown>194</ondown>
+							<onleft>191</onleft>
+							<onright>191</onright>
+						</control>
 
-				<control type="label">
-					<posx>50</posx>
-					<posy>85</posy>
-					<width>700</width>
-					<height>42</height>
-					<textcolor>SelectedColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<aligny>center</aligny>
-					<align>left</align>
-					<label>Serial Mode:</label>
-				</control>			
+						<control type="button" id="191">
+							<posx>30r</posx>
+							<posy>13</posy>
+							<width>23</width>
+							<height>16</height>
+							<texturefocus>controls/arrow-scroll-up-focus.png</texturefocus>
+							<texturenofocus>controls/arrow-scroll-up-nofocus.png</texturenofocus>
+							<onup>111</onup>
+							<ondown>194</ondown>
+							<onleft>190</onleft>
+							<onright>190</onright>
+						</control>
 
-				<control type="radiobutton" id="194">
-					<posx>190r</posx>
-					<posy>92</posy>
-					<label></label>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onup>190</onup>
-					<ondown>112</ondown>
-				</control>			
-			</control>
+						<control type="group">
+							<posy>42</posy>
+							<control type="image">
+								<width>600</width>
+								<height>42</height>	
+								<texture border="0,0,10,2">views/list-separator.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
 
-			<!-- Controls for type Directory -->
-			<control type="group" id="127">
-				<posx>291</posx>
-				<posy>207</posy>
-				<width>670</width>
-				<height>400</height>
-				<control type="label">
-					<posx>50</posx>
-					<posy>43</posy>
-					<width>700</width>
-					<height>42</height>
-					<textcolor>SelectedColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<aligny>center</aligny>
-					<align>left</align>
-					<label>Directory:</label>
-				</control>
+							<control type="label">
+								<posx>20</posx>
+								<width>140</width>
+								<height>42</height>
+								<include>DialogContentLabel</include>
+								<label>Serial Mode:</label>
+							</control>
 
-				<control type="button" id="200">
-					<posx>350r</posx>
-					<posy>52</posy>
-					<width>360</width>
-					<height>30</height>
-					<onup>110</onup>
-					<ondown>112</ondown>
+							<control type="radiobutton" id="194">
+								<posx>195r</posx>
+								<posy>0</posy>
+								<height>42</height>
+								<label>-</label>
+								<texturefocus>-</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onup>190</onup>
+								<ondown>112</ondown>
+							</control>						
+						</control>
+					</control>
+
+					<control type="group" id="127">
+						<description>Directory Area</description>
+						<control type="label">
+							<posx>20</posx>
+							<width>140</width>
+							<height>42</height>
+							<include>DialogContentLabel</include>
+							<label>Directory:</label>
+						</control>
+
+						<control type="button" id="200">
+							<posx>350r</posx>
+							<posy>6</posy>
+							<width>345</width>
+							<height>30</height>
+							<onup>110</onup>
+							<ondown>112</ondown>
+						</control>
+					</control>
 				</control>
 			</control>
 		</control>
