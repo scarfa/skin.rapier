@@ -300,6 +300,7 @@
 				<control type="group">
 					<visible>Window.IsActive(VideoLibrary) + [Container.Content(Episodes) | Container.Content(Seasons)]</visible>
 					<include>BackgroundVisibleAnim</include>
+					<include condition="!Skin.HasSetting(EnableTVShowsExtraFanart)">FanartImage</include>
 					<include condition="!Skin.HasSetting(EnableTVShowsExtraFanart)">ParentFanartImage</include>
 					<include condition="Skin.HasSetting(EnableTVShowsExtraFanart)">ExtraFanartImage</include>
 					<include condition="Skin.HasSetting(EnableTVShowsExtraFanart)">ExtraFanartImage2</include>
