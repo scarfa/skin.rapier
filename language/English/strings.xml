@@ -11,7 +11,7 @@
 <string id="31004">About</string>
 <string id="31300">Last Updated</string>
 <string id="31301">Last Watched</string>
-<string id="31302">Get Logo</string>
+<string id="31302">Get Artwork</string>
 <string id="31303">Recently Added</string>
 <string id="31304">Information</string>
 <string id="31305">Emulators</string>
@@ -47,8 +47,9 @@
 <string id="32024">Reloading Skin...</string>
 <string id="32025">Reset Skin</string>
 <string id="32026">All skin settings will revert to default settings. Press to confirm.</string>
-<string id="32027">Publisher</string>
-<string id="32028">Get Artwork</string>
+<string id="32027">Platform</string>
+<string id="32028">Publisher</string>
+<string id="32029">Get info</string>
 
 <!-- view types -->
 <string id="31103">Icon</string>

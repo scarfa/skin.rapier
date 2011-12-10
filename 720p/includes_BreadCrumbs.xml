@@ -950,7 +950,8 @@
 				<include>BreadCrumbLabel</include>
 				<label>[UPPERCASE][B]?[/B][/UPPERCASE]</label>
 				<visible>!Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Episodes)
-				+ !Container.Content(MusicVideos) + !Container.Content(Albums) + !Container.Content(Artists) + !Window.IsActive(AddonInformation)</visible>
+				+ !Container.Content(MusicVideos) + !Container.Content(Albums) + !Container.Content(Artists)
+				+ !Window.IsActive(AddonInformation) + !Substring(Container.FolderPath,plugin://plugin.program)</visible>
 				<include>BreadCrumbSlideLvl2Anim</include>
 			</control>
 			<control type="label" id="5502">
@@ -1002,11 +1003,18 @@
 				<visible>Window.IsActive(AddonInformation)</visible>
 				<include>BreadCrumbSlideLvl2Anim</include>
 			</control>
+			<control type="label" id="5509">
+				<description>Programs</description>
+				<include>BreadCrumbLabel</include>
+				<label>[UPPERCASE][B]$INFO[Container.FolderName][/B][/UPPERCASE]</label>
+				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
+				<include>BreadCrumbSlideLvl2Anim</include>
+			</control>
 			<control type="image">
 				<include>BreadCrumbSeparator</include>
 				<include>BreadCrumbSlideLvl2Anim</include>
 			</control>
-			<control type="label" id="5509">
+			<control type="label" id="5510">
 				<description>Information</description>
 				<include>BreadCrumbLabel</include>
 				<label>[UPPERCASE][B]$LOCALIZE[31304][/B][/UPPERCASE]</label>

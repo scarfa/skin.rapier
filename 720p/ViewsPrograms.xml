@@ -4,157 +4,22 @@
 		<control type="group" id="500">	
 			<defaultcontrol always="true">590</defaultcontrol>
 			<visible>Control.IsVisible(590)</visible>
-			<include>MediaViewOpenCloseAnim</include>
-
-			<control type="image">
-				<posx>30</posx>
-				<posy>106</posy>
-				<width>1220</width>
-				<height>525</height>
-				<texture border="7">panels/content-panel.png</texture>
-				<include>PanelFadeAnim</include>
-			</control> 
-
-			<control type="group">
-				<visible>!IsEmpty(ListItem.Title)</visible>
-
-				<control type="group">
-					<description>Cover Area</description>
-					<posx>40</posx>
-					<posy>116</posy>
-
-					<control type="image">
-						<description>Media Info Background</description>
-						<width>554</width>
-						<height>373</height>
-						<texture border="4">panels/panel2.png</texture>
-						<animation effect="fade" end="20" condition="true">Conditional</animation>
-					</control>
-
-					<control type="image">
-						<description>Cover Background</description>
-						<width>554</width>
-						<height>310</height>
-						<texture border="4">covers/cover-case2.png</texture>
-						<bordersize>1</bordersize>
-						<animation effect="fade" end="50" condition="true">Conditional</animation>
-					</control>
-
-					<control type="largeimage">
-						<width>554</width>
-						<height>310</height>
-						<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
-						<bordersize>4</bordersize>
-						<aspectratio>scale</aspectratio>
-						<fadetime>FanartCrossfadeTime</fadetime>
-					</control>
-
-					<control type="image">
-						<posx>9</posx>
-						<posy>12</posy>
-						<width>5</width>
-						<height>16</height>
-						<texture>views/genre-marker.png</texture>
-						<visible>!IsEmpty(ListItem.Genre)</visible>
-					</control>
-
-					<control type="label">
-						<description>Genre</description>
-						<posx>16</posx>
-						<posy>18</posy>
-						<width>522</width>
-						<font>MediaInfoFont3</font>
-						<textcolor>MediaInfoTitleColor2</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
-						<aligny>center</aligny>
-						<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
-						<scroll>false</scroll>
-					</control>
-				</control>
-
-				<control type="group">
-					<description>Media Info Area</description>
-					<posx>42</posx>
-					<posy>434</posy>
-
-
-					<control type="grouplist">
-						<description>Year</description>
-						<posx>10</posx>
-						<posy>0</posy>
-						<orientation>horizontal</orientation>
-						<control type="label">
-							<width min="0" max="110">auto</width>
-							<font>MediaInfoFont</font>
-							<textcolor>MediaInfoItemColor</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<aligny>top</aligny>
-							<label>$LOCALIZE[345]:</label>
-						</control>
-						<control type="label">
-							<width min="0" max="350">auto</width>
-							<font>MediaInfoFont</font>
-							<textcolor>MediaInfoItemColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<aligny>top</aligny>
-							<label fallback="31001">$INFO[ListItem.Premiered]</label>
-						</control>
-					</control>
-
-					<control type="grouplist">
-						<description>Publisher</description>
-						<posx>10</posx>
-						<posy>22</posy>
-						<orientation>horizontal</orientation>
-						<control type="label">
-							<width min="0" max="110">auto</width>
-							<font>MediaInfoFont</font>
-							<textcolor>MediaInfoItemColor</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<aligny>top</aligny>
-							<label>$LOCALIZE[32027]:</label>
-						</control>
-						<control type="label">
-							<width min="0" max="350">auto</width>
-							<font>MediaInfoFont</font>
-							<textcolor>MediaInfoItemColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<aligny>top</aligny>
-							<label fallback="31001">$INFO[ListItem.Writer]</label>
-						</control>
-					</control>
-				</control>
-
-				<control type="textbox">
-					<description>Plot</description>
-					<posx>42</posx>
-					<posy>497</posy>
-					<width>550</width>
-					<height>122</height>
-					<font>MediaInfoDescFont</font>
-					<textcolor>MediaInfoColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<align>justify</align>
-					<label fallback="31203">$INFO[ListItem.Plot]</label>
-					<wrapmultiline>true</wrapmultiline>
-					<autoscroll time="2000" delay="6000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollProgramsListInfoPlot)</autoscroll>
-					<visible>!Skin.HasSetting(HideProgramsListInfoPlot) + !Container.OnNext + !Container.OnPrevious</visible>
-					<include>ControlsOpenCloseAnim</include>
-				</control>
-			</control>
+			<include>MediaViewOpenCloseAnim</include>		
+			<include>ProgramsListInfoViewCommon</include>
 
 			<control type="list" id="590">	
-				<viewtype label="31111">List Info 2</viewtype>
+				<viewtype label="31111">List Info</viewtype>
 				<posx>605</posx>
 				<posy>110</posy>
 				<width>620</width>
 				<height>518</height>
-				<pagecontrol>906</pagecontrol>
+				<pagecontrol>920</pagecontrol>
 				<preloaditems>2</preloaditems>
 				<onup>590</onup>
 				<ondown>590</ondown>
 				<onleft>850</onleft>
-				<onright>150</onright>		
+				<onright condition="Control.IsVisible(920)">150</onright>
+				<onright condition="!Control.IsVisible(920)">ActivateWindow(1122)</onright>			
 				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
 				<include condition="Skin.String(ProgramsListInfoStyle,1) | Skin.String(ProgramsListInfoStyle,3)">ProgramsListInfoItemLayout</include>
 				<include condition="Skin.String(ProgramsListInfoStyle,) | Skin.String(ProgramsListInfoStyle,2)">ProgramsListInfoTallStyleItemLayout</include>
@@ -162,7 +27,7 @@
 				<include condition="Skin.String(ProgramsListInfoStyle,) | Skin.String(ProgramsListInfoStyle,2) | Skin.String(ProgramsListInfoStyle,3)">ProgramsListInfoTallStyleFocusedLayout</include>
 			</control>
 
-			<include>ListInfo2ViewScrollbar</include>
+			<include>ProgramsListInfoViewScrollbar</include>
 
 			<control type="group">
 				<posy>SortLetterOffsetY</posy>
@@ -185,6 +50,313 @@
 
 			<include>ViewsDialogPopUpScreenDim</include>
 		</control>		
+	</include>
+
+	<include name="ProgramsListInfoView2">	
+		<control type="group" id="500">	
+			<defaultcontrol always="true">591</defaultcontrol>
+			<visible>Control.IsVisible(591)</visible>
+			<include>MediaViewOpenCloseAnim</include>
+			<include>ProgramsListInfoViewCommon</include>
+
+			<control type="list" id="591">	
+				<viewtype label="31112">List Info 2</viewtype>
+				<posx>605</posx>
+				<posy>110</posy>
+				<width>620</width>
+				<height>518</height>
+				<pagecontrol>921</pagecontrol>
+				<preloaditems>2</preloaditems>
+				<onup>591</onup>
+				<ondown>591</ondown>
+				<onleft>850</onleft>
+				<onright condition="Control.IsVisible(921)">150</onright>
+				<onright condition="!Control.IsVisible(921)">ActivateWindow(1122)</onright>			
+				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
+				<include condition="Skin.String(ProgramsListInfo2Style,1) | Skin.String(ProgramsListInfo2Style,3)">ProgramsListInfoItemLayout</include>
+				<include condition="Skin.String(ProgramsListInfo2Style,) | Skin.String(ProgramsListInfo2Style,2)">ProgramsListInfo2TallStyleItemLayout</include>
+				<include condition="Skin.String(ProgramsListInfo2Style,1)">ProgramsListInfoFocusedLayout</include>
+				<include condition="Skin.String(ProgramsListInfo2Style,) | Skin.String(ProgramsListInfo2Style,2) | Skin.String(ProgramsListInfo2Style,3)">ProgramsListInfo2TallStyleFocusedLayout</include>
+			</control>
+
+			<include>ProgramsListInfo2ViewScrollbar</include>
+
+			<control type="group">
+				<posy>SortLetterOffsetY</posy>
+				<include>SortLetterNotification</include>
+			</control>
+
+			<control type="button" id="188">
+				<onfocus>Skin.SetString(CurrentViewMode,591)</onfocus>
+				<include>ViewOptionsHelperBtn</include>
+				<visible>Control.IsVisible(591)</visible>
+			</control>
+
+			<control type="group">
+				<description>Bottom Bar Area</description>
+				<posy>BottomPaneOffsetY</posy>	
+				<!--<include>InfoPaneImage</include>-->
+				<include>InfoPaneMediaDetails</include>
+				<include>BottomPaneOpenCloseAnim</include>
+			</control>	
+
+			<include>ViewsDialogPopUpScreenDim</include>
+		</control>		
+	</include>
+
+	<include name="ProgramsListInfoView3">	
+		<control type="group" id="500">	
+			<defaultcontrol always="true">592</defaultcontrol>
+			<visible>Control.IsVisible(592)</visible>
+			<include>MediaViewOpenCloseAnim</include>
+			<include>ProgramsListInfoViewCommon</include>
+
+			<control type="list" id="592">	
+				<viewtype label="31115">List Info 3</viewtype>
+				<posx>605</posx>
+				<posy>110</posy>
+				<width>620</width>
+				<height>518</height>
+				<pagecontrol>922</pagecontrol>
+				<preloaditems>2</preloaditems>
+				<onup>592</onup>
+				<ondown>592</ondown>
+				<onleft>850</onleft>
+				<onright condition="Control.IsVisible(922)">150</onright>
+				<onright condition="!Control.IsVisible(922)">ActivateWindow(1122)</onright>			
+				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
+				<include condition="Skin.String(ProgramsListInfo3Style,1) | Skin.String(ProgramsListInfo3Style,3)">ProgramsListInfoItemLayout</include>
+				<include condition="Skin.String(ProgramsListInfo3Style,) | Skin.String(ProgramsListInfo3Style,2)">ProgramsListInfo3TallStyleItemLayout</include>
+				<include condition="Skin.String(ProgramsListInfo3Style,1)">ProgramsListInfoFocusedLayout</include>
+				<include condition="Skin.String(ProgramsListInfo3Style,) | Skin.String(ProgramsListInfo3Style,2) | Skin.String(ProgramsListInfo3Style,3)">ProgramsListInfo3TallStyleFocusedLayout</include>
+			</control>
+
+			<include>ProgramsListInfo3ViewScrollbar</include>
+
+			<control type="group">
+				<posy>SortLetterOffsetY</posy>
+				<include>SortLetterNotification</include>
+			</control>
+
+			<control type="button" id="188">
+				<onfocus>Skin.SetString(CurrentViewMode,592)</onfocus>
+				<include>ViewOptionsHelperBtn</include>
+				<visible>Control.IsVisible(592)</visible>
+			</control>
+
+			<control type="group">
+				<description>Bottom Bar Area</description>
+				<posy>BottomPaneOffsetY</posy>	
+				<!--<include>InfoPaneImage</include>-->
+				<include>InfoPaneMediaDetails</include>
+				<include>BottomPaneOpenCloseAnim</include>
+			</control>	
+
+			<include>ViewsDialogPopUpScreenDim</include>
+		</control>		
+	</include>
+
+	<!-- COMMON -->
+	<include name="ProgramsListInfoViewCommon">
+		<control type="image">
+			<posx>30</posx>
+			<posy>106</posy>
+			<width>1220</width>
+			<height>525</height>
+			<texture border="7">panels/content-panel.png</texture>
+			<include>PanelFadeAnim</include>
+		</control>
+
+		<control type="group">
+			<visible>!IsEmpty(ListItem.Title)</visible>
+
+			<control type="group">
+				<description>Cover Area</description>
+				<posx>40</posx>
+				<posy>116</posy>
+
+				<control type="image">
+					<description>Programs Info Background</description>
+					<width>554</width>
+					<height>373</height>
+					<texture border="4">panels/panel2.png</texture>
+					<animation effect="fade" end="20" condition="true">Conditional</animation>
+				</control>
+
+				<control type="image">
+					<description>Cover Background</description>
+					<width>554</width>
+					<height>310</height>
+					<texture border="4">covers/cover-case2.png</texture>
+					<bordersize>1</bordersize>
+					<animation effect="fade" end="50" condition="true">Conditional</animation>
+				</control>
+
+				<control type="largeimage">
+					<width>554</width>
+					<height>310</height>
+					<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<bordersize>4</bordersize>
+					<aspectratio>scale</aspectratio>
+					<fadetime>FanartCrossfadeTime</fadetime>
+				</control>
+
+				<control type="image">
+					<posx>9</posx>
+					<posy>12</posy>
+					<width>5</width>
+					<height>16</height>
+					<texture>views/genre-marker.png</texture>
+					<visible>!IsEmpty(ListItem.Genre)</visible>
+				</control>
+
+				<control type="label">
+					<description>Genre</description>
+					<posx>16</posx>
+					<posy>18</posy>
+					<width>522</width>
+					<font>MediaInfoFont3</font>
+					<textcolor>MediaInfoTitleColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<aligny>center</aligny>
+					<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+					<scroll>false</scroll>
+				</control>
+			</control>
+
+			<control type="group">
+				<description>Programs Info Area</description>
+				<posx>42</posx>
+				<posy>434</posy>
+
+				<control type="grouplist">
+					<description>Publisher</description>
+					<posx>10</posx>
+					<posy>0</posy>
+					<orientation>horizontal</orientation>
+					<control type="label">
+						<width min="0" max="110">auto</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<aligny>top</aligny>
+						<label>$LOCALIZE[32028]:</label>
+					</control>
+					<control type="label">
+						<width min="0" max="310">auto</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<aligny>top</aligny>
+						<label fallback="31001">$INFO[ListItem.Studio]</label>
+					</control>
+				</control>
+
+				<control type="grouplist">
+					<description>Platform</description>
+					<posx>10</posx>
+					<posy>22</posy>
+					<orientation>horizontal</orientation>
+					<control type="label">
+						<width min="0" max="110">auto</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<aligny>top</aligny>
+						<label>$LOCALIZE[32027]:</label>
+					</control>
+					<control type="label">
+						<width min="0" max="310">auto</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<aligny>top</aligny>
+						<label fallback="31001">$INFO[ListItem.Writer]</label>
+					</control>
+				</control>
+
+				<control type="grouplist">
+					<description>Year</description>
+					<posx>410</posx>
+					<posy>0</posy>
+					<width>130</width>
+					<orientation>horizontal</orientation>
+					<align>right</align>
+					<control type="label">
+						<width min="0" max="110">auto</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<aligny>top</aligny>
+						<label>$LOCALIZE[345]:</label>
+					</control>
+					<control type="label">
+						<width min="0" max="110">auto</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<aligny>top</aligny>
+						<label fallback="31001">$INFO[ListItem.Premiered]</label>
+					</control>
+				</control>
+
+				<control type="grouplist">
+					<description>Rating</description>
+					<posx>410</posx>
+					<posy>22</posy>
+					<width>130</width>
+					<orientation>horizontal</orientation>
+					<align>right</align>
+					<control type="label">
+						<width min="0" max="110">auto</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<aligny>top</aligny>
+						<label>$LOCALIZE[563]:</label>
+					</control>
+					<control type="label">
+						<width min="0" max="110">auto</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<aligny>top</aligny>
+						<label fallback="31001">$INFO[ListItem.Rating]</label>
+					</control>
+				</control>
+			</control>
+
+
+			<control type="textbox">
+				<description>Plot</description>
+				<posx>42</posx>
+				<posy>497</posy>
+				<width>550</width>
+				<height>122</height>
+				<font>MediaInfoDescFont</font>
+				<textcolor>MediaInfoColor</textcolor>
+				<shadowcolor>ShadowColor</shadowcolor>
+				<align>justify</align>
+				<label fallback="31203">$INFO[ListItem.Plot]</label>
+				<wrapmultiline>true</wrapmultiline>
+				<autoscroll time="2000" delay="6000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollProgramsListInfoPlot)</autoscroll>
+				<visible>!Skin.HasSetting(HideProgramsListInfoPlot) + !Container.OnNext + !Container.OnPrevious</visible>
+				<include>ControlsOpenCloseAnim</include>
+			</control>
+		</control>
+	</include>
+
+	<!-- NORMAL LIST -->
+	<include name="ProgramsListInfoControlVisible">
+		<visible>[Control.IsVisible(590) + Control.HasFocus(590)] 
+		| [Control.IsVisible(591) + Control.HasFocus(591)] 
+		| [Control.IsVisible(592) + Control.HasFocus(592)]</visible>
+	</include>
+
+	<include name="ProgramsListInfoControlInvisible">
+		<visible>[Control.IsVisible(590) + !Control.HasFocus(590)] 
+		| [Control.IsVisible(591) + !Control.HasFocus(591)] 
+		| [Control.IsVisible(592) + !Control.HasFocus(592)]</visible>
 	</include>
 
 	<include name="ProgramsListInfoItemLayout">
@@ -235,7 +407,7 @@
 				<height>36</height>	
 				<texture border="4">views/list-focus.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<visible>Control.HasFocus(590)</visible>
+				<include>ProgramsListInfoControlVisible</include>
 				<include>ListViewSelectFadeAnim</include>
 				<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewScrollAnim</include>
 			</control>
@@ -245,7 +417,7 @@
 				<height>36</height>	
 				<texture border="4">views/list-alt-focus.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<visible>!Control.HasFocus(590)</visible>
+				<include>ProgramsListInfoControlInvisible</include>
 				<include>ListViewSelectFadeAnim2</include>
 			</control>
 			<control type="group">
@@ -275,10 +447,10 @@
 		</focusedlayout>					
 	</include>
 
+	<!-- LIST INFO 1 -->
 	<include name="ProgramsListInfoTallStyleItemLayout">
 		<itemlayout height="74">
 			<control type="image">
-				<posx>0</posx>
 				<width>620</width>
 				<height>74</height>	
 				<texture border="0,0,10,2">views/list-separator.png</texture>
@@ -286,8 +458,6 @@
 			</control>
 			<control type="image">
 				<description>Cover</description>
-				<posx>0</posx>
-				<posy>0</posy>
 				<width>53</width>
 				<height>73</height>
 				<bordertexture border="7">covers/cover-case-nofocus.png</bordertexture>
@@ -297,8 +467,6 @@
 			</control>
 			<control type="image">
 				<description>Dim</description>
-				<posx>0</posx>
-				<posy>0</posy>
 				<width>53</width>
 				<height>73</height>
 				<bordersize>5</bordersize>
@@ -309,8 +477,6 @@
 			</control>
 			<control type="image">
 				<description>Default Cover</description>
-				<posx>0</posx>
-				<posy>0</posy>
 				<width>53</width>
 				<height>73</height>
 				<bordersize>5</bordersize>
@@ -347,14 +513,12 @@
 	<include name="ProgramsListInfoTallStyleFocusedLayout">
 		<focusedlayout height="74">	
 			<control type="image">
-				<posx>0</posx>
 				<width>620</width>
 				<height>74</height>	
 				<texture border="0,0,10,2">views/list-separator.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
 			<control type="image">
-				<posx>0</posx>
 				<width>620</width>
 				<height>73</height>
 				<texture border="4">views/list-focus.png</texture>
@@ -365,7 +529,6 @@
 				<include condition="!Skin.HasSetting(DisableListScrollAnim) + [Skin.String(ProgramsListInfoStyle,) | Skin.String(ProgramsListInfoStyle,3)]">ListViewScrollAnim</include>
 			</control>
 			<control type="image">
-				<posx>0</posx>
 				<width>620</width>
 				<height>73</height>
 				<texture border="4">views/list-alt-focus.png</texture>
@@ -375,8 +538,6 @@
 			</control>
 			<control type="image">
 				<description>Cover</description>
-				<posx>0</posx>
-				<posy>0</posy>
 				<width>53</width>
 				<height>73</height>
 				<bordertexture border="7">covers/cover-case-nofocus.png</bordertexture>
@@ -389,8 +550,6 @@
 				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
 				<control type="image">
 					<description>Default Cover</description>
-					<posx>0</posx>
-					<posy>0</posy>
 					<width>53</width>
 					<height>73</height>
 					<bordersize>5</bordersize>
@@ -424,288 +583,11 @@
 			</control>
 		</focusedlayout>					
 	</include>
-	<!--//// END LIST INFO VIEW ///////////////////////////////////////////////////////////////////////-->
 
-	<!--//// START LIST INFO 2 VIEW ///////////////////////////////////////////////////////////////////-->
-	<include name="ProgramsListInfoView2">	
-		<control type="group" id="500">	
-			<defaultcontrol always="true">591</defaultcontrol>
-			<visible>Control.IsVisible(591)</visible>
-			<include>MediaViewOpenCloseAnim</include>
-
-			<control type="image">
-				<posx>30</posx>
-				<posy>106</posy>
-				<width>1220</width>
-				<height>525</height>
-				<texture border="7">panels/content-panel.png</texture>
-				<include>PanelFadeAnim</include>
-			</control> 
-
-			<control type="group">
-				<visible>!IsEmpty(ListItem.Title)</visible>
-
-				<control type="group">
-					<description>Cover Area</description>
-					<posx>40</posx>
-					<posy>116</posy>
-
-					<control type="image">
-						<description>Media Info Background</description>
-						<width>554</width>
-						<height>373</height>
-						<texture border="4">panels/panel2.png</texture>
-						<animation effect="fade" end="20" condition="true">Conditional</animation>
-					</control>
-
-					<control type="image">
-						<description>Cover Background</description>
-						<width>554</width>
-						<height>310</height>
-						<texture border="4">covers/cover-case2.png</texture>
-						<bordersize>1</bordersize>
-						<animation effect="fade" end="50" condition="true">Conditional</animation>
-					</control>
-
-					<control type="largeimage">
-						<width>554</width>
-						<height>310</height>
-						<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
-						<bordersize>4</bordersize>
-						<aspectratio>scale</aspectratio>
-						<fadetime>FanartCrossfadeTime</fadetime>
-					</control>
-
-					<control type="image">
-						<posx>9</posx>
-						<posy>12</posy>
-						<width>5</width>
-						<height>16</height>
-						<texture>views/genre-marker.png</texture>
-						<visible>!IsEmpty(ListItem.Genre)</visible>
-					</control>
-
-					<control type="label">
-						<description>Genre</description>
-						<posx>16</posx>
-						<posy>18</posy>
-						<width>522</width>
-						<font>MediaInfoFont3</font>
-						<textcolor>MediaInfoTitleColor2</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
-						<aligny>center</aligny>
-						<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
-						<scroll>false</scroll>
-					</control>
-				</control>
-
-				<control type="group">
-					<description>Media Info Area</description>
-					<posx>42</posx>
-					<posy>434</posy>
-
-
-					<control type="grouplist">
-						<description>Year</description>
-						<posx>10</posx>
-						<posy>0</posy>
-						<orientation>horizontal</orientation>
-						<control type="label">
-							<width min="0" max="110">auto</width>
-							<font>MediaInfoFont</font>
-							<textcolor>MediaInfoItemColor</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<aligny>top</aligny>
-							<label>$LOCALIZE[345]:</label>
-						</control>
-						<control type="label">
-							<width min="0" max="350">auto</width>
-							<font>MediaInfoFont</font>
-							<textcolor>MediaInfoItemColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<aligny>top</aligny>
-							<label fallback="31001">$INFO[ListItem.Premiered]</label>
-						</control>
-					</control>
-
-					<control type="grouplist">
-						<description>Publisher</description>
-						<posx>10</posx>
-						<posy>22</posy>
-						<orientation>horizontal</orientation>
-						<control type="label">
-							<width min="0" max="110">auto</width>
-							<font>MediaInfoFont</font>
-							<textcolor>MediaInfoItemColor</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<aligny>top</aligny>
-							<label>$LOCALIZE[32027]:</label>
-						</control>
-						<control type="label">
-							<width min="0" max="350">auto</width>
-							<font>MediaInfoFont</font>
-							<textcolor>MediaInfoItemColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<aligny>top</aligny>
-							<label fallback="31001">$INFO[ListItem.Writer]</label>
-						</control>
-					</control>
-				</control>
-
-				<control type="textbox">
-					<description>Plot</description>
-					<posx>42</posx>
-					<posy>497</posy>
-					<width>550</width>
-					<height>122</height>
-					<font>MediaInfoDescFont</font>
-					<textcolor>MediaInfoColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<align>justify</align>
-					<label fallback="31203">$INFO[ListItem.Plot]</label>
-					<wrapmultiline>true</wrapmultiline>
-					<autoscroll time="2000" delay="6000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollProgramsListInfo2Plot)</autoscroll>
-					<visible>!Skin.HasSetting(HideProgramsListInfo2Plot) + !Container.OnNext + !Container.OnPrevious</visible>
-					<include>ControlsOpenCloseAnim</include>
-				</control>
-			</control>
-
-			<control type="list" id="591">	
-				<viewtype label="31112">List Info 2</viewtype>
-				<posx>605</posx>
-				<posy>110</posy>
-				<width>620</width>
-				<height>518</height>
-				<pagecontrol>906</pagecontrol>
-				<preloaditems>2</preloaditems>
-				<onup>591</onup>
-				<ondown>591</ondown>
-				<onleft>850</onleft>
-				<onright>150</onright>		
-				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
-				<include condition="Skin.String(ProgramsListInfo2Style,1) | Skin.String(ProgramsListInfo2Style,3)">ProgramsListInfo2ItemLayout</include>
-				<include condition="Skin.String(ProgramsListInfo2Style,) | Skin.String(ProgramsListInfo2Style,2)">ProgramsListInfo2TallStyleItemLayout</include>
-				<include condition="Skin.String(ProgramsListInfo2Style,1)">ProgramsListInfo2FocusedLayout</include>
-				<include condition="Skin.String(ProgramsListInfo2Style,) | Skin.String(ProgramsListInfo2Style,2) | Skin.String(ProgramsListInfo2Style,3)">ProgramsListInfo2TallStyleFocusedLayout</include>
-			</control>
-
-			<include>ListInfo2ViewScrollbar</include>
-
-			<control type="group">
-				<posy>SortLetterOffsetY</posy>
-				<include>SortLetterNotification</include>
-			</control>
-
-			<control type="button" id="188">
-				<onfocus>Skin.SetString(CurrentViewMode,591)</onfocus>
-				<include>ViewOptionsHelperBtn</include>
-				<visible>Control.IsVisible(591)</visible>
-			</control>
-
-			<control type="group">
-				<description>Bottom Bar Area</description>
-				<posy>BottomPaneOffsetY</posy>	
-				<!--<include>InfoPaneImage</include>-->
-				<include>InfoPaneMediaDetails</include>
-				<include>BottomPaneOpenCloseAnim</include>
-			</control>	
-
-			<include>ViewsDialogPopUpScreenDim</include>
-		</control>		
-	</include>
-
-	<include name="ProgramsListInfo2ItemLayout">
-		<itemlayout height="37">
-			<control type="image">
-				<posx>0</posx>
-				<width>620</width>
-				<height>37</height>	
-				<texture border="0,0,10,2">views/list-separator.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
-			<control type="image">
-				<description>Icon</description>
-				<posx>5</posx>
-				<posy>6</posy>
-				<width>23</width>
-				<height>23</height>
-				<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
-				<aspectratio>stretch</aspectratio>
-				<include>ListViewIconFadeAnim</include>
-			</control>		
-			<control type="label">
-				<description>Label</description>
-				<posx>35</posx>
-				<posy>16</posy>
-				<width>480</width>
-				<font>ListFont</font>
-				<textcolor>ListColor</textcolor>
-				<shadowcolor>ShadowColor</shadowcolor>
-				<aligny>center</aligny>				
-				<info>ListItem.Title</info>
-			</control>
-		</itemlayout>	
-	</include>
-
-	<include name="ProgramsListInfo2FocusedLayout">
-		<focusedlayout height="37">	
-			<control type="image">
-				<posx>0</posx>
-				<width>620</width>
-				<height>37</height>	
-				<texture border="0,0,10,2">views/list-separator.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
-			<control type="image">
-				<posx>0</posx>
-				<width>620</width>
-				<height>36</height>	
-				<texture border="4">views/list-focus.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<visible>Control.HasFocus(591)</visible>
-				<include>ListViewSelectFadeAnim</include>
-				<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewScrollAnim</include>
-			</control>
-			<control type="image">
-				<posx>0</posx>
-				<width>620</width>
-				<height>36</height>	
-				<texture border="4">views/list-alt-focus.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<visible>!Control.HasFocus(591)</visible>
-				<include>ListViewSelectFadeAnim2</include>
-			</control>
-			<control type="group">
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
-				<control type="image">
-					<description>Icon</description>
-					<posx>5</posx>
-					<posy>6</posy>
-					<width>23</width>
-					<height>23</height>
-					<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-				<control type="label">
-					<description>Label</description>
-					<posx>35</posx>
-					<posy>16</posy>
-					<width>480</width>
-					<font>ListFont</font>
-					<textcolor>SelectedColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<aligny>center</aligny>
-					<info>ListItem.Title</info>
-					<scroll>yes</scroll>
-				</control>	
-			</control>
-		</focusedlayout>					
-	</include>
-
+	<!-- LIST INFO 2 -->
 	<include name="ProgramsListInfo2TallStyleItemLayout">
 		<itemlayout height="74">
 			<control type="image">
-				<posx>0</posx>
 				<width>620</width>
 				<height>74</height>	
 				<texture border="0,0,10,2">views/list-separator.png</texture>
@@ -713,8 +595,6 @@
 			</control>
 			<control type="image">
 				<description>Cover</description>
-				<posx>0</posx>
-				<posy>0</posy>
 				<width>73</width>
 				<height>73</height>
 				<bordertexture border="7">covers/cover-case-nofocus.png</bordertexture>
@@ -724,8 +604,6 @@
 			</control>
 			<control type="image">
 				<description>Dim</description>
-				<posx>0</posx>
-				<posy>0</posy>
 				<width>73</width>
 				<height>73</height>
 				<bordersize>5</bordersize>
@@ -736,8 +614,6 @@
 			</control>
 			<control type="image">
 				<description>Default Cover</description>
-				<posx>0</posx>
-				<posy>0</posy>
 				<width>73</width>
 				<height>73</height>
 				<bordersize>5</bordersize>
@@ -774,14 +650,12 @@
 	<include name="ProgramsListInfo2TallStyleFocusedLayout">
 		<focusedlayout height="74">	
 			<control type="image">
-				<posx>0</posx>
 				<width>620</width>
 				<height>74</height>	
 				<texture border="0,0,10,2">views/list-separator.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
 			<control type="image">
-				<posx>0</posx>
 				<width>620</width>
 				<height>73</height>
 				<texture border="4">views/list-focus.png</texture>
@@ -792,7 +666,6 @@
 				<include condition="!Skin.HasSetting(DisableListScrollAnim) + [Skin.String(ProgramsListInfo2Style,) | Skin.String(ProgramsListInfo2Style,3)]">ListViewScrollAnim</include>
 			</control>
 			<control type="image">
-				<posx>0</posx>
 				<width>620</width>
 				<height>73</height>
 				<texture border="4">views/list-alt-focus.png</texture>
@@ -802,8 +675,6 @@
 			</control>
 			<control type="image">
 				<description>Cover</description>
-				<posx>0</posx>
-				<posy>0</posy>
 				<width>73</width>
 				<height>73</height>
 				<bordertexture border="7">covers/cover-case-nofocus.png</bordertexture>
@@ -816,8 +687,6 @@
 				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
 				<control type="image">
 					<description>Default Cover</description>
-					<posx>0</posx>
-					<posy>0</posy>
 					<width>73</width>
 					<height>73</height>
 					<bordersize>5</bordersize>
@@ -851,288 +720,11 @@
 			</control>
 		</focusedlayout>					
 	</include>
-	<!--//// END LIST INFO 2 VIEW /////////////////////////////////////////////////////////////////////-->
 
-	<!--//// START LIST INFO 3 VIEW ///////////////////////////////////////////////////////////////////-->
-	<include name="ProgramsListInfoView3">	
-		<control type="group" id="500">	
-			<defaultcontrol always="true">592</defaultcontrol>
-			<visible>Control.IsVisible(592)</visible>
-			<include>MediaViewOpenCloseAnim</include>
-
-			<control type="image">
-				<posx>30</posx>
-				<posy>106</posy>
-				<width>1220</width>
-				<height>525</height>
-				<texture border="7">panels/content-panel.png</texture>
-				<include>PanelFadeAnim</include>
-			</control> 
-
-			<control type="group">
-				<visible>!IsEmpty(ListItem.Title)</visible>
-
-				<control type="group">
-					<description>Cover Area</description>
-					<posx>40</posx>
-					<posy>116</posy>
-
-					<control type="image">
-						<description>Media Info Background</description>
-						<width>554</width>
-						<height>373</height>
-						<texture border="4">panels/panel2.png</texture>
-						<animation effect="fade" end="20" condition="true">Conditional</animation>
-					</control>
-
-					<control type="image">
-						<description>Cover Background</description>
-						<width>554</width>
-						<height>310</height>
-						<texture border="4">covers/cover-case2.png</texture>
-						<bordersize>1</bordersize>
-						<animation effect="fade" end="50" condition="true">Conditional</animation>
-					</control>
-
-					<control type="largeimage">
-						<width>554</width>
-						<height>310</height>
-						<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
-						<bordersize>4</bordersize>
-						<aspectratio>scale</aspectratio>
-						<fadetime>FanartCrossfadeTime</fadetime>
-					</control>
-
-					<control type="image">
-						<posx>9</posx>
-						<posy>12</posy>
-						<width>5</width>
-						<height>16</height>
-						<texture>views/genre-marker.png</texture>
-						<visible>!IsEmpty(ListItem.Genre)</visible>
-					</control>
-
-					<control type="label">
-						<description>Genre</description>
-						<posx>16</posx>
-						<posy>18</posy>
-						<width>522</width>
-						<font>MediaInfoFont3</font>
-						<textcolor>MediaInfoTitleColor2</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
-						<aligny>center</aligny>
-						<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
-						<scroll>false</scroll>
-					</control>
-				</control>
-
-				<control type="group">
-					<description>Media Info Area</description>
-					<posx>42</posx>
-					<posy>434</posy>
-
-
-					<control type="grouplist">
-						<description>Year</description>
-						<posx>10</posx>
-						<posy>0</posy>
-						<orientation>horizontal</orientation>
-						<control type="label">
-							<width min="0" max="110">auto</width>
-							<font>MediaInfoFont</font>
-							<textcolor>MediaInfoItemColor</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<aligny>top</aligny>
-							<label>$LOCALIZE[345]:</label>
-						</control>
-						<control type="label">
-							<width min="0" max="350">auto</width>
-							<font>MediaInfoFont</font>
-							<textcolor>MediaInfoItemColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<aligny>top</aligny>
-							<label fallback="31001">$INFO[ListItem.Premiered]</label>
-						</control>
-					</control>
-
-					<control type="grouplist">
-						<description>Publisher</description>
-						<posx>10</posx>
-						<posy>22</posy>
-						<orientation>horizontal</orientation>
-						<control type="label">
-							<width min="0" max="110">auto</width>
-							<font>MediaInfoFont</font>
-							<textcolor>MediaInfoItemColor</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<aligny>top</aligny>
-							<label>$LOCALIZE[32027]:</label>
-						</control>
-						<control type="label">
-							<width min="0" max="350">auto</width>
-							<font>MediaInfoFont</font>
-							<textcolor>MediaInfoItemColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<aligny>top</aligny>
-							<label fallback="31001">$INFO[ListItem.Writer]</label>
-						</control>
-					</control>
-				</control>
-
-				<control type="textbox">
-					<description>Plot</description>
-					<posx>42</posx>
-					<posy>497</posy>
-					<width>550</width>
-					<height>122</height>
-					<font>MediaInfoDescFont</font>
-					<textcolor>MediaInfoColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<align>justify</align>
-					<label fallback="31203">$INFO[ListItem.Plot]</label>
-					<wrapmultiline>true</wrapmultiline>
-					<autoscroll time="2000" delay="6000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollProgramsListInfo3Plot)</autoscroll>
-					<visible>!Skin.HasSetting(HideProgramsListInfo3Plot) + !Container.OnNext + !Container.OnPrevious</visible>
-					<include>ControlsOpenCloseAnim</include>
-				</control>
-			</control>
-
-			<control type="list" id="592">	
-				<viewtype label="31115">List Info 2</viewtype>
-				<posx>605</posx>
-				<posy>110</posy>
-				<width>620</width>
-				<height>518</height>
-				<pagecontrol>906</pagecontrol>
-				<preloaditems>2</preloaditems>
-				<onup>592</onup>
-				<ondown>592</ondown>
-				<onleft>850</onleft>
-				<onright>150</onright>		
-				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
-				<include condition="Skin.String(ProgramsListInfo3Style,1) | Skin.String(ProgramsListInfo3Style,3)">ProgramsListInfo3ItemLayout</include>
-				<include condition="Skin.String(ProgramsListInfo3Style,) | Skin.String(ProgramsListInfo3Style,2)">ProgramsListInfo3TallStyleItemLayout</include>
-				<include condition="Skin.String(ProgramsListInfo3Style,1)">ProgramsListInfo3FocusedLayout</include>
-				<include condition="Skin.String(ProgramsListInfo3Style,) | Skin.String(ProgramsListInfo3Style,2) | Skin.String(ProgramsListInfo3Style,3)">ProgramsListInfo3TallStyleFocusedLayout</include>
-			</control>
-
-			<include>ListInfo2ViewScrollbar</include>
-
-			<control type="group">
-				<posy>SortLetterOffsetY</posy>
-				<include>SortLetterNotification</include>
-			</control>
-
-			<control type="button" id="188">
-				<onfocus>Skin.SetString(CurrentViewMode,592)</onfocus>
-				<include>ViewOptionsHelperBtn</include>
-				<visible>Control.IsVisible(592)</visible>
-			</control>
-
-			<control type="group">
-				<description>Bottom Bar Area</description>
-				<posy>BottomPaneOffsetY</posy>	
-				<!--<include>InfoPaneImage</include>-->
-				<include>InfoPaneMediaDetails</include>
-				<include>BottomPaneOpenCloseAnim</include>
-			</control>	
-
-			<include>ViewsDialogPopUpScreenDim</include>
-		</control>		
-	</include>
-
-	<include name="ProgramsListInfo3ItemLayout">
-		<itemlayout height="37">
-			<control type="image">
-				<posx>0</posx>
-				<width>620</width>
-				<height>37</height>	
-				<texture border="0,0,10,2">views/list-separator.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
-			<control type="image">
-				<description>Icon</description>
-				<posx>5</posx>
-				<posy>6</posy>
-				<width>23</width>
-				<height>23</height>
-				<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
-				<aspectratio>stretch</aspectratio>
-				<include>ListViewIconFadeAnim</include>
-			</control>		
-			<control type="label">
-				<description>Label</description>
-				<posx>35</posx>
-				<posy>16</posy>
-				<width>480</width>
-				<font>ListFont</font>
-				<textcolor>ListColor</textcolor>
-				<shadowcolor>ShadowColor</shadowcolor>
-				<aligny>center</aligny>				
-				<info>ListItem.Title</info>
-			</control>
-		</itemlayout>	
-	</include>
-
-	<include name="ProgramsListInfo3FocusedLayout">
-		<focusedlayout height="37">	
-			<control type="image">
-				<posx>0</posx>
-				<width>620</width>
-				<height>37</height>	
-				<texture border="0,0,10,2">views/list-separator.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
-			<control type="image">
-				<posx>0</posx>
-				<width>620</width>
-				<height>36</height>	
-				<texture border="4">views/list-focus.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<visible>Control.HasFocus(592)</visible>
-				<include>ListViewSelectFadeAnim</include>
-				<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewScrollAnim</include>
-			</control>
-			<control type="image">
-				<posx>0</posx>
-				<width>620</width>
-				<height>36</height>	
-				<texture border="4">views/list-alt-focus.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<visible>!Control.HasFocus(592)</visible>
-				<include>ListViewSelectFadeAnim2</include>
-			</control>
-			<control type="group">
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
-				<control type="image">
-					<description>Icon</description>
-					<posx>5</posx>
-					<posy>6</posy>
-					<width>23</width>
-					<height>23</height>
-					<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-				<control type="label">
-					<description>Label</description>
-					<posx>35</posx>
-					<posy>16</posy>
-					<width>480</width>
-					<font>ListFont</font>
-					<textcolor>SelectedColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<aligny>center</aligny>
-					<info>ListItem.Title</info>
-					<scroll>yes</scroll>
-				</control>	
-			</control>
-		</focusedlayout>					
-	</include>
-
+	<!-- LIST INFO 3 -->
 	<include name="ProgramsListInfo3TallStyleItemLayout">
 		<itemlayout height="74">
 			<control type="image">
-				<posx>0</posx>
 				<width>620</width>
 				<height>74</height>	
 				<texture border="0,0,10,2">views/list-separator.png</texture>
@@ -1140,8 +732,6 @@
 			</control>
 			<control type="image">
 				<description>Cover</description>
-				<posx>0</posx>
-				<posy>0</posy>
 				<width>97</width>
 				<height>73</height>
 				<bordertexture border="7">covers/cover-case-nofocus.png</bordertexture>
@@ -1151,8 +741,6 @@
 			</control>
 			<control type="image">
 				<description>Dim</description>
-				<posx>0</posx>
-				<posy>0</posy>
 				<width>97</width>
 				<height>73</height>
 				<bordersize>5</bordersize>
@@ -1163,8 +751,6 @@
 			</control>
 			<control type="image">
 				<description>Default Cover</description>
-				<posx>0</posx>
-				<posy>0</posy>
 				<width>97</width>
 				<height>73</height>
 				<bordersize>5</bordersize>
@@ -1201,14 +787,12 @@
 	<include name="ProgramsListInfo3TallStyleFocusedLayout">
 		<focusedlayout height="74">	
 			<control type="image">
-				<posx>0</posx>
 				<width>620</width>
 				<height>74</height>	
 				<texture border="0,0,10,2">views/list-separator.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
 			<control type="image">
-				<posx>0</posx>
 				<width>620</width>
 				<height>73</height>
 				<texture border="4">views/list-focus.png</texture>
@@ -1219,7 +803,6 @@
 				<include condition="!Skin.HasSetting(DisableListScrollAnim) + [Skin.String(ProgramsListInfo3Style,) | Skin.String(ProgramsListInfo3Style,3)]">ListViewScrollAnim</include>
 			</control>
 			<control type="image">
-				<posx>0</posx>
 				<width>620</width>
 				<height>73</height>
 				<texture border="4">views/list-alt-focus.png</texture>
@@ -1229,8 +812,6 @@
 			</control>
 			<control type="image">
 				<description>Cover</description>
-				<posx>0</posx>
-				<posy>0</posy>
 				<width>97</width>
 				<height>73</height>
 				<bordertexture border="7">covers/cover-case-nofocus.png</bordertexture>
@@ -1243,8 +824,6 @@
 				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
 				<control type="image">
 					<description>Default Cover</description>
-					<posx>0</posx>
-					<posy>0</posy>
 					<width>97</width>
 					<height>73</height>
 					<bordersize>5</bordersize>
@@ -1278,7 +857,7 @@
 			</control>
 		</focusedlayout>					
 	</include>
-	<!--//// END LIST INFO 3 VIEW /////////////////////////////////////////////////////////////////////-->
+	<!--//// END LIST INFO VIEW  //////////////////////////////////////////////////////////////////////-->
 
 	<!--//// START THUMBS INFO VIEW ///////////////////////////////////////////////////////////////////-->		
 	<include name="ProgramsThumbsInfoView">	
@@ -1286,146 +865,7 @@
 			<defaultcontrol always="true">593</defaultcontrol>
 			<visible>Control.IsVisible(593)</visible>
 			<include>MediaViewOpenCloseAnim</include>
-
-			<control type="image">
-				<posx>30</posx>
-				<posy>106</posy>
-				<width>1220</width>
-				<height>525</height>
-				<texture border="7">panels/content-panel.png</texture>
-				<include>PanelFadeAnim</include>
-			</control> 
-
-			<control type="group">
-				<visible>!IsEmpty(ListItem.Title)</visible>
-
-				<control type="group">
-					<description>Fanart Area</description>
-					<posx>40</posx>
-					<posy>116</posy>
-
-					<control type="image">
-						<description>Media Info Background</description>
-						<width>400</width>
-						<height>286</height>
-						<texture border="4">panels/panel2.png</texture>
-						<animation effect="fade" end="20" condition="true">Conditional</animation>
-					</control>
-
-					<control type="image">
-						<description>Cover Background</description>
-						<width>400</width>
-						<height>225</height>
-						<texture border="4">covers/cover-case2.png</texture>
-						<bordersize>1</bordersize>
-						<animation effect="fade" end="50" condition="true">Conditional</animation>
-					</control>
-
-					<control type="largeimage">
-						<description>Fanart</description>
-						<width>400</width>
-						<height>225</height>
-						<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
-						<bordersize>4</bordersize>
-						<aspectratio>scale</aspectratio>
-						<fadetime>FanartCrossfadeTime</fadetime>
-					</control>
-
-					<control type="image">
-						<posx>9</posx>
-						<posy>12</posy>
-						<width>5</width>
-						<height>16</height>
-						<texture>views/genre-marker.png</texture>
-						<visible>!IsEmpty(ListItem.Genre)</visible>
-					</control>
-
-					<control type="label">
-						<description>Genre</description>
-						<posx>16</posx>
-						<posy>18</posy>
-						<width>368</width>
-						<font>MediaInfoFont3</font>
-						<textcolor>MediaInfoTitleColor2</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
-						<aligny>center</aligny>
-						<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
-						<scroll>false</scroll>
-					</control>
-				</control>
-
-				<control type="group">
-					<description>Media Info Area</description>
-					<posx>42</posx>
-					<posy>347</posy>
-
-
-					<control type="grouplist">
-						<description>Year</description>
-						<posx>10</posx>
-						<posy>0</posy>
-						<width>400</width>
-						<orientation>horizontal</orientation>
-						<control type="label">
-							<width min="0" max="110">auto</width>
-							<font>MediaInfoFont</font>
-							<textcolor>MediaInfoItemColor</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<aligny>top</aligny>
-							<label>$LOCALIZE[345]:</label>
-						</control>
-						<control type="label">
-							<width min="0" max="290">auto</width>
-							<font>MediaInfoFont</font>
-							<textcolor>MediaInfoItemColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<aligny>top</aligny>
-							<label fallback="31001">$INFO[ListItem.Premiered]</label>
-						</control>
-					</control>
-
-					<control type="grouplist">
-						<description>Publisher</description>
-						<posx>10</posx>
-						<posy>22</posy>
-						<width>400</width>
-						<orientation>horizontal</orientation>
-						<control type="label">
-							<width min="0" max="110">auto</width>
-							<font>MediaInfoFont</font>
-							<textcolor>MediaInfoItemColor</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<aligny>top</aligny>
-							<label>$LOCALIZE[32027]:</label>
-						</control>
-						<control type="label">
-							<width min="0" max="290">auto</width>
-							<font>MediaInfoFont</font>
-							<textcolor>MediaInfoItemColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<aligny>top</aligny>
-							<label fallback="31001">$INFO[ListItem.Writer]</label>
-						</control>
-					</control>
-				</control>
-
-				<control type="textbox">
-					<description>Plot</description>
-					<posx>42</posx>
-					<posy>410</posy>
-					<width>396</width>
-					<height>209</height>
-					<font>MediaInfoDescFont</font>
-					<textcolor>MediaInfoColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<align>justify</align>
-					<label fallback="31203">$INFO[ListItem.Plot]</label>
-					<wrapmultiline>true</wrapmultiline>
-					<autoscroll time="2000" delay="6000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollProgramsThumbsInfoPlot)</autoscroll>
-					<visible>!Skin.HasSetting(HideProgramsThumbsInfoPlot) + !Container.OnNext + !Container.OnPrevious</visible>
-					<include>ControlsOpenCloseAnim</include>
-				</control>
-			</control>
+			<include>ProgramsThumbsInfoViewCommon</include>
 
 			<control type="panel" id="593">
 				<viewtype label="31116">Thumbs Info</viewtype>
@@ -1433,7 +873,7 @@
 				<posy>111</posy>
 				<width>774</width>
 				<height>516</height>
-				<pagecontrol>918</pagecontrol>
+				<pagecontrol>923</pagecontrol>
 				<scrolltime>100</scrolltime>
 				<orientation>vertical</orientation>
 				<preloaditems>2</preloaditems>
@@ -1564,7 +1004,7 @@
 				</focusedlayout>
 			</control>
 
-			<include>ThumbsInfoViewScrollbar</include>
+			<include>ProgramsThumbsInfoViewScrollbar</include>
 
 			<control type="group">
 				<posy>SortLetterOffsetY</posy>
@@ -1602,154 +1042,13 @@
 			<include>ViewsDialogPopUpScreenDim</include>
 		</control>		
 	</include>
-	<!--//// END THUMBS INFO VIEW /////////////////////////////////////////////////////////////////////-->
 
-	<!--//// START THUMBS INFO 2 VIEW /////////////////////////////////////////////////////////////////-->	
 	<include name="ProgramsThumbsInfoView2">	
 		<control type="group" id="500">	
 			<defaultcontrol always="true">594</defaultcontrol>
 			<visible>Control.IsVisible(594)</visible>
 			<include>MediaViewOpenCloseAnim</include>
-
-			<control type="image">
-				<posx>30</posx>
-				<posy>106</posy>
-				<width>1220</width>
-				<height>525</height>
-				<texture border="7">panels/content-panel.png</texture>
-				<include>PanelFadeAnim</include>
-			</control> 
-
-			<control type="group">
-				<visible>!IsEmpty(ListItem.Title)</visible>
-
-				<control type="group">
-					<description>Fanart Area</description>
-					<posx>40</posx>
-					<posy>116</posy>
-
-					<control type="image">
-						<description>Media Info Background</description>
-						<width>400</width>
-						<height>286</height>
-						<texture border="4">panels/panel2.png</texture>
-						<animation effect="fade" end="20" condition="true">Conditional</animation>
-					</control>
-
-					<control type="image">
-						<description>Cover Background</description>
-						<width>400</width>
-						<height>225</height>
-						<texture border="4">covers/cover-case2.png</texture>
-						<bordersize>1</bordersize>
-						<animation effect="fade" end="50" condition="true">Conditional</animation>
-					</control>
-
-					<control type="largeimage">
-						<description>Fanart</description>
-						<width>400</width>
-						<height>225</height>
-						<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
-						<bordersize>4</bordersize>
-						<aspectratio>scale</aspectratio>
-						<fadetime>FanartCrossfadeTime</fadetime>
-					</control>
-
-					<control type="image">
-						<posx>9</posx>
-						<posy>12</posy>
-						<width>5</width>
-						<height>16</height>
-						<texture>views/genre-marker.png</texture>
-						<visible>!IsEmpty(ListItem.Genre)</visible>
-					</control>
-
-					<control type="label">
-						<description>Genre</description>
-						<posx>16</posx>
-						<posy>18</posy>
-						<width>368</width>
-						<font>MediaInfoFont3</font>
-						<textcolor>MediaInfoTitleColor2</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
-						<aligny>center</aligny>
-						<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
-						<scroll>false</scroll>
-					</control>
-				</control>
-
-				<control type="group">
-					<description>Media Info Area</description>
-					<posx>42</posx>
-					<posy>347</posy>
-
-
-					<control type="grouplist">
-						<description>Year</description>
-						<posx>10</posx>
-						<posy>0</posy>
-						<width>400</width>
-						<orientation>horizontal</orientation>
-						<control type="label">
-							<width min="0" max="110">auto</width>
-							<font>MediaInfoFont</font>
-							<textcolor>MediaInfoItemColor</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<aligny>top</aligny>
-							<label>$LOCALIZE[345]:</label>
-						</control>
-						<control type="label">
-							<width min="0" max="290">auto</width>
-							<font>MediaInfoFont</font>
-							<textcolor>MediaInfoItemColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<aligny>top</aligny>
-							<label fallback="31001">$INFO[ListItem.Premiered]</label>
-						</control>
-					</control>
-
-					<control type="grouplist">
-						<description>Publisher</description>
-						<posx>10</posx>
-						<posy>22</posy>
-						<width>400</width>
-						<orientation>horizontal</orientation>
-						<control type="label">
-							<width min="0" max="110">auto</width>
-							<font>MediaInfoFont</font>
-							<textcolor>MediaInfoItemColor</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<aligny>top</aligny>
-							<label>$LOCALIZE[32027]:</label>
-						</control>
-						<control type="label">
-							<width min="0" max="290">auto</width>
-							<font>MediaInfoFont</font>
-							<textcolor>MediaInfoItemColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<aligny>top</aligny>
-							<label fallback="31001">$INFO[ListItem.Writer]</label>
-						</control>
-					</control>
-				</control>
-
-				<control type="textbox">
-					<description>Plot</description>
-					<posx>42</posx>
-					<posy>410</posy>
-					<width>396</width>
-					<height>209</height>
-					<font>MediaInfoDescFont</font>
-					<textcolor>MediaInfoColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<align>justify</align>
-					<label fallback="31203">$INFO[ListItem.Plot]</label>
-					<wrapmultiline>true</wrapmultiline>
-					<autoscroll time="2000" delay="6000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollProgramsThumbsInfo2Plot)</autoscroll>
-					<visible>!Skin.HasSetting(HideProgramsThumbsInfo2Plot) + !Container.OnNext + !Container.OnPrevious</visible>
-					<include>ControlsOpenCloseAnim</include>
-				</control>
-			</control>
+			<include>ProgramsThumbsInfoViewCommon</include>
 
 			<control type="panel" id="594">
 				<viewtype label="31119">Thumbs Info</viewtype>
@@ -1757,7 +1056,7 @@
 				<posy>111</posy>
 				<width>774</width>
 				<height>516</height>
-				<pagecontrol>918</pagecontrol>
+				<pagecontrol>924</pagecontrol>
 				<scrolltime>100</scrolltime>
 				<orientation>vertical</orientation>
 				<preloaditems>2</preloaditems>
@@ -1888,7 +1187,7 @@
 				</focusedlayout>
 			</control>
 
-			<include>ThumbsInfoViewScrollbar</include>
+			<include>ProgramsThumbsInfo2ViewScrollbar</include>
 
 			<control type="group">
 				<posy>SortLetterOffsetY</posy>
@@ -1926,154 +1225,13 @@
 			<include>ViewsDialogPopUpScreenDim</include>
 		</control>		
 	</include>
-	<!--//// END THUMBS INFO 2 VIEW ///////////////////////////////////////////////////////////////////-->
 
-	<!--//// START THUMBS INFO 3 VIEW /////////////////////////////////////////////////////////////////-->	
 	<include name="ProgramsThumbsInfoView3">	
 		<control type="group" id="500">	
 			<defaultcontrol always="true">595</defaultcontrol>
 			<visible>Control.IsVisible(595)</visible>
 			<include>MediaViewOpenCloseAnim</include>
-
-			<control type="image">
-				<posx>30</posx>
-				<posy>106</posy>
-				<width>1220</width>
-				<height>525</height>
-				<texture border="7">panels/content-panel.png</texture>
-				<include>PanelFadeAnim</include>
-			</control> 
-
-			<control type="group">
-				<visible>!IsEmpty(ListItem.Title)</visible>
-
-				<control type="group">
-					<description>Fanart Area</description>
-					<posx>40</posx>
-					<posy>116</posy>
-
-					<control type="image">
-						<description>Media Info Background</description>
-						<width>400</width>
-						<height>286</height>
-						<texture border="4">panels/panel2.png</texture>
-						<animation effect="fade" end="20" condition="true">Conditional</animation>
-					</control>
-
-					<control type="image">
-						<description>Cover Background</description>
-						<width>400</width>
-						<height>225</height>
-						<texture border="4">covers/cover-case2.png</texture>
-						<bordersize>1</bordersize>
-						<animation effect="fade" end="50" condition="true">Conditional</animation>
-					</control>
-
-					<control type="largeimage">
-						<description>Fanart</description>
-						<width>400</width>
-						<height>225</height>
-						<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
-						<bordersize>4</bordersize>
-						<aspectratio>scale</aspectratio>
-						<fadetime>FanartCrossfadeTime</fadetime>
-					</control>
-
-					<control type="image">
-						<posx>9</posx>
-						<posy>12</posy>
-						<width>5</width>
-						<height>16</height>
-						<texture>views/genre-marker.png</texture>
-						<visible>!IsEmpty(ListItem.Genre)</visible>
-					</control>
-
-					<control type="label">
-						<description>Genre</description>
-						<posx>16</posx>
-						<posy>18</posy>
-						<width>368</width>
-						<font>MediaInfoFont3</font>
-						<textcolor>MediaInfoTitleColor2</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
-						<aligny>center</aligny>
-						<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
-						<scroll>false</scroll>
-					</control>
-				</control>
-
-				<control type="group">
-					<description>Media Info Area</description>
-					<posx>42</posx>
-					<posy>347</posy>
-
-
-					<control type="grouplist">
-						<description>Year</description>
-						<posx>10</posx>
-						<posy>0</posy>
-						<width>400</width>
-						<orientation>horizontal</orientation>
-						<control type="label">
-							<width min="0" max="110">auto</width>
-							<font>MediaInfoFont</font>
-							<textcolor>MediaInfoItemColor</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<aligny>top</aligny>
-							<label>$LOCALIZE[345]:</label>
-						</control>
-						<control type="label">
-							<width min="0" max="290">auto</width>
-							<font>MediaInfoFont</font>
-							<textcolor>MediaInfoItemColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<aligny>top</aligny>
-							<label fallback="31001">$INFO[ListItem.Premiered]</label>
-						</control>
-					</control>
-
-					<control type="grouplist">
-						<description>Publisher</description>
-						<posx>10</posx>
-						<posy>22</posy>
-						<width>400</width>
-						<orientation>horizontal</orientation>
-						<control type="label">
-							<width min="0" max="110">auto</width>
-							<font>MediaInfoFont</font>
-							<textcolor>MediaInfoItemColor</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<aligny>top</aligny>
-							<label>$LOCALIZE[32027]:</label>
-						</control>
-						<control type="label">
-							<width min="0" max="290">auto</width>
-							<font>MediaInfoFont</font>
-							<textcolor>MediaInfoItemColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<aligny>top</aligny>
-							<label fallback="31001">$INFO[ListItem.Writer]</label>
-						</control>
-					</control>
-				</control>
-
-				<control type="textbox">
-					<description>Plot</description>
-					<posx>42</posx>
-					<posy>410</posy>
-					<width>396</width>
-					<height>209</height>
-					<font>MediaInfoDescFont</font>
-					<textcolor>MediaInfoColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<align>justify</align>
-					<label fallback="31203">$INFO[ListItem.Plot]</label>
-					<wrapmultiline>true</wrapmultiline>
-					<autoscroll time="2000" delay="6000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollProgramsThumbsInfo3Plot)</autoscroll>
-					<visible>!Skin.HasSetting(HideProgramsThumbsInfo3Plot) + !Container.OnNext + !Container.OnPrevious</visible>
-					<include>ControlsOpenCloseAnim</include>
-				</control>
-			</control>
+			<include>ProgramsThumbsInfoViewCommon</include>
 
 			<control type="panel" id="595">
 				<viewtype label="31120">Thumbs Info</viewtype>
@@ -2081,7 +1239,7 @@
 				<posy>111</posy>
 				<width>775</width>
 				<height>516</height>
-				<pagecontrol>918</pagecontrol>
+				<pagecontrol>925</pagecontrol>
 				<scrolltime>100</scrolltime>
 				<orientation>vertical</orientation>
 				<preloaditems>2</preloaditems>
@@ -2213,7 +1371,7 @@
 
 			</control>
 
-			<include>ThumbsInfoViewScrollbar</include>
+			<include>ProgramsThumbsInfo3ViewScrollbar</include>
 
 			<control type="group">
 				<posy>SortLetterOffsetY</posy>
@@ -2251,7 +1409,199 @@
 			<include>ViewsDialogPopUpScreenDim</include>
 		</control>		
 	</include>
-	<!--//// END THUMBS INFO 3 VIEW ///////////////////////////////////////////////////////////////////-->
+
+	<!-- COMMON -->
+	<include name="ProgramsThumbsInfoViewCommon">
+		<control type="image">
+			<posx>30</posx>
+			<posy>106</posy>
+			<width>1220</width>
+			<height>525</height>
+			<texture border="7">panels/content-panel.png</texture>
+			<include>PanelFadeAnim</include>
+		</control> 
+
+		<control type="group">
+			<visible>!IsEmpty(ListItem.Title)</visible>
+
+			<control type="group">
+				<description>Fanart Area</description>
+				<posx>40</posx>
+				<posy>116</posy>
+
+				<control type="image">
+					<description>Programs Info Background</description>
+					<width>400</width>
+					<height>286</height>
+					<texture border="4">panels/panel2.png</texture>
+					<animation effect="fade" end="20" condition="true">Conditional</animation>
+				</control>
+
+				<control type="image">
+					<description>Cover Background</description>
+					<width>400</width>
+					<height>225</height>
+					<texture border="4">covers/cover-case2.png</texture>
+					<bordersize>1</bordersize>
+					<animation effect="fade" end="50" condition="true">Conditional</animation>
+				</control>
+
+				<control type="largeimage">
+					<description>Fanart</description>
+					<width>400</width>
+					<height>225</height>
+					<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<bordersize>4</bordersize>
+					<aspectratio>scale</aspectratio>
+					<fadetime>FanartCrossfadeTime</fadetime>
+				</control>
+
+				<control type="image">
+					<posx>9</posx>
+					<posy>12</posy>
+					<width>5</width>
+					<height>16</height>
+					<texture>views/genre-marker.png</texture>
+					<visible>!IsEmpty(ListItem.Genre)</visible>
+				</control>
+
+				<control type="label">
+					<description>Genre</description>
+					<posx>16</posx>
+					<posy>18</posy>
+					<width>368</width>
+					<font>MediaInfoFont3</font>
+					<textcolor>MediaInfoTitleColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<aligny>center</aligny>
+					<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+					<scroll>false</scroll>
+				</control>
+			</control>
+
+			<control type="group">
+				<description>Programs Info Area</description>
+				<posx>42</posx>
+				<posy>347</posy>
+
+				<control type="grouplist">
+					<description>Publisher</description>
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>400</width>
+					<orientation>horizontal</orientation>
+					<control type="label">
+						<width min="0" max="110">auto</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<aligny>top</aligny>
+						<label>$LOCALIZE[32028]:</label>
+					</control>
+					<control type="label">
+						<width min="0" max="190">auto</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<aligny>top</aligny>
+						<label fallback="31001">$INFO[ListItem.Studio]</label>
+					</control>
+				</control>
+
+				<control type="grouplist">
+					<description>Platform</description>
+					<posx>10</posx>
+					<posy>22</posy>
+					<width>400</width>
+					<orientation>horizontal</orientation>
+					<control type="label">
+						<width min="0" max="110">auto</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<aligny>top</aligny>
+						<label>$LOCALIZE[32027]:</label>
+					</control>
+					<control type="label">
+						<width min="0" max="140">auto</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<aligny>top</aligny>
+						<label fallback="31001">$INFO[ListItem.Writer]</label>
+					</control>
+				</control>
+
+				<control type="grouplist">
+					<description>Year</description>
+					<posx>256</posx>
+					<posy>0</posy>
+					<width>130</width>
+					<orientation>horizontal</orientation>
+					<align>right</align>
+					<control type="label">
+						<width min="0" max="110">auto</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<aligny>top</aligny>
+						<label>$LOCALIZE[345]:</label>
+					</control>
+					<control type="label">
+						<width min="0" max="110">auto</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<aligny>top</aligny>
+						<label fallback="31001">$INFO[ListItem.Premiered]</label>
+					</control>
+				</control>
+
+				<control type="grouplist">
+					<description>Rating</description>
+					<posx>256</posx>
+					<posy>22</posy>
+					<width>130</width>
+					<orientation>horizontal</orientation>
+					<align>right</align>
+					<control type="label">
+						<width min="0" max="110">auto</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<aligny>top</aligny>
+						<label>$LOCALIZE[563]:</label>
+					</control>
+					<control type="label">
+						<width min="0" max="110">auto</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<aligny>top</aligny>
+						<label fallback="31001">$INFO[ListItem.Rating]</label>
+					</control>
+				</control>
+			</control>
+
+			<control type="textbox">
+				<description>Plot</description>
+				<posx>42</posx>
+				<posy>410</posy>
+				<width>396</width>
+				<height>209</height>
+				<font>MediaInfoDescFont</font>
+				<textcolor>MediaInfoColor</textcolor>
+				<shadowcolor>ShadowColor</shadowcolor>
+				<align>justify</align>
+				<label fallback="31203">$INFO[ListItem.Plot]</label>
+				<wrapmultiline>true</wrapmultiline>
+				<autoscroll time="2000" delay="6000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollProgramsThumbsInfoPlot)</autoscroll>
+				<visible>!Skin.HasSetting(HideProgramsThumbsInfoPlot) + !Container.OnNext + !Container.OnPrevious</visible>
+				<include>ControlsOpenCloseAnim</include>
+			</control>
+		</control>
+	</include>
+	<!--//// END THUMBS INFO VIEW /////////////////////////////////////////////////////////////////////-->
 
 	<!--//// START WRAP LIST INFO VIEW ////////////////////////////////////////////////////////////////-->
 	<include name="ProgramsWrapListInfoView">
@@ -2289,6 +1639,76 @@
 		</control>
 	</include>
 
+	<include name="ProgramsWrapListInfoView2">
+		<control type="group" id="500">	
+			<defaultcontrol always="true">597</defaultcontrol>
+			<visible>Control.IsVisible(597)</visible>
+			<include>MediaViewOpenCloseAnim</include>
+
+			<control type="group" id="254">
+				<animation effect="slide" end="0,120" time="500" condition="Skin.HasSetting(EnableProgramsWrapListInfo2CompactMode)">Conditional</animation>
+				<include condition="Skin.String(ProgramsWrapListInfo2Style,1) | Skin.String(ProgramsWrapListInfo2Style,)">ProgramsWrapListInfo2Style1</include>
+				<include condition="Skin.String(ProgramsWrapListInfo2Style,2)">ProgramsWrapListInfo2Style2</include>	
+			</control>
+
+			<control type="group">
+				<posy>SortLetterOffsetY</posy>
+				<include>SortLetterNotification</include>
+			</control>
+
+			<control type="button" id="188">
+				<onfocus>Skin.SetString(CurrentViewMode,597)</onfocus>
+				<include>ViewOptionsHelperBtn</include>
+				<visible>Control.IsVisible(597)</visible>
+			</control>
+
+			<control type="group">
+				<description>Bottom Bar Area</description>
+				<posy>BottomPaneOffsetY</posy>	
+				<!--<include>InfoPaneImage</include>-->
+				<include>InfoPaneMediaDetails</include>
+				<include>BottomPaneOpenCloseAnim</include>
+			</control>
+
+			<include>ViewsDialogPopUpScreenDim</include>
+		</control>
+	</include>
+
+	<include name="ProgramsWrapListInfoView3">
+		<control type="group" id="500">	
+			<defaultcontrol always="true">598</defaultcontrol>
+			<visible>Control.IsVisible(598)</visible>
+			<include>MediaViewOpenCloseAnim</include>
+
+			<control type="group" id="254">
+				<animation effect="slide" end="0,120" time="500" condition="Skin.HasSetting(EnableProgramsWrapListInfo3CompactMode)">Conditional</animation>
+				<include>ProgramsWrapListInfo3Style1</include>
+			</control>
+
+			<control type="group">
+				<posy>SortLetterOffsetY</posy>
+				<include>SortLetterNotification</include>
+			</control>
+
+			<control type="button" id="188">
+				<onfocus>Skin.SetString(CurrentViewMode,598)</onfocus>
+				<include>ViewOptionsHelperBtn</include>
+				<visible>Control.IsVisible(598)</visible>
+			</control>
+
+			<control type="group">
+				<description>Bottom Bar Area</description>
+				<posy>BottomPaneOffsetY</posy>	
+				<!--<include>InfoPaneImage</include>-->
+				<include>InfoPaneMediaDetails</include>
+				<include>BottomPaneOpenCloseAnim</include>
+			</control>
+
+			<include>ViewsDialogPopUpScreenDim</include>
+		</control>
+	</include>
+
+	<!-- WRAP INFO 1 -->
 	<include name="ProgramsWrapListInfoStyle1">
 		<control type="image">
 			<description>Bottom Pane Background</description>
@@ -2321,7 +1741,6 @@
 		</control>
 
 		<control type="image">
-			<posx>0</posx>
 			<posy>225</posy>
 			<width>1280</width>
 			<height>157</height>	
@@ -2345,21 +1764,46 @@
 		</control>
 
 		<control type="image">
-			<posx>0</posx>
 			<posy>258</posy>
 			<width>1280</width>
 			<height>2</height>
 			<texture>panels/panel-separator.png</texture>
-		</control>	
+		</control>
 
 		<control type="grouplist">
-			<description>Media Info</description>
+			<description>Programs Info</description>
 			<posx>485</posx>
 			<posy>472</posy>
 			<width>765</width>
 			<orientation>horizontal</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
 			<visible>!IsEmpty(ListItem.Title)</visible>
+			<control type="label">
+				<description>Platform</description>
+				<width min="0" max="110">auto</width>
+				<include>WrapInfoViewCatLabel</include>
+				<label>$LOCALIZE[32027]:</label>
+			</control>
+			<control type="label">
+				<description>Platform Value</description>
+				<width min="0" max="200">auto</width>
+				<include>WrapInfoViewCatValueLabel</include>
+				<label fallback="31001">$INFO[ListItem.Writer]</label>
+			</control>
+			<include>WrapInfoViewDot</include>
+			<control type="label">
+				<description>Publisher</description>
+				<width min="0" max="110">auto</width>
+				<include>WrapInfoViewCatLabel</include>
+				<label>$LOCALIZE[32028]:</label>
+			</control>
+			<control type="label">
+				<description>Publisher Value</description>
+				<width min="0" max="200">auto</width>
+				<include>WrapInfoViewCatValueLabel</include>
+				<label fallback="31001">$INFO[ListItem.Studio]</label>
+			</control>
+			<include>WrapInfoViewDot</include>
 			<control type="label">
 				<description>Year</description>
 				<width min="0" max="110">auto</width>
@@ -2371,19 +1815,6 @@
 				<width min="0" max="110">auto</width>
 				<include>WrapInfoViewCatValueLabel</include>
 				<label fallback="31001">$INFO[ListItem.Premiered]</label>
-			</control>
-			<include>WrapInfoViewDot</include>
-			<control type="label">
-				<description>Publisher</description>
-				<width min="0" max="110">auto</width>
-				<include>WrapInfoViewCatLabel</include>
-				<label>$LOCALIZE[32027]:</label>
-			</control>
-			<control type="label">
-				<description>Publisher Value</description>
-				<width min="0" max="350">auto</width>
-				<include>WrapInfoViewCatValueLabel</include>
-				<label fallback="31001">$INFO[ListItem.Writer]</label>
 			</control>
 		</control>
 
@@ -2432,12 +1863,13 @@
 			<width>1353</width>
 			<height>330</height>
 			<focusposition>2</focusposition>
-			<pagecontrol>908</pagecontrol>
+			<pagecontrol>926</pagecontrol>
 			<scrolltime>300</scrolltime>
 			<orientation>horizontal</orientation>
 			<preloaditems>4</preloaditems>
 			<onup>850</onup>
-			<ondown>150</ondown>
+			<ondown condition="Control.IsVisible(926)">150</ondown>
+			<ondown condition="!Control.IsVisible(926)">ActivateWindow(1122)</ondown>
 			<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
 			<itemlayout width="145">
 				<control type="image">
@@ -2591,7 +2023,7 @@
 			</focusedlayout>                    
 		</control>
 
-		<include>WrapInfoViewScrollbar</include>
+		<include>ProgramsWrapInfoViewScrollbar</include>
 	</include>
 
 	<include name="ProgramsWrapListInfoStyle2">			
@@ -2658,13 +2090,39 @@
 		</control>
 
 		<control type="grouplist">
-			<description>Media Info</description>
+			<description>Programs Info</description>
 			<posx>485</posx>
 			<posy>472</posy>
 			<width>765</width>
 			<orientation>horizontal</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
 			<visible>!IsEmpty(ListItem.Title)</visible>
+			<control type="label">
+				<description>Platform</description>
+				<width min="0" max="110">auto</width>
+				<include>WrapInfoViewCatLabel</include>
+				<label>$LOCALIZE[32027]:</label>
+			</control>
+			<control type="label">
+				<description>Platform Value</description>
+				<width min="0" max="200">auto</width>
+				<include>WrapInfoViewCatValueLabel</include>
+				<label fallback="31001">$INFO[ListItem.Writer]</label>
+			</control>
+			<include>WrapInfoViewDot</include>
+			<control type="label">
+				<description>Publisher</description>
+				<width min="0" max="110">auto</width>
+				<include>WrapInfoViewCatLabel</include>
+				<label>$LOCALIZE[32028]:</label>
+			</control>
+			<control type="label">
+				<description>Publisher Value</description>
+				<width min="0" max="200">auto</width>
+				<include>WrapInfoViewCatValueLabel</include>
+				<label fallback="31001">$INFO[ListItem.Studio]</label>
+			</control>
+			<include>WrapInfoViewDot</include>
 			<control type="label">
 				<description>Year</description>
 				<width min="0" max="110">auto</width>
@@ -2676,19 +2134,6 @@
 				<width min="0" max="110">auto</width>
 				<include>WrapInfoViewCatValueLabel</include>
 				<label fallback="31001">$INFO[ListItem.Premiered]</label>
-			</control>
-			<include>WrapInfoViewDot</include>
-			<control type="label">
-				<description>Publisher</description>
-				<width min="0" max="110">auto</width>
-				<include>WrapInfoViewCatLabel</include>
-				<label>$LOCALIZE[32027]:</label>
-			</control>
-			<control type="label">
-				<description>Publisher Value</description>
-				<width min="0" max="350">auto</width>
-				<include>WrapInfoViewCatValueLabel</include>
-				<label fallback="31001">$INFO[ListItem.Writer]</label>
 			</control>
 		</control>
 
@@ -2737,12 +2182,13 @@
 			<width>1280</width>
 			<height>470</height>
 			<focusposition>1</focusposition>
-			<pagecontrol>908</pagecontrol>
+			<pagecontrol>926</pagecontrol>
 			<scrolltime>360</scrolltime>
 			<orientation>horizontal</orientation>
 			<preloaditems>4</preloaditems>
 			<onup>850</onup>
-			<ondown>150</ondown>
+			<ondown condition="Control.IsVisible(926)">150</ondown>
+			<ondown condition="!Control.IsVisible(926)">ActivateWindow(1122)</ondown>
 			<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
 			<itemlayout width="216">
 				<control type="image">
@@ -2897,46 +2343,10 @@
 			</focusedlayout>                    
 		</control>
 
-		<include>WrapInfoViewScrollbar</include>
-	</include>
-	<!--//// END WRAP LIST INFO VIEW //////////////////////////////////////////////////////////////////-->
-
-	<!--//// START WRAP LIST INFO 2 VIEW //////////////////////////////////////////////////////////////-->
-	<include name="ProgramsWrapListInfoView2">
-		<control type="group" id="500">	
-			<defaultcontrol always="true">597</defaultcontrol>
-			<visible>Control.IsVisible(597)</visible>
-			<include>MediaViewOpenCloseAnim</include>
-
-			<control type="group" id="254">
-				<animation effect="slide" end="0,120" time="500" condition="Skin.HasSetting(EnableProgramsWrapListInfo2CompactMode)">Conditional</animation>
-				<include condition="Skin.String(ProgramsWrapListInfo2Style,1) | Skin.String(ProgramsWrapListInfo2Style,)">ProgramsWrapListInfo2Style1</include>
-				<include condition="Skin.String(ProgramsWrapListInfo2Style,2)">ProgramsWrapListInfo2Style2</include>	
-			</control>
-
-			<control type="group">
-				<posy>SortLetterOffsetY</posy>
-				<include>SortLetterNotification</include>
-			</control>
-
-			<control type="button" id="188">
-				<onfocus>Skin.SetString(CurrentViewMode,597)</onfocus>
-				<include>ViewOptionsHelperBtn</include>
-				<visible>Control.IsVisible(597)</visible>
-			</control>
-
-			<control type="group">
-				<description>Bottom Bar Area</description>
-				<posy>BottomPaneOffsetY</posy>	
-				<!--<include>InfoPaneImage</include>-->
-				<include>InfoPaneMediaDetails</include>
-				<include>BottomPaneOpenCloseAnim</include>
-			</control>
-
-			<include>ViewsDialogPopUpScreenDim</include>
-		</control>
+		<include>ProgramsWrapInfoViewScrollbar</include>
 	</include>
 
+	<!-- WRAP INFO 2 -->
 	<include name="ProgramsWrapListInfo2Style1">
 		<control type="image">
 			<description>Bottom Pane Background</description>
@@ -2944,24 +2354,24 @@
 			<width>ScreenWidth</width>
 			<height>347</height>
 			<texture border="0,6,0,0">gui/bottom-info-background.png</texture>
-		</control>	
+		</control>
 
 		<control type="image">
 			<description>Background Glow</description>
 			<posx>492</posx>
 			<posy>382</posy>
 			<width>755</width>
-			<height>345</height>
+			<height>307</height>
 			<texture flipy="true">gui/background-glow.png</texture>
 			<animation effect="fade" end="20" condition="true">Conditional</animation>
-		</control> 
+		</control>
 
 		<control type="image">
 			<description>Cover Glow</description>
 			<posx>65</posx>
 			<posy>382</posy>
 			<width>600</width>
-			<height>345</height>
+			<height>307</height>
 			<texture>views/cover-glow.png</texture>
 			<aspectratio aligny="bottom">center</aspectratio>
 			<visible>!Container.OnNext + !Container.OnPrevious</visible>
@@ -2969,10 +2379,9 @@
 		</control>
 
 		<control type="image">
-			<posx>0</posx>
 			<posy>225</posy>
 			<width>1280</width>
-			<height>157</height>	
+			<height>126</height>	
 			<texture border="0,0,0,2">views/wrap-list-header.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
@@ -2993,21 +2402,46 @@
 		</control>
 
 		<control type="image">
-			<posx>0</posx>
 			<posy>258</posy>
 			<width>1280</width>
 			<height>2</height>
 			<texture>panels/panel-separator.png</texture>
-		</control>	
+		</control>
 
 		<control type="grouplist">
-			<description>Media Info</description>
+			<description>Programs Info</description>
 			<posx>485</posx>
-			<posy>422</posy>
+			<posy>434</posy>
 			<width>765</width>
 			<orientation>horizontal</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
 			<visible>!IsEmpty(ListItem.Title)</visible>
+			<control type="label">
+				<description>Platform</description>
+				<width min="0" max="110">auto</width>
+				<include>WrapInfoViewCatLabel</include>
+				<label>$LOCALIZE[32027]:</label>
+			</control>
+			<control type="label">
+				<description>Platform Value</description>
+				<width min="0" max="200">auto</width>
+				<include>WrapInfoViewCatValueLabel</include>
+				<label fallback="31001">$INFO[ListItem.Writer]</label>
+			</control>
+			<include>WrapInfoViewDot</include>
+			<control type="label">
+				<description>Publisher</description>
+				<width min="0" max="110">auto</width>
+				<include>WrapInfoViewCatLabel</include>
+				<label>$LOCALIZE[32028]:</label>
+			</control>
+			<control type="label">
+				<description>Publisher Value</description>
+				<width min="0" max="200">auto</width>
+				<include>WrapInfoViewCatValueLabel</include>
+				<label fallback="31001">$INFO[ListItem.Studio]</label>
+			</control>
+			<include>WrapInfoViewDot</include>
 			<control type="label">
 				<description>Year</description>
 				<width min="0" max="110">auto</width>
@@ -3020,19 +2454,6 @@
 				<include>WrapInfoViewCatValueLabel</include>
 				<label fallback="31001">$INFO[ListItem.Premiered]</label>
 			</control>
-			<include>WrapInfoViewDot</include>
-			<control type="label">
-				<description>Publisher</description>
-				<width min="0" max="110">auto</width>
-				<include>WrapInfoViewCatLabel</include>
-				<label>$LOCALIZE[32027]:</label>
-			</control>
-			<control type="label">
-				<description>Publisher Value</description>
-				<width min="0" max="350">auto</width>
-				<include>WrapInfoViewCatValueLabel</include>
-				<label fallback="31001">$INFO[ListItem.Writer]</label>
-			</control>
 		</control>
 
 		<control type="group">
@@ -3041,7 +2462,7 @@
 			<control type="textbox">
 				<description>Plot</description>
 				<posx>485</posx>
-				<posy>455</posy>
+				<posy>467</posy>
 				<width>765</width>
 				<height>125</height>
 				<font>MediaInfoDescFont</font>
@@ -3057,7 +2478,7 @@
 
 			<control type="group">
 				<posx>263</posx>
-				<posy>470</posy>
+				<posy>462</posy>
 
 				<control type="label">
 					<description>Genre</description>
@@ -3080,12 +2501,13 @@
 			<width>1353</width>
 			<height>330</height>
 			<focusposition>2</focusposition>
-			<pagecontrol>908</pagecontrol>
+			<pagecontrol>927</pagecontrol>
 			<scrolltime>300</scrolltime>
 			<orientation>horizontal</orientation>
 			<preloaditems>4</preloaditems>
 			<onup>850</onup>
-			<ondown>150</ondown>
+			<ondown condition="Control.IsVisible(927)">150</ondown>
+			<ondown condition="!Control.IsVisible(927)">ActivateWindow(1122)</ondown>
 			<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
 			<itemlayout width="145">
 				<control type="image">
@@ -3239,10 +2661,10 @@
 			</focusedlayout>                    
 		</control>
 
-		<include>WrapInfo2ViewScrollbar</include>
+		<include>ProgramsWrapInfo2ViewScrollbar</include>
 	</include>
 
-	<include name="ProgramsWrapListInfo2Style2">			
+	<include name="ProgramsWrapListInfo2Style2">	
 		<control type="image">
 			<description>Bottom Pane Background</description>
 			<posy>345</posy>
@@ -3256,7 +2678,7 @@
 			<posx>492</posx>
 			<posy>349</posy>
 			<width>755</width>
-			<height>415</height>
+			<height>353</height>
 			<texture flipy="true">gui/background-glow.png</texture>
 			<animation effect="fade" end="20" condition="true">Conditional</animation>
 		</control> 
@@ -3264,9 +2686,9 @@
 		<control type="image">
 			<description>Cover Glow</description>
 			<posx>-48</posx>
-			<posy>334</posy>
+			<posy>333</posy>
 			<width>744</width>
-			<height>415</height>
+			<height>353</height>
 			<texture>views/cover-glow.png</texture>
 			<aspectratio aligny="bottom">center</aspectratio>
 			<visible>!Container.OnNext + !Container.OnPrevious</visible>
@@ -3277,7 +2699,7 @@
 			<posx>0</posx>
 			<posy>137</posy>
 			<width>1280</width>
-			<height>212</height>	
+			<height>167</height>	
 			<texture border="0,0,0,2">views/wrap-list-header.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
@@ -3306,13 +2728,39 @@
 		</control>
 
 		<control type="grouplist">
-			<description>Media Info</description>
+			<description>Programs Info</description>
 			<posx>485</posx>
 			<posy>422</posy>
 			<width>765</width>
 			<orientation>horizontal</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
 			<visible>!IsEmpty(ListItem.Title)</visible>
+			<control type="label">
+				<description>Platform</description>
+				<width min="0" max="110">auto</width>
+				<include>WrapInfoViewCatLabel</include>
+				<label>$LOCALIZE[32027]:</label>
+			</control>
+			<control type="label">
+				<description>Platform Value</description>
+				<width min="0" max="200">auto</width>
+				<include>WrapInfoViewCatValueLabel</include>
+				<label fallback="31001">$INFO[ListItem.Writer]</label>
+			</control>
+			<include>WrapInfoViewDot</include>
+			<control type="label">
+				<description>Publisher</description>
+				<width min="0" max="110">auto</width>
+				<include>WrapInfoViewCatLabel</include>
+				<label>$LOCALIZE[32028]:</label>
+			</control>
+			<control type="label">
+				<description>Publisher Value</description>
+				<width min="0" max="200">auto</width>
+				<include>WrapInfoViewCatValueLabel</include>
+				<label fallback="31001">$INFO[ListItem.Studio]</label>
+			</control>
+			<include>WrapInfoViewDot</include>
 			<control type="label">
 				<description>Year</description>
 				<width min="0" max="110">auto</width>
@@ -3324,19 +2772,6 @@
 				<width min="0" max="110">auto</width>
 				<include>WrapInfoViewCatValueLabel</include>
 				<label fallback="31001">$INFO[ListItem.Premiered]</label>
-			</control>
-			<include>WrapInfoViewDot</include>
-			<control type="label">
-				<description>Publisher</description>
-				<width min="0" max="110">auto</width>
-				<include>WrapInfoViewCatLabel</include>
-				<label>$LOCALIZE[32027]:</label>
-			</control>
-			<control type="label">
-				<description>Publisher Value</description>
-				<width min="0" max="350">auto</width>
-				<include>WrapInfoViewCatValueLabel</include>
-				<label fallback="31001">$INFO[ListItem.Writer]</label>
 			</control>
 		</control>
 
@@ -3362,7 +2797,7 @@
 
 			<control type="group">
 				<posx>190</posx>
-				<posy>470</posy>
+				<posy>450</posy>
 
 				<control type="label">
 					<description>Genre</description>
@@ -3374,7 +2809,7 @@
 					<shadowcolor>ShadowColor</shadowcolor>
 					<align>center</align>
 					<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
-				</control>					
+				</control>
 			</control>
 		</control>
 
@@ -3385,12 +2820,13 @@
 			<width>1280</width>
 			<height>470</height>
 			<focusposition>1</focusposition>
-			<pagecontrol>908</pagecontrol>
+			<pagecontrol>927</pagecontrol>
 			<scrolltime>360</scrolltime>
 			<orientation>horizontal</orientation>
 			<preloaditems>4</preloaditems>
 			<onup>850</onup>
-			<ondown>150</ondown>
+			<ondown condition="Control.IsVisible(927)">150</ondown>
+			<ondown condition="!Control.IsVisible(927)">ActivateWindow(1122)</ondown>
 			<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
 			<itemlayout width="216">
 				<control type="image">
@@ -3545,45 +2981,10 @@
 			</focusedlayout>                    
 		</control>
 
-		<include>WrapInfo2ViewScrollbar</include>
-	</include>
-	<!--//// END WRAP LIST INFO 2 VIEW ////////////////////////////////////////////////////////////////-->
-
-	<!--//// START WRAP LIST INFO 3 VIEW //////////////////////////////////////////////////////////////-->
-	<include name="ProgramsWrapListInfoView3">
-		<control type="group" id="500">	
-			<defaultcontrol always="true">598</defaultcontrol>
-			<visible>Control.IsVisible(598)</visible>
-			<include>MediaViewOpenCloseAnim</include>
-
-			<control type="group" id="254">
-				<animation effect="slide" end="0,120" time="500" condition="Skin.HasSetting(EnableProgramsWrapListInfo3CompactMode)">Conditional</animation>
-				<include>ProgramsWrapListInfo3Style1</include>	
-			</control>
-
-			<control type="group">
-				<posy>SortLetterOffsetY</posy>
-				<include>SortLetterNotification</include>
-			</control>
-
-			<control type="button" id="188">
-				<onfocus>Skin.SetString(CurrentViewMode,598)</onfocus>
-				<include>ViewOptionsHelperBtn</include>
-				<visible>Control.IsVisible(598)</visible>
-			</control>
-
-			<control type="group">
-				<description>Bottom Bar Area</description>
-				<posy>BottomPaneOffsetY</posy>	
-				<!--<include>InfoPaneImage</include>-->
-				<include>InfoPaneMediaDetails</include>
-				<include>BottomPaneOpenCloseAnim</include>
-			</control>
-
-			<include>ViewsDialogPopUpScreenDim</include>
-		</control>
+		<include>ProgramsWrapInfo2ViewScrollbar</include>
 	</include>
 
+	<!-- WRAP INFO 3 -->
 	<include name="ProgramsWrapListInfo3Style1">
 		<control type="image">
 			<description>Bottom Pane Background</description>
@@ -3591,24 +2992,23 @@
 			<width>ScreenWidth</width>
 			<height>347</height>
 			<texture border="0,6,0,0">gui/bottom-info-background.png</texture>
-		</control>	
+		</control>
 
 		<control type="image">
 			<description>Background Glow</description>
 			<posx>492</posx>
 			<posy>382</posy>
 			<width>755</width>
-			<height>345</height>
+			<height>307</height>
 			<texture flipy="true">gui/background-glow.png</texture>
 			<animation effect="fade" end="20" condition="true">Conditional</animation>
-		</control> 
+		</control>
 
 		<control type="image">
 			<description>Cover Glow</description>
-			<posx>65</posx>
 			<posy>382</posy>
-			<width>600</width>
-			<height>345</height>
+			<width>660</width>
+			<height>307</height>
 			<texture>views/cover-glow.png</texture>
 			<aspectratio aligny="bottom">center</aspectratio>
 			<visible>!Container.OnNext + !Container.OnPrevious</visible>
@@ -3616,10 +3016,9 @@
 		</control>
 
 		<control type="image">
-			<posx>0</posx>
 			<posy>225</posy>
 			<width>1280</width>
-			<height>157</height>	
+			<height>126</height>	
 			<texture border="0,0,0,2">views/wrap-list-header.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
@@ -3640,21 +3039,46 @@
 		</control>
 
 		<control type="image">
-			<posx>0</posx>
 			<posy>258</posy>
 			<width>1280</width>
 			<height>2</height>
 			<texture>panels/panel-separator.png</texture>
-		</control>	
+		</control>
 
 		<control type="grouplist">
-			<description>Media Info</description>
+			<description>Programs Info</description>
 			<posx>485</posx>
 			<posy>434</posy>
 			<width>765</width>
 			<orientation>horizontal</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
 			<visible>!IsEmpty(ListItem.Title)</visible>
+			<control type="label">
+				<description>Platform</description>
+				<width min="0" max="110">auto</width>
+				<include>WrapInfoViewCatLabel</include>
+				<label>$LOCALIZE[32027]:</label>
+			</control>
+			<control type="label">
+				<description>Platform Value</description>
+				<width min="0" max="200">auto</width>
+				<include>WrapInfoViewCatValueLabel</include>
+				<label fallback="31001">$INFO[ListItem.Writer]</label>
+			</control>
+			<include>WrapInfoViewDot</include>
+			<control type="label">
+				<description>Publisher</description>
+				<width min="0" max="110">auto</width>
+				<include>WrapInfoViewCatLabel</include>
+				<label>$LOCALIZE[32028]:</label>
+			</control>
+			<control type="label">
+				<description>Publisher Value</description>
+				<width min="0" max="200">auto</width>
+				<include>WrapInfoViewCatValueLabel</include>
+				<label fallback="31001">$INFO[ListItem.Studio]</label>
+			</control>
+			<include>WrapInfoViewDot</include>
 			<control type="label">
 				<description>Year</description>
 				<width min="0" max="110">auto</width>
@@ -3666,19 +3090,6 @@
 				<width min="0" max="110">auto</width>
 				<include>WrapInfoViewCatValueLabel</include>
 				<label fallback="31001">$INFO[ListItem.Premiered]</label>
-			</control>
-			<include>WrapInfoViewDot</include>
-			<control type="label">
-				<description>Publisher</description>
-				<width min="0" max="110">auto</width>
-				<include>WrapInfoViewCatLabel</include>
-				<label>$LOCALIZE[32027]:</label>
-			</control>
-			<control type="label">
-				<description>Publisher Value</description>
-				<width min="0" max="350">auto</width>
-				<include>WrapInfoViewCatValueLabel</include>
-				<label fallback="31001">$INFO[ListItem.Writer]</label>
 			</control>
 		</control>
 
@@ -3703,14 +3114,14 @@
 			</control>
 
 			<control type="group">
-				<posx>263</posx>
-				<posy>482</posy>
+				<posx>192</posx>
+				<posy>462</posy>
 
 				<control type="label">
 					<description>Genre</description>
 					<posx>0</posx>
 					<posy>10</posy>
-					<width>204</width>
+					<width>275</width>
 					<font>MediaInfoFont2</font>
 					<textcolor>MediaInfoTitleColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
@@ -3727,12 +3138,13 @@
 			<width>1280</width>
 			<height>470</height>
 			<focusposition>1</focusposition>
-			<pagecontrol>908</pagecontrol>
+			<pagecontrol>928</pagecontrol>
 			<scrolltime>360</scrolltime>
 			<orientation>horizontal</orientation>
 			<preloaditems>4</preloaditems>
 			<onup>850</onup>
-			<ondown>150</ondown>
+			<ondown condition="Control.IsVisible(928)">150</ondown>
+			<ondown condition="!Control.IsVisible(928)">ActivateWindow(1122)</ondown>
 			<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
 			<itemlayout width="216">
 				<control type="image">
@@ -3887,7 +3299,7 @@
 			</focusedlayout>                    
 		</control>
 
-		<include>WrapInfo3ViewScrollbar</include>
+		<include>ProgramsWrapInfo3ViewScrollbar</include>
 	</include>
-	<!--//// END WRAP LIST INFO 3 VIEW ////////////////////////////////////////////////////////////////-->
+	<!--//// END WRAP LIST INFO VIEW //////////////////////////////////////////////////////////////////-->
 </includes>
