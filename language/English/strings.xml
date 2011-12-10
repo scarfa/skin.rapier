@@ -48,6 +48,7 @@
 <string id="32025">Reset Skin</string>
 <string id="32026">All skin settings will revert to default settings. Press to confirm.</string>
 <string id="32027">Publisher</string>
+<string id="32028">Get Artwork</string>
 
 <!-- view types -->
 <string id="31103">Icon</string>
@@ -120,10 +121,12 @@
 <string id="31050">Star Rating</string>
 <string id="31401">Scroll Plot</string>
 <string id="31402">Scroll Description</string>
-<string id="31404">Poster Covers</string>
+<string id="31404">Poster Layout</string>
 <string id="31014">Extra Thumbs</string>
 <string id="31015">Extra Fanart</string>
-<string id="31016">TV Logos</string>
+<string id="31016">Use Local Logo</string>
+<string id="31017">Use Local Poster</string>
+<string id="31019">Use Local Banner</string>
 <string id="31407">Use Visualization For Background</string>
 <string id="31408">Use Artist Fanart For Background</string>
 <string id="31409">Enable Music Visualization / Artist Fanart In The Background</string>
@@ -160,7 +163,14 @@
 <!-- skin settings add-ons -->
 <string id="31500">Show Subtitles Button On OSD</string>
 <string id="31501">Show Lyrics Button On OSD</string>
-<string id="31502">Run Logo Downloader</string>
+<string id="31502">Artwork Downloader</string>
+<string id="31503">Poster</string>
+<string id="31504">Banner</string>
+<string id="31507">Clear Art</string>
+<string id="31508">Clear Logo</string>
+<string id="31509">TV Thumb</string>
+<string id="31510">Character Art</string>
+<string id="31511">Default Thumb</string>
 
 <!--temporary strings until PVR related strings are present in xbmc main branch-->
 <string id="31900">TV</string>

@@ -100,11 +100,11 @@
 	</include>
 
 	<include name="MenuBarSettingsBtn">	
-		<width>157</width>
+		<width>156</width>
 		<height>MenuBarHeight</height>	
 		<font>MenuBarBtnFont</font>	
 		<focusedcolor>ButtonFocusColor</focusedcolor>
-		<textwidth>143</textwidth>
+		<textwidth>142</textwidth>
 		<aligny>top</aligny>
 		<textoffsety>9</textoffsety>
 		<texturefocus border="4">gui/menu-bar-button-focus.png</texturefocus>
@@ -1188,16 +1188,17 @@
 				<include>MenuBarSeparator</include>
 			</control>
 			<control type="button" id="14">
-				<description>Get Logo</description>
+				<description>Get Artwork</description>
 				<include>MenuBarSettingsBtn</include>
-				<label>[UPPERCASE]$LOCALIZE[31302][/UPPERCASE]</label>
-				<onclick>XBMC.RunScript(script.logo-downloader,mode=solo,logo=True,showname=$INFO[ListItem.TVShowTitle])</onclick>
-				<visible>Container.Content(TVShows)</visible>
-				<enable>!Skin.HasSetting(EnableKioskMode) + System.HasAddon(script.logo-downloader)</enable>
+				<label>[UPPERCASE]$LOCALIZE[32028][/UPPERCASE]</label>
+				<onclick condition="Container.Content(Movies)">XBMC.RunScript(script.artwork.downloader,mode=gui,mediatype=movie,medianame=$INFO[ListItem.Title])</onclick>
+				<onclick condition="Container.Content(TVShows)">XBMC.RunScript(script.artwork.downloader,mode=gui,mediatype=tvshow,medianame=$INFO[ListItem.TVShowTitle])</onclick>
+				<visible>Container.Content(Movies) | Container.Content(TVShows)</visible>
+				<enable>!Skin.HasSetting(EnableKioskMode) + System.HasAddon(script.artwork.downloader)</enable>
 			</control>
 			<control type="image" id="123">
 				<include>MenuBarSeparator</include>
-				<visible>Container.Content(TVShows)</visible>
+				<visible>Container.Content(Movies) | Container.Content(TVShows)</visible>
 			</control>
 			<control type="button" id="11">
 				<description>Play Trailer</description>

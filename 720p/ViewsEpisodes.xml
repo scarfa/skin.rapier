@@ -43,7 +43,7 @@
 						<width>220</width>
 						<height>128</height>
 						<bordersize>10</bordersize>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Title)</visible>
 						<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -88,7 +88,7 @@
 							<width>220</width>
 							<height>128</height>
 							<bordersize>10</bordersize>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<aspectratio>keep</aspectratio>
 							<visible>IsEmpty(ListItem.Thumb)</visible>
 							<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -218,7 +218,7 @@
 						<width>220</width>
 						<height>128</height>
 						<bordersize>10</bordersize>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Title)</visible>
 						<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
@@ -253,7 +253,7 @@
 							<width>220</width>
 							<height>128</height>
 							<bordersize>10</bordersize>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<aspectratio>keep</aspectratio>
 							<visible>IsEmpty(ListItem.Thumb)</visible>
 							<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
@@ -417,7 +417,7 @@
 					<posy>373</posy>
 					<width>335</width>
 					<height>207</height>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 					<bordersize>40</bordersize>	
 					<aspectratio>keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
@@ -1143,7 +1143,7 @@
 				<width>97</width>
 				<height>73</height>
 				<bordersize>5</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -1256,7 +1256,7 @@
 				<width>97</width>
 				<height>73</height>
 				<bordersize>5</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>

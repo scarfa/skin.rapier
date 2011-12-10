@@ -12,40 +12,6 @@
 			<posy>182</posy>
 			
 			<control type="image">
-				<description>Movies / TV Shows Poster Cover Image</description>
-				<width>300</width>
-				<height>415</height>
-				<info>ListItem.Thumb</info>
-				<bordertexture border="4">covers/cover-case2.png</bordertexture>
-				<bordersize>4</bordersize>
-				<aspectratio>stretch</aspectratio>
-				<visible>Container.Content(Movies) | [Container.Content(TVShows) + Skin.HasSetting(UseTVShowsPosterCover)]</visible>
-			</control>
-			
-			<control type="image">
-				<description>Music Videos / Episodes Cover Image</description>
-				<width>300</width>
-				<height>300</height>
-				<info>ListItem.Thumb</info>
-				<bordertexture border="4">covers/cover-case2.png</bordertexture>
-				<bordersize>4</bordersize>
-				<aspectratio align="center" aligny="top">keep</aspectratio>
-				<visible>Container.Content(MusicVideos) | Container.Content(Episodes)</visible>
-			</control>
-			
-			<control type="image">
-				<description>TV Shows Cover Image</description>
-				<posy>-10</posy>
-				<width>980</width>
-				<height>181</height>
-				<info>ListItem.Thumb</info>
-				<bordertexture border="4">covers/cover-case2.png</bordertexture>
-				<bordersize>4</bordersize>
-				<aspectratio>stretch</aspectratio>
-				<visible>Container.Content(TVShows) + !Skin.HasSetting(UseTVShowsPosterCover)</visible>
-			</control>
-			
-			<control type="image">
 				<description>Movies / Music Videos / Episodes Default Cover Image</description>
 				<width>300</width>
 				<height>300</height>
@@ -61,11 +27,11 @@
 				<description>TV Shows Poster Default Cover Image</description>
 				<width>300</width>
 				<height>300</height>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture>$INFO[ListItem.ActualIcon]</texture>
 				<bordertexture border="4">covers/cover-case2.png</bordertexture>
 				<bordersize>60</bordersize>
 				<aspectratio>keep</aspectratio>
-				<visible>IsEmpty(ListItem.Thumb) + Container.Content(TVShows) + Skin.HasSetting(UseTVShowsPosterCover)</visible>
+				<visible>Container.Content(TVShows) + Skin.HasSetting(UseTVShowsPosterCover)</visible>
 				<animation effect="fade" end="60" condition="true">Conditional</animation>
 			</control>
 			
@@ -74,12 +40,57 @@
 				<posy>-10</posy>
 				<width>980</width>
 				<height>181</height>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture>$INFO[ListItem.ActualIcon]</texture>
 				<bordertexture border="4">covers/cover-case2.png</bordertexture>
 				<bordersize>20</bordersize>
 				<aspectratio>keep</aspectratio>
-				<visible>IsEmpty(ListItem.Thumb) + Container.Content(TVShows) + !Skin.HasSetting(UseTVShowsPosterCover)</visible>
+				<visible>Container.Content(TVShows) + !Skin.HasSetting(UseTVShowsPosterCover)</visible>
 				<animation effect="fade" end="60" condition="true">Conditional</animation>
+			</control>
+			
+			<control type="image">
+				<description>Movies Poster Cover Image</description>
+				<width>300</width>
+				<height>415</height>
+				<info>ListItem.Thumb</info>
+				<bordertexture border="4">covers/cover-case2.png</bordertexture>
+				<bordersize>4</bordersize>
+				<aspectratio>stretch</aspectratio>
+				<visible>Container.Content(Movies)</visible>
+			</control>
+			
+			<control type="image">
+				<description>Music Videos / Episodes Cover Image</description>
+				<width>300</width>
+				<height>300</height>
+				<info>ListItem.Thumb</info>
+				<bordertexture border="4">covers/cover-case2.png</bordertexture>
+				<bordersize>4</bordersize>
+				<aspectratio align="center" aligny="top">keep</aspectratio>
+				<visible>Container.Content(MusicVideos) | Container.Content(Episodes)</visible>
+			</control>
+			
+			<control type="image">
+				<description>TV Shows Poster Cover Image</description>
+				<width>300</width>
+				<height>415</height>
+				<texture>$VAR[TVShowsThumbTextureVideoInfo]</texture>
+				<bordertexture border="4">covers/cover-case2.png</bordertexture>
+				<bordersize>4</bordersize>
+				<aspectratio>stretch</aspectratio>
+				<visible>Container.Content(TVShows) + Skin.HasSetting(UseTVShowsPosterCover)</visible>
+			</control>
+			
+			<control type="image">
+				<description>TV Shows Cover Image</description>
+				<posy>-10</posy>
+				<width>980</width>
+				<height>181</height>
+				<texture>$VAR[TVShowsThumbTextureVideoInfo]</texture>
+				<bordertexture border="4">covers/cover-case2.png</bordertexture>
+				<bordersize>4</bordersize>
+				<aspectratio>stretch</aspectratio>
+				<visible>Container.Content(TVShows) + !Skin.HasSetting(UseTVShowsPosterCover)</visible>
 			</control>
 		</control>	
 

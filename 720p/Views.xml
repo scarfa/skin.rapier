@@ -1,12 +1,56 @@
 <includes>
+	<variable name="TVShowsThumbTexture">
+		<value condition="Skin.HasSetting(UseTVShowsPosterCover) + Skin.HasSetting(UseTVShowsLocalPosterThumb)">$INFO[ListItem.Path]poster.jpg</value>
+		<value condition="!Skin.HasSetting(UseTVShowsPosterCover) + Skin.HasSetting(UseTVShowsLocalBannerThumb)">$INFO[ListItem.Path]banner.jpg</value>
+		<value>$INFO[ListItem.Thumb]</value>
+	</variable>
+	
+	<variable name="TVShowsThumbTextureVideoInfo">
+		<value condition="Skin.HasSetting(UseTVShowsPosterCover) + Skin.HasSetting(UseTVShowsLocalPosterThumb)">$INFO[ListItem.FileNameAndPath]poster.jpg</value>
+		<value condition="!Skin.HasSetting(UseTVShowsPosterCover) + Skin.HasSetting(UseTVShowsLocalBannerThumb)">$INFO[ListItem.FileNameAndPath]banner.jpg</value>
+		<value>$INFO[ListItem.Thumb]</value>
+	</variable>
+	
 	<include name="DVDThumbsStyleCoverImage">
 		<control type="image">
 			<width>129</width>
 			<height>172</height>
+			<texture border="7">covers/cover-case-focus.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		
+		<control type="image">
+			<width>129</width>
+			<height>172</height>
 			<bordersize>10</bordersize>
-			<bordertexture border="7">covers/cover-case-focus.png</bordertexture>
+			<texture background="true">dim.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		
+		<control type="image">
+			<width>129</width>
+			<height>172</height>
+			<bordersize>12</bordersize>
+			<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+			<aspectratio>keep</aspectratio>
+		</control>
+		
+		<control type="image">
+			<width>129</width>
+			<height>172</height>
+			<bordersize>10</bordersize>
 			<texture background="true">$INFO[ListItem.Thumb]</texture>
 			<aspectratio>stretch</aspectratio>
+			<visible>Container.Content(Movies)</visible>
+		</control>
+		
+		<control type="image">
+			<width>129</width>
+			<height>172</height>
+			<bordersize>10</bordersize>
+			<texture background="true">$VAR[TVShowsThumbTexture]</texture>
+			<aspectratio>stretch</aspectratio>
+			<visible>Container.Content(TVShows)</visible>
 		</control>
 	</include>
 	
@@ -32,12 +76,37 @@
 	</include>
 	
 	<include name="AlbumThumbsStyleCoverImage">
-		<width>129</width>
-		<height>129</height>
-		<bordersize>10</bordersize>
-		<bordertexture border="7">covers/cover-case-focus.png</bordertexture>
-		<texture background="true">$INFO[ListItem.Thumb]</texture>
-		<aspectratio>stretch</aspectratio>
+		<control type="image">
+			<width>129</width>
+			<height>129</height>
+			<texture border="7">covers/cover-case-focus.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		
+		<control type="image">
+			<width>129</width>
+			<height>129</height>
+			<bordersize>10</bordersize>
+			<texture background="true">dim.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		
+		<control type="image">
+			<width>129</width>
+			<height>129</height>
+			<bordersize>20</bordersize>
+			<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>IsEmpty(ListItem.Thumb)</visible>
+		</control>
+		
+		<control type="image">
+			<width>129</width>
+			<height>129</height>
+			<bordersize>10</bordersize>
+			<texture background="true">$INFO[ListItem.Thumb]</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
 	</include>
 	
 	<include name="LogoThumbsStyleCoverImage">
@@ -46,6 +115,23 @@
 			<height>129</height>
 			<texture border="7">covers/cover-case-focus.png</texture>
 			<aspectratio>stretch</aspectratio>
+		</control>
+		
+		<control type="image">
+			<width>129</width>
+			<height>129</height>
+			<bordersize>10</bordersize>
+			<texture background="true">dim.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		
+		<control type="image">
+			<width>129</width>
+			<height>129</height>
+			<bordersize>12</bordersize>
+			<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+			<aspectratio>stretch</aspectratio>
+			<visible>IsEmpty(ListItem.Title)</visible>
 		</control>
 		
 		<control type="image">
@@ -72,8 +158,31 @@
 		<control type="image">
 			<width>160</width>
 			<height>225</height>
+			<texture border="7">covers/cover-case-focus.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		
+		<control type="image">
+			<width>160</width>
+			<height>225</height>
+			<texture>dim.png</texture>
 			<bordersize>10</bordersize>
-			<bordertexture border="7">covers/cover-case-focus.png</bordertexture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		
+		<control type="image">
+			<width>160</width>
+			<height>225</height>
+			<bordersize>18</bordersize>
+			<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>IsEmpty(ListItem.Thumb)</visible>
+		</control>
+		
+		<control type="image">
+			<width>160</width>
+			<height>225</height>
+			<bordersize>10</bordersize>
 			<texture background="true">$INFO[ListItem.Thumb]</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
@@ -92,12 +201,37 @@
 	</include>
 	
 	<include name="AlbumWallCoverImage">
-		<width>214</width>
-		<height>225</height>
-		<bordersize>10</bordersize>
-		<bordertexture border="7">covers/cover-case-focus.png</bordertexture>
-		<texture background="true">$INFO[ListItem.Thumb]</texture>
-		<aspectratio>stretch</aspectratio>
+		<control type="image">
+			<width>214</width>
+			<height>225</height>
+			<texture border="7">covers/cover-case-focus.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		
+		<control type="image">
+			<width>214</width>
+			<height>225</height>
+			<bordersize>10</bordersize>
+			<texture>dim.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		
+		<control type="image">
+			<width>214</width>
+			<height>225</height>
+			<bordersize>40</bordersize>
+			<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>IsEmpty(ListItem.Thumb)</visible>
+		</control>
+		
+		<control type="image">
+			<width>214</width>
+			<height>225</height>
+			<bordersize>10</bordersize>
+			<texture background="true">$INFO[ListItem.Thumb]</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
 	</include>
 	
 	<include name="ListPanelCover">
@@ -107,40 +241,81 @@
 			<visible>![[Container.Content(Movies) | Container.Content(Episodes)] + Skin.HasSetting(EnableListExtraThumbs)]
 			+ ![Container.Content(TVShows) + Skin.HasSetting(EnableListTVShowsLogo) + !Skin.HasSetting(UseTVShowsPosterCover)]</visible>
 			
-			<control type="image">
-				<description>Cover</description>
-				<width>400</width>
-				<height>400</height>
-				<texture background="true">$INFO[ListItem.Thumb]</texture>
-				<bordertexture border="11">covers/cover-case-curved-big-focus.png</bordertexture>
-				<bordersize>14</bordersize>
-				<aspectratio aligny="bottom">keep</aspectratio>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<visible>!IsEmpty(ListItem.Thumb)</visible>		
-			</control>
+			<control type="group">
+				<visible>!Container.Content(TVShows)</visible>
+				<control type="image">
+					<description>Cover</description>
+					<width>400</width>
+					<height>400</height>
+					<texture background="true">$INFO[ListItem.Thumb]</texture>
+					<bordertexture border="11">covers/cover-case-curved-big-focus.png</bordertexture>
+					<bordersize>14</bordersize>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>		
+				</control>
 
-			<control type="image">
-				<description>Default Cover</description>
-				<width>400</width>
-				<height>400</height>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
-				<bordersize>90</bordersize>
-				<aspectratio>keep</aspectratio>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<visible>IsEmpty(ListItem.Thumb)</visible>		
-			</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<width>400</width>
+					<height>400</height>
+					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+					<bordersize>90</bordersize>
+					<aspectratio>keep</aspectratio>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<visible>IsEmpty(ListItem.Thumb)</visible>		
+				</control>
 
-			<control type="image">
-				<description>Cover Reflection</description>
-				<posy>395</posy>
-				<width>400</width>
-				<height>400</height>
-				<texture background="true" flipy="true" diffuse="views/reflection.png">$INFO[ListItem.Thumb]</texture>
-				<bordertexture flipy="true" border="11" diffuse="views/reflection.png">covers/cover-case-curved-big-focus.png</bordertexture>
-				<bordersize>14</bordersize>
-				<aspectratio aligny="top">keep</aspectratio>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<visible>!IsEmpty(ListItem.Thumb)</visible>
+				<control type="image">
+					<description>Cover Reflection</description>
+					<posy>395</posy>
+					<width>400</width>
+					<height>400</height>
+					<texture background="true" flipy="true" diffuse="views/reflection.png">$INFO[ListItem.Thumb]</texture>
+					<bordertexture flipy="true" border="11" diffuse="views/reflection.png">covers/cover-case-curved-big-focus.png</bordertexture>
+					<bordersize>14</bordersize>
+					<aspectratio aligny="top">keep</aspectratio>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+				</control>
+			</control>
+			
+			<control type="group">
+				<visible>Container.Content(TVShows)</visible>
+				<control type="image">
+					<description>Cover</description>
+					<width>400</width>
+					<height>400</height>
+					<texture background="true">$VAR[TVShowsThumbTexture]</texture>
+					<bordertexture border="11">covers/cover-case-curved-big-focus.png</bordertexture>
+					<bordersize>14</bordersize>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<fadetime>IconCrossfadeTime</fadetime>	
+				</control>
+
+				<control type="image">
+					<description>Default Cover</description>
+					<width>400</width>
+					<height>400</height>
+					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+					<bordersize>90</bordersize>
+					<aspectratio>keep</aspectratio>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<visible>IsEmpty(ListItem.Title) | [IsEmpty(ListItem.Thumb) + ![Skin.HasSetting(UseTVShowsPosterCover) + Skin.HasSetting(UseTVShowsLocalPosterThumb)]
+					+ ![!Skin.HasSetting(UseTVShowsPosterCover) + Skin.HasSetting(UseTVShowsLocalBannerThumb)]]</visible>
+				</control>
+
+				<control type="image">
+					<description>Cover Reflection</description>
+					<posy>395</posy>
+					<width>400</width>
+					<height>400</height>
+					<texture background="true" flipy="true" diffuse="views/reflection.png">$VAR[TVShowsThumbTexture]</texture>
+					<bordertexture flipy="true" border="11" diffuse="views/reflection.png">covers/cover-case-curved-big-focus.png</bordertexture>
+					<bordersize>14</bordersize>
+					<aspectratio aligny="top">keep</aspectratio>
+					<fadetime>IconCrossfadeTime</fadetime>
+				</control>
 			</control>
 		</control>
 	</include>
@@ -265,6 +440,17 @@
 			<posy>150</posy>
 			
 			<control type="image">
+				<description>Default Cover</description>
+				<width>320</width>
+				<height>400</height>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+				<bordersize>90</bordersize>
+				<aspectratio>keep</aspectratio>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<visible>IsEmpty(ListItem.Thumb)</visible>
+			</control>
+			
+			<control type="image">
 				<description>Cover</description>
 				<width>320</width>
 				<height>400</height>
@@ -273,18 +459,6 @@
 				<bordersize>4</bordersize>
 				<aspectratio aligny="bottom">keep</aspectratio>
 				<fadetime>IconCrossfadeTime</fadetime>
-				<visible>!IsEmpty(ListItem.Thumb)</visible>		
-			</control>
-
-			<control type="image">
-				<description>Default Cover</description>
-				<width>320</width>
-				<height>400</height>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
-				<bordersize>90</bordersize>
-				<aspectratio>keep</aspectratio>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<visible>IsEmpty(ListItem.Thumb)</visible>		
 			</control>
 
 			<control type="image">
@@ -297,8 +471,7 @@
 				<bordersize>4</bordersize>
 				<aspectratio aligny="top">keep</aspectratio>
 				<fadetime>IconCrossfadeTime</fadetime>
-				<visible>!IsEmpty(ListItem.Thumb)</visible>
-			</control>	
+			</control>
 		</control>
 	</include>
 	

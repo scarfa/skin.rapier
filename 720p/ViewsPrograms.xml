@@ -314,7 +314,7 @@
 				<width>53</width>
 				<height>73</height>
 				<bordersize>5</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -394,7 +394,7 @@
 					<width>53</width>
 					<height>73</height>
 					<bordersize>5</bordersize>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 					<aspectratio>keep</aspectratio>
 					<visible>IsEmpty(ListItem.Thumb)</visible>
 				</control>				
@@ -741,7 +741,7 @@
 				<width>73</width>
 				<height>73</height>
 				<bordersize>5</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -821,7 +821,7 @@
 					<width>73</width>
 					<height>73</height>
 					<bordersize>5</bordersize>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 					<aspectratio>keep</aspectratio>
 					<visible>IsEmpty(ListItem.Thumb)</visible>
 				</control>				
@@ -1168,7 +1168,7 @@
 				<width>97</width>
 				<height>73</height>
 				<bordersize>5</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -1248,7 +1248,7 @@
 					<width>97</width>
 					<height>73</height>
 					<bordersize>5</bordersize>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 					<aspectratio>keep</aspectratio>
 					<visible>IsEmpty(ListItem.Thumb)</visible>
 				</control>				
@@ -1475,7 +1475,7 @@
 						<width>129</width>
 						<height>172</height>
 						<bordersize>12</bordersize>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 						<animation effect="fade" end="50" condition="true">Conditional</animation>
@@ -1558,7 +1558,7 @@
 						<width>129</width>
 						<height>172</height>
 						<bordersize>12</bordersize>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 				</focusedlayout>
@@ -1799,7 +1799,7 @@
 						<width>129</width>
 						<height>129</height>
 						<bordersize>20</bordersize>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 						<animation effect="fade" end="50" condition="true">Conditional</animation>
@@ -1882,7 +1882,7 @@
 						<width>129</width>
 						<height>129</height>
 						<bordersize>20</bordersize>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 				</focusedlayout>
@@ -2123,7 +2123,7 @@
 						<width>155</width>
 						<height>129</height>
 						<bordersize>20</bordersize>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 						<animation effect="fade" end="50" condition="true">Conditional</animation>
@@ -2206,7 +2206,7 @@
 						<width>155</width>
 						<height>129</height>
 						<bordersize>20</bordersize>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 				</focusedlayout>
@@ -2468,7 +2468,7 @@
 					<description>Default Cover</description>
 					<width>150</width>
 					<height>200</height>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 					<bordersize>12</bordersize>
 					<aspectratio>keep</aspectratio>
 					<visible>IsEmpty(ListItem.Thumb)</visible>
@@ -2520,7 +2520,7 @@
 						<description>Default Cover</description>
 						<width>150</width>
 						<height>200</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordersize>12</bordersize>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
@@ -2570,7 +2570,7 @@
 						<description>Default Cover</description>
 						<width>150</width>
 						<height>200</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordersize>12</bordersize>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
@@ -2773,7 +2773,7 @@
 					<description>Default Cover</description>
 					<width>216</width>
 					<height>288</height>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 					<bordersize>20</bordersize>
 					<aspectratio>keep</aspectratio>
 					<animation effect="fade" end="30" condition="true">Conditional</animation>
@@ -2825,7 +2825,7 @@
 						<description>Default Cover</description>
 						<width>216</width>
 						<height>288</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordersize>20</bordersize>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
@@ -2875,7 +2875,7 @@
 						<description>Default Cover</description>
 						<width>216</width>
 						<height>288</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordersize>20</bordersize>
 						<aspectratio>keep</aspectratio>
 						<animation effect="fade" end="30" condition="true">Conditional</animation>
@@ -3116,7 +3116,7 @@
 					<description>Default Cover</description>
 					<width>150</width>
 					<height>150</height>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 					<bordersize>12</bordersize>
 					<aspectratio>keep</aspectratio>
 					<visible>IsEmpty(ListItem.Thumb)</visible>
@@ -3168,7 +3168,7 @@
 						<description>Default Cover</description>
 						<width>150</width>
 						<height>150</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordersize>12</bordersize>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
@@ -3218,7 +3218,7 @@
 						<description>Default Cover</description>
 						<width>150</width>
 						<height>150</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordersize>12</bordersize>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
@@ -3421,7 +3421,7 @@
 					<description>Default Cover</description>
 					<width>216</width>
 					<height>216</height>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 					<bordersize>20</bordersize>
 					<aspectratio>keep</aspectratio>
 					<animation effect="fade" end="30" condition="true">Conditional</animation>
@@ -3473,7 +3473,7 @@
 						<description>Default Cover</description>
 						<width>216</width>
 						<height>216</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordersize>20</bordersize>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
@@ -3523,7 +3523,7 @@
 						<description>Default Cover</description>
 						<width>216</width>
 						<height>216</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordersize>20</bordersize>
 						<aspectratio>keep</aspectratio>
 						<animation effect="fade" end="30" condition="true">Conditional</animation>
@@ -3763,7 +3763,7 @@
 					<description>Default Cover</description>
 					<width>216</width>
 					<height>162</height>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 					<bordersize>20</bordersize>
 					<aspectratio>keep</aspectratio>
 					<animation effect="fade" end="30" condition="true">Conditional</animation>
@@ -3815,7 +3815,7 @@
 						<description>Default Cover</description>
 						<width>216</width>
 						<height>162</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordersize>20</bordersize>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
@@ -3865,7 +3865,7 @@
 						<description>Default Cover</description>
 						<width>216</width>
 						<height>162</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordersize>20</bordersize>
 						<aspectratio>keep</aspectratio>
 						<animation effect="fade" end="30" condition="true">Conditional</animation>

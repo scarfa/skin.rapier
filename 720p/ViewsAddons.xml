@@ -43,7 +43,7 @@
 						<width>128</width>
 						<height>128</height>
 						<bordersize>10</bordersize>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 						<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -86,7 +86,7 @@
 						<width>128</width>
 						<height>128</height>
 						<bordersize>10</bordersize>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 						<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -238,7 +238,7 @@
 						<width>128</width>
 						<height>128</height>
 						<bordersize>10</bordersize>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 						<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
@@ -942,7 +942,7 @@
 					<description>Default Cover</description>
 					<width>150</width>
 					<height>150</height>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 					<bordersize>22</bordersize>
 					<aspectratio>keep</aspectratio>
 					<visible>IsEmpty(ListItem.Thumb)</visible>
@@ -994,7 +994,7 @@
 						<description>Default Cover</description>
 						<width>150</width>
 						<height>150</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordersize>22</bordersize>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
@@ -1044,7 +1044,7 @@
 						<description>Default Cover</description>
 						<width>150</width>
 						<height>150</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordersize>22</bordersize>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
@@ -1283,7 +1283,7 @@
 					<description>Default Cover</description>
 					<width>216</width>
 					<height>216</height>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 					<bordersize>30</bordersize>
 					<aspectratio>keep</aspectratio>
 					<animation effect="fade" end="30" condition="true">Conditional</animation>
@@ -1335,7 +1335,7 @@
 						<description>Default Cover</description>
 						<width>216</width>
 						<height>216</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordersize>30</bordersize>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
@@ -1385,7 +1385,7 @@
 						<description>Default Cover</description>
 						<width>216</width>
 						<height>216</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordersize>30</bordersize>
 						<aspectratio>keep</aspectratio>
 						<animation effect="fade" end="30" condition="true">Conditional</animation>

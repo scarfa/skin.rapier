@@ -332,7 +332,7 @@
 			<visible>substring(ListItem.MPAA,Rated G)</visible>  
 		</control>
 		<control type="image" id="635">
-			<description>Rated PG</description>l
+			<description>Rated PG</description>
 			<width>47</width>
 			<height>41</height>
 			<aspectratio>keep</aspectratio>

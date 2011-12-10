@@ -44,7 +44,7 @@
 						<width>128</width>
 						<height>128</height>
 						<bordersize>10</bordersize>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 						<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -89,7 +89,7 @@
 							<width>128</width>
 							<height>128</height>
 							<bordersize>10</bordersize>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<aspectratio>keep</aspectratio>
 							<visible>IsEmpty(ListItem.Thumb)</visible>
 							<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -191,7 +191,7 @@
 						<width>128</width>
 						<height>128</height>
 						<bordersize>10</bordersize>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 						<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -236,7 +236,7 @@
 							<width>128</width>
 							<height>128</height>
 							<bordersize>10</bordersize>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<aspectratio>keep</aspectratio>
 							<visible>IsEmpty(ListItem.Thumb)</visible>
 							<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -338,7 +338,7 @@
 						<width>128</width>
 						<height>128</height>
 						<bordersize>10</bordersize>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 						<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -383,7 +383,7 @@
 							<width>128</width>
 							<height>128</height>
 							<bordersize>10</bordersize>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<aspectratio>keep</aspectratio>
 							<visible>IsEmpty(ListItem.Thumb)</visible>
 							<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -491,7 +491,7 @@
 						<width>128</width>
 						<height>128</height>
 						<bordersize>10</bordersize>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 						<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
@@ -526,7 +526,7 @@
 							<width>128</width>
 							<height>128</height>
 							<bordersize>10</bordersize>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<aspectratio>keep</aspectratio>
 							<visible>IsEmpty(ListItem.Thumb)</visible>
 							<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
@@ -647,7 +647,7 @@
 						<width>128</width>
 						<height>128</height>
 						<bordersize>10</bordersize>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 						<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
@@ -682,7 +682,7 @@
 							<width>128</width>
 							<height>128</height>
 							<bordersize>10</bordersize>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<aspectratio>keep</aspectratio>
 							<visible>IsEmpty(ListItem.Thumb)</visible>
 							<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
@@ -802,7 +802,7 @@
 						<width>128</width>
 						<height>128</height>
 						<bordersize>10</bordersize>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 						<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
@@ -837,7 +837,7 @@
 							<width>128</width>
 							<height>128</height>
 							<bordersize>10</bordersize>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<aspectratio>keep</aspectratio>
 							<visible>IsEmpty(ListItem.Thumb)</visible>
 							<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
@@ -2209,7 +2209,7 @@
 				<width>73</width>
 				<height>73</height>
 				<bordersize>10</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -2221,7 +2221,7 @@
 				<width>73</width>
 				<height>73</height>
 				<bordersize>10</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb) + Container.Content(Artists)</visible>
 				<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -2413,7 +2413,7 @@
 				<width>73</width>
 				<height>73</height>
 				<bordersize>10</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>	
@@ -2425,7 +2425,7 @@
 				<width>73</width>
 				<height>73</height>
 				<bordersize>10</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb) + Container.Content(Artists)</visible>
 				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>	
@@ -3116,6 +3116,16 @@
 						<animation effect="fade" end="50" condition="true">Conditional</animation>
 					</control>
 					<control type="image">
+						<description>Default Cover</description>
+						<width>129</width>
+						<height>129</height>
+						<bordersize>20</bordersize>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+						<animation effect="fade" end="60" condition="true">Conditional</animation>
+					</control>
+					<control type="image">
 						<description>Cover</description>
 						<width>129</width>
 						<height>129</height>
@@ -3133,96 +3143,68 @@
 						<visible>!IsEmpty(ListItem.Thumb)</visible>
 						<include>CoverDimAnim</include>
 					</control>
-					<control type="image">
-						<description>Default Cover</description>
-						<width>129</width>
-						<height>129</height>
-						<bordersize>20</bordersize>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<aspectratio>keep</aspectratio>
-						<visible>IsEmpty(ListItem.Thumb)</visible>
-						<animation effect="fade" end="50" condition="true">Conditional</animation>
-					</control>
 				</itemlayout>
-				<focusedlayout width="129" height="129" condition="!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(0)">
-					<control type="image">
+				<focusedlayout width="129" height="129" condition="Container.Column(0) + Container.Row(0)">
+					<control type="group">
 						<description>Top Left Corner Cover</description>
 						<include>AlbumThumbsStyleCoverImage</include>
 						<include>AlbumThumbsStyleTopLeftCornerFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="129" height="129" condition="!IsEmpty(ListItem.Thumb) + !Container.Column(0) + !Container.Column(5) + Container.Row(0)">
-					<control type="image">
+				<focusedlayout width="129" height="129" condition="!Container.Column(0) + !Container.Column(5) + Container.Row(0)">
+					<control type="group">
 						<description>Top Edge Cover</description>
 						<include>AlbumThumbsStyleCoverImage</include>
 						<include>AlbumThumbsStyleTopEdgeFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="129" height="129" condition="!IsEmpty(ListItem.Thumb) + Container.Column(5) + Container.Row(0)">
-					<control type="image">
+				<focusedlayout width="129" height="129" condition="Container.Column(5) + Container.Row(0)">
+					<control type="group">
 						<description>Top Right Corner Cover</description>
 						<include>AlbumThumbsStyleCoverImage</include>
 						<include>AlbumThumbsStyleTopRightCornerFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="129" height="129" condition="!IsEmpty(ListItem.Thumb) + Container.Column(0) + [Container.Row(1) | Container.Row(2)]">
-					<control type="image">
+				<focusedlayout width="129" height="129" condition="Container.Column(0) + [Container.Row(1) | Container.Row(2)]">
+					<control type="group">
 						<description>Left Edge Cover</description>
 						<include>AlbumThumbsStyleCoverImage</include>
 						<include>AlbumThumbsStyleLeftEdgeFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="129" height="129" condition="!IsEmpty(ListItem.Thumb) + !Container.Row(0) + !Container.Row(3) + !Container.Column(0) + !Container.Column(5)">
-					<control type="image">
+				<focusedlayout width="129" height="129" condition="!Container.Row(0) + !Container.Row(3) + !Container.Column(0) + !Container.Column(5)">
+					<control type="group">
 						<description>Mid Row Cover</description>
 						<include>AlbumThumbsStyleCoverImage</include>
 						<include>AlbumThumbsStyleMidRowFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="129" height="129" condition="!IsEmpty(ListItem.Thumb) + Container.Column(5) + [Container.Row(1) | Container.Row(2)]">
-					<control type="image">
+				<focusedlayout width="129" height="129" condition="Container.Column(5) + [Container.Row(1) | Container.Row(2)]">
+					<control type="group">
 						<description>Right Edge Cover</description>
 						<include>AlbumThumbsStyleCoverImage</include>
 						<include>AlbumThumbsStyleRightEdgeFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="129" height="129" condition="!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(3)">
-					<control type="image">
+				<focusedlayout width="129" height="129" condition="Container.Column(0) + Container.Row(3)">
+					<control type="group">
 						<description>Bottom Left Corner Cover</description>
 						<include>AlbumThumbsStyleCoverImage</include>
 						<include>AlbumThumbsStyleBottomLeftCornerFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="129" height="129" condition="!IsEmpty(ListItem.Thumb) + !Container.Column(0) + !Container.Column(5) + Container.Row(3)">
-					<control type="image">
+				<focusedlayout width="129" height="129" condition="!Container.Column(0) + !Container.Column(5) + Container.Row(3)">
+					<control type="group">
 						<description>Bottom Edge Cover</description>
 						<include>AlbumThumbsStyleCoverImage</include>
 						<include>AlbumThumbsStyleBottomEdgeFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="129" height="129" condition="!IsEmpty(ListItem.Thumb) + Container.Column(5) + Container.Row(3)">
-					<control type="image">
+				<focusedlayout width="129" height="129" condition="Container.Column(5) + Container.Row(3)">
+					<control type="group">
 						<description>Bottom Right Corner Cover</description>
 						<include>AlbumThumbsStyleCoverImage</include>
 						<include>AlbumThumbsStyleBottomRightCornerFocusAnim</include>
-					</control>
-				</focusedlayout>
-				<focusedlayout width="129" height="129" condition="IsEmpty(ListItem.Thumb)">
-					<control type="image">
-						<description>Default Cover Case</description>
-						<width>129</width>
-						<height>129</height>
-						<aspectratio>stretch</aspectratio>
-						<bordersize>7</bordersize>
-						<texture background="true" border="2">covers/cover-case-noshadow-focus.png</texture>
-					</control>
-					<control type="image">
-						<description>Default Cover</description>
-						<width>129</width>
-						<height>129</height>
-						<bordersize>20</bordersize>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<aspectratio>keep</aspectratio>
 					</control>
 				</focusedlayout>
 			</control>
@@ -3519,7 +3501,7 @@
 					<description>Default Cover</description>
 					<width>150</width>
 					<height>150</height>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 					<bordersize>22</bordersize>
 					<aspectratio>keep</aspectratio>
 					<visible>IsEmpty(ListItem.Thumb)</visible>
@@ -3571,7 +3553,7 @@
 						<description>Default Cover</description>
 						<width>150</width>
 						<height>150</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordersize>22</bordersize>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
@@ -3621,7 +3603,7 @@
 						<description>Default Cover</description>
 						<width>150</width>
 						<height>150</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordersize>22</bordersize>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
@@ -3861,7 +3843,7 @@
 					<description>Default Cover</description>
 					<width>216</width>
 					<height>216</height>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 					<bordersize>30</bordersize>
 					<aspectratio>keep</aspectratio>
 					<animation effect="fade" end="30" condition="true">Conditional</animation>
@@ -3913,7 +3895,7 @@
 						<description>Default Cover</description>
 						<width>216</width>
 						<height>216</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordersize>30</bordersize>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
@@ -3963,7 +3945,7 @@
 						<description>Default Cover</description>
 						<width>216</width>
 						<height>216</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordersize>30</bordersize>
 						<aspectratio>keep</aspectratio>
 						<animation effect="fade" end="30" condition="true">Conditional</animation>
@@ -4011,15 +3993,6 @@
 				<visible>Container.Content(Albums)</visible>
 				<itemlayout width="214" height="225">
 					<control type="image">
-						<description>Default Cover Case</description>
-						<width>214</width>
-						<height>225</height>
-						<texture border="2">covers/cover-case-noshadow-nofocus.png</texture>
-						<aspectratio>stretch</aspectratio>
-						<visible>IsEmpty(ListItem.Thumb)</visible>
-						<animation effect="fade" end="70" condition="true">Conditional</animation>
-					</control>
-					<control type="image">
 						<description>Cover</description>
 						<width>214</width>
 						<height>225</height>
@@ -4031,9 +4004,9 @@
 						<width>214</width>
 						<height>225</height>
 						<bordersize>40</bordersize>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
-						<animation effect="fade" end="70" condition="true">Conditional</animation>
+						<animation effect="fade" end="60" condition="true">Conditional</animation>
 					</control>
 					<control type="image">
 						<description>Dim</description>
@@ -4045,84 +4018,67 @@
 						<include>CoverDimAnim</include>
 					</control>
 				</itemlayout>					
-				<focusedlayout width="214" height="225" condition="!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(0)">
-					<control type="image">
+				<focusedlayout width="214" height="225" condition="Container.Column(0) + Container.Row(0)">
+					<control type="group">
 						<description>Top Left Corner Cover</description>
 						<include>AlbumWallCoverImage</include>
 						<include>MusicWallViewTopLeftCornerFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="214" height="225" condition="!IsEmpty(ListItem.Thumb) + !Container.Column(0) + !Container.Column(5) + Container.Row(0)">
-					<control type="image">
+				<focusedlayout width="214" height="225" condition="!Container.Column(0) + !Container.Column(5) + Container.Row(0)">
+					<control type="group">
 						<description>Top Edge Cover</description>
 						<include>AlbumWallCoverImage</include>
 						<include>MusicWallViewTopEdgeFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="214" height="225" condition="!IsEmpty(ListItem.Thumb) + Container.Column(5) + Container.Row(0)">
-					<control type="image">
+				<focusedlayout width="214" height="225" condition="Container.Column(5) + Container.Row(0)">
+					<control type="group">
 						<description>Top Right Corner Cover</description>
 						<include>AlbumWallCoverImage</include>
 						<include>MusicWallViewTopRightCornerFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="214" height="225" condition="!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(1)">
-					<control type="image">
+				<focusedlayout width="214" height="225" condition="Container.Column(0) + Container.Row(1)">
+					<control type="group">
 						<description>Left Edge Cover</description>
 						<include>AlbumWallCoverImage</include>
 						<include>MusicWallViewLeftEdgeFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="214" height="225" condition="!IsEmpty(ListItem.Thumb) + !Container.Row(0) + !Container.Row(2) + !Container.Column(0) + !Container.Column(5)">
-					<control type="image">
+				<focusedlayout width="214" height="225" condition="!Container.Row(0) + !Container.Row(2) + !Container.Column(0) + !Container.Column(5)">
+					<control type="group">
 						<description>Mid Row Cover</description>
 						<include>AlbumWallCoverImage</include>
 						<include>MusicWallViewMidRowFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="214" height="225" condition="!IsEmpty(ListItem.Thumb) + Container.Column(5) + Container.Row(1)">
-					<control type="image">
+				<focusedlayout width="214" height="225" condition="Container.Column(5) + Container.Row(1)">
+					<control type="group">
 						<description>Right Edge Cover</description>
 						<include>AlbumWallCoverImage</include>
 						<include>MusicWallViewRightEdgeFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="214" height="225" condition="!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(2)">
-					<control type="image">
+				<focusedlayout width="214" height="225" condition="Container.Column(0) + Container.Row(2)">
+					<control type="group">
 						<description>Bottom Left Corner Cover</description>
 						<include>AlbumWallCoverImage</include>
 						<include>MusicWallViewBottomLeftCornerFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="214" height="225" condition="!IsEmpty(ListItem.Thumb) + ! Container.Column(0) + !Container.Column(5) + Container.Row(2)">
-					<control type="image">
+				<focusedlayout width="214" height="225" condition="!Container.Column(0) + !Container.Column(5) + Container.Row(2)">
+					<control type="group">
 						<description>Bottom Edge Cover</description>
 						<include>AlbumWallCoverImage</include>
 						<include>MusicWallViewBottomEdgeFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="214" height="225" condition="!IsEmpty(ListItem.Thumb) + Container.Column(5) + Container.Row(2)">
-					<control type="image">
+				<focusedlayout width="214" height="225" condition="Container.Column(5) + Container.Row(2)">
+					<control type="group">
 						<description>Bottom Right Corner Cover</description>
 						<include>AlbumWallCoverImage</include>
 						<include>MusicWallViewBottomRightCornerFocusAnim</include>
-					</control>
-				</focusedlayout>
-				<focusedlayout width="214" height="225" condition="IsEmpty(ListItem.Thumb)">
-					<control type="image">
-						<description>Default Cover Case</description>
-						<width>214</width>
-						<height>225</height>
-						<texture border="2">covers/cover-case-noshadow-focus.png</texture>
-						<aspectratio>stretch</aspectratio>
-					</control>
-					<control type="image">
-						<description>Default Cover</description>
-						<width>214</width>
-						<height>225</height>
-						<bordersize>40</bordersize>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<aspectratio>keep</aspectratio>
 					</control>
 				</focusedlayout>
 			</control>

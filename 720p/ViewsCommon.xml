@@ -19,7 +19,30 @@
 				<ondown>50</ondown>
 				<onleft>850</onleft>
 				<onright>150</onright>
-				<itemlayout condition="Container.Content(TVShows) + Skin.HasSetting(EnableIconTVShowsLogo)" height="185" width="203">
+				<itemlayout condition="Container.Content(TVShows)" height="185" width="203">
+					<control type="image">
+						<description>Default Cover</description>
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>164</width>
+						<height>122</height>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>IsEmpty(ListItem.Title) | [IsEmpty(ListItem.Thumb) + ![Skin.HasSetting(UseTVShowsPosterCover) + Skin.HasSetting(UseTVShowsLocalPosterThumb)]
+						+ ![!Skin.HasSetting(UseTVShowsPosterCover) + Skin.HasSetting(UseTVShowsLocalBannerThumb)]]</visible>
+					</control>
+					<control type="image">
+						<description>Cover</description>
+						<posx>20</posx> 
+						<posy>20</posy>
+						<width>164</width>
+						<height>122</height>
+						<texture background="true">$VAR[TVShowsThumbTexture]</texture>
+						<aspectratio aligny="bottom">keep</aspectratio>
+						<bordertexture border="7">covers/cover-case-nofocus.png</bordertexture>
+						<bordersize>5</bordersize>
+						<visible>!Skin.HasSetting(EnableIconTVShowsLogo)</visible>
+					</control>
 					<control type="image">
 						<description>TV Logo</description>
 						<posx>20</posx> 
@@ -27,17 +50,20 @@
 						<width>164</width>
 						<height>122</height>
 						<texture background="true">$INFO[ListItem.Path]logo.png</texture>
-						<aspectratio>keep</aspectratio>	
-					</control>
-					<control type="image">
-						<description>Default Cover</description>
-						<posx>20</posx>
-						<posy>20</posy>
-						<width>164</width>
-						<height>122</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
-						<visible>IsEmpty(ListItem.Title)</visible>
+						<visible>Skin.HasSetting(EnableIconTVShowsLogo)</visible>
+					</control>
+					<control type="label">
+						<description>Label</description>
+						<posx>102</posx>
+						<posy>150</posy>
+						<width>164</width>
+						<font>IconFont</font>
+						<textcolor>GreyColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>center</align>
+						<info>ListItem.Label</info>
+						<visible>Skin.HasSetting(ShowTVShowsIconLabel)</visible>
 					</control>
 				</itemlayout>
 				<itemlayout height="185" width="203">
@@ -58,7 +84,7 @@
 						<posy>20</posy>
 						<width>164</width>
 						<height>122</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 					</control>
@@ -73,12 +99,11 @@
 						<align>center</align>
 						<info>ListItem.Label</info>
 						<visible>![Container.Content(Movies) + Skin.HasSetting(HideMoviesIconLabel)] 
-						+ ![Container.Content(TVShows) + !Skin.HasSetting(ShowTVShowsIconLabel)]
 						+ ![[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(HideMusicIconLabel)]
 						+ ![Window.IsActive(Pictures) + Skin.HasSetting(HidePicturesIconLabel)]</visible>
 					</control>
 				</itemlayout>															
-				<focusedlayout condition="Container.Content(TVShows) + Skin.HasSetting(EnableIconTVShowsLogo)" height="185" width="203">
+				<focusedlayout condition="Container.Content(TVShows)" height="185" width="203">
 					<control type="image">
 						<description>Cover Focus</description>
 						<posx>0</posx>
@@ -90,24 +115,49 @@
 						<animation effect="fade" end="60" condition="true">Conditional</animation>
 					</control>
 					<control type="image">
-						<description>TV Logo</description>
-						<posx>20</posx>
-						<posy>20</posy>
-						<width>164</width>
-						<height>122</height>
-						<texture background="true">$INFO[ListItem.Path]logo.png</texture>
-						<aspectratio>keep</aspectratio>
-					</control>
-					<control type="image">
 						<description>Default Cover</description>
 						<posx>20</posx>
 						<posy>20</posy>
 						<width>164</width>
 						<height>122</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
-						<visible>IsEmpty(ListItem.Title)</visible>
-					</control>	
+						<visible>IsEmpty(ListItem.Title) | [IsEmpty(ListItem.Thumb) + ![Skin.HasSetting(UseTVShowsPosterCover) + Skin.HasSetting(UseTVShowsLocalPosterThumb)]
+						+ ![!Skin.HasSetting(UseTVShowsPosterCover) + Skin.HasSetting(UseTVShowsLocalBannerThumb)]]</visible>
+					</control>
+					<control type="image">
+						<description>Cover</description>
+						<posx>20</posx> 
+						<posy>20</posy>
+						<width>164</width>
+						<height>122</height>
+						<texture background="true">$VAR[TVShowsThumbTexture]</texture>
+						<aspectratio aligny="bottom">keep</aspectratio>
+						<bordertexture border="7">covers/cover-case-nofocus.png</bordertexture>
+						<bordersize>5</bordersize>
+						<visible>!Skin.HasSetting(EnableIconTVShowsLogo)</visible>
+					</control>
+					<control type="image">
+						<description>TV Logo</description>
+						<posx>20</posx> 
+						<posy>20</posy>
+						<width>164</width>
+						<height>122</height>
+						<texture background="true">$INFO[ListItem.Path]logo.png</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>Skin.HasSetting(EnableIconTVShowsLogo)</visible>
+					</control>
+					<control type="label">
+						<description>Label</description>
+						<posx>102</posx>
+						<posy>150</posy>
+						<width>164</width>
+						<font>IconFont</font>
+						<textcolor>SelectedColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>center</align>
+						<info>ListItem.Label</info>
+					</control>
 				</focusedlayout>
 				<focusedlayout height="185" width="203">
 					<control type="image">
@@ -137,7 +187,7 @@
 						<posy>20</posy>
 						<width>164</width>
 						<height>122</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 					</control>	
@@ -201,7 +251,31 @@
 				<ondown>51</ondown>
 				<onleft>850</onleft>
 				<onright>150</onright>
-				<itemlayout condition="Container.Content(TVShows) + Skin.HasSetting(EnableBigIconTVShowsLogo)" height="270" width="310">
+				<itemlayout condition="Container.Content(TVShows)" height="270" width="310">
+					<control type="image">
+						<description>Default Cover</description>
+						<posx>16</posx>
+						<posy>16</posy>
+						<width>278</width>
+						<height>210</height>
+						<bordersize>40</bordersize>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>IsEmpty(ListItem.Title) | [IsEmpty(ListItem.Thumb) + ![Skin.HasSetting(UseTVShowsPosterCover) + Skin.HasSetting(UseTVShowsLocalPosterThumb)]
+						+ ![!Skin.HasSetting(UseTVShowsPosterCover) + Skin.HasSetting(UseTVShowsLocalBannerThumb)]]</visible>
+					</control>
+					<control type="image">
+						<description>Cover</description>
+						<posx>16</posx>
+						<posy>16</posy>
+						<width>278</width>
+						<height>210</height>
+						<texture background="true">$VAR[TVShowsThumbTexture]</texture>
+						<aspectratio aligny="bottom">keep</aspectratio>
+						<bordertexture border="14">covers/cover-case-thumbnail-nofocus.png</bordertexture>
+						<bordersize>14</bordersize>
+						<visible>!Skin.HasSetting(EnableBigIconTVShowsLogo)</visible>
+					</control>
 					<control type="image">
 						<description>TV Logo</description>
 						<posx>16</posx>
@@ -211,18 +285,20 @@
 						<texture background="true">$INFO[ListItem.Path]logo.png</texture>
 						<aspectratio>keep</aspectratio>
 						<bordersize>14</bordersize>
+						<visible>Skin.HasSetting(EnableBigIconTVShowsLogo)</visible>
 					</control>
-					<control type="image">
-						<description>Default Cover</description>
-						<posx>16</posx>
-						<posy>16</posy>
+					<control type="label">
+						<description>Label</description>
+						<posx>155</posx>
+						<posy>240</posy>
 						<width>278</width>
-						<height>210</height>
-						<bordersize>40</bordersize>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<aspectratio>keep</aspectratio>
-						<visible>IsEmpty(ListItem.Title)</visible>
-					</control>
+						<font>BigIconFont</font>
+						<textcolor>GreyColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>center</align>
+						<info>ListItem.Label</info>	
+						<visible>Skin.HasSetting(ShowTVShowsBigIconLabel)</visible>
+					</control>	
 				</itemlayout>
 				<itemlayout height="270" width="310">
 					<control type="image">
@@ -243,7 +319,7 @@
 						<width>278</width>
 						<height>210</height>
 						<bordersize>40</bordersize>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 					</control>
@@ -257,12 +333,38 @@
 						<shadowcolor>ShadowColor</shadowcolor>
 						<align>center</align>
 						<info>ListItem.Label</info>	
-						<visible>![Container.Content(Movies) + Skin.HasSetting(HideMoviesBigIconLabel)] 
-						+ ![Container.Content(TVShows) + !Skin.HasSetting(ShowTVShowsBigIconLabel)]
+						<visible>![Container.Content(Movies) + Skin.HasSetting(HideMoviesBigIconLabel)]
 						+ ![[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(HideMusicBigIconLabel)]</visible>
 					</control>		
 				</itemlayout>															
-				<focusedlayout condition="Container.Content(TVShows) + Skin.HasSetting(EnableBigIconTVShowsLogo)" height="270" width="310">	
+				<focusedlayout condition="Container.Content(TVShows)" height="270" width="310">
+					<control type="image">
+						<description>Default Cover</description>
+						<posx>16</posx>
+						<posy>16</posy>
+						<width>278</width>
+						<height>210</height>
+						<bordertexture border="11">covers/cover-case-curved-focus.png</bordertexture>
+						<bordersize>40</bordersize>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>IsEmpty(ListItem.Title) | [IsEmpty(ListItem.Thumb) + ![Skin.HasSetting(UseTVShowsPosterCover) + Skin.HasSetting(UseTVShowsLocalPosterThumb)]
+						+ ![!Skin.HasSetting(UseTVShowsPosterCover) + Skin.HasSetting(UseTVShowsLocalBannerThumb)]]</visible>
+						<include>BigIconViewItemFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Cover</description>
+						<posx>16</posx>
+						<posy>16</posy>
+						<width>278</width>
+						<height>210</height>
+						<texture background="true">$VAR[TVShowsThumbTexture]</texture>
+						<aspectratio aligny="bottom">keep</aspectratio>
+						<bordertexture border="14">covers/cover-case-thumbnail-focus.png</bordertexture>
+						<bordersize>14</bordersize>
+						<visible>!Skin.HasSetting(EnableIconTVShowsLogo)</visible>
+						<include>BigIconViewItemFocusAnim</include>
+					</control>
 					<control type="image">
 						<description>TV Logo</description>
 						<posx>16</posx>
@@ -273,20 +375,19 @@
 						<aspectratio>keep</aspectratio>
 						<bordertexture border="11">covers/cover-case-curved-focus.png</bordertexture>
 						<bordersize>14</bordersize>
+						<visible>Skin.HasSetting(EnableIconTVShowsLogo)</visible>
 						<include>BigIconViewItemFocusAnim</include>
 					</control>
-					<control type="image">
-						<description>Default Cover</description>
-						<posx>16</posx>
-						<posy>16</posy>
+					<control type="label">
+						<description>Label</description>
+						<posx>155</posx>
+						<posy>240</posy>
 						<width>278</width>
-						<height>210</height>
-						<bordertexture border="11">covers/cover-case-curved-focus.png</bordertexture>
-						<bordersize>40</bordersize>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<aspectratio>keep</aspectratio>
-						<visible>IsEmpty(ListItem.Title)</visible>
-						<include>BigIconViewItemFocusAnim</include>
+						<font>BigIconFont</font>
+						<textcolor>SelectedColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>center</align>
+						<info>ListItem.Label</info>
 					</control>
 				</focusedlayout>
 				<focusedlayout height="270" width="310">	
@@ -310,7 +411,7 @@
 						<height>210</height>
 						<bordersize>40</bordersize>
 						<bordertexture border="11">covers/cover-case-curved-focus.png</bordertexture>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 						<include>BigIconViewItemFocusAnim</include>
@@ -667,7 +768,7 @@
 				<width>53</width>
 				<height>73</height>
 				<bordersize>5</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -734,6 +835,17 @@
 		<itemlayout condition="Container.Content(TVShows) + Window.IsActive(VideoLibrary)" height="74">
 			<include>ListTallStyleNoFocus</include>
 			<control type="image">
+				<description>Default Cover</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>53</width>
+				<height>73</height>
+				<bordersize>5</bordersize>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+				<aspectratio>keep</aspectratio>
+				<animation effect="fade" end="40" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
 				<description>Cover</description>
 				<posx>0</posx>
 				<posy>0</posy>
@@ -741,7 +853,7 @@
 				<height>73</height>
 				<bordertexture border="7">covers/cover-case-nofocus.png</bordertexture>
 				<bordersize>5</bordersize>
-				<texture background="true">$INFO[ListItem.Thumb]</texture>
+				<texture background="true">$VAR[TVShowsThumbTexture]</texture>
 				<aspectratio>scale</aspectratio>
 			</control>
 			<control type="image">
@@ -753,21 +865,8 @@
 				<bordersize>5</bordersize>
 				<texture background="true">dim.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<visible>!IsEmpty(ListItem.Thumb)</visible>
 				<include>CoverDimAnim</include>
-			</control>
-			<control type="image">
-				<description>Default Cover</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>53</width>
-				<height>73</height>
-				<bordersize>5</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
-				<aspectratio>keep</aspectratio>
-				<visible>IsEmpty(ListItem.Thumb)</visible>
-				<animation effect="fade" end="40" condition="true">Conditional</animation>
-			</control>								
+			</control>						
 			<control type="label">
 				<description>Label</description>
 				<posx>60</posx>
@@ -858,7 +957,7 @@
 				<width>97</width>
 				<height>73</height>
 				<bordersize>5</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -953,7 +1052,7 @@
 				<width>53</width>
 				<height>73</height>
 				<bordersize>5</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -1024,7 +1123,7 @@
 				<width>73</width>
 				<height>73</height>
 				<bordersize>10</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -1108,7 +1207,7 @@
 				<width>73</width>
 				<height>73</height>
 				<bordersize>10</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -1192,7 +1291,7 @@
 				<width>73</width>
 				<height>73</height>
 				<bordersize>10</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -1265,7 +1364,7 @@
 				<width>73</width>
 				<height>73</height>
 				<bordersize>10</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -1337,7 +1436,7 @@
 				<width>73</width>
 				<height>73</height>
 				<bordersize>5</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -1389,7 +1488,7 @@
 				<width>53</width>
 				<height>73</height>
 				<bordersize>5</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
@@ -1460,6 +1559,17 @@
 		<focusedlayout condition="Container.Content(TVShows) + Window.IsActive(VideoLibrary)" height="74">	
 			<include>ListTallStyleFocus</include>
 			<control type="image">
+				<description>Default Cover</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>53</width>
+				<height>73</height>
+				<bordersize>5</bordersize>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+				<aspectratio>keep</aspectratio>
+				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
+			</control>
+			<control type="image">
 				<description>Cover</description>
 				<posx>0</posx>
 				<posy>0</posy>
@@ -1467,22 +1577,10 @@
 				<height>73</height>
 				<bordertexture border="7">covers/cover-case-nofocus.png</bordertexture>
 				<bordersize>5</bordersize>
-				<texture background="true">$INFO[ListItem.Thumb]</texture>
+				<texture background="true">$VAR[TVShowsThumbTexture]</texture>
 				<aspectratio>scale</aspectratio>
 				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
 			</control>
-			<control type="image">
-				<description>Default Cover</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>53</width>
-				<height>73</height>
-				<bordersize>5</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
-				<aspectratio>keep</aspectratio>
-				<visible>IsEmpty(ListItem.Thumb)</visible>
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
-			</control>	
 			<control type="group">
 				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
 				<control type="label">
@@ -1566,7 +1664,7 @@
 				<width>97</width>
 				<height>73</height>
 				<bordersize>5</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
@@ -1654,7 +1752,7 @@
 				<width>53</width>
 				<height>73</height>
 				<bordersize>5</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
@@ -1718,7 +1816,7 @@
 				<width>73</width>
 				<height>73</height>
 				<bordersize>10</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
@@ -1795,7 +1893,7 @@
 				<width>73</width>
 				<height>73</height>
 				<bordersize>10</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
@@ -1872,7 +1970,7 @@
 				<width>73</width>
 				<height>73</height>
 				<bordersize>10</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
@@ -1938,7 +2036,7 @@
 				<width>73</width>
 				<height>73</height>
 				<bordersize>10</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
@@ -2003,7 +2101,7 @@
 				<width>73</width>
 				<height>73</height>
 				<bordersize>5</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
@@ -2175,6 +2273,47 @@
 			<onleft>850</onleft>
 			<onright>150</onright>
 			<visible>Container.Content(Movies) | Container.Content(Seasons) | [Container.Content(TVShows) + Skin.HasSetting(UseTVShowsPosterCover)]</visible>
+			<itemlayout condition="Container.Content(TVShows)" height="270" width="208">	
+				<control type="image">
+					<description>Cover Case</description>
+					<posx>11</posx>
+					<posy>0</posy>
+					<width>186</width>
+					<height>250</height>
+					<texture background="true" border="14">covers/cover-case-thumbnail-nofocus.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>11</posx>
+					<posy>0</posy>
+					<width>186</width>
+					<height>250</height>
+					<bordersize>25</bordersize>
+					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+					<aspectratio>keep</aspectratio>
+					<animation effect="fade" end="40" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<description>Cover</description>
+					<posx>11</posx>
+					<posy>0</posy>
+					<width>186</width>
+					<height>250</height>
+					<bordersize>14</bordersize>
+					<texture background="true">$VAR[TVShowsThumbTexture]</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<description>Overlay</description>
+					<posx>149</posx>
+					<posy>202</posy>
+					<width>24</width>
+					<height>24</height>
+					<texture background="true">$INFO[ListItem.Overlay]</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>	
+			</itemlayout>		
 			<itemlayout height="270" width="208">	
 				<control type="image">
 					<description>Cover Case</description>
@@ -2202,7 +2341,7 @@
 					<width>186</width>
 					<height>250</height>
 					<bordersize>25</bordersize>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 					<aspectratio>keep</aspectratio>
 					<visible>IsEmpty(ListItem.Thumb)</visible>
 					<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -2217,7 +2356,51 @@
 					<aspectratio>stretch</aspectratio>
 					<visible>!Skin.HasSetting(HideMoviesThumbnailOverlay)</visible>
 				</control>	
-			</itemlayout>															
+			</itemlayout>
+			<focusedlayout condition="Container.Content(TVShows)" height="270" width="208">	
+				<control type="group">
+					<animation effect="zoom" end="112" center="auto" time="100">Focus</animation>
+					<animation effect="zoom" start="112" end="100" center="auto" time="100">UnFocus</animation>
+					<control type="image">
+						<description>Cover Case</description>
+						<posx>11</posx>
+						<posy>0</posy>
+						<width>186</width>
+						<height>250</height>
+						<texture background="true" border="14">covers/cover-case-thumbnail-focus.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<description>Default Cover</description>
+						<posx>11</posx>
+						<posy>0</posy>
+						<width>186</width>
+						<height>250</height>
+						<bordersize>25</bordersize>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>	
+					<control type="image">
+						<description>Cover</description>
+						<posx>11</posx>
+						<posy>0</posy>
+						<width>186</width>
+						<height>250</height>
+						<bordersize>14</bordersize>
+						<texture background="true">$VAR[TVShowsThumbTexture]</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>		
+					<control type="image">
+						<description>Overlay</description>
+						<posx>149</posx>
+						<posy>202</posy>
+						<width>24</width>
+						<height>24</height>
+						<texture background="true">$INFO[ListItem.Overlay]</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+				</control>	
+			</focusedlayout>																	
 			<focusedlayout height="270" width="208">	
 				<control type="group">
 					<animation effect="zoom" end="112" center="auto" time="100">Focus</animation>
@@ -2248,7 +2431,7 @@
 						<width>186</width>
 						<height>250</height>
 						<bordersize>25</bordersize>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 					</control>			
@@ -2281,6 +2464,47 @@
 			<onleft>850</onleft>
 			<onright>150</onright>
 			<visible>Container.Content(Movies) | Container.Content(Seasons) | [Container.Content(TVShows) + Skin.HasSetting(UseTVShowsPosterCover)]</visible>
+			<itemlayout condition="Container.Content(TVShows)" height="179" width="138">	
+				<control type="image">
+					<description>Cover Case</description>
+					<posx>15</posx>
+					<posy>0</posy>
+					<width>122</width>
+					<height>163</height>
+					<texture background="true" border="14">covers/cover-case-thumbnail-nofocus.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>15</posx>
+					<posy>0</posy>
+					<width>122</width>
+					<height>163</height>
+					<bordersize>17</bordersize>
+					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+					<aspectratio>keep</aspectratio>
+					<animation effect="fade" end="40" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<description>Cover</description>
+					<posx>15</posx>
+					<posy>0</posy>
+					<width>122</width>
+					<height>163</height>
+					<bordersize>12</bordersize>
+					<texture background="true">$VAR[TVShowsThumbTexture]</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<description>Overlay</description>
+					<posx>100</posx>
+					<posy>126</posy>
+					<width>20</width>
+					<height>20</height>
+					<texture background="true">$INFO[ListItem.Overlay]</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>	
+			</itemlayout>
 			<itemlayout height="179" width="138">	
 				<control type="image">
 					<description>Cover Case</description>
@@ -2308,7 +2532,7 @@
 					<width>122</width>
 					<height>163</height>
 					<bordersize>17</bordersize>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 					<aspectratio>keep</aspectratio>
 					<visible>IsEmpty(ListItem.Thumb)</visible>
 					<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -2323,7 +2547,51 @@
 					<aspectratio>stretch</aspectratio>
 					<visible>!Skin.HasSetting(HideMoviesThumbnailOverlay)</visible>
 				</control>	
-			</itemlayout>															
+			</itemlayout>			
+			<focusedlayout condition="Container.Content(TVShows)" height="179" width="138">	
+				<control type="group">
+					<animation effect="zoom" end="116" center="auto" time="100">Focus</animation>
+					<animation effect="zoom" start="116" end="100" center="auto" time="100">UnFocus</animation>
+					<control type="image">
+						<description>Cover Case</description>
+						<posx>15</posx>
+						<posy>0</posy>
+						<width>122</width>
+						<height>163</height>
+						<texture background="true" border="14">covers/cover-case-thumbnail-focus.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<description>Default Cover</description>
+						<posx>15</posx>
+						<posy>0</posy>
+						<width>122</width>
+						<height>163</height>
+						<bordersize>17</bordersize>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>	
+					<control type="image">
+						<description>Cover</description>
+						<posx>15</posx>
+						<posy>0</posy>
+						<width>122</width>
+						<height>163</height>
+						<bordersize>12</bordersize>
+						<texture background="true">$VAR[TVShowsThumbTexture]</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>		
+					<control type="image">
+						<description>Overlay</description>
+						<posx>100</posx>
+						<posy>126</posy>
+						<width>20</width>
+						<height>20</height>
+						<texture background="true">$INFO[ListItem.Overlay]</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+				</control>	
+			</focusedlayout>
 			<focusedlayout height="179" width="138">	
 				<control type="group">
 					<animation effect="zoom" end="116" center="auto" time="100">Focus</animation>
@@ -2354,7 +2622,7 @@
 						<width>122</width>
 						<height>163</height>
 						<bordersize>17</bordersize>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 					</control>			
@@ -2369,7 +2637,7 @@
 						<visible>!Skin.HasSetting(HideMoviesThumbnailOverlay)</visible>
 					</control>
 				</control>	
-			</focusedlayout>			
+			</focusedlayout>
 		</control>
 	</include>
 	<!--//// END DVD THUMBS VIEW //////////////////////////////////////////////////////////////////////-->
@@ -2473,7 +2741,7 @@
 					<width>231</width>
 					<height>231</height>
 					<bordersize>45</bordersize>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 					<aspectratio>keep</aspectratio>
 					<visible>IsEmpty(ListItem.Thumb)</visible>
 					<animation effect="fade" end="40" condition="true">Conditional</animation>	
@@ -2509,7 +2777,7 @@
 						<width>231</width>
 						<height>231</height>
 						<bordersize>45</bordersize>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 					</control>
@@ -2559,7 +2827,7 @@
 					<width>168</width>
 					<height>168</height>
 					<bordersize>33</bordersize>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 					<aspectratio>keep</aspectratio>
 					<visible>IsEmpty(ListItem.Thumb)</visible>
 					<animation effect="fade" end="40" condition="true">Conditional</animation>
@@ -2595,7 +2863,7 @@
 						<width>168</width>
 						<height>168</height>
 						<bordersize>33</bordersize>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 					</control>
