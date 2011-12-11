@@ -13,6 +13,7 @@
 		<shadowcolor>ShadowColor</shadowcolor>
 		<align>center</align>
 		<aligny>center</aligny>
+		<scroll>yes</scroll>
 	</include>
 
 	<include name="DialogTitle2">
@@ -24,6 +25,7 @@
 		<shadowcolor>ShadowColor</shadowcolor>
 		<align>center</align>
 		<aligny>center</aligny>
+		<scroll>yes</scroll>
 	</include>
 
 	<include name="DialogTitle3">
@@ -35,6 +37,7 @@
 		<shadowcolor>ShadowColor</shadowcolor>
 		<align>center</align>
 		<aligny>center</aligny>
+		<scroll>yes</scroll>
 	</include>
 
 	<include name="SmallMediaInfoDialogTitle">
@@ -69,6 +72,7 @@
 		<shadowcolor>ShadowColor</shadowcolor>
 		<align>center</align>
 		<aligny>center</aligny>
+		<scroll>yes</scroll>
 	</include>
 
 	<include name="DialogHeadLabel">
