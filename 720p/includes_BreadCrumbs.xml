@@ -27,6 +27,11 @@
 		<scroll>false</scroll>
 	</include>
 	
+	<variable name="BreadCrumbTVShowTitleLabel">
+		<value condition="!IsEmpty(ListItem.TVShowTitle)">[UPPERCASE][B]$INFO[ListItem.TVShowTitle][/B][/UPPERCASE]</value>
+		<value condition="IsEmpty(ListItem.TVShowTitle)">[UPPERCASE][B]$INFO[ListItem(-1).TVShowTitle][/B][/UPPERCASE]</value>
+	</variable>
+	
 	<include name="BreadCrumbVideoLibrary">	
 		<control type="grouplist">
 			<posx>10</posx>
@@ -184,23 +189,15 @@
 			<control type="label" id="5519">
 				<description>TV Show Title</description>
 				<include>BreadCrumbLabel</include>
-				<label>[UPPERCASE][B]$INFO[ListItem.TVShowTitle][/B][/UPPERCASE]</label>
-				<visible>!IsEmpty(ListItem.TVShowTitle) + !StringCompare(Container.FolderPath,videodb://5/) + [Container.Content(Seasons) | Container.Content(Episodes)]</visible>
-				<include>BreadCrumbSlideLvl3Anim</include>
-			</control>
-			<control type="label" id="5520">
-				<description>TV Show Title</description>
-				<include>BreadCrumbLabel</include>
-				<label>[UPPERCASE][B]$INFO[ListItem(-1).TVShowTitle][/B][/UPPERCASE]</label>
-				<visible>IsEmpty(ListItem.TVShowTitle) + !StringCompare(Container.FolderPath,videodb://5/) + [Container.Content(Seasons) | Container.Content(Episodes)]</visible>
+				<label>$VAR[BreadCrumbTVShowTitleLabel]</label>
+				<visible>!StringCompare(Container.FolderPath,videodb://5/) + [Container.Content(Seasons) | Container.Content(Episodes)]</visible>
 				<include>BreadCrumbSlideLvl3Anim</include>
 			</control>
 			<control type="image">
 				<include>BreadCrumbSeparator</include>
 				<visible>Control.IsVisible(5505) | Control.IsVisible(5506) | Control.IsVisible(5507) | Control.IsVisible(5508) | Control.IsVisible(5509)
 				| Control.IsVisible(5510) | Control.IsVisible(5511) | Control.IsVisible(5512) | Control.IsVisible(5513) | Control.IsVisible(5514)
-				| Control.IsVisible(5515) | Control.IsVisible(5516) | Control.IsVisible(5517) | Control.IsVisible(5518) | Control.IsVisible(5519)
-				| Control.IsVisible(5520)</visible>
+				| Control.IsVisible(5515) | Control.IsVisible(5516) | Control.IsVisible(5517) | Control.IsVisible(5518) | Control.IsVisible(5519)</visible>
 				<include>BreadCrumbSlideLvl3Anim</include>
 			</control>
 			<control type="label" id="5521">
