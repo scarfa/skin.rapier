@@ -24,7 +24,7 @@
 			
 			<control type="grouplist">
 				<posx>DialogMarginOffsetX</posx>
-				<posy>60</posy>
+				<posy>55</posy>
 				<width>420</width>
 				<itemgap>25</itemgap>
 				<control type="label" id="2">
