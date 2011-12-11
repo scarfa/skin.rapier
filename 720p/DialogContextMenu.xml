@@ -12,7 +12,7 @@
 		<control type="group">	
 			<control type="image" id="997">
 				<description>Context Menu Top</description>
-				<posy>-50</posy>
+				<posy>-51</posy>
 				<width>344</width>
 				<height>50</height>
 				<texture border="40,49,40,0">gui/context-menu-top.png</texture>
@@ -20,7 +20,7 @@
 			
 			<control type="image" id="999">
 				<description>Context Menu Middle</description>
-				<posy>0</posy>
+				<posy>-1</posy>
 				<width>344</width>
 				<height>2</height>
 				<texture border="40,2,40,2">gui/context-menu-middle.png</texture>
@@ -35,7 +35,7 @@
 			</control>
 
 			<control type="label">
-				<posy>-24</posy>
+				<posy>-25</posy>
 				<width>264</width>
 				<include>DialogTitle</include>
 				<label>$LOCALIZE[33061]</label>
@@ -50,6 +50,7 @@
 			<control type="button" id="1000">
 				<description>Button Template</description>
 				<posx>32</posx>
+				<posy>1</posy>
 				<include>ContextMenuBtn</include>
 			</control>		
 		</control>		
