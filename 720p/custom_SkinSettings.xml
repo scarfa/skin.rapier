@@ -1,7 +1,48 @@
 <window type="window" id="3001">
 	<defaultcontrol always="true">855</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-
+	<onunload>Skin.Reset(ExpandedSettings)</onunload>
+	<!-- Home -->
+	<onunload>Skin.Reset(ExpandCategoryToggleSettings)</onunload>
+	<onunload>Skin.Reset(ExpandAddMoreCategorySettings)</onunload>
+	<onunload>Skin.Reset(ExpandAddMoreCategorySettings2)</onunload>
+	<onunload>Skin.Reset(ExpandAddMoreCategorySettings3)</onunload>
+	<onunload>Skin.Reset(ExpandAddMoreCategorySettings4)</onunload>
+	<onunload>Skin.Reset(ExpandMusicSubMenuSettings)</onunload>
+	<onunload>Skin.Reset(ExpandVideosSubMenuSettings)</onunload>
+	<onunload>Skin.Reset(ExpandMoviesSubMenuSettings)</onunload>
+	<onunload>Skin.Reset(ExpandTVShowsSubMenuSettings)</onunload>
+	<onunload>Skin.Reset(ExpandProgramsSubMenuSettings)</onunload>
+	<onunload>Skin.Reset(ExpandPicturesSubMenuSettings)</onunload>
+	<onunload>Skin.Reset(ExpandGeneralSubMenuSettings)</onunload>
+	<onunload>Skin.Reset(ExpandCustom1SubMenuSettings)</onunload>
+	<onunload>Skin.Reset(ExpandCustom2SubMenuSettings)</onunload>
+	<onunload>Skin.Reset(ExpandCustom3SubMenuSettings)</onunload>
+	<onunload>Skin.Reset(ExpandCustom4SubMenuSettings)</onunload>
+	<onunload>Skin.Reset(ExpandCustom5SubMenuSettings)</onunload>
+	<onunload>Skin.Reset(ExpandCustom6SubMenuSettings)</onunload>
+	<onunload>Skin.Reset(ExpandCustom7SubMenuSettings)</onunload>
+	<onunload>Skin.Reset(ExpandCustom8SubMenuSettings)</onunload>
+	<onunload>Skin.Reset(ExpandCustom9SubMenuSettings)</onunload>
+	<onunload>Skin.Reset(ExpandCustom10SubMenuSettings)</onunload>
+	<onunload>Skin.Reset(ExpandCustom11SubMenuSettings)</onunload>
+	<onunload>Skin.Reset(ExpandCustom12SubMenuSettings)</onunload>
+	<onunload>Skin.Reset(ExpandCustom13SubMenuSettings)</onunload>
+	<onunload>Skin.Reset(ExpandCustom14SubMenuSettings)</onunload>
+	<onunload>Skin.Reset(ExpandCustom15SubMenuSettings)</onunload>
+	<onunload>Skin.Reset(ExpandCustom16SubMenuSettings)</onunload>
+	<onunload>Skin.Reset(ExpandCustomCategoryIconsSettings)</onunload>
+	<!-- Backgrounds -->
+	<onunload>Skin.Reset(ExpandCustomDefaultBGSettings)</onunload>
+	<onunload>Skin.Reset(ExpandCustomMusicBGSettings)</onunload>
+	<onunload>Skin.Reset(ExpandCustomVideosBGSettings)</onunload>
+	<onunload>Skin.Reset(ExpandCustomMoviesBGSettings)</onunload>
+	<onunload>Skin.Reset(ExpandCustomTVShowsBGSettings)</onunload>
+	<onunload>Skin.Reset(ExpandCustomProgramsBGSettings)</onunload>
+	<onunload>Skin.Reset(ExpandCustomPicturesBGSettings)</onunload>
+	<onunload>Skin.Reset(ExpandCustomGeneralBGSettings)</onunload>
+	<onunload>Skin.Reset(ExpandCustomSystemBGSettings)</onunload>
+	
 	<controls>	
 		<control type="group">					
     		<include>BackgroundDefault</include>
