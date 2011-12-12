@@ -7,7 +7,8 @@
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/default/video/bluray.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
-			<visible>substring(ListItem.filename,.bluray) | substring(ListItem.filename,.blu-ray) | substring(ListItem.filename,.brrip)</visible>
+			<visible>substring(ListItem.filename,bluray) | substring(ListItem.filename,blu-ray) | substring(ListItem.filename,brrip)
+			| substring(ListItem.foldername,bluray) | substring(ListItem.foldername,blu-ray) | substring(ListItem.foldername,brrip)</visible>
 		</control>
 		<control type="image" id="601">
 			<description>HD DVD</description>
@@ -16,7 +17,8 @@
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/default/video/hddvd.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
-			<visible>substring(ListItem.filename,.hddvd) | substring(ListItem.filename,.hd-dvd)</visible>
+			<visible>substring(ListItem.filename,hddvd) | substring(ListItem.filename,hd-dvd)
+			| substring(ListItem.foldername,hddvd) | substring(ListItem.foldername,hd-dvd)</visible>
 		</control>
 			<control type="image" id="602">
 			<description>DVD</description>
@@ -25,7 +27,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/default/video/dvd.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
-			<visible>substring(ListItem.filename,.sddvd) | substring(ListItem.filename,.iso,right) | substring(ListItem.filename,.img,right) 
+			<visible>substring(ListItem.filename,sddvd) | substring(ListItem.foldername,sddvd) | substring(ListItem.filename,.iso,right) | substring(ListItem.filename,.img,right) 
 			| substring(ListItem.filename,.ifo,right) | substring(ListItem.filename,.vob,right)</visible>
 		</control>
 		<control type="image" id="603">
@@ -35,7 +37,8 @@
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/default/video/hdtv.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
-			<visible>substring(ListItem.filename,.hdtv) | substring(ListItem.filename,.hdrip)</visible>
+			<visible>substring(ListItem.filename,hdtv) | substring(ListItem.filename,hdrip)
+			| substring(ListItem.foldername,hdtv) | substring(ListItem.foldername,hdrip)</visible>
 		</control>
 		<control type="image" id="604">
 			<description>SDTV</description>
@@ -44,7 +47,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/default/video/sdtv.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
-			<visible>substring(ListItem.filename,.sdtv)</visible>
+			<visible>substring(ListItem.filename,sdtv) | substring(ListItem.foldername,sdtv)</visible>
 		</control>
 		<control type="image" id="605">
 			<description>DVD Rip</description>
@@ -53,7 +56,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/default/video/dvd.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
-			<visible>substring(ListItem.filename,.dvdrip)</visible>
+			<visible>substring(ListItem.filename,dvdrip) | substring(ListItem.foldername,dvdrip)</visible>
 		</control>
 		<control type="image" id="606">
 			<description>DVD R5</description>
@@ -62,7 +65,8 @@
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/default/video/dvd.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
-			<visible>substring(ListItem.filename,.dvdr5) | substring(ListItem.filename,.r5)</visible>
+			<visible>substring(ListItem.filename,.dvdr5) | substring(ListItem.filename,.r5)
+			| substring(ListItem.foldername,.dvdr5) | substring(ListItem.foldername,.r5)</visible>
 		</control>
 		<control type="image" id="607">
 			<description>DVD Screener</description>
@@ -71,7 +75,8 @@
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/default/video/dvd.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
-			<visible>substring(ListItem.filename,.dvdscreener) | substring(ListItem.filename,.dvdscr) | substring(ListItem.filename,.screener)</visible>
+			<visible>substring(ListItem.filename,.dvdscreener) | substring(ListItem.filename,.dvdscr) | substring(ListItem.filename,.screener)
+			| substring(ListItem.foldername,.dvdscreener) | substring(ListItem.foldername,.dvdscr) | substring(ListItem.foldername,.screener)</visible>
 		</control>
 		<control type="image" id="608">
 			<description>Telesync</description>
@@ -80,7 +85,8 @@
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/default/video/film.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
-			<visible>substring(ListItem.filename,.telesync) | substring(ListItem.filename,.ts.)</visible>
+			<visible>substring(ListItem.filename,.telesync) | substring(ListItem.filename,.ts.)
+			| substring(ListItem.foldername,.telesync) | substring(ListItem.foldername,.ts.)</visible>
 		</control>
 		<control type="image" id="609">
 			<description>Cam</description>
@@ -89,7 +95,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/default/video/film.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
-			<visible>substring(ListItem.filename,.cam)</visible>
+			<visible>substring(ListItem.filename,.cam) | substring(ListItem.foldername,.cam)</visible>
 		</control>
 	</include>
 	
