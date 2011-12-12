@@ -232,7 +232,9 @@
 				<description>Dialog Button Area</description>
 				<posx>80</posx>
 				<posy>407</posy>
+				<width>510</width>
 				<itemgap>0</itemgap>
+				<align>center</align>
 				<orientation>horizontal</orientation>	
 				<onup>450</onup>
 				<control type="button" id="413">
@@ -248,8 +250,19 @@
 				<control type="button" id="415">
 					<description>Create Folder</description>
 					<include>DialogMenuBarSmallBtn</include>
-					<label>$LOCALIZE[119]</label>	
-				</control>		
+					<label>$LOCALIZE[119]</label>
+					<visible>![Window.IsVisible(3001) + [Skin.HasSetting(ExpandAddMoreCategorySettings) | Skin.HasSetting(ExpandAddMoreCategorySettings2) | Skin.HasSetting(ExpandAddMoreCategorySettings3) | Skin.HasSetting(ExpandAddMoreCategorySettings4)]]</visible>
+				</control>
+				<control type="button" id="758">
+					<description>Browse</description>
+					<include>DialogMenuBarSmallBtn</include>
+					<label>$LOCALIZE[1024]</label>
+					<onclick>Dialog.Close(FileBrowser)</onclick>
+					<onclick>Skin.Reset(ExtraCategoriesPath)</onclick>
+					<onclick>Skin.SetImage(ExtraCategoriesPath)</onclick>
+					<visible>Window.IsVisible(3001) + [Skin.HasSetting(ExpandAddMoreCategorySettings) | Skin.HasSetting(ExpandAddMoreCategorySettings2) | Skin.HasSetting(ExpandAddMoreCategorySettings3) | Skin.HasSetting(ExpandAddMoreCategorySettings4)]
+					+ !IsEmpty(Skin.String(ExtraCategoriesPath))</visible>
+				</control>
 			</control>
 		</control>
 	</controls>	
