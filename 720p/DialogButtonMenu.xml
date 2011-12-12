@@ -285,7 +285,7 @@
 				<include>ContextMenuBtn</include>
 				<label>$LOCALIZE[24001]</label>
 				<onclick>ActivateWindow(AddonBrowser)</onclick>
-				<visible>Skin.HasSetting(HideSystemCategory)</visibles>
+				<visible>Skin.HasSetting(HideSystemCategory)</visible>
 			</control>
 		</control>
 		
