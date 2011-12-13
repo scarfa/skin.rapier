@@ -104,14 +104,10 @@
 			<orientation>horizontal</orientation>
 			<include>InfoPaneElementOpenCloseAnim</include>
 			<include>MediaFlagFadeAnim</include>
-			<include condition="!Skin.HasSetting(UseAltMediaFlagTheme)">VideoSourceMediaFlags</include>
-			<include condition="Skin.HasSetting(UseAltMediaFlagTheme)">VideoSourceAltMediaFlags</include>
-			<include condition="!Skin.HasSetting(UseAltMediaFlagTheme)">VideoCodecMediaFlags</include>
-			<include condition="Skin.HasSetting(UseAltMediaFlagTheme)">VideoCodecAltMediaFlags</include>
-			<include condition="!Skin.HasSetting(UseAltMediaFlagTheme)">AudioMediaFlags</include>
-			<include condition="Skin.HasSetting(UseAltMediaFlagTheme)">AudioAltMediaFlags</include>
-			<include condition="!Skin.HasSetting(UseAltMediaFlagTheme)">AspectMediaFlags</include>
-			<include condition="Skin.HasSetting(UseAltMediaFlagTheme)">AspectAltMediaFlags</include>
+			<include>VideoSourceMediaFlags</include>
+			<include>VideoCodecMediaFlags</include>
+			<include>AudioMediaFlags</include>
+			<include>AspectMediaFlags</include>
 		</control>
 	</include>
 
@@ -154,8 +150,7 @@
 		
 		<control type="group">
 			<visible>Container.Content(TVShows)</visible>
-			<include condition="!Skin.HasSetting(DisableMediaFlags) + !Skin.HasSetting(UseAltMediaFlagTheme)">StudioMediaFlag</include>
-			<include condition="!Skin.HasSetting(DisableMediaFlags) + Skin.HasSetting(UseAltMediaFlagTheme)">StudioAltMediaFlag</include>
+			<include>StudioMediaFlag</include>
 				
 			<control type="label">
 				<include>InfoPaneHeadLabel2</include>

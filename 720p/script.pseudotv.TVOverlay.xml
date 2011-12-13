@@ -163,12 +163,9 @@
 					<usecontrolcoords>true</usecontrolcoords>
 					<orientation>horizontal</orientation>
 					<include>MediaFlagFadeAnim</include>
-					<include condition="!Skin.HasSetting(UseAltMediaFlagTheme)">PlayerVideoMediaFlags</include>
-					<include condition="Skin.HasSetting(UseAltMediaFlagTheme)">PlayerVideoAltMediaFlags</include>
-					<include condition="!Skin.HasSetting(UseAltMediaFlagTheme)">PlayerAudioMediaFlags</include>
-					<include condition="Skin.HasSetting(UseAltMediaFlagTheme)">PlayerAudioAltMediaFlags</include>
-					<include condition="!Skin.HasSetting(UseAltMediaFlagTheme)">PlayerRatingMediaFlags</include>
-					<include condition="Skin.HasSetting(UseAltMediaFlagTheme)">PlayerRatingAltMediaFlags</include>
+					<include>PlayerVideoMediaFlags</include>
+					<include>PlayerAudioMediaFlags</include>
+					<include>PlayerRatingMediaFlags</include>
 				</control>
 			</control>
 
