@@ -1,8 +1,7 @@
 <window id="603">
 	<defaultcontrol always="true">29</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<include>DialogOpenCloseAnim</include>	
-
+	
 	<coordinates>
 		<system>1</system>
 		<origin x="305" y="85">true</origin>
@@ -11,6 +10,7 @@
 	<controls>
 		<control type="group">
 			<include>PVRTimerSettingsDialogBox</include>
+			<include>DialogOpenCloseAnim</include>	
 
 			<control type="label" id="2">
 				<description>Title</description>

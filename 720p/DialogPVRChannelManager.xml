@@ -1,7 +1,6 @@
 <window id="605">
 	<defaultcontrol always="true">6000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<include>DialogOpenCloseAnim</include>
 
 	<coordinates>
 		<system>1</system>
@@ -11,6 +10,7 @@
 	<controls>
 		<control type="group">
 			<include>PVRChannelManagerDialogBox</include>
+			<include>DialogOpenCloseAnim</include>
 			<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(PVRGroupManager)">Conditional</animation>
 
 			<control type="label">

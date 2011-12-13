@@ -4,9 +4,7 @@
 	<onload condition="System.HasAddon(script.favourites)">RunScript(script.favourites,playlists=window)</onload>
 	<onload condition="!System.HasAddon(script.favourites)">Notification(Missing Add-on!,Please install script.favourites,5000,)</onload>
 	<onload condition="!System.HasAddon(script.favourites)">Dialog.Close(3005)</onload>
-	
-	<include>DialogOpenCloseAnim</include>
-	
+
 	<coordinates>
 		<system>1</system>
 		<origin x="311" y="150">true</origin>
@@ -16,6 +14,7 @@
 		<control type="group">
 			<visible>System.HasAddon(script.favourites)</visible>
 			<include>FavouritesDialogBox</include>
+			<include>DialogOpenCloseAnim</include>
 			
 			<control type="label">
 				<include>DialogTitle</include>

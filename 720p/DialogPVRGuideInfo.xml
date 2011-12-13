@@ -1,7 +1,6 @@
 <window id="601">
 	<defaultcontrol always="true">7</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<include>DialogOpenCloseAnim</include>	
 
 	<coordinates>
 		<system>1</system>
@@ -11,6 +10,7 @@
 	<controls>
 		<control type="group">
 			<include>PVRGuideInfoDialogBox</include>
+			<include>DialogOpenCloseAnim</include>	
 
 			<control type="label">
 				<description>Title</description>

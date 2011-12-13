@@ -1,8 +1,7 @@
 <window id="123">
 	<defaultcontrol>5</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<include>DialogOpenCloseAnim</include>
-	
+
 	<coordinates>
 		<system>1</system>
 		<origin x="311" y="120">true</origin>
@@ -10,7 +9,8 @@
 
 	<controls>
 		<control type="group">
-			<include>ContentSettingsDialogBox</include>	
+			<include>ContentSettingsDialogBox</include>
+			<include>DialogOpenCloseAnim</include>
 			
 			<control type="label" id="1">
 				<include>DialogTitle</include>

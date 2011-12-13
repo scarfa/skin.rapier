@@ -1,78 +1,45 @@
 <window type="dialog" id="134">
 	<defaultcontrol always="true">450</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<include>DialogOpenCloseAnim</include>
-	
+
 	<coordinates>
 		<system>1</system>
 		<origin x="311" y="120">Window.IsActive(Home)</origin>
 		<origin x="311" y="150">true</origin>
 	</coordinates>
 
-	<controls>	
-		<include>FavouritesDialogBox</include>
+	<controls>
+		<control type="group">
+			<include>FavouritesDialogBox</include>
+			<include>DialogOpenCloseAnim</include>
 
-		<control type="label">
-			<include>DialogTitle</include>
-			<label>$LOCALIZE[1036]</label>
-		</control>
-		
-		<control type="group">		
-			<posx>DialogMarginOffsetX</posx>
-			<posy>DialogMarginOffsetY</posy>
-			
-			<control type="image">
-				<description>Paths Background</description>
-				<width>320</width>
-				<height>325</height>
-				<texture border="5">controls/button-nofocus.png</texture>
+			<control type="label">
+				<include>DialogTitle</include>
+				<label>$LOCALIZE[1036]</label>
 			</control>
 			
-			<control type="list" id="450">
-				<description>Paths</description>
-				<posx>5</posx>
-				<posy>5</posy>
-				<width>310</width>
-				<height>315</height>
-				<pagecontrol>912</pagecontrol>		
-				<onup>450</onup>
-				<ondown>450</ondown>
-				<onright>150</onright>
-				<itemlayout height="35">
-					<control type="image">
-						<posx>5</posx>
-						<posy>6</posy>
-						<width>23</width>
-						<height>23</height>
-						<info>ListItem.Icon</info>
-					</control>
-					<control type="label">
-						<posx>35</posx>
-						<width>270</width>
-						<height>35</height>
-						<font>ButtonFont2</font>
-						<textcolor>ButtonColor</textcolor>
-						<aligny>center</aligny>
-						<info>ListItem.Label</info>
-					</control>
-				</itemlayout>
-				<focusedlayout height="35">
-					<control type="image">
-						<width>310</width>
-						<height>35</height>
-						<texture border="5">controls/button-focus.png</texture>
-						<visible>Control.HasFocus(450)</visible>
-						<animation effect="slide" start="0,-35" time="200" tween="quadratic" easing="out" reversible="false" condition="Container(450).OnNext">Focus</animation>
-						<animation effect="slide" start="0,35" time="200" tween="quadratic" easing="out" reversible="false" condition="Container(450).OnPrevious">Focus</animation>
-					</control>
-					<control type="image">
-						<width>310</width>
-						<height>35</height>
-						<texture border="5">controls/button-alt-focus.png</texture>
-						<visible>!Control.HasFocus(450)</visible>
-					</control>
-					<control type="group">
-						<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+			<control type="group">		
+				<posx>DialogMarginOffsetX</posx>
+				<posy>DialogMarginOffsetY</posy>
+				
+				<control type="image">
+					<description>Paths Background</description>
+					<width>320</width>
+					<height>325</height>
+					<texture border="5">controls/button-nofocus.png</texture>
+				</control>
+				
+				<control type="list" id="450">
+					<description>Paths</description>
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>310</width>
+					<height>315</height>
+					<pagecontrol>912</pagecontrol>		
+					<onup>450</onup>
+					<ondown>450</ondown>
+					<onright>150</onright>
+					<itemlayout height="35">
 						<control type="image">
 							<posx>5</posx>
 							<posy>6</posy>
@@ -85,27 +52,62 @@
 							<width>270</width>
 							<height>35</height>
 							<font>ButtonFont2</font>
-							<textcolor>ButtonFocusColor</textcolor>
+							<textcolor>ButtonColor</textcolor>
 							<aligny>center</aligny>
 							<info>ListItem.Label</info>
 						</control>
-					</control>
-				</focusedlayout>
-			</control>	
-			
-			<include>FavouritesScrollbar</include>
-			
-			<control type="image">
-				<description>Thumbnail</description>
-				<posx>360</posx>
-				<posy>20</posy>
-				<width>226</width>
-				<height>295</height>
-				<info>ListItem.Icon</info>
-				<aspectratio align="center">keep</aspectratio>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<include>ControlsOpenCloseAnim</include>
+					</itemlayout>
+					<focusedlayout height="35">
+						<control type="image">
+							<width>310</width>
+							<height>35</height>
+							<texture border="5">controls/button-focus.png</texture>
+							<visible>Control.HasFocus(450)</visible>
+							<animation effect="slide" start="0,-35" time="200" tween="quadratic" easing="out" reversible="false" condition="Container(450).OnNext">Focus</animation>
+							<animation effect="slide" start="0,35" time="200" tween="quadratic" easing="out" reversible="false" condition="Container(450).OnPrevious">Focus</animation>
+						</control>
+						<control type="image">
+							<width>310</width>
+							<height>35</height>
+							<texture border="5">controls/button-alt-focus.png</texture>
+							<visible>!Control.HasFocus(450)</visible>
+						</control>
+						<control type="group">
+							<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+							<control type="image">
+								<posx>5</posx>
+								<posy>6</posy>
+								<width>23</width>
+								<height>23</height>
+								<info>ListItem.Icon</info>
+							</control>
+							<control type="label">
+								<posx>35</posx>
+								<width>270</width>
+								<height>35</height>
+								<font>ButtonFont2</font>
+								<textcolor>ButtonFocusColor</textcolor>
+								<aligny>center</aligny>
+								<info>ListItem.Label</info>
+							</control>
+						</control>
+					</focusedlayout>
+				</control>	
+				
+				<include>FavouritesScrollbar</include>
+				
+				<control type="image">
+					<description>Thumbnail</description>
+					<posx>360</posx>
+					<posy>20</posy>
+					<width>226</width>
+					<height>295</height>
+					<info>ListItem.Icon</info>
+					<aspectratio align="center">keep</aspectratio>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<include>ControlsOpenCloseAnim</include>
+				</control>
 			</control>
-		</control>					
+		</control>
 	</controls>	
 </window>

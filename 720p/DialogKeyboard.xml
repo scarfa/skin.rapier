@@ -1,8 +1,7 @@
 <window id="103">
 	<defaultcontrol always="true">65</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<include>DialogOpenCloseAnim</include>
-	
+
 	<coordinates>
 		<system>1</system>
 		<origin x="306" y="150">true</origin>
@@ -11,6 +10,7 @@
 	<controls>
 		<control type="group">
 			<include>KeyboardDialogBox</include>
+			<include>DialogOpenCloseAnim</include>
 			<animation effect="fade" start="100" end="30" time="250" condition="Window.IsActive(NumericInput)">Conditional</animation>	
 			
 			<control type="label" id="311">

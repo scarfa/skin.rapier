@@ -1,8 +1,7 @@
 <window id="129">
 	<defaultcontrol always="true">15</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<include>DialogOpenCloseAnim</include>
-	
+
 	<coordinates>
 		<system>1</system>
 		<origin x="305" y="200">true</origin>
@@ -11,6 +10,7 @@
 	<controls>
 		<control type="group">
 			<include>SmartPlaylistRuleDialogBox</include>
+			<include>DialogOpenCloseAnim</include>
 			<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(VirtualKeyboard)">Conditional</animation>
 			
 			<control type="label" id="2">

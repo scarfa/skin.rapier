@@ -1,7 +1,6 @@
 <window>
 	<allowoverlay>no</allowoverlay>
-	<include>DialogOpenCloseAnim</include>
-	
+
 	<coordinates>
 		<system>1</system>
 		<posx>22</posx>
@@ -11,6 +10,7 @@
 	<controls>
 		<control type="group">
 			<include>SettingsDialogBox</include>
+			<include>DialogOpenCloseAnim</include>
 			<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(AddonSettings)">Conditional</animation>
 		
 		

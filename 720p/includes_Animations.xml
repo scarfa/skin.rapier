@@ -16,56 +16,56 @@
 	
 	<include name="DialogOpenCloseAnim">
 		<animation type="WindowOpen">
-			<effect type="fade" end="100" time="150"/>
-			<effect type="slide" start="0,-45" time="200" tween="circle" easing="out"/>
+			<effect type="fade" end="100" time="325"/>
+			<effect type="slide" start="0,-15" time="400" tween="cubic" easing="out"/>
 		</animation>	
 		<animation type="WindowClose">
-			<effect type="fade" end="0" time="150" />
-			<effect type="slide" end="0,45" time="200" tween="circle" easing="out"/>
+			<effect type="fade" end="0" time="325" />
+			<effect type="slide" end="0,-15" time="400" tween="cubic" easing="out"/>
 		</animation>
 	</include>
 	
 	<include name="BottomPaneOpenCloseAnim">
 		<animation type="WindowOpen" reversible="false">
 			<effect type="fade" time="300"/>
-			<effect type="slide" start="0,45" time="350" tween="quadratic" easing="out"/>	
+			<effect type="slide" start="0,25" time="500" tween="cubic" easing="out"/>	
 		</animation>
 		
 		<animation type="WindowClose" reversible="false">
-			<effect type="fade" time="200"/>
-			<effect type="slide" end="0,45" time="250" tween="quadratic" easing="out"/>	
+			<effect type="fade" time="300"/>
+			<effect type="slide" end="0,25" time="400" tween="cubic" easing="out"/>	
 		</animation>
 		
 		<animation type="Visible" reversible="false">
 			<effect type="fade" time="300"/>
-			<effect type="slide" start="0,45" time="350" tween="quadratic" easing="out"/>	
+			<effect type="slide" start="0,25" time="500" tween="cubic" easing="out"/>	
 		</animation>
 		
 		<animation type="Hidden" reversible="false">
-			<effect type="fade" time="200"/>
-			<effect type="slide" end="0,45" time="250" tween="quadratic" easing="out"/>	
+			<effect type="fade" time="300"/>
+			<effect type="slide" end="0,25" time="400" tween="cubic" easing="out"/>	
 		</animation>
 	</include>
 	
 	<include name="TopPaneOpenCloseAnim">
 		<animation type="WindowOpen" reversible="false">
-			<effect type="fade" time="300"/>
-			<effect type="slide" start="0,-45" time="400" tween="circle" easing="out"/>	
+			<effect type="fade" time="350"/>
+			<effect type="slide" start="0,-35" time="550" tween="cubic" easing="out"/>	
 		</animation>
 		
 		<animation type="WindowClose" reversible="false">
 			<effect type="fade" time="300"/>
-			<effect type="slide" end="0,-45" time="400" tween="circle" easing="out"/>	
+			<effect type="slide" end="0,-35" time="400" tween="cubic" easing="out"/>	
 		</animation>
 		
 		<animation type="Visible" reversible="false">
-			<effect type="fade" time="300"/>
-			<effect type="slide" start="0,-45" time="400" tween="circle" easing="out"/>	
+			<effect type="fade" time="350"/>
+			<effect type="slide" start="0,-35" time="550" tween="cubic" easing="out"/>	
 		</animation>
 		
 		<animation type="Hidden" reversible="false">
 			<effect type="fade" time="300"/>
-			<effect type="slide" end="0,-45" time="400" tween="circle" easing="out"/>	
+			<effect type="slide" end="0,-35" time="400" tween="cubic" easing="out"/>	
 		</animation>
 	</include>
 
@@ -120,8 +120,8 @@
 	</include>
 	
 	<include name="TopBarOpenCloseAnim">
-		<animation effect="slide" start="0,-45" time="350" tween="quadratic" easing="out">WindowOpen</animation>
-		<animation effect="slide" end="0,-45" time="250" tween="quadratic" easing="out">WindowClose</animation>
+		<animation effect="slide" start="0,-45" time="400" tween="cubic" easing="out">WindowOpen</animation>
+		<animation effect="slide" end="0,-45" time="400" tween="cubic" easing="out">WindowClose</animation>
 	</include>
 		
 	<include name="StatusIconFadeAnim">
@@ -134,23 +134,23 @@
 	
 	<include name="MenuBarOpenCloseAnim">		
 		<animation type="Visible">
-			<effect type="fade" start="0" end="100" time="150"/>
-			<effect type="slide" start="0,-24" time="200"/>	
+			<effect type="fade" start="0" end="100" time="250"/>
+			<effect type="slide" start="0,-15" time="400" tween="cubic" easing="out"/>	
 		</animation>
 		
 		<animation type="Hidden">
-			<effect type="fade" start="100" end="0" time="100"/>
-			<effect type="slide" end="0,-24" time="150"/>	
+			<effect type="fade" start="100" end="0" time="150"/>
+			<effect type="slide" end="0,-15" time="300" tween="cubic" easing="out"/>	
 		</animation>
 		
 		<animation type="WindowOpen">
-			<effect type="fade" start="0" end="100" time="150" delay="350"/>
-			<effect type="slide" start="0,-24" time="200" delay="350"/>	
+			<effect type="fade" start="0" end="100" time="250" delay="350"/>
+			<effect type="slide" start="0,-15" time="400" delay="350" tween="cubic" easing="out"/>	
 		</animation>
 		
 		<animation type="WindowClose">
-			<effect type="fade" start="100" end="0" time="100"/>
-			<effect type="slide" end="0,-24" time="150"/>	
+			<effect type="fade" start="100" end="0" time="50"/>
+			<effect type="slide" end="0,-15" time="100" tween="cubic" easing="out"/>	
 		</animation>
 	</include>
 
@@ -299,11 +299,17 @@
 	</include>
 	
 	<include name="HomeMenuPaneOpenCloseAnim">
-		<animation effect="slide" start="0,126" time="350" tween="quadratic" easing="out">WindowOpen</animation>
-		<animation effect="slide" end="0,126" time="250" tween="quadratic" easing="out">WindowClose</animation>
-		<animation effect="slide" end="0,126" time="250" condition="Window.IsActive(PlayerControls) | Window.IsActive(ShutdownMenu) | Window.IsActive(NumericInput)">Conditional</animation>
+		<animation type="WindowOpen" reversible="false">
+			<effect type="fade" time="450"/>
+			<effect type="slide" start="0,80" time="600" tween="cubic" easing="out"/>	
+		</animation>
+		
+		<animation type="WindowClose" reversible="false">
+			<effect type="fade" time="300"/>
+			<effect type="slide" end="0,126" time="500" tween="cubic" easing="out"/>	
+		</animation>
 	</include>
-
+	
 	<include name="HomeRightPanelOpenCloseAnim">
 		<animation type="WindowOpen" reversible="false">
 			<effect type="fade" end="100" time="250"/>

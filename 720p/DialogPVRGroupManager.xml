@@ -1,6 +1,5 @@
 <window id="604">
 	<defaultcontrol always="true">9002</defaultcontrol>
-	<include>DialogOpenCloseAnim</include>
 
 	<coordinates>
 		<system>1</system>
@@ -11,6 +10,7 @@
 		<control type="group">
 			<visible>!Window.IsVisible(FileBrowser)</visible>
 			<include>PVRGroupManagerDialogBox</include>
+			<include>DialogOpenCloseAnim</include>
 
 			<control type="label">
 				<description>Title</description>

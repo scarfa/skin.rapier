@@ -1,8 +1,7 @@
 <window id="135">
 	<defaultcontrol always="true">11</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<include>DialogOpenCloseAnim</include>
-	
+
 	<coordinates>
 		<system>1</system>
 		<origin x="215" y="180">true</origin>
@@ -10,6 +9,7 @@
 	
 	<controls>
 		<control type="group">
+			<include>DialogOpenCloseAnim</include>
 			<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(MusicInformation)">Conditional</animation>	
 	
 			<include>SmallMediaInfoDialogBox</include>
