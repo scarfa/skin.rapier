@@ -1549,25 +1549,27 @@
 					</control>
 					
 					<control type="image">
-						<posx>9</posx>
-						<posy>12</posy>
-						<width>5</width>
-						<height>16</height>
-						<texture>views/genre-marker.png</texture>
+						<posx>8</posx>
+						<posy>8</posy>
+						<width>300</width>
+						<height>25</height>
+						<texture border="4">panels/panel3.png</texture>
 						<visible>!IsEmpty(ListItem.Genre)</visible>
+						<animation effect="fade" end="35" condition="true">Conditional</animation>
 					</control>
 								
 					<control type="label">
 						<description>Genre</description>
 						<posx>16</posx>
-						<posy>18</posy>
-						<width>522</width>
+						<posy>19</posy>
+						<width>284</width>
 						<font>MediaInfoFont3</font>
 						<textcolor>MediaInfoTitleColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<aligny>center</aligny>
 						<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
 						<scroll>false</scroll>
+						<animation effect="fade" end="75" condition="true">Conditional</animation>
 					</control>
 				</control>
 				
@@ -1848,25 +1850,27 @@
 					</control>
 					
 					<control type="image">
-						<posx>9</posx>
-						<posy>12</posy>
-						<width>5</width>
-						<height>16</height>
-						<texture>views/genre-marker.png</texture>
+						<posx>8</posx>
+						<posy>8</posy>
+						<width>300</width>
+						<height>25</height>
+						<texture border="4">panels/panel3.png</texture>
 						<visible>!IsEmpty(ListItem.Property(Artist_Genre))</visible>
+						<animation effect="fade" end="35" condition="true">Conditional</animation>
 					</control>
 								
 					<control type="label">
 						<description>Genre</description>
 						<posx>16</posx>
-						<posy>18</posy>
-						<width>522</width>
+						<posy>19</posy>
+						<width>284</width>
 						<font>MediaInfoFont3</font>
 						<textcolor>MediaInfoTitleColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<aligny>center</aligny>
 						<label>[UPPERCASE]$INFO[ListItem.Property(Artist_Genre)][/UPPERCASE]</label>
 						<scroll>false</scroll>
+						<animation effect="fade" end="75" condition="true">Conditional</animation>
 					</control>
 				</control>
 				
@@ -2628,25 +2632,27 @@
 					</control>
 					
 					<control type="image">
-						<posx>9</posx>
-						<posy>12</posy>
-						<width>5</width>
-						<height>16</height>
-						<texture>views/genre-marker.png</texture>
+						<posx>8</posx>
+						<posy>8</posy>
+						<width>300</width>
+						<height>25</height>
+						<texture border="4">panels/panel3.png</texture>
 						<visible>!IsEmpty(ListItem.Genre)</visible>
+						<animation effect="fade" end="35" condition="true">Conditional</animation>
 					</control>
 								
 					<control type="label">
 						<description>Genre</description>
 						<posx>16</posx>
-						<posy>18</posy>
-						<width>368</width>
+						<posy>19</posy>
+						<width>284</width>
 						<font>MediaInfoFont3</font>
 						<textcolor>MediaInfoTitleColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<aligny>center</aligny>
 						<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
 						<scroll>false</scroll>
+						<animation effect="fade" end="75" condition="true">Conditional</animation>
 					</control>
 				</control>
 				
@@ -2946,25 +2952,27 @@
 					</control>
 					
 					<control type="image">
-						<posx>9</posx>
-						<posy>12</posy>
-						<width>5</width>
-						<height>16</height>
-						<texture>views/genre-marker.png</texture>
+						<posx>8</posx>
+						<posy>8</posy>
+						<width>300</width>
+						<height>25</height>
+						<texture border="4">panels/panel3.png</texture>
 						<visible>!IsEmpty(ListItem.Genre)</visible>
+						<animation effect="fade" end="35" condition="true">Conditional</animation>
 					</control>
 								
 					<control type="label">
 						<description>Genre</description>
 						<posx>16</posx>
-						<posy>18</posy>
-						<width>368</width>
+						<posy>19</posy>
+						<width>284</width>
 						<font>MediaInfoFont3</font>
 						<textcolor>MediaInfoTitleColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<aligny>center</aligny>
 						<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
 						<scroll>false</scroll>
+						<animation effect="fade" end="75" condition="true">Conditional</animation>
 					</control>
 				</control>
 				
