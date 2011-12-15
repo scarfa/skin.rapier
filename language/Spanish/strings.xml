@@ -47,7 +47,6 @@
 <string id="32024">Recargar Piel...</string>
 <string id="32025">Reiniciar Piel</string>
 <string id="32026">Los ajustes de piel volverá a la configuración por defecto. Pulse para confirmar.</string>
-<string id="32027">Editor</string>
 <string id="32027">Plataforma</string>
 <string id="32028">Editor</string>
 <string id="32029">Obtener información</string>
@@ -126,13 +125,15 @@
 <string id="31404">Poster Covers</string>
 <string id="31014">Extra Thumbs</string>
 <string id="31015">Extra Fanart</string>
-<string id="31016">TV Logos</string>
+<string id="31016">Usar Logo Local</string>
+<string id="31017">Usar Poster Local</string>
+<string id="31019">Usar Banner Local</string>
 <string id="31407">Usa Visualización Para Fondo</string>
 <string id="31408">Usa Artista Fanart Para Fondo</string>
 <string id="31409">Activa Música Visualización / Artista Fanart En Fondo</string>
 <string id="31410">Activa Reproducción de Video en Fondo</string>
 <string id="31412">Pequeño</string>
-<string id="31413">Grande</string>
+<string id="31413">Amplio</string>
 <string id="31414">Mostrar Más Fanart</string>
 <string id="31415">Usar Color Flag por Defecto</string>
 <string id="31416">Usar Color Flag Blanco</string>
@@ -163,14 +164,21 @@
 <!-- skin settings add-ons -->
 <string id="31500">Mostrar Botón de Subtitulos En OSD</string>
 <string id="31501">Mostrar Botón de Letras En OSD</string>
-<string id="31502">Ejecutar Logo Downloader</string>
+<string id="31502">Descargar Artwork</string>
+<string id="31503">Poster</string>
+<string id="31504">Banner</string>
+<string id="31507">Clear Art</string>
+<string id="31508">Clear Logo</string>
+<string id="31509">Thumb TV</string>
+<string id="31510">Carácter Art</string>
+<string id="31511">Thumb por Defecto</string>
 
 <!--temporary strings until PVR related strings are present in xbmc main branch-->
 <string id="31900">TV</string>
 <string id="31901">Ocultar Radio</string>
 <string id="31902">Grupos Disponibles</string>
 <string id="31903">Canales Ocultos</string>
-<string id="31904">Anadir Grupo</string>
+<string id="31904">Añadir Grupo</string>
 <string id="31905">Renombrar Grupo</string>
 <string id="31906">Eliminar Grupo</string>
 </strings>
