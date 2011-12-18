@@ -53,7 +53,15 @@
 					<altlabel>$LOCALIZE[31408]</altlabel>
 					<usealttexture>Skin.HasSetting(UseFanartForMusicPlayingBG)</usealttexture>
 					<onclick>Skin.ToggleSetting(UseFanartForMusicPlayingBG)</onclick>
-					<enable>!Skin.HasSetting(DisableMusicPlayingBG)</enable>
+				</control>
+				<control type="radiobutton" id="3018">
+					<description>Artist Fanart Slideshow</description>
+					<include>SettingsContentRadioBtn</include>
+					<label>$LOCALIZE[20425] [COLOR=DisabledColor]($LOCALIZE[24000] script.artistslideshow)[/COLOR]</label>
+					<selected>Skin.HasSetting(EnableArtistFanartSlideshow)</selected>
+					<onclick>Skin.ToggleSetting(EnableArtistFanartSlideshow)</onclick>
+					<visible>Skin.HasSetting(UseFanartForMusicPlayingBG)</visible>
+					<enable>System.HasAddon(script.artistslideshow)</enable>
 				</control>
 				<control type="radiobutton" id="3006">
 					<description>Animate Fanart</description>
@@ -61,9 +69,7 @@
 					<label>$LOCALIZE[31063]</label>
 					<selected>Skin.HasSetting(AnimateFanartMusicPlayingBG)</selected>
 					<onclick>Skin.ToggleSetting(AnimateFanartMusicPlayingBG)</onclick>
-					<onclick>ReloadSkin()</onclick>
-					<include>ReloadSkinNotification</include>
-					<enable>!Skin.HasSetting(DisableMusicPlayingBG) + Skin.HasSetting(UseFanartForMusicPlayingBG)</enable>
+					<visible>Skin.HasSetting(UseFanartForMusicPlayingBG)</visible>
 				</control>
 				<control type="button" id="3007">
 					<description>Video Playing Label</description>

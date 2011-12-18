@@ -1,6 +1,7 @@
 <window id="2006">
 	<defaultcontrol>-</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
+	<onload condition="System.HasAddon(script.artistslideshow) + Skin.HasSetting(UseFanartForMusicPlayingBG) + Skin.HasSetting(EnableArtistFanartSlideshow)">RunScript(script.artistslideshow)</onload>
 	
 	<controls>
 		<control type="visualisation" id="2">
@@ -8,15 +9,10 @@
 			<include>ScreenSize</include>
 			<visible>!Skin.HasSetting(UseFanartForMusicPlayingBG)</visible>
 		</control>
-
-		<control type="image">
-			<description>Artist Fanart</description>
-			<include>ScreenSize</include>
-			<texture>$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
-			<aspectratio aligny="top">scale</aspectratio>
-			<visible>Skin.HasSetting(UseFanartForMusicPlayingBG)</visible>
-		</control>
 		
+		<include condition="Skin.HasSetting(UseFanartForMusicPlayingBG) + !Skin.HasSetting(EnableArtistFanartSlideshow)">MusicPlayingArtistFanart</include>
+		<include condition="Skin.HasSetting(UseFanartForMusicPlayingBG) + Skin.HasSetting(EnableArtistFanartSlideshow)">MusicPlayingArtistFanartSlideshow</include>
+			
 		<control type="group">
 			<description>Song Info Panel</description>
 			<posx>28</posx>

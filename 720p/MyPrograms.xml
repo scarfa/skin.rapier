@@ -2,6 +2,7 @@
 	<defaultcontrol always="true">500</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<views>50,51,52,90,91,93,590,591,592,593,594,595,596,597,598</views>
+	<onload condition="System.HasAddon(script.artistslideshow) + Skin.HasSetting(UseFanartForMusicPlayingBG) + Skin.HasSetting(EnableArtistFanartSlideshow)">RunScript(script.artistslideshow)</onload>
 	
 	<controls>
 		<control type="group">	

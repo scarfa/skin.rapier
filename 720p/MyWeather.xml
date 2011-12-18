@@ -2,6 +2,7 @@
 	<defaultcontrol always="true">850</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<onload condition="IsEmpty(Weather.Plugin)">Notification($LOCALIZE[31310],$LOCALIZE[31311],10000,)</onload>
+	<onload condition="System.HasAddon(script.artistslideshow) + Skin.HasSetting(UseFanartForMusicPlayingBG) + Skin.HasSetting(EnableArtistFanartSlideshow)">RunScript(script.artistslideshow)</onload>
 	
 	<controls>
 		<control type="group"> 	

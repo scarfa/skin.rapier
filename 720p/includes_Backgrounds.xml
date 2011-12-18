@@ -223,15 +223,9 @@
 				<include>BackgroundSize</include>
 				<visible>!Skin.HasSetting(UseFanartForMusicPlayingBG)</visible>
 			</control>	
-
-			<control type="image">
-				<description>Artist Fanart</description>
-				<include>BackgroundSize</include>
-				<texture>$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
-				<visible>Skin.HasSetting(UseFanartForMusicPlayingBG)</visible>
-				<include condition="Skin.HasSetting(AnimateFanartMusicPlayingBG)">FanartBackgroundAnim</include>
-			</control>
-
+			
+			<include condition="Skin.HasSetting(UseFanartForMusicPlayingBG) + !Skin.HasSetting(EnableArtistFanartSlideshow)">MusicPlayingArtistFanart</include>
+			<include condition="Skin.HasSetting(UseFanartForMusicPlayingBG) + Skin.HasSetting(EnableArtistFanartSlideshow)">MusicPlayingArtistFanartSlideshow</include>
 			<include condition="!Skin.HasSetting(UseFanartForMusicPlayingBG) + !Window.IsActive(Home)">MediaPlayingVizDim</include>
 			<include condition="Skin.HasSetting(UseFanartForMusicPlayingBG) + !Window.IsActive(Home)">MediaPlayingFanartDim</include>
 			<include condition="Window.IsActive(Home)">HomeBackgroundDim</include>
@@ -554,5 +548,28 @@
 
 	<include name="IsMediaPlayingCondition">
 		<visible>!Player.HasMedia</visible>
+	</include>
+	
+	<include name="MusicPlayingArtistFanart">
+		<control type="image">
+			<include>ScreenSize</include>
+			<texture>$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
+			<aspectratio>scale</aspectratio>
+			<include condition="Skin.HasSetting(AnimateFanartMusicPlayingBG)">FanartBackgroundAnim</include>
+		</control>
+	</include>
+	
+	<include name="MusicPlayingArtistFanartSlideshow">
+		<control type="multiimage">
+			<include>BackgroundSize</include>
+			<imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
+			<aspectratio>scale</aspectratio>
+			<timeperimage>10000</timeperimage>
+			<fadetime>BackgroundCrossfadeTime</fadetime>
+			<randomize>true</randomize>
+			<visible>IsEmpty(Window(Visualisation).Property(ArtistSlideshowRefresh))</visible>
+			<animation effect="fade" start="0" end="100" time="300">VisibleChange</animation>
+			<include condition="Skin.HasSetting(AnimateFanartMusicPlayingBG)">FanartBackgroundAnim</include>
+		</control>
 	</include>
 </includes>

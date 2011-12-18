@@ -1,7 +1,8 @@
 <window type="window" id="7">
 	<defaultcontrol always="true">850</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-
+	<onload condition="System.HasAddon(script.artistslideshow) + Skin.HasSetting(UseFanartForMusicPlayingBG) + Skin.HasSetting(EnableArtistFanartSlideshow)">RunScript(script.artistslideshow)</onload>
+	
 	<controls>
 		<control type="group">					
     		<include>BackgroundDefault</include>
