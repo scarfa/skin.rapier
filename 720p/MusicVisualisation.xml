@@ -10,8 +10,9 @@
 			<visible>!Skin.HasSetting(UseFanartForMusicPlayingBG)</visible>
 		</control>
 		
-		<include condition="Skin.HasSetting(UseFanartForMusicPlayingBG) + !Skin.HasSetting(EnableArtistFanartSlideshow)">MusicPlayingArtistFanart</include>
-		<include condition="Skin.HasSetting(UseFanartForMusicPlayingBG) + Skin.HasSetting(EnableArtistFanartSlideshow)">MusicPlayingArtistFanartSlideshow</include>
+		<include condition="[Skin.HasSetting(UseFanartForMusicPlayingBG) + !Skin.HasSetting(EnableArtistFanartSlideshow)]
+		| [Skin.HasSetting(UseFanartForMusicPlayingBG + !System.HasAddon(script.artistslideshow)]">MusicPlayingArtistFanart</include>
+		<include condition="System.HasAddon(script.artistslideshow) + Skin.HasSetting(UseFanartForMusicPlayingBG) + Skin.HasSetting(EnableArtistFanartSlideshow)">MusicPlayingArtistFanartSlideshow</include>
 			
 		<control type="group">
 			<description>Song Info Panel</description>
