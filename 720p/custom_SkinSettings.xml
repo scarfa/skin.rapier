@@ -223,24 +223,17 @@
 				<include>MediaSkinSettings</include>
 				<include>BackgroundsSkinSettings</include>
 				<include>AddonsSkinSettings</include>
-				<control type="grouplist" id="905">	
-					<description>Reset Skin Content Area</description>
-					<width>755</width>
-					<height>500</height>
-					<pagecontrol>911</pagecontrol>
-					<itemgap>0</itemgap>
-					<onup>903</onup>
-					<ondown>903</ondown>
-					<onleft>5</onleft>
-					<onright>150</onright>
-					<visible>Skin.String(SkinSettingsCategory,6)</visible>
-					<visible>!Skin.HasSetting(ExpandedSettings)</visible>
+				
+				<control type="button" id="6000">
+					<description>Reset Skin Label</description>
+					<posy>150</posy>
+					<align>center</align>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<include>SettingsHeaderBtn</include>
+					<label>$LOCALIZE[32026]</label>
+					<visible>Skin.String(SkinSettingsCategory,6) + !Skin.HasSetting(ExpandedSettings)</visible>
 					<include>ContentSettingsOpenCloseAnim</include>
-					<control type="button" id="6000">
-						<description>Reset Skin Label</description>
-						<include>SettingsHeaderBtn</include>
-						<label>$LOCALIZE[32026]</label>
-					</control>
 				</control>
 			</control>
 			
