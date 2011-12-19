@@ -157,7 +157,7 @@
 					<textcolor>MediaInfoColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<align>justify</align>
-					<label fallback="31205">$INFO[MusicPlayer.Comment]</label>
+					<label fallback="31204">$VAR[MusicVizDescription]</label>
 					<wrapmultiline>true</wrapmultiline>
 					<autoscroll time="2000" delay="6000" repeat="10000">true</autoscroll>
 				</control>
