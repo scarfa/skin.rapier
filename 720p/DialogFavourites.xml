@@ -38,6 +38,7 @@
 					<pagecontrol>912</pagecontrol>		
 					<onup>450</onup>
 					<ondown>450</ondown>
+					<onleft>9001</onleft>
 					<onright>150</onright>
 					<itemlayout height="35">
 						<control type="image">
@@ -106,6 +107,23 @@
 					<aspectratio align="center">keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<include>ControlsOpenCloseAnim</include>
+				</control>
+			</control>
+			
+			<control type="grouplist" id="9001">			
+				<description>Dialog Button Area</description>
+				<posx>80</posx>
+				<posy>387</posy>
+				<width>510</width>
+				<itemgap>0</itemgap>
+				<align>center</align>
+				<orientation>horizontal</orientation>	
+				<onup>450</onup>			
+				<control type="button" id="414">
+					<description>Cancel</description>
+					<include>DialogMenuBarBtn</include>
+					<label>$LOCALIZE[222]</label>
+					<onclick>Dialog.Close(134)</onclick>
 				</control>
 			</control>
 		</control>
