@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--  string id's 31000 thru 31999 are reserved for skins  -->
+
+<strings>
+<!-- common -->
+<string id="31000">Niedostępny</string>
+<string id="31001">N/A</string>
+<string id="31002">sortowanych po</string>
+<string id="31003">min</string>
+<string id="31004">O Rapierze</string>
+<string id="31300">Ostatnia aktualizacja</string>
+<string id="31301">Ostatnio oglądane</string>
+<string id="31302">Pobierz grafikę</string>
+<string id="31303">Ostatnio dodane</string>
+<string id="31304">Informacje</string>
+<string id="31305">Emulatory</string>
+<string id="31306">Aplikacje</string>
+<string id="31307">Tła</string>
+<string id="31308">Komiksy</string>
+<string id="31309">Ostatnio odtwarzane</string>
+<string id="31310">Nie wybrano źródła prognozy pogody</string>
+<string id="31311">Sprawdź ustawienia pogody i upewnij się, że wtyczka pogody jest zainstalowana</string>
+<string id="31202">Pozycji</string>
+<string id="31203">Nie znaleziono opisu.</string>
+<string id="31204">Nie znaleziono fabuły.</string>
+<string id="31205">Nie znaleziono komentarza.</string>
+<string id="31206">Style widoku</string>
+<string id="31208">Przycisk 1</string>
+<string id="31209">Przycisk 2</string>
+<string id="31210">Przycisk 3</string>
+<string id="31211">Przycisk 4</string>
+<string id="31212">Przycisk 5</string>
+<string id="31213">Przycisk 6</string>
+<string id="31214">Przycisk 7</string>
+<string id="31215">Więcej...</string>
+<string id="31216">Mniej...</string>
+<string id="31217">Czas pracy</string>
+<string id="31218">Pozycja</string>
+<string id="31219">Operacja zakończona sukcesem</string>
+<string id="31220">Kino</string>
+<string id="31013">Media</string>
+<string id="31018">Menu Wideo</string>
+<string id="31020">Efekty wizualizacji</string>
+<string id="31022">Ustawienia wizualizacji</string>
+<string id="31023">Resetuję ustawienia skóry...</string>
+<string id="32024">Przeładowuję skórę...</string>
+<string id="32025">Zresetuj skórę</string>
+<string id="32026">Wszystkie ustawienia skóry zostaną przywrócone do domyślnych. [CR]Naciśnij przycisk "Zresetuj skórę" by wykonać.</string>
+<string id="32027">Platforma</string>
+<string id="32028">Wydawnictwo</string>
+<string id="32029">Pobierz info</string>
+
+<!-- view types -->
+<string id="31103">Ikony</string>
+<string id="31104">Duże ikony</string>
+<string id="31105">Lista</string>
+<string id="31106">Plakaty info</string>
+<string id="31107">Miniatury</string>
+<string id="31108">Banery</string>
+<string id="31111">O mediach</string>
+<string id="31112">O mediach 2</string>
+<string id="31113">Ściana</string>
+<string id="31114">Duża lista</string>
+<string id="31115">O mediach 3</string>
+<string id="31116">Miniatura info</string>
+<string id="31117">Plakaty info 2</string>
+<string id="31118">Plakaty info 3</string>
+<string id="31119">Miniatury info 2</string>
+<string id="31120">Miniatury info 3</string>
+
+<!-- skin settings general -->
+<string id="31021">Ukryj dolny panel informacyjny</string>
+<string id="31025">Ukryj pasek przewijania</string>
+<string id="31026">Ukryj pogodę</string>
+<string id="31027">Ukryj pasek przewijania podczas odtwarzania na pełnym ekranie</string>
+<string id="31028">Włącz tryb kiosku</string>
+<string id="31029">Ukryj przycisk zamykania dialogów</string>
+<string id="31999">Zresetuj ustawienia skóry do domyślnych</string>
+
+<!-- skin settings home -->
+<string id="31068">Ukryj podmenu</string>
+<string id="31069">Ukryj informacje o systemie</string>
+<string id="31070">Ukryj kategorie</string>
+<string id="31071">Ukryj teraz odtwarzane</string>
+<string id="31072">Ukryj ostatnio dodane</string>
+<string id="31073">Ukryj pogodę</string>
+<string id="31074">Ukryj ikony kategorii</string>
+<string id="31075">Pokazuj przyciski nawigacyjne</string>
+<string id="31076">Podmenu kategorii</string>
+<string id="31077">Pokaż wskaźnik podmenu</string>
+<string id="31078">Własna ikona</string>
+<string id="31081">Nieaktywny</string>
+<string id="31082">Aktywny</string>
+<string id="31083">Tło</string>
+<string id="31084">Ikony kategorii</string>
+<string id="31085">* Zalecany rozmiar: 256 x 256</string>
+<string id="31086">* Zalecany rozmiar: 300 x 64</string>
+<string id="31087">* Zalecany rozmiar: 300 x 96</string>
+<string id="31088">Panel info</string>
+<string id="31095">Typ przycisku</string>
+<string id="31097">Identyfikator</string>
+<string id="31098">Właściwości przycisku</string>
+<string id="31602">Wtyczka</string>
+<string id="31603">Ulubione</string>
+<string id="31704">Własne podmenu</string>
+<string id="31712">Menu kategorii</string>
+<string id="31713">Dodaj więcej kategorii</string>
+<string id="31714">Ikona kategorii</string>
+<string id="31715">Własne ikony kategorii</string>
+
+<!-- skin settings media -->
+<string id="31041">Ukryj fabułę</string>
+<string id="31042">Ukryj tytuł</string>
+<string id="31043">Ukryj fanart</string>
+<string id="31044">Ukryj opis</string>
+<string id="31045">Ukryj okładkę</string>
+<string id="31046">Ukryj nakładkę</string>
+<string id="31047">Pokazuj ocenę</string>
+<string id="31048">Pokazuj ikony metadanych</string>
+<string id="31049">Ukryj ikony wytwórni</string>
+<string id="31050">Ocena "gwiazdkowa"</string>
+<string id="31401">Automatyczne przewijanie opisu</string>
+<string id="31402">Automatyczne przewijanie fabuły</string>
+<string id="31404">Layout plakatu</string>
+<string id="31014">Dodatkowe miniatury</string>
+<string id="31015">Dodatkowy fanart</string>
+<string id="31016">Użyj lokalnego logo</string>
+<string id="31017">Użyj lokalnego plakatu</string>
+<string id="31019">Użyj lokalnego banera</string>
+<string id="31407">Użyj wizualizacji jako tła</string>
+<string id="31408">Użyj fanartu wykonawcy jako tła</string>
+<string id="31409">Wizualizacja / fanart wykonawcy jako tło podczas odtwarzania muzyki</string>
+<string id="31410">Pokazuj aktualnie odtwarzane wideo jako tło</string>
+<string id="31412">Mały</string>
+<string id="31413">Duży</string>
+<string id="31414">Pokaż więcej fanartów</string>
+<string id="31415">Użyj domyślnych ikon</string>
+<string id="31416">Użyj szarych ikon</string>
+<string id="31417">Rozszerzony</string>
+<string id="31418">Normalny</string>
+<string id="31424">Przyciemnij okładkę</string>
+<string id="31427">Ikony metadanych</string>
+<string id="31428">Ukryj rozdzielczość wideo</string>
+<string id="31429">Ukryj proporcje wideo</string>
+<string id="31430">Wyłącz animację przewijania listy</string>
+<string id="31431">Wyłącz animację aktywności na liście</string>
+
+<!-- skin settings backgrounds -->
+<string id="31051">ukryta tylko na Ekranie głównym</string>
+<string id="31052">ukryta na wszystkich ekranach</string>
+<string id="31053">Własne tła</string>
+<string id="31054">Zastosuj do wszystkich ekranów</string>
+<string id="31055">Nie dotyczy Ekranu głównego</string>
+<string id="31056">Pojedynczy obraz</string>
+<string id="31057">Wiele obrazów</string>
+<string id="31058">Globalne</string>
+<string id="31059">Słabo przyciemniony</string>
+<string id="31060">Mocno przyciemniony</string>
+<string id="31063">Animowany fanart</string>
+<string id="31064">Animowane tło</string>
+<string id="31604">Własne tło</string>
+
+<!-- skin settings add-ons -->
+<string id="31500">Pokaż na OSD przycisk Napisy</string>
+<string id="31501">Pokaż na OSD przycisk Teksty piosenek</string>
+<string id="31502">Artwork Downloader</string>
+<string id="31503">Plakat</string>
+<string id="31504">Banery</string>
+<string id="31507">Czysta grafika</string>
+<string id="31508">Czyste logo</string>
+<string id="31509">Miniatura TV</string>
+<string id="31510">Grafika aktora</string>
+<string id="31511">Miniatura domyślna</string>
+
+<!--temporary strings until PVR related strings are present in xbmc main branch-->
+<string id="31900">TV</string>
+<string id="31901">Ukryj Radio</string>
+<string id="31902">Dostępne grupy</string>
+<string id="31903">Ukryj kanały</string>
+<string id="31904">Dodaj grupę</string>
+<string id="31905">Zmień nazwę grupy</string>
+<string id="31906">Usuń grupę</string>
+</strings>
