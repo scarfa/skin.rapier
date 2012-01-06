@@ -63,7 +63,11 @@
 <string id="31113">Ściana</string>
 <string id="31114">Duża lista</string>
 <string id="31115">O mediach 3</string>
+<<<<<<< HEAD
 <string id="31116">Miniatury info</string>
+=======
+<string id="31116">Miniatura info</string>
+>>>>>>> 81d37d7bda210621c9f252aa361a94b2c8f5df00
 <string id="31117">Plakaty info 2</string>
 <string id="31118">Plakaty info 3</string>
 <string id="31119">Miniatury info 2</string>
