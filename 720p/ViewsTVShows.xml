@@ -2747,6 +2747,7 @@
 						<texture></texture>
 						<texture background="true">$INFO[ListItem.StarRating]</texture>
 						<aspectratio>keep</aspectratio>
+						<include>MediaFlagFadeAnim</include>
 					</control>
 				</control>
 			</control>	

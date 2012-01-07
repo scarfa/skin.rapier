@@ -219,6 +219,10 @@
 	<include name="WeatherHeaderFadeAnim">
 		<animation effect="fade" end="3" condition="true">Conditional</animation>
 	</include>
+	
+	<include name="InfoPaneLabelFadeAnim">
+		<animation effect="fade" end="65" condition="true">Conditional</animation>
+	</include>
 	<!--//// HOME /////////////////////////////////////////////////////////////////////////////////////-->
 
 	<include name="HomeMenuOpenCloseAnim">

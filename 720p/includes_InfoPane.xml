@@ -30,6 +30,7 @@
 		<shadowcolor>ShadowColor</shadowcolor>
 		<scroll>no</scroll>
 		<scrollsuffix> - </scrollsuffix>
+		<include>InfoPaneLabelFadeAnim</include>
 	</include>
 	
 	<include name="InfoPaneHeadLabel2">
@@ -41,6 +42,7 @@
 		<shadowcolor>ShadowColor</shadowcolor>
 		<scroll>no</scroll>
 		<scrollsuffix> - </scrollsuffix>
+		<include>InfoPaneLabelFadeAnim</include>
 	</include>
 		
 	<include name="InfoPaneNotifyLabel">
@@ -76,6 +78,7 @@
 		<shadowcolor>ShadowColor</shadowcolor>
 		<scroll>yes</scroll>
 		<scrollsuffix> - </scrollsuffix>
+		<include>InfoPaneLabelFadeAnim</include>
 	</include>
 	
 	<include name="InfoPaneItemTitle2">
@@ -88,6 +91,7 @@
 		<shadowcolor>ShadowColor</shadowcolor>
 		<scroll>no</scroll>
 		<scrollsuffix> - </scrollsuffix>
+		<include>InfoPaneLabelFadeAnim</include>
 	</include>
 	
 	<include name="InfoPaneMediaFlag">
