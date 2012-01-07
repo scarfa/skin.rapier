@@ -1,223 +1,244 @@
 <window id="2600">
 	<defaultcontrol always="true">850</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<onload condition="IsEmpty(Weather.Plugin)">Notification($LOCALIZE[31310],$LOCALIZE[31311],10000,)</onload>
 	<onload condition="System.HasAddon(script.artistslideshow) + Skin.HasSetting(UseFanartForMusicPlayingBG) + Skin.HasSetting(EnableArtistFanartSlideshow)">RunScript(script.artistslideshow)</onload>
 	
 	<controls>
 		<control type="group"> 	
-    		<include>BackgroundDefault</include>
+    		<include>BackgroundWeather</include>
 			<include condition="!Skin.HasSetting(DisableVideoPlayingBG)">BackgroundVideoPlaying</include>
 			<include condition="!Skin.HasSetting(DisableMusicPlayingBG)">BackgroundMusicPlaying</include>
 			<include>BackgroundOpenCloseAnim</include>
 		</control>
-		
-		<control type="group">		
-			<posx>92</posx>
-			<posy>120</posy>
+	
+		<control type="image">
+			<description>Panel</description>
+			<posx>30</posx>
+			<posy>106</posy>
+			<width>1220</width>
+			<height>525</height>
+			<texture border="7">panels/content-panel.png</texture>
+			<include>PanelFadeAnim</include>
 			<include>ControlsOpenCloseAnim</include>
-			<visible>!IsEmpty(Weather.Plugin)</visible>
+		</control>
+		
+		<control type="label">
+			<description>Download Weather Info</description>
+			<posx>390</posx>
+			<posy>360</posy>
+			<width>500</width>
+			<height>200</height>
+			<font>DialogHeadFont</font>
+			<textcolor>DefaultColor2</textcolor>
+			<shadowcolor>ShadowColor</shadowcolor>
+			<label>$LOCALIZE[13413]...</label>
+			<align>center</align>
+			<visible>!IsEmpty(Weather.Plugin) + !Weather.IsFetched</visible>
+		</control>
 
+		<control type="textbox">
+			<description>No Weather Plugin</description>
+			<posx>390</posx>
+			<posy>360</posy>
+			<width>500</width>
+			<height>200</height>
+			<font>DialogHeadFont</font>
+			<textcolor>DefaultColor2</textcolor>
+			<shadowcolor>ShadowColor</shadowcolor>
+			<label>$LOCALIZE[31310][CR]$LOCALIZE[31311]</label>
+			<align>center</align>
+			<visible>IsEmpty(Weather.Plugin)</visible>
+		</control>
+
+		<control type="group">
+			<description>Current Weather Area</description>
+			<posx>55</posx>
+			<posy>120</posy>
+			<visible>!IsEmpty(Weather.Plugin) + Weather.IsFetched</visible>
+			<include>ControlsOpenCloseAnim</include>
+			
+			<control type="image">
+				<description>Current Border</description>
+				<posy>18</posy>
+				<width>524</width>
+				<height>40</height>
+				<texture border="5">panels/panel-content-border2.png</texture>
+			</control> 
+				
 			<control type="label">
-				<description>Weather Location</description>
-				<posx>10</posx>
-				<posy>20</posy>
-				<width>265</width>
-				<font>WeatherWeekDayFont</font>
+				<description>Current</description>
+				<posx>20</posx>
+				<posy>37</posy>
+				<width>484</width>
+				<font>WeatherCurrentDayFont</font>
 				<textcolor>DefaultColor</textcolor>
 				<shadowcolor>ShadowColor</shadowcolor>
+				<label>$INFO[Window.Property(Updated),$LOCALIZE[143] ]</label>	
 				<align>center</align>
-				<label>$LOCALIZE[143]</label>			
+				<aligny>center</aligny>
+			</control>
+			
+			<control type="image" id="21">
+				<description>Current Day</description>
+				<posx>35</posx>
+				<posy>80</posy>
+				<width>212</width>
+				<height>200</height>
+				<aspectratio align="right">keep</aspectratio>
+			</control>
+			
+			<control type="label" id="23">
+				<description>Current Temp</description>
+				<posx>265</posx>
+				<posy>105</posy>
+				<width>224</width>
+				<font>WeatherCurrentTempFont</font>
+				<textcolor>WhiteColor</textcolor>	
+				<shadowcolor>ShadowColor</shadowcolor>
+				<align>center</align>
+			</control>
+				
+			<control type="label" id="22">
+				<description>Current Condition</description>
+				<posx>265</posx>
+				<posy>200</posy>
+				<width>224</width>
+				<font>WeatherCurrentConditionFont</font>
+				<textcolor>GreyColor2</textcolor>
+				<shadowcolor>ShadowColor</shadowcolor>
+				<align>center</align>
+				<scroll>yes</scroll>
 			</control>
 			
 			<control type="grouplist">
 				<posx>0</posx>
-				<posy>80</posy>
-				<width>134</width>
+				<posy>304</posy>
+				<width>524</width>
 				<itemgap>0</itemgap>
 				<usecontrolcoords>true</usecontrolcoords>
 				<orientation>vertical</orientation>
-					<control type="label">
-					<description>Current Temp</description>
-					<posx>134</posx>
-					<width>134</width>
+				<control type="image">
+					<width>524</width>
 					<height>35</height>
-					<align>right</align>
-					<font>WeatherReadingsFont</font>
-					<textcolor>GreyColor</textcolor>	
-					<shadowcolor>ShadowColor</shadowcolor>
-					<label>$LOCALIZE[401]</label>
+					<texture border="5">panels/panel-content-border2.png</texture>
 				</control>
+				<control type="image">
+					<height>35</height>
+				</control>
+				<control type="image">
+					<width>524</width>
+					<height>35</height>
+					<texture border="5">panels/panel-content-border2.png</texture>
+				</control>
+				<control type="image">
+					<height>35</height>
+				</control>
+				<control type="image">
+					<width>524</width>
+					<height>35</height>
+					<texture border="5">panels/panel-content-border2.png</texture>
+				</control>
+			</control>
+			
+			<control type="grouplist">
+				<posx>20</posx>
+				<posy>307</posy>
+				<width>227</width>
+				<itemgap>0</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
+				<orientation>vertical</orientation>
 				<control type="label">
 					<description>Current Feels Like</description>
-					<posx>134</posx>
-					<width>134</width>
-					<height>35</height>
-					<align>right</align>
-					<font>WeatherReadingsFont</font>
-					<textcolor>GreyColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>	
+					<include>WeatherCurrentReadingLabel</include>
 					<label>$LOCALIZE[402]</label>
 				</control>
 				<control type="label">
 					<description>Current Dew Point</description>
-					<posx>134</posx>
-					<width>134</width>
-					<height>35</height>
-					<align>right</align>
-					<font>WeatherReadingsFont</font>
-					<textcolor>GreyColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
+					<include>WeatherCurrentReadingLabel</include>
 					<label>$LOCALIZE[405]</label>
 				</control>
 				<control type="label">
 					<description>Current Humidity</description>
-					<posx>134</posx>
-					<width>134</width>
-					<height>35</height>
-					<align>right</align>
-					<font>WeatherReadingsFont</font>
-					<textcolor>GreyColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
+					<include>WeatherCurrentReadingLabel</include>
 					<label>$LOCALIZE[406]</label>		
 				</control>
 				<control type="label">
 					<description>Current UV Index</description>
-					<posx>134</posx>
-					<width>134</width>
-					<height>35</height>
-					<align>right</align>
-					<font>WeatherReadingsFont</font>
-					<textcolor>GreyColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
+					<include>WeatherCurrentReadingLabel</include>
 					<label>$LOCALIZE[403]</label>		
 				</control>
 				<control type="label">
 					<description>Current Wind</description>
-					<posx>134</posx>
-					<width>134</width>
-					<height>35</height>
-					<align>right</align>
-					<font>WeatherReadingsFont</font>
-					<textcolor>GreyColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
+					<include>WeatherCurrentReadingLabel</include>
 					<label>$LOCALIZE[404]</label>		
 				</control>
 			</control>
 			
 			<control type="grouplist">
-				<posx>152</posx>
-				<posy>80</posy>
-				<width>150</width>
+				<posx>270</posx>
+				<posy>307</posy>
+				<width>234</width>
 				<itemgap>0</itemgap>
 				<orientation>vertical</orientation>
-				<control type="label" id="23">
-					<description>Current Temp Value</description>
-					<width>134</width>
-					<height>35</height>
-					<font>WeatherReadingsFont</font>
-					<textcolor>GreyColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<scroll>yes</scroll>
-				</control>
-				<control type="label" id="24">
+				<control type="label">
 					<description>Current Feels Like Value</description>
-					<width>134</width>
-					<height>35</height>
-					<font>WeatherReadingsFont</font>
-					<textcolor>GreyColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<scroll>yes</scroll>
+					<include>WeatherCurrentReadingValue</include>
+					<label fallback="31000">$INFO[Window(Weather).Property(Current.FeelsLike)]</label>
 				</control>
-				<control type="label" id="27">
+				<control type="label">
 					<description>Current Dew Point Value</description>
-					<width>134</width>
-					<height>35</height>
-					<font>WeatherReadingsFont</font>
-					<textcolor>GreyColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<scroll>yes</scroll>	
+					<include>WeatherCurrentReadingValue</include>
+					<label fallback="31000">$INFO[Window(Weather).Property(Current.DewPoint)]</label>
 				</control>
-				<control type="label" id="28">
+				<control type="label">
 					<description>Current Humidity Value</description>
-					<width>134</width>
-					<height>35</height>
-					<font>WeatherReadingsFont</font>
-					<textcolor>GreyColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<scroll>yes</scroll>
+					<include>WeatherCurrentReadingValue</include>
+					<label fallback="31000">$INFO[Window(Weather).Property(Current.Humidity)]</label>
 				</control>
-				<control type="label" id="25">
+				<control type="label">
 					<description>Current UV Index Value</description>
-					<width>134</width>
-					<height>35</height>
-					<font>WeatherReadingsFont</font>
-					<textcolor>GreyColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<scroll>yes</scroll>
+					<include>WeatherCurrentReadingValue</include>
+					<label fallback="31000">$INFO[Window(Weather).Property(Current.UVIndex)]</label>
 				</control>
-				<control type="label" id="26">
+				<control type="label">
 					<description>Current Wind Value</description>
-					<width>100</width>
-					<height>35</height>
-					<font>WeatherReadingsFont</font>
-					<textcolor>GreyColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>	
-					<wrapmultiline>true</wrapmultiline>
+					<include>WeatherCurrentReadingValue</include>
+					<label fallback="31000">$INFO[Window(Weather).Property(Current.Wind)]</label>
 				</control>
 			</control>
-			
-			<control type="image" id="21">
-				<description>Current Weather</description>
-				<posx>62</posx>
-				<posy>310</posy>
-				<width>160</width>
-				<height>100</height>
-				<aspectratio>keep</aspectratio>
-			</control>
-			
-			<control type="label" id="22">
-				<description>Current Condition</description>
-				<posx>10</posx>
-				<posy>420</posy>
-				<width>265</width>
-				<font>WeatherCurrentConditionFont</font>
-				<textcolor>GreyColor2</textcolor>
-				<shadowcolor>ShadowColor</shadowcolor>
-				<align>center</align>		
-			</control>		
 		</control>
-
-		<control type="group">	
-			<posx>400</posx>
-			<posy>120</posy>
+		
+		<control type="group">
+			<description>Week Day Area</description>
+			<posx>638</posx>
+			<posy>110</posy>
+			<visible>!IsEmpty(Weather.Plugin) + Weather.IsFetched</visible>
 			<include>ControlsOpenCloseAnim</include>
-			<visible>!IsEmpty(Weather.Plugin)</visible>
-
 			
+			<control type="image">
+				<description>Background</description>
+				<width>587</width>
+				<height>517</height>
+				<texture>white.png</texture>
+				<animation effect="fade" end="2" condition="true">Conditional</animation>
+			</control>
+		
 			<control type="group">
+				<description>Day 0 Area</description>
+				<posy>6</posy>
+							
+				<include>WeekDayBorder</include>
+				
 				<control type="label" id="31">
 					<description>Day 0</description>
-					<posx>10</posx>
-					<posy>20</posy>
-					<width>160</width>
-					<font>WeatherWeekDayFont</font>
-					<textcolor>DefaultColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<align>center</align>		
+					<include>WeatherWeekDayLabel</include>
 				</control>
 				
 				<control type="label">
 					<description>High</description>
-					<posx>10</posx>
-					<posy>80</posy>
-					<width>160</width>
-					<align>center</align>
-					<font>WeatherReadingsFont</font>
-					<textcolor>GreyColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<label>$LOCALIZE[393] $INFO[Control.GetLabel(32)]</label>
-					<visible>Weather.IsFetched</visible>
+					<posy>50</posy>
+					<include>WeatherReadingLabel</include>
+					<label>$LOCALIZE[393]   $INFO[Control.GetLabel(32)]</label>
 				</control>
 				
 				<control type="label" id="32">
@@ -227,15 +248,9 @@
 				
 				<control type="label">
 					<description>Low</description>
-					<posx>10</posx>
-					<posy>115</posy>
-					<width>160</width>
-					<align>center</align>
-					<font>WeatherReadingsFont</font>
-					<textcolor>GreyColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<label>$LOCALIZE[391] $INFO[Control.GetLabel(33)]</label>
-					<visible>Weather.IsFetched</visible>
+					<posy>84</posy>
+					<include>WeatherReadingLabel</include>
+					<label>$LOCALIZE[391]   $INFO[Control.GetLabel(33)]</label>
 				</control>
 				
 				<control type="label" id="33">
@@ -245,50 +260,35 @@
 				
 				<control type="image" id="35">
 					<description>Day</description>
-					<posx>10</posx>
-					<posy>160</posy>
-					<width>160</width>
-					<height>100</height>
+					<posx>213</posx>
+					<posy>41</posy>
+					<width>161</width>
+					<height>79</height>
 					<aspectratio>keep</aspectratio>
 				</control>
 				
 				<control type="label" id="34">
 					<description>Condition</description>
-					<posx>10</posx>
-					<posy>270</posy>
-					<width>160</width>
-					<font>WeatherReadingsFont</font>
-					<textcolor>GreyColor2</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<align>center</align>		
+					<include>WeatherConditionLabel</include>
 				</control>		
 			</control>
 			
-			<control type="group">	
-				<posx>203</posx>
-
+			<control type="group">
+				<description>Day 1 Area</description>
+				<posy>132</posy>
+				
+				<include>WeekDayBorder</include>
+			
 				<control type="label" id="41">
 					<description>Day 1</description>
-					<posx>10</posx>
-					<posy>20</posy>
-					<width>160</width>
-					<font>WeatherWeekDayFont</font>
-					<textcolor>DefaultColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<align>center</align>		
+					<include>WeatherWeekDayLabel</include>
 				</control>
 				
 				<control type="label">
 					<description>High</description>
-					<posx>10</posx>
-					<posy>80</posy>
-					<width>160</width>
-					<align>center</align>
-					<font>WeatherReadingsFont</font>
-					<textcolor>GreyColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<label>$LOCALIZE[393] $INFO[Control.GetLabel(42)]</label>
-					<visible>Weather.IsFetched</visible>
+					<posy>50</posy>
+					<include>WeatherReadingLabel</include>
+					<label>$LOCALIZE[393]   $INFO[Control.GetLabel(42)]</label>
 				</control>
 				
 				<control type="label" id="42">
@@ -298,15 +298,9 @@
 				
 				<control type="label">
 					<description>Low</description>
-					<posx>10</posx>
-					<posy>115</posy>
-					<width>160</width>
-					<align>center</align>
-					<font>WeatherReadingsFont</font>
-					<textcolor>GreyColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<label>$LOCALIZE[391] $INFO[Control.GetLabel(43)]</label>
-					<visible>Weather.IsFetched</visible>
+					<posy>84</posy>
+					<include>WeatherReadingLabel</include>
+					<label>$LOCALIZE[391]   $INFO[Control.GetLabel(43)]</label>
 				</control>
 				
 				<control type="label" id="43">
@@ -316,50 +310,35 @@
 				
 				<control type="image" id="45">
 					<description>Day</description>
-					<posx>10</posx>
-					<posy>160</posy>
-					<width>160</width>
-					<height>100</height>
+					<posx>213</posx>
+					<posy>41</posy>
+					<width>161</width>
+					<height>79</height>
 					<aspectratio>keep</aspectratio>
 				</control>
 				
 				<control type="label" id="44">
 					<description>Condition</description>
-					<posx>10</posx>
-					<posy>270</posy>
-					<width>160</width>
-					<font>WeatherReadingsFont</font>
-					<textcolor>GreyColor2</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<align>center</align>		
+					<include>WeatherConditionLabel</include>
 				</control>		
 			</control>
-			
+		
 			<control type="group">
-				<posx>406</posx>
-
+				<description>Day 2 Area</description>
+				<posy>258</posy>
+				
+				<include>WeekDayBorder</include>
+			
 				<control type="label" id="51">
 					<description>Day 2</description>
-					<posx>10</posx>
-					<posy>20</posy>
-					<width>160</width>
-					<font>WeatherWeekDayFont</font>
-					<textcolor>DefaultColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<align>center</align>		
+					<include>WeatherWeekDayLabel</include>
 				</control>
 				
 				<control type="label">
 					<description>High</description>
-					<posx>10</posx>
-					<posy>80</posy>
-					<width>160</width>
-					<align>center</align>
-					<font>WeatherReadingsFont</font>
-					<textcolor>GreyColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<label>$LOCALIZE[393] $INFO[Control.GetLabel(52)]</label>
-					<visible>Weather.IsFetched</visible>
+					<posy>50</posy>
+					<include>WeatherReadingLabel</include>
+					<label>$LOCALIZE[393]   $INFO[Control.GetLabel(52)]</label>
 				</control>
 				
 				<control type="label" id="52">
@@ -369,15 +348,9 @@
 				
 				<control type="label">
 					<description>Low</description>
-					<posx>10</posx>
-					<posy>115</posy>
-					<width>160</width>
-					<align>center</align>
-					<font>WeatherReadingsFont</font>
-					<textcolor>GreyColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<label>$LOCALIZE[391] $INFO[Control.GetLabel(53)]</label>
-					<visible>Weather.IsFetched</visible>
+					<posy>84</posy>
+					<include>WeatherReadingLabel</include>
+					<label>$LOCALIZE[391]   $INFO[Control.GetLabel(53)]</label>
 				</control>
 				
 				<control type="label" id="53">
@@ -387,50 +360,35 @@
 				
 				<control type="image" id="55">
 					<description>Day</description>
-					<posx>10</posx>
-					<posy>160</posy>
-					<width>160</width>
-					<height>100</height>
+					<posx>213</posx>
+					<posy>41</posy>
+					<width>161</width>
+					<height>79</height>
 					<aspectratio>keep</aspectratio>
 				</control>
 				
 				<control type="label" id="54">
 					<description>Condition</description>
-					<posx>10</posx>
-					<posy>270</posy>
-					<width>160</width>
-					<font>WeatherReadingsFont</font>
-					<textcolor>GreyColor2</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<align>center</align>		
+					<include>WeatherConditionLabel</include>
 				</control>
 			</control>
-			
-			<control type="group">	
-				<posx>609</posx>
 
+			<control type="group">
+				<description>Day 3 Area</description>
+				<posy>384</posy>
+				
+				<include>WeekDayBorder</include>
+			
 				<control type="label" id="61">
 					<description>Day 3</description>
-					<posx>10</posx>
-					<posy>20</posy>
-					<width>160</width>
-					<font>WeatherWeekDayFont</font>
-					<textcolor>DefaultColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<align>center</align>		
+					<include>WeatherWeekDayLabel</include>
 				</control>
 				
 				<control type="label">
 					<description>High</description>
-					<posx>10</posx>
-					<posy>80</posy>
-					<width>160</width>
-					<align>center</align>
-					<font>WeatherReadingsFont</font>
-					<textcolor>GreyColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<label>$LOCALIZE[393] $INFO[Control.GetLabel(62)]</label>
-					<visible>Weather.IsFetched</visible>
+					<posy>50</posy>
+					<include>WeatherReadingLabel</include>
+					<label>$LOCALIZE[393]   $INFO[Control.GetLabel(62)]</label>
 				</control>
 				
 				<control type="label" id="62">
@@ -440,15 +398,9 @@
 				
 				<control type="label">
 					<description>Low</description>
-					<posx>10</posx>
-					<posy>115</posy>
-					<width>160</width>
-					<align>center</align>
-					<font>WeatherReadingsFont</font>
-					<textcolor>GreyColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<label>$LOCALIZE[391] $INFO[Control.GetLabel(63)]</label>
-					<visible>Weather.IsFetched</visible>
+					<posy>84</posy>
+					<include>WeatherReadingLabel</include>
+					<label>$LOCALIZE[391]   $INFO[Control.GetLabel(63)]</label>
 				</control>
 				
 				<control type="label" id="63">
@@ -458,22 +410,16 @@
 				
 				<control type="image" id="65">
 					<description>Day</description>
-					<posx>10</posx>
-					<posy>160</posy>
-					<width>160</width>
-					<height>100</height>
+					<posx>213</posx>
+					<posy>41</posy>
+					<width>161</width>
+					<height>79</height>
 					<aspectratio>keep</aspectratio>
 				</control>
 				
 				<control type="label" id="64">
 					<description>Condition</description>
-					<posx>10</posx>
-					<posy>270</posy>
-					<width>160</width>
-					<font>WeatherReadingsFont</font>
-					<textcolor>GreyColor2</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<align>center</align>		
+					<include>WeatherConditionLabel</include>
 				</control>			
 			</control>
 		</control>
@@ -484,20 +430,8 @@
 			<include>MenuBarOpenCloseAnim</include>	
 			<include>MyWeatherMenuBar</include>
 			<visible>!IsEmpty(Weather.Plugin)</visible>
-
-			<control type="label">
-				<posx>1270</posx>
-				<width>550</width>
-				<height>MenuBarHeight</height>	
-				<font>MenuBarBtnFont</font>	
-				<textcolor>GreyColor2</textcolor>
-				<label>Weather provided by: $INFO[Window(Weather).Property(WeatherProvider)]</label>
-				<align>right</align>
-				<aligny>center</aligny>
-				<visible>!IsEmpty(Window(Weather).Property(WeatherProvider))</visible>
-			</control>
 		</control>
-		
+			
 		<control type="group">
 			<description>Top Bar Area</description>
 			<include>TopBarImage</include>
@@ -511,6 +445,7 @@
 			<posy>BottomPaneOffsetY</posy>	
 			<include>InfoPaneWeatherDetails</include>
 			<include>BottomPaneOpenCloseAnim</include>
+			<visible>!IsEmpty(Weather.Plugin)</visible>
 		</control>
 	</controls>	
 </window>

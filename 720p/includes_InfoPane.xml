@@ -285,14 +285,10 @@
 	
 	<include name="InfoPaneWeatherDetails">		
 		<control type="label">
+			<width>450</width>
 			<include>InfoPaneHeadLabel</include>
-			<label>[UPPERCASE]$INFO[Weather.Location][/UPPERCASE]</label>
+			<label>[UPPERCASE]$INFO[Window(Weather).Property(WeatherProvider),Weather provided by: ][/UPPERCASE]</label>
 		</control>
-				
-		<control type="label">
-			<include>InfoPaneHeadLabel2</include>
-			<label>[UPPERCASE]$INFO[Window.Property(Updated),$LOCALIZE[31300] ][/UPPERCASE]</label>
-		</control>		
 	</include>
 	
 	<include name="InfoPaneSettingsDetails">		

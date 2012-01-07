@@ -9,8 +9,6 @@
 <string id="31002">By</string>
 <string id="31003">min</string>
 <string id="31004">About</string>
-<string id="31300">Last Updated</string>
-<string id="31301">Last Watched</string>
 <string id="31302">Get Artwork</string>
 <string id="31303">Recently Added</string>
 <string id="31304">Information</string>
@@ -19,8 +17,7 @@
 <string id="31307">Backgrounds</string>
 <string id="31308">Comics</string>
 <string id="31309">Recently Played</string>
-<string id="31310">Weather Provider Has Not Been Set</string>
-<string id="31311">Check Your Weather Settings And Make Sure A Weather Add-on Is Installed</string>
+<string id="31310">Weather Provider Has Not Been Set. Check Your Weather Settings And Make Sure A Weather Add-on Is Installed</string>
 <string id="31202">Items</string>
 <string id="31203">No overview found.</string>
 <string id="31204">No description found.</string>

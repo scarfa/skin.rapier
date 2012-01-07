@@ -215,7 +215,10 @@
 	<include name="CustomImagePreviewOpenCloseAnim">
 		<animation effect="fade" start="0" end="100" time="600">VisibleChange</animation>
 	</include>
-
+	
+	<include name="WeatherHeaderFadeAnim">
+		<animation effect="fade" end="3" condition="true">Conditional</animation>
+	</include>
 	<!--//// HOME /////////////////////////////////////////////////////////////////////////////////////-->
 
 	<include name="HomeMenuOpenCloseAnim">

@@ -1151,6 +1151,18 @@
 				<include>BreadCrumbSeparator</include>
 				<include>BreadCrumbSlideLvl2Anim</include>
 			</control>
+			<control type="label" id="5502">
+				<description>Location</description>
+				<include>BreadCrumbLabel</include>
+				<label>[UPPERCASE][B]$INFO[Window(Weather).Property(Location)][/B][/UPPERCASE]</label>
+				<visible>!IsEmpty(Weather.Plugin) + !IsEmpty(Window(Weather).Property(Location))</visible>
+				<include>BreadCrumbSlideLvl3Anim</include>
+			</control>
+			<control type="image">
+				<include>BreadCrumbSeparator</include>
+				<include>BreadCrumbSlideLvl3Anim</include>
+				<visible>Control.IsVisible(5502)</visible>
+			</control>
 		</control>
 	</include>
 </includes>

@@ -8,9 +8,8 @@
 		</control>	
 	</include>
 
-	<include name="LoginScreenBackground">
+	<include name="BackgroundLoginScreen">
 		<control type="image">
-			<description>Default Background</description>
 			<include>BackgroundSize</include>
 			<texture background="true">background-default.png</texture>
 			<aspectratio>scale</aspectratio>
@@ -18,7 +17,22 @@
 			<include>BackgroundVisibleAnim</include>
 		</control>
 	</include>
-
+	
+	<include name="BackgroundWeather">
+		<control type="image">
+			<include>BackgroundSize</include>
+			<texture background="true">background-weather.png</texture>
+			<aspectratio>scale</aspectratio>
+			<fadetime>BackgroundCrossfadeTime</fadetime>
+			<include>BackgroundVisibleAnim</include>
+		</control>
+		
+		<control type="image">
+			<include>BackgroundDim</include>
+			<animation effect="fade" end="75" condition="true">Conditional</animation>
+		</control>
+	</include>
+	
 	<include name="BackgroundDefault">		
 		<control type="group">
 			<control type="multiimage">
