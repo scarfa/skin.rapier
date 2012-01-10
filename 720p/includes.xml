@@ -19,6 +19,7 @@
 	<include file="includes_Backgrounds.xml"/>
 	<include file="includes_MediaFlags.xml"/>
 	<include file="includes_Scrollbars.xml"/>
+	<include file="includes_Weather.xml"/>
 	<include file="includes_SkinSettingsGeneral.xml"/>
 	<include file="includes_SkinSettingsHome.xml"/>
 	<include file="includes_SkinSettingsMedia.xml"/>
@@ -672,64 +673,4 @@
 		<value condition="System.HasAddon(script.artistslideshow) + Skin.HasSetting(UseFanartForMusicPlayingBG) + Skin.HasSetting(EnableArtistFanartSlideshow)">$INFO[Window(Visualisation).Property(ArtistSlideshow.ArtistBiography)]</value>
 		<value>$INFO[MusicPlayer.Property(Album_Description)]</value>
 	</variable>
-	
-	<include name="WeatherCurrentReadingLabel">
-		<posx>227</posx>
-		<width>227</width>
-		<height>35</height>
-		<align>right</align>
-		<font>WeatherCurrentReadingFont</font>
-		<textcolor>WhiteColor</textcolor>
-		<shadowcolor>ShadowColor</shadowcolor>	
-	</include>
-	
-	<include name="WeatherCurrentReadingValue">
-		<width>234</width>
-		<height>35</height>
-		<font>WeatherCurrentReadingFont</font>
-		<textcolor>GreyColor</textcolor>
-		<shadowcolor>ShadowColor</shadowcolor>
-		<scroll>yes</scroll>
-	</include>
-	
-	<include name="WeatherWeekDayLabel">
-		<posx>10</posx>
-		<posy>-2</posy>
-		<width>567</width>
-		<height>35</height>
-		<font>WeatherWeekDayFont</font>
-		<textcolor>DefaultColor2</textcolor>
-		<shadowcolor>ShadowColor</shadowcolor>
-		<align>center</align>
-		<aligny>center</aligny>
-	</include>
-	
-	<include name="WeatherReadingLabel">
-		<posx>43</posx>
-		<width>170</width>
-		<font>WeatherReadingFont</font>
-		<textcolor>GreyColor</textcolor>
-		<shadowcolor>ShadowColor</shadowcolor>
-	</include>
-	
-	<include name="WeatherConditionLabel">
-		<posx>377</posx>
-		<posy>65</posy>
-		<width>180</width>
-		<font>WeatherConditionFont</font>
-		<textcolor>GreyColor</textcolor>
-		<shadowcolor>ShadowColor</shadowcolor>
-		<align>center</align>
-		<scroll>yes</scroll>
-	</include>
-	
-	<include name="WeekDayBorder">
-		<control type="image">
-			<posx>0</posx>
-			<width>587</width>
-			<height>35</height>
-			<texture>white.png</texture>
-			<include>WeatherHeaderFadeAnim</include>
-		</control>
-	</include>
 </includes>

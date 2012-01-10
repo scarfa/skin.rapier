@@ -176,15 +176,9 @@
 	</include>
 	
 	<include name="WeatherNotification">
-		<control type="image" id="5567">
-			<posy>1</posy>
-			<width>43</width>
-			<height>43</height>	
-			<texture>$INFO[Weather.Conditions]</texture>
-			<bordersize>6</bordersize>
-			<aspectratio>keep</aspectratio>
-			<visible>!Window.IsActive(Home) + !IsEmpty(Weather.Conditions)</visible>
-		</control>
+		<include condition="![Skin.HasSetting(EnableAnimWeatherIcons) + Skin.HasSetting(ApplyAllAnimWeatherIcons)]">WeatherNotificationIcon</include>
+		<include condition="Skin.HasSetting(EnableAnimWeatherIcons) + Skin.HasSetting(ApplyAllAnimWeatherIcons)">WeatherAnimNotificationIcon</include>
+
 		<control type="label" id="5568">
 			<posy>21</posy>
 			<width min="25" max="250">auto</width>

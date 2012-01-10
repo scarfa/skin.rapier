@@ -235,6 +235,11 @@
 			<filename>default-bold.ttf</filename>
 			<size>18</size>
 		</font>
+		<font>
+			<name>WeatherHeaderFont</name>
+			<filename>default-bold-caps.ttf</filename>
+			<size>16</size>
+		</font>
 		<!-- Other -->
 		<font>
 			<name>HomeSubMenuBtnFont</name>

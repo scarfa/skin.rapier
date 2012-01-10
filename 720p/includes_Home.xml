@@ -3525,17 +3525,9 @@
 				<height>96</height>
 				<texture border="5">panels/panel-content-border.png</texture>
 			</control>
-
-			<control type="image">
-				<description>Cover</description>
-				<posx>15</posx>
-				<posy>22</posy>
-				<width>130</width>
-				<height>96</height>
-				<bordersize>12</bordersize>
-				<texture background="true">$INFO[Weather.Conditions]</texture>
-				<aspectratio>keep</aspectratio>
-			</control>
+			
+			<include condition="![Skin.HasSetting(EnableAnimWeatherIcons) + Skin.HasSetting(ApplyAllAnimWeatherIcons)]">WeatherHomeIcon</include>
+			<include condition="Skin.HasSetting(EnableAnimWeatherIcons) + Skin.HasSetting(ApplyAllAnimWeatherIcons)">WeatherAnimHomeIcon</include>
 
 			<control type="label">
 				<description>Title</description>
