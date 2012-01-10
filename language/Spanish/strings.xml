@@ -76,6 +76,9 @@
 <string id="31027">Ocultar barra de búsqueda OSD durante la reproducción a pantalla completa</string>
 <string id="31028">Activa Modo Kiosko</string>
 <string id="31029">Ocultar Botones de Diálogo Cerrar</string>
+<string id="31030">Activar Iconos Animados</string>
+<string id="31031">Iconos Animados se Aplica en Todas las Ventanas</string>
+<string id="31032">Iconos Animados Sólo se Aplican a la Ventana del Tiempo</string>
 <string id="31999">Restablecer configuración de Piel a valores por defecto</string>
 
 <!-- skin settings home -->

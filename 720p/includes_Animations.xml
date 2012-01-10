@@ -216,8 +216,27 @@
 		<animation effect="fade" start="0" end="100" time="600">VisibleChange</animation>
 	</include>
 	
+	<include name="ColumnBackgroundFadeAnim">
+		<animation effect="fade" end="2" condition="true">Conditional</animation>
+	</include>
+
 	<include name="WeatherHeaderFadeAnim">
 		<animation effect="fade" end="3" condition="true">Conditional</animation>
+	</include>
+
+	<include name="WeatherPlusFadeAnim">
+		<animation type="Conditional" reversible="false" condition="true" loop="true">
+			<effect type="fade" start="0" end="100" time="500" delay="0" />
+			<effect type="fade" start="100" end="0" time="500" delay="10000" />
+			<effect type="fade" start="100" end="0" time="500" delay="20000" />
+		</animation>
+	</include>
+
+	<include name="WeatherPlusFadeAnim2">
+		<animation type="Conditional" reversible="false" condition="true" loop="true">
+			<effect type="fade" start="0" end="100" time="500" delay="10500" />
+			<effect type="fade" start="100" end="0" time="500" delay="20000" />
+		</animation>
 	</include>
 	
 	<include name="InfoPaneLabelFadeAnim">

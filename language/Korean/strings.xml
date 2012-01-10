@@ -76,6 +76,9 @@
 <string id="31027">전체 화면으로 재생시 탐색바 OSD 숨기기</string>
 <string id="31028">전시모드 사용</string>
 <string id="31029">대화상자 닫기 버튼 숨기기</string>
+<string id="31030">아이콘 애니메이션 표시</string>
+<string id="31031">아이콘 애니메이션 모든 화면에 적용</string>
+<string id="31032">아이콘 애니메이션 날씨 화면에만 적용</string>
 <string id="31999">스킨 설정을 기본값으로 초기화</string>
 
 <!-- skin settings home -->

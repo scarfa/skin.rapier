@@ -893,6 +893,144 @@
 		</control>	
 	</include>
 
+	<include name="MyWeatherPlusMenuBar">
+		<control type="grouplist" id="850">
+			<posx>2</posx>
+			<posy>0</posy>
+			<width>ScreenWidth</width>
+			<height>MenuBarHeight</height>
+			<itemgap>0</itemgap>
+			<onup>-</onup>
+			<ondown>500</ondown>
+			<onleft>850</onleft>
+			<onright>850</onright>
+			<orientation>horizontal</orientation>
+			<usecontrolcoords>true</usecontrolcoords>
+			<include>MenuBarBtnOpenCloseAnim</include>
+			<control type="spincontrolex" id="3">
+				<description>Select Location</description>
+				<width>160</width>
+				<height>MenuBarHeight</height>	
+				<font>-</font>	
+				<textcolor>ButtonColor</textcolor>
+				<focusedcolor>ButtonFocusColor</focusedcolor>
+				<aligny>center</aligny>
+				<textoffsetx>13</textoffsetx>
+				<textwidth>106</textwidth>
+				<align>left</align>
+				<texturefocus border="4">gui/menu-bar-button-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="label" id="119">
+				<description>Select Location Label</description>
+				<posx>-160</posx>
+				<width>160</width>
+				<height>MenuBarHeight</height>	
+				<font>MenuBarBtnFont</font>	
+				<textcolor>WhiteColor</textcolor>
+				<shadowcolor>ShadowColor</shadowcolor>
+				<aligny>center</aligny>
+				<textoffsetx>10</textoffsetx>
+				<textwidth>90</textwidth>
+				<label>$LOCALIZE[35500]</label>
+				<visible>Control.HasFocus(3)</visible>
+			</control>
+			<control type="label" id="120">
+				<description>Select Location Label</description>
+				<posx>-160</posx>
+				<width>160</width>
+				<height>MenuBarHeight</height>	
+				<font>MenuBarBtnFont</font>	
+				<textcolor>ButtonColor</textcolor>
+				<shadowcolor>ShadowColor</shadowcolor>
+				<aligny>center</aligny>
+				<textoffsetx>10</textoffsetx>
+				<textwidth>90</textwidth>
+				<label>$LOCALIZE[35500]</label>
+				<visible>!Control.HasFocus(3)</visible>
+			</control>
+			<control type="image" id="116">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="101">
+				<description>Today</description>
+				<width>138</width>
+				<include>MenuBarBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[33006][/UPPERCASE]</label>
+				<onfocus>Skin.SetString(WeatherPlus,1)</onfocus>
+			</control>
+			<control type="image" id="117">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="102">
+				<description>36 Hour</description>
+				<width>138</width>
+				<include>MenuBarBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[33034][/UPPERCASE]</label>
+				<onfocus>Skin.SetString(WeatherPlus,2)</onfocus>
+			</control>
+			<control type="image" id="118">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="103">
+				<description>Weekend</description>
+				<width>138</width>
+				<include>MenuBarBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[33037][/UPPERCASE]</label>
+				<onfocus>Skin.SetString(WeatherPlus,3)</onfocus>
+			</control>
+			<control type="image" id="124">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="104">
+				<description>Hourly</description>
+				<width>138</width>
+				<include>MenuBarBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[33036][/UPPERCASE]</label>
+				<onfocus>Skin.SetString(WeatherPlus,4)</onfocus>
+			</control>
+			<control type="image" id="125">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="105">
+				<description>10 Days</description>
+				<width>138</width>
+				<include>MenuBarBtn</include>
+				<label>[UPPERCASE]10 $LOCALIZE[12393][/UPPERCASE]</label>
+				<onfocus>Skin.SetString(WeatherPlus,5)</onfocus>
+			</control>
+			<control type="image" id="121">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="106">
+				<description>Maps</description>
+				<width>138</width>
+				<include>MenuBarBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[33035][/UPPERCASE]</label>
+				<onfocus>Skin.SetString(WeatherPlus,6)</onfocus>
+			</control>
+			<control type="image" id="122">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="2">
+				<description>Refresh</description>
+				<width>132</width>
+				<include>MenuBarBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[103][/UPPERCASE]</label>
+			</control>
+			<control type="image" id="123">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="107">
+				<description>Settings</description>
+				<width>132</width>
+				<include>MenuBarBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[5][/UPPERCASE]</label>
+				<onclick>ActivateWindow(WeatherSettings)</onclick>
+			</control>
+		</control>	
+	</include>
+
 	<include name="PVRMenuBar">
 		<control type="group" id="505">
 			<description>Menu Bar Area</description>

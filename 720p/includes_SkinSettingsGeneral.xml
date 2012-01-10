@@ -68,6 +68,28 @@
 					<onclick>ReloadSkin()</onclick>
 					<include>ReloadSkinNotification</include>
 				</control>
+				<control type="radiobutton" id="1008">
+					<description>Enable Animated Weather Icons</description>	
+					<include>SettingsContentRadioBtn</include>
+					<label>$LOCALIZE[31030]</label>
+					<selected>Skin.HasSetting(EnableAnimWeatherIcons)</selected>
+					<onclick>Skin.ToggleSetting(EnableAnimWeatherIcons)</onclick>
+					<onclick>ReloadSkin()</onclick>
+					<include>ReloadSkinNotification</include>
+					<enable>!IsEmpty(Weather.Plugin)</enable>
+				</control>				
+				<control type="togglebutton" id="1009">
+					<description>Weather Apply To All Windows</description>
+					<include>SettingsContentRadioBtn</include>
+					<label>$LOCALIZE[31031]</label>
+					<altlabel>$LOCALIZE[31032]</altlabel>
+					<usealttexture>!Skin.HasSetting(ApplyAllAnimWeatherIcons)</usealttexture>
+					<onclick>Skin.ToggleSetting(ApplyAllAnimWeatherIcons)</onclick>
+					<enable>Skin.HasSetting(EnableAnimWeatherIcons)
+					+ !Skin.HasSetting(DisableWeather) + !IsEmpty(Weather.Plugin)</enable>
+					<onclick>ReloadSkin()</onclick>
+					<include>ReloadSkinNotification</include>
+				</control>
 			</control>
 		</control>
 	</include>

@@ -73,6 +73,9 @@
 <string id="31027">Hide Seek Bar OSD During Fullscreen Playback</string>
 <string id="31028">Enable Kiosk Mode</string>
 <string id="31029">Hide Dialog Close Buttons</string>
+<string id="31030">Enable Animated Icons</string>
+<string id="31031">Animated Icons Apply To All Windows</string>
+<string id="31032">Animated Icons Apply To Weather Window Only</string>
 <string id="31999">Reset Skin Settings To Default</string>
 
 <!-- skin settings home -->
