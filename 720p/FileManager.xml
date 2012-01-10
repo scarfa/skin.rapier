@@ -5,7 +5,7 @@
 	
 	<controls>
 		<control type="group">		
-			<include>BackgroundDefault</include>
+			<include>BackgroundFileManager</include>
 			<include condition="!Skin.HasSetting(DisableVideoPlayingBG)">BackgroundVideoPlaying</include>
 			<include condition="!Skin.HasSetting(DisableMusicPlayingBG)">BackgroundMusicPlaying</include>
 			<include>BackgroundOpenCloseAnim</include>
@@ -98,7 +98,7 @@
 						<posy>16</posy>
 						<width>280</width>
 						<font>ListFont2</font>
-						<textcolor>MediaInfoTitleColor2</textcolor>
+						<textcolor>ListColor3</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<align>right</align>
 						<aligny>center</aligny>				
@@ -157,7 +157,7 @@
 							<posy>16</posy>
 							<width>280</width>
 							<font>ListFont2</font>
-							<textcolor>MediaInfoTitleColor2</textcolor>
+							<textcolor>ListColor3</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<align>right</align>
 							<aligny>center</aligny>				
@@ -208,7 +208,7 @@
 						<posy>16</posy>
 						<width>280</width>
 						<font>ListFont2</font>
-						<textcolor>MediaInfoTitleColor2</textcolor>
+						<textcolor>ListColor3</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<align>right</align>
 						<aligny>center</aligny>				
@@ -267,7 +267,7 @@
 							<posy>16</posy>
 							<width>280</width>
 							<font>ListFont2</font>
-							<textcolor>MediaInfoTitleColor2</textcolor>
+							<textcolor>ListColor3</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<align>right</align>
 							<aligny>center</aligny>				
@@ -317,64 +317,16 @@
 					<height>300</height>
 					<itemgap>8</itemgap>
 					<control type="label">
-						<description>Total Space (C)</description>
+						<description>Total Space</description>
 						<include>FileManagerInfoLabel</include>
-						<label>$INFO[System.Totalspace(C)]</label>
-						<visible>!IsEmpty(System.Totalspace(C))</visible>
+						<label>$INFO[System.Totalspace]</label>
+						<visible>!IsEmpty(System.Totalspace)</visible>
 					</control>
 					<control type="textbox">
-						<description>Free Space (C)</description>
+						<description>Free Space</description>
 						<include>FileManagerInfoLabel2</include>
-						<label fallback="31000">$INFO[System.Freespace(C)]</label>
-						<visible>!IsEmpty(System.Freespace(C))</visible>
-					</control>
-					<control type="label">
-						<description>Total Space (D)</description>
-						<include>FileManagerInfoLabel</include>
-						<label>$INFO[System.Totalspace(D)]</label>
-						<visible>!IsEmpty(System.Totalspace(D))</visible>
-					</control>
-					<control type="textbox">
-						<description>Free Space (D)</description>
-						<include>FileManagerInfoLabel2</include>
-						<label fallback="31000">$INFO[System.Freespace(D)]</label>
-						<visible>!IsEmpty(System.Freespace(D))</visible>
-					</control>
-					<control type="label">
-						<description>Total Space (E)</description>
-						<include>FileManagerInfoLabel</include>
-						<label>$INFO[System.Totalspace(E)]</label>
-						<visible>!IsEmpty(System.Totalspace(E))</visible>
-					</control>
-					<control type="textbox">
-						<description>Free Space (E)</description>
-						<include>FileManagerInfoLabel2</include>
-						<label fallback="31000">$INFO[System.Freespace(E)]</label>
-						<visible>!IsEmpty(System.Freespace(E))</visible>
-					</control>
-					<control type="label">
-						<description>Total Space (F)</description>
-						<include>FileManagerInfoLabel</include>
-						<label>$INFO[System.Totalspace(F)]</label>
-						<visible>!IsEmpty(System.Totalspace(F))</visible>
-					</control>
-					<control type="textbox">
-						<description>Free Space (F)</description>
-						<include>FileManagerInfoLabel2</include>
-						<label fallback="31000">$INFO[System.Freespace(F)]</label>
-						<visible>!IsEmpty(System.Freespace(F))</visible>
-					</control>
-					<control type="label">
-						<description>Total Space (G)</description>
-						<include>FileManagerInfoLabel</include>
-						<label>$INFO[System.Totalspace(G)]</label>
-						<visible>!IsEmpty(System.Totalspace(G))</visible>
-					</control>
-					<control type="textbox">
-						<description>Free Space (G)</description>
-						<include>FileManagerInfoLabel2</include>
-						<label fallback="31000">$INFO[System.Freespace(G)]</label>
-						<visible>!IsEmpty(System.Freespace(G))</visible>
+						<label fallback="31000">$INFO[System.Freespace]</label>
+						<visible>!IsEmpty(System.Freespace)</visible>
 					</control>
 				</control> 
 			</control>

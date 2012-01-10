@@ -5,7 +5,7 @@
 	
 	<controls>
 		<control type="group">		
-			<include>BackgroundDefault</include>
+			<include>BackgroundFileManager</include>
 			<include condition="[[!IsEmpty(Skin.String(CustomMusicBGPath)) + [Skin.String(CustomMusicBGType,) | Skin.String(CustomMusicBGType,2) | Skin.String(CustomMusicBGType,3)]] 
 			| Skin.String(CustomMusicBGType,4)] + Skin.HasSetting(ApplyAllMusicCustomBG)">BackgroundMusic</include>
 			<include condition="!Skin.HasSetting(DisableVideoPlayingBG)">BackgroundVideoPlaying</include>
@@ -102,7 +102,7 @@
 						<posy>16</posy>
 						<width>280</width>
 						<font>ListFont2</font>
-						<textcolor>MediaInfoTitleColor2</textcolor>
+						<textcolor>ListColor3</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<align>right</align>
 						<aligny>center</aligny>				
@@ -161,7 +161,7 @@
 							<posy>16</posy>
 							<width>280</width>
 							<font>ListFont2</font>
-							<textcolor>MediaInfoTitleColor2</textcolor>
+							<textcolor>ListColor3</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<align>right</align>
 							<aligny>center</aligny>				
@@ -212,7 +212,7 @@
 						<posy>16</posy>
 						<width>280</width>
 						<font>ListFont2</font>
-						<textcolor>MediaInfoTitleColor2</textcolor>
+						<textcolor>ListColor3</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<align>right</align>
 						<aligny>center</aligny>				
@@ -271,7 +271,7 @@
 							<posy>16</posy>
 							<width>280</width>
 							<font>ListFont2</font>
-							<textcolor>MediaInfoTitleColor2</textcolor>
+							<textcolor>ListColor3</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<align>right</align>
 							<aligny>center</aligny>				
