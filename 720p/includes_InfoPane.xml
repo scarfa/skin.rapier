@@ -287,11 +287,20 @@
 		</control>								
 	</include>
 	
-	<include name="InfoPaneWeatherDetails">		
+	<include name="InfoPaneWeatherDetails">	
 		<control type="label">
-			<width>450</width>
+			<width>550</width>
 			<include>InfoPaneHeadLabel</include>
-			<label>[UPPERCASE]$INFO[Window(Weather).Property(WeatherProvider),Weather provided by: ][/UPPERCASE]</label>
+			<label>[UPPERCASE]$INFO[Window(Weather).Property(Location),[B]$LOCALIZE[35500]:[/B] ][/UPPERCASE]</label>
+		</control>
+		
+		<control type="label">
+			<posx>30r</posx>
+			<width>550</width>
+			<align>right</align>
+			<textcolor>GreyColor</textcolor>
+			<include>InfoPaneHeadLabel</include>
+			<label>[UPPERCASE]$INFO[Window(Weather).Property(WeatherProvider),[B]Weather provided by:[/B] ][/UPPERCASE]</label>
 		</control>
 	</include>
 	

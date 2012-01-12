@@ -51,7 +51,7 @@
 			<visible>IsEmpty(Weather.Plugin)</visible>
 		</control>
 
-		<include condition="!StringCompare(Weather.Plugin,weather.weatherplus)">WeatherStandard</include>
+		<include condition="!StringCompare(Weather.Plugin,weather.weatherplus) + !IsEmpty(Weather.Plugin)">WeatherStandard</include>
 		<include condition="StringCompare(Weather.Plugin,weather.weatherplus)">WeatherPlus</include>
 		
 		<control type="group" id="505">
