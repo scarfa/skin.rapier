@@ -1,7 +1,6 @@
 <window id="502">
 	<defaultcontrol always="true">500</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<previouswindow>Home</previouswindow>
 	<views>50,51,52,63,77,62,67,96,98,64,70,90,91,93</views>
 	<onload>Skin.Reset(ShowMediaExtraOptions)</onload>
 	<onload condition="System.HasAddon(script.artistslideshow) + Skin.HasSetting(UseFanartForMusicPlayingBG) + Skin.HasSetting(EnableArtistFanartSlideshow)">RunScript(script.artistslideshow)</onload>
