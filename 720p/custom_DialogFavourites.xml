@@ -1,7 +1,7 @@
 <window type="dialog" id="3005">
 	<defaultcontrol always="true">450</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<onload condition="System.HasAddon(script.favourites)">RunScript(script.favourites,playlists=window)</onload>
+	<onload condition="System.HasAddon(script.favourites)">RunScript(script.favourites)</onload>
 	<onload condition="!System.HasAddon(script.favourites)">Notification(Missing Add-on!,Please install script.favourites,5000,)</onload>
 	<onload condition="!System.HasAddon(script.favourites)">Dialog.Close(3005)</onload>
 
