@@ -658,7 +658,7 @@
 					<icon>homecategories/$INFO[System.Language]/music-text-nofocus.png</icon>
 					<include condition="Skin.String(CustomMusicBGType,2) | Skin.String(CustomMusicBGType,3) | Skin.String(CustomMusicBGType,)">HomeMusicCustomBGPath</include>
 					<include condition="Skin.String(CustomMusicBGType,4)">HomeMusicFanartBGPath</include>
-					<onclick>ActivateWindow(Music)</onclick>
+					<onclick>ActivateWindow(MusicLibrary)</onclick>
 					<visible>!Skin.HasSetting(HideMusicCategory)</visible>
 				</item>
 
