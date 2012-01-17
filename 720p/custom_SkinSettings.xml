@@ -42,6 +42,8 @@
 	<onunload>Skin.Reset(ExpandCustomPicturesBGSettings)</onunload>
 	<onunload>Skin.Reset(ExpandCustomGeneralBGSettings)</onunload>
 	<onunload>Skin.Reset(ExpandCustomSystemBGSettings)</onunload>
+	<onunload>Skin.Reset(ExpandCustomWeatherBGSettings)</onunload>
+	<onunload>Skin.Reset(ExpandCustomPVRBGSettings)</onunload>
 	
 	<controls>	
 		<control type="group">					
@@ -202,6 +204,7 @@
 					<onclick>Skin.SetString(CustomPicturesBGPath,background-pictures.png)</onclick>
 					<onclick>Skin.SetString(CustomGeneralBGPath,background-general.png)</onclick>
 					<onclick>Skin.SetString(CustomSystemBGPath,background-system.png)</onclick>
+					<onclick>Skin.SetString(CustomWeatherBGPath,background-weather.png)</onclick>
 					<onclick>Notification($LOCALIZE[31023],$LOCALIZE[31219],3000,)</onclick>
 					<visible>!ControlGroup(905).HasFocus</visible>
 				</control>

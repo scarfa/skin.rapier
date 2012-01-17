@@ -10,6 +10,7 @@
 	<onload condition="IsEmpty(Skin.String(CustomPicturesBGPath))">Skin.SetString(CustomPicturesBGPath,background-pictures.png)</onload>
 	<onload condition="IsEmpty(Skin.String(CustomGeneralBGPath))">Skin.SetString(CustomGeneralBGPath,background-general.png)</onload>
 	<onload condition="IsEmpty(Skin.String(CustomSystemBGPath))">Skin.SetString(CustomSystemBGPath,background-system.png)</onload>
+	<onload condition="IsEmpty(Skin.String(CustomWeatherBGPath))">Skin.SetString(CustomWeatherBGPath,background-weather.png)</onload>
 	<onload condition="IsEmpty(Skin.String(CustomPVRBGPath))">Skin.SetString(CustomPVRBGPath,background-pvr.png)</onload>
 	<onload condition="IsEmpty(Skin.String(CustomDefaultBGPath))">Skin.SetString(CustomDefaultBGPath,background-default.png)</onload>
 	

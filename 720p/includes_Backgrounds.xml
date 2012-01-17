@@ -18,18 +18,23 @@
 		</control>
 	</include>
 	
-	<include name="BackgroundWeather">
-		<control type="image">
-			<include>BackgroundSize</include>
-			<texture background="true">background-weather.png</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>BackgroundCrossfadeTime</fadetime>
-			<include>BackgroundVisibleAnim</include>
-		</control>
-		
-		<control type="image">
-			<include>BackgroundDim</include>
-			<animation effect="fade" end="75" condition="true">Conditional</animation>
+	<include name="BackgroundWeather">		
+		<control type="group">
+			<include condition="![Skin.HasSetting(DisableMusicPlayingBG) | Skin.HasSetting(DisableVideoPlayingBG)]">IsMediaPlayingCondition</include>
+
+			<control type="multiimage">
+				<description>Custom Background</description>
+				<include>BackgroundSize</include>
+				<include condition="Skin.String(CustomWeatherBGType,) | Skin.String(CustomWeatherBGType,2) | Skin.String(CustomWeatherBGType,3)">WeatherCustomBGPath</include>
+				<include condition="Skin.String(CustomWeatherBGType,4)">WeatherConditionBGPath</include>
+				<aspectratio>scale</aspectratio>
+				<timeperimage>10000</timeperimage>
+				<fadetime>BackgroundCrossfadeTime</fadetime>
+				<randomize>true</randomize>
+				<include condition="Skin.HasSetting(AnimateBackground)">CustomBackgroundAnim</include>
+			</control>
+
+			<include>WeatherBackgroundDim</include>
 		</control>
 	</include>
 	
@@ -531,6 +536,14 @@
 			<animation effect="fade" end="85" reversible="false" condition="Skin.HasSetting(DimPicturesBackgroundHigh)">Conditional</animation>
 		</control>
 	</include>
+	
+	<include name="WeatherBackgroundDim">
+		<control type="image">
+			<include>BackgroundDim</include>
+			<animation effect="fade" end="75" reversible="false" condition="!Skin.HasSetting(DimWeatherBackgroundHigh)">Conditional</animation>
+			<animation effect="fade" end="85" reversible="false" condition="Skin.HasSetting(DimWeatherBackgroundHigh)">Conditional</animation>
+		</control>
+	</include>
 
 	<include name="PVRBackgroundDim">
 		<control type="image">
@@ -570,6 +583,14 @@
 
 	<include name="TVShowsFanartBGPath">
 		<imagepath background="true">special://profile/Thumbnails/Video/Fanart</imagepath>
+	</include>
+	
+	<include name="WeatherCustomBGPath">
+		<imagepath background="true">$INFO[Skin.String(CustomWeatherBGPath)]</imagepath>
+	</include>
+
+	<include name="WeatherConditionBGPath">
+		<imagepath background="true">$INFO[Skin.String(CustomWeatherBGPath)]$INFO[Window(Weather).Property(Current.FanartCode)]</imagepath>
 	</include>
 
 	<include name="TVTunesDisableVizCond">

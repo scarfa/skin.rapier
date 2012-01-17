@@ -5,8 +5,10 @@
 	<onload condition="System.HasAddon(script.artistslideshow) + Skin.HasSetting(UseFanartForMusicPlayingBG) + Skin.HasSetting(EnableArtistFanartSlideshow)">RunScript(script.artistslideshow)</onload>
 	
 	<controls>
-		<control type="group"> 	
-    		<include>BackgroundWeather</include>
+		<control type="group">
+			<include>BackgroundDefault</include>
+			<include condition="[[!IsEmpty(Skin.String(CustomWeatherBGPath)) + [Skin.String(CustomWeatherBGType,) | Skin.String(CustomWeatherBGType,2) | Skin.String(CustomWeatherBGType,3)]] 
+			| Skin.String(CustomWeatherBGType,4)]">BackgroundWeather</include>
 			<include condition="!Skin.HasSetting(DisableVideoPlayingBG)">BackgroundVideoPlaying</include>
 			<include condition="!Skin.HasSetting(DisableMusicPlayingBG)">BackgroundMusicPlaying</include>
 			<include>BackgroundOpenCloseAnim</include>
