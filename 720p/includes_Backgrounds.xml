@@ -259,7 +259,7 @@
 			<include condition="!Skin.HasSetting(UseFanartForMusicPlayingBG) + !Window.IsActive(Home)">MediaPlayingVizDim</include>
 			<include condition="Skin.HasSetting(UseFanartForMusicPlayingBG) + !Window.IsActive(Home)">MediaPlayingFanartDim</include>
 			<include condition="Window.IsActive(Home)">HomeBackgroundDim</include>
-		</control>0
+		</control>
 	</include>
 
 	<include name="BackgroundVideoPlaying">
