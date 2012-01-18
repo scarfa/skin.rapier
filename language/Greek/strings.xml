@@ -175,6 +175,7 @@
 	<string id="31509">TV Thumb</string>
 	<string id="31510">Character Art</string>
 	<string id="31511">Default Thumb</string>
+	<string id="31512">Καθολικό Υπόβαθρο στον Οδηγό τηλεόρασης</string>
 
 	<!--temporary strings until PVR related strings are present in xbmc main branch-->
 	<string id="31900">TV</string>
