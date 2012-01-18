@@ -5,7 +5,7 @@
 	
 	<controls>
 		<control type="group">		
-			<include>BackgroundFileManager</include>
+			<include>BackgroundDefault</include>
 			<include condition="!Skin.HasSetting(DisableVideoPlayingBG)">BackgroundVideoPlaying</include>
 			<include condition="!Skin.HasSetting(DisableMusicPlayingBG)">BackgroundMusicPlaying</include>
 			<include>BackgroundOpenCloseAnim</include>

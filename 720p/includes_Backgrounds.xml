@@ -38,21 +38,6 @@
 		</control>
 	</include>
 	
-	<include name="BackgroundFileManager">
-		<control type="image">
-			<include>BackgroundSize</include>
-			<texture background="true">background-file-manager.png</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>BackgroundCrossfadeTime</fadetime>
-			<include>BackgroundVisibleAnim</include>
-		</control>
-		
-		<control type="image">
-			<include>BackgroundDim</include>
-			<animation effect="fade" end="75" condition="true">Conditional</animation>
-		</control>
-	</include>
-	
 	<include name="BackgroundDefault">		
 		<control type="group">
 			<control type="multiimage">
