@@ -9,8 +9,6 @@
 <string id="31002">정렬: </string>
 <string id="31003">분</string>
 <string id="31004">스킨 정보</string>
-<string id="31300">최종 업데이트</string>
-<string id="31301">최종 시청</string>
 <string id="31302">아트웍 가져오기</string>
 <string id="31303">새로 추가됨</string>
 <string id="31304">정보</string>
@@ -19,8 +17,7 @@
 <string id="31307">배경</string>
 <string id="31308">만화</string>
 <string id="31309">최근 재생</string>
-<string id="31310">날씨 공급자가 설정되지 않음</string>
-<string id="31311">날씨 설정과 애드온 설치 여부를 확인하세요</string>
+<string id="31310">날씨 공급자가 설정되지 않았습니다. 날씨 설정을 확인하고 날씨 애드온을 설치하세요.</string>
 <string id="31202">항목</string>
 <string id="31203">줄거리 없음</string>
 <string id="31204">상세 정보 없음</string>
@@ -175,6 +172,7 @@
 <string id="31509">TV 썸네일</string>
 <string id="31510">캐릭터 아트</string>
 <string id="31511">기본 썸네일</string>
+<string id="31512">TV 가이드에 전체 배경화면 사용</string>
 
 <!--temporary strings until PVR related strings are present in xbmc main branch-->
 <string id="31900">TV</string>
