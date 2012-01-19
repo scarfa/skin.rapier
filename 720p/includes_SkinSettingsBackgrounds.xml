@@ -23,8 +23,8 @@
 				<control type="togglebutton" id="4011">
 					<description>Dim Fanart</description>
 					<include>SettingsContentRadioBtn</include>
-					<label>$LOCALIZE[20445] $LOCALIZE[31060]</label>
-					<altlabel>$LOCALIZE[20445] $LOCALIZE[31059]</altlabel>
+					<label>$LOCALIZE[31059] ($LOCALIZE[391])</label>
+					<altlabel>$LOCALIZE[31059] ($LOCALIZE[392])</altlabel>
 					<usealttexture>Skin.HasSetting(DimFanartBackgroundLow)</usealttexture>
 					<onclick>Skin.ToggleSetting(DimFanartBackgroundLow)</onclick>
 				</control>
@@ -212,8 +212,8 @@
 					<control type="togglebutton" id="4202">
 						<description>Dim Background</description>
 						<include>SettingsContentRadioBtn</include>
-						<label>$LOCALIZE[33068] $LOCALIZE[31059]</label>
-						<altlabel>$LOCALIZE[33068] $LOCALIZE[31060]</altlabel>
+						<label>$LOCALIZE[464] ($LOCALIZE[392])</label>
+						<altlabel>$LOCALIZE[464] ($LOCALIZE[391])</altlabel>
 						<usealttexture>Skin.HasSetting(DimDefaultBackgroundHigh)</usealttexture>
 						<onclick>Skin.ToggleSetting(DimDefaultBackgroundHigh)</onclick>
 					</control>
@@ -331,8 +331,8 @@
 					<control type="togglebutton" id="4212">
 						<description>Dim Background</description>
 						<include>SettingsContentRadioBtn</include>
-						<label>$LOCALIZE[33068] $LOCALIZE[31059]</label>
-						<altlabel>$LOCALIZE[33068] $LOCALIZE[31060]</altlabel>
+						<label>$LOCALIZE[464] ($LOCALIZE[392])</label>
+						<altlabel>$LOCALIZE[464] ($LOCALIZE[391])</altlabel>
 						<usealttexture>Skin.HasSetting(DimMusicBackgroundHigh)</usealttexture>
 						<onclick>Skin.ToggleSetting(DimMusicBackgroundHigh)</onclick>
 						<visible>Skin.String(CustomMusicBGType,2) | Skin.String(CustomMusicBGType,3)</visible>
@@ -340,8 +340,8 @@
 					<control type="togglebutton" id="4213">
 						<description>Apply To All Windows</description>
 						<include>SettingsContentRadioBtn</include>
-						<label>$LOCALIZE[33068] $LOCALIZE[31052] $LOCALIZE[2]</label>
-						<altlabel>$LOCALIZE[33068] $LOCALIZE[31051]</altlabel>
+						<label>$LOCALIZE[31052]</label>
+						<altlabel>$LOCALIZE[31051]</altlabel>
 						<usealttexture>!Skin.HasSetting(ApplyAllMusicCustomBG)</usealttexture>
 						<onclick>Skin.ToggleSetting(ApplyAllMusicCustomBG)</onclick>
 						<visible>Skin.String(CustomMusicBGType,2) | Skin.String(CustomMusicBGType,3) | Skin.String(CustomMusicBGType,4)</visible>
@@ -445,8 +445,8 @@
 					<control type="togglebutton" id="94212">
 						<description>Dim Background</description>
 						<include>SettingsContentRadioBtn</include>
-						<label>$LOCALIZE[33068] $LOCALIZE[31059]</label>
-						<altlabel>$LOCALIZE[33068] $LOCALIZE[31060]</altlabel>
+						<label>$LOCALIZE[464] ($LOCALIZE[392])</label>
+						<altlabel>$LOCALIZE[464] ($LOCALIZE[391])</altlabel>
 						<usealttexture>Skin.HasSetting(DimPVRBackgroundHigh)</usealttexture>
 						<onclick>Skin.ToggleSetting(DimPVRBackgroundHigh)</onclick>
 						<visible>Skin.String(CustomPVRBGType,2) | Skin.String(CustomPVRBGType,3)</visible>
@@ -454,8 +454,8 @@
 					<control type="togglebutton" id="94213">
 						<description>Apply To All Windows</description>
 						<include>SettingsContentRadioBtn</include>
-						<label>$LOCALIZE[33068] $LOCALIZE[31052] $LOCALIZE[31900]</label>
-						<altlabel>$LOCALIZE[33068] $LOCALIZE[31051]</altlabel>
+						<label>$LOCALIZE[31052]</label>
+						<altlabel>$LOCALIZE[31051]</altlabel>
 						<usealttexture>!Skin.HasSetting(ApplyAllPVRCustomBG)</usealttexture>
 						<onclick>Skin.ToggleSetting(ApplyAllPVRCustomBG)</onclick>
 						<visible>Skin.String(CustomPVRBGType,2) | Skin.String(CustomPVRBGType,3)</visible>
@@ -574,8 +574,8 @@
 					<control type="togglebutton" id="4222">
 						<description>Dim Background</description>
 						<include>SettingsContentRadioBtn</include>
-						<label>$LOCALIZE[33068] $LOCALIZE[31059]</label>
-						<altlabel>$LOCALIZE[33068] $LOCALIZE[31060]</altlabel>
+						<label>$LOCALIZE[464] ($LOCALIZE[392])</label>
+						<altlabel>$LOCALIZE[464] ($LOCALIZE[391])</altlabel>
 						<usealttexture>Skin.HasSetting(DimVideosBackgroundHigh)</usealttexture>
 						<onclick>Skin.ToggleSetting(DimVideosBackgroundHigh)</onclick>
 						<visible>Skin.String(CustomVideosBGType,2) | Skin.String(CustomVideosBGType,3)</visible>
@@ -583,8 +583,8 @@
 					<control type="togglebutton" id="4223">
 						<description>Apply To All Windows</description>
 						<include>SettingsContentRadioBtn</include>
-						<label>$LOCALIZE[33068] $LOCALIZE[31052] $LOCALIZE[3]</label>
-						<altlabel>$LOCALIZE[33068] $LOCALIZE[31051]</altlabel>
+						<label>$LOCALIZE[31052]</label>
+						<altlabel>$LOCALIZE[31051]</altlabel>
 						<usealttexture>!Skin.HasSetting(ApplyAllVideosCustomBG)</usealttexture>
 						<onclick>Skin.ToggleSetting(ApplyAllVideosCustomBG)</onclick>
 						<visible>Skin.String(CustomVideosBGType,2) | Skin.String(CustomVideosBGType,3) | Skin.String(CustomVideosBGType,4)</visible>
@@ -703,8 +703,8 @@
 					<control type="togglebutton" id="4232">
 						<description>Dim Background</description>
 						<include>SettingsContentRadioBtn</include>
-						<label>$LOCALIZE[33068] $LOCALIZE[31059]</label>
-						<altlabel>$LOCALIZE[33068] $LOCALIZE[31060]</altlabel>
+						<label>$LOCALIZE[464] ($LOCALIZE[392])</label>
+						<altlabel>$LOCALIZE[464] ($LOCALIZE[391])</altlabel>
 						<usealttexture>Skin.HasSetting(DimMoviesBackgroundHigh)</usealttexture>
 						<onclick>Skin.ToggleSetting(DimMoviesBackgroundHigh)</onclick>
 						<visible>Skin.String(CustomMoviesBGType,2) | Skin.String(CustomMoviesBGType,3)</visible>
@@ -712,8 +712,8 @@
 					<control type="togglebutton" id="4233">
 						<description>Apply To All Windows</description>
 						<include>SettingsContentRadioBtn</include>
-						<label>$LOCALIZE[33068] $LOCALIZE[31052] $LOCALIZE[20342]</label>
-						<altlabel>$LOCALIZE[33068] $LOCALIZE[31051]</altlabel>
+						<label>$LOCALIZE[31052]</label>
+						<altlabel>$LOCALIZE[31051]</altlabel>
 						<usealttexture>!Skin.HasSetting(ApplyAllMoviesCustomBG)</usealttexture>
 						<onclick>Skin.ToggleSetting(ApplyAllMoviesCustomBG)</onclick>
 						<visible>Skin.String(CustomMoviesBGType,2) | Skin.String(CustomMoviesBGType,3) | Skin.String(CustomMoviesBGType,4)</visible>
@@ -832,8 +832,8 @@
 					<control type="togglebutton" id="4242">
 						<description>Dim Background</description>
 						<include>SettingsContentRadioBtn</include>
-						<label>$LOCALIZE[33068] $LOCALIZE[31059]</label>
-						<altlabel>$LOCALIZE[33068] $LOCALIZE[31060]</altlabel>
+						<label>$LOCALIZE[464] ($LOCALIZE[392])</label>
+						<altlabel>$LOCALIZE[464] ($LOCALIZE[391])</altlabel>
 						<usealttexture>Skin.HasSetting(DimTVShowsBackgroundHigh)</usealttexture>
 						<onclick>Skin.ToggleSetting(DimTVShowsBackgroundHigh)</onclick>
 						<visible>Skin.String(CustomTVShowsBGType,2) | Skin.String(CustomTVShowsBGType,3)</visible>
@@ -841,8 +841,8 @@
 					<control type="togglebutton" id="4243">
 						<description>Apply To All Windows</description>
 						<include>SettingsContentRadioBtn</include>
-						<label>$LOCALIZE[33068] $LOCALIZE[31052] $LOCALIZE[20343]</label>
-						<altlabel>$LOCALIZE[33068] $LOCALIZE[31051]</altlabel>
+						<label>$LOCALIZE[31052]</label>
+						<altlabel>$LOCALIZE[31051]</altlabel>
 						<usealttexture>!Skin.HasSetting(ApplyAllTVShowsCustomBG)</usealttexture>
 						<onclick>Skin.ToggleSetting(ApplyAllTVShowsCustomBG)</onclick>
 						<visible>Skin.String(CustomTVShowsBGType,2) | Skin.String(CustomTVShowsBGType,3) | Skin.String(CustomTVShowsBGType,4)</visible>
@@ -946,8 +946,8 @@
 					<control type="togglebutton" id="4252">
 						<description>Dim Background</description>
 						<include>SettingsContentRadioBtn</include>
-						<label>$LOCALIZE[33068] $LOCALIZE[31059]</label>
-						<altlabel>$LOCALIZE[33068] $LOCALIZE[31060]</altlabel>
+						<label>$LOCALIZE[464] ($LOCALIZE[392])</label>
+						<altlabel>$LOCALIZE[464] ($LOCALIZE[391])</altlabel>
 						<usealttexture>Skin.HasSetting(DimProgramsBackgroundHigh)</usealttexture>
 						<onclick>Skin.ToggleSetting(DimProgramsBackgroundHigh)</onclick>
 						<visible>Skin.String(CustomProgramsBGType,2) | Skin.String(CustomProgramsBGType,3)</visible>
@@ -955,8 +955,8 @@
 					<control type="togglebutton" id="4253">
 						<description>Apply To All Windows</description>
 						<include>SettingsContentRadioBtn</include>
-						<label>$LOCALIZE[33068] $LOCALIZE[31052] $LOCALIZE[0]</label>
-						<altlabel>$LOCALIZE[33068] $LOCALIZE[31051]</altlabel>
+						<label>$LOCALIZE[31052]</label>
+						<altlabel>$LOCALIZE[31051]</altlabel>
 						<usealttexture>!Skin.HasSetting(ApplyAllProgramsCustomBG)</usealttexture>
 						<onclick>Skin.ToggleSetting(ApplyAllProgramsCustomBG)</onclick>
 						<visible>Skin.String(CustomProgramsBGType,2) | Skin.String(CustomProgramsBGType,3)</visible>
@@ -1060,8 +1060,8 @@
 					<control type="togglebutton" id="4262">
 						<description>Dim Background</description>
 						<include>SettingsContentRadioBtn</include>
-						<label>$LOCALIZE[33068] $LOCALIZE[31059]</label>
-						<altlabel>$LOCALIZE[33068] $LOCALIZE[31060]</altlabel>
+						<label>$LOCALIZE[464] ($LOCALIZE[392])</label>
+						<altlabel>$LOCALIZE[464] ($LOCALIZE[391])</altlabel>
 						<usealttexture>Skin.HasSetting(DimPicturesBackgroundHigh)</usealttexture>
 						<onclick>Skin.ToggleSetting(DimPicturesBackgroundHigh)</onclick>
 						<visible>Skin.String(CustomPicturesBGType,2) | Skin.String(CustomPicturesBGType,3)</visible>
@@ -1069,8 +1069,8 @@
 					<control type="togglebutton" id="4263">
 						<description>Apply To All Windows</description>
 						<include>SettingsContentRadioBtn</include>
-						<label>$LOCALIZE[33068] $LOCALIZE[31052] $LOCALIZE[1]</label>
-						<altlabel>$LOCALIZE[33068] $LOCALIZE[31051]</altlabel>
+						<label>$LOCALIZE[31052]</label>
+						<altlabel>$LOCALIZE[31051]</altlabel>
 						<usealttexture>!Skin.HasSetting(ApplyAllPicturesCustomBG)</usealttexture>
 						<onclick>Skin.ToggleSetting(ApplyAllPicturesCustomBG)</onclick>
 						<visible>Skin.String(CustomPicturesBGType,2) | Skin.String(CustomPicturesBGType,3)</visible>
@@ -1381,8 +1381,8 @@
 					<control type="togglebutton" id="4412">
 						<description>Dim Background</description>
 						<include>SettingsContentRadioBtn</include>
-						<label>$LOCALIZE[33068] $LOCALIZE[31059]</label>
-						<altlabel>$LOCALIZE[33068] $LOCALIZE[31060]</altlabel>
+						<label>$LOCALIZE[464] ($LOCALIZE[392])</label>
+						<altlabel>$LOCALIZE[464] ($LOCALIZE[391])</altlabel>
 						<usealttexture>Skin.HasSetting(DimWeatherBackgroundHigh)</usealttexture>
 						<onclick>Skin.ToggleSetting(DimWeatherBackgroundHigh)</onclick>
 						<visible>Skin.String(CustomWeatherBGType,2) | Skin.String(CustomWeatherBGType,3) | Skin.String(CustomWeatherBGType,4)</visible>

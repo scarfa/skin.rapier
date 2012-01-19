@@ -60,8 +60,8 @@
 				<control type="togglebutton" id="1004">
 					<description>Weather Apply To All Windows</description>
 					<include>SettingsContentRadioBtn</include>
-					<label>$LOCALIZE[8] $LOCALIZE[31054]</label>
-					<altlabel>$LOCALIZE[8] $LOCALIZE[31051]</altlabel>
+					<label>$LOCALIZE[31054]</label>
+					<altlabel>$LOCALIZE[31051]</altlabel>
 					<usealttexture>!Skin.HasSetting(ApplyAllWeather)</usealttexture>
 					<onclick>Skin.ToggleSetting(ApplyAllWeather)</onclick>
 					<enable>!Skin.HasSetting(DisableWeather) + !IsEmpty(Weather.Plugin)</enable>

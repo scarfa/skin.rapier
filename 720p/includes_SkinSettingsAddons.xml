@@ -56,14 +56,14 @@
 			<control type="button" id="5006">
 				<description>Run Artwork Downloader (Addon Settings)</description>
 				<include>SettingsContentBtn</include>
-				<label>$LOCALIZE[33003] - $LOCALIZE[1045]</label>
+				<label>$LOCALIZE[31512]</label>
 				<onclick>XBMC.RunScript(script.artwork.downloader)</onclick>
 				<enable>System.HasAddon(script.artwork.downloader)</enable>
 			</control>
 			<control type="radiobutton" id="5007">
 				<description>Download (Movies)</description>
 				<include>SettingsContentRadioBtn</include>
-				<label>$LOCALIZE[33003] - $LOCALIZE[20342]</label>
+				<label>$LOCALIZE[31513] ($LOCALIZE[20342])</label>
 				<selected>Skin.HasSetting(ShowMoviesArtworkDownloaderSettings)</selected>
 				<onclick>Skin.ToggleSetting(ShowMoviesArtworkDownloaderSettings)</onclick>
 				<enable>System.HasAddon(script.artwork.downloader)</enable>
@@ -119,7 +119,7 @@
 			<control type="radiobutton" id="5014">
 				<description>Download (TVShows)</description>
 				<include>SettingsContentRadioBtn</include>
-				<label>$LOCALIZE[33003] - $LOCALIZE[20343]</label>
+				<label>$LOCALIZE[31513] ($LOCALIZE[20343])</label>
 				<selected>Skin.HasSetting(ShowTVShowsArtworkDownloaderSettings)</selected>
 				<onclick>Skin.ToggleSetting(ShowTVShowsArtworkDownloaderSettings)</onclick>
 				<enable>System.HasAddon(script.artwork.downloader)</enable>

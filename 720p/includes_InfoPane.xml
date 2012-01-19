@@ -133,7 +133,7 @@
 		<control type="group">
 			<control type="label">
 				<include>InfoPaneHeadLabel</include>
-				<label>$INFO[Container.NumItems,, $LOCALIZE[31202]]$INFO[Container.SortMethod, $LOCALIZE[31002] ,]</label>
+				<label>$INFO[Container.NumItems,, $LOCALIZE[31202]]</label>
 			</control>
 			
 			<include condition="Window.IsActive(VideoLibrary)">VideoDetails</include>
@@ -148,7 +148,7 @@
 			
 			<control type="label">
 				<include>InfoPaneHeadLabel2</include>
-				<label>$INFO[Window(Home).Property(Movies.Count),, $LOCALIZE[20342] $LOCALIZE[20161]]$INFO[Window(Home).Property(Movies.Watched),  -  , $LOCALIZE[16102]]</label>
+				<label>$INFO[Window(Home).Property(Movies.Count),, $LOCALIZE[20342]]$INFO[Window(Home).Property(Movies.Watched),  -  , $LOCALIZE[16102]]</label>
 			</control>
 		</control>
 		
@@ -158,7 +158,7 @@
 				
 			<control type="label">
 				<include>InfoPaneHeadLabel2</include>
-				<label>$INFO[Window(Home).Property(TVShows.Count),, $LOCALIZE[20343] $LOCALIZE[20161]]$INFO[Window(Home).Property(TVShows.Watched),  -  , $LOCALIZE[16102]]</label>
+				<label>$INFO[Window(Home).Property(TVShows.Count),, $LOCALIZE[20343]]$INFO[Window(Home).Property(TVShows.Watched),  -  , $LOCALIZE[16102]]</label>
 			</control>
 		</control>
 		
@@ -174,7 +174,7 @@
 				
 			<control type="label">
 				<include>InfoPaneHeadLabel2</include>
-				<label>$INFO[Container.Totaltime,, $LOCALIZE[31003] $LOCALIZE[20161]]</label>
+				<label>$INFO[Container.Totaltime,, $LOCALIZE[31003]]</label>
 			</control>
 		</control>
 		
@@ -184,7 +184,7 @@
 					
 			<control type="label">
 				<include>InfoPaneHeadLabel2</include>
-				<label>$INFO[Window(Home).Property(MusicVideos.Count),, $LOCALIZE[20389] $LOCALIZE[20161]]$INFO[Window(Home).Property(MusicVideos.Watched),  -  , $LOCALIZE[16102]]</label>
+				<label>$INFO[Window(Home).Property(MusicVideos.Count),, $LOCALIZE[20389]]$INFO[Window(Home).Property(MusicVideos.Watched),  -  , $LOCALIZE[16102]]</label>
 			</control>
 		</control>
 	</include>
@@ -196,7 +196,7 @@
 				
 			<control type="label">
 				<include>InfoPaneHeadLabel2</include>
-				<label>$INFO[Window(Home).Property(Music.AlbumsCount),, $LOCALIZE[132] $LOCALIZE[20161]]$INFO[Window(Home).Property(Music.SongsCount),  -  , $LOCALIZE[134]]</label>
+				<label>$INFO[Window(Home).Property(Music.AlbumsCount),, $LOCALIZE[132]]$INFO[Window(Home).Property(Music.SongsCount),  -  , $LOCALIZE[134]]</label>
 			</control>
 		</control>
 
@@ -206,7 +206,7 @@
 				
 			<control type="label">
 				<include>InfoPaneHeadLabel2</include>
-				<label>$INFO[Container.Totaltime,, $LOCALIZE[31003] $LOCALIZE[20161]]</label>
+				<label>$INFO[Container.Totaltime,, $LOCALIZE[31003]]</label>
 			</control>
 		</control>
 
@@ -216,7 +216,7 @@
 				
 			<control type="label">
 				<include>InfoPaneHeadLabel2</include>
-				<label>$INFO[Window(Home).Property(Music.ArtistsCount),, $LOCALIZE[133] $LOCALIZE[20161]]</label>
+				<label>$INFO[Window(Home).Property(Music.ArtistsCount),, $LOCALIZE[133]]</label>
 			</control>
 		</control>
 		
@@ -226,7 +226,7 @@
 			
 			<control type="label">
 				<include>InfoPaneHeadLabel2</include>
-				<label>$INFO[Window(Home).Property(MusicVideos.Count),, $LOCALIZE[20389] $LOCALIZE[20161]]$INFO[Window(Home).Property(MusicVideos.Watched),  -  , $LOCALIZE[16102]]</label>
+				<label>$INFO[Window(Home).Property(MusicVideos.Count),, $LOCALIZE[20389]]$INFO[Window(Home).Property(MusicVideos.Watched),  -  , $LOCALIZE[16102]]</label>
 			</control>
 		</control>
 	</include>
