@@ -8,7 +8,7 @@
 	<controls>
 		<control type="group">	
 			<include>BackgroundDefault</include>
-			<include condition="[[!IsEmpty(Skin.String(CustomMusicBGPath)) + [Skin.String(CustomMusicBGType,) | Skin.String(CustomMusicBGType,2) | Skin.String(CustomMusicBGType,3)]] 
+			<include condition="[[!IsEmpty(Skin.String(CustomMusicBGPath)) + [Skin.String(CustomMusicBGType,2) | Skin.String(CustomMusicBGType,3)]] 
 			| Skin.String(CustomMusicBGType,4)] + Skin.HasSetting(ApplyAllMusicCustomBG)">BackgroundMusic</include>
 			<include condition="!Skin.HasSetting(DisableVideoPlayingBG)">BackgroundVideoPlaying</include>
 			<include condition="!Skin.HasSetting(DisableMusicPlayingBG)">BackgroundMusicPlaying</include>

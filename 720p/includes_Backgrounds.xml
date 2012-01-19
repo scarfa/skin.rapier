@@ -25,7 +25,7 @@
 			<control type="multiimage">
 				<description>Custom Background</description>
 				<include>BackgroundSize</include>
-				<include condition="Skin.String(CustomWeatherBGType,) | Skin.String(CustomWeatherBGType,2) | Skin.String(CustomWeatherBGType,3)">WeatherCustomBGPath</include>
+				<include condition="Skin.String(CustomWeatherBGType,2) | Skin.String(CustomWeatherBGType,3)">WeatherCustomBGPath</include>
 				<include condition="Skin.String(CustomWeatherBGType,4)">WeatherConditionBGPath</include>
 				<aspectratio>scale</aspectratio>
 				<timeperimage>10000</timeperimage>
@@ -95,7 +95,7 @@
 			<control type="multiimage">
 				<description>Custom Background</description>
 				<include>BackgroundSize</include>
-				<include condition="Skin.String(CustomMusicBGType,) | Skin.String(CustomMusicBGType,2) | Skin.String(CustomMusicBGType,3)">MusicCustomBGPath</include>
+				<include condition="Skin.String(CustomMusicBGType,2) | Skin.String(CustomMusicBGType,3)">MusicCustomBGPath</include>
 				<include condition="Skin.String(CustomMusicBGType,4)">MusicFanartBGPath</include>
 				<aspectratio>scale</aspectratio>
 				<timeperimage>10000</timeperimage>
@@ -116,7 +116,7 @@
 			<control type="multiimage">
 				<description>Custom Background</description>
 				<include>BackgroundSize</include>
-				<include condition="Skin.String(CustomVideosBGType,) | Skin.String(CustomVideosBGType,2) | Skin.String(CustomVideosBGType,3)">VideosCustomBGPath</include>
+				<include condition="Skin.String(CustomVideosBGType,2) | Skin.String(CustomVideosBGType,3)">VideosCustomBGPath</include>
 				<include condition="Skin.String(CustomVideosBGType,4)">VideosFanartBGPath</include>
 				<aspectratio>scale</aspectratio>
 				<timeperimage>10000</timeperimage>
@@ -138,7 +138,7 @@
 			<control type="multiimage">
 				<description>Custom Background</description>
 				<include>BackgroundSize</include>
-				<include condition="Skin.String(CustomMoviesBGType,) | Skin.String(CustomMoviesBGType,2) | Skin.String(CustomMoviesBGType,3)">MoviesCustomBGPath</include>
+				<include condition="Skin.String(CustomMoviesBGType,2) | Skin.String(CustomMoviesBGType,3)">MoviesCustomBGPath</include>
 				<include condition="Skin.String(CustomMoviesBGType,4)">MoviesFanartBGPath</include>
 				<aspectratio>scale</aspectratio>
 				<timeperimage>10000</timeperimage>
@@ -160,7 +160,7 @@
 			<control type="multiimage">
 				<description>Custom Background</description>
 				<include>BackgroundSize</include>
-				<include condition="Skin.String(CustomTVShowsBGType,) | Skin.String(CustomTVShowsBGType,2) | Skin.String(CustomTVShowsBGType,3)">TVShowsCustomBGPath</include>
+				<include condition="Skin.String(CustomTVShowsBGType,2) | Skin.String(CustomTVShowsBGType,3)">TVShowsCustomBGPath</include>
 				<include condition="Skin.String(CustomTVShowsBGType,4)">TVShowsFanartBGPath</include>
 				<aspectratio>scale</aspectratio>
 				<timeperimage>10000</timeperimage>

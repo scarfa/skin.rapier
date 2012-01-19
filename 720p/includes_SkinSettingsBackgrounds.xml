@@ -248,14 +248,14 @@
 				<control type="multiimage">
 					<include>CustomImagePreview</include>
 					<imagepath background="true" fallback="background-default.png">$INFO[Skin.String(CustomDefaultBGPath)]</imagepath>
-					<visible>Skin.String(CustomMusicBGType,1)</visible>
+					<visible>Skin.String(CustomMusicBGType,1) | Skin.String(CustomMusicBGType,)</visible>
 					<include>CustomImagePreviewOpenCloseAnim</include>
 				</control>
 				
 				<control type="multiimage">
 					<include>CustomImagePreview</include>
 					<imagepath background="true" fallback=".">$INFO[Skin.String(CustomMusicBGPath)]</imagepath>
-					<visible>Skin.String(CustomMusicBGType,2) | Skin.String(CustomMusicBGType,3) | Skin.String(CustomMusicBGType,)</visible>
+					<visible>Skin.String(CustomMusicBGType,2) | Skin.String(CustomMusicBGType,3)</visible>
 					<include>CustomImagePreviewOpenCloseAnim</include>
 				</control>
 				
@@ -278,17 +278,17 @@
 					<control type="radiobutton" id="4110">
 						<description>Default</description>
 						<include>SettingsCustomBGRadioBtn</include>
-						<selected>Skin.String(CustomMusicBGType,1)</selected>
+						<selected>Skin.String(CustomMusicBGType,1) | Skin.String(CustomMusicBGType,)</selected>
 						<onclick>Skin.SetString(CustomMusicBGType,1)</onclick>
-						<onclick>Skin.SetString(CustomMusicBGPath,background-music.png)</onclick>
+						<onclick>Skin.Reset(CustomMusicBGPath)</onclick>
 						<label>$LOCALIZE[31058]</label>
 					</control>
 					<control type="radiobutton" id="4111">
 						<description>Single Image</description>
 						<include>SettingsCustomBGRadioBtn</include>
-						<selected>Skin.String(CustomMusicBGType,2) | Skin.String(CustomMusicBGType,)</selected>
+						<selected>Skin.String(CustomMusicBGType,2)</selected>
 						<onclick>Skin.SetString(CustomMusicBGType,2)</onclick>
-						<onclick>Skin.SetString(CustomMusicBGPath,background-music.png)</onclick>
+						<onclick>Skin.Reset(CustomMusicBGPath)</onclick>
 						<label>$LOCALIZE[31056]</label>
 					</control>
 					<control type="radiobutton" id="4112">
@@ -296,7 +296,7 @@
 						<include>SettingsCustomBGRadioBtn</include>
 						<selected>Skin.String(CustomMusicBGType,3)</selected>
 						<onclick>Skin.SetString(CustomMusicBGType,3)</onclick>
-						<onclick>Skin.SetString(CustomMusicBGPath,background-music.png)</onclick>
+						<onclick>Skin.Reset(CustomMusicBGPath)</onclick>
 						<label>$LOCALIZE[31057]</label>
 					</control>
 					<control type="radiobutton" id="4113">
@@ -304,7 +304,7 @@
 						<include>SettingsCustomBGRadioBtn</include>
 						<selected>Skin.String(CustomMusicBGType,4)</selected>
 						<onclick>Skin.SetString(CustomMusicBGType,4)</onclick>
-						<onclick>Skin.SetString(CustomMusicBGPath,background-music.png)</onclick>
+						<onclick>Skin.Reset(CustomMusicBGPath)</onclick>
 						<label>$LOCALIZE[20445]</label>
 					</control>
 				</control>
@@ -319,7 +319,7 @@
 						<include>SettingsContentBtn</include>
 						<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(CustomMusicBGPath)][/COLOR]</label>
 						<onclick>Skin.SetImage(CustomMusicBGPath)</onclick>
-						<visible>Skin.String(CustomMusicBGType,2) | Skin.String(CustomMusicBGType,)</visible>
+						<visible>Skin.String(CustomMusicBGType,2)</visible>
 					</control>
 					<control type="button" id="4211">
 						<description>Multi Image Path</description>
@@ -335,7 +335,7 @@
 						<altlabel>$LOCALIZE[33068] $LOCALIZE[31060]</altlabel>
 						<usealttexture>Skin.HasSetting(DimMusicBackgroundHigh)</usealttexture>
 						<onclick>Skin.ToggleSetting(DimMusicBackgroundHigh)</onclick>
-						<visible>Skin.String(CustomMusicBGType,2) | Skin.String(CustomMusicBGType,3) | Skin.String(CustomMusicBGType,)</visible>
+						<visible>Skin.String(CustomMusicBGType,2) | Skin.String(CustomMusicBGType,3)</visible>
 					</control>
 					<control type="togglebutton" id="4213">
 						<description>Apply To All Windows</description>
@@ -344,7 +344,7 @@
 						<altlabel>$LOCALIZE[33068] $LOCALIZE[31051]</altlabel>
 						<usealttexture>!Skin.HasSetting(ApplyAllMusicCustomBG)</usealttexture>
 						<onclick>Skin.ToggleSetting(ApplyAllMusicCustomBG)</onclick>
-						<visible>Skin.String(CustomMusicBGType,2) | Skin.String(CustomMusicBGType,3) | Skin.String(CustomMusicBGType,4) | Skin.String(CustomMusicBGType,)</visible>
+						<visible>Skin.String(CustomMusicBGType,2) | Skin.String(CustomMusicBGType,3) | Skin.String(CustomMusicBGType,4)</visible>
 					</control>	
 				</control>
 				
@@ -377,14 +377,14 @@
 				<control type="multiimage">
 					<include>CustomImagePreview</include>
 					<imagepath background="true" fallback="background-default.png">$INFO[Skin.String(CustomDefaultBGPath)]</imagepath>
-					<visible>Skin.String(CustomPVRBGType,1)</visible>
+					<visible>Skin.String(CustomPVRBGType,1) | Skin.String(CustomPVRBGType,)</visible>
 					<include>CustomImagePreviewOpenCloseAnim</include>
 				</control>
 
 				<control type="multiimage">
 					<include>CustomImagePreview</include>
 					<imagepath background="true" fallback=".">$INFO[Skin.String(CustomPVRBGPath)]</imagepath>
-					<visible>Skin.String(CustomPVRBGType,2) | Skin.String(CustomPVRBGType,3) | Skin.String(CustomPVRBGType,)</visible>
+					<visible>Skin.String(CustomPVRBGType,2) | Skin.String(CustomPVRBGType,3)</visible>
 					<include>CustomImagePreviewOpenCloseAnim</include>
 				</control>
 
@@ -400,17 +400,17 @@
 					<control type="radiobutton" id="94110">
 						<description>Default</description>
 						<include>SettingsCustomBGRadioBtn</include>
-						<selected>Skin.String(CustomPVRBGType,1)</selected>
+						<selected>Skin.String(CustomPVRBGType,1) | Skin.String(CustomPVRBGType,)</selected>
 						<onclick>Skin.SetString(CustomPVRBGType,1)</onclick>
-						<onclick>Skin.SetString(CustomPVRBGPath,background-pvr.png)</onclick>
+						<onclick>Skin.Reset(CustomPVRBGPath)</onclick>
 						<label>$LOCALIZE[31058]</label>
 					</control>
 					<control type="radiobutton" id="94111">
 						<description>Single Image</description>
 						<include>SettingsCustomBGRadioBtn</include>
-						<selected>Skin.String(CustomPVRBGType,2) | Skin.String(CustomPVRBGType,)</selected>
+						<selected>Skin.String(CustomPVRBGType,2)</selected>
 						<onclick>Skin.SetString(CustomPVRBGType,2)</onclick>
-						<onclick>Skin.SetString(CustomPVRBGPath,background-pvr.png)</onclick>
+						<onclick>Skin.Reset(CustomPVRBGPath)</onclick>
 						<label>$LOCALIZE[31056]</label>
 					</control>
 					<control type="radiobutton" id="94112">
@@ -418,7 +418,7 @@
 						<include>SettingsCustomBGRadioBtn</include>
 						<selected>Skin.String(CustomPVRBGType,3)</selected>
 						<onclick>Skin.SetString(CustomPVRBGType,3)</onclick>
-						<onclick>Skin.SetString(CustomPVRBGPath,background-pvr.png)</onclick>
+						<onclick>Skin.Reset(CustomPVRBGPath)</onclick>
 						<label>$LOCALIZE[31057]</label>
 					</control>
 				</control>
@@ -433,7 +433,7 @@
 						<include>SettingsContentBtn</include>
 						<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(CustomPVRBGPath)][/COLOR]</label>
 						<onclick>Skin.SetImage(CustomPVRBGPath)</onclick>
-						<visible>Skin.String(CustomPVRBGType,2) | Skin.String(CustomPVRBGType,)</visible>
+						<visible>Skin.String(CustomPVRBGType,2)</visible>
 					</control>
 					<control type="button" id="94211">
 						<description>Multi Image Path</description>
@@ -449,7 +449,7 @@
 						<altlabel>$LOCALIZE[33068] $LOCALIZE[31060]</altlabel>
 						<usealttexture>Skin.HasSetting(DimPVRBackgroundHigh)</usealttexture>
 						<onclick>Skin.ToggleSetting(DimPVRBackgroundHigh)</onclick>
-						<visible>Skin.String(CustomPVRBGType,2) | Skin.String(CustomPVRBGType,3) | Skin.String(CustomPVRBGType,)</visible>
+						<visible>Skin.String(CustomPVRBGType,2) | Skin.String(CustomPVRBGType,3)</visible>
 					</control>
 					<control type="togglebutton" id="94213">
 						<description>Apply To All Windows</description>
@@ -458,7 +458,7 @@
 						<altlabel>$LOCALIZE[33068] $LOCALIZE[31051]</altlabel>
 						<usealttexture>!Skin.HasSetting(ApplyAllPVRCustomBG)</usealttexture>
 						<onclick>Skin.ToggleSetting(ApplyAllPVRCustomBG)</onclick>
-						<visible>Skin.String(CustomPVRBGType,2) | Skin.String(CustomPVRBGType,3) | Skin.String(CustomPVRBGType,)</visible>
+						<visible>Skin.String(CustomPVRBGType,2) | Skin.String(CustomPVRBGType,3)</visible>
 					</control>
 				</control>
 
@@ -492,13 +492,13 @@
 					<include>CustomImagePreview</include>
 					<imagepath background="true" fallback="background-default.png">$INFO[Skin.String(CustomDefaultBGPath)]</imagepath>
 					<include>CustomImagePreviewOpenCloseAnim</include>
-					<visible>Skin.String(CustomVideosBGType,1)</visible>
+					<visible>Skin.String(CustomVideosBGType,1) | Skin.String(CustomVideosBGType,)</visible>
 				</control>
 				
 				<control type="multiimage">
 					<include>CustomImagePreview</include>
 					<imagepath background="true" fallback=".">$INFO[Skin.String(CustomVideosBGPath)]</imagepath>
-					<visible>Skin.String(CustomVideosBGType,2) | Skin.String(CustomVideosBGType,3) | Skin.String(CustomVideosBGType,)</visible>
+					<visible>Skin.String(CustomVideosBGType,2) | Skin.String(CustomVideosBGType,3)</visible>
 					<include>CustomImagePreviewOpenCloseAnim</include>
 				</control>
 				
@@ -521,17 +521,17 @@
 					<control type="radiobutton" id="4120">
 						<description>Default</description>
 						<include>SettingsCustomBGRadioBtn</include>
-						<selected>Skin.String(CustomVideosBGType,1)</selected>
+						<selected>Skin.String(CustomVideosBGType,1) | Skin.String(CustomVideosBGType,)</selected>
 						<onclick>Skin.SetString(CustomVideosBGType,1)</onclick>
-						<onclick>Skin.SetString(CustomVideosBGPath,background-videos.png)</onclick>
+						<onclick>Skin.Reset(CustomVideosBGPath)</onclick>
 						<label>$LOCALIZE[31058]</label>
 					</control>
 					<control type="radiobutton" id="4121">
 						<description>Single Image</description>
 						<include>SettingsCustomBGRadioBtn</include>
-						<selected>Skin.String(CustomVideosBGType,2) | Skin.String(CustomVideosBGType,)</selected>
+						<selected>Skin.String(CustomVideosBGType,2)</selected>
 						<onclick>Skin.SetString(CustomVideosBGType,2)</onclick>
-						<onclick>Skin.SetString(CustomVideosBGPath,background-videos.png)</onclick>
+						<onclick>Skin.Reset(CustomVideosBGPath)</onclick>
 						<label>$LOCALIZE[31056]</label>
 					</control>
 					<control type="radiobutton" id="4122">
@@ -539,7 +539,7 @@
 						<include>SettingsCustomBGRadioBtn</include>
 						<selected>Skin.String(CustomVideosBGType,3)</selected>
 						<onclick>Skin.SetString(CustomVideosBGType,3)</onclick>
-						<onclick>Skin.SetString(CustomVideosBGPath,background-videos.png)</onclick>
+						<onclick>Skin.Reset(CustomVideosBGPath)</onclick>
 						<label>$LOCALIZE[31057]</label>
 					</control>
 					<control type="radiobutton" id="4123">
@@ -547,7 +547,7 @@
 						<include>SettingsCustomBGRadioBtn</include>
 						<selected>Skin.String(CustomVideosBGType,4)</selected>
 						<onclick>Skin.SetString(CustomVideosBGType,4)</onclick>
-						<onclick>Skin.SetString(CustomVideosBGPath,background-videos.png)</onclick>
+						<onclick>Skin.Reset(CustomVideosBGPath)</onclick>
 						<label>$LOCALIZE[20445]</label>
 					</control>
 				</control>
@@ -562,7 +562,7 @@
 						<include>SettingsContentBtn</include>
 						<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(CustomVideosBGPath)][/COLOR]</label>
 						<onclick>Skin.SetImage(CustomVideosBGPath)</onclick>
-						<visible>Skin.String(CustomVideosBGType,2) | Skin.String(CustomVideosBGType,)</visible>
+						<visible>Skin.String(CustomVideosBGType,2)</visible>
 					</control>
 					<control type="button" id="4221">
 						<description>Multi Image Path</description>
@@ -578,7 +578,7 @@
 						<altlabel>$LOCALIZE[33068] $LOCALIZE[31060]</altlabel>
 						<usealttexture>Skin.HasSetting(DimVideosBackgroundHigh)</usealttexture>
 						<onclick>Skin.ToggleSetting(DimVideosBackgroundHigh)</onclick>
-						<visible>Skin.String(CustomVideosBGType,2) | Skin.String(CustomVideosBGType,3) | Skin.String(CustomVideosBGType,)</visible>
+						<visible>Skin.String(CustomVideosBGType,2) | Skin.String(CustomVideosBGType,3)</visible>
 					</control>
 					<control type="togglebutton" id="4223">
 						<description>Apply To All Windows</description>
@@ -587,7 +587,7 @@
 						<altlabel>$LOCALIZE[33068] $LOCALIZE[31051]</altlabel>
 						<usealttexture>!Skin.HasSetting(ApplyAllVideosCustomBG)</usealttexture>
 						<onclick>Skin.ToggleSetting(ApplyAllVideosCustomBG)</onclick>
-						<visible>Skin.String(CustomVideosBGType,2) | Skin.String(CustomVideosBGType,3) | Skin.String(CustomVideosBGType,4) | Skin.String(CustomVideosBGType,)</visible>
+						<visible>Skin.String(CustomVideosBGType,2) | Skin.String(CustomVideosBGType,3) | Skin.String(CustomVideosBGType,4)</visible>
 					</control>
 				</control>
 				
@@ -620,14 +620,14 @@
 				<control type="multiimage">
 					<include>CustomImagePreview</include>
 					<imagepath background="true" fallback="background-default.png">$INFO[Skin.String(CustomDefaultBGPath)]</imagepath>
-					<visible>Skin.String(CustomMoviesBGType,1)</visible>
+					<visible>Skin.String(CustomMoviesBGType,1) | Skin.String(CustomMoviesBGType,)</visible>
 					<include>CustomImagePreviewOpenCloseAnim</include>
 				</control>
 				
 				<control type="multiimage">
 					<include>CustomImagePreview</include>
 					<imagepath background="true" fallback=".">$INFO[Skin.String(CustomMoviesBGPath)]</imagepath>
-					<visible>Skin.String(CustomMoviesBGType,2) | Skin.String(CustomMoviesBGType,3) | Skin.String(CustomMoviesBGType,)</visible>
+					<visible>Skin.String(CustomMoviesBGType,2) | Skin.String(CustomMoviesBGType,3)</visible>
 					<include>CustomImagePreviewOpenCloseAnim</include>
 				</control>
 				
@@ -650,17 +650,17 @@
 					<control type="radiobutton" id="4130">
 						<description>Default</description>
 						<include>SettingsCustomBGRadioBtn</include>
-						<selected>Skin.String(CustomMoviesBGType,1)</selected>
+						<selected>Skin.String(CustomMoviesBGType,1) | Skin.String(CustomMoviesBGType,)</selected>
 						<onclick>Skin.SetString(CustomMoviesBGType,1)</onclick>
-						<onclick>Skin.SetString(CustomMoviesBGPath,background-movies.png)</onclick>
+						<onclick>Skin.Reset(CustomMoviesBGPath)</onclick>
 						<label>$LOCALIZE[31058]</label>
 					</control>
 					<control type="radiobutton" id="4131">
 						<description>Single Image</description>
 						<include>SettingsCustomBGRadioBtn</include>
-						<selected>Skin.String(CustomMoviesBGType,2) | Skin.String(CustomMoviesBGType,)</selected>
+						<selected>Skin.String(CustomMoviesBGType,2)</selected>
 						<onclick>Skin.SetString(CustomMoviesBGType,2)</onclick>
-						<onclick>Skin.SetString(CustomMoviesBGPath,background-movies.png)</onclick>
+						<onclick>Skin.Reset(CustomMoviesBGPath)</onclick>
 						<label>$LOCALIZE[31056]</label>
 					</control>
 					<control type="radiobutton" id="4132">
@@ -668,7 +668,7 @@
 						<include>SettingsCustomBGRadioBtn</include>
 						<selected>Skin.String(CustomMoviesBGType,3)</selected>
 						<onclick>Skin.SetString(CustomMoviesBGType,3)</onclick>
-						<onclick>Skin.SetString(CustomMoviesBGPath,background-movies.png)</onclick>
+						<onclick>Skin.Reset(CustomMoviesBGPath)</onclick>
 						<label>$LOCALIZE[31057]</label>
 					</control>
 					<control type="radiobutton" id="4133">
@@ -676,7 +676,7 @@
 						<include>SettingsCustomBGRadioBtn</include>
 						<selected>Skin.String(CustomMoviesBGType,4)</selected>
 						<onclick>Skin.SetString(CustomMoviesBGType,4)</onclick>
-						<onclick>Skin.SetString(CustomMoviesBGPath,background-movies.png)</onclick>
+						<onclick>Skin.Reset(CustomMoviesBGPath)</onclick>
 						<label>$LOCALIZE[20445]</label>
 					</control>
 				</control>
@@ -691,7 +691,7 @@
 						<include>SettingsContentBtn</include>
 						<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(CustomMoviesBGPath)][/COLOR]</label>
 						<onclick>Skin.SetImage(CustomMoviesBGPath)</onclick>
-						<visible>Skin.String(CustomMoviesBGType,2) | Skin.String(CustomMoviesBGType,)</visible>
+						<visible>Skin.String(CustomMoviesBGType,2)</visible>
 					</control>
 					<control type="button" id="4231">
 						<description>Multi Image Path</description>
@@ -707,7 +707,7 @@
 						<altlabel>$LOCALIZE[33068] $LOCALIZE[31060]</altlabel>
 						<usealttexture>Skin.HasSetting(DimMoviesBackgroundHigh)</usealttexture>
 						<onclick>Skin.ToggleSetting(DimMoviesBackgroundHigh)</onclick>
-						<visible>Skin.String(CustomMoviesBGType,2) | Skin.String(CustomMoviesBGType,3) | Skin.String(CustomMoviesBGType,)</visible>
+						<visible>Skin.String(CustomMoviesBGType,2) | Skin.String(CustomMoviesBGType,3)</visible>
 					</control>	
 					<control type="togglebutton" id="4233">
 						<description>Apply To All Windows</description>
@@ -716,7 +716,7 @@
 						<altlabel>$LOCALIZE[33068] $LOCALIZE[31051]</altlabel>
 						<usealttexture>!Skin.HasSetting(ApplyAllMoviesCustomBG)</usealttexture>
 						<onclick>Skin.ToggleSetting(ApplyAllMoviesCustomBG)</onclick>
-						<visible>Skin.String(CustomMoviesBGType,2) | Skin.String(CustomMoviesBGType,3) | Skin.String(CustomMoviesBGType,4) | Skin.String(CustomMoviesBGType,)</visible>
+						<visible>Skin.String(CustomMoviesBGType,2) | Skin.String(CustomMoviesBGType,3) | Skin.String(CustomMoviesBGType,4)</visible>
 					</control>
 				</control>
 				
@@ -749,14 +749,14 @@
 				<control type="multiimage">
 					<include>CustomImagePreview</include>
 					<imagepath background="true" fallback="background-default.png">$INFO[Skin.String(CustomDefaultBGPath)]</imagepath>
-					<visible>Skin.String(CustomTVShowsBGType,1)</visible>
+					<visible>Skin.String(CustomTVShowsBGType,1) | Skin.String(CustomTVShowsBGType,)</visible>
 					<include>CustomImagePreviewOpenCloseAnim</include>
 				</control>
 				
 				<control type="multiimage">
 					<include>CustomImagePreview</include>
 					<imagepath background="true" fallback=".">$INFO[Skin.String(CustomTVShowsBGPath)]</imagepath>
-					<visible>Skin.String(CustomTVShowsBGType,2) | Skin.String(CustomTVShowsBGType,3) | Skin.String(CustomTVShowsBGType,)</visible>
+					<visible>Skin.String(CustomTVShowsBGType,2) | Skin.String(CustomTVShowsBGType,3)</visible>
 					<include>CustomImagePreviewOpenCloseAnim</include>
 				</control>
 				
@@ -779,17 +779,17 @@
 					<control type="radiobutton" id="4140">
 						<description>Default</description>
 						<include>SettingsCustomBGRadioBtn</include>
-						<selected>Skin.String(CustomTVShowsBGType,1)</selected>
+						<selected>Skin.String(CustomTVShowsBGType,1) | Skin.String(CustomTVShowsBGType,)</selected>
 						<onclick>Skin.SetString(CustomTVShowsBGType,1)</onclick>
-						<onclick>Skin.SetString(CustomTVShowsBGPath,background-tvshows.png)</onclick>
+						<onclick>Skin.Reset(CustomTVShowsBGPath)</onclick>
 						<label>$LOCALIZE[31058]</label>
 					</control>
 					<control type="radiobutton" id="4141">
 						<description>Single Image</description>
 						<include>SettingsCustomBGRadioBtn</include>
-						<selected>Skin.String(CustomTVShowsBGType,2) | Skin.String(CustomTVShowsBGType,)</selected>
+						<selected>Skin.String(CustomTVShowsBGType,2)</selected>
 						<onclick>Skin.SetString(CustomTVShowsBGType,2)</onclick>
-						<onclick>Skin.SetString(CustomTVShowsBGPath,background-tvshows.png)</onclick>
+						<onclick>Skin.Reset(CustomTVShowsBGPath)</onclick>
 						<label>$LOCALIZE[31056]</label>
 					</control>
 					<control type="radiobutton" id="4142">
@@ -797,7 +797,7 @@
 						<include>SettingsCustomBGRadioBtn</include>
 						<selected>Skin.String(CustomTVShowsBGType,3)</selected>
 						<onclick>Skin.SetString(CustomTVShowsBGType,3)</onclick>
-						<onclick>Skin.SetString(CustomTVShowsBGPath,background-tvshows.png)</onclick>
+						<onclick>Skin.Reset(CustomTVShowsBGPath)</onclick>
 						<label>$LOCALIZE[31057]</label>
 					</control>
 					<control type="radiobutton" id="4143">
@@ -805,7 +805,7 @@
 						<include>SettingsCustomBGRadioBtn</include>
 						<selected>Skin.String(CustomTVShowsBGType,4)</selected>
 						<onclick>Skin.SetString(CustomTVShowsBGType,4)</onclick>
-						<onclick>Skin.SetString(CustomTVShowsBGPath,background-tvshows.png)</onclick>
+						<onclick>Skin.Reset(CustomTVShowsBGPath)</onclick>
 						<label>$LOCALIZE[20445]</label>
 					</control>
 				</control>
@@ -820,7 +820,7 @@
 						<include>SettingsContentBtn</include>
 						<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(CustomTVShowsBGPath)][/COLOR]</label>
 						<onclick>Skin.SetImage(CustomTVShowsBGPath)</onclick>
-						<visible>Skin.String(CustomTVShowsBGType,2) | Skin.String(CustomTVShowsBGType,)</visible>
+						<visible>Skin.String(CustomTVShowsBGType,2)</visible>
 					</control>
 					<control type="button" id="4241">
 						<description>Multi Image Path</description>
@@ -836,7 +836,7 @@
 						<altlabel>$LOCALIZE[33068] $LOCALIZE[31060]</altlabel>
 						<usealttexture>Skin.HasSetting(DimTVShowsBackgroundHigh)</usealttexture>
 						<onclick>Skin.ToggleSetting(DimTVShowsBackgroundHigh)</onclick>
-						<visible>Skin.String(CustomTVShowsBGType,2) | Skin.String(CustomTVShowsBGType,3) | Skin.String(CustomTVShowsBGType,)</visible>
+						<visible>Skin.String(CustomTVShowsBGType,2) | Skin.String(CustomTVShowsBGType,3)</visible>
 					</control>
 					<control type="togglebutton" id="4243">
 						<description>Apply To All Windows</description>
@@ -845,7 +845,7 @@
 						<altlabel>$LOCALIZE[33068] $LOCALIZE[31051]</altlabel>
 						<usealttexture>!Skin.HasSetting(ApplyAllTVShowsCustomBG)</usealttexture>
 						<onclick>Skin.ToggleSetting(ApplyAllTVShowsCustomBG)</onclick>
-						<visible>Skin.String(CustomTVShowsBGType,2) | Skin.String(CustomTVShowsBGType,3) | Skin.String(CustomTVShowsBGType,4) | Skin.String(CustomTVShowsBGType,)</visible>
+						<visible>Skin.String(CustomTVShowsBGType,2) | Skin.String(CustomTVShowsBGType,3) | Skin.String(CustomTVShowsBGType,4)</visible>
 					</control>
 				</control>
 				
@@ -878,14 +878,14 @@
 				<control type="multiimage">
 					<include>CustomImagePreview</include>
 					<imagepath background="true" fallback="background-default.png">$INFO[Skin.String(CustomDefaultBGPath)]</imagepath>
-					<visible>Skin.String(CustomProgramsBGType,1)</visible>
+					<visible>Skin.String(CustomProgramsBGType,1) | Skin.String(CustomProgramsBGType,)</visible>
 					<include>CustomImagePreviewOpenCloseAnim</include>
 				</control>
 				
 				<control type="multiimage">
 					<include>CustomImagePreview</include>
 					<imagepath background="true" fallback=".">$INFO[Skin.String(CustomProgramsBGPath)]</imagepath>
-					<visible>Skin.String(CustomProgramsBGType,2) | Skin.String(CustomProgramsBGType,3) | Skin.String(CustomProgramsBGType,)</visible>
+					<visible>Skin.String(CustomProgramsBGType,2) | Skin.String(CustomProgramsBGType,3)</visible>
 					<include>CustomImagePreviewOpenCloseAnim</include>
 				</control>
 				
@@ -901,17 +901,17 @@
 					<control type="radiobutton" id="4150">
 						<description>Default</description>
 						<include>SettingsCustomBGRadioBtn</include>
-						<selected>Skin.String(CustomProgramsBGType,1)</selected>
+						<selected>Skin.String(CustomProgramsBGType,1) | Skin.String(CustomProgramsBGType,)</selected>
 						<onclick>Skin.SetString(CustomProgramsBGType,1)</onclick>
-						<onclick>Skin.SetString(CustomProgramsBGPath,background-programs.png)</onclick>
+						<onclick>Skin.Reset(CustomProgramsBGPath)</onclick>
 						<label>$LOCALIZE[31058]</label>
 					</control>
 					<control type="radiobutton" id="4151">
 						<description>Single Image</description>
 						<include>SettingsCustomBGRadioBtn</include>
-						<selected>Skin.String(CustomProgramsBGType,2) | Skin.String(CustomProgramsBGType,)</selected>
+						<selected>Skin.String(CustomProgramsBGType,2)</selected>
 						<onclick>Skin.SetString(CustomProgramsBGType,2)</onclick>
-						<onclick>Skin.SetString(CustomProgramsBGPath,background-programs.png)</onclick>
+						<onclick>Skin.Reset(CustomProgramsBGPath)</onclick>
 						<label>$LOCALIZE[31056]</label>
 					</control>
 					<control type="radiobutton" id="4152">
@@ -919,7 +919,7 @@
 						<include>SettingsCustomBGRadioBtn</include>
 						<selected>Skin.String(CustomProgramsBGType,3)</selected>
 						<onclick>Skin.SetString(CustomProgramsBGType,3)</onclick>
-						<onclick>Skin.SetString(CustomProgramsBGPath,background-programs.png)</onclick>
+						<onclick>Skin.Reset(CustomProgramsBGPath)</onclick>
 						<label>$LOCALIZE[31057]</label>
 					</control>
 				</control>
@@ -934,7 +934,7 @@
 						<include>SettingsContentBtn</include>
 						<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(CustomProgramsBGPath)][/COLOR]</label>
 						<onclick>Skin.SetImage(CustomProgramsBGPath)</onclick>
-						<visible>Skin.String(CustomProgramsBGType,2) | Skin.String(CustomProgramsBGType,)</visible>
+						<visible>Skin.String(CustomProgramsBGType,2)</visible>
 					</control>
 					<control type="button" id="4251">
 						<description>Multi Image Path</description>
@@ -950,7 +950,7 @@
 						<altlabel>$LOCALIZE[33068] $LOCALIZE[31060]</altlabel>
 						<usealttexture>Skin.HasSetting(DimProgramsBackgroundHigh)</usealttexture>
 						<onclick>Skin.ToggleSetting(DimProgramsBackgroundHigh)</onclick>
-						<visible>Skin.String(CustomProgramsBGType,2) | Skin.String(CustomProgramsBGType,3) | Skin.String(CustomProgramsBGType,)</visible>
+						<visible>Skin.String(CustomProgramsBGType,2) | Skin.String(CustomProgramsBGType,3)</visible>
 					</control>
 					<control type="togglebutton" id="4253">
 						<description>Apply To All Windows</description>
@@ -959,7 +959,7 @@
 						<altlabel>$LOCALIZE[33068] $LOCALIZE[31051]</altlabel>
 						<usealttexture>!Skin.HasSetting(ApplyAllProgramsCustomBG)</usealttexture>
 						<onclick>Skin.ToggleSetting(ApplyAllProgramsCustomBG)</onclick>
-						<visible>Skin.String(CustomProgramsBGType,2) | Skin.String(CustomProgramsBGType,3) | Skin.String(CustomProgramsBGType,)</visible>
+						<visible>Skin.String(CustomProgramsBGType,2) | Skin.String(CustomProgramsBGType,3)</visible>
 					</control>
 				</control>
 				
@@ -992,14 +992,14 @@
 				<control type="multiimage">
 					<include>CustomImagePreview</include>
 					<imagepath background="true" fallback="background-default.png">$INFO[Skin.String(CustomDefaultBGPath)]</imagepath>
-					<visible>Skin.String(CustomPicturesBGType,1)</visible>
+					<visible>Skin.String(CustomPicturesBGType,1) | Skin.String(CustomPicturesBGType,)</visible>
 					<include>CustomImagePreviewOpenCloseAnim</include>
 				</control>
 				
 				<control type="multiimage">
 					<include>CustomImagePreview</include>
 					<imagepath background="true" fallback=".">$INFO[Skin.String(CustomPicturesBGPath)]</imagepath>
-					<visible>Skin.String(CustomPicturesBGType,2) | Skin.String(CustomPicturesBGType,3) | Skin.String(CustomPicturesBGType,)</visible>
+					<visible>Skin.String(CustomPicturesBGType,2) | Skin.String(CustomPicturesBGType,3)</visible>
 					<include>CustomImagePreviewOpenCloseAnim</include>
 				</control>
 				
@@ -1015,17 +1015,17 @@
 					<control type="radiobutton" id="4160">
 						<description>Default</description>
 						<include>SettingsCustomBGRadioBtn</include>
-						<selected>Skin.String(CustomPicturesBGType,1)</selected>
+						<selected>Skin.String(CustomPicturesBGType,1) | Skin.String(CustomPicturesBGType,)</selected>
 						<onclick>Skin.SetString(CustomPicturesBGType,1)</onclick>
-						<onclick>Skin.SetString(CustomPicturesBGPath,background-pictures.png)</onclick>
+						<onclick>Skin.Reset(CustomPicturesBGPath)</onclick>
 						<label>$LOCALIZE[31058]</label>
 					</control>
 					<control type="radiobutton" id="4161">
 						<description>Single Image</description>
 						<include>SettingsCustomBGRadioBtn</include>
-						<selected>Skin.String(CustomPicturesBGType,2) | Skin.String(CustomPicturesBGType,)</selected>
+						<selected>Skin.String(CustomPicturesBGType,2)</selected>
 						<onclick>Skin.SetString(CustomPicturesBGType,2)</onclick>
-						<onclick>Skin.SetString(CustomPicturesBGPath,background-pictures.png)</onclick>
+						<onclick>Skin.Reset(CustomPicturesBGPath)</onclick>
 						<label>$LOCALIZE[31056]</label>
 					</control>
 					<control type="radiobutton" id="4162">
@@ -1033,7 +1033,7 @@
 						<include>SettingsCustomBGRadioBtn</include>
 						<selected>Skin.String(CustomPicturesBGType,3)</selected>
 						<onclick>Skin.SetString(CustomPicturesBGType,3)</onclick>
-						<onclick>Skin.SetString(CustomPicturesBGPath,background-pictures.png)</onclick>
+						<onclick>Skin.Reset(CustomPicturesBGPath)</onclick>
 						<label>$LOCALIZE[31057]</label>
 					</control>
 				</control>
@@ -1048,7 +1048,7 @@
 						<include>SettingsContentBtn</include>
 						<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(CustomPicturesBGPath)][/COLOR]</label>
 						<onclick>Skin.SetImage(CustomPicturesBGPath)</onclick>
-						<visible>Skin.String(CustomPicturesBGType,2) | Skin.String(CustomPicturesBGType,)</visible>
+						<visible>Skin.String(CustomPicturesBGType,2)</visible>
 					</control>
 					<control type="button" id="4261">
 						<description>Multi Image Path</description>
@@ -1064,7 +1064,7 @@
 						<altlabel>$LOCALIZE[33068] $LOCALIZE[31060]</altlabel>
 						<usealttexture>Skin.HasSetting(DimPicturesBackgroundHigh)</usealttexture>
 						<onclick>Skin.ToggleSetting(DimPicturesBackgroundHigh)</onclick>
-						<visible>Skin.String(CustomPicturesBGType,2) | Skin.String(CustomPicturesBGType,3) | Skin.String(CustomPicturesBGType,)</visible>
+						<visible>Skin.String(CustomPicturesBGType,2) | Skin.String(CustomPicturesBGType,3)</visible>
 					</control>
 					<control type="togglebutton" id="4263">
 						<description>Apply To All Windows</description>
@@ -1073,7 +1073,7 @@
 						<altlabel>$LOCALIZE[33068] $LOCALIZE[31051]</altlabel>
 						<usealttexture>!Skin.HasSetting(ApplyAllPicturesCustomBG)</usealttexture>
 						<onclick>Skin.ToggleSetting(ApplyAllPicturesCustomBG)</onclick>
-						<visible>Skin.String(CustomPicturesBGType,2) | Skin.String(CustomPicturesBGType,3) | Skin.String(CustomPicturesBGType,)</visible>
+						<visible>Skin.String(CustomPicturesBGType,2) | Skin.String(CustomPicturesBGType,3)</visible>
 					</control>
 				</control>
 				
@@ -1106,14 +1106,14 @@
 				<control type="multiimage">
 					<include>CustomImagePreview</include>
 					<imagepath background="true" fallback="background-default.png">$INFO[Skin.String(CustomDefaultBGPath)]</imagepath>
-					<visible>Skin.String(CustomGeneralBGType,1)</visible>
+					<visible>Skin.String(CustomGeneralBGType,1) | Skin.String(CustomGeneralBGType,)</visible>
 					<include>CustomImagePreviewOpenCloseAnim</include>
 				</control>
 				
 				<control type="multiimage">
 					<include>CustomImagePreview</include>
 					<imagepath background="true" fallback=".">$INFO[Skin.String(CustomGeneralBGPath)]</imagepath>
-					<visible>Skin.String(CustomGeneralBGType,2) | Skin.String(CustomGeneralBGType,3) | Skin.String(CustomGeneralBGType,)</visible>
+					<visible>Skin.String(CustomGeneralBGType,2) | Skin.String(CustomGeneralBGType,3)</visible>
 					<include>CustomImagePreviewOpenCloseAnim</include>
 				</control>
 				
@@ -1129,17 +1129,17 @@
 					<control type="radiobutton" id="4170">
 						<description>Default</description>
 						<include>SettingsCustomBGRadioBtn</include>
-						<selected>Skin.String(CustomGeneralBGType,1)</selected>
+						<selected>Skin.String(CustomGeneralBGType,1) | Skin.String(CustomGeneralBGType,)</selected>
 						<onclick>Skin.SetString(CustomGeneralBGType,1)</onclick>
-						<onclick>Skin.SetString(CustomGeneralBGPath,background-general.png)</onclick>
+						<onclick>Skin.Reset(CustomGeneralBGPath)</onclick>
 						<label>$LOCALIZE[31058]</label>
 					</control>
 					<control type="radiobutton" id="4171">
 						<description>Single Image</description>
 						<include>SettingsCustomBGRadioBtn</include>
-						<selected>Skin.String(CustomGeneralBGType,2) | Skin.String(CustomGeneralBGType,)</selected>
+						<selected>Skin.String(CustomGeneralBGType,2)</selected>
 						<onclick>Skin.SetString(CustomGeneralBGType,2)</onclick>
-						<onclick>Skin.SetString(CustomGeneralBGPath,background-general.png)</onclick>
+						<onclick>Skin.Reset(CustomGeneralBGPath)</onclick>
 						<label>$LOCALIZE[31056]</label>
 					</control>
 					<control type="radiobutton" id="4172">
@@ -1147,7 +1147,7 @@
 						<include>SettingsCustomBGRadioBtn</include>
 						<selected>Skin.String(CustomGeneralBGType,3)</selected>
 						<onclick>Skin.SetString(CustomGeneralBGType,3)</onclick>
-						<onclick>Skin.SetString(CustomGeneralBGPath,background-general.png)</onclick>
+						<onclick>Skin.Reset(CustomGeneralBGPath)</onclick>
 						<label>$LOCALIZE[31057]</label>
 					</control>
 				</control>
@@ -1162,7 +1162,7 @@
 						<include>SettingsContentBtn</include>
 						<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(CustomGeneralBGPath)][/COLOR]</label>
 						<onclick>Skin.SetImage(CustomGeneralBGPath)</onclick>
-						<visible>Skin.String(CustomGeneralBGType,2) | Skin.String(CustomGeneralBGType,)</visible>
+						<visible>Skin.String(CustomGeneralBGType,2)</visible>
 					</control>
 					<control type="button" id="4271">
 						<description>Multi Image Path</description>
@@ -1202,14 +1202,14 @@
 				<control type="multiimage">
 					<include>CustomImagePreview</include>
 					<imagepath background="true" fallback="background-default.png">$INFO[Skin.String(CustomDefaultBGPath)]</imagepath>
-					<visible>Skin.String(CustomSystemBGType,1)</visible>
+					<visible>Skin.String(CustomSystemBGType,1) | Skin.String(CustomSystemBGType,)</visible>
 					<include>CustomImagePreviewOpenCloseAnim</include>
 				</control>
 				
 				<control type="multiimage">
 					<include>CustomImagePreview</include>
 					<imagepath background="true" fallback=".">$INFO[Skin.String(CustomSystemBGPath)]</imagepath>
-					<visible>Skin.String(CustomSystemBGType,2) | Skin.String(CustomSystemBGType,3) | Skin.String(CustomSystemBGType,)</visible>
+					<visible>Skin.String(CustomSystemBGType,2) | Skin.String(CustomSystemBGType,3)</visible>
 					<include>CustomImagePreviewOpenCloseAnim</include>
 				</control>
 				
@@ -1225,17 +1225,17 @@
 					<control type="radiobutton" id="4180">
 						<description>Default</description>
 						<include>SettingsCustomBGRadioBtn</include>
-						<selected>Skin.String(CustomSystemBGType,1)</selected>
+						<selected>Skin.String(CustomSystemBGType,1) | Skin.String(CustomSystemBGType,)</selected>
 						<onclick>Skin.SetString(CustomSystemBGType,1)</onclick>
-						<onclick>Skin.SetString(CustomSystemBGPath,background-system.png)</onclick>
+						<onclick>Skin.Reset(CustomSystemBGPath)</onclick>
 						<label>$LOCALIZE[31058]</label>
 					</control>
 					<control type="radiobutton" id="4181">
 						<description>Single Image</description>
 						<include>SettingsCustomBGRadioBtn</include>
-						<selected>Skin.String(CustomSystemBGType,2) | Skin.String(CustomSystemBGType,)</selected>
+						<selected>Skin.String(CustomSystemBGType,2)</selected>
 						<onclick>Skin.SetString(CustomSystemBGType,2)</onclick>
-						<onclick>Skin.SetString(CustomSystemBGPath,background-system.png)</onclick>
+						<onclick>Skin.Reset(CustomSystemBGPath)</onclick>
 						<label>$LOCALIZE[31056]</label>
 					</control>
 					<control type="radiobutton" id="4182">
@@ -1243,7 +1243,7 @@
 						<include>SettingsCustomBGRadioBtn</include>
 						<selected>Skin.String(CustomSystemBGType,3)</selected>
 						<onclick>Skin.SetString(CustomSystemBGType,3)</onclick>
-						<onclick>Skin.SetString(CustomSystemBGPath,background-system.png)</onclick>
+						<onclick>Skin.Reset(CustomSystemBGPath)</onclick>
 						<label>$LOCALIZE[31057]</label>
 					</control>
 				</control>
@@ -1258,7 +1258,7 @@
 						<include>SettingsContentBtn</include>
 						<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(CustomSystemBGPath)][/COLOR]</label>
 						<onclick>Skin.SetImage(CustomSystemBGPath)</onclick>
-						<visible>Skin.String(CustomSystemBGType,2) | Skin.String(CustomSystemBGType,)</visible>
+						<visible>Skin.String(CustomSystemBGType,2)</visible>
 					</control>
 					<control type="button" id="4281">
 						<description>Multi Image Path</description>
@@ -1298,14 +1298,14 @@
 				<control type="multiimage">
 					<include>CustomImagePreview</include>
 					<imagepath background="true" fallback="background-default.png">$INFO[Skin.String(CustomDefaultBGPath)]</imagepath>
-					<visible>Skin.String(CustomWeatherBGType,1) | Skin.String(CustomWeatherBGType,4)</visible>
+					<visible>Skin.String(CustomWeatherBGType,1) | Skin.String(CustomWeatherBGType,4) | Skin.String(CustomWeatherBGType,)</visible>
 					<include>CustomImagePreviewOpenCloseAnim</include>
 				</control>
 				
 				<control type="multiimage">
 					<include>CustomImagePreview</include>
 					<imagepath background="true" fallback=".">$INFO[Skin.String(CustomWeatherBGPath)]</imagepath>
-					<visible>Skin.String(CustomWeatherBGType,2) | Skin.String(CustomWeatherBGType,3) | Skin.String(CustomWeatherBGType,)</visible>
+					<visible>Skin.String(CustomWeatherBGType,2) | Skin.String(CustomWeatherBGType,3)</visible>
 					<include>CustomImagePreviewOpenCloseAnim</include>
 				</control>
 				
@@ -1328,17 +1328,17 @@
 					<control type="radiobutton" id="4310">
 						<description>Default</description>
 						<include>SettingsCustomBGRadioBtn</include>
-						<selected>Skin.String(CustomWeatherBGType,1)</selected>
+						<selected>Skin.String(CustomWeatherBGType,1) | Skin.String(CustomWeatherBGType,)</selected>
 						<onclick>Skin.SetString(CustomWeatherBGType,1)</onclick>
-						<onclick>Skin.SetString(CustomWeatherBGPath,background-weather.png)</onclick>
+						<onclick>Skin.Reset(CustomWeatherBGPath)</onclick>
 						<label>$LOCALIZE[31058]</label>
 					</control>
 					<control type="radiobutton" id="4311">
 						<description>Single Image</description>
 						<include>SettingsCustomBGRadioBtn</include>
-						<selected>Skin.String(CustomWeatherBGType,2) | Skin.String(CustomWeatherBGType,)</selected>
+						<selected>Skin.String(CustomWeatherBGType,2)</selected>
 						<onclick>Skin.SetString(CustomWeatherBGType,2)</onclick>
-						<onclick>Skin.SetString(CustomWeatherBGPath,background-weather.png)</onclick>
+						<onclick>Skin.Reset(CustomWeatherBGPath)</onclick>
 						<label>$LOCALIZE[31056]</label>
 					</control>
 					<control type="radiobutton" id="4312">
@@ -1346,7 +1346,7 @@
 						<include>SettingsCustomBGRadioBtn</include>
 						<selected>Skin.String(CustomWeatherBGType,3)</selected>
 						<onclick>Skin.SetString(CustomWeatherBGType,3)</onclick>
-						<onclick>Skin.SetString(CustomWeatherBGPath,background-weather.png)</onclick>
+						<onclick>Skin.Reset(CustomWeatherBGPath)</onclick>
 						<label>$LOCALIZE[31057]</label>
 					</control>
 					<control type="radiobutton" id="4313">
@@ -1354,7 +1354,7 @@
 						<include>SettingsCustomBGRadioBtn</include>
 						<selected>Skin.String(CustomWeatherBGType,4)</selected>
 						<onclick>Skin.SetString(CustomWeatherBGType,4)</onclick>
-						<onclick>Skin.SetString(CustomWeatherBGPath,background-default.png)</onclick>
+						<onclick>Skin.Reset(CustomWeatherBGPath)</onclick>
 						<label>$LOCALIZE[33020]</label>
 					</control>
 				</control>
@@ -1369,7 +1369,7 @@
 						<include>SettingsContentBtn</include>
 						<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(CustomWeatherBGPath)][/COLOR]</label>
 						<onclick>Skin.SetImage(CustomWeatherBGPath)</onclick>
-						<visible>Skin.String(CustomWeatherBGType,2) | Skin.String(CustomWeatherBGType,)</visible>
+						<visible>Skin.String(CustomWeatherBGType,2)</visible>
 					</control>
 					<control type="button" id="4411">
 						<description>Multi Image Path</description>
@@ -1385,7 +1385,7 @@
 						<altlabel>$LOCALIZE[33068] $LOCALIZE[31060]</altlabel>
 						<usealttexture>Skin.HasSetting(DimWeatherBackgroundHigh)</usealttexture>
 						<onclick>Skin.ToggleSetting(DimWeatherBackgroundHigh)</onclick>
-						<visible>Skin.String(CustomWeatherBGType,2) | Skin.String(CustomWeatherBGType,3) | Skin.String(CustomWeatherBGType,4) | Skin.String(CustomWeatherBGType,)</visible>
+						<visible>Skin.String(CustomWeatherBGType,2) | Skin.String(CustomWeatherBGType,3) | Skin.String(CustomWeatherBGType,4)</visible>
 					</control>
 				</control>
 				

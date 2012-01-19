@@ -5,7 +5,7 @@
 
 		<control type="group">	
 			<include>BackgroundDefault</include>
-			<include condition="[!IsEmpty(Skin.String(CustomPVRBGPath)) + [Skin.String(CustomPVRBGType,) | Skin.String(CustomPVRBGType,2) | Skin.String(CustomPVRBGType,3)]]
+			<include condition="[!IsEmpty(Skin.String(CustomPVRBGPath)) + [Skin.String(CustomPVRBGType,2) | Skin.String(CustomPVRBGType,3)]]
 			+ Skin.HasSetting(ApplyAllPVRCustomBG)">BackgroundPVR</include>
 			<include>BackgroundOpenCloseAnim</include>	
 		</control>

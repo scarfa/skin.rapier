@@ -656,7 +656,7 @@
 					<description>Music Category</description>
 					<label>music</label>
 					<icon>homecategories/$INFO[System.Language]/music-text-nofocus.png</icon>
-					<include condition="Skin.String(CustomMusicBGType,2) | Skin.String(CustomMusicBGType,3) | Skin.String(CustomMusicBGType,)">HomeMusicCustomBGPath</include>
+					<include condition="Skin.String(CustomMusicBGType,2) | Skin.String(CustomMusicBGType,3)">HomeMusicCustomBGPath</include>
 					<include condition="Skin.String(CustomMusicBGType,4)">HomeMusicFanartBGPath</include>
 					<onclick>ActivateWindow(MusicLibrary)</onclick>
 					<visible>!Skin.HasSetting(HideMusicCategory)</visible>
@@ -675,7 +675,7 @@
 					<description>Videos Category</description>
 					<label>videos</label>
 					<icon>homecategories/$INFO[System.Language]/videos-text-nofocus.png</icon>
-					<include condition="Skin.String(CustomVideosBGType,2) | Skin.String(CustomVideosBGType,3) | Skin.String(CustomVideosBGType,)">HomeVideosCustomBGPath</include>
+					<include condition="Skin.String(CustomVideosBGType,2) | Skin.String(CustomVideosBGType,3)">HomeVideosCustomBGPath</include>
 					<include condition="Skin.String(CustomVideosBGType,4)">HomeVideosFanartBGPath</include>
 					<onclick>ActivateWindow(Videos,Files)</onclick>	
 					<visible>!Skin.HasSetting(HideVideosCategory)</visible>
@@ -684,7 +684,7 @@
 					<description>Movies Category</description>
 					<label>movies</label>
 					<icon>homecategories/$INFO[System.Language]/movies-text-nofocus.png</icon>
-					<include condition="Skin.String(CustomMoviesBGType,2) | Skin.String(CustomMoviesBGType,3) | Skin.String(CustomMoviesBGType,)">HomeMoviesCustomBGPath</include>
+					<include condition="Skin.String(CustomMoviesBGType,2) | Skin.String(CustomMoviesBGType,3)">HomeMoviesCustomBGPath</include>
 					<include condition="Skin.String(CustomMoviesBGType,4)">HomeMoviesFanartBGPath</include>
 					<onclick>ActivateWindow(Videos,MovieTitles,Return)</onclick>  
 					<visible>!Skin.HasSetting(HideMoviesCategory) + Library.HasContent(Movies)</visible>
@@ -693,7 +693,7 @@
 					<description>TV Shows Category</description>
 					<label>tvshows</label>
 					<icon>homecategories/$INFO[System.Language]/tvshows-text-nofocus.png</icon>
-					<include condition="Skin.String(CustomTVShowsBGType,2) | Skin.String(CustomTVShowsBGType,3) | Skin.String(CustomTVShowsBGType,)">HomeTVShowsCustomBGPath</include>
+					<include condition="Skin.String(CustomTVShowsBGType,2) | Skin.String(CustomTVShowsBGType,3)">HomeTVShowsCustomBGPath</include>
 					<include condition="Skin.String(CustomTVShowsBGType,4)">HomeTVShowsFanartBGPath</include>
 					<onclick>ActivateWindow(Videos,TVShowTitles,Return)</onclick>
 					<visible>!Skin.HasSetting(HideTVShowsCategory) + Library.HasContent(TVShows)</visible>
@@ -702,7 +702,7 @@
 					<description>Programs Category</description>
 					<label>programs</label>
 					<icon>homecategories/$INFO[System.Language]/programs-text-nofocus.png</icon>
-					<include condition="Skin.String(CustomProgramsBGType,2) | Skin.String(CustomProgramsBGType,3) | Skin.String(CustomProgramsBGType,)">HomeProgramsCustomBGPath</include>
+					<include condition="Skin.String(CustomProgramsBGType,2) | Skin.String(CustomProgramsBGType,3)">HomeProgramsCustomBGPath</include>
 					<onclick>ActivateWindow(Programs)</onclick>	
 					<visible>!Skin.HasSetting(HideProgramsCategory)</visible>
 				</item>
@@ -710,7 +710,7 @@
 					<description>Pictures Category</description>
 					<label>pictures</label>
 					<icon>homecategories/$INFO[System.Language]/pictures-text-nofocus.png</icon>
-					<include condition="Skin.String(CustomPicturesBGType,2) | Skin.String(CustomPicturesBGType,3) | Skin.String(CustomPicturesBGType,)">HomePicturesCustomBGPath</include>
+					<include condition="Skin.String(CustomPicturesBGType,2) | Skin.String(CustomPicturesBGType,3)">HomePicturesCustomBGPath</include>
 					<onclick>ActivateWindow(Pictures)</onclick>
 					<visible>!Skin.HasSetting(HidePicturesCategory)</visible>
 				</item>
@@ -734,7 +734,7 @@
 					<description>General Category</description>
 					<label>general</label>
 					<icon>homecategories/$INFO[System.Language]/general-text-nofocus.png</icon>
-					<include condition="Skin.String(CustomGeneralBGType,2) | Skin.String(CustomGeneralBGType,3) | Skin.String(CustomGeneralBGType,)">HomeGeneralCustomBGPath</include>
+					<include condition="Skin.String(CustomGeneralBGType,2) | Skin.String(CustomGeneralBGType,3)">HomeGeneralCustomBGPath</include>
 					<onclick>ActivateWindow(Filemanager)</onclick>		
 					<visible>!Skin.HasSetting(HideGeneralCategory)</visible>
 				</item>	
@@ -742,7 +742,7 @@
 					<description>System Category</description>
 					<label>system</label>
 					<icon>homecategories/$INFO[System.Language]/system-text-nofocus.png</icon>
-					<include condition="Skin.String(CustomSystemBGType,2) | Skin.String(CustomSystemBGType,3) | Skin.String(CustomSystemBGType,)">HomeSystemCustomBGPath</include>
+					<include condition="Skin.String(CustomSystemBGType,2) | Skin.String(CustomSystemBGType,3)">HomeSystemCustomBGPath</include>
 					<onclick>ActivateWindow(AppearanceSettings)</onclick>    
 					<visible>!Skin.HasSetting(HideSystemCategory)</visible>
 				</item>					

@@ -194,17 +194,6 @@
 					<label>$LOCALIZE[32025]</label>
 					<onfocus>Skin.SetString(SkinSettingsCategory,6)</onfocus>
 					<onclick>Skin.ResetSettings</onclick>
-					<onclick>Skin.SetString(CustomDefaultBGPath,background-default.png)</onclick>
-					<onclick>Skin.SetString(CustomMusicBGPath,background-music.png)</onclick>
-					<onclick>Skin.SetString(CustomPVRBGPath,background-pvr.png)</onclick>
-					<onclick>Skin.SetString(CustomVideosBGPath,background-videos.png)</onclick>
-					<onclick>Skin.SetString(CustomMoviesBGPath,background-movies.png)</onclick>
-					<onclick>Skin.SetString(CustomTVShowsBGPath,background-tvshows.png)</onclick>
-					<onclick>Skin.SetString(CustomProgramsBGPath,background-programs.png)</onclick>
-					<onclick>Skin.SetString(CustomPicturesBGPath,background-pictures.png)</onclick>
-					<onclick>Skin.SetString(CustomGeneralBGPath,background-general.png)</onclick>
-					<onclick>Skin.SetString(CustomSystemBGPath,background-system.png)</onclick>
-					<onclick>Skin.SetString(CustomWeatherBGPath,background-weather.png)</onclick>
 					<onclick>Notification($LOCALIZE[31023],$LOCALIZE[31219],3000,)</onclick>
 					<visible>!ControlGroup(905).HasFocus</visible>
 				</control>
