@@ -1,0 +1,292 @@
+<includes>
+	<!-- NextAired -->
+	<include name="NextAiredHeaderImage">
+		<control type="image">
+			<width>120</width>
+			<height>55</height>
+			<texture>white.png</texture>
+			<include>NextAiredHeaderFadeAnim</include>
+		</control>
+	</include>
+
+	<include name="NextAiredColumnImage">
+		<width>120</width>
+		<height>114</height>
+		<texture>white.png</texture>
+		<include>NextAiredColumnFadeAnim</include>
+	</include>
+
+	<include name="NextAiredColumnLayout">
+		<control type="group">
+			<posy>55</posy>
+			<control type="image">
+				<include>NextAiredColumnImage</include>
+			</control>
+
+			<control type="image">
+				<posy>116</posy>
+				<include>NextAiredColumnImage</include>
+			</control>
+
+			<control type="image">
+				<posy>232</posy>
+				<include>NextAiredColumnImage</include>
+			</control>
+
+			<control type="image">
+				<posy>348</posy>
+				<include>NextAiredColumnImage</include>
+			</control>
+		</control>
+	</include>
+
+	<include name="NextAiredDayLabel">
+		<width>120</width>
+		<height>30</height>
+		<font>NextAiredDayFont</font>
+		<textcolor>DefaultColor</textcolor>
+		<shadowcolor>ShadowColor</shadowcolor>
+		<aligny>center</aligny>
+		<align>center</align>	
+	</include>
+
+	<include name="NextAiredDateLabel">
+		<posy>26</posy>
+		<width>120</width>
+		<height>25</height>
+		<font>NextAiredDateFont</font>
+		<textcolor>DefaultColor2</textcolor>
+		<shadowcolor>ShadowColor</shadowcolor>
+		<aligny>center</aligny>
+		<align>center</align>
+	</include>
+
+	<include name="NextAiredTimeLabel">
+		<control type="label">
+			<posx>60</posx>
+			<posy>85</posy>
+			<width>110</width>
+			<height>20</height>
+			<aligny>center</aligny>
+			<align>center</align>
+			<font>NextAiredTimeFont</font>
+			<textcolor>GreyColor</textcolor>
+			<shadowcolor>ShadowColor</shadowcolor>
+			<label>$INFO[ListItem.Property(ShortTime)]</label>
+		</control>
+	</include>
+
+	<include name="NextAiredTimeLabel2">
+		<control type="label">
+			<posx>60</posx>
+			<posy>85</posy>
+			<width>110</width>
+			<height>20</height>
+			<aligny>center</aligny>
+			<align>center</align>
+			<font>NextAiredTimeFont</font>
+			<textcolor>DefaultColor2</textcolor>
+			<shadowcolor>ShadowColor</shadowcolor>
+			<label>$INFO[ListItem.Property(ShortTime)]</label>
+		</control>
+	</include>
+
+	<include name="NextAiredItemImage">
+		<width>120</width>
+		<height>114</height>
+		<texture>white.png</texture>
+		<colordiffuse>ff0053ae</colordiffuse>
+		<include>NextAiredItemFadeAnim</include>
+	</include>
+
+	<include name="NextAiredItemLayout">
+		<control type="image">
+			<description>Thumb</description>
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>100</width>
+			<height>70</height>
+			<aspectratio>keep</aspectratio>
+			<texture background="true">$INFO[ListItem.Thumb]</texture>
+			<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),0)</visible>
+		</control>
+
+		<control type="image">
+			<description>Banner</description>
+			<posx>10</posx>
+			<posy>25</posy>
+			<width>100</width>
+			<height>40</height>
+			<aspectratio>keep</aspectratio>
+			<texture background="true">$INFO[ListItem.Property(Path),,banner.jpg]</texture>
+			<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),1)</visible>
+		</control>
+
+		<control type="image">
+			<description>Logo</description>
+			<posx>10</posx>
+			<posy>25</posy>
+			<width>100</width>
+			<height>40</height>
+			<aspectratio>keep</aspectratio>
+			<texture background="true">$INFO[ListItem.Property(Path),,logo.png]</texture>
+			<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),2)</visible>
+		</control>
+	</include>
+
+	<include name="NextAiredHeaderInfoImage">
+		<control type="image">
+			<width>298</width>
+			<height>517</height>
+			<texture>white.png</texture>
+			<include>NextAiredHeaderInfoFadeAnim</include>
+		</control>
+	</include>
+
+	<include name="NextAiredInfoImage">
+		<width>298</width>
+		<height>30</height>
+		<texture>white.png</texture>
+		<include>NextAiredInfoFadeAnim</include>
+	</include>
+
+	<include name="NextAiredTitleLabel">
+		<width>280</width>
+		<height>30</height>
+		<font>MediaInfoFont</font>
+		<textcolor>DefaultColor</textcolor>
+		<shadowcolor>ShadowColor</shadowcolor>
+		<aligny>center</aligny>
+		<align>center</align>
+		<scroll>yes</scroll>
+	</include>
+
+	<include name="NextAiredInfoLabel">
+		<width min="0" max="110">auto</width>
+		<height>30</height>
+		<font>MediaInfoFont</font>
+		<textcolor>MediaInfoItemColor</textcolor>
+		<shadowcolor>ShadowColor</shadowcolor>
+		<aligny>center</aligny>
+	</include>
+
+	<include name="NextAiredInfoLabelVal">
+		<width min="0" max="270">auto</width>
+		<height>30</height>
+		<font>MediaInfoFont</font>
+		<textcolor>MediaInfoItemColor2</textcolor>
+		<shadowcolor>ShadowColor</shadowcolor>
+		<aligny>center</aligny>
+		<scroll>yes</scroll>
+	</include>
+
+	<variable name="NextAiredTitle">
+		<value condition="Control.HasFocus(200) | stringcompare(Window(home).Property(TVGuide.MondayList),1)">$INFO[Container(200).ListItem.Label]</value>
+		<value condition="Control.HasFocus(201) | stringcompare(Window(home).Property(TVGuide.TuesdayList),1)">$INFO[Container(201).ListItem.Label]</value>
+		<value condition="Control.HasFocus(202) | stringcompare(Window(home).Property(TVGuide.WednesdayList),1)">$INFO[Container(202).ListItem.Label]</value>
+		<value condition="Control.HasFocus(203) | stringcompare(Window(home).Property(TVGuide.ThursdayList),1)">$INFO[Container(203).ListItem.Label]</value>
+		<value condition="Control.HasFocus(204) | stringcompare(Window(home).Property(TVGuide.FridayList),1)">$INFO[Container(204).ListItem.Label]</value>
+		<value condition="Control.HasFocus(205) | stringcompare(Window(home).Property(TVGuide.SaturdayList),1)">$INFO[Container(205).ListItem.Label]</value>
+		<value condition="Control.HasFocus(206) | stringcompare(Window(home).Property(TVGuide.SundayList),1)">$INFO[Container(206).ListItem.Label]</value>
+	</variable>
+
+	<variable name="NextAiredFanart">
+		<value condition="Control.HasFocus(200) | stringcompare(Window(home).Property(TVGuide.MondayList),1)">$INFO[Container(200).ListItem.Property(Fanart)]</value>
+		<value condition="Control.HasFocus(201) | stringcompare(Window(home).Property(TVGuide.TuesdayList),1)">$INFO[Container(201).ListItem.Property(Fanart)]</value>
+		<value condition="Control.HasFocus(202) | stringcompare(Window(home).Property(TVGuide.WednesdayList),1)">$INFO[Container(202).ListItem.Property(Fanart)]</value>
+		<value condition="Control.HasFocus(203) | stringcompare(Window(home).Property(TVGuide.ThursdayList),1)">$INFO[Container(203).ListItem.Property(Fanart)]</value>
+		<value condition="Control.HasFocus(204) | stringcompare(Window(home).Property(TVGuide.FridayList),1)">$INFO[Container(204).ListItem.Property(Fanart)]</value>
+		<value condition="Control.HasFocus(205) | stringcompare(Window(home).Property(TVGuide.SaturdayList),1)">$INFO[Container(205).ListItem.Property(Fanart)]</value>
+		<value condition="Control.HasFocus(206) | stringcompare(Window(home).Property(TVGuide.SundayList),1)">$INFO[Container(206).ListItem.Property(Fanart)]</value>
+	</variable>
+
+	<variable name="NextAiredNextTitle">
+		<value condition="Control.HasFocus(200) | stringcompare(Window(home).Property(TVGuide.MondayList),1)">$INFO[Container(200).ListItem.Property(NextTitle)]</value>
+		<value condition="Control.HasFocus(201) | stringcompare(Window(home).Property(TVGuide.TuesdayList),1)">$INFO[Container(201).ListItem.Property(NextTitle)]</value>
+		<value condition="Control.HasFocus(202) | stringcompare(Window(home).Property(TVGuide.WednesdayList),1)">$INFO[Container(202).ListItem.Property(NextTitle)]</value>
+		<value condition="Control.HasFocus(203) | stringcompare(Window(home).Property(TVGuide.ThursdayList),1)">$INFO[Container(203).ListItem.Property(NextTitle)]</value>
+		<value condition="Control.HasFocus(204) | stringcompare(Window(home).Property(TVGuide.FridayList),1)">$INFO[Container(204).ListItem.Property(NextTitle)]</value>
+		<value condition="Control.HasFocus(205) | stringcompare(Window(home).Property(TVGuide.SaturdayList),1)">$INFO[Container(205).ListItem.Property(NextTitle)]</value>
+		<value condition="Control.HasFocus(206) | stringcompare(Window(home).Property(TVGuide.SundayList),1)">$INFO[Container(206).ListItem.Property(NextTitle)]</value>
+	</variable>
+
+	<variable name="NextAiredNextNumber">
+		<value condition="Control.HasFocus(200) | stringcompare(Window(home).Property(TVGuide.MondayList),1)">$INFO[Container(200).ListItem.Property(NextNumber)]</value>
+		<value condition="Control.HasFocus(201) | stringcompare(Window(home).Property(TVGuide.TuesdayList),1)">$INFO[Container(201).ListItem.Property(NextNumber)]</value>
+		<value condition="Control.HasFocus(202) | stringcompare(Window(home).Property(TVGuide.WednesdayList),1)">$INFO[Container(202).ListItem.Property(NextNumber)]</value>
+		<value condition="Control.HasFocus(203) | stringcompare(Window(home).Property(TVGuide.ThursdayList),1)">$INFO[Container(203).ListItem.Property(NextNumber)]</value>
+		<value condition="Control.HasFocus(204) | stringcompare(Window(home).Property(TVGuide.FridayList),1)">$INFO[Container(204).ListItem.Property(NextNumber)]</value>
+		<value condition="Control.HasFocus(205) | stringcompare(Window(home).Property(TVGuide.SaturdayList),1)">$INFO[Container(205).ListItem.Property(NextNumber)]</value>
+		<value condition="Control.HasFocus(206) | stringcompare(Window(home).Property(TVGuide.SundayList),1)">$INFO[Container(206).ListItem.Property(NextNumber)]</value>
+	</variable>
+
+	<variable name="NextAiredRuntime">
+		<value condition="Control.HasFocus(200) | stringcompare(Window(home).Property(TVGuide.MondayList),1)">$INFO[Container(200).ListItem.Property(Runtime),, $LOCALIZE[12391]]</value>
+		<value condition="Control.HasFocus(201) | stringcompare(Window(home).Property(TVGuide.TuesdayList),1)">$INFO[Container(201).ListItem.Property(Runtime),, $LOCALIZE[12391]]</value>
+		<value condition="Control.HasFocus(202) | stringcompare(Window(home).Property(TVGuide.WednesdayList),1)">$INFO[Container(202).ListItem.Property(Runtime),, $LOCALIZE[12391]]</value>
+		<value condition="Control.HasFocus(203) | stringcompare(Window(home).Property(TVGuide.ThursdayList),1)">$INFO[Container(203).ListItem.Property(Runtime),, $LOCALIZE[12391]]</value>
+		<value condition="Control.HasFocus(204) | stringcompare(Window(home).Property(TVGuide.FridayList),1)">$INFO[Container(204).ListItem.Property(Runtime),, $LOCALIZE[12391]]</value>
+		<value condition="Control.HasFocus(205) | stringcompare(Window(home).Property(TVGuide.SaturdayList),1)">$INFO[Container(205).ListItem.Property(Runtime),, $LOCALIZE[12391]]</value>
+		<value condition="Control.HasFocus(206) | stringcompare(Window(home).Property(TVGuide.SundayList),1)">$INFO[Container(206).ListItem.Property(Runtime),, $LOCALIZE[12391]]</value>
+	</variable>
+
+	<variable name="NextAiredGenre">
+		<value condition="Control.HasFocus(200) | stringcompare(Window(home).Property(TVGuide.MondayList),1)">$INFO[Container(200).ListItem.Property(Genre)]</value>
+		<value condition="Control.HasFocus(201) | stringcompare(Window(home).Property(TVGuide.TuesdayList),1)">$INFO[Container(201).ListItem.Property(Genre)]</value>
+		<value condition="Control.HasFocus(202) | stringcompare(Window(home).Property(TVGuide.WednesdayList),1)">$INFO[Container(202).ListItem.Property(Genre)]</value>
+		<value condition="Control.HasFocus(203) | stringcompare(Window(home).Property(TVGuide.ThursdayList),1)">$INFO[Container(203).ListItem.Property(Genre)]</value>
+		<value condition="Control.HasFocus(204) | stringcompare(Window(home).Property(TVGuide.FridayList),1)">$INFO[Container(204).ListItem.Property(Genre)]</value>
+		<value condition="Control.HasFocus(205) | stringcompare(Window(home).Property(TVGuide.SaturdayList),1)">$INFO[Container(205).ListItem.Property(Genre)]</value>
+		<value condition="Control.HasFocus(206) | stringcompare(Window(home).Property(TVGuide.SundayList),1)">$INFO[Container(206).ListItem.Property(Genre)]</value>
+	</variable>
+
+	<variable name="NextAiredNextDate">
+		<value condition="Control.HasFocus(200) | stringcompare(Window(home).Property(TVGuide.MondayList),1)">$INFO[Container(200).ListItem.Property(NextDate)]</value>
+		<value condition="Control.HasFocus(201) | stringcompare(Window(home).Property(TVGuide.TuesdayList),1)">$INFO[Container(201).ListItem.Property(NextDate)]</value>
+		<value condition="Control.HasFocus(202) | stringcompare(Window(home).Property(TVGuide.WednesdayList),1)">$INFO[Container(202).ListItem.Property(NextDate)]</value>
+		<value condition="Control.HasFocus(203) | stringcompare(Window(home).Property(TVGuide.ThursdayList),1)">$INFO[Container(203).ListItem.Property(NextDate)]</value>
+		<value condition="Control.HasFocus(204) | stringcompare(Window(home).Property(TVGuide.FridayList),1)">$INFO[Container(204).ListItem.Property(NextDate)]</value>
+		<value condition="Control.HasFocus(205) | stringcompare(Window(home).Property(TVGuide.SaturdayList),1)">$INFO[Container(205).ListItem.Property(NextDate)]</value>
+		<value condition="Control.HasFocus(206) | stringcompare(Window(home).Property(TVGuide.SundayList),1)">$INFO[Container(206).ListItem.Property(NextDate)]</value>
+	</variable>	
+
+	<variable name="NextAiredShortTime">
+		<value condition="Control.HasFocus(200) | stringcompare(Window(home).Property(TVGuide.MondayList),1)">$INFO[Container(200).ListItem.Property(ShortTime)]</value>
+		<value condition="Control.HasFocus(201) | stringcompare(Window(home).Property(TVGuide.TuesdayList),1)">$INFO[Container(201).ListItem.Property(ShortTime)]</value>
+		<value condition="Control.HasFocus(202) | stringcompare(Window(home).Property(TVGuide.WednesdayList),1)">$INFO[Container(202).ListItem.Property(ShortTime)]</value>
+		<value condition="Control.HasFocus(203) | stringcompare(Window(home).Property(TVGuide.ThursdayList),1)">$INFO[Container(203).ListItem.Property(ShortTime)]</value>
+		<value condition="Control.HasFocus(204) | stringcompare(Window(home).Property(TVGuide.FridayList),1)">$INFO[Container(204).ListItem.Property(ShortTime)]</value>
+		<value condition="Control.HasFocus(205) | stringcompare(Window(home).Property(TVGuide.SaturdayList),1)">$INFO[Container(205).ListItem.Property(ShortTime)]</value>
+		<value condition="Control.HasFocus(206) | stringcompare(Window(home).Property(TVGuide.SundayList),1)">$INFO[Container(206).ListItem.Property(ShortTime)]</value>
+	</variable>
+
+	<variable name="NextAiredNetwork">
+		<value condition="Control.HasFocus(200) | stringcompare(Window(home).Property(TVGuide.MondayList),1)">$INFO[Container(200).ListItem.Property(Network)]</value>
+		<value condition="Control.HasFocus(201) | stringcompare(Window(home).Property(TVGuide.TuesdayList),1)">$INFO[Container(201).ListItem.Property(Network)]</value>
+		<value condition="Control.HasFocus(202) | stringcompare(Window(home).Property(TVGuide.WednesdayList),1)">$INFO[Container(202).ListItem.Property(Network)]</value>
+		<value condition="Control.HasFocus(203) | stringcompare(Window(home).Property(TVGuide.ThursdayList),1)">$INFO[Container(203).ListItem.Property(Network)]</value>
+		<value condition="Control.HasFocus(204) | stringcompare(Window(home).Property(TVGuide.FridayList),1)">$INFO[Container(204).ListItem.Property(Network)]</value>
+		<value condition="Control.HasFocus(205) | stringcompare(Window(home).Property(TVGuide.SaturdayList),1)">$INFO[Container(205).ListItem.Property(Network)]</value>
+		<value condition="Control.HasFocus(206) | stringcompare(Window(home).Property(TVGuide.SundayList),1)">$INFO[Container(206).ListItem.Property(Network)]</value>
+	</variable>
+
+	<variable name="NextAiredCountry">
+		<value condition="Control.HasFocus(200) | stringcompare(Window(home).Property(TVGuide.MondayList),1)">$INFO[Container(200).ListItem.Property(Country)]</value>
+		<value condition="Control.HasFocus(201) | stringcompare(Window(home).Property(TVGuide.TuesdayList),1)">$INFO[Container(201).ListItem.Property(Country)]</value>
+		<value condition="Control.HasFocus(202) | stringcompare(Window(home).Property(TVGuide.WednesdayList),1)">$INFO[Container(202).ListItem.Property(Country)]</value>
+		<value condition="Control.HasFocus(203) | stringcompare(Window(home).Property(TVGuide.ThursdayList),1)">$INFO[Container(203).ListItem.Property(Country)]</value>
+		<value condition="Control.HasFocus(204) | stringcompare(Window(home).Property(TVGuide.FridayList),1)">$INFO[Container(204).ListItem.Property(Country)]</value>
+		<value condition="Control.HasFocus(205) | stringcompare(Window(home).Property(TVGuide.SaturdayList),1)">$INFO[Container(205).ListItem.Property(Country)]</value>
+		<value condition="Control.HasFocus(206) | stringcompare(Window(home).Property(TVGuide.SundayList),1)">$INFO[Container(206).ListItem.Property(Country)]</value>
+	</variable>
+
+	<variable name="NextAiredPremiered">
+		<value condition="Control.HasFocus(200) | stringcompare(Window(home).Property(TVGuide.MondayList),1)">$INFO[Container(200).ListItem.Property(Premiered)]</value>
+		<value condition="Control.HasFocus(201) | stringcompare(Window(home).Property(TVGuide.TuesdayList),1)">$INFO[Container(201).ListItem.Property(Premiered)]</value>
+		<value condition="Control.HasFocus(202) | stringcompare(Window(home).Property(TVGuide.WednesdayList),1)">$INFO[Container(202).ListItem.Property(Premiered)]</value>
+		<value condition="Control.HasFocus(203) | stringcompare(Window(home).Property(TVGuide.ThursdayList),1)">$INFO[Container(203).ListItem.Property(Premiered)]</value>
+		<value condition="Control.HasFocus(204) | stringcompare(Window(home).Property(TVGuide.FridayList),1)">$INFO[Container(204).ListItem.Property(Premiered)]</value>
+		<value condition="Control.HasFocus(205) | stringcompare(Window(home).Property(TVGuide.SaturdayList),1)">$INFO[Container(205).ListItem.Property(Premiered)]</value>
+		<value condition="Control.HasFocus(206) | stringcompare(Window(home).Property(TVGuide.SundayList),1)">$INFO[Container(206).ListItem.Property(Premiered)]</value>
+	</variable>
+</includes>

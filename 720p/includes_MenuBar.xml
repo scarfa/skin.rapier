@@ -1254,7 +1254,117 @@
 			</control>
 		</control>		
 	</include>
-	
+
+	<include name="NextAiredMenuBar">
+		<control type="group" id="505">
+			<description>Menu Bar Area</description>
+			<posy>MenuBarOffsetY</posy>
+			<include>MenuBarImage</include>
+			<include>MenuBarOpenCloseAnim</include>
+			<include>DefaultNextAiredMenuBar</include>
+			<visible allowhiddenfocus="true">ControlGroup(505).HasFocus</visible>
+		</control>
+	</include>
+
+	<include name="DefaultNextAiredMenuBar">
+		<control type="group" id="850">
+			<control type="grouplist" id="563">
+				<description>Menu Bar Icon Buttons</description>
+				<posx>5</posx>
+				<posy>0</posy>
+				<width>150</width>
+				<height>MenuBarHeight</height>
+				<orientation>horizontal</orientation>
+				<itemgap>0</itemgap>
+				<onup>-</onup>
+				<ondown>500</ondown>
+				<onleft>212</onleft>
+				<onright>212</onright>
+				<control type="button" id="345">
+					<description>Shutdown</description>
+					<include>MenuBarIconBtn</include>
+					<texturefocus>gui/menu-bar-power-focus.png</texturefocus>
+					<texturenofocus>gui/menu-bar-power-nofocus.png</texturenofocus>
+					<onclick>ActivateWindow(ShutdownMenu)</onclick>
+				</control>
+				<control type="button" id="346">
+					<description>Favourites</description>
+					<include>MenuBarIconBtn</include>
+					<texturefocus>gui/menu-bar-favourites-focus.png</texturefocus>
+					<texturenofocus>gui/menu-bar-favourites-nofocus.png</texturenofocus>
+					<onclick>ActivateWindow(Favourites)</onclick>
+				</control>
+				<control type="togglebutton" id="347">
+					<description>Extra Options</description>
+					<include>MenuBarIconBtn</include>
+					<texturefocus>gui/menu-bar-options-focus.png</texturefocus>
+					<texturenofocus>gui/menu-bar-options-nofocus.png</texturenofocus>
+					<onclick>-</onclick>
+					<enable>false</enable>
+				</control>
+			</control>
+
+			<control type="group">      				
+				<include>NextAiredMenuBarOptions</include>
+				<include>MenuBarOptionsSwitchAnim</include>
+			</control>		
+		</control>
+	</include>
+
+	<include name="NextAiredMenuBarOptions">
+		<control type="grouplist" id="212">
+			<posx>99</posx>
+			<posy>0</posy>
+			<width>ScreenWidth</width>
+			<height>MenuBarHeight</height>
+			<itemgap>0</itemgap>
+			<onup>-</onup>
+			<ondown>500</ondown>
+			<onleft>347</onleft>
+			<onright>345</onright>
+			<orientation>horizontal</orientation>
+			<usecontrolcoords>true</usecontrolcoords>
+			<include>MenuBarBtnOpenCloseAnim</include>
+			<visible>ControlGroup(505).HasFocus</visible>
+			<control type="image" id="350">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="400">
+				<description>TV Shows</description>
+				<include>MenuBarBtn</include>
+				<align>center</align>
+				<label>[UPPERCASE]$LOCALIZE[20343][/UPPERCASE]</label>
+				<onclick>ActivateWindow(Videos,TVShowTitles,Return)</onclick>
+			</control>
+			<control type="image" id="351">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="401">
+				<description>Recently Added Episodes</description>
+				<include>MenuBarBtn</include>
+				<align>center</align>
+				<label>[UPPERCASE]$LOCALIZE[31303][/UPPERCASE]</label>
+				<onclick>ActivateWindow(Videos,RecentlyAddedEpisodes,Return)</onclick>
+			</control>			
+			<control type="image" id="352">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="8">
+				<description>Settings</description>
+				<include>MenuBarBtn</include>
+				<align>center</align>
+				<label>[UPPERCASE]$LOCALIZE[10004][/UPPERCASE]</label>
+				<onunfocus>ClearProperty(TVGuide.MondayList,Home)</onunfocus>
+				<onunfocus>ClearProperty(TVGuide.TuesdayList,Home)</onunfocus>
+				<onunfocus>ClearProperty(TVGuide.WednesdayList,Home)</onunfocus>
+				<onunfocus>ClearProperty(TVGuide.ThursdayList,Home)</onunfocus>
+				<onunfocus>ClearProperty(TVGuide.FridayList,Home)</onunfocus>
+				<onunfocus>ClearProperty(TVGuide.SaturdayList,Home)</onunfocus>
+				<onunfocus>ClearProperty(TVGuide.SundayList,Home)</onunfocus>
+			</control>
+		</control>
+	</include>	
+
 	<include name="ProfileSettingsMenuBar">
 		<control type="grouplist" id="850">
 			<posx>2</posx>

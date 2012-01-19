@@ -19,6 +19,7 @@
 	<include file="includes_Backgrounds.xml"/>
 	<include file="includes_MediaFlags.xml"/>
 	<include file="includes_Scrollbars.xml"/>
+	<include file="includes_Addons.xml"/>
 	<include file="includes_Weather.xml"/>
 	<include file="includes_SkinSettingsGeneral.xml"/>
 	<include file="includes_SkinSettingsHome.xml"/>

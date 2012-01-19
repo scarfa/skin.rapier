@@ -1201,4 +1201,33 @@
 			</control>
 		</control>
 	</include>
+
+	<include name="BreadCrumbNextAired">
+		<control type="grouplist">
+			<posx>10</posx>
+			<posy>StatusBarPosY</posy>
+			<height>43</height>
+			<width>740</width>
+			<itemgap>8</itemgap>
+			<orientation>horizontal</orientation>
+			<usecontrolcoords>true</usecontrolcoords>
+			<control type="button">
+				<include>BreadCrumbHomeIcon</include>
+				<include>BreadCrumbSlideLvl1Anim</include>
+			</control>
+			<control type="image">
+				<include>BreadCrumbSeparator</include>
+				<include>BreadCrumbSlideLvl1Anim</include>
+			</control>
+			<control type="label">
+				<include>BreadCrumbLabel</include>
+				<label>[UPPERCASE][B]$LOCALIZE[4][/B][/UPPERCASE]</label>
+				<include>BreadCrumbSlideLvl2Anim</include>
+			</control>
+			<control type="image">
+				<include>BreadCrumbSeparator</include>
+				<include>BreadCrumbSlideLvl2Anim</include>
+			</control>
+		</control>
+	</include>
 </includes>
