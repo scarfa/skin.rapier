@@ -6,7 +6,6 @@
 <!-- common -->
 <string id="31000">사용할 수 없음</string>
 <string id="31001">알 수 없음</string>
-<string id="31002">정렬: </string>
 <string id="31003">분</string>
 <string id="31004">스킨 정보</string>
 <string id="31302">아트웍 가져오기</string>
@@ -147,16 +146,14 @@
 <string id="31431">목록 포커스 애니메이션 사용하지 않음</string>
 
 <!-- skin settings backgrounds -->
-<string id="31051">홈 화면에만 적용</string>
-<string id="31052">모든 윈도우에 적용</string>
+<string id="31051">홈 화면에 보이기</string>
+<string id="31052">홈 화면과 카테고리에 보이기</string>
+<string id="31054">모든 화면에 보이기</string>
 <string id="31053">사용자 배경</string>
-<string id="31054">모든 화면에 적용</string>
-<string id="31055">홈 화면에는 적용하지 않음</string>
 <string id="31056">단일 이미지</string>
 <string id="31057">복수 이미지</string>
 <string id="31058">전체</string>
-<string id="31059">약간 어둡게</string>
-<string id="31060">어둡게</string>
+<string id="31059">팬아트 밝기</string>
 <string id="31063">팬아트 애니메이션</string>
 <string id="31064">배경 애니메이션</string>
 <string id="31604">사용자 배경</string>
@@ -172,7 +169,8 @@
 <string id="31509">TV 썸네일</string>
 <string id="31510">캐릭터 아트</string>
 <string id="31511">기본 썸네일</string>
-<string id="31512">TV 가이드에 전체 배경화면 사용</string>
+<string id="31512">애드온 설정에 따라 다운로드</string>
+<string id="31513">다운로드 프리셋</string>
 
 <!--temporary strings until PVR related strings are present in xbmc main branch-->
 <string id="31900">TV</string>
