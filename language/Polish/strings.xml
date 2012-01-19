@@ -6,11 +6,8 @@
 <!-- common -->
 <string id="31000">Niedostępny</string>
 <string id="31001">N/A</string>
-<string id="31002">sortowanych po</string>
 <string id="31003">min</string>
 <string id="31004">O Rapierze</string>
-<string id="31300">Ostatnia aktualizacja</string>
-<string id="31301">Ostatnio oglądane</string>
 <string id="31302">Pobierz grafikę</string>
 <string id="31303">Ostatnio dodane</string>
 <string id="31304">Informacje</string>
@@ -19,8 +16,7 @@
 <string id="31307">Tła</string>
 <string id="31308">Komiksy</string>
 <string id="31309">Ostatnio odtwarzane</string>
-<string id="31310">Nie wybrano źródła prognozy pogody</string>
-<string id="31311">Sprawdź ustawienia pogody i upewnij się, że wtyczka pogody jest zainstalowana</string>
+<string id="31310">Nie wybrano źródła prognozy pogody. Sprawdź ustawienia pogody i upewnij się, że wtyczka pogody jest zainstalowana.</string>
 <string id="31202">Pozycji</string>
 <string id="31203">Nie znaleziono opisu.</string>
 <string id="31204">Nie znaleziono fabuły.</string>
@@ -72,13 +68,13 @@
 <!-- skin settings general -->
 <string id="31021">Ukryj dolny panel informacyjny</string>
 <string id="31025">Ukryj pasek przewijania</string>
-<string id="31026">Ukryj pogodę</string>
+<string id="31026">Pokaż pogodę</string>
 <string id="31027">Ukryj pasek przewijania podczas odtwarzania na pełnym ekranie</string>
 <string id="31028">Włącz tryb kiosku</string>
 <string id="31029">Ukryj przycisk zamykania dialogów</string>
-<string id="31030">Włącz Animowane Ikony</string>
-<string id="31031">Animowane Ikony zastosuj do wszystkich ekranów</string>
-<string id="31032">Animowane Ikony zastosuj do pogodę ekranie</string>
+<string id="31030">Użyj animowanych ikon</string>
+<string id="31031">Na wszystkich ekranach</string>
+<string id="31032">Tylko na ekranie pogody</string>
 <string id="31999">Zresetuj ustawienia skóry do domyślnych</string>
 
 <!-- skin settings home -->
@@ -125,19 +121,19 @@
 <string id="31050">Ocena "gwiazdkowa"</string>
 <string id="31401">Automatyczne przewijanie opisu</string>
 <string id="31402">Automatyczne przewijanie fabuły</string>
-<string id="31404">Layout plakatu</string>
-<string id="31014">Dodatkowe miniatury</string>
-<string id="31015">Dodatkowy fanart</string>
-<string id="31016">Użyj lokalnego logo</string>
-<string id="31017">Użyj lokalnego plakatu</string>
-<string id="31019">Użyj lokalnego banera</string>
+<string id="31404">Widok Plakatu</string>
+<string id="31014">ExtraMiniatury</string>
+<string id="31015">ExtraFanArt</string>
+<string id="31016">Lokalne Logo</string>
+<string id="31017">Lokalny Plakat</string>
+<string id="31019">Lokalny Banner</string>
 <string id="31407">Użyj wizualizacji jako tła</string>
-<string id="31408">Użyj fanartu wykonawcy jako tła</string>
-<string id="31409">Wizualizacja / fanart wykonawcy jako tło podczas odtwarzania muzyki</string>
+<string id="31408">Użyj FanArtu wykonawcy jako tła</string>
+<string id="31409">Wizualizacja / FanArt wykonawcy jako tło podczas odtwarzania muzyki</string>
 <string id="31410">Pokazuj aktualnie odtwarzane wideo jako tło</string>
 <string id="31412">Mały</string>
 <string id="31413">Duży</string>
-<string id="31414">Pokaż więcej fanartów</string>
+<string id="31414">Pokaż więcej FanArtów</string>
 <string id="31415">Użyj domyślnych ikon</string>
 <string id="31416">Użyj szarych ikon</string>
 <string id="31417">Rozszerzony</string>
@@ -150,17 +146,15 @@
 <string id="31431">Wyłącz animację aktywności na liście</string>
 
 <!-- skin settings backgrounds -->
-<string id="31051">ukryta tylko na Ekranie głównym</string>
-<string id="31052">ukryta na wszystkich ekranach</string>
+<string id="31051">Pokaż tylko na ekranie głównym</string>
+<string id="31052">Pokaż na ekranie głównym i poziomach kategorii</string>
+<string id="31054">Pokaż na wszystkich ekranach</string>
 <string id="31053">Własne tła</string>
-<string id="31054">Zastosuj do wszystkich ekranów</string>
-<string id="31055">Nie dotyczy Ekranu głównego</string>
 <string id="31056">Pojedynczy obraz</string>
 <string id="31057">Wiele obrazów</string>
 <string id="31058">Globalne</string>
-<string id="31059">Słabo przyciemniony</string>
-<string id="31060">Mocno przyciemniony</string>
-<string id="31063">Animowany fanart</string>
+<string id="31059">Jasność FanArtu</string>
+<string id="31063">Animowany FanArt</string>
 <string id="31064">Animowane tło</string>
 <string id="31604">Własne tło</string>
 
@@ -170,11 +164,13 @@
 <string id="31502">Artwork Downloader</string>
 <string id="31503">Plakat</string>
 <string id="31504">Banery</string>
-<string id="31507">Czysta grafika</string>
-<string id="31508">Czyste logo</string>
+<string id="31507">ClearArt</string>
+<string id="31508">ClearLogo</string>
 <string id="31509">Miniatura TV</string>
-<string id="31510">Grafika aktora</string>
+<string id="31510">Grafika postaci</string>
 <string id="31511">Miniatura domyślna</string>
+<string id="31512">Pobierz grafiki zgodnie z ustawieniami wtyczki</string>
+<string id="31513">Pobieranie wybranych grafik</string>
 
 <!--temporary strings until PVR related strings are present in xbmc main branch-->
 <string id="31900">TV</string>
