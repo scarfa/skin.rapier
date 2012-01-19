@@ -240,6 +240,22 @@
 			<filename>default-bold-caps.ttf</filename>
 			<size>16</size>
 		</font>
+		<!-- NextAired Window -->
+		<font>
+			<name>NextAiredDayFont</name>
+			<filename>default-bold-caps.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>NextAiredDateFont</name>
+			<filename>default-bold-caps.ttf</filename>
+			<size>16</size>
+		</font>
+		<font>
+			<name>NextAiredTimeFont</name>
+			<filename>default-bold-caps.ttf</filename>
+			<size>14</size>
+		</font>
 		<!-- Other -->
 		<font>
 			<name>HomeSubMenuBtnFont</name>
