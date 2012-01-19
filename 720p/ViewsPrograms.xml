@@ -1031,7 +1031,7 @@
 
 					<control type="label">
 						<include>InfoPaneItemTitle</include>
-						<label>$INFO[ListItem.Label]</label>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
 					</control>
 
 					<control type="label">
@@ -1214,7 +1214,7 @@
 
 					<control type="label">
 						<include>InfoPaneItemTitle</include>
-						<label>$INFO[ListItem.Label]</label>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
 					</control>
 
 					<control type="label">
@@ -1398,7 +1398,7 @@
 
 					<control type="label">
 						<include>InfoPaneItemTitle</include>
-						<label>$INFO[ListItem.Label]</label>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
 					</control>
 
 					<control type="label">

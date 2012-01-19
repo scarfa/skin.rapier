@@ -133,7 +133,7 @@
 		<control type="group">
 			<control type="label">
 				<include>InfoPaneHeadLabel</include>
-				<label>$INFO[Container.NumItems,, $LOCALIZE[31202]]</label>
+				<label>[B]$INFO[Container.NumItems,, $LOCALIZE[31202]][/B]</label>
 			</control>
 			
 			<include condition="Window.IsActive(VideoLibrary)">VideoDetails</include>

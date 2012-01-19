@@ -2213,7 +2213,7 @@
 					
 					<control type="label">
 						<include>InfoPaneItemTitle</include>
-						<label>$INFO[ListItem.Label]</label>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
 					</control>
 					
 					<control type="group">
@@ -2680,13 +2680,13 @@
 					
 					<control type="label">
 						<include>InfoPaneItemTitle</include>
-						<label>$INFO[ListItem.Album]</label>
+						<label>[B]$INFO[ListItem.Album][/B]</label>
 						<visible>Container.Content(Albums)</visible>
 					</control>
 					
 					<control type="label">
 						<include>InfoPaneItemTitle</include>
-						<label>$INFO[ListItem.Title]</label>
+						<label>[B]$INFO[ListItem.Title][/B]</label>
 						<visible>Container.Content(Songs)</visible>
 					</control>
 					
