@@ -9,7 +9,7 @@
 			<posy>640</posy>
 			<visible>!Window.IsVisible(Home) + !Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(AddonInformation)
 			+ !Window.IsActive(FullscreenVideo) + !Window.IsActive(Visualisation)</visible>
-			<animation effect="slide" end="-428,0" time="500" tween="circle" easing="out" condition="Window.IsActive(InfoDialog)">Conditional</animation>	
+			<animation effect="slide" end="-428,0" time="500" tween="circle" easing="out" condition="Window.IsActive(InfoDialog) | Window.IsActive(DialogExtendedProgressBar.xml)">Conditional</animation>	
 			<include>BottomPaneOpenCloseAnim</include>			
 			
 			<control type="image">
