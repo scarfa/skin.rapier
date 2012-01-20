@@ -362,7 +362,7 @@
 						<aspectratio aligny="bottom">keep</aspectratio>
 						<bordertexture border="14">covers/cover-case-thumbnail-focus.png</bordertexture>
 						<bordersize>14</bordersize>
-						<visible>!Skin.HasSetting(EnableIconTVShowsLogo)</visible>
+						<visible>!Skin.HasSetting(EnableBigIconTVShowsLogo)</visible>
 						<include>BigIconViewItemFocusAnim</include>
 					</control>
 					<control type="image">
@@ -375,7 +375,7 @@
 						<aspectratio>keep</aspectratio>
 						<bordertexture border="11">covers/cover-case-curved-focus.png</bordertexture>
 						<bordersize>14</bordersize>
-						<visible>Skin.HasSetting(EnableIconTVShowsLogo)</visible>
+						<visible>Skin.HasSetting(EnableBigIconTVShowsLogo)</visible>
 						<include>BigIconViewItemFocusAnim</include>
 					</control>
 					<control type="label">
