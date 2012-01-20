@@ -234,7 +234,7 @@
 	<include name="InfoPaneFileManagerDetails">	
 		<control type="label">
 			<include>InfoPaneHeadLabel</include>
-			<label>$INFO[Container(20).NumItems,, $LOCALIZE[31202]]</label>
+			<label>[B]$INFO[Container(20).NumItems,, $LOCALIZE[31202]][/B]</label>
 			<visible>Control.HasFocus(20)</visible>
 		</control>
 		
@@ -247,7 +247,7 @@
 		<control type="label">
 			<posx>750</posx>
 			<include>InfoPaneHeadLabel</include>
-			<label>$INFO[Container(21).NumItems,, $LOCALIZE[31202]]</label>
+			<label>[B]$INFO[Container(21).NumItems,, $LOCALIZE[31202]][/B]</label>
 			<visible>Control.HasFocus(21)</visible>
 		</control>
 				
@@ -262,7 +262,7 @@
 	<include name="InfoPaneMusicPlaylistEditorDetails">	
 		<control type="label">
 			<include>InfoPaneHeadLabel</include>
-			<label>$INFO[Container(50).NumItems,, $LOCALIZE[31202]]</label>
+			<label>[B]$INFO[Container(50).NumItems,, $LOCALIZE[31202]][/B]</label>
 			<visible>Control.HasFocus(50)</visible>
 		</control>
 		
@@ -275,7 +275,7 @@
 		<control type="label">
 			<posx>750</posx>
 			<include>InfoPaneHeadLabel</include>
-			<label>$INFO[Container(100).NumItems,, $LOCALIZE[31202]]</label>
+			<label>[B]$INFO[Container(100).NumItems,, $LOCALIZE[31202]][/B]</label>
 			<visible>Control.HasFocus(100)</visible>
 		</control>
 				
@@ -304,83 +304,24 @@
 		</control>
 	</include>
 	
-	<include name="InfoPaneSettingsDetails">		
-		<control type="image">
-			<include>InfoPaneIcon</include>
-			<texture>Settings.png</texture>
-		</control>
-		
-		<control type="label" id="2">
-			<posx>80</posx>
+	<include name="InfoPaneSystemInfoDetails">	
+		<control type="label">
+			<width>550</width>
 			<include>InfoPaneHeadLabel</include>
-			<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-		</control>
-				
-		<control type="label">
-			<posx>80</posx>
-			<include>InfoPaneHeadLabel2</include>
-			<label>[UPPERCASE]$LOCALIZE[166], $LOCALIZE[14090], $LOCALIZE[14081], $LOCALIZE[360][/UPPERCASE]</label>
-			<visible>Window.IsActive(AppearanceSettings)</visible>
-		</control>
-
-		<control type="label">
-			<posx>80</posx>
-			<include>InfoPaneHeadLabel2</include>
-			<label>[UPPERCASE]$LOCALIZE[14081], $LOCALIZE[108][/UPPERCASE]</label>
-			<visible>Window.IsActive(PicturesSettings)</visible>
-		</control>	
-		
-		<control type="label">
-			<posx>80</posx>
-			<include>InfoPaneHeadLabel2</include>
-			<label>[UPPERCASE]$LOCALIZE[14022], $LOCALIZE[14086], $LOCALIZE[14081], $LOCALIZE[15221], $LOCALIZE[620], $LOCALIZE[13327][/UPPERCASE]</label>
-			<visible>Window.IsActive(MusicSettings)</visible>
-		</control>	
-		
-		<control type="label">
-			<posx>80</posx>
-			<include>InfoPaneHeadLabel2</include>
-			<label>[UPPERCASE]$LOCALIZE[14022], $LOCALIZE[14086], $LOCALIZE[14081], $LOCALIZE[287], $LOCALIZE[14087], $LOCALIZE[21412][/UPPERCASE]</label>
-			<visible>Window.IsActive(VideosSettings)</visible>
-		</control>	
-		
-		<control type="label">
-			<posx>80</posx>
-			<include>InfoPaneHeadLabel2</include>
-			<label>[UPPERCASE]$LOCALIZE[128][/UPPERCASE]</label>
-			<visible>Window.IsActive(WeatherSettings)</visible>
-		</control>	
-		
-		<control type="label">
-			<posx>80</posx>
-			<include>InfoPaneHeadLabel2</include>
-			<label>[UPPERCASE]$LOCALIZE[14036], $LOCALIZE[798][/UPPERCASE]</label>
-			<visible>Window.IsActive(NetworkSettings)</visible>
-		</control>	
-		
-		<control type="label">
-			<posx>80</posx>
-			<include>InfoPaneHeadLabel2</include>
-			<label>[UPPERCASE]$LOCALIZE[21373], $LOCALIZE[337], $LOCALIZE[14094], $LOCALIZE[14095], $LOCALIZE[14092], $LOCALIZE[12360][/UPPERCASE]</label>
-			<visible>Window.IsActive(SystemSettings)</visible>
-		</control>	
-	</include>
-	
-	<include name="InfoPaneSystemInfoDetails">		
-		<control type="label">
-			<include>InfoPaneHeadLabel</include>
-			<label>[UPPERCASE]$LOCALIZE[482]:[/UPPERCASE]</label>
+			<label>[UPPERCASE][B]$INFO[System.BuildVersion][/B][/UPPERCASE]</label>
 		</control>
 		
-		<control type="label" id="52">
+		<control type="label">
+			<width>550</width>
 			<include>InfoPaneHeadLabel2</include>
+			<label>[UPPERCASE]$INFO[System.BuildDate][/UPPERCASE]</label>
 		</control>
 	</include>
 	
 	<include name="InfoPaneProfileDetails">
 		<control type="label">
 			<include>InfoPaneHeadLabel</include>
-			<label>[UPPERCASE]$LOCALIZE[13204][/UPPERCASE]</label>
+			<label>[UPPERCASE][B]$LOCALIZE[13204][/B][/UPPERCASE]</label>
 		</control>
 
 		<control type="label">
