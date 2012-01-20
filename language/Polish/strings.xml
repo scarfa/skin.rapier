@@ -22,6 +22,7 @@
 <string id="31204">Nie znaleziono fabuły.</string>
 <string id="31205">Nie znaleziono komentarza.</string>
 <string id="31206">Style widoku</string>
+<string id="31207">Opcje okładki</string>
 <string id="31208">Przycisk 1</string>
 <string id="31209">Przycisk 2</string>
 <string id="31210">Przycisk 3</string>
@@ -133,7 +134,7 @@
 <string id="31410">Pokazuj aktualnie odtwarzane wideo jako tło</string>
 <string id="31412">Mały</string>
 <string id="31413">Duży</string>
-<string id="31414">Pokaż więcej FanArtów</string>
+<string id="31414">Układ FanArtu</string>
 <string id="31415">Użyj domyślnych ikon</string>
 <string id="31416">Użyj szarych ikon</string>
 <string id="31417">Rozszerzony</string>
@@ -154,6 +155,7 @@
 <string id="31057">Wiele obrazów</string>
 <string id="31058">Globalne</string>
 <string id="31059">Jasność FanArtu</string>
+<string id="31060">Jasność tła</string>
 <string id="31063">Animowany FanArt</string>
 <string id="31064">Animowane tło</string>
 <string id="31604">Własne tło</string>
