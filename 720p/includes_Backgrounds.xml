@@ -525,7 +525,7 @@
 	<include name="WeatherBackgroundDim">
 		<control type="image">
 			<include>BackgroundDim</include>
-			<animation effect="fade" end="75" reversible="false" condition="!Skin.HasSetting(DimWeatherBackgroundHigh)">Conditional</animation>
+			<animation effect="fade" end="60" reversible="false" condition="!Skin.HasSetting(DimWeatherBackgroundHigh)">Conditional</animation>
 			<animation effect="fade" end="85" reversible="false" condition="Skin.HasSetting(DimWeatherBackgroundHigh)">Conditional</animation>
 		</control>
 	</include>

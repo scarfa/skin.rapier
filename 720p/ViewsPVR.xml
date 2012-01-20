@@ -134,7 +134,7 @@
 				<control type="largeimage">
 					<width>554</width>
 					<height>310</height>
-					<texture fallback="background-default.png">background-pvr.png</texture>
+					<texture fallback="background-default.png">pvr\pvr-background.jpg</texture>
 					<bordersize>4</bordersize>
 					<aspectratio>scale</aspectratio>
 					<fadetime>FanartCrossfadeTime</fadetime>
@@ -144,7 +144,7 @@
 				<control type="largeimage">
 					<width>554</width>
 					<height>310</height>
-					<texture fallback="background-default.png">background-pvr-radio.png</texture>
+					<texture fallback="background-default.png">pvr\pvr-radio-background.jpg</texture>
 					<bordersize>4</bordersize>
 					<aspectratio>scale</aspectratio>
 					<fadetime>FanartCrossfadeTime</fadetime>

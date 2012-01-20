@@ -1298,7 +1298,7 @@
 				<control type="multiimage">
 					<include>CustomImagePreview</include>
 					<imagepath background="true" fallback="background-default.png">$INFO[Skin.String(CustomDefaultBGPath)]</imagepath>
-					<visible>Skin.String(CustomWeatherBGType,1) | Skin.String(CustomWeatherBGType,4) | Skin.String(CustomWeatherBGType,)</visible>
+					<visible>Skin.String(CustomWeatherBGType,1) | Skin.String(CustomWeatherBGType,)</visible>
 					<include>CustomImagePreviewOpenCloseAnim</include>
 				</control>
 				
