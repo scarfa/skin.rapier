@@ -392,12 +392,12 @@
 	<include name="InfoPaneAboutDetails">		
 		<control type="label">
 			<include>InfoPaneHeadLabel</include>
-			<label>[UPPERCASE]Developer: Scarfa[/UPPERCASE]</label>
+			<label>[UPPERCASE][B]Developer: Scarfa[/B][/UPPERCASE]</label>
 		</control>
 		
 		<control type="label" id="52">
 			<include>InfoPaneHeadLabel2</include>
-			<label>[UPPERCASE]Contact: trizinn@gmail.com[/UPPERCASE]</label>
+			<label>[UPPERCASE]Contact: movablemind@gmail.com[/UPPERCASE]</label>
 		</control>
 	</include>
 </includes>

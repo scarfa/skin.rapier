@@ -15,6 +15,7 @@
 			<posx>30</posx>
 			<posy>110</posy>
 			<include>ControlsOpenCloseAnim</include>
+			<animation effect="fade" end="70" condition="true">Conditional</animation>
 			
 			<control type="group">
 				<posy>-20</posy>
@@ -221,6 +222,7 @@
 				<width>600</width>
 				<height>40</height>
 				<align>center</align>
+				<textcolor>GreyColor</textcolor>
 				<include>InfoPaneHeadLabel2</include>
 				<label>[UPPERCASE]For the full license, contributions made to this work, and any pertinent information, please refer to the license.txt and readme.txt[/UPPERCASE]</label>
 			</control>
