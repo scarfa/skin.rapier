@@ -134,7 +134,7 @@
 <string id="31410">Enable Video Playing In The Background</string>
 <string id="31412">Small</string>
 <string id="31413">Large</string>
-<string id="31414">Show More Fanart</string>
+<string id="31414">Fanart Layout</string>
 <string id="31415">Use Default Theme Colour</string>
 <string id="31416">Use White Theme Colour</string>
 <string id="31417">Expanded</string>
@@ -155,6 +155,7 @@
 <string id="31057">Multi Image</string>
 <string id="31058">Global</string>
 <string id="31059">Fanart Brightness</string>
+<string id="31060">Background Brightness</string>
 <string id="31063">Animate Fanart</string>
 <string id="31064">Animate Background</string>
 <string id="31604">Customize Background</string>

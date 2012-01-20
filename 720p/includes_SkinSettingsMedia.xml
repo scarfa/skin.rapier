@@ -57,7 +57,7 @@
 				<control type="radiobutton" id="3018">
 					<description>Artist Fanart Slideshow</description>
 					<include>SettingsContentRadioBtn</include>
-					<label>$LOCALIZE[20425] [COLOR=DisabledColor]($LOCALIZE[24000] script.artistslideshow)[/COLOR]</label>
+					<label>$LOCALIZE[20425] [COLOR=DisabledColor](Artist Slideshow $LOCALIZE[24000])[/COLOR]</label>
 					<selected>Skin.HasSetting(EnableArtistFanartSlideshow)</selected>
 					<onclick>Skin.ToggleSetting(EnableArtistFanartSlideshow)</onclick>
 					<visible>Skin.HasSetting(UseFanartForMusicPlayingBG)</visible>
