@@ -78,7 +78,7 @@
 			<posy>BottomPaneOffsetY</posy>	
 			<include>InfoPaneWeatherDetails</include>
 			<include>BottomPaneOpenCloseAnim</include>
-			<visible>!IsEmpty(Weather.Plugin) + !Window.IsActive(VideoScan) + !Window.IsActive(MusicScan) + !Window.IsActive(InfoDialog)</visible>
+			<visible>!IsEmpty(Weather.Plugin)</visible>
 		</control>
 	</controls>	
 </window>

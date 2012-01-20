@@ -301,6 +301,7 @@
 			<textcolor>GreyColor</textcolor>
 			<include>InfoPaneHeadLabel</include>
 			<label>[UPPERCASE]$INFO[Window(Weather).Property(WeatherProvider),[B]Weather provided by:[/B] ][/UPPERCASE]</label>
+			<visible>!Window.IsActive(VideoScan) + !Window.IsActive(MusicScan) + !Window.IsActive(InfoDialog)</visible>
 		</control>
 	</include>
 	
