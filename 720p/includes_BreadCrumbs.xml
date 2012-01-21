@@ -1,8 +1,8 @@
 <includes>
 	<include name="BreadCrumbHomeIcon">	
-		<posy>10</posy>
-		<width>24</width>
-		<height>24</height>
+		<posy>12</posy>
+		<width>20</width>
+		<height>20</height>
 		<texturenofocus>gui/breadcrumb-home-nofocus.png</texturenofocus>
 		<texturefocus>gui/breadcrumb-home-focus.png</texturefocus>
 		<onclick>Dialog.Close(all,true)</onclick>
@@ -10,9 +10,9 @@
 	</include>
 	
 	<include name="BreadCrumbSeparator">
-		<posy>4</posy>
-		<width>18</width>
-		<height>34</height>
+		<posy>10</posy>
+		<width>12</width>
+		<height>23</height>
 		<texture>gui/breadcrumb-separator.png</texture>
 		<aspectratio>stretch</aspectratio>
 		<animation effect="fade" end="35" condition="true">conditional</animation>

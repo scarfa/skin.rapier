@@ -94,7 +94,7 @@
 			<effect type="slide" start="-50,0" time="500" delay="300" tween="circle" easing="out"/>
 		</animation>
 		
-		<animation effect="fade" start="0" end="100" delay="200" time="300">Visible</animation>
+		<animation effect="fade" start="0" end="100" delay="100" time="300">Visible</animation>
 	</include>
 	
 	<include name="BreadCrumbSlideLvl3Anim">
@@ -103,7 +103,7 @@
 			<effect type="slide" start="-50,0" time="500" delay="400" tween="circle" easing="out"/>
 		</animation>
 		
-		<animation effect="fade" start="0" end="100" delay="200" time="300">Visible</animation>
+		<animation effect="fade" start="0" end="100" delay="100" time="300">Visible</animation>
 	</include>
 	
 	<include name="BreadCrumbSlideLvl4Anim">
@@ -112,7 +112,7 @@
 			<effect type="slide" start="-50,0" time="500" delay="500" tween="circle" easing="out"/>
 		</animation>
 		
-		<animation effect="fade" start="0" end="100" delay="200" time="300">Visible</animation>
+		<animation effect="fade" start="0" end="100" delay="100" time="300">Visible</animation>
 	</include>
 	
 	<include name="NotificationPulseAnim">
