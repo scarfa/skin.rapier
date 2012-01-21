@@ -1405,8 +1405,7 @@
 				<posy>353</posy>
 				<width>284</width>
 				<font>MediaInfoFont3</font>
-				<textcolor>MediaInfoTitleColor2</textcolor>
-				<shadowcolor>ShadowColor</shadowcolor>
+				<textcolor>WhiteColor</textcolor>
 				<aligny>center</aligny>
 				<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
 				<scroll>false</scroll>
@@ -1725,8 +1724,7 @@
 						<posy>19</posy>
 						<width>284</width>
 						<font>MediaInfoFont3</font>
-						<textcolor>MediaInfoTitleColor2</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
+						<textcolor>WhiteColor</textcolor>
 						<aligny>center</aligny>
 						<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
 						<scroll>false</scroll>
@@ -2577,8 +2575,7 @@
 						<posy>19</posy>
 						<width>284</width>
 						<font>MediaInfoFont3</font>
-						<textcolor>MediaInfoTitleColor2</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
+						<textcolor>WhiteColor</textcolor>
 						<aligny>center</aligny>
 						<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
 						<scroll>false</scroll>
