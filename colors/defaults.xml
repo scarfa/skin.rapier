@@ -15,7 +15,7 @@
 	<color name="MenuItemColor">ffcecece</color>
 	<color name="MenuItemFocusColor">ffffffff</color>
 	<color name="HomeSubMenuColor">ff8e8e8e</color>
-	<color name="BreadCrumbColor">ffcecece</color>
+	<color name="BreadCrumbColor">ffc0c0c0</color>
 	<color name="InfoPaneColor">ffcce4fe</color>
 	<color name="InfoPaneColor2">ff7993b0</color>
 	<color name="ListColor">ffcecece</color>
