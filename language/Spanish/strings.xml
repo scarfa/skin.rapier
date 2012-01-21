@@ -6,12 +6,9 @@
 <!-- common -->
 <string id="31000">No disponible</string>
 <string id="31001">N/A</string>
-<string id="31002">Por</string>
 <string id="31003">min</string>
 <string id="31004">Acerca de</string>
-<string id="31300">Última Actualización</string>
-<string id="31301">Última Vistas</string>
-<string id="31302">Obtenga Logo</string>
+<string id="31302">Obtener Artwork</string>
 <string id="31303">Recientes</string>
 <string id="31304">Información</string>
 <string id="31305">Emuladores</string>
@@ -19,13 +16,13 @@
 <string id="31307">Fondos</string>
 <string id="31308">Comics</string>
 <string id="31309">Últimas Reproducciones</string>
-<string id="31310">El Proveedor Del Tiempo No Se Ha Establecido</string>
-<string id="31311">Compruebe Su Configuración Del Tiempo Y Asegurese Que El Add-on Está Instalado</string>
+<string id="31310">El Proveedor Del Clima No Se Ha Establecido. Compruebe Su Configuración Del Clima Y Asegurese Que El Add-on Está Instalado</string>
 <string id="31202">Entradas</string>
 <string id="31203">No encontrado.</string>
 <string id="31204">Ninguna descripción.</string>
 <string id="31205">Sin comentarios.</string>
 <string id="31206">Estilos de Vistas</string>
+<string id="31207">Opciones de Portada</string>
 <string id="31208">Botón 1</string>
 <string id="31209">Botón 2</string>
 <string id="31210">Botón 3</string>
@@ -42,7 +39,7 @@
 <string id="31013">Media</string>
 <string id="31018">Menú video</string>
 <string id="31020">Visualización Actual</string>
-<string id="31022">Configuración de Visualización</string>
+<string id="31022">Configurar Visualización</string>
 <string id="31023">Restablecer configuración de Piel...</string>
 <string id="32024">Recargar Piel...</string>
 <string id="32025">Reiniciar Piel</string>
@@ -72,26 +69,26 @@
 <!-- skin settings general -->
 <string id="31021">Ocultar Panel Información</string>
 <string id="31025">Ocultar Scrollbar</string>
-<string id="31026">Activar Tiempo</string>
+<string id="31026">Activar Clima</string>
 <string id="31027">Ocultar barra de búsqueda OSD durante la reproducción a pantalla completa</string>
 <string id="31028">Activa Modo Kiosko</string>
 <string id="31029">Ocultar Botones de Diálogo Cerrar</string>
 <string id="31030">Activar Iconos Animados</string>
 <string id="31031">Iconos Animados se Aplica en Todas las Ventanas</string>
-<string id="31032">Iconos Animados Sólo se Aplican a la Ventana del Tiempo</string>
+<string id="31032">Iconos Animados Sólo se Aplican a la Ventana del Clima</string>
 <string id="31999">Restablecer configuración de Piel a valores por defecto</string>
 
 <!-- skin settings home -->
-<string id="31068">Ocultar Sub Menús</string>
+<string id="31068">Ocultar Submenús</string>
 <string id="31069">Ocultar Información del Sistema</string>
 <string id="31070">Ocultar Categorias</string>
 <string id="31071">Ocultar Reproducción en Curso</string>
 <string id="31072">Ocultar Últimos Añadidos</string>
-<string id="31073">Ocultar Tiempo</string>
+<string id="31073">Ocultar Clima</string>
 <string id="31074">Ocultar Categoria Iconos</string>
 <string id="31075">Mostrar Botones de Navegación</string>
-<string id="31076">Categoria Submenú</string>
-<string id="31077">Mostrar Indicador Sub Menu</string>
+<string id="31076">Categoría Submenú</string>
+<string id="31077">Mostrar Indicador Submenú</string>
 <string id="31078">Icono Personalizado</string>
 <string id="31081">Sin Reflejos</string>
 <string id="31082">Reflejos</string>
@@ -117,7 +114,7 @@
 <string id="31042">Ocultar Títulos</string>
 <string id="31043">Ocultar Fanart</string>
 <string id="31044">Ocultar Trama</string>
-<string id="31045">Ocultar Cover</string>
+<string id="31045">Ocultar Portada</string>
 <string id="31046">Ocultar Marcas</string>
 <string id="31047">Mostrar Rating</string>
 <string id="31048">Activar Banderas de Medios</string>
@@ -125,7 +122,7 @@
 <string id="31050">Rating con Estrellas</string>
 <string id="31401">Desplazar Trama</string>
 <string id="31402">Desplazar Descripción</string>
-<string id="31404">Modo Poster</string>
+<string id="31404">Diseño Poster</string>
 <string id="31014">Extra Thumbs</string>
 <string id="31015">Extra Fanart</string>
 <string id="31016">Usar Logo Local</string>
@@ -150,16 +147,15 @@
 <string id="31431">Desactivar Animación de Reflejo</string>
 
 <!-- skin settings backgrounds -->
-<string id="31051">Solo se Aplica al Menú Principal</string>
-<string id="31052">Se Aplica en Todas las Ventanas que lo Contienen</string>
-<string id="31053">Personalizar Fondos</string>
-<string id="31054">Se Aplica en Todas las Ventanas</string>
-<string id="31055">No se Aplica al Menú Principal</string>
+<string id="31051">Mostrar Solo En Ventana Principal</string>
+<string id="31052">Mostrar En Ventana Principal y a Nivel de Categoría</string>
+<string id="31054">Mostrar en Todas las Ventanas</string>
+<string id="31053">Fondos Personalizados</string>
 <string id="31056">Imagen Única</string>
-<string id="31057">Multi Imagen</string>
+<string id="31057">Multi Imágenes</string>
 <string id="31058">Global</string>
-<string id="31059">Nivel de Brillo Bajo</string>
-<string id="31060">Nivel de Brillo Alto</string>
+<string id="31059">Fanart Claro</string>
+<string id="31060">Fondo Claro</string>
 <string id="31063">Animar Fanart</string>
 <string id="31064">Animar Fondo</string>
 <string id="31604">Personalizar Fondo</string>
@@ -175,6 +171,8 @@
 <string id="31509">Thumb TV</string>
 <string id="31510">Carácter Art</string>
 <string id="31511">Thumb por Defecto</string>
+<string id="31512">Descargar Conforme a la Configuración del Add-on</string>
+<string id="31513">Programar descarga</string>
 
 <!--temporary strings until PVR related strings are present in xbmc main branch-->
 <string id="31900">TV</string>
