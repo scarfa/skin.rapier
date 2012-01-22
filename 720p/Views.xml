@@ -4,13 +4,13 @@
 		<value condition="!Skin.HasSetting(UseTVShowsPosterCover) + Skin.HasSetting(UseTVShowsLocalBannerThumb)">$INFO[ListItem.Path]banner.jpg</value>
 		<value>$INFO[ListItem.Thumb]</value>
 	</variable>
-	
+
 	<variable name="TVShowsThumbTextureVideoInfo">
 		<value condition="Skin.HasSetting(UseTVShowsPosterCover) + Skin.HasSetting(UseTVShowsLocalPosterThumb)">$INFO[ListItem.FileNameAndPath]poster.jpg</value>
 		<value condition="!Skin.HasSetting(UseTVShowsPosterCover) + Skin.HasSetting(UseTVShowsLocalBannerThumb)">$INFO[ListItem.FileNameAndPath]banner.jpg</value>
 		<value>$INFO[ListItem.Thumb]</value>
 	</variable>
-	
+
 	<include name="DVDThumbsStyleCoverImage">
 		<control type="image">
 			<width>129</width>
@@ -18,7 +18,7 @@
 			<texture border="7">covers/cover-case-focus.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
-		
+
 		<control type="image">
 			<width>129</width>
 			<height>172</height>
@@ -26,7 +26,7 @@
 			<texture background="true">dim.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
-		
+
 		<control type="image">
 			<width>129</width>
 			<height>172</height>
@@ -34,7 +34,7 @@
 			<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 			<aspectratio>keep</aspectratio>
 		</control>
-		
+
 		<control type="image">
 			<width>129</width>
 			<height>172</height>
@@ -43,7 +43,7 @@
 			<aspectratio>stretch</aspectratio>
 			<visible>Container.Content(Movies)</visible>
 		</control>
-		
+
 		<control type="image">
 			<width>129</width>
 			<height>172</height>
@@ -53,7 +53,7 @@
 			<visible>Container.Content(TVShows)</visible>
 		</control>
 	</include>
-	
+
 	<include name="DVDThumbsStyleOverlayImage">
 		<control type="image">
 			<posx>91</posx>
@@ -65,7 +65,7 @@
 			<visible>!Skin.HasSetting(HideMoviesListInfo3Overlay)</visible>
 		</control>
 	</include>
-	
+
 	<include name="WideThumbsStyleCoverImage">
 		<width>155</width>
 		<height>129</height>
@@ -74,7 +74,7 @@
 		<texture background="true">$INFO[ListItem.Thumb]</texture>
 		<aspectratio>stretch</aspectratio>
 	</include>
-	
+
 	<include name="AlbumThumbsStyleCoverImage">
 		<control type="image">
 			<width>129</width>
@@ -82,7 +82,7 @@
 			<texture border="7">covers/cover-case-focus.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
-		
+
 		<control type="image">
 			<width>129</width>
 			<height>129</height>
@@ -90,7 +90,7 @@
 			<texture background="true">dim.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
-		
+
 		<control type="image">
 			<width>129</width>
 			<height>129</height>
@@ -99,7 +99,7 @@
 			<aspectratio>keep</aspectratio>
 			<visible>IsEmpty(ListItem.Thumb)</visible>
 		</control>
-		
+
 		<control type="image">
 			<width>129</width>
 			<height>129</height>
@@ -108,7 +108,7 @@
 			<aspectratio>stretch</aspectratio>
 		</control>
 	</include>
-	
+
 	<include name="LogoThumbsStyleCoverImage">
 		<control type="image">
 			<width>129</width>
@@ -116,7 +116,7 @@
 			<texture border="7">covers/cover-case-focus.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
-		
+
 		<control type="image">
 			<width>129</width>
 			<height>129</height>
@@ -124,7 +124,7 @@
 			<texture background="true">dim.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
-		
+
 		<control type="image">
 			<width>129</width>
 			<height>129</height>
@@ -133,7 +133,7 @@
 			<aspectratio>stretch</aspectratio>
 			<visible>IsEmpty(ListItem.Title)</visible>
 		</control>
-		
+
 		<control type="image">
 			<width>129</width>
 			<height>129</height>
@@ -141,7 +141,7 @@
 			<texture background="true">$INFO[ListItem.Path]logo.png</texture>
 			<aspectratio>keep</aspectratio>
 		</control>
-		
+
 		<control type="image">
 			<description>Overlay</description>
 			<posx>90</posx>
@@ -153,7 +153,7 @@
 			<visible>!Skin.HasSetting(HideTVShowsThumbsInfoOverlay)</visible>
 		</control>	
 	</include>
-	
+
 	<include name="DVDWallCoverImage">
 		<control type="image">
 			<width>160</width>
@@ -161,7 +161,7 @@
 			<texture border="7">covers/cover-case-focus.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
-		
+
 		<control type="image">
 			<width>160</width>
 			<height>225</height>
@@ -169,7 +169,7 @@
 			<bordersize>10</bordersize>
 			<aspectratio>stretch</aspectratio>
 		</control>
-		
+
 		<control type="image">
 			<width>160</width>
 			<height>225</height>
@@ -178,7 +178,7 @@
 			<aspectratio>keep</aspectratio>
 			<visible>IsEmpty(ListItem.Thumb)</visible>
 		</control>
-		
+
 		<control type="image">
 			<width>160</width>
 			<height>225</height>
@@ -187,7 +187,7 @@
 			<aspectratio>stretch</aspectratio>
 		</control>
 	</include>
-	
+
 	<include name="DVDWallOverlayImage">
 		<control type="image">
 			<posx>118</posx>
@@ -199,7 +199,7 @@
 			<visible>!Skin.HasSetting(HideMoviesWallOverlay)</visible>
 		</control>	
 	</include>
-	
+
 	<include name="AlbumWallCoverImage">
 		<control type="image">
 			<width>214</width>
@@ -207,7 +207,7 @@
 			<texture border="7">covers/cover-case-focus.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
-		
+
 		<control type="image">
 			<width>214</width>
 			<height>225</height>
@@ -215,7 +215,7 @@
 			<texture>dim.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
-		
+
 		<control type="image">
 			<width>214</width>
 			<height>225</height>
@@ -224,7 +224,7 @@
 			<aspectratio>keep</aspectratio>
 			<visible>IsEmpty(ListItem.Thumb)</visible>
 		</control>
-		
+
 		<control type="image">
 			<width>214</width>
 			<height>225</height>
@@ -233,14 +233,14 @@
 			<aspectratio>stretch</aspectratio>
 		</control>
 	</include>
-	
+
 	<include name="ListPanelCover">
 		<control type="group">
 			<posx>840</posx>
 			<posy>150</posy>
 			<visible>![[Container.Content(Movies) | Container.Content(Episodes)] + Skin.HasSetting(EnableListExtraThumbs)]
 			+ ![Container.Content(TVShows) + Skin.HasSetting(EnableListTVShowsLogo) + !Skin.HasSetting(UseTVShowsPosterCover)]</visible>
-			
+
 			<control type="group">
 				<visible>!Container.Content(TVShows)</visible>
 				<control type="image">
@@ -279,7 +279,7 @@
 					<visible>!IsEmpty(ListItem.Thumb)</visible>
 				</control>
 			</control>
-			
+
 			<control type="group">
 				<visible>Container.Content(TVShows)</visible>
 				<control type="image">
@@ -319,13 +319,13 @@
 			</control>
 		</control>
 	</include>
-	
+
 	<include name="ListPanelTVShowLogo">
 		<control type="group">
 			<posx>840</posx>
 			<posy>150</posy>
 			<visible>Container.Content(TVShows)</visible>
-			
+
 			<control type="image">
 				<description>Cover</description>
 				<width>400</width>
@@ -348,7 +348,7 @@
 			</control>
 		</control>
 	</include>
-	
+
 	<include name="ListPanelExtraThumbs">
 		<control type="grouplist">
 			<posx>880</posx>
@@ -384,7 +384,7 @@
 			</control>
 		</control>
 	</include>
-	
+
 	<include name="ListInfo2PanelFanart">
 		<control type="largeimage">
 			<width>554</width>
@@ -395,7 +395,7 @@
 			<fadetime>FanartCrossfadeTime</fadetime>
 		</control>
 	</include>
-	
+
 	<include name="ListInfo2PanelExtraThumbs">	
 		<control type="image">
 			<posx>4</posx>
@@ -405,7 +405,7 @@
 			<texture background="true">$INFO[ListItem.Path]extrathumbs/thumb1.jpg</texture>	
 			<aspectratio>scale</aspectratio>
 		</control>
-		
+
 		<control type="image">
 			<posx>277</posx>
 			<posy>4</posy>
@@ -414,7 +414,7 @@
 			<texture background="true">$INFO[ListItem.Path]extrathumbs/thumb2.jpg</texture>	
 			<aspectratio>scale</aspectratio>
 		</control>
-		
+
 		<control type="image">
 			<posx>4</posx>
 			<posy>155</posy>
@@ -423,7 +423,7 @@
 			<texture background="true">$INFO[ListItem.Path]extrathumbs/thumb3.jpg</texture>	
 			<aspectratio>scale</aspectratio>
 		</control>
-		
+
 		<control type="image">
 			<posx>277</posx>
 			<posy>155</posy>
@@ -433,12 +433,12 @@
 			<aspectratio>scale</aspectratio>
 		</control>
 	</include>
-	
+
 	<include name="ListInfo3PanelCover">
 		<control type="group">					
 			<posx>880</posx>
 			<posy>150</posy>
-			
+
 			<control type="image">
 				<description>Default Cover</description>
 				<width>320</width>
@@ -449,7 +449,7 @@
 				<fadetime>IconCrossfadeTime</fadetime>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 			</control>
-			
+
 			<control type="image">
 				<description>Cover</description>
 				<width>320</width>
@@ -474,7 +474,7 @@
 			</control>
 		</control>
 	</include>
-	
+
 	<include name="ListInfo3PanelExtraThumbs">
 		<control type="grouplist">
 			<posx>880</posx>
@@ -509,7 +509,7 @@
 			</control>
 		</control>
 	</include>
-	
+
 	<include name="ListInfo3PanelCover2">
 		<control type="largeimage">
 			<width>400</width>
@@ -520,7 +520,7 @@
 			<fadetime>FanartCrossfadeTime</fadetime>
 		</control>
 	</include>
-	
+
 	<include name="ListInfo3PanelExtraThumbs2">
 		<control type="multiimage">
 			<posx>4</posx>
@@ -535,7 +535,7 @@
 			<randomize>true</randomize>
 		</control>
 	</include>
-	
+
 	<include name="ListInfoViewCatLabel">
 		<height>45</height>
 		<font>MediaInfoFont</font>
@@ -543,7 +543,7 @@
 		<shadowcolor>ShadowColor</shadowcolor>
 		<aligny>center</aligny>
 	</include>
-	
+
 	<include name="ListInfoViewCatValueLabel">
 		<height>45</height>
 		<font>MediaInfoFont</font>
@@ -551,7 +551,7 @@
 		<shadowcolor>ShadowColor</shadowcolor>
 		<aligny>center</aligny>
 	</include>
-	
+
 	<include name="ListInfoViewDot">
 		<control type="image">
 			<posy>2</posy>
@@ -561,7 +561,7 @@
 			<aspectratio>keep</aspectratio>
 		</control>
 	</include>
-	
+
 	<include name="WrapInfoViewCatLabel">
 		<height>33</height>
 		<font>MediaInfoFont</font>
@@ -569,7 +569,7 @@
 		<shadowcolor>ShadowColor</shadowcolor>
 		<aligny>center</aligny>
 	</include>
-	
+
 	<include name="WrapInfoViewCatValueLabel">
 		<height>33</height>
 		<font>MediaInfoFont</font>
@@ -577,7 +577,7 @@
 		<shadowcolor>ShadowColor</shadowcolor>
 		<aligny>center</aligny>
 	</include>
-	
+
 	<include name="WrapInfoViewDot">
 		<control type="image">
 			<posy>2</posy>
@@ -586,5 +586,93 @@
 			<texture>views/dot.png</texture>
 			<aspectratio>keep</aspectratio>
 		</control>
+	</include>
+
+	<variable name="LiveTVListInfoCoverImage">
+		<value condition="Control.IsVisible(11) | Control.IsVisible(13)">pvr\pvr-background.jpg</value>
+		<value condition="Control.IsVisible(12)">pvr\pvr-radio-background.jpg</value>
+	</variable>
+
+	<variable name="LiveTVListInfoLabel1">
+		<value condition="Control.IsVisible(11) | Control.IsVisible(12)">$LOCALIZE[19030]:</value>
+		<value condition="Control.IsVisible(13)">$LOCALIZE[369]:</value>
+	</variable>
+
+	<variable name="LiveTVListInfoLabel1Val">
+		<value condition="Control.IsVisible(11) | Control.IsVisible(12)">$INFO[ListItem.Title]</value>
+		<value condition="Control.IsVisible(13)">$INFO[ListItem.Label]</value>
+	</variable>
+
+	<variable name="LiveTVListInfoLabel2">
+		<value condition="Control.IsVisible(11) | Control.IsVisible(12)">$LOCALIZE[19031]:</value>
+		<value condition="Control.IsVisible(13)">$LOCALIZE[515]:</value>
+	</variable>
+
+	<variable name="LiveTVListInfoLabel2Val">
+		<value condition="Control.IsVisible(11) | Control.IsVisible(12)">$INFO[ListItem.NextTitle]</value>
+		<value condition="Control.IsVisible(13)">$INFO[ListItem.Genre]</value>
+	</variable>
+
+	<variable name="LiveTVListInfoItemLabel">
+		<value condition="Control.IsVisible(11) | Control.IsVisible(12)">$INFO[ListItem.Label]</value>
+		<value condition="Control.IsVisible(13)">$INFO[ListItem.ChannelNumber,,  ]$INFO[ListItem.Label]</value>
+	</variable>
+
+	<variable name="LiveTVListInfoItemLabel2">
+		<value condition="Control.IsVisible(11) | Control.IsVisible(12)">$INFO[ListItem.Title]</value>
+		<value condition="Control.IsVisible(13)">$INFO[ListItem.StartDate]$INFO[ListItem.StartTime, - ]</value>
+	</variable>
+
+	<variable name="LiveTVListInfoRecordImage">
+		<value condition="!Control.IsVisible(13) + ![ListItem.HasTimer | ListItem.IsRecording]">pvr/status_none.png</value>
+		<value condition="!Control.IsVisible(13) + ListItem.HasTimer">pvr/status_timer.png</value>
+		<value condition="!Control.IsVisible(13) + ListItem.IsRecording">pvr/status_recording.png</value>
+	</variable>
+
+	<variable name="LiveTVColumnRecordImage">
+		<value condition="ListItem.HasTimer">pvr/status_timer.png</value>
+		<value condition="ListItem.IsRecording">pvr/status_recording.png</value>
+	</variable>
+
+	<variable name="LiveTVColumnRecordImage2">
+		<value condition="![ListItem.HasTimer | ListItem.IsRecording] + !StringCompare(ListItem.ChannelName,) + !StringCompare(ListItem.Title,)">pvr/status_none.png</value>
+		<value condition="ListItem.HasTimer">pvr/status_timer.png</value>
+		<value condition="ListItem.IsRecording">pvr/status_recording.png</value>
+	</variable>
+
+	<variable name="LiveTVColumnRecordImage3">
+		<value condition="!StringCompare(ListItem.Label,$LOCALIZE[19026]) + !StringCompare(ListItem.Comment,$LOCALIZE[305]) + !StringCompare(ListItem.Comment,$LOCALIZE[19162])">pvr/status_none.png</value>
+		<value condition="StringCompare(ListItem.Comment,$LOCALIZE[305])">pvr/status_enabled.png</value>
+		<value condition="StringCompare(ListItem.Comment,$LOCALIZE[19162])">pvr/status_recording.png</value>
+	</variable>
+
+	<include name="LiveTVColumnHeaderLabel">
+		<aligny>center</aligny>
+		<align>left</align>
+		<font>WideListFont</font>
+		<textcolor>DefaultColor3</textcolor>
+		<selectedcolor>SelectedColor</selectedcolor>
+	</include>
+
+	<include name="LiveTVColumnChannelLabel">
+		<align>right</align>
+		<aligny>center</aligny>
+		<font>ListFont</font>
+		<textcolor>DefaultColor2</textcolor>
+		<selectedcolor>SelectedColor</selectedcolor>
+	</include>
+
+	<include name="LiveTVColumnNumberLabel">
+		<aligny>center</aligny>
+		<font>ListFont2</font>
+		<textcolor>DefaultColor2</textcolor>
+		<selectedcolor>SelectedColor</selectedcolor>
+	</include>
+
+	<include name="LiveTVColumnItemLabel">
+		<aligny>center</aligny>
+		<font>ListFont</font>
+		<textcolor>WhiteColor</textcolor>
+		<selectedcolor>SelectedColor</selectedcolor>
 	</include>
 </includes>
