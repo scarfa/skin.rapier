@@ -22,6 +22,7 @@
 	<string id="31204">Δεν βρέθηκε περιγραφή.</string>
 	<string id="31205">Δεν βρέθηκαν σχόλια.</string>
 	<string id="31206">Στυλ Προβολών</string>
+	<string id="31207">Επιλογές Εξωφύλλων</string>
 	<string id="31208">Κουμπί 1</string>
 	<string id="31209">Κουμπί 2</string>
 	<string id="31210">Κουμπί 3</string>
@@ -154,6 +155,7 @@
 	<string id="31057">Εικόνες</string>
 	<string id="31058">Καθολικό</string>
 	<string id="31059">Φωτεινότητα Fanart</string>
+	<string id="31060">Φωτεινότητα Υποβάθρου</string>
 	<string id="31063">Κινούμενο Fanart</string>
 	<string id="31064">Κινούμενο Υπόβαθρο</string>
 	<string id="31604">Προσαρμογή Υποβάθρου</string>
