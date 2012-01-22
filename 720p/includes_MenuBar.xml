@@ -38,7 +38,21 @@
 		<texturefocus border="4">gui/menu-bar-button-focus.png</texturefocus>
 		<texturenofocus>-</texturenofocus>		
 	</include>
-	
+
+	<include name="MenuBarMidBtn">
+		<width>166.166</width>
+		<height>MenuBarHeight</height>	
+		<font>MenuBarBtnFont</font>	
+		<textcolor>ButtonColor</textcolor>
+		<focusedcolor>ButtonFocusColor</focusedcolor>
+		<aligny>top</aligny>
+		<textoffsety>9</textoffsety>
+		<textoffsetx>13</textoffsetx>
+		<textwidth>134</textwidth>
+		<texturefocus border="4">gui/menu-bar-button-focus.png</texturefocus>
+		<texturenofocus>-</texturenofocus>		
+	</include>
+
 	<include name="MenuBarBigBtn">
 		<width>200</width>
 		<height>MenuBarHeight</height>	
@@ -1115,8 +1129,10 @@
 			</control>
 			<control type="button" id="32">
 				<description>TV Channels</description>
-				<include>MenuBarBtn</include>
+				<include condition="Skin.HasSetting(HideLiveRadio)">MenuBarBigBtn</include>
+				<include condition="!Skin.HasSetting(HideLiveRadio)">MenuBarMidBtn</include>
 				<label>[UPPERCASE]$LOCALIZE[19023][/UPPERCASE]</label>
+				<onfocus>Skin.SetString(ViewsPVR,1)</onfocus>
 			</control>
 			<control type="image" id="351">
 				<include>MenuBarSeparator</include>
@@ -1124,41 +1140,50 @@
 			</control>
 			<control type="button" id="33">
 				<description>Radio Channels</description>
-				<include>MenuBarBtn</include>
+				<include>MenuBarMidBtn</include>
 				<label>[UPPERCASE]$LOCALIZE[19024][/UPPERCASE]</label>
 				<visible>!Skin.HasSetting(HideLiveRadio)</visible>
+				<onfocus>Skin.SetString(ViewsPVR,2)</onfocus>
 			</control>
 			<control type="image" id="438">
 				<include>MenuBarSeparator</include>
 			</control>
 			<control type="button" id="31">
 				<description>TV Guide</description>
-				<include>MenuBarBtn</include>
+				<include condition="Skin.HasSetting(HideLiveRadio)">MenuBarBigBtn</include>
+				<include condition="!Skin.HasSetting(HideLiveRadio)">MenuBarMidBtn</include>
 				<label>[UPPERCASE]$LOCALIZE[19222]: $LOCALIZE[19030][/UPPERCASE]</label>
+				<onfocus>Skin.SetString(ViewsPVR,3)</onfocus>
 			</control>
 			<control type="image" id="352">
 				<include>MenuBarSeparator</include>
 			</control>
 			<control type="button" id="36">
 				<description>Search</description>
-				<include>MenuBarBtn</include>
+				<include condition="Skin.HasSetting(HideLiveRadio)">MenuBarBigBtn</include>
+				<include condition="!Skin.HasSetting(HideLiveRadio)">MenuBarMidBtn</include>
 				<label>[UPPERCASE]$LOCALIZE[137][/UPPERCASE]</label>
+				<onfocus>Skin.SetString(ViewsPVR,4)</onfocus>
 			</control>
 			<control type="image" id="355">
 				<include>MenuBarSeparator</include>
 			</control>
 			<control type="button" id="35">
 				<description>Timers</description>
-				<include>MenuBarBtn</include>
+				<include condition="Skin.HasSetting(HideLiveRadio)">MenuBarBigBtn</include>
+				<include condition="!Skin.HasSetting(HideLiveRadio)">MenuBarMidBtn</include>
 				<label>[UPPERCASE]$LOCALIZE[19040][/UPPERCASE]</label>
+				<onfocus>Skin.SetString(ViewsPVR,5)</onfocus>
 			</control>
 			<control type="image" id="353">
 				<include>MenuBarSeparator</include>
 			</control>
 			<control type="button" id="34">
 				<description>Recordings</description>
-				<include>MenuBarBtn</include>
+				<include condition="Skin.HasSetting(HideLiveRadio)">MenuBarBigBtn</include>
+				<include condition="!Skin.HasSetting(HideLiveRadio)">MenuBarMidBtn</include>
 				<label>[UPPERCASE]$LOCALIZE[19163][/UPPERCASE]</label>
+				<onfocus>Skin.SetString(ViewsPVR,6)</onfocus>
 			</control>
 			<control type="image" id="356">
 				<include>MenuBarSeparator</include>
@@ -1169,14 +1194,6 @@
 				<label>[UPPERCASE]$LOCALIZE[10004][/UPPERCASE]</label>
 				<onclick>ActivateWindow(PVRSettings)</onclick>
 			</control>
-		</control>
-
-		<control type="button" id="2">
-			<visible>false</visible>
-		</control>
-
-		<control type="button" id="3">
-			<visible>false</visible>
 		</control>
 	</include>
 

@@ -172,7 +172,7 @@
 			<label>pvr</label>
 			<icon>homecategories/$INFO[System.Language]/pvr-text-nofocus.png</icon>
 			<thumb>$INFO[Skin.String(CustomPVRBGPath)]</thumb>
-			<onclick>ActivateWindow(PVR)</onclick>
+			<onclick>ActivateWindowAndFocus(MyPVR, 850,0, 32,0)</onclick>
 		</item>
 	</include>
 
@@ -1289,37 +1289,27 @@
 					<item id="1">
 						<description>TV Channels</description>
 						<label>$LOCALIZE[19019]</label>
-						<onclick>ActivateWindow(PVR)</onclick>
-						<onclick>Setfocus(32)</onclick>
-						<onclick>Setfocus(11)</onclick>
+						<onclick>ActivateWindowAndFocus(MyPVR, 32,0, 11,0)</onclick>
 					</item>
 					<item id="2">
 						<description>Guide</description>
 						<label>$LOCALIZE[19069]</label>
-						<onclick>ActivateWindow(PVR)</onclick>
-						<onclick>Setfocus(31)</onclick>
-						<onclick>Setfocus(11)</onclick>
+						<onclick>ActivateWindowAndFocus(MyPVR, 31,0, 10,0)</onclick>
 					</item>
 					<item id="3">
 						<description>Recordings</description>
 						<label>$LOCALIZE[19163]</label>
-						<onclick>ActivateWindow(PVR)</onclick>
-						<onclick>Setfocus(34)</onclick>
-						<onclick>Setfocus(13)</onclick>
+						<onclick>ActivateWindowAndFocus(MyPVR, 34,0, 13,0)</onclick>
 					</item>
 					<item id="4">
 						<description>Timer</description>
 						<label>$LOCALIZE[19040]</label>
-						<onclick>ActivateWindow(PVR)</onclick>
-						<onclick>Setfocus(35)</onclick>
-						<onclick>Setfocus(14)</onclick>
+						<onclick>ActivateWindowAndFocus(MyPVR, 35,0, 14,0)</onclick>
 					</item>
 					<item id="5">
 						<description>Radio Channels</description>
 						<label>$LOCALIZE[19024]</label>
-						<onclick>ActivateWindow(PVR)</onclick>
-						<onclick>Setfocus(33)</onclick>
-						<onclick>Setfocus(12)</onclick>
+						<onclick>ActivateWindowAndFocus(MyPVR, 33,0, 12,0)</onclick>
 						<visible>false</visible>
 					</item>
 				</content>						

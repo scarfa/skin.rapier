@@ -26,6 +26,9 @@
 	<color name="MediaInfoTitleColor2">ffc0c0c0</color>
 	<color name="MediaInfoItemColor">ff7993b0</color>
 	<color name="MediaInfoItemColor2">ffcecece</color>
+	<color name="LiveTVColumnColor">dd0c2134</color>
+	<color name="LiveTVColumnColor2">ff2d5a83</color>
+	<color name="LiveTVColumnColor3">ff000000</color>
 	<color name="DialogTitleColor">ff1573d4</color>
 	<color name="StatusBarColor">ffcce4fe</color>
 	<color name="StatusBarColor2">ff7993b0</color>
