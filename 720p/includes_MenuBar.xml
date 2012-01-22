@@ -493,16 +493,6 @@
 				<include>MenuBarSeparator</include>
 				<visible>Window.IsVisible(VideoFiles)</visible>
 			</control>
-			<control type="radiobutton" id="14">
-				<description>Hide Watched</description>
-				<include>MenuBarRadioBtn</include>
-				<label>[UPPERCASE]$LOCALIZE[20367][/UPPERCASE]</label>
-				<visible>Window.IsVisible(VideoLibrary)</visible>
-			</control>
-			<control type="image" id="104">
-				<include>MenuBarSeparator</include>
-				<visible>Window.IsVisible(VideoLibrary)</visible>
-			</control>
 			<control type="radiobutton" id="16">
 				<description>Party Mode</description>
 				<include>MenuBarRadioBtn</include>
@@ -512,6 +502,15 @@
 			<control type="image" id="105">
 				<include>MenuBarSeparator</include>
 				<visible>Window.IsVisible(VideoLibrary) | Window.IsVisible(MusicLibrary)</visible>
+			</control>
+			<control type="button" id="10">
+				<description>All Videos/Watched/Unwatched</description>
+				<include>MenuBarRadioBtn</include>
+				<visible>Window.IsVisible(VideoLibrary)</visible>
+			</control>
+			<control type="image" id="104">
+				<include>MenuBarSeparator</include>
+				<visible>Window.IsVisible(VideoLibrary)</visible>
 			</control>
 			<control type="button" id="8">			
 				<description>Search</description>
