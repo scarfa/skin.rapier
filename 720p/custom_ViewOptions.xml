@@ -1290,6 +1290,8 @@
 				<onclick>Skin.ToggleSetting(AnimateFanart)</onclick>
 				<onclick>ReloadSkin()</onclick>
 				<include>ReloadSkinNotification</include>
+				<enable></enable>
+				<visible>![Skin.String(CurrentViewMode,50) | Skin.String(CurrentViewMode,51) | Skin.String(CurrentViewMode,69) | Skin.String(CurrentViewMode,70)]</visible>
 			</control>
 			<control type="radiobutton" id="1035">
 				<description>Do Not Show Star Rating (Music)</description>
