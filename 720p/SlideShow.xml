@@ -86,9 +86,9 @@
 
 				<control type="grouplist">
 					<description>Media Flags Area</description>
-					<posy>72</posy>
+					<posy>75</posy>
 					<width>862</width>
-					<height>41</height>
+					<height>35</height>
 					<itemgap>5</itemgap>
 					<align>left</align>
 					<usecontrolcoords>true</usecontrolcoords>
