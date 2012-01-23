@@ -1,8 +1,9 @@
 <window id="600">
 	<defaultcontrol>32</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<controls>
+	<onload condition="IsEmpty(Skin.String(ViewsPVR))">Skin.SetString(ViewsPVR,1)</onload>
 
+	<controls>
 		<control type="group">	
 			<include>BackgroundDefault</include>
 			<include condition="[!IsEmpty(Skin.String(CustomPVRBGPath)) + [Skin.String(CustomPVRBGType,2) | Skin.String(CustomPVRBGType,3)]]
@@ -10,8 +11,8 @@
 			<include>BackgroundOpenCloseAnim</include>	
 		</control>
 
-		<include>LiveTVListInfoStyleCommonItems</include>		
-		<include>LiveTVColumnsInfoStyleCommonItems</include>
+		<include>LiveTVListInfoArea</include>		
+		<include>LiveTVColumnInfoArea</include>
 
 		<control type="group" id="50">
 			<include>MediaInfoOpenCloseAnim</include>
