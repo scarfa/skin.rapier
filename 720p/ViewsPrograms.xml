@@ -922,85 +922,67 @@
 						<animation effect="fade" end="50" condition="true">Conditional</animation>
 					</control>	
 				</itemlayout>
-				<focusedlayout width="129" height="172" condition="!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(0)">
+				<focusedlayout width="129" height="172" condition="Container.Column(0) + Container.Row(0)">
 					<control type="group">
 						<description>Top Left Corner Cover</description>
-						<include>DVDThumbsStyleTopLeftCornerFocusAnim</include>
-						<include>DVDThumbsStyleCoverImage</include>
+						<include>StraitThumbsStyleCoverImage</include>
+						<include>StraitThumbsStyleTopLeftCornerFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="129" height="172" condition="!IsEmpty(ListItem.Thumb) + !Container.Column(0) + !Container.Column(5) + Container.Row(0)">
+				<focusedlayout width="129" height="172" condition="!Container.Column(0) + !Container.Column(5) + Container.Row(0)">
 					<control type="group">
 						<description>Top Edge Cover</description>
-						<include>DVDThumbsStyleTopEdgeFocusAnim</include>
-						<include>DVDThumbsStyleCoverImage</include>
+						<include>StraitThumbsStyleCoverImage</include>
+						<include>StraitThumbsStyleTopEdgeFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="129" height="172" condition="!IsEmpty(ListItem.Thumb) + Container.Column(5) + Container.Row(0)">
+				<focusedlayout width="129" height="172" condition="Container.Column(5) + Container.Row(0)">
 					<control type="group">
 						<description>Top Right Corner Cover</description>
-						<include>DVDThumbsStyleCoverImage</include>
-						<include>DVDThumbsStyleTopRightCornerFocusAnim</include>
+						<include>StraitThumbsStyleCoverImage</include>
+						<include>StraitThumbsStyleTopRightCornerFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="129" height="172" condition="!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(1)">
+				<focusedlayout width="129" height="172" condition="Container.Column(0) + Container.Row(1)">
 					<control type="group">
 						<description>Left Edge Cover</description>
-						<include>DVDThumbsStyleCoverImage</include>
-						<include>DVDThumbsStyleLeftEdgeFocusAnim</include>
+						<include>StraitThumbsStyleCoverImage</include>
+						<include>StraitThumbsStyleLeftEdgeFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="129" height="172" condition="!IsEmpty(ListItem.Thumb) + !Container.Row(0) + !Container.Row(2) + !Container.Column(0) + !Container.Column(5)">
+				<focusedlayout width="129" height="172" condition="!Container.Row(0) + !Container.Row(2) + !Container.Column(0) + !Container.Column(5)">
 					<control type="group">
 						<description>Mid Row Cover</description>
-						<include>DVDThumbsStyleCoverImage</include>
-						<include>DVDThumbsStyleMidRowFocusAnim</include>
+						<include>StraitThumbsStyleCoverImage</include>
+						<include>StraitThumbsStyleMidRowFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="129" height="172" condition="!IsEmpty(ListItem.Thumb) + Container.Column(5) + Container.Row(1)">
+				<focusedlayout width="129" height="172" condition="Container.Column(5) + Container.Row(1)">
 					<control type="group">
 						<description>Right Edge Cover</description>
-						<include>DVDThumbsStyleCoverImage</include>
-						<include>DVDThumbsStyleRightEdgeFocusAnim</include>
+						<include>StraitThumbsStyleCoverImage</include>
+						<include>StraitThumbsStyleRightEdgeFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="129" height="172" condition="!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(2)">
+				<focusedlayout width="129" height="172" condition="Container.Column(0) + Container.Row(2)">
 					<control type="group">
 						<description>Bottom Left Corner Cover</description>
-						<include>DVDThumbsStyleCoverImage</include>
-						<include>DVDThumbsStyleBottomLeftCornerFocusAnim</include>
+						<include>StraitThumbsStyleCoverImage</include>
+						<include>StraitThumbsStyleBottomLeftCornerFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="129" height="172" condition="!IsEmpty(ListItem.Thumb) + !Container.Column(0) + !Container.Column(5) + Container.Row(2)">
+				<focusedlayout width="129" height="172" condition="!Container.Column(0) + !Container.Column(5) + Container.Row(2)">
 					<control type="group">
 						<description>Bottom Edge Cover</description>
-						<include>DVDThumbsStyleCoverImage</include>
-						<include>DVDThumbsStyleBottomEdgeFocusAnim</include>
+						<include>StraitThumbsStyleCoverImage</include>
+						<include>StraitThumbsStyleBottomEdgeFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="129" height="172" condition="!IsEmpty(ListItem.Thumb) + Container.Column(5) + Container.Row(2)">
+				<focusedlayout width="129" height="172" condition="Container.Column(5) + Container.Row(2)">
 					<control type="group">
 						<description>Bottom Right Corner Cover</description>
-						<include>DVDThumbsStyleCoverImage</include>
-						<include>DVDThumbsStyleBottomRightCornerFocusAnim</include>
-					</control>
-				</focusedlayout>
-				<focusedlayout width="129" height="172" condition="IsEmpty(ListItem.Thumb)">
-					<control type="image">
-						<description>Default Cover Case</description>
-						<width>129</width>
-						<height>172</height>
-						<aspectratio>stretch</aspectratio>
-						<bordersize>7</bordersize>
-						<texture background="true" border="2">covers/cover-case-noshadow-focus.png</texture>
-					</control>
-					<control type="image">
-						<description>Default Cover</description>
-						<width>129</width>
-						<height>172</height>
-						<bordersize>12</bordersize>
-						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-						<aspectratio>keep</aspectratio>
+						<include>StraitThumbsStyleCoverImage</include>
+						<include>StraitThumbsStyleBottomRightCornerFocusAnim</include>
 					</control>
 				</focusedlayout>
 			</control>
@@ -1105,89 +1087,71 @@
 						<animation effect="fade" end="50" condition="true">Conditional</animation>
 					</control>
 				</itemlayout>
-				<focusedlayout width="129" height="129" condition="!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(0)">
-					<control type="image">
+				<focusedlayout width="129" height="129" condition="Container.Column(0) + Container.Row(0)">
+					<control type="group">
 						<description>Top Left Corner Cover</description>
-						<include>AlbumThumbsStyleCoverImage</include>
-						<include>AlbumThumbsStyleTopLeftCornerFocusAnim</include>
+						<include>SquareThumbsStyleCoverImage</include>
+						<include>SquareThumbsStyleTopLeftCornerFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="129" height="129" condition="!IsEmpty(ListItem.Thumb) + !Container.Column(0) + !Container.Column(5) + Container.Row(0)">
-					<control type="image">
+				<focusedlayout width="129" height="129" condition="!Container.Column(0) + !Container.Column(5) + Container.Row(0)">
+					<control type="group">
 						<description>Top Edge Cover</description>
-						<include>AlbumThumbsStyleCoverImage</include>
-						<include>AlbumThumbsStyleTopEdgeFocusAnim</include>
+						<include>SquareThumbsStyleCoverImage</include>
+						<include>SquareThumbsStyleTopEdgeFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="129" height="129" condition="!IsEmpty(ListItem.Thumb) + Container.Column(5) + Container.Row(0)">
-					<control type="image">
+				<focusedlayout width="129" height="129" condition="Container.Column(5) + Container.Row(0)">
+					<control type="group">
 						<description>Top Right Corner Cover</description>
-						<include>AlbumThumbsStyleCoverImage</include>
-						<include>AlbumThumbsStyleTopRightCornerFocusAnim</include>
+						<include>SquareThumbsStyleCoverImage</include>
+						<include>SquareThumbsStyleTopRightCornerFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="129" height="129" condition="!IsEmpty(ListItem.Thumb) + Container.Column(0) + [Container.Row(1) | Container.Row(2)]">
-					<control type="image">
+				<focusedlayout width="129" height="129" condition="Container.Column(0) + [Container.Row(1) | Container.Row(2)]">
+					<control type="group">
 						<description>Left Edge Cover</description>
-						<include>AlbumThumbsStyleCoverImage</include>
-						<include>AlbumThumbsStyleLeftEdgeFocusAnim</include>
+						<include>SquareThumbsStyleCoverImage</include>
+						<include>SquareThumbsStyleLeftEdgeFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="129" height="129" condition="!IsEmpty(ListItem.Thumb) + !Container.Row(0) + !Container.Row(3) + !Container.Column(0) + !Container.Column(5)">
-					<control type="image">
+				<focusedlayout width="129" height="129" condition="!Container.Row(0) + !Container.Row(3) + !Container.Column(0) + !Container.Column(5)">
+					<control type="group">
 						<description>Mid Row Cover</description>
-						<include>AlbumThumbsStyleCoverImage</include>
-						<include>AlbumThumbsStyleMidRowFocusAnim</include>
+						<include>SquareThumbsStyleCoverImage</include>
+						<include>SquareThumbsStyleMidRowFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="129" height="129" condition="!IsEmpty(ListItem.Thumb) + Container.Column(5) + [Container.Row(1) | Container.Row(2)]">
-					<control type="image">
+				<focusedlayout width="129" height="129" condition="Container.Column(5) + [Container.Row(1) | Container.Row(2)]">
+					<control type="group">
 						<description>Right Edge Cover</description>
-						<include>AlbumThumbsStyleCoverImage</include>
-						<include>AlbumThumbsStyleRightEdgeFocusAnim</include>
+						<include>SquareThumbsStyleCoverImage</include>
+						<include>SquareThumbsStyleRightEdgeFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="129" height="129" condition="!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(3)">
-					<control type="image">
+				<focusedlayout width="129" height="129" condition="Container.Column(0) + Container.Row(3)">
+					<control type="group">
 						<description>Bottom Left Corner Cover</description>
-						<include>AlbumThumbsStyleCoverImage</include>
-						<include>AlbumThumbsStyleBottomLeftCornerFocusAnim</include>
+						<include>SquareThumbsStyleCoverImage</include>
+						<include>SquareThumbsStyleBottomLeftCornerFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="129" height="129" condition="!IsEmpty(ListItem.Thumb) + !Container.Column(0) + !Container.Column(5) + Container.Row(3)">
-					<control type="image">
+				<focusedlayout width="129" height="129" condition="!Container.Column(0) + !Container.Column(5) + Container.Row(3)">
+					<control type="group">
 						<description>Bottom Edge Cover</description>
-						<include>AlbumThumbsStyleCoverImage</include>
-						<include>AlbumThumbsStyleBottomEdgeFocusAnim</include>
+						<include>SquareThumbsStyleCoverImage</include>
+						<include>SquareThumbsStyleBottomEdgeFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="129" height="129" condition="!IsEmpty(ListItem.Thumb) + Container.Column(5) + Container.Row(3)">
-					<control type="image">
+				<focusedlayout width="129" height="129" condition="Container.Column(5) + Container.Row(3)">
+					<control type="group">
 						<description>Bottom Right Corner Cover</description>
-						<include>AlbumThumbsStyleCoverImage</include>
-						<include>AlbumThumbsStyleBottomRightCornerFocusAnim</include>
-					</control>
-				</focusedlayout>
-				<focusedlayout width="129" height="129" condition="IsEmpty(ListItem.Thumb)">
-					<control type="image">
-						<description>Default Cover Case</description>
-						<width>129</width>
-						<height>129</height>
-						<aspectratio>stretch</aspectratio>
-						<bordersize>7</bordersize>
-						<texture background="true" border="2">covers/cover-case-noshadow-focus.png</texture>
-					</control>
-					<control type="image">
-						<description>Default Cover</description>
-						<width>129</width>
-						<height>129</height>
-						<bordersize>20</bordersize>
-						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-						<aspectratio>keep</aspectratio>
+						<include>SquareThumbsStyleCoverImage</include>
+						<include>SquareThumbsStyleBottomRightCornerFocusAnim</include>
 					</control>
 				</focusedlayout>
 			</control>
-
+			
 			<include>ProgramsThumbsInfo2ViewScrollbar</include>
 
 			<control type="group">
@@ -1288,88 +1252,69 @@
 						<animation effect="fade" end="50" condition="true">Conditional</animation>
 					</control>
 				</itemlayout>
-				<focusedlayout width="155" height="129" condition="!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(0)">
-					<control type="image">
+				<focusedlayout width="155" height="129" condition="Container.Column(0) + Container.Row(0)">
+					<control type="group">
 						<description>Top Left Corner Cover</description>
 						<include>WideThumbsStyleCoverImage</include>
 						<include>WideThumbsStyleTopLeftCornerFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="155" height="129" condition="!IsEmpty(ListItem.Thumb) + !Container.Column(0) + !Container.Column(4) + Container.Row(0)">
-					<control type="image">
+				<focusedlayout width="155" height="129" condition="!Container.Column(0) + !Container.Column(4) + Container.Row(0)">
+					<control type="group">
 						<description>Top Edge Cover</description>
 						<include>WideThumbsStyleCoverImage</include>
 						<include>WideThumbsStyleTopEdgeFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="155" height="129" condition="!IsEmpty(ListItem.Thumb) + Container.Column(4) + Container.Row(0)">
-					<control type="image">
+				<focusedlayout width="155" height="129" condition="Container.Column(4) + Container.Row(0)">
+					<control type="group">
 						<description>Top Right Corner Cover</description>
 						<include>WideThumbsStyleCoverImage</include>
 						<include>WideThumbsStyleTopRightCornerFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="155" height="129" condition="!IsEmpty(ListItem.Thumb) + Container.Column(0) + [Container.Row(1) | Container.Row(2)]">
-					<control type="image">
+				<focusedlayout width="155" height="129" condition="Container.Column(0) + [Container.Row(1) | Container.Row(2)]">
+					<control type="group">
 						<description>Left Edge Cover</description>
 						<include>WideThumbsStyleCoverImage</include>
 						<include>WideThumbsStyleLeftEdgeFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="155" height="129" condition="!IsEmpty(ListItem.Thumb) + !Container.Row(0) + !Container.Row(3) + !Container.Column(0) + !Container.Column(4)">
-					<control type="image">
+				<focusedlayout width="155" height="129" condition="!Container.Row(0) + !Container.Row(3) + !Container.Column(0) + !Container.Column(4)">
+					<control type="group">
 						<description>Mid Row Cover</description>
 						<include>WideThumbsStyleCoverImage</include>
 						<include>WideThumbsStyleMidRowFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="155" height="129" condition="!IsEmpty(ListItem.Thumb) + Container.Column(4) + [Container.Row(1) | Container.Row(2)]">
-					<control type="image">
+				<focusedlayout width="155" height="129" condition="Container.Column(4) + [Container.Row(1) | Container.Row(2)]">
+					<control type="group">
 						<description>Right Edge Cover</description>
 						<include>WideThumbsStyleCoverImage</include>
 						<include>WideThumbsStyleRightEdgeFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="155" height="129" condition="!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(3)">
-					<control type="image">
+				<focusedlayout width="155" height="129" condition="Container.Column(0) + Container.Row(3)">
+					<control type="group">
 						<description>Bottom Left Corner Cover</description>
 						<include>WideThumbsStyleCoverImage</include>
 						<include>WideThumbsStyleBottomLeftCornerFocusAnim</include>
 					</control>
 				</focusedlayout>				
-				<focusedlayout width="155" height="129" condition="!IsEmpty(ListItem.Thumb) + !Container.Column(0) + !Container.Column(4) + Container.Row(3)">
-					<control type="image">
+				<focusedlayout width="155" height="129" condition="!Container.Column(0) + !Container.Column(4) + Container.Row(3)">
+					<control type="group">
 						<description>Bottom Edge Cover</description>
 						<include>WideThumbsStyleCoverImage</include>
 						<include>WideThumbsStyleBottomEdgeFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="155" height="129" condition="!IsEmpty(ListItem.Thumb) + Container.Column(4) + Container.Row(3)">
-					<control type="image">
+				<focusedlayout width="155" height="129" condition="Container.Column(4) + Container.Row(3)">
+					<control type="group">
 						<description>Bottom Right Corner Cover</description>
 						<include>WideThumbsStyleCoverImage</include>
 						<include>WideThumbsStyleBottomRightCornerFocusAnim</include>
 					</control>
 				</focusedlayout>
-				<focusedlayout width="155" height="129" condition="IsEmpty(ListItem.Thumb)">
-					<control type="image">
-						<description>Default Cover Case</description>
-						<width>155</width>
-						<height>129</height>
-						<aspectratio>stretch</aspectratio>
-						<bordersize>7</bordersize>
-						<texture background="true" border="2">covers/cover-case-noshadow-focus.png</texture>
-					</control>
-					<control type="image">
-						<description>Default Cover</description>
-						<width>155</width>
-						<height>129</height>
-						<bordersize>20</bordersize>
-						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-						<aspectratio>keep</aspectratio>
-					</control>
-				</focusedlayout>
-
 			</control>
 
 			<include>ProgramsThumbsInfo3ViewScrollbar</include>
