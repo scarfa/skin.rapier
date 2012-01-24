@@ -1347,7 +1347,7 @@
 			</control>
 			<control type="button" id="400">
 				<description>TV Shows</description>
-				<include>MenuBarBtn</include>
+				<include>MenuBarBigBtn</include>
 				<align>center</align>
 				<label>[UPPERCASE]$LOCALIZE[20343][/UPPERCASE]</label>
 				<onclick>ActivateWindow(Videos,TVShowTitles,Return)</onclick>
@@ -1357,7 +1357,7 @@
 			</control>
 			<control type="button" id="401">
 				<description>Recently Added Episodes</description>
-				<include>MenuBarBtn</include>
+				<include>MenuBarBigBtn</include>
 				<align>center</align>
 				<label>[UPPERCASE]$LOCALIZE[31303][/UPPERCASE]</label>
 				<onclick>ActivateWindow(Videos,RecentlyAddedEpisodes,Return)</onclick>
@@ -1367,7 +1367,7 @@
 			</control>
 			<control type="button" id="8">
 				<description>Settings</description>
-				<include>MenuBarBtn</include>
+				<include>MenuBarBigBtn</include>
 				<align>center</align>
 				<label>[UPPERCASE]$LOCALIZE[10004][/UPPERCASE]</label>
 				<onunfocus>ClearProperty(TVGuide.MondayList,Home)</onunfocus>

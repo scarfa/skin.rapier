@@ -707,6 +707,186 @@
 			<effect type="slide" start="0,0" end="-10,-17" time="200" tween="circle" easing="out"/>
 		</animation>
 	</include>
+
+	<include name="AlbumThumbsStyleTopLeftCornerFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="12,12" time="200" tween="circle" easing="out"/>
+		</animation>
+	</include>
+	
+	<include name="AlbumThumbsStyleTopEdgeFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="0,12" time="200" tween="circle" easing="out"/>
+		</animation>
+	</include>
+	
+	<include name="AlbumThumbsStyleTopRightCornerFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="-12,12" time="200" tween="circle" easing="out"/>
+		</animation>
+	</include>
+	
+	<include name="AlbumThumbsStyleLeftEdgeFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="12,0" time="200" tween="circle" easing="out"/>
+		</animation>
+	</include>
+	
+	<include name="AlbumThumbsStyleMidRowFocusAnim">
+		<animation effect="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out" reversible="false">Focus</animation>
+	</include>
+	
+	<include name="AlbumThumbsStyleRightEdgeFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="-12,0" time="200" tween="circle" easing="out"/>
+		</animation>
+	</include>
+	
+	<include name="AlbumThumbsStyleBottomLeftCornerFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="12,-12" time="200" tween="circle" easing="out"/>
+		</animation>
+	</include>	
+	
+	<include name="AlbumThumbsStyleBottomEdgeFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="0,-12" time="200" tween="circle" easing="out"/>
+		</animation>
+	</include>
+	
+	<include name="AlbumThumbsStyleBottomRightCornerFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="-12,-12" time="200" tween="circle" easing="out"/>
+		</animation>
+	</include>
+
+	<include name="StraitThumbsStyleTopLeftCornerFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="122,114" end="135" center="auto" time="200" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="10,17" time="200" tween="circle" easing="out"/>
+		</animation>
+	</include>
+	
+	<include name="StraitThumbsStyleTopEdgeFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="122,114" end="135" center="auto" time="200" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="0,17" time="200" tween="circle" easing="out"/>
+		</animation>
+	</include>
+	
+	<include name="StraitThumbsStyleTopRightCornerFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="122,114" end="135" center="auto" time="200" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="-10,17" time="200" tween="circle" easing="out"/>
+		</animation>
+	</include>
+	
+	<include name="StraitThumbsStyleLeftEdgeFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="122,114" end="135" center="auto" time="200" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="10,0" time="200" tween="circle" easing="out"/>
+		</animation>
+	</include>
+	
+	<include name="StraitThumbsStyleMidRowFocusAnim">
+		<animation effect="zoom" start="122,114" end="135" center="auto" time="200" tween="circle" easing="out" reversible="false">Focus</animation>
+	</include>
+
+	<include name="StraitThumbsStyleRightEdgeFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="122,114" end="135" center="auto" time="200" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="-10,0" time="200" tween="circle" easing="out"/>
+		</animation>
+	</include>
+
+	<include name="StraitThumbsStyleBottomLeftCornerFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="122,114" end="135" center="auto" time="200" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="10,-17" time="200" tween="circle" easing="out"/>
+		</animation>
+	</include>	
+	
+	<include name="StraitThumbsStyleBottomEdgeFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="122,114" end="135" center="auto" time="200" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="0,-17" time="200" tween="circle" easing="out"/>
+		</animation>
+	</include>
+	
+	<include name="StraitThumbsStyleBottomRightCornerFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="122,114" end="135" center="auto" time="200" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="-10,-17" time="200" tween="circle" easing="out"/>
+		</animation>
+	</include>
+
+	<include name="SquareThumbsStyleTopLeftCornerFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="12,12" time="200" tween="circle" easing="out"/>
+		</animation>
+	</include>
+	
+	<include name="SquareThumbsStyleTopEdgeFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="0,12" time="200" tween="circle" easing="out"/>
+		</animation>
+	</include>
+	
+	<include name="SquareThumbsStyleTopRightCornerFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="-12,12" time="200" tween="circle" easing="out"/>
+		</animation>
+	</include>
+	
+	<include name="SquareThumbsStyleLeftEdgeFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="12,0" time="200" tween="circle" easing="out"/>
+		</animation>
+	</include>
+	
+	<include name="SquareThumbsStyleMidRowFocusAnim">
+		<animation effect="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out" reversible="false">Focus</animation>
+	</include>
+	
+	<include name="SquareThumbsStyleRightEdgeFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="-12,0" time="200" tween="circle" easing="out"/>
+		</animation>
+	</include>
+	
+	<include name="SquareThumbsStyleBottomLeftCornerFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="12,-12" time="200" tween="circle" easing="out"/>
+		</animation>
+	</include>	
+	
+	<include name="SquareThumbsStyleBottomEdgeFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="0,-12" time="200" tween="circle" easing="out"/>
+		</animation>
+	</include>
+	
+	<include name="SquareThumbsStyleBottomRightCornerFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="-12,-12" time="200" tween="circle" easing="out"/>
+		</animation>
+	</include>
 	
 	<include name="WideThumbsStyleTopLeftCornerFocusAnim">
 		<animation type="Focus" reversible="false">
@@ -767,67 +947,7 @@
 			<effect type="slide" start="0,0" end="-15,-12" time="200" tween="circle" easing="out"/>
 		</animation>
 	</include>
-	
-	<include name="AlbumThumbsStyleTopLeftCornerFocusAnim">
-		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="12,12" time="200" tween="circle" easing="out"/>
-		</animation>
-	</include>
-	
-	<include name="AlbumThumbsStyleTopEdgeFocusAnim">
-		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="0,12" time="200" tween="circle" easing="out"/>
-		</animation>
-	</include>
-	
-	<include name="AlbumThumbsStyleTopRightCornerFocusAnim">
-		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="-12,12" time="200" tween="circle" easing="out"/>
-		</animation>
-	</include>
-	
-	<include name="AlbumThumbsStyleLeftEdgeFocusAnim">
-		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="12,0" time="200" tween="circle" easing="out"/>
-		</animation>
-	</include>
-	
-	<include name="AlbumThumbsStyleMidRowFocusAnim">
-		<animation effect="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out" reversible="false">Focus</animation>
-	</include>
-	
-	<include name="AlbumThumbsStyleRightEdgeFocusAnim">
-		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="-12,0" time="200" tween="circle" easing="out"/>
-		</animation>
-	</include>
-	
-	<include name="AlbumThumbsStyleBottomLeftCornerFocusAnim">
-		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="12,-12" time="200" tween="circle" easing="out"/>
-		</animation>
-	</include>	
-	
-	<include name="AlbumThumbsStyleBottomEdgeFocusAnim">
-		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="0,-12" time="200" tween="circle" easing="out"/>
-		</animation>
-	</include>
-	
-	<include name="AlbumThumbsStyleBottomRightCornerFocusAnim">
-		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="-12,-12" time="200" tween="circle" easing="out"/>
-		</animation>
-	</include>
-	
+
 	<include name="PanelFadeAnim">
 		<animation effect="fade" end="60" condition="true">Conditional</animation>
 	</include>
