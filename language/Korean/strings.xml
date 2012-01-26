@@ -22,6 +22,7 @@
 <string id="31204">상세 정보 없음</string>
 <string id="31205">주석 없음</string>
 <string id="31206">보기 형식</string>
+<string id="31207">커버 옵션</string>
 <string id="31208">버튼 1</string>
 <string id="31209">버튼 2</string>
 <string id="31210">버튼 3</string>
@@ -133,7 +134,7 @@
 <string id="31410">배경에 재생중인 동영상 보이기</string>
 <string id="31412">작게</string>
 <string id="31413">크게</string>
-<string id="31414">팬아트 더 보기</string>
+<string id="31414">팬아트 구성</string>
 <string id="31415">기본 테마 색상 사용</string>
 <string id="31416">화이트 테마 색상 사용</string>
 <string id="31417">확장</string>
@@ -146,7 +147,7 @@
 <string id="31431">목록 포커스 애니메이션 사용하지 않음</string>
 
 <!-- skin settings backgrounds -->
-<string id="31051">홈 화면에 보이기</string>
+<string id="31051">홈 화면에만 보이기</string>
 <string id="31052">홈 화면과 카테고리에 보이기</string>
 <string id="31054">모든 화면에 보이기</string>
 <string id="31053">사용자 배경</string>
@@ -154,6 +155,7 @@
 <string id="31057">복수 이미지</string>
 <string id="31058">전체</string>
 <string id="31059">팬아트 밝기</string>
+<string id="31060">배경화면 밝기</string>
 <string id="31063">팬아트 애니메이션</string>
 <string id="31064">배경 애니메이션</string>
 <string id="31604">사용자 배경</string>
