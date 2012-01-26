@@ -24,6 +24,7 @@
 				<height>536</height>
 				<pagecontrol>910</pagecontrol>
 				<preloaditems>2</preloaditems>
+				<scrolltime tween="sine" easing="inout">400</scrolltime>
 				<onup>74</onup>
 				<ondown>74</ondown>
 				<onleft>850</onleft>
@@ -202,6 +203,7 @@
 						<aspectratio>stretch</aspectratio>
 						<visible>Control.HasFocus(74)</visible>
 						<include>ListViewSelectFadeAnim</include>
+						<include>WideListViewFocusAnim</include>
 					</control>
 					<control type="image">
 						<posy>28</posy>
@@ -553,6 +555,7 @@
 				<height>296</height>
 				<pagecontrol>905</pagecontrol>
 				<preloaditems>2</preloaditems>
+				<scrolltime tween="sine" easing="inout">250</scrolltime>
 				<onup>73</onup>
 				<ondown>73</ondown>
 				<onleft>850</onleft>
@@ -911,6 +914,7 @@
 				<height>518</height>
 				<pagecontrol>906</pagecontrol>
 				<preloaditems>2</preloaditems>
+				<scrolltime tween="sine" easing="inout">300</scrolltime>
 				<onup>68</onup>
 				<ondown>68</ondown>
 				<onleft>850</onleft>
@@ -1602,6 +1606,7 @@
 				<height>518</height>
 				<pagecontrol>917</pagecontrol>
 				<preloaditems>2</preloaditems>
+				<scrolltime tween="sine" easing="inout">300</scrolltime>
 				<onup>94</onup>
 				<ondown>94</ondown>
 				<onleft>850</onleft>
@@ -1675,37 +1680,40 @@
 						<visible>!Control.HasFocus(94)</visible>
 						<include>ListViewSelectFadeAnim2</include>
 					</control>
-					<control type="image">
-						<description>Icon</description>
-						<posx>5</posx>
-						<posy>6</posy>
-						<width>23</width>
-						<height>23</height>
-						<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
-						<aspectratio>stretch</aspectratio>
-						<visible>IsEmpty(ListItem.Title)</visible>
+					<control type="group">
+						<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+						<control type="image">
+							<description>Icon</description>
+							<posx>5</posx>
+							<posy>6</posy>
+							<width>23</width>
+							<height>23</height>
+							<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
+							<aspectratio>stretch</aspectratio>
+							<visible>IsEmpty(ListItem.Title)</visible>
+						</control>
+						<control type="label">
+							<description>Label</description>
+							<posx>35</posx>
+							<posy>16</posy>
+							<width>314</width>
+							<font>ListFont</font>
+							<textcolor>SelectedColor</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<aligny>center</aligny>
+							<info>ListItem.Title</info>
+							<scroll>yes</scroll>
+						</control>
+						<control type="image">
+							<description>Overlay</description>
+							<posx>5</posx>
+							<posy>6</posy>
+							<width>23</width>
+							<height>23</height>
+							<texture background="true">watched/tv/$INFO[ListItem.Overlay]</texture>
+							<aspectratio>stretch</aspectratio>
+						</control>
 					</control>
-					<control type="label">
-						<description>Label</description>
-						<posx>35</posx>
-						<posy>16</posy>
-						<width>314</width>
-						<font>ListFont</font>
-						<textcolor>SelectedColor</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
-						<aligny>center</aligny>
-						<info>ListItem.Title</info>
-						<scroll>yes</scroll>
-					</control>
-					<control type="image">
-						<description>Overlay</description>
-						<posx>5</posx>
-						<posy>6</posy>
-						<width>23</width>
-						<height>23</height>
-						<texture background="true">watched/tv/$INFO[ListItem.Overlay]</texture>
-						<aspectratio>stretch</aspectratio>
-					</control>	
 				</focusedlayout>		
 			</control>			
 			

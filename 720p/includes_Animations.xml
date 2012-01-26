@@ -448,17 +448,31 @@
 	</include>
 	
 	<include name="ListViewScrollAnim">
-		<animation effect="slide" start="0,-37" time="200" tween="quadratic" easing="out" reversible="false" condition="Container.OnNext">Focus</animation>
-		<animation effect="slide" start="0,37" time="200" tween="quadratic" easing="out" reversible="false" condition="Container.OnPrevious">Focus</animation>
+		<animation type="Focus" condition="Container.OnNext" reversible="false">
+			<effect type="Fade" start="40" end="100" time="500" tween="back" easing="in"/>
+			<effect type="slide" start="0,-37" time="200" tween="sine" easing="out"/>
+		</animation>
+		
+		<animation type="Focus" condition="Container.OnPrevious" reversible="false">
+			<effect type="Fade" start="40" end="100" time="500" tween="back" easing="in"/>
+			<effect type="slide" start="0,37" time="200" tween="sine" easing="out"/>
+		</animation>
 	</include>
 
 	<include name="ListViewScrollAnim2">
-		<animation effect="slide" start="0,-74" time="250" tween="quadratic" easing="out" reversible="false" condition="Container.OnNext">Focus</animation>
-		<animation effect="slide" start="0,74" time="250" tween="quadratic" easing="out" reversible="false" condition="Container.OnPrevious">Focus</animation>
+		<animation type="Focus" condition="Container.OnNext" reversible="false">
+			<effect type="Fade" start="40" end="100" time="550" tween="back" easing="in"/>
+			<effect type="slide" start="0,-74" time="250" tween="sine" easing="out"/>
+		</animation>
+		
+		<animation type="Focus" condition="Container.OnPrevious" reversible="false">
+			<effect type="Fade" start="40" end="100" time="550" tween="back" easing="in"/>
+			<effect type="slide" start="0,74" time="250" tween="sine" easing="out"/>
+		</animation>
 	</include>
-	
+
 	<include name="ListViewFocusAnim">
-		<animation effect="fade" start="0" end="100" delay="150" time="70" reversible="false">Focus</animation>
+		<animation effect="fade" start="30" end="100" time="200" tween="back" easing="in" reversible="false">Focus</animation>
 	</include>
 	
 	<include name="ListViewCoverFocusAnim">
@@ -466,6 +480,10 @@
 			<effect effect="fade" start="0" end="100" delay="100" time="100"/>
 			<effect type="zoom" start="60" end="100" time="300" delay="100" center="auto" easing="out" tween="back"/>
 		</animation>
+	</include>
+	
+	<include name="WideListViewFocusAnim">
+		<animation effect="fade" start="25" end="100" time="400" delay="100" reversible="false">Focus</animation>
 	</include>
 	
 	<include name="WideListViewCoverFocusAnim">
@@ -530,181 +548,181 @@
 	
 	<include name="MoviesWallViewTopLeftCornerFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="111" end="140" center="auto" time="300" tween="back" easing="out"/>
-			<effect type="slide" start="0,0" end="18,27" time="300" tween="back" easing="out"/>
+			<effect type="zoom" start="100" end="140" center="auto" time="300" delay="600" tween="back" easing="out"/>
+			<effect type="slide" start="0,0" end="25,34" time="300" delay="600" tween="back" easing="out"/>
 		</animation>
 	</include>
 	
 	<include name="MoviesWallViewTopEdgeFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="111" end="140" center="auto" time="300" tween="back" easing="out"/>
-			<effect type="slide" start="0,0" end="0,27" time="300" tween="back" easing="out"/>
+			<effect type="zoom" start="100" end="140" center="auto" time="300" delay="600" tween="back" easing="out"/>
+			<effect type="slide" start="0,0" end="0,34" time="300" delay="600" tween="back" easing="out"/>
 		</animation>
 	</include>
 	
 	<include name="MoviesWallViewTopRightCornerFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="111" end="140" center="auto" time="300" tween="back" easing="out"/>
-			<effect type="slide" start="0,0" end="-18,27" time="300" tween="back" easing="out"/>
+			<effect type="zoom" start="100" end="140" center="auto" time="300" delay="600" tween="back" easing="out"/>
+			<effect type="slide" start="0,0" end="-31,34" time="300" delay="600" tween="back" easing="out"/>
 		</animation>
 	</include>
 	
 	<include name="MoviesWallViewLeftEdgeFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="111" end="140" center="auto" time="300" tween="back" easing="out"/>
-			<effect type="slide" start="0,0" end="18,0" time="300" tween="back" easing="out"/>
+			<effect type="zoom" start="100" end="140" center="auto" time="300" delay="600" tween="back" easing="out"/>
+			<effect type="slide" start="0,0" end="25,0" time="300" delay="600" tween="back" easing="out"/>
 		</animation>
 	</include>
 
 	<include name="MoviesWallViewMidRowFocusAnim">
-		<animation effect="zoom" start="111" end="140" center="auto" time="300" tween="back" easing="out" reversible="false">Focus</animation>
+		<animation effect="zoom" start="100" end="140" center="auto" time="300" delay="600" tween="back" easing="out" reversible="false">Focus</animation>
 	</include>
 
 	<include name="MoviesWallViewRightEdgeFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="111" end="140" center="auto" time="300" tween="back" easing="out"/>
-			<effect type="slide" start="0,0" end="-18,0" time="300" tween="back" easing="out"/>
+			<effect type="zoom" start="100" end="140" center="auto" time="300" delay="600" tween="back" easing="out"/>
+			<effect type="slide" start="0,0" end="-31,0" time="300" delay="600" tween="back" easing="out"/>
 		</animation>
 	</include>
 
 	<include name="MoviesWallViewBottomLeftCornerFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="111" end="140" center="auto" time="300" tween="back" easing="out"/>
-			<effect type="slide" start="0,0" end="18,-27" time="300" tween="back" easing="out"/>
+			<effect type="zoom" start="100" end="140" center="auto" time="300" delay="600" tween="back" easing="out"/>
+			<effect type="slide" start="0,0" end="25,-40" time="300" delay="600" tween="back" easing="out"/>
 		</animation>
 	</include>	
 	
 	<include name="MoviesWallViewBottomEdgeFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="111" end="140" center="auto" time="300" tween="back" easing="out"/>
-			<effect type="slide" start="0,0" end="0,-27" time="300" tween="back" easing="out"/>
+			<effect type="zoom" start="100" end="140" center="auto" time="300" delay="600" tween="back" easing="out"/>
+			<effect type="slide" start="0,0" end="0,-40" time="300" delay="600" tween="back" easing="out"/>
 		</animation>
 	</include>
 	
 	<include name="MoviesWallViewBottomRightCornerFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="111" end="140" center="auto" time="300" tween="back" easing="out"/>
-			<effect type="slide" start="0,0" end="-18,-27" time="300" tween="back" easing="out"/>
+			<effect type="zoom" start="100" end="140" center="auto" time="300" delay="600" tween="back" easing="out"/>
+			<effect type="slide" start="0,0" end="-31,-40" time="300" delay="600" tween="back" easing="out"/>
 		</animation>
 	</include>
 	
 	<include name="MusicWallViewTopLeftCornerFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="111" end="140" center="auto" time="300" tween="back" easing="out"/>
-			<effect type="slide" start="0,0" end="27,27" time="300" tween="back" easing="out"/>
+			<effect type="zoom" start="100" end="140" center="auto" time="300" delay="600" tween="back" easing="out"/>
+			<effect type="slide" start="0,0" end="34,34" time="300" delay="600" tween="back" easing="out"/>
 		</animation>
 	</include>
 	
 	<include name="MusicWallViewTopEdgeFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="111" end="140" center="auto" time="300" tween="back" easing="out"/>
-			<effect type="slide" start="0,0" end="0,27" time="300" tween="back" easing="out"/>
+			<effect type="zoom" start="100" end="140" center="auto" time="300" delay="600" tween="back" easing="out"/>
+			<effect type="slide" start="0,0" end="0,34" time="300" delay="600" tween="back" easing="out"/>
 		</animation>
 	</include>
 	
 	<include name="MusicWallViewTopRightCornerFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="111" end="140" center="auto" time="300" tween="back" easing="out"/>
-			<effect type="slide" start="0,0" end="-27,27" time="300" tween="back" easing="out"/>
+			<effect type="zoom" start="100" end="140" center="auto" time="300" delay="600" tween="back" easing="out"/>
+			<effect type="slide" start="0,0" end="-40,34" time="300" delay="600" tween="back" easing="out"/>
 		</animation>
 	</include>
 	
 	<include name="MusicWallViewLeftEdgeFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="111" end="140" center="auto" time="300" tween="back" easing="out"/>
-			<effect type="slide" start="0,0" end="27,0" time="300" tween="back" easing="out"/>
+			<effect type="zoom" start="100" end="140" center="auto" time="300" delay="600" tween="back" easing="out"/>
+			<effect type="slide" start="0,0" end="34,0" time="300" delay="600" tween="back" easing="out"/>
 		</animation>
 	</include>
 	
 	<include name="MusicWallViewMidRowFocusAnim">
-		<animation effect="zoom" start="111" end="140" center="auto" time="300" tween="back" easing="out" reversible="false">Focus</animation>
+		<animation effect="zoom" start="100" end="140" center="auto" time="300" delay="600" tween="back" easing="out" reversible="false">Focus</animation>
 	</include>
 
 	<include name="MusicWallViewRightEdgeFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="111" end="140" center="auto" time="300" tween="back" easing="out"/>
-			<effect type="slide" start="0,0" end="-27,0" time="300" tween="back" easing="out"/>
+			<effect type="zoom" start="100" end="140" center="auto" time="300" delay="600" tween="back" easing="out"/>
+			<effect type="slide" start="0,0" end="-40,0" time="300" delay="600" tween="back" easing="out"/>
 		</animation>
 	</include>
 
 	<include name="MusicWallViewBottomLeftCornerFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="111" end="140" center="auto" time="300" tween="back" easing="out"/>
-			<effect type="slide" start="0,0" end="27,-27" time="300" tween="back" easing="out"/>
+			<effect type="zoom" start="100" end="140" center="auto" time="300" delay="600" tween="back" easing="out"/>
+			<effect type="slide" start="0,0" end="34,-40" time="300" delay="600" tween="back" easing="out"/>
 		</animation>
 	</include>	
 	
 	<include name="MusicWallViewBottomEdgeFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="111" end="140" center="auto" time="300" tween="back" easing="out"/>
-			<effect type="slide" start="0,0" end="0,-27" time="300" tween="back" easing="out"/>
+			<effect type="zoom" start="100" end="140" center="auto" time="300" delay="600" tween="back" easing="out"/>
+			<effect type="slide" start="0,0" end="0,-40" time="300" delay="600" tween="back" easing="out"/>
 		</animation>
 	</include>
 	
 	<include name="MusicWallViewBottomRightCornerFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="111" end="140" center="auto" time="300" tween="back" easing="out"/>
-			<effect type="slide" start="0,0" end="-27,-27" time="300" tween="back" easing="out"/>
+			<effect type="zoom" start="100" end="140" center="auto" time="300" delay="600" tween="back" easing="out"/>
+			<effect type="slide" start="0,0" end="-40,-40" time="300" delay="600" tween="back" easing="out"/>
 		</animation>
 	</include>
 	
 	<include name="DVDThumbsStyleTopLeftCornerFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="122,114" end="135" center="auto" time="200" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="10,17" time="200" tween="circle" easing="out"/>
+			<effect type="zoom" start="100" end="135" center="auto" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="10,17" time="200" delay="600" tween="circle" easing="out"/>
 		</animation>
 	</include>
 	
 	<include name="DVDThumbsStyleTopEdgeFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="122,114" end="135" center="auto" time="200" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="0,17" time="200" tween="circle" easing="out"/>
+			<effect type="zoom" start="100" end="135" center="auto" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="0,17" time="200" delay="600" tween="circle" easing="out"/>
 		</animation>
 	</include>
 	
 	<include name="DVDThumbsStyleTopRightCornerFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="122,114" end="135" center="auto" time="200" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="-10,17" time="200" tween="circle" easing="out"/>
+			<effect type="zoom" start="100" end="135" center="auto" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="-10,17" time="200" delay="600" tween="circle" easing="out"/>
 		</animation>
 	</include>
 	
 	<include name="DVDThumbsStyleLeftEdgeFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="122,114" end="135" center="auto" time="200" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="10,0" time="200" tween="circle" easing="out"/>
+			<effect type="zoom" start="100" end="135" center="auto" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="10,0" time="200" delay="600" tween="circle" easing="out"/>
 		</animation>
 	</include>
 	
 	<include name="DVDThumbsStyleMidRowFocusAnim">
-		<animation effect="zoom" start="122,114" end="135" center="auto" time="200" tween="circle" easing="out" reversible="false">Focus</animation>
+		<animation effect="zoom" start="100" end="135" center="auto" time="200" delay="600" tween="circle" easing="out" reversible="false">Focus</animation>
 	</include>
 
 	<include name="DVDThumbsStyleRightEdgeFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="122,114" end="135" center="auto" time="200" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="-10,0" time="200" tween="circle" easing="out"/>
+			<effect type="zoom" start="100" end="135" center="auto" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="-10,0" time="200" delay="600" tween="circle" easing="out"/>
 		</animation>
 	</include>
 
 	<include name="DVDThumbsStyleBottomLeftCornerFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="122,114" end="135" center="auto" time="200" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="10,-17" time="200" tween="circle" easing="out"/>
+			<effect type="zoom" start="100" end="135" center="auto" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="10,-17" time="200" delay="600" tween="circle" easing="out"/>
 		</animation>
 	</include>	
 	
 	<include name="DVDThumbsStyleBottomEdgeFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="122,114" end="135" center="auto" time="200" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="0,-17" time="200" tween="circle" easing="out"/>
+			<effect type="zoom" start="100" end="135" center="auto" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="0,-17" time="200" delay="600" tween="circle" easing="out"/>
 		</animation>
 	</include>
 	
 	<include name="DVDThumbsStyleBottomRightCornerFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="122,114" end="135" center="auto" time="200" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="-10,-17" time="200" tween="circle" easing="out"/>
+			<effect type="zoom" start="100" end="135" center="auto" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="-10,-17" time="200" delay="600" tween="circle" easing="out"/>
 		</animation>
 	</include>
 	
@@ -770,61 +788,61 @@
 	
 	<include name="AlbumThumbsStyleTopLeftCornerFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="12,12" time="200" tween="circle" easing="out"/>
+			<effect type="zoom" start="100" end="135" center="auto" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="12,12" time="200" delay="600" tween="circle" easing="out"/>
 		</animation>
 	</include>
 	
 	<include name="AlbumThumbsStyleTopEdgeFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="0,12" time="200" tween="circle" easing="out"/>
+			<effect type="zoom" start="100" end="135" center="auto" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="0,12" time="200" delay="600" tween="circle" easing="out"/>
 		</animation>
 	</include>
 	
 	<include name="AlbumThumbsStyleTopRightCornerFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="-12,12" time="200" tween="circle" easing="out"/>
+			<effect type="zoom" start="100" end="135" center="auto" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="-12,12" time="200" delay="600" tween="circle" easing="out"/>
 		</animation>
 	</include>
 	
 	<include name="AlbumThumbsStyleLeftEdgeFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="12,0" time="200" tween="circle" easing="out"/>
+			<effect type="zoom" start="100" end="135" center="auto" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="12,0" time="200" delay="600" tween="circle" easing="out"/>
 		</animation>
 	</include>
 	
 	<include name="AlbumThumbsStyleMidRowFocusAnim">
-		<animation effect="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out" reversible="false">Focus</animation>
+		<animation effect="zoom" start="100" end="135" center="auto" time="200" delay="600" tween="circle" easing="out" reversible="false">Focus</animation>
 	</include>
 	
 	<include name="AlbumThumbsStyleRightEdgeFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="-12,0" time="200" tween="circle" easing="out"/>
+			<effect type="zoom" start="100" end="135" center="auto" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="-12,0" time="200" delay="600" tween="circle" easing="out"/>
 		</animation>
 	</include>
 	
 	<include name="AlbumThumbsStyleBottomLeftCornerFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="12,-12" time="200" tween="circle" easing="out"/>
+			<effect type="zoom" start="100" end="135" center="auto" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="12,-12" time="200" delay="600" tween="circle" easing="out"/>
 		</animation>
 	</include>	
 	
 	<include name="AlbumThumbsStyleBottomEdgeFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="0,-12" time="200" tween="circle" easing="out"/>
+			<effect type="zoom" start="100" end="135" center="auto" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="0,-12" time="200" delay="600" tween="circle" easing="out"/>
 		</animation>
 	</include>
 	
 	<include name="AlbumThumbsStyleBottomRightCornerFocusAnim">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="119" end="135" center="auto" time="200" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="-12,-12" time="200" tween="circle" easing="out"/>
+			<effect type="zoom" start="100" end="135" center="auto" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="-12,-12" time="200" delay="600" tween="circle" easing="out"/>
 		</animation>
 	</include>
 	

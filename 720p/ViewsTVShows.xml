@@ -14,6 +14,7 @@
 				<height>548</height>
 				<pagecontrol>916</pagecontrol>
 				<preloaditems>2</preloaditems>
+				<scrolltime tween="sine" easing="inout">400</scrolltime>
 				<onup>56</onup>
 				<ondown>56</ondown>
 				<onleft>850</onleft>
@@ -236,6 +237,7 @@
 				<height>536</height>
 				<pagecontrol>910</pagecontrol>
 				<preloaditems>2</preloaditems>
+				<scrolltime tween="sine" easing="inout">400</scrolltime>
 				<onup>76</onup>
 				<ondown>76</ondown>
 				<onleft>850</onleft>
@@ -532,6 +534,7 @@
 				<aspectratio>stretch</aspectratio>
 				<visible>Control.HasFocus(76)</visible>
 				<include>ListViewSelectFadeAnim</include>
+				<include>WideListViewFocusAnim</include>
 			</control>
 			<control type="image">
 				<posy>28</posy>
@@ -680,6 +683,7 @@
 				<aspectratio>stretch</aspectratio>
 				<visible>Control.HasFocus(76)</visible>
 				<include>ListViewSelectFadeAnim</include>
+				<include>WideListViewFocusAnim</include>
 			</control>
 			<control type="image">
 				<posy>28</posy>
@@ -966,6 +970,7 @@
 				<aspectratio>stretch</aspectratio>
 				<visible>Control.HasFocus(76)</visible>
 				<include>ListViewSelectFadeAnim</include>
+				<include>WideListViewFocusAnim</include>
 			</control>
 			<control type="image">
 				<posy>28</posy>
@@ -1146,6 +1151,7 @@
 				<height>296</height>
 				<pagecontrol>905</pagecontrol>
 				<preloaditems>2</preloaditems>
+				<scrolltime tween="sine" easing="inout">300</scrolltime>
 				<onup>61</onup>
 				<ondown>61</ondown>
 				<onleft>850</onleft>
@@ -1860,6 +1866,7 @@
 				<height>518</height>
 				<pagecontrol>906</pagecontrol>
 				<preloaditems>2</preloaditems>
+				<scrolltime tween="sine" easing="inout">300</scrolltime>
 				<onup>65</onup>
 				<ondown>65</ondown>
 				<onleft>850</onleft>
@@ -2403,7 +2410,7 @@
 				<aspectratio>stretch</aspectratio>
 				<visible>Control.HasFocus(65)</visible>
 				<include>ListViewSelectFadeAnim</include>
-				<include condition="!Skin.HasSetting(DisableListScrollAnim) + [Skin.String(TVShowsListInfo2Style,) | Skin.String(TVShowsListInfo2Style,3)]">ListViewScrollAnim</include>
+				<animation effect="fade" start="40" end="100" time="400" delay="100" reversible="false" condition="!Skin.HasSetting(DisableListFocusAnim)">Focus</animation>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -2426,7 +2433,6 @@
 			</control>				
 			<control type="group">
 				<visible>!IsEmpty(ListItem.Title) + !Skin.HasSetting(EnableListInfo2TVShowsLogo)</visible>
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
 				<control type="image">
 					<description>Default Cover</description>
 					<posx>5</posx>
@@ -2436,7 +2442,7 @@
 					<bordersize>20</bordersize>
 					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 					<aspectratio>keep</aspectratio>
-				</control>	
+				</control>
 				<control type="image">
 					<description>Cover</description>
 					<posx>5</posx>
@@ -2445,7 +2451,7 @@
 					<height>114</height>
 					<texture background="true">$VAR[TVShowsThumbTexture]</texture>
 					<aspectratio>stretch</aspectratio>
-				</control>			
+				</control>
 				<control type="image">
 					<description>Star Rating</description>
 					<posx>510</posx>
@@ -2761,9 +2767,9 @@
 			<width>774</width>
 			<height>516</height>
 			<pagecontrol>918</pagecontrol>
-			<scrolltime>100</scrolltime>
 			<orientation>vertical</orientation>
 			<preloaditems>2</preloaditems>
+			<scrolltime tween="sine" easing="inout">402</scrolltime>
 			<onleft>850</onleft>
 			<onright>150</onright>
 			<onup>100</onup>
@@ -2900,9 +2906,9 @@
 			<width>774</width>
 			<height>516</height>
 			<pagecontrol>918</pagecontrol>
-			<scrolltime>100</scrolltime>
 			<orientation>vertical</orientation>
 			<preloaditems>2</preloaditems>
+			<scrolltime tween="sine" easing="inout">402</scrolltime>
 			<onleft>850</onleft>
 			<onright>150</onright>
 			<onup>100</onup>

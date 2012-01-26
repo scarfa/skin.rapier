@@ -17,6 +17,7 @@
 			<height>172</height>
 			<texture border="7">covers/cover-case-focus.png</texture>
 			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="0" end="100" time="150" reversible="false">Focus</animation>
 		</control>
 
 		<control type="image">
@@ -56,10 +57,10 @@
 
 	<include name="DVDThumbsStyleOverlayImage">
 		<control type="image">
-			<posx>91</posx>
-			<posy>134</posy>
-			<width>22</width>
-			<height>22</height>
+			<posx>90</posx>
+			<posy>133</posy>
+			<width>24</width>
+			<height>24</height>
 			<texture background="true">$INFO[ListItem.Overlay]</texture>
 			<aspectratio>stretch</aspectratio>
 			<visible>!Skin.HasSetting(HideMoviesListInfo3Overlay)</visible>
@@ -81,6 +82,7 @@
 			<height>129</height>
 			<texture border="7">covers/cover-case-focus.png</texture>
 			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="0" end="100" time="150" reversible="false">Focus</animation>
 		</control>
 
 		<control type="image">
@@ -156,21 +158,25 @@
 
 	<include name="DVDWallCoverImage">
 		<control type="image">
-			<width>160</width>
-			<height>225</height>
+			<width>180</width>
+			<height>245</height>
 			<texture border="7">covers/cover-case-focus.png</texture>
 			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="0" end="100" time="150" reversible="false">Focus</animation>
 		</control>
 
 		<control type="image">
+			<posx>10</posx>
+			<posy>10</posy>
 			<width>160</width>
 			<height>225</height>
 			<texture>dim.png</texture>
-			<bordersize>10</bordersize>
 			<aspectratio>stretch</aspectratio>
 		</control>
 
 		<control type="image">
+			<posx>10</posx>
+			<posy>10</posy>
 			<width>160</width>
 			<height>225</height>
 			<bordersize>18</bordersize>
@@ -180,9 +186,10 @@
 		</control>
 
 		<control type="image">
+			<posx>10</posx>
+			<posy>10</posy>
 			<width>160</width>
 			<height>225</height>
-			<bordersize>10</bordersize>
 			<texture background="true">$INFO[ListItem.Thumb]</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
@@ -190,10 +197,10 @@
 
 	<include name="DVDWallOverlayImage">
 		<control type="image">
-			<posx>118</posx>
-			<posy>183</posy>
-			<width>22</width>
-			<height>22</height>
+			<posx>135</posx>
+			<posy>200</posy>
+			<width>24</width>
+			<height>24</height>
 			<texture background="true">$INFO[ListItem.Overlay]</texture>
 			<aspectratio>stretch</aspectratio>
 			<visible>!Skin.HasSetting(HideMoviesWallOverlay)</visible>
@@ -202,21 +209,25 @@
 
 	<include name="AlbumWallCoverImage">
 		<control type="image">
-			<width>214</width>
-			<height>225</height>
+			<width>234</width>
+			<height>245</height>
 			<texture border="7">covers/cover-case-focus.png</texture>
 			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="0" end="100" time="150" reversible="false">Focus</animation>
 		</control>
 
 		<control type="image">
+			<posx>10</posx>
+			<posy>10</posy>
 			<width>214</width>
 			<height>225</height>
-			<bordersize>10</bordersize>
 			<texture>dim.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
 
 		<control type="image">
+			<posx>10</posx>
+			<posy>10</posy>
 			<width>214</width>
 			<height>225</height>
 			<bordersize>40</bordersize>
@@ -226,9 +237,10 @@
 		</control>
 
 		<control type="image">
+			<posx>10</posx>
+			<posy>10</posy>
 			<width>214</width>
 			<height>225</height>
-			<bordersize>10</bordersize>
 			<texture background="true">$INFO[ListItem.Thumb]</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
