@@ -1507,16 +1507,16 @@
 				<description>Wrap Info 2 Hide Scrollbar (Programs)</description>
 				<include>DropDownMenuRadioBtn</include>
 				<label>$LOCALIZE[31025]</label>
-				<selected>!Skin.HasSetting(ShowWrapInfoView2Scrollbar)</selected>
-				<onclick>Skin.ToggleSetting(ShowWrapInfoView2Scrollbar)</onclick>
+				<selected>!Skin.HasSetting(ShowWrapInfoViewScrollbar)</selected>
+				<onclick>Skin.ToggleSetting(ShowWrapInfoViewScrollbar)</onclick>
 				<visible>Skin.String(CurrentViewMode,597)</visible>
 			</control>
 			<control type="radiobutton" id="4105">
 				<description>Wrap Info 3 Hide Scrollbar (Programs)</description>
 				<include>DropDownMenuRadioBtn</include>
 				<label>$LOCALIZE[31025]</label>
-				<selected>!Skin.HasSetting(ShowWrapInfoView3Scrollbar)</selected>
-				<onclick>Skin.ToggleSetting(ShowWrapInfoView3Scrollbar)</onclick>
+				<selected>!Skin.HasSetting(ShowWrapInfoViewScrollbar)</selected>
+				<onclick>Skin.ToggleSetting(ShowWrapInfoViewScrollbar)</onclick>
 				<visible>Skin.String(CurrentViewMode,598)</visible>
 			</control>
 			<control type="button" id="3087">
