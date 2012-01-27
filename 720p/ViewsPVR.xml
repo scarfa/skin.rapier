@@ -13,6 +13,7 @@
 				<height>518</height>
 				<pagecontrol>906</pagecontrol>
 				<preloaditems>2</preloaditems>
+				<scrolltime tween="sine" easing="inout">300</scrolltime>
 				<onup>11</onup>
 				<ondown>11</ondown>
 				<onleft>850</onleft>
@@ -45,6 +46,7 @@
 				<height>518</height>
 				<pagecontrol>906</pagecontrol>
 				<preloaditems>2</preloaditems>
+				<scrolltime tween="sine" easing="inout">300</scrolltime>
 				<onup>12</onup>
 				<ondown>12</ondown>
 				<onleft>850</onleft>
@@ -77,6 +79,7 @@
 				<height>518</height>
 				<pagecontrol>906</pagecontrol>
 				<preloaditems>2</preloaditems>
+				<scrolltime tween="sine" easing="inout">300</scrolltime>
 				<onup>13</onup>
 				<ondown>13</ondown>
 				<onleft>850</onleft>
@@ -343,7 +346,9 @@
 				<height>73</height>
 				<texture border="4">views/list-focus.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<visible>Control.HasFocus(11) | Control.HasFocus(12) | Control.HasFocus(13)</visible>
+				<visible>[Skin.String(ViewsPVR,1) + Control.HasFocus(11)]
+				| [Skin.String(ViewsPVR,2) + Control.HasFocus(12)]
+				| [Skin.String(ViewsPVR,6) + Control.HasFocus(13)]</visible>
 				<include>ListViewSelectFadeAnim</include>
 				<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewScrollAnim</include>
 			</control>
@@ -354,7 +359,9 @@
 				<height>73</height>
 				<texture border="4">views/list-alt-focus.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<visible>!Control.HasFocus(11) | !Control.HasFocus(12) | !Control.HasFocus(13)</visible>
+				<visible>[Skin.String(ViewsPVR,1) + !Control.HasFocus(11)]
+				| [Skin.String(ViewsPVR,2) + !Control.HasFocus(12)]
+				| [Skin.String(ViewsPVR,6) + !Control.HasFocus(13)]</visible>
 				<include>ListViewSelectFadeAnim2</include>
 			</control>
 
