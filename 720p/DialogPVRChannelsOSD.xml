@@ -105,7 +105,6 @@
 							<aspectratio>stretch</aspectratio>
 							<visible>Control.HasFocus(11)</visible>
 							<include>ListViewSelectFadeAnim</include>
-							<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewScrollAnim2</include>
 							<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewScrollAnim</include>
 						</control>
 
