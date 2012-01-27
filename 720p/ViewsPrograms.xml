@@ -15,6 +15,7 @@
 				<height>518</height>
 				<pagecontrol>920</pagecontrol>
 				<preloaditems>2</preloaditems>
+				<scrolltime tween="sine" easing="inout">300</scrolltime>
 				<onup>590</onup>
 				<ondown>590</ondown>
 				<onleft>850</onleft>
@@ -67,6 +68,7 @@
 				<height>518</height>
 				<pagecontrol>921</pagecontrol>
 				<preloaditems>2</preloaditems>
+				<scrolltime tween="sine" easing="inout">300</scrolltime>
 				<onup>591</onup>
 				<ondown>591</ondown>
 				<onleft>850</onleft>
@@ -119,6 +121,7 @@
 				<height>518</height>
 				<pagecontrol>922</pagecontrol>
 				<preloaditems>2</preloaditems>
+				<scrolltime tween="sine" easing="inout">300</scrolltime>
 				<onup>592</onup>
 				<ondown>592</ondown>
 				<onleft>850</onleft>
@@ -210,7 +213,7 @@
 					<visible>!IsEmpty(ListItem.Genre)</visible>
 					<animation effect="fade" end="35" condition="true">Conditional</animation>
 				</control>
-							
+
 				<control type="label">
 					<description>Genre</description>
 					<posx>16</posx>
@@ -348,18 +351,6 @@
 	</include>
 
 	<!-- NORMAL LIST -->
-	<include name="ProgramsListInfoControlVisible">
-		<visible>[Control.IsVisible(590) + Control.HasFocus(590)] 
-		| [Control.IsVisible(591) + Control.HasFocus(591)] 
-		| [Control.IsVisible(592) + Control.HasFocus(592)]</visible>
-	</include>
-
-	<include name="ProgramsListInfoControlInvisible">
-		<visible>[Control.IsVisible(590) + !Control.HasFocus(590)] 
-		| [Control.IsVisible(591) + !Control.HasFocus(591)] 
-		| [Control.IsVisible(592) + !Control.HasFocus(592)]</visible>
-	</include>
-
 	<include name="ProgramsListInfoItemLayout">
 		<itemlayout height="37">
 			<control type="image">
@@ -408,7 +399,9 @@
 				<height>36</height>	
 				<texture border="4">views/list-focus.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<include>ProgramsListInfoControlVisible</include>
+				<visible>[Control.IsVisible(590) + Control.HasFocus(590)] 
+				| [Control.IsVisible(591) + Control.HasFocus(591)] 
+				| [Control.IsVisible(592) + Control.HasFocus(592)]</visible>
 				<include>ListViewSelectFadeAnim</include>
 				<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewScrollAnim</include>
 			</control>
@@ -418,7 +411,9 @@
 				<height>36</height>	
 				<texture border="4">views/list-alt-focus.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<include>ProgramsListInfoControlInvisible</include>
+				<visible>[Control.IsVisible(590) + !Control.HasFocus(590)] 
+				| [Control.IsVisible(591) + !Control.HasFocus(591)] 
+				| [Control.IsVisible(592) + !Control.HasFocus(592)]</visible>
 				<include>ListViewSelectFadeAnim2</include>
 			</control>
 			<control type="group">
@@ -875,9 +870,9 @@
 				<width>774</width>
 				<height>516</height>
 				<pagecontrol>923</pagecontrol>
-				<scrolltime>100</scrolltime>
 				<orientation>vertical</orientation>
 				<preloaditems>2</preloaditems>
+				<scrolltime tween="sine" easing="inout">350</scrolltime>
 				<onleft>850</onleft>
 				<onright>150</onright>
 				<onup>593</onup>
@@ -1040,9 +1035,9 @@
 				<width>774</width>
 				<height>516</height>
 				<pagecontrol>924</pagecontrol>
-				<scrolltime>100</scrolltime>
 				<orientation>vertical</orientation>
 				<preloaditems>2</preloaditems>
+				<scrolltime tween="sine" easing="inout">350</scrolltime>
 				<onleft>850</onleft>
 				<onright>150</onright>
 				<onup>594</onup>
@@ -1151,7 +1146,7 @@
 					</control>
 				</focusedlayout>
 			</control>
-			
+
 			<include>ProgramsThumbsInfo2ViewScrollbar</include>
 
 			<control type="group">
@@ -1205,9 +1200,9 @@
 				<width>775</width>
 				<height>516</height>
 				<pagecontrol>925</pagecontrol>
-				<scrolltime>100</scrolltime>
 				<orientation>vertical</orientation>
 				<preloaditems>2</preloaditems>
+				<scrolltime tween="sine" easing="inout">350</scrolltime>
 				<onleft>850</onleft>
 				<onright>150</onright>
 				<onup>595</onup>
@@ -1411,7 +1406,7 @@
 					<visible>!IsEmpty(ListItem.Genre)</visible>
 					<animation effect="fade" end="35" condition="true">Conditional</animation>
 				</control>
-							
+
 				<control type="label">
 					<description>Genre</description>
 					<posx>16</posx>
@@ -1677,7 +1672,7 @@
 
 		<control type="image">
 			<description>Cover Glow</description>
-			<posx>65</posx>
+			<posx>41</posx>
 			<posy>382</posy>
 			<width>600</width>
 			<height>345</height>
@@ -1688,9 +1683,10 @@
 		</control>
 
 		<control type="image">
-			<posy>225</posy>
+			<posx>0</posx>
+			<posy>211</posy>
 			<width>1280</width>
-			<height>157</height>	
+			<height>171</height>	
 			<texture border="0,0,0,2">views/wrap-list-header.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
@@ -1698,7 +1694,7 @@
 		<control type="label">
 			<description>Title</description>
 			<posx>485</posx>
-			<posy>225</posy>
+			<posy>211</posy>
 			<width>765</width>
 			<height>33</height>
 			<font>WrapListFont</font>
@@ -1711,11 +1707,12 @@
 		</control>
 
 		<control type="image">
-			<posy>258</posy>
+			<posx>0</posx>
+			<posy>244</posy>
 			<width>1280</width>
 			<height>2</height>
 			<texture>panels/panel-separator.png</texture>
-		</control>
+		</control>	
 
 		<control type="grouplist">
 			<description>Programs Info</description>
@@ -1733,7 +1730,7 @@
 			</control>
 			<control type="label">
 				<description>Platform Value</description>
-				<width min="0" max="200">auto</width>
+				<width min="0" max="150">auto</width>
 				<include>WrapInfoViewCatValueLabel</include>
 				<label fallback="31001">$INFO[ListItem.Writer]</label>
 			</control>
@@ -1746,7 +1743,7 @@
 			</control>
 			<control type="label">
 				<description>Publisher Value</description>
-				<width min="0" max="200">auto</width>
+				<width min="0" max="140">auto</width>
 				<include>WrapInfoViewCatValueLabel</include>
 				<label fallback="31001">$INFO[ListItem.Studio]</label>
 			</control>
@@ -1786,7 +1783,7 @@
 			</control>
 
 			<control type="group">
-				<posx>263</posx>
+				<posx>239</posx>
 				<posy>520</posy>
 
 				<control type="label">
@@ -1805,39 +1802,39 @@
 
 		<control type="wraplist" id="596">
 			<viewtype label="31106">Wrap Info</viewtype>
-			<posx>0</posx>
-			<posy>258</posy>
-			<width>1353</width>
+			<posx>-38</posx>
+			<posy>244</posy>
+			<width>1350</width>
 			<height>330</height>
 			<focusposition>2</focusposition>
 			<pagecontrol>926</pagecontrol>
-			<scrolltime>300</scrolltime>
 			<orientation>horizontal</orientation>
 			<preloaditems>4</preloaditems>
+			<scrolltime tween="sine" easing="inout">401</scrolltime>
 			<onup>850</onup>
 			<ondown condition="Control.IsVisible(926)">150</ondown>
 			<ondown condition="!Control.IsVisible(926)">ActivateWindow(1122)</ondown>
 			<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
-			<itemlayout width="145">
+			<itemlayout width="150">
 				<control type="image">
 					<description>Cover Case</description>
-					<width>150</width>
-					<height>200</height>
+					<width>155</width>
+					<height>214</height>
 					<texture border="7">covers/cover-case-nofocus.png</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>
 				<control type="image">
 					<description>Cover</description>
-					<width>150</width>
-					<height>200</height>
+					<width>155</width>
+					<height>214</height>
 					<texture background="true">$INFO[ListItem.Thumb]</texture>
 					<bordersize>9</bordersize>
 					<aspectratio>stretch</aspectratio>
 				</control>
 				<control type="image">
 					<description>Default Cover Background</description>
-					<width>150</width>
-					<height>200</height>
+					<width>155</width>
+					<height>214</height>
 					<texture>dim.png</texture>
 					<bordersize>9</bordersize>
 					<aspectratio>stretch</aspectratio>
@@ -1845,8 +1842,8 @@
 				</control>		
 				<control type="image">
 					<description>Default Cover</description>
-					<width>150</width>
-					<height>200</height>
+					<width>155</width>
+					<height>214</height>
 					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 					<bordersize>12</bordersize>
 					<aspectratio>keep</aspectratio>
@@ -1856,9 +1853,9 @@
 				<control type="image">
 					<description>Reflection</description>
 					<posx>4</posx>
-					<posy>197</posy>
-					<width>142</width>
-					<height>200</height>
+					<posy>211</posy>
+					<width>147</width>
+					<height>214</height>
 					<texture flipy="true" diffuse="views/reflection.png" background="true">$INFO[ListItem.Icon]</texture>
 					<bordertexture flipy="true" diffuse="views/reflection.png" border="4">covers/cover-case2.png</bordertexture>
 					<bordersize>5</bordersize>
@@ -1866,30 +1863,29 @@
 					<animation effect="fade" end="70" condition="true">Conditional</animation>
 				</control>
 			</itemlayout>    
-			<focusedlayout width="115">
+			<focusedlayout width="150">
 				<control type="group">
-					<animation effect="zoom" start="100" end="145" center="75,90" time="300" tween="back" easing="out" reversible="false" delay="150">Focus</animation>
-					<animation effect="zoom" start="145" end="100" center="75,90" time="100" reversible="false">UnFocus</animation>
+					<animation effect="zoom" start="100" end="145" center="78,90" time="300" tween="back" easing="out" reversible="false" delay="150">Focus</animation>
+					<animation effect="zoom" start="145" end="100" center="78,90" time="100" reversible="false">UnFocus</animation>
 					<control type="image">
 						<description>Cover Case</description>
-						<width>150</width>
-						<height>200</height>
+						<width>155</width>
+						<height>214</height>
 						<texture border="7">covers/cover-case-focus.png</texture>
 						<aspectratio>stretch</aspectratio>
-						<visible>Control.HasFocus(596)</visible>
 					</control>
 					<control type="image">
 						<description>Cover</description>
-						<width>150</width>
-						<height>200</height>
+						<width>155</width>
+						<height>214</height>
 						<texture background="true">$INFO[ListItem.Thumb]</texture>
 						<bordersize>10</bordersize>
 						<aspectratio>stretch</aspectratio>
 					</control>
 					<control type="image">
 						<description>Default Cover Background</description>
-						<width>150</width>
-						<height>200</height>
+						<width>155</width>
+						<height>214</height>
 						<texture>dim.png</texture>
 						<bordersize>10</bordersize>
 						<aspectratio>stretch</aspectratio>
@@ -1897,8 +1893,8 @@
 					</control>		
 					<control type="image">
 						<description>Default Cover</description>
-						<width>150</width>
-						<height>200</height>
+						<width>155</width>
+						<height>214</height>
 						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordersize>12</bordersize>
 						<aspectratio>keep</aspectratio>
@@ -1907,59 +1903,9 @@
 					<control type="image">
 						<description>Reflection</description>
 						<posx>4</posx>
-						<posy>197</posy>
-						<width>142</width>
-						<height>200</height>
-						<texture flipy="true" diffuse="views/reflection.png" background="true">$INFO[ListItem.Icon]</texture>
-						<bordertexture flipy="true" diffuse="views/reflection.png" border="4">covers/cover-case2.png</bordertexture>
-						<bordersize>6</bordersize>
-						<aspectratio>stretch</aspectratio>
-						<animation effect="fade" end="70" condition="true">Conditional</animation>
-						<visible>Control.HasFocus(596)</visible>
-					</control>
-				</control>
-				<control type="group">
-					<visible>!Control.HasFocus(596)</visible>
-					<animation effect="zoom" end="145" center="75,90" condition="true">Conditional</animation>
-					<control type="image">
-						<description>Cover Case</description>
-						<width>150</width>
-						<height>200</height>
-						<texture border="7">covers/cover-case-nofocus.png</texture>
-						<aspectratio>stretch</aspectratio>
-					</control>
-					<control type="image">
-						<description>Cover</description>
-						<width>150</width>
-						<height>200</height>
-						<texture background="true">$INFO[ListItem.Thumb]</texture>
-						<bordersize>10</bordersize>
-						<aspectratio>stretch</aspectratio>
-					</control>
-					<control type="image">
-						<description>Default Cover Background</description>
-						<width>150</width>
-						<height>200</height>
-						<texture>dim.png</texture>
-						<bordersize>10</bordersize>
-						<aspectratio>stretch</aspectratio>
-						<visible>IsEmpty(ListItem.Thumb)</visible>
-					</control>		
-					<control type="image">
-						<description>Default Cover</description>
-						<width>150</width>
-						<height>200</height>
-						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-						<bordersize>12</bordersize>
-						<aspectratio>keep</aspectratio>
-						<visible>IsEmpty(ListItem.Thumb)</visible>
-					</control>
-					<control type="image">
-						<description>Reflection</description>
-						<posx>4</posx>
-						<posy>197</posy>
-						<width>142</width>
-						<height>200</height>
+						<posy>211</posy>
+						<width>147</width>
+						<height>214</height>
 						<texture flipy="true" diffuse="views/reflection.png" background="true">$INFO[ListItem.Icon]</texture>
 						<bordertexture flipy="true" diffuse="views/reflection.png" border="4">covers/cover-case2.png</bordertexture>
 						<bordersize>6</bordersize>
@@ -1994,7 +1940,7 @@
 
 		<control type="image">
 			<description>Cover Glow</description>
-			<posx>-48</posx>
+			<posx>-52</posx>
 			<posy>334</posy>
 			<width>744</width>
 			<height>415</height>
@@ -2105,7 +2051,7 @@
 			</control>
 
 			<control type="group">
-				<posx>190</posx>
+				<posx>188</posx>
 				<posy>520</posy>
 
 				<control type="label">
@@ -2118,36 +2064,36 @@
 					<shadowcolor>ShadowColor</shadowcolor>
 					<align>center</align>
 					<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
-				</control>					
+				</control>
 			</control>
 		</control>
 
 		<control type="wraplist" id="596">
 			<viewtype label="31106">Wrap Info</viewtype>
-			<posx>0</posx>
+			<posx>-3</posx>
 			<posy>170</posy>
 			<width>1280</width>
 			<height>470</height>
 			<focusposition>1</focusposition>
 			<pagecontrol>926</pagecontrol>
-			<scrolltime>360</scrolltime>
 			<orientation>horizontal</orientation>
 			<preloaditems>4</preloaditems>
+			<scrolltime tween="sine" easing="inout">500</scrolltime>
 			<onup>850</onup>
 			<ondown condition="Control.IsVisible(926)">150</ondown>
 			<ondown condition="!Control.IsVisible(926)">ActivateWindow(1122)</ondown>
 			<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
-			<itemlayout width="216">
+			<itemlayout width="214">
 				<control type="image">
 					<description>Cover Case</description>
-					<width>216</width>
+					<width>214</width>
 					<height>288</height>
 					<texture border="7">covers/cover-case-nofocus.png</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>				
 				<control type="image">
 					<description>Cover</description>
-					<width>216</width>
+					<width>214</width>
 					<height>288</height>
 					<texture background="true">$INFO[ListItem.Thumb]</texture>
 					<bordersize>12</bordersize>
@@ -2155,7 +2101,7 @@
 				</control>			
 				<control type="image">
 					<description>Default Cover Background</description>
-					<width>216</width>
+					<width>214</width>
 					<height>288</height>
 					<texture>dim.png</texture>
 					<bordersize>12</bordersize>
@@ -2164,7 +2110,7 @@
 				</control>				
 				<control type="image">
 					<description>Default Cover</description>
-					<width>216</width>
+					<width>214</width>
 					<height>288</height>
 					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 					<bordersize>20</bordersize>
@@ -2176,7 +2122,7 @@
 					<description>Reflection</description>
 					<posx>4</posx>
 					<posy>285</posy>
-					<width>208</width>
+					<width>206</width>
 					<height>288</height>
 					<texture flipy="true" diffuse="views/reflection.png" background="true">$INFO[ListItem.Icon]</texture>
 					<bordertexture flipy="true" diffuse="views/reflection.png" border="4">covers/cover-case2.png</bordertexture>
@@ -2185,21 +2131,20 @@
 					<animation effect="fade" end="70" condition="true">Conditional</animation>
 				</control>
 			</itemlayout>    
-			<focusedlayout width="200">
+			<focusedlayout width="214">
 				<control type="group">
-					<animation effect="zoom" start="100" end="130" center="108,130" time="360" tween="back" easing="out" reversible="false" delay="200">Focus</animation>
-					<animation effect="zoom" start="130" end="100" center="108,130" time="200" reversible="false">UnFocus</animation>	
+					<animation effect="zoom" start="100" end="130" center="107,132" time="360" tween="back" easing="out" reversible="false" delay="200">Focus</animation>
+					<animation effect="zoom" start="130" end="100" center="107,132" time="200" reversible="false">UnFocus</animation>
 					<control type="image">
 						<description>Cover Case</description>
-						<width>216</width>
+						<width>214</width>
 						<height>288</height>
 						<texture border="7">covers/cover-case-focus.png</texture>
 						<aspectratio>stretch</aspectratio>
-						<visible>Control.HasFocus(596)</visible>
 					</control>
 					<control type="image">
 						<description>Cover</description>
-						<width>216</width>
+						<width>214</width>
 						<height>288</height>
 						<texture background="true">$INFO[ListItem.Thumb]</texture>
 						<bordersize>12</bordersize>
@@ -2207,7 +2152,7 @@
 					</control>			
 					<control type="image">
 						<description>Default Cover Background</description>
-						<width>216</width>
+						<width>214</width>
 						<height>288</height>
 						<texture>dim.png</texture>
 						<bordersize>12</bordersize>
@@ -2216,7 +2161,7 @@
 					</control>
 					<control type="image">
 						<description>Default Cover</description>
-						<width>216</width>
+						<width>214</width>
 						<height>288</height>
 						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordersize>20</bordersize>
@@ -2227,64 +2172,23 @@
 						<description>Reflection</description>
 						<posx>4</posx>
 						<posy>285</posy>
-						<width>208</width>
+						<width>206</width>
 						<height>288</height>
 						<texture flipy="true" diffuse="views/reflection.png" background="true">$INFO[ListItem.Icon]</texture>
 						<bordertexture flipy="true" diffuse="views/reflection.png" border="4">covers/cover-case2.png</bordertexture>
 						<bordersize>8</bordersize>
 						<aspectratio>stretch</aspectratio>
 						<animation effect="fade" end="70" condition="true">Conditional</animation>
-						<visible>Control.HasFocus(596)</visible>
-					</control>
-				</control>
-				<control type="group">
-					<visible>!Control.HasFocus(596)</visible>
-					<animation effect="zoom" end="130" center="108,130" condition="true">Conditional</animation>
-					<control type="image">
-						<description>Cover Case</description>
-						<width>216</width>
-						<height>288</height>
-						<texture border="7">covers/cover-case-nofocus.png</texture>
-						<aspectratio>stretch</aspectratio>				
-					</control>	
-					<control type="image">
-						<description>Cover</description>
-						<width>216</width>
-						<height>288</height>
-						<texture background="true">$INFO[ListItem.Thumb]</texture>
-						<bordersize>12</bordersize>
-						<aspectratio>stretch</aspectratio>
-					</control>			
-					<control type="image">
-						<description>Default Cover Background</description>
-						<width>216</width>
-						<height>288</height>
-						<texture>dim.png</texture>
-						<bordersize>12</bordersize>
-						<aspectratio>stretch</aspectratio>
-						<visible>IsEmpty(ListItem.Thumb)</visible>
 					</control>
 					<control type="image">
-						<description>Default Cover</description>
-						<width>216</width>
-						<height>288</height>
-						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-						<bordersize>20</bordersize>
-						<aspectratio>keep</aspectratio>
-						<animation effect="fade" end="30" condition="true">Conditional</animation>
-						<visible>IsEmpty(ListItem.Thumb)</visible>
-					</control>			
-					<control type="image">
-						<description>Reflection</description>
-						<posx>4</posx>
-						<posy>285</posy>
-						<width>208</width>
-						<height>288</height>
-						<texture flipy="true" diffuse="views/reflection.png" background="true">$INFO[ListItem.Icon]</texture>
-						<bordertexture flipy="true" diffuse="views/reflection.png" border="4">covers/cover-case2.png</bordertexture>
-						<bordersize>8</bordersize>
+						<description>Overlay</description>
+						<posx>161</posx>
+						<posy>235</posy>
+						<width>26</width>
+						<height>26</height>
+						<texture background="true">$INFO[ListItem.Overlay]</texture>
 						<aspectratio>stretch</aspectratio>
-						<animation effect="fade" end="70" condition="true">Conditional</animation>
+						<visible>!Skin.HasSetting(HideMoviesWrapListInfoOverlay)</visible>
 					</control>
 				</control>
 			</focusedlayout>                    
@@ -2297,28 +2201,28 @@
 	<include name="ProgramsWrapListInfo2Style1">
 		<control type="image">
 			<description>Bottom Pane Background</description>
-			<posy>378</posy>
+			<posy>397</posy>
 			<width>ScreenWidth</width>
 			<height>347</height>
 			<texture border="0,6,0,0">gui/bottom-info-background.png</texture>
-		</control>
+		</control>	
 
 		<control type="image">
 			<description>Background Glow</description>
 			<posx>492</posx>
-			<posy>382</posy>
+			<posy>401</posy>
 			<width>755</width>
-			<height>307</height>
+			<height>326</height>
 			<texture flipy="true">gui/background-glow.png</texture>
 			<animation effect="fade" end="20" condition="true">Conditional</animation>
-		</control>
+		</control> 
 
 		<control type="image">
 			<description>Cover Glow</description>
-			<posx>65</posx>
-			<posy>382</posy>
+			<posx>41</posx>
+			<posy>401</posy>
 			<width>600</width>
-			<height>307</height>
+			<height>326</height>
 			<texture>views/cover-glow.png</texture>
 			<aspectratio aligny="bottom">center</aspectratio>
 			<visible>!Container.OnNext + !Container.OnPrevious</visible>
@@ -2326,9 +2230,10 @@
 		</control>
 
 		<control type="image">
-			<posy>225</posy>
+			<posx>0</posx>
+			<posy>270</posy>
 			<width>1280</width>
-			<height>126</height>	
+			<height>131</height>	
 			<texture border="0,0,0,2">views/wrap-list-header.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
@@ -2336,7 +2241,7 @@
 		<control type="label">
 			<description>Title</description>
 			<posx>485</posx>
-			<posy>225</posy>
+			<posy>270</posy>
 			<width>765</width>
 			<height>33</height>
 			<font>WrapListFont</font>
@@ -2349,7 +2254,8 @@
 		</control>
 
 		<control type="image">
-			<posy>258</posy>
+			<posx>0</posx>
+			<posy>303</posy>
 			<width>1280</width>
 			<height>2</height>
 			<texture>panels/panel-separator.png</texture>
@@ -2358,7 +2264,7 @@
 		<control type="grouplist">
 			<description>Programs Info</description>
 			<posx>485</posx>
-			<posy>434</posy>
+			<posy>472</posy>
 			<width>765</width>
 			<orientation>horizontal</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
@@ -2409,7 +2315,7 @@
 			<control type="textbox">
 				<description>Plot</description>
 				<posx>485</posx>
-				<posy>467</posy>
+				<posy>505</posy>
 				<width>765</width>
 				<height>125</height>
 				<font>MediaInfoDescFont</font>
@@ -2424,8 +2330,8 @@
 			</control>
 
 			<control type="group">
-				<posx>263</posx>
-				<posy>462</posy>
+				<posx>239</posx>
+				<posy>500</posy>
 
 				<control type="label">
 					<description>Genre</description>
@@ -2436,46 +2342,46 @@
 					<textcolor>WhiteColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<align>center</align>
-					<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+					<label>[UPPERCASE]$INFO[ListItem.Genre]$INFO[ListItem.Genre]$INFO[ListItem.Genre]$INFO[ListItem.Genre][/UPPERCASE]</label>
 				</control>
 			</control>
 		</control>
 
 		<control type="wraplist" id="597">
 			<viewtype label="31117">Wrap Info</viewtype>
-			<posx>0</posx>
-			<posy>258</posy>
-			<width>1353</width>
+			<posx>-38</posx>
+			<posy>303</posy>
+			<width>1350</width>
 			<height>330</height>
 			<focusposition>2</focusposition>
 			<pagecontrol>927</pagecontrol>
-			<scrolltime>300</scrolltime>
 			<orientation>horizontal</orientation>
 			<preloaditems>4</preloaditems>
+			<scrolltime tween="sine" easing="inout">401</scrolltime>
 			<onup>850</onup>
 			<ondown condition="Control.IsVisible(927)">150</ondown>
 			<ondown condition="!Control.IsVisible(927)">ActivateWindow(1122)</ondown>
 			<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
-			<itemlayout width="145">
+			<itemlayout width="150">
 				<control type="image">
 					<description>Cover Case</description>
-					<width>150</width>
-					<height>150</height>
+					<width>155</width>
+					<height>155</height>
 					<texture border="7">covers/cover-case-nofocus.png</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>
 				<control type="image">
 					<description>Cover</description>
-					<width>150</width>
-					<height>150</height>
+					<width>155</width>
+					<height>155</height>
 					<texture background="true">$INFO[ListItem.Thumb]</texture>
 					<bordersize>9</bordersize>
 					<aspectratio>stretch</aspectratio>
 				</control>
 				<control type="image">
 					<description>Default Cover Background</description>
-					<width>150</width>
-					<height>150</height>
+					<width>155</width>
+					<height>155</height>
 					<texture>dim.png</texture>
 					<bordersize>9</bordersize>
 					<aspectratio>stretch</aspectratio>
@@ -2483,10 +2389,10 @@
 				</control>		
 				<control type="image">
 					<description>Default Cover</description>
-					<width>150</width>
-					<height>150</height>
+					<width>155</width>
+					<height>155</height>
 					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-					<bordersize>12</bordersize>
+					<bordersize>22</bordersize>
 					<aspectratio>keep</aspectratio>
 					<visible>IsEmpty(ListItem.Thumb)</visible>
 					<animation effect="fade" end="30" condition="true">Conditional</animation>
@@ -2494,9 +2400,9 @@
 				<control type="image">
 					<description>Reflection</description>
 					<posx>4</posx>
-					<posy>147</posy>
-					<width>142</width>
-					<height>150</height>
+					<posy>152</posy>
+					<width>147</width>
+					<height>155</height>
 					<texture flipy="true" diffuse="views/reflection.png" background="true">$INFO[ListItem.Icon]</texture>
 					<bordertexture flipy="true" diffuse="views/reflection.png" border="4">covers/cover-case2.png</bordertexture>
 					<bordersize>5</bordersize>
@@ -2504,30 +2410,29 @@
 					<animation effect="fade" end="70" condition="true">Conditional</animation>
 				</control>
 			</itemlayout>    
-			<focusedlayout width="115">
+			<focusedlayout width="150">
 				<control type="group">
-					<animation effect="zoom" start="100" end="145" center="75,90" time="300" tween="back" easing="out" reversible="false" delay="150">Focus</animation>
-					<animation effect="zoom" start="145" end="100" center="75,90" time="100" reversible="false">UnFocus</animation>
+					<animation effect="zoom" start="100" end="145" center="78,90" time="300" tween="back" easing="out" reversible="false" delay="150">Focus</animation>
+					<animation effect="zoom" start="145" end="100" center="78,90" time="100" reversible="false">UnFocus</animation>
 					<control type="image">
 						<description>Cover Case</description>
-						<width>150</width>
-						<height>150</height>
+						<width>155</width>
+						<height>155</height>
 						<texture border="7">covers/cover-case-focus.png</texture>
 						<aspectratio>stretch</aspectratio>
-						<visible>Control.HasFocus(597)</visible>
 					</control>
 					<control type="image">
 						<description>Cover</description>
-						<width>150</width>
-						<height>150</height>
+						<width>155</width>
+						<height>155</height>
 						<texture background="true">$INFO[ListItem.Thumb]</texture>
 						<bordersize>10</bordersize>
 						<aspectratio>stretch</aspectratio>
 					</control>
 					<control type="image">
 						<description>Default Cover Background</description>
-						<width>150</width>
-						<height>150</height>
+						<width>155</width>
+						<height>155</height>
 						<texture>dim.png</texture>
 						<bordersize>10</bordersize>
 						<aspectratio>stretch</aspectratio>
@@ -2535,69 +2440,19 @@
 					</control>		
 					<control type="image">
 						<description>Default Cover</description>
-						<width>150</width>
-						<height>150</height>
+						<width>155</width>
+						<height>155</height>
 						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-						<bordersize>12</bordersize>
+						<bordersize>22</bordersize>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 					</control>
 					<control type="image">
 						<description>Reflection</description>
 						<posx>4</posx>
-						<posy>147</posy>
-						<width>142</width>
-						<height>150</height>
-						<texture flipy="true" diffuse="views/reflection.png" background="true">$INFO[ListItem.Icon]</texture>
-						<bordertexture flipy="true" diffuse="views/reflection.png" border="4">covers/cover-case2.png</bordertexture>
-						<bordersize>6</bordersize>
-						<aspectratio>stretch</aspectratio>
-						<animation effect="fade" end="70" condition="true">Conditional</animation>
-						<visible>Control.HasFocus(597)</visible>
-					</control>
-				</control>
-				<control type="group">
-					<visible>!Control.HasFocus(597)</visible>
-					<animation effect="zoom" end="145" center="75,90" condition="true">Conditional</animation>
-					<control type="image">
-						<description>Cover Case</description>
-						<width>150</width>
-						<height>150</height>
-						<texture border="7">covers/cover-case-nofocus.png</texture>
-						<aspectratio>stretch</aspectratio>
-					</control>
-					<control type="image">
-						<description>Cover</description>
-						<width>150</width>
-						<height>150</height>
-						<texture background="true">$INFO[ListItem.Thumb]</texture>
-						<bordersize>10</bordersize>
-						<aspectratio>stretch</aspectratio>
-					</control>
-					<control type="image">
-						<description>Default Cover Background</description>
-						<width>150</width>
-						<height>150</height>
-						<texture>dim.png</texture>
-						<bordersize>10</bordersize>
-						<aspectratio>stretch</aspectratio>
-						<visible>IsEmpty(ListItem.Thumb)</visible>
-					</control>		
-					<control type="image">
-						<description>Default Cover</description>
-						<width>150</width>
-						<height>150</height>
-						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-						<bordersize>12</bordersize>
-						<aspectratio>keep</aspectratio>
-						<visible>IsEmpty(ListItem.Thumb)</visible>
-					</control>
-					<control type="image">
-						<description>Reflection</description>
-						<posx>4</posx>
-						<posy>147</posy>
-						<width>142</width>
-						<height>150</height>
+						<posy>152</posy>
+						<width>147</width>
+						<height>155</height>
 						<texture flipy="true" diffuse="views/reflection.png" background="true">$INFO[ListItem.Icon]</texture>
 						<bordertexture flipy="true" diffuse="views/reflection.png" border="4">covers/cover-case2.png</bordertexture>
 						<bordersize>6</bordersize>
@@ -2611,31 +2466,31 @@
 		<include>ProgramsWrapInfo2ViewScrollbar</include>
 	</include>
 
-	<include name="ProgramsWrapListInfo2Style2">	
+	<include name="ProgramsWrapListInfo2Style2">
 		<control type="image">
 			<description>Bottom Pane Background</description>
-			<posy>345</posy>
+			<posy>372</posy>
 			<width>ScreenWidth</width>
-			<height>380</height>
+			<height>353</height>
 			<texture border="0,6,0,0">gui/bottom-info-background.png</texture>
 		</control>
 
 		<control type="image">
 			<description>Background Glow</description>
 			<posx>492</posx>
-			<posy>349</posy>
+			<posy>376</posy>
 			<width>755</width>
-			<height>353</height>
+			<height>388</height>
 			<texture flipy="true">gui/background-glow.png</texture>
 			<animation effect="fade" end="20" condition="true">Conditional</animation>
 		</control> 
 
 		<control type="image">
 			<description>Cover Glow</description>
-			<posx>-48</posx>
-			<posy>333</posy>
+			<posx>-52</posx>
+			<posy>360</posy>
 			<width>744</width>
-			<height>353</height>
+			<height>388</height>
 			<texture>views/cover-glow.png</texture>
 			<aspectratio aligny="bottom">center</aspectratio>
 			<visible>!Container.OnNext + !Container.OnPrevious</visible>
@@ -2644,7 +2499,7 @@
 
 		<control type="image">
 			<posx>0</posx>
-			<posy>137</posy>
+			<posy>209</posy>
 			<width>1280</width>
 			<height>167</height>	
 			<texture border="0,0,0,2">views/wrap-list-header.png</texture>
@@ -2654,7 +2509,7 @@
 		<control type="label">
 			<description>Title</description>
 			<posx>485</posx>
-			<posy>137</posy>
+			<posy>209</posy>
 			<width>765</width>
 			<height>33</height>
 			<font>WrapListFont</font>
@@ -2668,7 +2523,7 @@
 
 		<control type="image">
 			<posx>0</posx>
-			<posy>170</posy>
+			<posy>242</posy>
 			<width>1280</width>
 			<height>2</height>
 			<texture>panels/panel-separator.png</texture>				
@@ -2677,7 +2532,7 @@
 		<control type="grouplist">
 			<description>Programs Info</description>
 			<posx>485</posx>
-			<posy>422</posy>
+			<posy>472</posy>
 			<width>765</width>
 			<orientation>horizontal</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
@@ -2728,7 +2583,7 @@
 			<control type="textbox">
 				<description>Plot</description>
 				<posx>485</posx>
-				<posy>455</posy>
+				<posy>505</posy>
 				<width>765</width>
 				<height>125</height>
 				<font>MediaInfoDescFont</font>
@@ -2743,8 +2598,8 @@
 			</control>
 
 			<control type="group">
-				<posx>190</posx>
-				<posy>450</posy>
+				<posx>188</posx>
+				<posy>500</posy>
 
 				<control type="label">
 					<description>Genre</description>
@@ -2762,39 +2617,39 @@
 
 		<control type="wraplist" id="597">
 			<viewtype label="31117">Wrap Info</viewtype>
-			<posx>0</posx>
-			<posy>170</posy>
+			<posx>-3</posx>
+			<posy>242</posy>
 			<width>1280</width>
 			<height>470</height>
 			<focusposition>1</focusposition>
 			<pagecontrol>927</pagecontrol>
-			<scrolltime>360</scrolltime>
 			<orientation>horizontal</orientation>
 			<preloaditems>4</preloaditems>
+			<scrolltime tween="sine" easing="inout">500</scrolltime>
 			<onup>850</onup>
 			<ondown condition="Control.IsVisible(927)">150</ondown>
 			<ondown condition="!Control.IsVisible(927)">ActivateWindow(1122)</ondown>
 			<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
-			<itemlayout width="216">
+			<itemlayout width="214">
 				<control type="image">
 					<description>Cover Case</description>
-					<width>216</width>
-					<height>216</height>
+					<width>214</width>
+					<height>214</height>
 					<texture border="7">covers/cover-case-nofocus.png</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>				
 				<control type="image">
 					<description>Cover</description>
-					<width>216</width>
-					<height>216</height>
+					<width>214</width>
+					<height>214</height>
 					<texture background="true">$INFO[ListItem.Thumb]</texture>
 					<bordersize>12</bordersize>
 					<aspectratio>stretch</aspectratio>
 				</control>			
 				<control type="image">
 					<description>Default Cover Background</description>
-					<width>216</width>
-					<height>216</height>
+					<width>214</width>
+					<height>214</height>
 					<texture>dim.png</texture>
 					<bordersize>12</bordersize>
 					<aspectratio>stretch</aspectratio>
@@ -2802,10 +2657,10 @@
 				</control>				
 				<control type="image">
 					<description>Default Cover</description>
-					<width>216</width>
-					<height>216</height>
+					<width>214</width>
+					<height>214</height>
 					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-					<bordersize>20</bordersize>
+					<bordersize>30</bordersize>
 					<aspectratio>keep</aspectratio>
 					<animation effect="fade" end="30" condition="true">Conditional</animation>
 					<visible>IsEmpty(ListItem.Thumb)</visible>
@@ -2813,9 +2668,9 @@
 				<control type="image">
 					<description>Reflection</description>
 					<posx>4</posx>
-					<posy>213</posy>
-					<width>208</width>
-					<height>216</height>
+					<posy>211</posy>
+					<width>206</width>
+					<height>214</height>
 					<texture flipy="true" diffuse="views/reflection.png" background="true">$INFO[ListItem.Icon]</texture>
 					<bordertexture flipy="true" diffuse="views/reflection.png" border="4">covers/cover-case2.png</bordertexture>
 					<bordersize>8</bordersize>
@@ -2823,30 +2678,29 @@
 					<animation effect="fade" end="70" condition="true">Conditional</animation>
 				</control>
 			</itemlayout>    
-			<focusedlayout width="200">
+			<focusedlayout width="214">
 				<control type="group">
-					<animation effect="zoom" start="100" end="130" center="108,130" time="360" tween="back" easing="out" reversible="false" delay="200">Focus</animation>
-					<animation effect="zoom" start="130" end="100" center="108,130" time="200" reversible="false">UnFocus</animation>	
+					<animation effect="zoom" start="100" end="130" center="107,132" time="360" tween="back" easing="out" reversible="false" delay="200">Focus</animation>
+					<animation effect="zoom" start="130" end="100" center="107,132" time="200" reversible="false">UnFocus</animation>
 					<control type="image">
 						<description>Cover Case</description>
-						<width>216</width>
-						<height>216</height>
+						<width>214</width>
+						<height>214</height>
 						<texture border="7">covers/cover-case-focus.png</texture>
 						<aspectratio>stretch</aspectratio>
-						<visible>Control.HasFocus(597)</visible>
 					</control>
 					<control type="image">
 						<description>Cover</description>
-						<width>216</width>
-						<height>216</height>
+						<width>214</width>
+						<height>214</height>
 						<texture background="true">$INFO[ListItem.Thumb]</texture>
 						<bordersize>12</bordersize>
 						<aspectratio>stretch</aspectratio>
 					</control>			
 					<control type="image">
 						<description>Default Cover Background</description>
-						<width>216</width>
-						<height>216</height>
+						<width>214</width>
+						<height>214</height>
 						<texture>dim.png</texture>
 						<bordersize>12</bordersize>
 						<aspectratio>stretch</aspectratio>
@@ -2854,70 +2708,19 @@
 					</control>
 					<control type="image">
 						<description>Default Cover</description>
-						<width>216</width>
-						<height>216</height>
+						<width>214</width>
+						<height>214</height>
 						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-						<bordersize>20</bordersize>
+						<bordersize>30</bordersize>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 					</control>			
 					<control type="image">
 						<description>Reflection</description>
 						<posx>4</posx>
-						<posy>213</posy>
-						<width>208</width>
-						<height>216</height>
-						<texture flipy="true" diffuse="views/reflection.png" background="true">$INFO[ListItem.Icon]</texture>
-						<bordertexture flipy="true" diffuse="views/reflection.png" border="4">covers/cover-case2.png</bordertexture>
-						<bordersize>8</bordersize>
-						<aspectratio>stretch</aspectratio>
-						<animation effect="fade" end="70" condition="true">Conditional</animation>
-						<visible>Control.HasFocus(597)</visible>
-					</control>
-				</control>
-				<control type="group">
-					<visible>!Control.HasFocus(597)</visible>
-					<animation effect="zoom" end="130" center="108,130" condition="true">Conditional</animation>
-					<control type="image">
-						<description>Cover Case</description>
-						<width>216</width>
-						<height>216</height>
-						<texture border="7">covers/cover-case-nofocus.png</texture>
-						<aspectratio>stretch</aspectratio>				
-					</control>	
-					<control type="image">
-						<description>Cover</description>
-						<width>216</width>
-						<height>216</height>
-						<texture background="true">$INFO[ListItem.Thumb]</texture>
-						<bordersize>12</bordersize>
-						<aspectratio>stretch</aspectratio>
-					</control>			
-					<control type="image">
-						<description>Default Cover Background</description>
-						<width>216</width>
-						<height>216</height>
-						<texture>dim.png</texture>
-						<bordersize>12</bordersize>
-						<aspectratio>stretch</aspectratio>
-						<visible>IsEmpty(ListItem.Thumb)</visible>
-					</control>
-					<control type="image">
-						<description>Default Cover</description>
-						<width>216</width>
-						<height>216</height>
-						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-						<bordersize>20</bordersize>
-						<aspectratio>keep</aspectratio>
-						<animation effect="fade" end="30" condition="true">Conditional</animation>
-						<visible>IsEmpty(ListItem.Thumb)</visible>
-					</control>			
-					<control type="image">
-						<description>Reflection</description>
-						<posx>4</posx>
-						<posy>213</posy>
-						<width>208</width>
-						<height>216</height>
+						<posy>211</posy>
+						<width>206</width>
+						<height>214</height>
 						<texture flipy="true" diffuse="views/reflection.png" background="true">$INFO[ListItem.Icon]</texture>
 						<bordertexture flipy="true" diffuse="views/reflection.png" border="4">covers/cover-case2.png</bordertexture>
 						<bordersize>8</bordersize>
@@ -2935,27 +2738,28 @@
 	<include name="ProgramsWrapListInfo3Style1">
 		<control type="image">
 			<description>Bottom Pane Background</description>
-			<posy>378</posy>
+			<posy>397</posy>
 			<width>ScreenWidth</width>
 			<height>347</height>
 			<texture border="0,6,0,0">gui/bottom-info-background.png</texture>
-		</control>
+		</control>	
 
 		<control type="image">
 			<description>Background Glow</description>
 			<posx>492</posx>
-			<posy>382</posy>
+			<posy>401</posy>
 			<width>755</width>
-			<height>307</height>
+			<height>326</height>
 			<texture flipy="true">gui/background-glow.png</texture>
 			<animation effect="fade" end="20" condition="true">Conditional</animation>
-		</control>
+		</control> 
 
 		<control type="image">
 			<description>Cover Glow</description>
-			<posy>382</posy>
-			<width>660</width>
-			<height>307</height>
+			<posx>-111</posx>
+			<posy>401</posy>
+			<width>803</width>
+			<height>326</height>
 			<texture>views/cover-glow.png</texture>
 			<aspectratio aligny="bottom">center</aspectratio>
 			<visible>!Container.OnNext + !Container.OnPrevious</visible>
@@ -2963,9 +2767,10 @@
 		</control>
 
 		<control type="image">
-			<posy>225</posy>
+			<posx>0</posx>
+			<posy>270</posy>
 			<width>1280</width>
-			<height>126</height>	
+			<height>131</height>	
 			<texture border="0,0,0,2">views/wrap-list-header.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
@@ -2973,7 +2778,7 @@
 		<control type="label">
 			<description>Title</description>
 			<posx>485</posx>
-			<posy>225</posy>
+			<posy>270</posy>
 			<width>765</width>
 			<height>33</height>
 			<font>WrapListFont</font>
@@ -2986,7 +2791,8 @@
 		</control>
 
 		<control type="image">
-			<posy>258</posy>
+			<posx>0</posx>
+			<posy>303</posy>
 			<width>1280</width>
 			<height>2</height>
 			<texture>panels/panel-separator.png</texture>
@@ -2995,7 +2801,7 @@
 		<control type="grouplist">
 			<description>Programs Info</description>
 			<posx>485</posx>
-			<posy>434</posy>
+			<posy>472</posy>
 			<width>765</width>
 			<orientation>horizontal</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
@@ -3046,7 +2852,7 @@
 			<control type="textbox">
 				<description>Plot</description>
 				<posx>485</posx>
-				<posy>467</posy>
+				<posy>505</posy>
 				<width>765</width>
 				<height>125</height>
 				<font>MediaInfoDescFont</font>
@@ -3061,14 +2867,14 @@
 			</control>
 
 			<control type="group">
-				<posx>192</posx>
-				<posy>462</posy>
+				<posx>161</posx>
+				<posy>500</posy>
 
 				<control type="label">
 					<description>Genre</description>
 					<posx>0</posx>
 					<posy>10</posy>
-					<width>275</width>
+					<width>282</width>
 					<font>MediaInfoFont2</font>
 					<textcolor>WhiteColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
@@ -3080,165 +2886,113 @@
 
 		<control type="wraplist" id="598">
 			<viewtype label="31118">Wrap Info</viewtype>
-			<posx>0</posx>
-			<posy>258</posy>
-			<width>1280</width>
-			<height>470</height>
+			<posx>-32</posx>
+			<posy>303</posy>
+			<width>1350</width>
+			<height>330</height>
 			<focusposition>1</focusposition>
 			<pagecontrol>928</pagecontrol>
-			<scrolltime>360</scrolltime>
 			<orientation>horizontal</orientation>
 			<preloaditems>4</preloaditems>
+			<scrolltime tween="sine" easing="inout">401</scrolltime>
 			<onup>850</onup>
 			<ondown condition="Control.IsVisible(928)">150</ondown>
 			<ondown condition="!Control.IsVisible(928)">ActivateWindow(1122)</ondown>
 			<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
-			<itemlayout width="216">
+			<itemlayout width="209">
 				<control type="image">
 					<description>Cover Case</description>
-					<width>216</width>
-					<height>162</height>
+					<width>214</width>
+					<height>155</height>
 					<texture border="7">covers/cover-case-nofocus.png</texture>
 					<aspectratio>stretch</aspectratio>
-				</control>				
+				</control>
 				<control type="image">
 					<description>Cover</description>
-					<width>216</width>
-					<height>162</height>
+					<width>214</width>
+					<height>155</height>
 					<texture background="true">$INFO[ListItem.Thumb]</texture>
-					<bordersize>12</bordersize>
+					<bordersize>9</bordersize>
 					<aspectratio>stretch</aspectratio>
-				</control>			
+				</control>
 				<control type="image">
 					<description>Default Cover Background</description>
-					<width>216</width>
-					<height>162</height>
+					<width>214</width>
+					<height>155</height>
 					<texture>dim.png</texture>
-					<bordersize>12</bordersize>
+					<bordersize>9</bordersize>
 					<aspectratio>stretch</aspectratio>
 					<visible>IsEmpty(ListItem.Thumb)</visible>
-				</control>				
+				</control>		
 				<control type="image">
 					<description>Default Cover</description>
-					<width>216</width>
-					<height>162</height>
+					<width>214</width>
+					<height>155</height>
 					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-					<bordersize>20</bordersize>
+					<bordersize>22</bordersize>
 					<aspectratio>keep</aspectratio>
-					<animation effect="fade" end="30" condition="true">Conditional</animation>
 					<visible>IsEmpty(ListItem.Thumb)</visible>
-				</control>			
+					<animation effect="fade" end="30" condition="true">Conditional</animation>
+				</control>	
 				<control type="image">
 					<description>Reflection</description>
 					<posx>4</posx>
-					<posy>159</posy>
-					<width>208</width>
-					<height>162</height>
+					<posy>152</posy>
+					<width>206</width>
+					<height>155</height>
 					<texture flipy="true" diffuse="views/reflection.png" background="true">$INFO[ListItem.Icon]</texture>
 					<bordertexture flipy="true" diffuse="views/reflection.png" border="4">covers/cover-case2.png</bordertexture>
-					<bordersize>8</bordersize>
+					<bordersize>5</bordersize>
 					<aspectratio>stretch</aspectratio>
 					<animation effect="fade" end="70" condition="true">Conditional</animation>
 				</control>
 			</itemlayout>    
-			<focusedlayout width="200">
+			<focusedlayout width="209">
 				<control type="group">
-					<animation effect="zoom" start="100" end="130" center="108,130" time="360" tween="back" easing="out" reversible="false" delay="200">Focus</animation>
-					<animation effect="zoom" start="130" end="100" center="108,130" time="200" reversible="false">UnFocus</animation>	
+					<animation effect="zoom" start="100" end="145" center="78,90" time="300" tween="back" easing="out" reversible="false" delay="150">Focus</animation>
+					<animation effect="zoom" start="145" end="100" center="78,90" time="100" reversible="false">UnFocus</animation>
 					<control type="image">
 						<description>Cover Case</description>
-						<width>216</width>
-						<height>162</height>
+						<width>214</width>
+						<height>155</height>
 						<texture border="7">covers/cover-case-focus.png</texture>
 						<aspectratio>stretch</aspectratio>
-						<visible>Control.HasFocus(598)</visible>
 					</control>
 					<control type="image">
 						<description>Cover</description>
-						<width>216</width>
-						<height>162</height>
+						<width>214</width>
+						<height>155</height>
 						<texture background="true">$INFO[ListItem.Thumb]</texture>
-						<bordersize>12</bordersize>
+						<bordersize>10</bordersize>
 						<aspectratio>stretch</aspectratio>
-					</control>			
-					<control type="image">
-						<description>Default Cover Background</description>
-						<width>216</width>
-						<height>162</height>
-						<texture>dim.png</texture>
-						<bordersize>12</bordersize>
-						<aspectratio>stretch</aspectratio>
-						<visible>IsEmpty(ListItem.Thumb)</visible>
 					</control>
 					<control type="image">
+						<description>Default Cover Background</description>
+						<width>214</width>
+						<height>155</height>
+						<texture>dim.png</texture>
+						<bordersize>10</bordersize>
+						<aspectratio>stretch</aspectratio>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>		
+					<control type="image">
 						<description>Default Cover</description>
-						<width>216</width>
-						<height>162</height>
+						<width>214</width>
+						<height>155</height>
 						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-						<bordersize>20</bordersize>
+						<bordersize>22</bordersize>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
-					</control>			
+					</control>
 					<control type="image">
 						<description>Reflection</description>
 						<posx>4</posx>
-						<posy>159</posy>
-						<width>208</width>
-						<height>162</height>
+						<posy>152</posy>
+						<width>206</width>
+						<height>155</height>
 						<texture flipy="true" diffuse="views/reflection.png" background="true">$INFO[ListItem.Icon]</texture>
 						<bordertexture flipy="true" diffuse="views/reflection.png" border="4">covers/cover-case2.png</bordertexture>
-						<bordersize>8</bordersize>
-						<aspectratio>stretch</aspectratio>
-						<animation effect="fade" end="70" condition="true">Conditional</animation>
-						<visible>Control.HasFocus(598)</visible>
-					</control>
-				</control>
-				<control type="group">
-					<visible>!Control.HasFocus(598)</visible>
-					<animation effect="zoom" end="130" center="108,130" condition="true">Conditional</animation>
-					<control type="image">
-						<description>Cover Case</description>
-						<width>216</width>
-						<height>162</height>
-						<texture border="7">covers/cover-case-nofocus.png</texture>
-						<aspectratio>stretch</aspectratio>				
-					</control>	
-					<control type="image">
-						<description>Cover</description>
-						<width>216</width>
-						<height>162</height>
-						<texture background="true">$INFO[ListItem.Thumb]</texture>
-						<bordersize>12</bordersize>
-						<aspectratio>stretch</aspectratio>
-					</control>			
-					<control type="image">
-						<description>Default Cover Background</description>
-						<width>216</width>
-						<height>162</height>
-						<texture>dim.png</texture>
-						<bordersize>12</bordersize>
-						<aspectratio>stretch</aspectratio>
-						<visible>IsEmpty(ListItem.Thumb)</visible>
-					</control>
-					<control type="image">
-						<description>Default Cover</description>
-						<width>216</width>
-						<height>162</height>
-						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-						<bordersize>20</bordersize>
-						<aspectratio>keep</aspectratio>
-						<animation effect="fade" end="30" condition="true">Conditional</animation>
-						<visible>IsEmpty(ListItem.Thumb)</visible>
-					</control>			
-					<control type="image">
-						<description>Reflection</description>
-						<posx>4</posx>
-						<posy>159</posy>
-						<width>208</width>
-						<height>162</height>
-						<texture flipy="true" diffuse="views/reflection.png" background="true">$INFO[ListItem.Icon]</texture>
-						<bordertexture flipy="true" diffuse="views/reflection.png" border="4">covers/cover-case2.png</bordertexture>
-						<bordersize>8</bordersize>
+						<bordersize>6</bordersize>
 						<aspectratio>stretch</aspectratio>
 						<animation effect="fade" end="70" condition="true">Conditional</animation>
 					</control>

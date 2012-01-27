@@ -32,7 +32,7 @@
 					<ondown>11</ondown>
 					<pagecontrol>70</pagecontrol>
 					<preloaditems>2</preloaditems>
-					<scrolltime>200</scrolltime>
+					<scrolltime tween="sine" easing="inout">300</scrolltime>
 					<itemlayout height="74">
 						<control type="image">
 							<posx>0</posx>
@@ -77,30 +77,14 @@
 							<label>$INFO[ListItem.ChannelNumber] - $INFO[ListItem.Label]</label>
 						</control>
 
-						<control type="group">
+						<control type="image">
+							<description>Record</description>
 							<posx>390</posx>
-							<posy>26</posy>
-							<control type="image">
-								<width>22</width>
-								<height>22</height>
-								<texture>pvr/status_none.png</texture>
-								<colordiffuse>ListColor</colordiffuse>
-								<visible>![ListItem.HasTimer | ListItem.IsRecording]</visible>
-							</control>
-							<control type="image">
-								<width>22</width>
-								<height>22</height>
-								<texture>pvr/status_timer.png</texture>
-								<colordiffuse>ListColor</colordiffuse>
-								<visible>ListItem.HasTimer</visible>
-							</control>
-							<control type="image">
-								<width>22</width>
-								<height>22</height>
-								<texture>pvr/status_recording.png</texture>
-								<colordiffuse>ListColor</colordiffuse>
-								<visible>ListItem.IsRecording</visible>
-							</control>
+							<posy>26</posy>	
+							<width>22</width>
+							<height>22</height>
+							<texture>$VAR[LiveTVListInfoRecordImage]</texture>
+							<colordiffuse>ListColor</colordiffuse>
 						</control>
 					</itemlayout>
 
@@ -121,7 +105,6 @@
 							<aspectratio>stretch</aspectratio>
 							<visible>Control.HasFocus(11)</visible>
 							<include>ListViewSelectFadeAnim</include>
-							<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewScrollAnim2</include>
 							<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewScrollAnim</include>
 						</control>
 
@@ -173,27 +156,14 @@
 								<label>$INFO[ListItem.ChannelNumber] - $INFO[ListItem.Label]</label>
 							</control>
 
-							<control type="group">
+							<control type="image">
+								<description>Record</description>
 								<posx>390</posx>
 								<posy>26</posy>
-								<control type="image">
-									<width>22</width>
-									<height>22</height>
-									<texture>pvr/status_none.png</texture>
-									<visible>![ListItem.HasTimer | ListItem.IsRecording]</visible>
-								</control>
-								<control type="image">
-									<width>22</width>
-									<height>22</height>
-									<texture>pvr/status_timer.png</texture>
-									<visible>ListItem.HasTimer</visible>
-								</control>
-								<control type="image">
-									<width>22</width>
-									<height>22</height>
-									<texture>pvr/status_recording.png</texture>
-									<visible>ListItem.IsRecording</visible>
-								</control>
+								<width>22</width>
+								<height>22</height>
+								<texture>$VAR[LiveTVListInfoRecordImage]</texture>
+								<colordiffuse>WhiteColor</colordiffuse>
 							</control>
 						</control>
 					</focusedlayout>
