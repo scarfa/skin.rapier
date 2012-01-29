@@ -29,7 +29,7 @@
 	
 	<variable name="ListViewOverlay">
 		<value condition="[!ListItem.IsResumable | StringCompare(ListItem.Overlay,OverlayWatched.png)] + [Container.Content(Movies) | Container.Content(Episodes) | Window.IsActive(VideoPlaylist)]">watched/videos/$INFO[ListItem.Overlay]</value>
-		<value condition="Container.Content(Seasons)">watched/seasons/$INFO[ListItem.Overlay]</value>
+		<value condition="Container.Content(Seasons) | StringCompare(Container.FolderPath,special://videoplaylists/)">watched/seasons/$INFO[ListItem.Overlay]</value>
 		<value condition="Container.Content(TVShows)">watched/tv/$INFO[ListItem.Overlay]</value>
 	</variable>
 
