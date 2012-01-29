@@ -27,6 +27,7 @@
 					<haspath>true</haspath>
 					<scroll>yes</scroll>
 					<include>DialogHeadLabel</include>
+					<include>DialogHeadLabelFade</include>
 				</control>
 				
 				<include>IconFileBrowserScrollbar</include>

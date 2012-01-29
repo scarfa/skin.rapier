@@ -262,6 +262,11 @@
 	<include name="NextAiredInfoFadeAnim">
 		<animation effect="fade" end="2" condition="true">Conditional</animation>
 	</include>
+	
+	<include name="DialogHeadLabelFade">
+		<animation effect="fade" end="60" condition="true">Conditional</animation>
+	</include>
+	
 	<!--//// HOME /////////////////////////////////////////////////////////////////////////////////////-->
 
 	<include name="HomeMenuOpenCloseAnim">

@@ -28,6 +28,7 @@
 					<width>600</width>
 					<include>DialogHeadLabel</include>
 					<label>$LOCALIZE[21422]</label>
+					<include>DialogHeadLabelFade</include>
 				</control>
 				
 				<control type="group" id="289">
