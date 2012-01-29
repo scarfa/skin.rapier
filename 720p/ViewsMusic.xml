@@ -127,7 +127,7 @@
 							<texture background="true">$INFO[ListItem.StarRating]</texture>
 							<aspectratio align="left">keep</aspectratio>
 							<visible>!Skin.HasSetting(DoNotUseStarRatingMusic)</visible>
-							<animation effect="fade" end="70" condition="true">Conditional</animation>
+							<include>StarRatingFadeAnim</include>
 						</control>
 						<control type="label">
 							<description>Year</description>
@@ -274,7 +274,7 @@
 							<texture background="true">$INFO[ListItem.StarRating]</texture>
 							<aspectratio align="left">keep</aspectratio>
 							<visible>!Skin.HasSetting(DoNotUseStarRatingMusic)</visible>
-							<animation effect="fade" end="70" condition="true">Conditional</animation>
+							<include>StarRatingFadeAnim</include>
 						</control>
 						<control type="label">
 							<description>Album</description>
@@ -566,7 +566,7 @@
 							<texture background="true">$INFO[ListItem.StarRating]</texture>
 							<aspectratio align="left">keep</aspectratio>
 							<visible>!Skin.HasSetting(DoNotUseStarRatingMusic)</visible>
-							<animation effect="fade" end="70" condition="true">Conditional</animation>
+							<include>StarRatingFadeAnim</include>
 						</control>
 						<control type="label">
 							<description>Year</description>
@@ -723,7 +723,7 @@
 							<texture background="true">$INFO[ListItem.StarRating]</texture>
 							<aspectratio align="left">keep</aspectratio>
 							<visible>!Skin.HasSetting(DoNotUseStarRatingMusic)</visible>
-							<animation effect="fade" end="70" condition="true">Conditional</animation>
+							<include>StarRatingFadeAnim</include>
 						</control>
 						<control type="label">
 							<description>Album</description>
@@ -1333,22 +1333,22 @@
 						<description>Icon</description>
 						<posx>5</posx>
 						<posy>6</posy>
-						<width>23</width>
-						<height>23</height>
+						<width>24</width>
+						<height>24</height>
 						<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 						<aspectratio>stretch</aspectratio>
-						<include>ListViewIconFadeAnim</include>
+						<include>ListViewOverlayFadeAnim</include>
 					</control>
 					<control type="image">
 						<description>Icon</description>
 						<posx>5</posx>
 						<posy>6</posy>
-						<width>23</width>
-						<height>23</height>
+						<width>24</width>
+						<height>24</height>
 						<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 						<aspectratio>stretch</aspectratio>
 						<visible>Container.Content(Artists)</visible>
-						<include>ListViewIconFadeAnim</include>
+						<include>ListViewOverlayFadeAnim</include>
 					</control>	
 					<control type="label">
 						<description>Label</description>
@@ -1382,8 +1382,8 @@
 						<height>16</height>		
 						<texture background="true">$INFO[ListItem.StarRating]</texture>
 						<aspectratio align="right">keep</aspectratio>
-						<animation effect="fade" end="70" condition="true">Conditional</animation>
 						<visible>!Skin.HasSetting(DoNotUseStarRatingMusic) + !IsEmpty(ListItem.Album)</visible>
+						<include>StarRatingFadeAnim</include>
 					</control>
 				</itemlayout>		
 				<focusedlayout height="37">	
@@ -1419,8 +1419,8 @@
 							<description>Icon</description>
 							<posx>5</posx>
 							<posy>6</posy>
-							<width>23</width>
-							<height>23</height>
+							<width>24</width>
+							<height>24</height>
 							<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 							<aspectratio>stretch</aspectratio>
 						</control>
@@ -1428,8 +1428,8 @@
 							<description>Icon</description>
 							<posx>5</posx>
 							<posy>6</posy>
-							<width>23</width>
-							<height>23</height>
+							<width>24</width>
+							<height>24</height>
 							<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 							<aspectratio>stretch</aspectratio>
 							<visible>Container.Content(Artists)</visible>
@@ -1468,7 +1468,6 @@
 							<height>16</height>		
 							<texture background="true">$INFO[ListItem.StarRating]</texture>
 							<aspectratio align="right">keep</aspectratio>
-							<animation effect="fade" end="70" condition="true">Conditional</animation>
 							<visible>!Skin.HasSetting(DoNotUseStarRatingMusic) + !IsEmpty(ListItem.Album)</visible>
 						</control>
 					</control>
@@ -2034,22 +2033,22 @@
 				<description>Icon</description>
 				<posx>5</posx>
 				<posy>6</posy>
-				<width>23</width>
-				<height>23</height>
+				<width>24</width>
+				<height>24</height>
 				<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 				<aspectratio>stretch</aspectratio>
-				<include>ListViewIconFadeAnim</include>
+				<include>ListViewOverlayFadeAnim</include>
 			</control>
 			<control type="image">
 				<description>Icon</description>
 				<posx>5</posx>
 				<posy>6</posy>
-				<width>23</width>
-				<height>23</height>
+				<width>24</width>
+				<height>24</height>
 				<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>Container.Content(Artists)</visible>
-				<include>ListViewIconFadeAnim</include>
+				<include>ListViewOverlayFadeAnim</include>
 			</control>							
 			<control type="label">
 				<description>Label</description>
@@ -2083,8 +2082,8 @@
 				<height>16</height>		
 				<texture background="true">$INFO[ListItem.StarRating]</texture>
 				<aspectratio align="right">keep</aspectratio>
-				<animation effect="fade" end="70" condition="true">Conditional</animation>
 				<visible>!Skin.HasSetting(DoNotUseStarRatingMusic) + !IsEmpty(ListItem.Album)</visible>
+				<include>StarRatingFadeAnim</include>
 			</control>	
 		</itemlayout>	
 	</include>
@@ -2123,8 +2122,8 @@
 					<description>Icon</description>
 					<posx>5</posx>
 					<posy>6</posy>
-					<width>23</width>
-					<height>23</height>
+					<width>24</width>
+					<height>24</height>
 					<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>
@@ -2132,8 +2131,8 @@
 					<description>Icon</description>
 					<posx>5</posx>
 					<posy>6</posy>
-					<width>23</width>
-					<height>23</height>
+					<width>24</width>
+					<height>24</height>
 					<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 					<aspectratio>stretch</aspectratio>
 					<visible>Container.Content(Artists)</visible>
@@ -2171,7 +2170,6 @@
 					<height>16</height>		
 					<texture background="true">$INFO[ListItem.StarRating]</texture>
 					<aspectratio align="right">keep</aspectratio>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
 					<visible>!Skin.HasSetting(DoNotUseStarRatingMusic) + !IsEmpty(ListItem.Album)</visible>
 				</control>
 			</control>
@@ -2279,8 +2277,8 @@
 					<height>16</height>		
 					<texture background="true">$INFO[ListItem.StarRating]</texture>
 					<aspectratio align="right">keep</aspectratio>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
 					<visible>!IsEmpty(ListItem.Album) + !Skin.HasSetting(DoNotUseStarRatingMusic)</visible>
+					<include>StarRatingFadeAnim</include>
 				</control>
 			</control>
 			<control type="group">
@@ -2485,7 +2483,6 @@
 					<height>16</height>		
 					<texture background="true">$INFO[ListItem.StarRating]</texture>
 					<aspectratio align="right">keep</aspectratio>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
 					<visible>!IsEmpty(ListItem.Album) + !Skin.HasSetting(DoNotUseStarRatingMusic)</visible>
 				</control>
 			</control>
@@ -2536,7 +2533,6 @@
 					<height>16</height>		
 					<texture background="true">$INFO[ListItem.StarRating]</texture>
 					<aspectratio align="right">keep</aspectratio>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
 					<visible>!IsEmpty(ListItem.Album) + !Skin.HasSetting(DoNotUseStarRatingMusic)</visible>
 				</control>
 			</control>
@@ -2809,11 +2805,11 @@
 						<description>Icon</description>
 						<posx>5</posx>
 						<posy>6</posy>
-						<width>23</width>
-						<height>23</height>
+						<width>24</width>
+						<height>24</height>
 						<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 						<aspectratio>stretch</aspectratio>
-						<include>ListViewIconFadeAnim</include>
+						<include>ListViewOverlayFadeAnim</include>
 					</control>					
 					<control type="label">
 						<description>Label</description>
@@ -2860,8 +2856,8 @@
 							<description>Icon</description>
 							<posx>5</posx>
 							<posy>6</posy>
-							<width>23</width>
-							<height>23</height>
+							<width>24</width>
+							<height>24</height>
 							<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 							<aspectratio>stretch</aspectratio>
 						</control>
@@ -3467,7 +3463,7 @@
 					<texture align="center">$INFO[ListItem.StarRating]</texture>
 					<aspectratio align="center">keep</aspectratio>
 					<visible>!IsEmpty(ListItem.Album) + !Skin.HasSetting(DoNotUseStarRatingMusic)</visible>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
+					<include>StarRatingFadeAnim</include>
 				</control>
 			</control>
 		</control>
@@ -3758,7 +3754,7 @@
 					<texture align="center">$INFO[ListItem.StarRating]</texture>
 					<aspectratio align="center">keep</aspectratio>
 					<visible>!Skin.HasSetting(DoNotUseStarRatingMusic)</visible>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
+					<include>StarRatingFadeAnim</include>
 				</control>
 			</control>
 		</control>

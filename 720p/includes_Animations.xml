@@ -434,12 +434,8 @@
 		<animation effect="fade" end="20" condition="true">Conditional</animation>
 	</include>
 	
-	<include name="ListViewIconFadeAnim">
-		<animation effect="fade" end="80" condition="true">Conditional</animation>
-	</include>
-	
 	<include name="ListViewOverlayFadeAnim">
-		<animation effect="fade" end="80" condition="true">Conditional</animation>
+		<animation effect="fade" end="75" condition="true">Conditional</animation>
 	</include>
 	
 	<include name="MediaInfoListScrollAnim">
@@ -511,7 +507,11 @@
 	<include name="WrapListInfoCoverGlowScrollAnim2">
 		<animation effect="fade" start="10" end="100" time="660">Visible</animation>
 	</include>
-		
+	
+	<include name="StarRatingFadeAnim">
+		<animation effect="fade" end="70" condition="true">Conditional</animation>
+	</include>
+	
 	<include name="FSMediaInfoOpenCloseAnim">	
 		<animation effect="fade" start="0" end="100" time="300">VisibleChange</animation>
 		<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>

@@ -115,7 +115,7 @@
 							<texture background="true">$INFO[ListItem.StarRating]</texture>
 							<aspectratio align="left">keep</aspectratio>
 							<visible>!Skin.HasSetting(DoNotUseStarRatingEpisodes)</visible>
-							<animation effect="fade" end="70" condition="true">Conditional</animation>
+							<include>StarRatingFadeAnim</include>
 						</control>
 						<control type="label">
 							<description>Rating</description>
@@ -183,7 +183,18 @@
 							<texture background="true">$INFO[ListItem.Overlay]</texture>
 							<aspectratio align="right">keep</aspectratio>
 							<visible>!Skin.HasSetting(HideEpisodesWideListOverlay)</visible>
-							<animation effect="fade" end="70" condition="true">Conditional</animation>
+							<include>ListViewOverlayFadeAnim</include>
+						</control>
+						<control type="image">
+							<description>Watched Partial</description>
+							<posx>1160</posx>
+							<posy>3</posy>
+							<width>22</width>
+							<height>22</height>
+							<texture background="true">$VAR[WatchedPartial]</texture>
+							<aspectratio align="right">keep</aspectratio>
+							<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(HideEpisodesWideListOverlay)</visible>
+							<include>ListViewOverlayFadeAnim</include>
 						</control>
 					</control>
 				</itemlayout>		
@@ -282,7 +293,7 @@
 							<texture background="true">$INFO[ListItem.StarRating]</texture>
 							<aspectratio align="left">keep</aspectratio>
 							<visible>!Skin.HasSetting(DoNotUseStarRatingEpisodes)</visible>
-							<animation effect="fade" end="70" condition="true">Conditional</animation>
+							<include>StarRatingFadeAnim</include>
 						</control>
 						<control type="label">
 							<description>Rating</description>
@@ -350,7 +361,16 @@
 							<texture background="true">$INFO[ListItem.Overlay]</texture>
 							<aspectratio align="right">keep</aspectratio>
 							<visible>!Skin.HasSetting(HideEpisodesWideListOverlay)</visible>
-							<animation effect="fade" end="70" condition="true">Conditional</animation>
+						</control>
+						<control type="image">
+							<description>Watched Partial</description>
+							<posx>1160</posx>
+							<posy>3</posy>
+							<width>22</width>
+							<height>22</height>
+							<texture background="true">$VAR[WatchedPartialAlt]</texture>
+							<aspectratio align="right">keep</aspectratio>
+							<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(HideEpisodesWideListOverlay)</visible>
 						</control>
 					</control>
 				</focusedlayout>		
@@ -573,12 +593,12 @@
 						<description>Icon</description>
 						<posx>5</posx>
 						<posy>6</posy>
-						<width>23</width>
-						<height>23</height>
+						<width>24</width>
+						<height>24</height>
 						<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 						<aspectratio>stretch</aspectratio>
 						<visible>IsEmpty(ListItem.Title)</visible>
-						<include>ListViewIconFadeAnim</include>
+						<include>ListViewOverlayFadeAnim</include>
 					</control>	
 					<control type="label">
 						<description>Label</description>
@@ -613,18 +633,30 @@
 						<texture background="true">$INFO[ListItem.StarRating]</texture>
 						<aspectratio align="right">keep</aspectratio>
 						<visible>!IsEmpty(ListItem.Title) + !Skin.HasSetting(DoNotUseStarRatingEpisodes)</visible>
-						<animation effect="fade" end="70" condition="true">Conditional</animation>
+						<include>StarRatingFadeAnim</include>
 					</control>
 					<control type="image">
 						<description>Overlay</description>
 						<posx>5</posx>
 						<posy>6</posy>
-						<width>23</width>
-						<height>23</height>
-						<texture background="true">watched/tv/$INFO[ListItem.Overlay]</texture>
+						<width>24</width>
+						<height>24</height>
+						<texture background="true">watched/videos/$INFO[ListItem.Overlay]</texture>
 						<aspectratio>stretch</aspectratio>
-						<include>ListViewIconFadeAnim</include>
-					</control>	
+						<visible>!ListItem.IsResumable | StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+						<include>ListViewOverlayFadeAnim</include>
+					</control>
+					<control type="image">
+						<description>Watched Partial</description>
+						<posx>5</posx>
+						<posy>6</posy>
+						<width>24</width>
+						<height>24</height>
+						<texture background="true">$VAR[WatchedPartial]</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+						<include>ListViewOverlayFadeAnim</include>
+					</control>
 				</itemlayout>		
 				<focusedlayout height="37">	
 					<control type="image">
@@ -659,8 +691,8 @@
 							<description>Icon</description>
 							<posx>5</posx>
 							<posy>6</posy>
-							<width>23</width>
-							<height>23</height>
+							<width>24</width>
+							<height>24</height>
 							<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 							<aspectratio>stretch</aspectratio>
 							<visible>IsEmpty(ListItem.Title)</visible>
@@ -699,17 +731,27 @@
 							<texture background="true">$INFO[ListItem.StarRating]</texture>
 							<aspectratio align="right">keep</aspectratio>
 							<visible>!IsEmpty(ListItem.Title) + !Skin.HasSetting(DoNotUseStarRatingEpisodes)</visible>
-							<animation effect="fade" end="70" condition="true">Conditional</animation>
 						</control>
 						<control type="image">
 							<description>Overlay</description>
 							<posx>5</posx>
 							<posy>6</posy>
-							<width>23</width>
-							<height>23</height>
-							<texture background="true">watched/tv/$INFO[ListItem.Overlay]</texture>
+							<width>24</width>
+							<height>24</height>
+							<texture background="true">watched/videos/$INFO[ListItem.Overlay]</texture>
 							<aspectratio>stretch</aspectratio>
-						</control>	
+							<visible>!ListItem.IsResumable | StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+						</control>
+						<control type="image">
+							<description>Watched Partial</description>
+							<posx>5</posx>
+							<posy>6</posy>
+							<width>24</width>
+							<height>24</height>
+							<texture background="true">$VAR[WatchedPartial]</texture>
+							<aspectratio>stretch</aspectratio>
+							<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+						</control>
 					</control>
 				</focusedlayout>		
 			</control>	
@@ -964,12 +1006,12 @@
 				<description>Icon</description>
 				<posx>5</posx>
 				<posy>6</posy>
-				<width>23</width>
-				<height>23</height>
+				<width>24</width>
+				<height>24</height>
 				<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>IsEmpty(ListItem.Title)</visible>
-				<include>ListViewIconFadeAnim</include>
+				<include>ListViewOverlayFadeAnim</include>
 			</control>					
 			<control type="label">
 				<description>Label</description>
@@ -1004,18 +1046,30 @@
 				<texture background="true">$INFO[ListItem.StarRating]</texture>
 				<aspectratio align="right">keep</aspectratio>
 				<visible>!IsEmpty(ListItem.Title) + !Skin.HasSetting(DoNotUseStarRatingEpisodes)</visible>
-				<animation effect="fade" end="70" condition="true">Conditional</animation>
+				<include>StarRatingFadeAnim</include>
 			</control>
 			<control type="image">
 				<description>Overlay</description>
 				<posx>5</posx>
 				<posy>6</posy>
-				<width>23</width>
-				<height>23</height>
-				<texture background="true">watched/tv/$INFO[ListItem.Overlay]</texture>
+				<width>24</width>
+				<height>24</height>
+				<texture background="true">watched/videos/$INFO[ListItem.Overlay]</texture>
 				<aspectratio>stretch</aspectratio>
-				<include>ListViewIconFadeAnim</include>
-			</control>	
+				<visible>!ListItem.IsResumable | StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+				<include>ListViewOverlayFadeAnim</include>
+			</control>
+			<control type="image">
+				<description>Watched Partial</description>
+				<posx>5</posx>
+				<posy>6</posy>
+				<width>24</width>
+				<height>24</height>
+				<texture background="true">$VAR[WatchedPartial]</texture>
+				<aspectratio>stretch</aspectratio>
+				<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+				<include>ListViewOverlayFadeAnim</include>
+			</control>
 		</itemlayout>	
 	</include>
 	
@@ -1053,8 +1107,8 @@
 					<description>Icon</description>
 					<posx>5</posx>
 					<posy>6</posy>
-					<width>23</width>
-					<height>23</height>
+					<width>24</width>
+					<height>24</height>
 					<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 					<aspectratio>stretch</aspectratio>
 					<visible>IsEmpty(ListItem.Title)</visible>
@@ -1093,16 +1147,26 @@
 					<texture background="true">$INFO[ListItem.StarRating]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!IsEmpty(ListItem.Title) + !Skin.HasSetting(DoNotUseStarRatingEpisodes)</visible>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
-					<description>Overlay</description>
+				<description>Overlay</description>
 					<posx>5</posx>
 					<posy>6</posy>
-					<width>23</width>
-					<height>23</height>
-					<texture background="true">watched/tv/$INFO[ListItem.Overlay]</texture>
+					<width>24</width>
+					<height>24</height>
+					<texture background="true">watched/videos/$INFO[ListItem.Overlay]</texture>
 					<aspectratio>stretch</aspectratio>
+					<visible>!ListItem.IsResumable | StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+				</control>
+				<control type="image">
+					<description>Watched Partial</description>
+					<posx>5</posx>
+					<posy>6</posy>
+					<width>24</width>
+					<height>24</height>
+					<texture background="true">$VAR[WatchedPartial]</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
 				</control>	
 			</control>
 		</focusedlayout>					
@@ -1196,19 +1260,30 @@
 				<texture background="true">$INFO[ListItem.StarRating]</texture>
 				<aspectratio align="right">keep</aspectratio>
 				<visible>!IsEmpty(ListItem.Title) + !Skin.HasSetting(DoNotUseStarRatingEpisodes)</visible>
-				<animation effect="fade" end="70" condition="true">Conditional</animation>
+				<include>StarRatingFadeAnim</include>
 			</control>
 			<control type="image">
 				<description>Overlay</description>
-				<posx>589</posx>
-				<posy>41</posy>
-				<width>20</width>
-				<height>20</height>
+				<posx>586</posx>
+				<posy>39</posy>
+				<width>24</width>
+				<height>24</height>
 				<texture background="true">$INFO[ListItem.Overlay]</texture>
 				<aspectratio align="right">keep</aspectratio>
 				<visible>!Skin.HasSetting(HideEpisodesListInfo2Overlay)</visible>
 				<include>ListViewOverlayFadeAnim</include>
 			</control>	
+			<control type="image">
+				<description>Watched Partial</description>
+				<posx>586</posx>
+				<posy>39</posy>
+				<width>24</width>
+				<height>24</height>
+				<texture background="true">$VAR[WatchedPartial]</texture>
+				<aspectratio align="right">keep</aspectratio>
+				<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(HideEpisodesListInfo2Overlay)</visible>
+				<include>ListViewOverlayFadeAnim</include>
+			</control>
 		</itemlayout>		
 	</include>
 	
@@ -1312,18 +1387,26 @@
 					<texture background="true">$INFO[ListItem.StarRating]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!IsEmpty(ListItem.Title) + !Skin.HasSetting(DoNotUseStarRatingEpisodes)</visible>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
-					<description>Overlay</description>
-					<posx>589</posx>
-					<posy>41</posy>
-					<width>20</width>
-					<height>20</height>
+				<description>Overlay</description>
+					<posx>586</posx>
+					<posy>39</posy>
+					<width>24</width>
+					<height>24</height>
 					<texture background="true">$INFO[ListItem.Overlay]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!Skin.HasSetting(HideEpisodesListInfo2Overlay)</visible>
-					<include>ListViewOverlayFadeAnim</include>
+				</control>	
+				<control type="image">
+					<description>Watched Partial</description>
+					<posx>586</posx>
+					<posy>39</posy>
+					<width>24</width>
+					<height>24</height>
+					<texture background="true">$VAR[WatchedPartial]</texture>
+					<aspectratio align="right">keep</aspectratio>
+					<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(HideEpisodesListInfo2Overlay)</visible>
 				</control>	
 			</control>
 		</focusedlayout>					
@@ -1624,12 +1707,12 @@
 						<description>Icon</description>
 						<posx>5</posx>
 						<posy>6</posy>
-						<width>23</width>
-						<height>23</height>
+						<width>24</width>
+						<height>24</height>
 						<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 						<aspectratio>stretch</aspectratio>
 						<visible>IsEmpty(ListItem.Title)</visible>
-						<include>ListViewIconFadeAnim</include>
+						<include>ListViewOverlayFadeAnim</include>
 					</control>					
 					<control type="label">
 						<description>Label</description>
@@ -1646,11 +1729,23 @@
 						<description>Overlay</description>
 						<posx>5</posx>
 						<posy>6</posy>
-						<width>23</width>
-						<height>23</height>
-						<texture background="true">watched/tv/$INFO[ListItem.Overlay]</texture>
+						<width>24</width>
+						<height>24</height>
+						<texture background="true">watched/videos/$INFO[ListItem.Overlay]</texture>
 						<aspectratio>stretch</aspectratio>
-						<include>ListViewIconFadeAnim</include>
+						<visible>!ListItem.IsResumable | StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+						<include>ListViewOverlayFadeAnim</include>
+					</control>	
+					<control type="image">
+						<description>Watched Partial</description>
+						<posx>5</posx>
+						<posy>6</posy>
+						<width>24</width>
+						<height>24</height>
+						<texture background="true">$VAR[WatchedPartial]</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+						<include>ListViewOverlayFadeAnim</include>
 					</control>	
 				</itemlayout>		
 				<focusedlayout height="37">	
@@ -1686,8 +1781,8 @@
 							<description>Icon</description>
 							<posx>5</posx>
 							<posy>6</posy>
-							<width>23</width>
-							<height>23</height>
+							<width>24</width>
+							<height>24</height>
 							<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 							<aspectratio>stretch</aspectratio>
 							<visible>IsEmpty(ListItem.Title)</visible>
@@ -1708,10 +1803,21 @@
 							<description>Overlay</description>
 							<posx>5</posx>
 							<posy>6</posy>
-							<width>23</width>
-							<height>23</height>
-							<texture background="true">watched/tv/$INFO[ListItem.Overlay]</texture>
+							<width>24</width>
+							<height>24</height>
+							<texture background="true">watched/videos/$INFO[ListItem.Overlay]</texture>
 							<aspectratio>stretch</aspectratio>
+							<visible>!ListItem.IsResumable | StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+						</control>	
+						<control type="image">
+							<description>Watched Partial</description>
+							<posx>5</posx>
+							<posy>6</posy>
+							<width>24</width>
+							<height>24</height>
+							<texture background="true">$VAR[WatchedPartial]</texture>
+							<aspectratio>stretch</aspectratio>
+							<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
 						</control>
 					</control>
 				</focusedlayout>		

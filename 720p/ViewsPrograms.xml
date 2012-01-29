@@ -364,11 +364,11 @@
 				<description>Icon</description>
 				<posx>5</posx>
 				<posy>6</posy>
-				<width>23</width>
-				<height>23</height>
+				<width>24</width>
+				<height>24</height>
 				<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 				<aspectratio>stretch</aspectratio>
-				<include>ListViewIconFadeAnim</include>
+				<include>ListViewOverlayFadeAnim</include>
 			</control>		
 			<control type="label">
 				<description>Label</description>
@@ -422,8 +422,8 @@
 					<description>Icon</description>
 					<posx>5</posx>
 					<posy>6</posy>
-					<width>23</width>
-					<height>23</height>
+					<width>24</width>
+					<height>24</height>
 					<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>

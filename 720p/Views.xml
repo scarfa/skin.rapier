@@ -10,6 +10,28 @@
 		<value condition="!Skin.HasSetting(UseTVShowsPosterCover) + Skin.HasSetting(UseTVShowsLocalBannerThumb)">$INFO[ListItem.FileNameAndPath]banner.jpg</value>
 		<value>$INFO[ListItem.Thumb]</value>
 	</variable>
+	
+	<variable name="WatchedPartial">
+		<value condition="!IntegerGreaterThan(ListItem.PercentPlayed,20)">watched/watched-10pct.png</value>
+		<value condition="IntegerGreaterThan(ListItem.PercentPlayed,20) + !IntegerGreaterThan(ListItem.PercentPlayed,40)">watched/watched-30pct.png</value>
+		<value condition="IntegerGreaterThan(ListItem.PercentPlayed,40) + !IntegerGreaterThan(ListItem.PercentPlayed,60)">watched/watched-50pct.png</value>
+		<value condition="IntegerGreaterThan(ListItem.PercentPlayed,60) + !IntegerGreaterThan(ListItem.PercentPlayed,80)">watched/watched-70pct.png</value>
+		<value condition="IntegerGreaterThan(ListItem.PercentPlayed,80)">watched/watched-90pct.png</value>
+	</variable>
+	
+	<variable name="WatchedPartialAlt">
+		<value condition="!IntegerGreaterThan(ListItem.PercentPlayed,20)">watched/watched-10pct-alt.png</value>
+		<value condition="IntegerGreaterThan(ListItem.PercentPlayed,20) + !IntegerGreaterThan(ListItem.PercentPlayed,40)">watched/watched-30pct-alt.png</value>
+		<value condition="IntegerGreaterThan(ListItem.PercentPlayed,40) + !IntegerGreaterThan(ListItem.PercentPlayed,60)">watched/watched-50pct-alt.png</value>
+		<value condition="IntegerGreaterThan(ListItem.PercentPlayed,60) + !IntegerGreaterThan(ListItem.PercentPlayed,80)">watched/watched-70pct-alt.png</value>
+		<value condition="IntegerGreaterThan(ListItem.PercentPlayed,80)">watched/watched-90pct-alt.png</value>
+	</variable>
+	
+	<variable name="ListViewOverlay">
+		<value condition="[!ListItem.IsResumable | StringCompare(ListItem.Overlay,OverlayWatched.png)] + [Container.Content(Movies) | Container.Content(Episodes) | Window.IsActive(VideoPlaylist)]">watched/videos/$INFO[ListItem.Overlay]</value>
+		<value condition="Container.Content(Seasons)">watched/seasons/$INFO[ListItem.Overlay]</value>
+		<value condition="Container.Content(TVShows)">watched/tv/$INFO[ListItem.Overlay]</value>
+	</variable>
 
 	<include name="DVDThumbsStyleCoverImage">
 		<control type="image">
@@ -55,15 +77,26 @@
 		</control>
 	</include>
 
-	<include name="DVDThumbsStyleOverlayImage">
+	<include name="DVDThumbsStyleOverlayImage">	
 		<control type="image">
+			<description>Overlay</description>
 			<posx>90</posx>
 			<posy>133</posy>
 			<width>24</width>
 			<height>24</height>
 			<texture background="true">$INFO[ListItem.Overlay]</texture>
 			<aspectratio>stretch</aspectratio>
-			<visible>!Skin.HasSetting(HideMoviesListInfo3Overlay)</visible>
+			<visible>!Skin.HasSetting(HideMoviesThumbsInfoOverlay)</visible>
+		</control>
+		<control type="image">
+			<description>Watched Partial</description>
+			<posx>90</posx>
+			<posy>133</posy>
+			<width>24</width>
+			<height>24</height>
+			<texture background="true">$VAR[WatchedPartial]</texture>
+			<aspectratio>stretch</aspectratio>
+			<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(HideMoviesThumbsInfoOverlay)</visible>
 		</control>
 	</include>
 
@@ -301,7 +334,17 @@
 			<texture background="true">$INFO[ListItem.Overlay]</texture>
 			<aspectratio>stretch</aspectratio>
 			<visible>!Skin.HasSetting(HideMoviesWallOverlay)</visible>
-		</control>	
+		</control>
+		<control type="image">
+			<description>Watched Partial</description>
+			<posx>135</posx>
+			<posy>200</posy>
+			<width>24</width>
+			<height>24</height>
+			<texture background="true">$VAR[WatchedPartialAlt]</texture>
+			<aspectratio>stretch</aspectratio>
+			<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(HideMoviesWallOverlay)</visible>
+		</control>
 	</include>
 
 	<include name="AlbumWallCoverImage">

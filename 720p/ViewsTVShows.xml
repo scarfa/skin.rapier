@@ -76,7 +76,6 @@
 							<texture background="true">$INFO[ListItem.Overlay]</texture>
 							<aspectratio align="right">keep</aspectratio>
 							<visible>!Skin.HasSetting(HideTVShowsWideIconOverlay)</visible>
-							<animation effect="fade" end="70" condition="true">Conditional</animation>
 						</control>
 					</control>
 					<control type="group">
@@ -98,7 +97,6 @@
 							<texture background="true">$INFO[ListItem.Overlay]</texture>
 							<aspectratio align="right">keep</aspectratio>
 							<visible>!Skin.HasSetting(HideTVShowsWideIconOverlay)</visible>
-							<animation effect="fade" end="70" condition="true">Conditional</animation>
 						</control>
 					</control>
 				</itemlayout>															
@@ -156,7 +154,6 @@
 							<texture background="true">$INFO[ListItem.Overlay]</texture>
 							<aspectratio align="right">keep</aspectratio>
 							<visible>!Skin.HasSetting(HideTVShowsWideIconOverlay)</visible>
-							<animation effect="fade" end="70" condition="true">Conditional</animation>
 						</control>
 					</control>
 					<control type="group">
@@ -178,7 +175,6 @@
 							<texture background="true">$INFO[ListItem.Overlay]</texture>
 							<aspectratio align="right">keep</aspectratio>
 							<visible>!Skin.HasSetting(HideTVShowsWideIconOverlay)</visible>
-							<animation effect="fade" end="70" condition="true">Conditional</animation>
 						</control>
 					</control>	
 				</focusedlayout>			
@@ -370,7 +366,7 @@
 					<texture background="true">$INFO[ListItem.StarRating]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!Skin.HasSetting(DoNotUseStarRatingTVShows)</visible>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
+					<include>StarRatingFadeAnim</include>
 				</control>
 				<control type="label">
 					<description>Genre</description>
@@ -407,7 +403,7 @@
 					<texture background="true">$INFO[ListItem.Overlay]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!Skin.HasSetting(HideTVShowsWideListOverlay)</visible>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
+					<include>ListViewOverlayFadeAnim</include>
 				</control>
 			</control>
 		</itemlayout>
@@ -477,7 +473,7 @@
 					<texture background="true">$INFO[ListItem.StarRating]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!Skin.HasSetting(DoNotUseStarRatingTVShows)</visible>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
+					<include>StarRatingFadeAnim</include>
 				</control>
 				<control type="label">
 					<description>Genre</description>
@@ -514,7 +510,7 @@
 					<texture background="true">$INFO[ListItem.Overlay]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!Skin.HasSetting(HideTVShowsWideListOverlay)</visible>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
+					<include>ListViewOverlayFadeAnim</include>
 				</control>
 			</control>
 		</itemlayout>		
@@ -626,7 +622,7 @@
 					<texture background="true">$INFO[ListItem.StarRating]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!Skin.HasSetting(DoNotUseStarRatingTVShows)</visible>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
+					<include>StarRatingFadeAnim</include>
 				</control>
 				<control type="label">
 					<description>Genre</description>
@@ -663,7 +659,6 @@
 					<texture background="true">$INFO[ListItem.Overlay]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!Skin.HasSetting(HideTVShowsWideListOverlay)</visible>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
 				</control>
 			</control>
 		</focusedlayout>
@@ -754,7 +749,7 @@
 					<texture background="true">$INFO[ListItem.StarRating]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!Skin.HasSetting(DoNotUseStarRatingTVShows)</visible>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
+					<include>StarRatingFadeAnim</include>
 				</control>
 				<control type="label">
 					<description>Genre</description>
@@ -791,7 +786,6 @@
 					<texture background="true">$INFO[ListItem.Overlay]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!Skin.HasSetting(HideTVShowsWideListOverlay)</visible>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
 				</control>
 			</control>
 		</focusedlayout>		
@@ -882,7 +876,7 @@
 					<texture background="true">$INFO[ListItem.StarRating]</texture>
 					<aspectratio align="left">keep</aspectratio>
 					<visible>!Skin.HasSetting(DoNotUseStarRatingTVShows)</visible>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
+					<include>StarRatingFadeAnim</include>
 				</control>
 				<control type="label">
 					<description>Rating</description>
@@ -950,7 +944,7 @@
 					<texture background="true">$INFO[ListItem.Overlay]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!Skin.HasSetting(HideTVShowsWideListOverlay)</visible>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
+					<include>ListViewOverlayFadeAnim</include>
 				</control>
 			</control>
 		</itemlayout>		
@@ -1049,7 +1043,7 @@
 					<texture background="true">$INFO[ListItem.StarRating]</texture>
 					<aspectratio align="left">keep</aspectratio>
 					<visible>!Skin.HasSetting(DoNotUseStarRatingTVShows)</visible>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
+					<include>StarRatingFadeAnim</include>
 				</control>
 				<control type="label">
 					<description>Rating</description>
@@ -1117,7 +1111,6 @@
 					<texture background="true">$INFO[ListItem.Overlay]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!Skin.HasSetting(HideTVShowsWideListOverlay)</visible>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
 				</control>
 			</control>
 		</focusedlayout>		
@@ -1169,12 +1162,12 @@
 						<description>Icon</description>
 						<posx>5</posx>
 						<posy>6</posy>
-						<width>23</width>
-						<height>23</height>
+						<width>24</width>
+						<height>24</height>
 						<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 						<aspectratio>stretch</aspectratio>
 						<visible>IsEmpty(ListItem.Title)</visible>
-						<include>ListViewIconFadeAnim</include>
+						<include>ListViewOverlayFadeAnim</include>
 					</control>	
 					<control type="label">
 						<description>Label</description>
@@ -1209,17 +1202,17 @@
 						<texture background="true">$INFO[ListItem.StarRating]</texture>
 						<aspectratio align="right">keep</aspectratio>
 						<visible>!IsEmpty(ListItem.Title) + !Skin.HasSetting(DoNotUseStarRatingTVShows)</visible>
-						<animation effect="fade" end="70" condition="true">Conditional</animation>	
+						<include>StarRatingFadeAnim</include>
 					</control>
 					<control type="image">
 						<description>Overlay</description>
 						<posx>5</posx>
 						<posy>6</posy>
-						<width>23</width>
-						<height>23</height>
+						<width>24</width>
+						<height>24</height>
 						<texture background="true">watched/tv/$INFO[ListItem.Overlay]</texture>
 						<aspectratio>stretch</aspectratio>
-						<include>ListViewIconFadeAnim</include>
+						<include>ListViewOverlayFadeAnim</include>
 					</control>	
 				</itemlayout>		
 				<focusedlayout height="37">	
@@ -1255,8 +1248,8 @@
 							<description>Icon</description>
 							<posx>5</posx>
 							<posy>6</posy>
-							<width>23</width>
-							<height>23</height>
+							<width>24</width>
+							<height>24</height>
 							<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 							<aspectratio>stretch</aspectratio>
 							<visible>IsEmpty(ListItem.Title)</visible>
@@ -1295,14 +1288,13 @@
 							<texture background="true">$INFO[ListItem.StarRating]</texture>
 							<aspectratio align="right">keep</aspectratio>
 							<visible>!IsEmpty(ListItem.Title) + !Skin.HasSetting(DoNotUseStarRatingTVShows)</visible>
-							<animation effect="fade" end="70" condition="true">Conditional</animation>
 						</control>
 						<control type="image">
 							<description>Overlay</description>
 							<posx>5</posx>
 							<posy>6</posy>
-							<width>23</width>
-							<height>23</height>
+							<width>24</width>
+							<height>24</height>
 							<texture background="true">watched/tv/$INFO[ListItem.Overlay]</texture>
 							<aspectratio>stretch</aspectratio>
 						</control>	
@@ -1918,12 +1910,12 @@
 				<description>Icon</description>
 				<posx>5</posx>
 				<posy>6</posy>
-				<width>23</width>
-				<height>23</height>
+				<width>24</width>
+				<height>24</height>
 				<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>IsEmpty(ListItem.Title)</visible>
-				<include>ListViewIconFadeAnim</include>
+				<include>ListViewOverlayFadeAnim</include>
 			</control>					
 			<control type="label">
 				<description>Label</description>
@@ -1958,17 +1950,17 @@
 				<texture background="true">$INFO[ListItem.StarRating]</texture>
 				<aspectratio align="right">keep</aspectratio>
 				<visible>!IsEmpty(ListItem.Title) + !Skin.HasSetting(DoNotUseStarRatingTVShows)</visible>
-				<animation effect="fade" end="70" condition="true">Conditional</animation>
+				<include>StarRatingFadeAnim</include>
 			</control>
 			<control type="image">
 				<description>Overlay</description>
 				<posx>5</posx>
 				<posy>6</posy>
-				<width>23</width>
-				<height>23</height>
+				<width>24</width>
+				<height>24</height>
 				<texture background="true">watched/tv/$INFO[ListItem.Overlay]</texture>
 				<aspectratio>stretch</aspectratio>
-				<include>ListViewIconFadeAnim</include>
+				<include>ListViewOverlayFadeAnim</include>
 			</control>	
 		</itemlayout>
 	</include>
@@ -2007,8 +1999,8 @@
 					<description>Icon</description>
 					<posx>5</posx>
 					<posy>6</posy>
-					<width>23</width>
-					<height>23</height>
+					<width>24</width>
+					<height>24</height>
 					<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 					<aspectratio>stretch</aspectratio>
 					<visible>IsEmpty(ListItem.Title)</visible>
@@ -2047,14 +2039,13 @@
 					<texture background="true">$INFO[ListItem.StarRating]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!IsEmpty(ListItem.Title) + !Skin.HasSetting(DoNotUseStarRatingTVShows)</visible>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
 					<description>Overlay</description>
 					<posx>5</posx>
 					<posy>6</posy>
-					<width>23</width>
-					<height>23</height>
+					<width>24</width>
+					<height>24</height>
 					<texture background="true">watched/tv/$INFO[ListItem.Overlay]</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>	
@@ -2148,14 +2139,14 @@
 				<texture background="true">$INFO[ListItem.StarRating]</texture>
 				<aspectratio align="right">keep</aspectratio>
 				<visible>!IsEmpty(ListItem.Title) + !Skin.HasSetting(DoNotUseStarRatingTVShows)</visible>
-				<animation effect="fade" end="70" condition="true">Conditional</animation>
+				<include>StarRatingFadeAnim</include>
 			</control>
 			<control type="image">
 				<description>Overlay</description>
-				<posx>589</posx>
-				<posy>41</posy>
-				<width>20</width>
-				<height>20</height>
+				<posx>586</posx>
+				<posy>39</posy>
+				<width>24</width>
+				<height>24</height>
 				<texture background="true">$INFO[ListItem.Overlay]</texture>
 				<aspectratio align="right">keep</aspectratio>
 				<visible>!Skin.HasSetting(HideTVShowsListInfo2Overlay)</visible>
@@ -2263,19 +2254,17 @@
 					<texture background="true">$INFO[ListItem.StarRating]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!IsEmpty(ListItem.Title) + !Skin.HasSetting(DoNotUseStarRatingTVShows)</visible>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
 					<description>Overlay</description>
-					<posx>589</posx>
-					<posy>41</posy>
-					<width>20</width>
-					<height>20</height>
+					<posx>586</posx>
+					<posy>39</posy>
+					<width>24</width>
+					<height>24</height>
 					<texture background="true">$INFO[ListItem.Overlay]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!Skin.HasSetting(HideTVShowsListInfo2Overlay)</visible>
 					<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
-					<include>ListViewOverlayFadeAnim</include>
 				</control>
 			</control>
 		</focusedlayout>					
@@ -2342,7 +2331,7 @@
 					<texture background="true">$INFO[ListItem.StarRating]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!Skin.HasSetting(DoNotUseStarRatingTVShows)</visible>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
+					<include>StarRatingFadeAnim</include>
 				</control>
 				<control type="image">
 					<description>Overlay</description>
@@ -2353,7 +2342,7 @@
 					<texture background="true">$INFO[ListItem.Overlay]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!Skin.HasSetting(HideTVShowsListInfo2Overlay)</visible>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
+					<include>ListViewOverlayFadeAnim</include>
 				</control>	
 			</control>
 			<control type="group">
@@ -2376,7 +2365,7 @@
 					<texture background="true">$INFO[ListItem.StarRating]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!Skin.HasSetting(DoNotUseStarRatingTVShows)</visible>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
+					<include>StarRatingFadeAnim</include>
 				</control>
 				<control type="image">
 					<description>Overlay</description>
@@ -2387,7 +2376,7 @@
 					<texture background="true">$INFO[ListItem.Overlay]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!Skin.HasSetting(HideTVShowsListInfo2Overlay)</visible>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
+					<include>ListViewOverlayFadeAnim</include>
 				</control>
 			</control>
 		</itemlayout>	
@@ -2461,7 +2450,6 @@
 					<texture background="true">$INFO[ListItem.StarRating]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!Skin.HasSetting(DoNotUseStarRatingTVShows)</visible>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
 					<description>Overlay</description>
@@ -2472,7 +2460,6 @@
 					<texture background="true">$INFO[ListItem.Overlay]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!Skin.HasSetting(HideTVShowsListInfo2Overlay)</visible>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
 				</control>
 			</control>
 			<control type="group">
@@ -2496,7 +2483,6 @@
 					<texture background="true">$INFO[ListItem.StarRating]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!Skin.HasSetting(DoNotUseStarRatingTVShows)</visible>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
 					<description>Overlay</description>
@@ -2507,7 +2493,6 @@
 					<texture background="true">$INFO[ListItem.Overlay]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!Skin.HasSetting(HideTVShowsListInfo2Overlay)</visible>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
 				</control>
 			</control>
 		</focusedlayout>					
@@ -2820,7 +2805,6 @@
 					<texture background="true">$INFO[ListItem.Overlay]</texture>
 					<aspectratio>stretch</aspectratio>
 					<visible>!Skin.HasSetting(HideTVShowsThumbsInfoOverlay)</visible>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
 				</control>	
 			</itemlayout>
 			<focusedlayout width="129" height="172" condition="Container.Column(0) + Container.Row(0)">
@@ -2951,7 +2935,6 @@
 					<texture background="true">$INFO[ListItem.Overlay]</texture>
 					<aspectratio>stretch</aspectratio>
 					<visible>!Skin.HasSetting(HideTVShowsThumbsInfoOverlay)</visible>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
 				</control>	
 			</itemlayout>
 			<focusedlayout width="129" height="129" condition="Container.Column(0) + Container.Row(0)">

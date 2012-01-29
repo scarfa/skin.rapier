@@ -62,8 +62,8 @@
 						<control type="image">
 							<posx>5</posx>
 							<posy>6</posy>
-							<width>23</width>
-							<height>23</height>
+							<width>24</width>
+							<height>24</height>
 							<info>ListItem.Icon</info>
 						</control>
 						<control type="label">
@@ -86,8 +86,8 @@
 						<control type="image">
 							<posx>5</posx>
 							<posy>6</posy>
-							<width>23</width>
-							<height>23</height>
+							<width>24</width>
+							<height>24</height>
 							<info>ListItem.Icon</info>
 						</control>
 						<control type="label">
