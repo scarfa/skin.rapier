@@ -108,10 +108,10 @@
 <string id="31713">Add More Categories</string>
 <string id="31714">Category Icon</string>
 <string id="31715">Custom Category Icons</string>
-<string id="31716">Music Category Redirects To Files</string>
-<string id="31717">Music Category Redirects To Library</string>
-<string id="31718">Videos Category Redirects To Files</string>
-<string id="31719">Videos Category Redirects To Library</string>
+<string id="31716">Clicking Music Category Redirects To Files</string>
+<string id="31717">Clicking Music Category Redirects To Library</string>
+<string id="31718">Clicking Videos Category Redirects To Files</string>
+<string id="31719">Clicking Videos Category Redirects To Library</string>
 
 <!-- skin settings media -->
 <string id="31041">Hide Description</string>
