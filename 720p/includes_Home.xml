@@ -165,7 +165,27 @@
 	<include name="HomeSystemCustomBGPath">
 		<thumb>$INFO[Skin.String(CustomSystemBGPath)]</thumb>
 	</include>
-
+	
+	<include name="RedirectMusicCategoryFiles">
+		<label>$LOCALIZE[1214]</label>
+		<onclick>ActivateWindow(MusicFiles)</onclick>
+	</include>
+	
+	<include name="RedirectMusicCategoryLibrary">
+		<label>$LOCALIZE[14022]</label>
+		<onclick>ActivateWindow(MusicLibrary)</onclick>
+	</include>
+	
+	<include name="RedirectVideosCategoryFiles">
+		<label>$LOCALIZE[1214]</label>
+		<onclick>ActivateWindow(Videos,Files,Return)</onclick>
+	</include>
+	
+	<include name="RedirectVideosCategoryLibrary">
+		<label>$LOCALIZE[14022]</label>
+		<onclick>ActivateWindow(VideoLibrary)</onclick>
+	</include>
+	
 	<include name="HomePVRCategory">
 		<item id="50">
 			<description>PVR Category</description>
@@ -658,7 +678,8 @@
 					<icon>homecategories/$INFO[System.Language]/music-text-nofocus.png</icon>
 					<include condition="Skin.String(CustomMusicBGType,2) | Skin.String(CustomMusicBGType,3)">HomeMusicCustomBGPath</include>
 					<include condition="Skin.String(CustomMusicBGType,4)">HomeMusicFanartBGPath</include>
-					<onclick>ActivateWindow(MusicLibrary)</onclick>
+					<include condition="Skin.HasSetting(RedirectMusicCategoryFiles)">RedirectMusicCategoryFiles</include>
+					<include condition="!Skin.HasSetting(RedirectMusicCategoryFiles)">RedirectMusicCategoryLibrary</include>
 					<visible>!Skin.HasSetting(HideMusicCategory)</visible>
 				</item>
 
@@ -677,7 +698,8 @@
 					<icon>homecategories/$INFO[System.Language]/videos-text-nofocus.png</icon>
 					<include condition="Skin.String(CustomVideosBGType,2) | Skin.String(CustomVideosBGType,3)">HomeVideosCustomBGPath</include>
 					<include condition="Skin.String(CustomVideosBGType,4)">HomeVideosFanartBGPath</include>
-					<onclick>ActivateWindow(Videos,Files)</onclick>	
+					<include condition="!Skin.HasSetting(RedirectVideosCategoryLibrary)">RedirectVideosCategoryFiles</include>
+					<include condition="Skin.HasSetting(RedirectVideosCategoryLibrary)">RedirectVideosCategoryLibrary</include>
 					<visible>!Skin.HasSetting(HideVideosCategory)</visible>
 				</item>
 				<item id="3">
@@ -899,9 +921,9 @@
 				<include>HomeSubMenuItemLayout</include>
 				<content>
 					<item id="1">
-						<description>Files</description>
-						<label>$LOCALIZE[1214]</label>
-						<onclick>ActivateWindow(MusicFiles)</onclick>
+						<description>Files/Library</description>
+						<include condition="Skin.HasSetting(RedirectMusicCategoryFiles)">RedirectMusicCategoryLibrary</include>
+						<include condition="!Skin.HasSetting(RedirectMusicCategoryFiles)">RedirectMusicCategoryFiles</include>
 						<visible>!Skin.HasSetting(EditMusicSubMenuBtn1)</visible>
 					</item>
 					<item id="1">
@@ -999,9 +1021,9 @@
 				<include>HomeSubMenuItemLayout</include>
 				<content>
 					<item id="1">
-						<description>Library</description>
-						<label>$LOCALIZE[14022]</label>
-						<onclick>ActivateWindow(VideoLibrary)</onclick>
+						<description>Files/Library</description>
+						<include condition="!Skin.HasSetting(RedirectVideosCategoryLibrary)">RedirectVideosCategoryLibrary</include>
+						<include condition="Skin.HasSetting(RedirectVideosCategoryLibrary)">RedirectVideosCategoryFiles</include>
 						<visible>!Skin.HasSetting(EditVideosSubMenuBtn1)</visible>
 					</item>
 					<item id="1">

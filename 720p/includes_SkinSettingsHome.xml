@@ -32,6 +32,21 @@
 					<include>SettingsHeaderBtn</include>
 					<label>$LOCALIZE[31712]</label>
 				</control>
+				<control type="togglebutton" id="2021">
+					<description>Redirect Music Category To Files</description>
+					<include>SettingsContentRadioBtn</include>
+					<label>$LOCALIZE[31717]</label>
+					<altlabel>$LOCALIZE[31716]</altlabel>
+					<usealttexture>Skin.HasSetting(RedirectMusicCategoryFiles)</usealttexture>
+					<onclick>Skin.ToggleSetting(RedirectMusicCategoryFiles)</onclick>
+				</control>
+				<control type="togglebutton" id="2042">
+					<description>Redirect Videos Category To Library</description>
+					<include>SettingsContentRadioBtn</include>
+					<label>$LOCALIZE[31718]</label>
+					<altlabel>$LOCALIZE[31719]</altlabel>
+					<onclick>Skin.ToggleSetting(RedirectVideosCategoryLibrary)</onclick>
+				</control>
 				<control type="radiobutton" id="2009">
 					<description>Hide Categories</description>
 					<include>SettingsContentExpandBtn</include>
