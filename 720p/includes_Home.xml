@@ -2,12 +2,12 @@
 	<include name="XbmcLogo">
 		<control type="image">
 			<posx>10</posx>
-			<posy>9</posy>
-			<width>89</width>
-			<height>22</height>
+			<posy>11</posy>
+			<width>73</width>
+			<height>18</height>
 			<texture>xbmc-logo.png</texture>
 			<aspectratio>stretch</aspectratio>
-			<animation effect="fade" end="75" condition="true">Conditional</animation>
+			<animation effect="fade" end="80" condition="true">Conditional</animation>
 		</control>
 	</include>	
 
@@ -2532,11 +2532,11 @@
 	<include name="RSSFeed">
 		<control type="group">
 			<posy>9</posy>
-			<posx>109</posx>
+			<posx>100</posx>
 
 			<control type="rss">
 				<description>RSS Feed</description>
-				<width>875</width>
+				<width>885</width>
 				<height>44</height>
 				<font>RSSFont</font>
 				<urlset>1</urlset>
@@ -2548,7 +2548,7 @@
 
 			<control type="rss">
 				<description>RSS Feed</description>
-				<width>750</width>
+				<width>760</width>
 				<height>44</height>
 				<font>RSSFont</font>
 				<urlset>1</urlset>
@@ -2560,7 +2560,7 @@
 
 			<control type="rss">
 				<description>RSS Feed</description>
-				<width>815</width>
+				<width>825</width>
 				<height>44</height>
 				<font>RSSFont</font>
 				<urlset>1</urlset>
@@ -2572,7 +2572,7 @@
 
 			<control type="rss">
 				<description>RSS Feed</description>
-				<width>835</width>
+				<width>845</width>
 				<height>44</height>
 				<font>RSSFont</font>
 				<urlset>1</urlset>
@@ -2584,7 +2584,7 @@
 
 			<control type="rss">
 				<description>RSS Feed</description>
-				<width>710</width>
+				<width>720</width>
 				<height>44</height>
 				<font>RSSFont</font>
 				<urlset>1</urlset>
@@ -2596,7 +2596,7 @@
 
 			<control type="rss">
 				<description>RSS Feed</description>
-				<width>775</width>
+				<width>785</width>
 				<height>44</height>
 				<font>RSSFont</font>
 				<urlset>1</urlset>
