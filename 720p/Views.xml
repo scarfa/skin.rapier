@@ -741,62 +741,77 @@
 	</include>
 
 	<variable name="LiveTVListInfoCoverImage">
-		<value condition="Control.IsVisible(11) | Control.IsVisible(13)">pvr\pvr-background.jpg</value>
-		<value condition="Control.IsVisible(12)">pvr\pvr-radio-background.jpg</value>
+		<value condition="Skin.String(ViewsPVR,1) | Skin.String(ViewsPVR,6)">pvr\pvr-background.jpg</value>
+		<value condition="Skin.String(ViewsPVR,2)">pvr\pvr-radio-background.jpg</value>
 	</variable>
 
 	<variable name="LiveTVListInfoLabel1">
-		<value condition="Control.IsVisible(11) | Control.IsVisible(12)">$LOCALIZE[19030]:</value>
-		<value condition="Control.IsVisible(13)">$LOCALIZE[369]:</value>
+		<value condition="Skin.String(ViewsPVR,1) | Skin.String(ViewsPVR,2)">$LOCALIZE[19030]:</value>
+		<value condition="Skin.String(ViewsPVR,6)">$LOCALIZE[369]:</value>
 	</variable>
 
 	<variable name="LiveTVListInfoLabel1Val">
-		<value condition="Control.IsVisible(11) | Control.IsVisible(12)">$INFO[ListItem.Title]</value>
-		<value condition="Control.IsVisible(13)">$INFO[ListItem.Label]</value>
+		<value condition="Skin.String(ViewsPVR,1) | Skin.String(ViewsPVR,2)">$INFO[ListItem.Title]</value>
+		<value condition="Skin.String(ViewsPVR,6)">$INFO[ListItem.Label]</value>
 	</variable>
 
 	<variable name="LiveTVListInfoLabel2">
-		<value condition="Control.IsVisible(11) | Control.IsVisible(12)">$LOCALIZE[19031]:</value>
-		<value condition="Control.IsVisible(13)">$LOCALIZE[515]:</value>
+		<value condition="Skin.String(ViewsPVR,1) | Skin.String(ViewsPVR,2)">$LOCALIZE[19031]:</value>
+		<value condition="Skin.String(ViewsPVR,6)">$LOCALIZE[515]:</value>
 	</variable>
 
 	<variable name="LiveTVListInfoLabel2Val">
-		<value condition="Control.IsVisible(11) | Control.IsVisible(12)">$INFO[ListItem.NextTitle]</value>
-		<value condition="Control.IsVisible(13)">$INFO[ListItem.Genre]</value>
+		<value condition="Skin.String(ViewsPVR,1) | Skin.String(ViewsPVR,2)">$INFO[ListItem.NextTitle]</value>
+		<value condition="Skin.String(ViewsPVR,6)">$INFO[ListItem.Genre]</value>
 	</variable>
 
 	<variable name="LiveTVListInfoItemLabel">
-		<value condition="Control.IsVisible(11) | Control.IsVisible(12)">$INFO[ListItem.Label]</value>
-		<value condition="Control.IsVisible(13)">$INFO[ListItem.ChannelNumber,,  ]$INFO[ListItem.Label]</value>
+		<value condition="Skin.String(ViewsPVR,1) | Skin.String(ViewsPVR,2)">$INFO[ListItem.Label]</value>
+		<value condition="Skin.String(ViewsPVR,6)">$INFO[ListItem.ChannelNumber,,  ]$INFO[ListItem.Label]</value>
 	</variable>
 
 	<variable name="LiveTVListInfoItemLabel2">
-		<value condition="Control.IsVisible(11) | Control.IsVisible(12)">$INFO[ListItem.Title]</value>
-		<value condition="Control.IsVisible(13)">$INFO[ListItem.StartDate]$INFO[ListItem.StartTime, - ]</value>
+		<value condition="Skin.String(ViewsPVR,1) | Skin.String(ViewsPVR,2)">$INFO[ListItem.Title]</value>
+		<value condition="Skin.String(ViewsPVR,6)">$INFO[ListItem.StartDate]$INFO[ListItem.StartTime, - ]</value>
 	</variable>
 
-	<variable name="LiveTVListInfoRecordImage">
-		<value condition="!Control.IsVisible(13) + ![ListItem.HasTimer | ListItem.IsRecording]">pvr/status_none.png</value>
-		<value condition="!Control.IsVisible(13) + ListItem.HasTimer">pvr/status_timer.png</value>
-		<value condition="!Control.IsVisible(13) + ListItem.IsRecording">pvr/status_recording.png</value>
-	</variable>
-
-	<variable name="LiveTVColumnRecordImage">
-		<value condition="ListItem.HasTimer">pvr/status_timer.png</value>
-		<value condition="ListItem.IsRecording">pvr/status_recording.png</value>
-	</variable>
-
-	<variable name="LiveTVColumnRecordImage2">
-		<value condition="![ListItem.HasTimer | ListItem.IsRecording] + !StringCompare(ListItem.ChannelName,) + !StringCompare(ListItem.Title,)">pvr/status_none.png</value>
-		<value condition="ListItem.HasTimer">pvr/status_timer.png</value>
-		<value condition="ListItem.IsRecording">pvr/status_recording.png</value>
-	</variable>
-
-	<variable name="LiveTVColumnRecordImage3">
-		<value condition="!StringCompare(ListItem.Label,$LOCALIZE[19026]) + !StringCompare(ListItem.Comment,$LOCALIZE[305]) + !StringCompare(ListItem.Comment,$LOCALIZE[19162])">pvr/status_none.png</value>
-		<value condition="StringCompare(ListItem.Comment,$LOCALIZE[305])">pvr/status_enabled.png</value>
-		<value condition="StringCompare(ListItem.Comment,$LOCALIZE[19162])">pvr/status_recording.png</value>
-	</variable>
+	<include name="LiveTVProgressImage">
+		<control type="image">
+			<width>24</width>
+			<height>24</height>
+			<texture background="true">watched/watched-10pct.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<visible>!IntegerGreaterThan(ListItem.Progress,20)</visible>
+		</control>
+		<control type="image">
+			<width>24</width>
+			<height>24</height>
+			<texture background="true">watched/watched-30pct.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<visible>IntegerGreaterThan(ListItem.Progress,20) + !IntegerGreaterThan(ListItem.Progress,40)</visible>
+		</control>
+		<control type="image">
+			<width>24</width>
+			<height>24</height>
+			<texture background="true">watched/watched-50pct.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<visible>IntegerGreaterThan(ListItem.Progress,40) + !IntegerGreaterThan(ListItem.Progress,60)</visible>
+		</control>
+		<control type="image">
+			<width>24</width>
+			<height>24</height>
+			<texture background="true">watched/watched-70pct.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<visible>IntegerGreaterThan(ListItem.Progress,60) + !IntegerGreaterThan(ListItem.Progress,80)</visible>
+		</control>
+		<control type="image">
+			<width>24</width>
+			<height>24</height>
+			<texture background="true">watched/watched-90pct.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<visible>IntegerGreaterThan(ListItem.Progress,80)</visible>
+		</control>
+	</include>
 
 	<include name="LiveTVColumnHeaderLabel">
 		<aligny>center</aligny>

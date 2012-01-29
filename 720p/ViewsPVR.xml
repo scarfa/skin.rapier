@@ -18,8 +18,24 @@
 				<ondown>11</ondown>
 				<onleft>850</onleft>
 				<onright>150</onright>
-				<include>LiveTVListInfoStyleItemLayout</include>
-				<include>LiveTVListInfoStyleFocusedLayout</include>
+				<itemlayout height="74">
+					<include>LiveTVListInfoStyleItemLayout</include>
+					<control type="group">
+						<description>Progress</description>
+						<posx>580</posx>
+						<posy>25</posy>
+						<include>LiveTVProgressImage</include>
+					</control>	
+				</itemlayout>
+				<focusedlayout height="74">	
+					<include>LiveTVListInfoStyleFocusedLayout</include>
+					<control type="group">
+						<description>Progress</description>
+						<posx>580</posx>
+						<posy>25</posy>
+						<include>LiveTVProgressImage</include>
+					</control>
+				</focusedlayout>
 			</control>
 
 			<include>ListInfo2ViewScrollbar</include>
@@ -51,8 +67,12 @@
 				<ondown>12</ondown>
 				<onleft>850</onleft>
 				<onright>150</onright>
-				<include>LiveTVListInfoStyleItemLayout</include>
-				<include>LiveTVListInfoStyleFocusedLayout</include>
+				<itemlayout height="74">
+					<include>LiveTVListInfoStyleItemLayout</include>
+				</itemlayout>
+				<focusedlayout height="74">	
+					<include>LiveTVListInfoStyleFocusedLayout</include>
+				</focusedlayout>
 			</control>
 
 			<include>ListInfo2ViewScrollbar</include>
@@ -84,8 +104,12 @@
 				<ondown>13</ondown>
 				<onleft>850</onleft>
 				<onright>150</onright>
-				<include>LiveTVListInfoStyleItemLayout</include>
-				<include>LiveTVListInfoStyleFocusedLayout</include>
+				<itemlayout height="74">
+					<include>LiveTVListInfoStyleItemLayout</include>
+				</itemlayout>
+				<focusedlayout height="74">	
+					<include>LiveTVListInfoStyleFocusedLayout</include>
+				</focusedlayout>
 			</control>
 
 			<include>ListInfo2ViewScrollbar</include>
@@ -101,7 +125,7 @@
 
 	<include name="LiveTVListInfoArea">
 		<control type="group">
-			<visible>[Skin.String(ViewsPVR,1) + Control.IsVisible(11)] | [Skin.String(ViewsPVR,2) + Control.IsVisible(12)] | [Skin.String(ViewsPVR,6) + Control.IsVisible(13)]</visible>
+			<visible>Skin.String(ViewsPVR,1) | Skin.String(ViewsPVR,2) | Skin.String(ViewsPVR,6)</visible>
 			<include>ControlsOpenCloseAnim</include>
 
 			<control type="image">
@@ -273,37 +297,111 @@
 	</include>
 
 	<include name="LiveTVListInfoStyleItemLayout">
-		<itemlayout height="74">
-			<control type="image">
-				<posx>0</posx>
-				<width>620</width>
-				<height>74</height>	
-				<texture border="0,0,10,2">views/list-separator.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
+		<control type="image">
+			<posx>0</posx>
+			<width>620</width>
+			<height>74</height>	
+			<texture border="0,0,10,2">views/list-separator.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
 
-			<control type="image">
-				<description>Cover</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>73</width>
-				<height>73</height>
-				<bordertexture border="7">covers/cover-case-nofocus.png</bordertexture>
-				<bordersize>5</bordersize>
-				<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
-				<aspectratio>keep</aspectratio>
-			</control>
+		<control type="image">
+			<description>Cover</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>73</width>
+			<height>73</height>
+			<bordertexture border="7">covers/cover-case-nofocus.png</bordertexture>
+			<bordersize>5</bordersize>
+			<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio>keep</aspectratio>
+		</control>
 
+		<control type="label">
+			<description>Label</description>
+			<posx>80</posx>
+			<posy>22</posy>
+			<width>411</width>
+			<font>ListFont</font>
+			<textcolor>ListColor</textcolor>
+			<shadowcolor>ShadowColor</shadowcolor>
+			<label>$VAR[LiveTVListInfoItemLabel]</label>
+			<aligny>center</aligny>
+		</control>
+
+		<control type="label">
+			<description>Label2</description>
+			<posx>80</posx>
+			<posy>47</posy>
+			<width>411</width>
+			<font>ListFont2</font>
+			<textcolor>ListColor2</textcolor>
+			<shadowcolor>ShadowColor</shadowcolor>
+			<aligny>center</aligny>				
+			<label>$VAR[LiveTVListInfoItemLabel2]</label>
+		</control>		
+	</include>
+
+	<include name="LiveTVListInfoStyleFocusedLayout">
+		<control type="image">
+			<posx>0</posx>
+			<width>620</width>
+			<height>74</height>	
+			<texture border="0,0,10,2">views/list-separator.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+
+		<control type="image">
+			<posx>0</posx>
+			<width>620</width>
+			<height>73</height>
+			<texture border="4">views/list-focus.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<visible>[Skin.String(ViewsPVR,1) + Control.HasFocus(11)]
+				| [Skin.String(ViewsPVR,2) + Control.HasFocus(12)]
+				| [Skin.String(ViewsPVR,6) + Control.HasFocus(13)]</visible>
+			<include>ListViewSelectFadeAnim</include>
+			<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewScrollAnim</include>
+		</control>
+
+		<control type="image">
+			<posx>0</posx>
+			<width>620</width>
+			<height>73</height>
+			<texture border="4">views/list-alt-focus.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<visible>[Skin.String(ViewsPVR,1) + !Control.HasFocus(11)]
+				| [Skin.String(ViewsPVR,2) + !Control.HasFocus(12)]
+				| [Skin.String(ViewsPVR,6) + !Control.HasFocus(13)]</visible>
+			<include>ListViewSelectFadeAnim2</include>
+		</control>
+
+		<control type="image">
+			<description>Cover</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>73</width>
+			<height>73</height>
+			<bordertexture border="7">covers/cover-case-nofocus.png</bordertexture>
+			<bordersize>5</bordersize>
+			<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio>keep</aspectratio>
+			<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
+		</control>
+
+		<control type="group">
+			<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
 			<control type="label">
 				<description>Label</description>
 				<posx>80</posx>
 				<posy>22</posy>
 				<width>411</width>
 				<font>ListFont</font>
-				<textcolor>ListColor</textcolor>
+				<textcolor>SelectedColor</textcolor>
 				<shadowcolor>ShadowColor</shadowcolor>
 				<label>$VAR[LiveTVListInfoItemLabel]</label>
 				<aligny>center</aligny>
+				<scroll>yes</scroll>
 			</control>
 
 			<control type="label">
@@ -314,108 +412,10 @@
 				<font>ListFont2</font>
 				<textcolor>ListColor2</textcolor>
 				<shadowcolor>ShadowColor</shadowcolor>
-				<aligny>center</aligny>				
 				<label>$VAR[LiveTVListInfoItemLabel2]</label>
+				<aligny>center</aligny>
 			</control>
-
-			<control type="image">
-				<description>Record</description>
-				<posx>580</posx>
-				<posy>26</posy>	
-				<width>22</width>
-				<height>22</height>
-				<texture>$VAR[LiveTVListInfoRecordImage]</texture>
-				<colordiffuse>ListColor</colordiffuse>
-			</control>
-		</itemlayout>		
-	</include>
-
-	<include name="LiveTVListInfoStyleFocusedLayout">
-		<focusedlayout height="74">	
-			<control type="image">
-				<posx>0</posx>
-				<width>620</width>
-				<height>74</height>	
-				<texture border="0,0,10,2">views/list-separator.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
-
-			<control type="image">
-				<posx>0</posx>
-				<width>620</width>
-				<height>73</height>
-				<texture border="4">views/list-focus.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<visible>[Skin.String(ViewsPVR,1) + Control.HasFocus(11)]
-				| [Skin.String(ViewsPVR,2) + Control.HasFocus(12)]
-				| [Skin.String(ViewsPVR,6) + Control.HasFocus(13)]</visible>
-				<include>ListViewSelectFadeAnim</include>
-				<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewScrollAnim</include>
-			</control>
-
-			<control type="image">
-				<posx>0</posx>
-				<width>620</width>
-				<height>73</height>
-				<texture border="4">views/list-alt-focus.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<visible>[Skin.String(ViewsPVR,1) + !Control.HasFocus(11)]
-				| [Skin.String(ViewsPVR,2) + !Control.HasFocus(12)]
-				| [Skin.String(ViewsPVR,6) + !Control.HasFocus(13)]</visible>
-				<include>ListViewSelectFadeAnim2</include>
-			</control>
-
-			<control type="image">
-				<description>Cover</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>73</width>
-				<height>73</height>
-				<bordertexture border="7">covers/cover-case-nofocus.png</bordertexture>
-				<bordersize>5</bordersize>
-				<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
-				<aspectratio>keep</aspectratio>
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
-			</control>
-
-			<control type="group">
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
-				<control type="label">
-					<description>Label</description>
-					<posx>80</posx>
-					<posy>22</posy>
-					<width>411</width>
-					<font>ListFont</font>
-					<textcolor>SelectedColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<label>$VAR[LiveTVListInfoItemLabel]</label>
-					<aligny>center</aligny>
-					<scroll>yes</scroll>
-				</control>
-
-				<control type="label">
-					<description>Label2</description>
-					<posx>80</posx>
-					<posy>47</posy>
-					<width>411</width>
-					<font>ListFont2</font>
-					<textcolor>ListColor2</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<label>$VAR[LiveTVListInfoItemLabel2]</label>
-					<aligny>center</aligny>
-				</control>
-			</control>
-
-			<control type="image">
-				<description>Record</description>
-				<posx>580</posx>
-				<posy>26</posy>	
-				<width>22</width>
-				<height>22</height>
-				<texture>$VAR[LiveTVListInfoRecordImage]</texture>
-				<colordiffuse>WhiteColor</colordiffuse>
-			</control>
-		</focusedlayout>					
+		</control>					
 	</include>
 	<!--//// END LIST INFO VIEWS ////////////////////////////////////////////////////////////////-->
 
@@ -535,7 +535,7 @@
 						<align>left</align>
 						<include>LiveTVColumnItemLabel</include>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>!ListItem.HasTimer</visible>
+						<visible>![ListItem.HasTimer | ListItem.IsRecording]</visible>
 					</control>
 
 					<control type="label" id="1">
@@ -545,7 +545,18 @@
 						<align>left</align>
 						<include>LiveTVColumnItemLabel</include>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>ListItem.HasTimer</visible>
+						<visible>ListItem.HasTimer | ListItem.IsRecording</visible>
+					</control>
+
+					<control type="image">
+						<description>Timer</description>
+						<posx>10</posx>
+						<posy>8</posy>
+						<width>22</width>
+						<height>22</height>
+						<texture>pvr/status_timer.png</texture>
+						<colordiffuse>WhiteColor</colordiffuse>
+						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 					</control>
 
 					<control type="image">
@@ -554,8 +565,9 @@
 						<posy>8</posy>
 						<width>22</width>
 						<height>22</height>
-						<texture>$VAR[LiveTVColumnRecordImage]</texture>
+						<texture>pvr/status_recording.png</texture>
 						<colordiffuse>WhiteColor</colordiffuse>
+						<visible>ListItem.IsRecording</visible>
 					</control>
 				</itemlayout>
 
@@ -574,7 +586,7 @@
 						<align>left</align>
 						<include>LiveTVColumnItemLabel</include>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>!ListItem.HasTimer</visible>
+						<visible>![ListItem.HasTimer | ListItem.IsRecording]</visible>
 					</control>
 
 					<control type="label" id="1">
@@ -584,7 +596,18 @@
 						<align>left</align>
 						<include>LiveTVColumnItemLabel</include>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>ListItem.HasTimer</visible>
+						<visible>ListItem.HasTimer | ListItem.IsRecording</visible>
+					</control>
+
+					<control type="image">
+						<description>Timer</description>
+						<posx>10</posx>
+						<posy>8</posy>
+						<width>22</width>
+						<height>22</height>
+						<texture>pvr/status_timer.png</texture>
+						<colordiffuse>WhiteColor</colordiffuse>
+						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 					</control>
 
 					<control type="image">
@@ -593,8 +616,9 @@
 						<posy>8</posy>
 						<width>22</width>
 						<height>22</height>
-						<texture>$VAR[LiveTVColumnRecordImage]</texture>
+						<texture>pvr/status_recording.png</texture>
 						<colordiffuse>WhiteColor</colordiffuse>
+						<visible>ListItem.IsRecording</visible>
 					</control>
 				</focusedlayout>
 			</control>
@@ -786,7 +810,7 @@
 			<control type="group">
 				<description>Cover Area</description>
 				<posy>6</posy>
-				<visible>Player.HasVideo + !Control.IsVisible(17)</visible>
+				<visible>Player.HasVideo + !Skin.String(ViewsPVR,4)</visible>
 				<control type="image">
 					<description>Cover Background</description>
 					<width>215</width>
@@ -813,7 +837,7 @@
 				<texture>$INFO[ListItem.Icon]</texture>
 				<aspectratio aligny="top">keep</aspectratio>
 				<fadetime>IconCrossfadeTime</fadetime>
-				<visible>!Player.HasVideo | Control.IsVisible(17)</visible>
+				<visible>!Player.HasVideo | Skin.String(ViewsPVR,4)</visible>
 			</control>
 
 			<control type="group">
@@ -1024,13 +1048,25 @@
 	<include name="LiveTVColumnLayoutArea">
 		<!-- LiveTVGuideChannelView, LiveTVSearchView -->
 		<control type="image">
+			<description>Timer</description>
+			<posx>848</posx>
+			<posy>8</posy>
+			<width>22</width>
+			<height>22</height>
+			<texture>pvr/status_timer.png</texture>
+			<colordiffuse>WhiteColor</colordiffuse>
+			<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+		</control>
+
+		<control type="image">
 			<description>Record</description>
 			<posx>848</posx>
 			<posy>8</posy>
 			<width>22</width>
 			<height>22</height>
-			<texture>$VAR[LiveTVColumnRecordImage2]</texture>
+			<texture>pvr/status_recording.png</texture>
 			<colordiffuse>WhiteColor</colordiffuse>
+			<visible>ListItem.IsRecording</visible>
 		</control>
 
 		<control type="label">
@@ -1073,13 +1109,25 @@
 	<include name="LiveTVColumnLayoutArea2">
 		<!-- LiveTVGuideNowNextView -->
 		<control type="image">
+			<description>Timer</description>
+			<posx>888</posx>
+			<posy>8</posy>
+			<width>22</width>
+			<height>22</height>
+			<texture>pvr/status_timer.png</texture>
+			<colordiffuse>WhiteColor</colordiffuse>
+			<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+		</control>
+
+		<control type="image">
 			<description>Record</description>
 			<posx>888</posx>
 			<posy>8</posy>
 			<width>22</width>
 			<height>22</height>
-			<texture>$VAR[LiveTVColumnRecordImage2]</texture>
+			<texture>pvr/status_recording.png</texture>
 			<colordiffuse>WhiteColor</colordiffuse>
+			<visible>ListItem.IsRecording</visible>
 		</control>
 
 		<control type="label">
@@ -1131,13 +1179,36 @@
 	<include name="LiveTVColumnLayoutArea3">
 		<!-- LiveTVTimersView -->
 		<control type="image">
+			<description>Disabled</description>
+			<posx>848</posx>
+			<posy>8</posy>
+			<width>22</width>
+			<height>22</height>
+			<texture>pvr/status_none.png</texture>
+			<colordiffuse>WhiteColor</colordiffuse>
+			<visible>!StringCompare(ListItem.Label,$LOCALIZE[19026]) + !StringCompare(ListItem.Comment,$LOCALIZE[305]) + !StringCompare(ListItem.Comment,$LOCALIZE[19162])</visible>
+		</control>
+
+		<control type="image">
+			<description>Enabled</description>
+			<posx>848</posx>
+			<posy>8</posy>
+			<width>22</width>
+			<height>22</height>
+			<texture>pvr/status_enabled.png</texture>
+			<colordiffuse>WhiteColor</colordiffuse>
+			<visible>StringCompare(ListItem.Comment,$LOCALIZE[305])</visible>
+		</control>
+
+		<control type="image">
 			<description>Record</description>
 			<posx>848</posx>
 			<posy>8</posy>
 			<width>22</width>
 			<height>22</height>
-			<texture>$VAR[LiveTVColumnRecordImage3]</texture>
+			<texture>pvr/status_recording.png</texture>
 			<colordiffuse>WhiteColor</colordiffuse>
+			<visible>StringCompare(ListItem.Comment,$LOCALIZE[19162])</visible>
 		</control>
 
 		<control type="label">

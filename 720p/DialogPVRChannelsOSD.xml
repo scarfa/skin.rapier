@@ -77,14 +77,11 @@
 							<label>$INFO[ListItem.ChannelNumber] - $INFO[ListItem.Label]</label>
 						</control>
 
-						<control type="image">
-							<description>Record</description>
+						<control type="group">
+							<description>Progress</description>
 							<posx>390</posx>
-							<posy>26</posy>	
-							<width>22</width>
-							<height>22</height>
-							<texture>$VAR[LiveTVListInfoRecordImage]</texture>
-							<colordiffuse>ListColor</colordiffuse>
+							<posy>25</posy>
+							<include>LiveTVProgressImage</include>
 						</control>
 					</itemlayout>
 
@@ -156,14 +153,11 @@
 								<label>$INFO[ListItem.ChannelNumber] - $INFO[ListItem.Label]</label>
 							</control>
 
-							<control type="image">
-								<description>Record</description>
+							<control type="group">
+								<description>Progress</description>
 								<posx>390</posx>
-								<posy>26</posy>
-								<width>22</width>
-								<height>22</height>
-								<texture>$VAR[LiveTVListInfoRecordImage]</texture>
-								<colordiffuse>WhiteColor</colordiffuse>
+								<posy>25</posy>
+								<include>LiveTVProgressImage</include>
 							</control>
 						</control>
 					</focusedlayout>
