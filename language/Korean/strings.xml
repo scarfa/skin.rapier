@@ -108,6 +108,10 @@
 <string id="31713">카테고리 추가</string>
 <string id="31714">카테고리 아이콘</string>
 <string id="31715">사용자 카테고리 아이콘</string>
+<string id="31716">음악 카테고리 선택시 파일 모드로 이동</string>
+<string id="31717">음악 카테고리 선택시 라이브러리 모드로 이동</string>
+<string id="31718">비디오 카테고리 선택시 파일 모드로 이동</string>
+<string id="31719">비디오 카테고리 선택시 라이브러리 모드로 이동</string>
 
 <!-- skin settings media -->
 <string id="31041">상세정보 숨기기</string>
