@@ -59,7 +59,7 @@
 							<description>Label</description>
 							<posx>88</posx>
 							<posy>22</posy>
-							<width>265</width>
+							<width>300</width>
 							<font>ListFont</font>
 							<textcolor>ListColor</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
@@ -72,22 +72,12 @@
 							<description>Label2</description>
 							<posx>88</posx>
 							<posy>47</posy>
-							<width>265</width>
+							<width>300</width>
 							<font>ListFont2</font>
 							<textcolor>ListColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<aligny>center</aligny>				
 							<label>$INFO[ListItem.StartDate]</label>
-						</control>
-
-						<control type="image">
-							<description>Record</description>
-							<posx>390</posx>
-							<posy>26</posy>	
-							<width>22</width>
-							<height>22</height>
-							<texture>$VAR[LiveTVListInfoRecordImage]</texture>
-							<colordiffuse>ListColor</colordiffuse>
 						</control>
 					</itemlayout>
 
@@ -140,7 +130,7 @@
 								<description>Label</description>
 								<posx>88</posx>
 								<posy>22</posy>
-								<width>265</width>
+								<width>300</width>
 								<font>ListFont</font>
 								<textcolor>SelectedColor</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -153,22 +143,12 @@
 								<description>Label2</description>
 								<posx>88</posx>
 								<posy>47</posy>
-								<width>265</width>
+								<width>300</width>
 								<font>ListFont2</font>
 								<textcolor>ListColor2</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<aligny>center</aligny>				
 								<label>$INFO[ListItem.StartDate]</label>
-							</control>
-
-							<control type="image">
-								<description>Record</description>
-								<posx>390</posx>
-								<posy>26</posy>
-								<width>22</width>
-								<height>22</height>
-								<texture>$VAR[LiveTVListInfoRecordImage]</texture>
-								<colordiffuse>WhiteColor</colordiffuse>
 							</control>
 						</control>
 					</focusedlayout>
