@@ -121,6 +121,7 @@
 					<width>600</width>
 					<include>DialogHeadLabel</include>
 					<label>$LOCALIZE[1022]</label>
+					<include>DialogHeadLabelFade</include>
 				</control>
 				
 				<control type="button" id="12">
