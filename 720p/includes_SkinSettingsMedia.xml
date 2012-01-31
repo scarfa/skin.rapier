@@ -48,7 +48,7 @@
 				</control>
 				<control type="togglebutton" id="3004">
 					<description>Toggle Visualization / Artist Fanart For Background</description>
-					<include>SettingsContentRadioBtn</include>
+					<include>SettingsContentToggleBtn</include>
 					<label>$LOCALIZE[31407]</label>
 					<altlabel>$LOCALIZE[31408]</altlabel>
 					<usealttexture>Skin.HasSetting(UseFanartForMusicPlayingBG)</usealttexture>
@@ -97,7 +97,7 @@
 				</control>
 				<control type="togglebutton" id="3017">
 					<description>Toggle Default / Alt Media Flag Theme Colour</description>
-					<include>SettingsContentRadioBtn</include>
+					<include>SettingsContentToggleBtn</include>
 					<label>$LOCALIZE[31415]</label>
 					<altlabel>$LOCALIZE[31416]</altlabel>
 					<usealttexture>Skin.HasSetting(UseAltMediaFlagTheme)</usealttexture>

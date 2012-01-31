@@ -59,7 +59,7 @@
 				</control>
 				<control type="togglebutton" id="1004">
 					<description>Weather Apply To All Windows</description>
-					<include>SettingsContentRadioBtn</include>
+					<include>SettingsContentToggleBtn</include>
 					<label>$LOCALIZE[31054]</label>
 					<altlabel>$LOCALIZE[31051]</altlabel>
 					<usealttexture>!Skin.HasSetting(ApplyAllWeather)</usealttexture>
@@ -80,7 +80,7 @@
 				</control>				
 				<control type="togglebutton" id="1009">
 					<description>Weather Apply To All Windows</description>
-					<include>SettingsContentRadioBtn</include>
+					<include>SettingsContentToggleBtn</include>
 					<label>$LOCALIZE[31031]</label>
 					<altlabel>$LOCALIZE[31032]</altlabel>
 					<usealttexture>!Skin.HasSetting(ApplyAllAnimWeatherIcons)</usealttexture>
