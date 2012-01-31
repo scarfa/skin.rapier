@@ -306,12 +306,11 @@
 		</control>
 
 		<control type="image">
-			<description>Cover</description>
+			<description>Icon</description>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>73</width>
 			<height>73</height>
-			<bordertexture border="7">covers/cover-case-nofocus.png</bordertexture>
 			<bordersize>5</bordersize>
 			<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
 			<aspectratio>keep</aspectratio>
@@ -377,12 +376,11 @@
 		</control>
 
 		<control type="image">
-			<description>Cover</description>
+			<description>Icon</description>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>73</width>
 			<height>73</height>
-			<bordertexture border="7">covers/cover-case-nofocus.png</bordertexture>
 			<bordersize>5</bordersize>
 			<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
 			<aspectratio>keep</aspectratio>
@@ -433,6 +431,7 @@
 				<height>30</height>
 				<texture border="8">pvr/column-left.png</texture>
 				<colordiffuse>LiveTVColumnColor</colordiffuse>
+				<include>LiveTVColumnFadeAnim</include>
 			</control>
 			<control type="image">
 				<posx>220</posx>
@@ -440,6 +439,7 @@
 				<height>30</height>
 				<texture border="8" flipx="true">pvr/column-left.png</texture>
 				<colordiffuse>LiveTVColumnColor</colordiffuse>
+				<include>LiveTVColumnFadeAnim</include>
 			</control>
 
 			<control type="epggrid" id="10">
@@ -471,6 +471,7 @@
 						<height>38</height>
 						<texture border="8">pvr/column-left.png</texture>
 						<colordiffuse>LiveTVColumnColor</colordiffuse>
+						<include>LiveTVColumnFadeAnim</include>
 					</control>
 
 					<control type="label">
@@ -499,6 +500,7 @@
 						<height>38</height>
 						<texture border="8">pvr/column-left.png</texture>
 						<colordiffuse>LiveTVColumnColor3</colordiffuse>
+						<include>LiveTVColumnFadeAnim</include>
 					</control>
 
 					<control type="label">
@@ -526,6 +528,7 @@
 						<height>38</height>
 						<texture border="8">pvr/column.png</texture>
 						<colordiffuse>$VAR[LiveTVTimelineGenre]</colordiffuse>
+						<include>LiveTVColumnFadeAnim</include>
 					</control>
 
 					<control type="label" id="1">
@@ -577,6 +580,7 @@
 						<height>38</height>
 						<texture border="8">pvr/column.png</texture>
 						<colordiffuse>LiveTVColumnColor3</colordiffuse>
+						<include>LiveTVColumnFadeAnim</include>
 					</control>
 
 					<control type="label" id="1">
@@ -905,6 +909,7 @@
 				<height>30</height>
 				<texture border="8">pvr/column-left.png</texture>
 				<colordiffuse>LiveTVColumnColor</colordiffuse>
+				<include>LiveTVColumnFadeAnim</include>
 			</control>
 			<control type="label">
 				<posx>10</posx>
@@ -923,6 +928,7 @@
 				<height>30</height>
 				<texture border="8">pvr/column.png</texture>
 				<colordiffuse>LiveTVColumnColor</colordiffuse>
+				<include>LiveTVColumnFadeAnim</include>
 			</control>
 			<control type="label">
 				<posx>10</posx>
@@ -942,6 +948,7 @@
 				<height>30</height>
 				<texture border="8">pvr/column.png</texture>
 				<colordiffuse>LiveTVColumnColor</colordiffuse>
+				<include>LiveTVColumnFadeAnim</include>
 			</control>
 			<control type="label">
 				<posx>10</posx>
@@ -960,6 +967,7 @@
 				<height>30</height>
 				<texture border="8" flipx="true">pvr/column-left.png</texture>
 				<colordiffuse>LiveTVColumnColor</colordiffuse>
+				<include>LiveTVColumnFadeAnim</include>
 			</control>
 			<control type="label">
 				<posx>10</posx>
@@ -980,6 +988,7 @@
 				<height>30</height>
 				<texture border="8">pvr/column-left.png</texture>
 				<colordiffuse>LiveTVColumnColor</colordiffuse>
+				<include>LiveTVColumnFadeAnim</include>
 			</control>
 			<control type="label">
 				<posx>10</posx>
@@ -998,6 +1007,7 @@
 				<height>30</height>
 				<texture border="8">pvr/column.png</texture>
 				<colordiffuse>LiveTVColumnColor</colordiffuse>
+				<include>LiveTVColumnFadeAnim</include>
 			</control>
 			<control type="label">
 				<posx>10</posx>
@@ -1016,6 +1026,7 @@
 				<height>30</height>
 				<texture border="8">pvr/column.png</texture>
 				<colordiffuse>LiveTVColumnColor</colordiffuse>
+				<include>LiveTVColumnFadeAnim</include>
 			</control>
 			<control type="label">
 				<posx>10</posx>
@@ -1034,6 +1045,7 @@
 				<height>30</height>
 				<texture border="8" flipx="true">pvr/column-left.png</texture>
 				<colordiffuse>LiveTVColumnColor</colordiffuse>
+				<include>LiveTVColumnFadeAnim</include>
 			</control>
 			<control type="label">
 				<posx>10</posx>
@@ -1255,6 +1267,7 @@
 			<height>38</height>
 			<texture border="8">pvr/column-left.png</texture>
 			<colordiffuse>LiveTVColumnColor</colordiffuse>
+			<include>LiveTVColumnFadeAnim</include>
 		</control>
 
 		<control type="image">
@@ -1263,6 +1276,7 @@
 			<height>38</height>
 			<texture border="8">pvr/column.png</texture>
 			<colordiffuse>LiveTVColumnColor2</colordiffuse>
+			<include>LiveTVColumnFadeAnim</include>
 		</control>
 
 		<control type="image">
@@ -1271,6 +1285,7 @@
 			<height>38</height>
 			<texture border="8">pvr/column.png</texture>
 			<colordiffuse>LiveTVColumnColor2</colordiffuse>
+			<include>LiveTVColumnFadeAnim</include>
 		</control>
 
 		<control type="image">
@@ -1279,6 +1294,7 @@
 			<height>38</height>
 			<texture border="8" flipx="true">pvr/column-left.png</texture>
 			<colordiffuse>LiveTVColumnColor2</colordiffuse>
+			<include>LiveTVColumnFadeAnim</include>
 		</control>
 	</include>
 
@@ -1288,6 +1304,7 @@
 			<height>38</height>
 			<texture border="8">pvr/column-left.png</texture>
 			<colordiffuse>LiveTVColumnColor</colordiffuse>
+			<include>LiveTVColumnFadeAnim</include>
 		</control>
 
 		<control type="image">
@@ -1296,6 +1313,7 @@
 			<height>38</height>
 			<texture border="8">pvr/column.png</texture>
 			<colordiffuse>LiveTVColumnColor2</colordiffuse>
+			<include>LiveTVColumnFadeAnim</include>
 		</control>
 
 		<control type="image">
@@ -1304,6 +1322,7 @@
 			<height>38</height>
 			<texture border="8">pvr/column.png</texture>
 			<colordiffuse>LiveTVColumnColor2</colordiffuse>
+			<include>LiveTVColumnFadeAnim</include>
 		</control>
 
 		<control type="image">
@@ -1312,6 +1331,7 @@
 			<height>38</height>
 			<texture border="8" flipx="true">pvr/column-left.png</texture>
 			<colordiffuse>LiveTVColumnColor2</colordiffuse>
+			<include>LiveTVColumnFadeAnim</include>
 		</control>
 	</include>
 
@@ -1321,6 +1341,7 @@
 			<height>38</height>
 			<texture border="8">pvr/column-left.png</texture>
 			<colordiffuse>LiveTVColumnColor3</colordiffuse>
+			<include>LiveTVColumnFadeAnim</include>
 		</control>
 
 		<control type="image">
@@ -1329,6 +1350,7 @@
 			<height>38</height>
 			<texture border="8" flipx="true">pvr/column-left.png</texture>
 			<colordiffuse>LiveTVColumnColor3</colordiffuse>
+			<include>LiveTVColumnFadeAnim</include>
 		</control>
 	</include>
 	<!--//// END COLUMN INFO VIEWS //////////////////////////////////////////////////////////////-->
