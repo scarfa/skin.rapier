@@ -5,7 +5,7 @@
 	<controls>
 		<control type="group">
 			<posx>460</posx>
-			<visible>![Window.IsActive(FullscreenVideo) | Window.IsActive(Visualisation) | Window.IsActive(InfoDialog) | Window.IsActive(614)]</visible>
+			<visible>![Window.IsActive(FullscreenVideo) | Window.IsActive(Visualisation) | Window.IsActive(InfoDialog) | Window.IsActive(148)]</visible>
 			<include>NotifyPanelOpenCloseAnim</include>
 			
 			<include>NotifyPanel</include>
