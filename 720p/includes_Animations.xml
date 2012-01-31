@@ -970,6 +970,10 @@
 			<effect type="slide" start="0,0" end="-15,-12" time="200" delay="600" tween="circle" easing="out"/>
 		</animation>
 	</include>
+	
+	<include name="LiveTVColumnFadeAnim">
+		<animation effect="fade" end="60" condition="true">conditional</animation>
+	</include>
 
 	<include name="PanelFadeAnim">
 		<animation effect="fade" end="60" condition="true">Conditional</animation>

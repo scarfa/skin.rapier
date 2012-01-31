@@ -43,10 +43,9 @@
 						</control>
 
 						<control type="image">
-							<description>Cover</description>
+							<description>Icon</description>
 							<width>73</width>
 							<height>73</height>
-							<bordertexture border="7">covers/cover-case-nofocus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
@@ -118,10 +117,9 @@
 						<control type="group">
 							<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
 							<control type="image">
-								<description>Cover</description>
+								<description>Icon</description>
 								<width>73</width>
 								<height>73</height>
-								<bordertexture border="7">covers/cover-case-nofocus.png</bordertexture>
 								<bordersize>5</bordersize>
 								<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
 								<aspectratio>keep</aspectratio>

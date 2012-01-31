@@ -108,6 +108,10 @@
 <string id="31713">Dodaj więcej kategorii</string>
 <string id="31714">Ikona kategorii</string>
 <string id="31715">Własne ikony kategorii</string>
+<string id="31716">Kliknięcie na kategorii Muzyka przenosi do plików</string>
+<string id="31717">Kliknięcie na kategorii Muzyka przenosi do biblioteki</string>
+<string id="31718">Kliknięcie na kategorii Wideo przenosi do plików</string>
+<string id="31719">Kliknięcie na kategorii Wideo przenosi do biblioteki</string>
 
 <!-- skin settings media -->
 <string id="31041">Ukryj fabułę</string>
