@@ -1,131 +1,45 @@
 <window id="107">
 	<defaultcontrol>-</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<zorder>0</zorder>
 	
 	<controls>
-		<control type="label" id="401">
-			<visible>false</visible>
-		</control>
-		
-		<control type="label" id="402">
-			<visible>false</visible>
-		</control>
-				
 		<control type="group">
-			<posx>818</posx>
-			<posy>640</posy>
-			<visible>![Window.IsVisible(Home) | Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(AddonInformation) | Window.IsActive(FullscreenVideo) | Window.IsActive(Visualisation)]</visible>
-			<include>BottomPaneOpenCloseAnim</include>
+			<posx>460</posx>
+			<include>NotifyPanelOpenCloseAnim</include>
 			
-			<control type="image">
-				<width>434</width>
-				<height>105</height>
-				<texture border="8">panels/panel.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>	
+			<include>NotifyPanel</include>
 			
-			<control type="image">
-				<include>InfoPaneIcon</include>
-				<texture>notification-icon.png</texture>
+			<control type="image" id="400">
+				<include>NotifyPanelIcon</include>
+				<texture>notification-warning.png</texture>
 			</control>
 			
-			<control type="label">
-				<include>InfoPaneNotifyLabel</include>
-				<label>$INFO[Control.GetLabel(401)]</label>
+			<control type="image" id="403">
+				<include>NotifyPanelIcon</include>
+				<texture flipy="true">notification-warning.png</texture>
+				<visible>false</visible>
 			</control>
 			
-			<control type="label">
-				<include>InfoPaneNotifyLabel2</include>
-				<label>$INFO[Control.GetLabel(402)]</label>
-			</control>
-		</control>
-		
-		<control type="group">
-			<posx>818</posx>
-			<posy>-25</posy>
-			<visible>Window.IsActive(FullscreenVideo) | Window.IsActive(Visualisation)</visible>
-			<include>TopPaneOpenCloseAnim</include>
-	
-			<control type="image">
-				<width>434</width>
-				<height>105</height>
-				<texture border="8">panels/panel.png</texture>
-				<aspectratio>stretch</aspectratio>
+			<control type="image" id="404">
+				<include>NotifyPanelIcon</include>
+				<texture>notification-warning.png</texture>
+				<visible>false</visible>
 			</control>
 			
-			<control type="group">
-				<posy>18</posy>
-				<animation effect="slide" end="0,16" condition="true">Conditional</animation>
+			<control type="image" id="405">
+				<include>NotifyPanelIcon</include>
+				<texture>notification-error.png</texture>
+				<visible>false</visible>
+			</control>
 
-				<control type="image">
-					<include>InfoPaneIcon</include>
-					<texture>notification-icon.png</texture>
-				</control>
-				
-				<control type="label">
-					<include>InfoPaneNotifyLabel</include>
-					<label>$INFO[Control.GetLabel(401)]</label>
-				</control>
-				
-				<control type="label">
-					<include>InfoPaneNotifyLabel2</include>
-					<label>$INFO[Control.GetLabel(402)]</label>
-				</control>
-			</control>
-		</control>
-		
-		<control type="group">
-			<posx>5</posx>
-			<posy>431</posy>
-			<visible>Window.IsVisible(Home)</visible>
-			<include>HomeLeftPanelOpenCloseAnim</include>
-			
-			<control type="image">
-				<width>490</width>
-				<height>110</height>
-				<texture border="8">panels/panel.png</texture>
-			</control>	
-			
-			<control type="image">
-				<description>Cover Border</description>
-				<posx>15</posx>
-				<posy>22</posy>
-				<width>66</width>
-				<height>66</height>
-				<texture border="5">panels/panel-content-border.png</texture>
+			<control type="fadelabel" id="401">
+				<description>Line 1</description>
+				<include>NotifyPanelLabel</include>
 			</control>
 			
-			<control type="image">
-				<description>Cover</description>
-				<posx>15</posx>
-				<posy>22</posy>
-				<width>66</width>
-				<height>66</height>
-				<texture background="true">notification.png</texture>
-				<aspectratio>keep</aspectratio>
-			</control>
-			
-			<control type="label">
-				<posx>93</posx>
-				<posy>17</posy>
-				<width>382</width>
-				<font>PanelTitleFont</font>
-				<textcolor>DefaultColor2</textcolor>
-				<shadowcolor>ShadowColor</shadowcolor>
-				<label>$INFO[Control.GetLabel(401)]</label>
-			</control>
-			
-			<control type="label">
-				<posx>93</posx>
-				<posy>48</posy>
-				<width>382</width>
-				<font>PanelInfoFont</font>
-				<textcolor>DefaultColor3</textcolor>
-				<shadowcolor>ShadowColor</shadowcolor>
-				<label>$INFO[Control.GetLabel(402)]</label>
-				<scroll>yes</scroll>
-				<scrollsuffix> - </scrollsuffix>
+			<control type="fadelabel" id="402">
+				<description>Line 2</description>
+				<include>NotifyPanelLabel2</include>
 			</control>
 		</control>
 	</controls>

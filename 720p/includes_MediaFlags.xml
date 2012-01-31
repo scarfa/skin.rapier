@@ -687,7 +687,7 @@
 	
 	<include name="StudioMediaFlag">
 		<control type="group">
-			<visible>!IsEmpty(ListItem.Studio) + !Window.IsActive(VideoScan) + !Window.IsActive(MusicScan) + !Window.IsActive(InfoDialog)</visible>
+			<visible>!IsEmpty(ListItem.Studio)</visible>
 			
 			<control type="image" id="667">
 				<posx>1192</posx>

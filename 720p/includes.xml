@@ -158,7 +158,53 @@
 			<texture border="8">panels/panel-content-border.png</texture>
 		</control>
 	</include>
-
+	
+	<include name="NotifyPanel">
+		<control type="image">
+			<posx>0</posx>
+			<posy>-5</posy>
+			<width>360</width>
+			<height>50</height>
+			<texture border="20,0,20,8">panels/notify-panel.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>	
+	</include>
+	
+	<include name="NotifyPanelIcon">
+		<posx>20</posx>
+		<posy>6</posy>
+		<width>30</width>
+		<height>30</height>
+		<aspectratio>stretch</aspectratio>
+		<animation effect="fade" end="60" condition="true">Conditional</animation>
+	</include>
+	
+	<include name="NotifyPanelLabel">
+		<posx>60</posx>
+		<posy>2</posy>
+		<width>275</width>
+		<height>16</height>
+		<font>NowPlayingFont</font>	
+		<textcolor>WhiteColor</textcolor>
+		<aligny>top</aligny>
+		<scrollout>false</scrollout>
+		<pauseatend>1500</pauseatend>
+		<scroll>no</scroll>
+	</include>
+	
+	<include name="NotifyPanelLabel2">
+		<posx>60</posx>
+		<posy>20</posy>
+		<width>275</width>
+		<height>16</height>
+		<font>NowPlayingFont2</font>	
+		<textcolor>GreyColor2</textcolor>
+		<aligny>top</aligny>
+		<scrollout>false</scrollout>
+		<pauseatend>1500</pauseatend>
+		<scroll>yes</scroll>
+	</include>
+	
 	<include name="PlayerControlsPanel">
 		<control type="image">
 			<posx>28</posx>

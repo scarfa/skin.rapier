@@ -3,7 +3,7 @@
 	
 	<controls>
 		<control type="group">		
-			<visible>Player.ShowInfo + Player.HasAudio + !Window.IsActive(InfoDialog)</visible>
+			<visible>Player.ShowInfo + Player.HasAudio</visible>
 			
 			<control type="image">
 				<posx>28</posx>

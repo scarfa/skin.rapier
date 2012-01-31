@@ -44,28 +44,6 @@
 		<scrollsuffix> - </scrollsuffix>
 		<include>InfoPaneLabelFadeAnim</include>
 	</include>
-		
-	<include name="InfoPaneNotifyLabel">
-		<posx>57</posx>
-		<posy>14</posy>
-		<width>358</width>
-		<font>InfoPaneFont</font>
-		<textcolor>InfoPaneColor</textcolor>
-		<shadowcolor>ShadowColor</shadowcolor>
-		<scroll>no</scroll>
-		<scrollsuffix> - </scrollsuffix>
-	</include>
-	
-	<include name="InfoPaneNotifyLabel2">
-		<posx>57</posx>
-		<posy>33</posy>
-		<width>358</width>
-		<font>InfoPaneFont2</font>
-		<textcolor>InfoPaneColor2</textcolor>
-		<shadowcolor>ShadowColor</shadowcolor>
-		<scroll>yes</scroll>
-		<scrollsuffix> - </scrollsuffix>
-	</include>
 	
 	<include name="InfoPaneItemTitle">
 		<posx>461</posx>
@@ -104,7 +82,6 @@
 			<itemgap>5</itemgap>
 			<align>right</align>
 			<usecontrolcoords>true</usecontrolcoords>
-			<visible>!Window.IsActive(VideoScan) + !Window.IsActive(MusicScan) + !Window.IsActive(InfoDialog)</visible>
 			<orientation>horizontal</orientation>
 			<include>InfoPaneElementOpenCloseAnim</include>
 			<include>MediaFlagFadeAnim</include>
@@ -124,7 +101,6 @@
 			<height>41</height>
 			<texture background="true">$INFO[ListItem.Rating]</texture>
 			<aspectratio align="right" aligny="top">keep</aspectratio>
-			<visible>!Window.IsActive(VideoScan) + !Window.IsActive(MusicScan) + !Window.IsActive(InfoDialog)</visible>
 			<include>MediaFlagFadeAnim</include>
 		</control>
 	</include>
@@ -301,7 +277,6 @@
 			<textcolor>GreyColor</textcolor>
 			<include>InfoPaneHeadLabel</include>
 			<label>[UPPERCASE]$INFO[Window(Weather).Property(WeatherProvider),[B]Weather provided by:[/B] ][/UPPERCASE]</label>
-			<visible>!Window.IsActive(VideoScan) + !Window.IsActive(MusicScan) + !Window.IsActive(InfoDialog)</visible>
 		</control>
 	</include>
 	
