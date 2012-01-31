@@ -1,11 +1,11 @@
-<window id="133">
+<window id="614">
 	<defaultcontrol>-</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 
 	<controls>
 		<control type="group">
 			<posx>460</posx>
-			<visible>![Window.IsActive(FullscreenVideo) | Window.IsActive(Visualisation) | Window.IsActive(InfoDialog) | Window.IsActive(614)]</visible>
+			<visible>![Window.IsActive(FullscreenVideo) | Window.IsActive(Visualisation) | Window.IsActive(InfoDialog)]</visible>
 			<include>NotifyPanelOpenCloseAnim</include>
 			
 			<include>NotifyPanel</include>
@@ -15,17 +15,17 @@
 				<texture>notification-download.png</texture>
 			</control>
 			
-			<control type="label" id="401">
+			<control type="label" id="30">
 				<description>Line 1</description>
 				<include>NotifyPanelLabel</include>
 			</control>
 			
-			<control type="label" id="405">
+			<control type="label" id="31">
 				<description>Line 2</description>
 				<include>NotifyPanelLabel2</include>
 			</control>
 
-			<control type="progress" id="404">
+			<control type="progress" id="32">
 				<description>Progressbar</description>
 				<posx>60</posx>
 				<posy>19</posy>
@@ -34,6 +34,6 @@
 				<texturebg>controls/progress-scanning-background.png</texturebg>
 				<midtexture>controls/scrollbar-slider-horz-focus.png</midtexture>
 			</control>
-		</control>
-	</controls>	
+		</control>	
+	</controls>
 </window>
