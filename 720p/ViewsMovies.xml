@@ -2479,7 +2479,7 @@
 					<posy>170</posy>
 					<width>24</width>
 					<height>24</height>
-					<texture background="true">$VAR[WatchedPartialAlt]</texture>
+					<texture background="true">$VAR[WatchedPartial]</texture>
 					<aspectratio>stretch</aspectratio>
 					<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(HideMoviesWrapListInfoOverlay)</visible>
 				</control>
@@ -2561,7 +2561,7 @@
 						<posy>170</posy>
 						<width>24</width>
 						<height>24</height>
-						<texture background="true">$VAR[WatchedPartialAlt]</texture>
+						<texture background="true">$VAR[WatchedPartial]</texture>
 						<aspectratio>stretch</aspectratio>
 						<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(HideMoviesWrapListInfoOverlay)</visible>
 					</control>
@@ -2823,7 +2823,7 @@
 					<posy>235</posy>
 					<width>26</width>
 					<height>26</height>
-					<texture background="true">$VAR[WatchedPartialAlt]</texture>
+					<texture background="true">$VAR[WatchedPartial]</texture>
 					<aspectratio>stretch</aspectratio>
 					<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(HideMoviesWrapListInfoOverlay)</visible>
 				</control>
@@ -2905,7 +2905,7 @@
 						<posy>235</posy>
 						<width>26</width>
 						<height>26</height>
-						<texture background="true">$VAR[WatchedPartialAlt]</texture>
+						<texture background="true">$VAR[WatchedPartial]</texture>
 						<aspectratio>stretch</aspectratio>
 						<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(HideMoviesWrapListInfoOverlay)</visible>
 					</control>
@@ -2997,7 +2997,7 @@
 						<posy>200</posy>
 						<width>24</width>
 						<height>24</height>
-						<texture background="true">$VAR[WatchedPartialAlt]</texture>
+						<texture background="true">$VAR[WatchedPartial]</texture>
 						<aspectratio>stretch</aspectratio>
 						<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(HideMoviesWallOverlay)</visible>
 					</control>

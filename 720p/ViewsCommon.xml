@@ -2376,7 +2376,7 @@
 					<posy>202</posy>
 					<width>24</width>
 					<height>24</height>
-					<texture background="true">$VAR[WatchedPartialAlt]</texture>
+					<texture background="true">$VAR[WatchedPartial]</texture>
 					<aspectratio>stretch</aspectratio>
 					<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(HideMoviesThumbnailOverlay)</visible>
 				</control>	
@@ -2475,7 +2475,7 @@
 						<posy>202</posy>
 						<width>24</width>
 						<height>24</height>
-						<texture background="true">$VAR[WatchedPartialAlt]</texture>
+						<texture background="true">$VAR[WatchedPartial]</texture>
 						<aspectratio>stretch</aspectratio>
 						<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(HideMoviesThumbnailOverlay)</visible>
 					</control>	
@@ -2588,7 +2588,7 @@
 					<posy>126</posy>
 					<width>20</width>
 					<height>20</height>
-					<texture background="true">$VAR[WatchedPartialAlt]</texture>
+					<texture background="true">$VAR[WatchedPartial]</texture>
 					<aspectratio>stretch</aspectratio>
 					<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(HideMoviesThumbnailOverlay)</visible>
 				</control>
@@ -2687,7 +2687,7 @@
 						<posy>126</posy>
 						<width>20</width>
 						<height>20</height>
-						<texture background="true">$VAR[WatchedPartialAlt]</texture>
+						<texture background="true">$VAR[WatchedPartial]</texture>
 						<aspectratio>stretch</aspectratio>
 						<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(HideMoviesThumbnailOverlay)</visible>
 					</control>
