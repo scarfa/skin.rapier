@@ -48,7 +48,19 @@
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Title)</visible>
 						<animation effect="fade" end="40" condition="true">Conditional</animation>
-					</control>	
+					</control>
+					<control type="label">
+						<description>Label</description>
+						<posx>105</posx>
+						<posy>-1</posy>
+						<width>385</width>
+						<height>30</height>
+						<font>WideListFont</font>
+						<textcolor>ListColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<aligny>center</aligny>
+					</control>
 					<control type="group">
 						<visible>!IsEmpty(ListItem.Title)</visible>
 						<control type="image">
@@ -71,18 +83,6 @@
 							<aspectratio>stretch</aspectratio>
 						</control>
 						<control type="image">
-							<description>Dim</description>
-							<posx>0</posx>
-							<posy>4</posy>
-							<width>94</width>
-							<height>128</height>
-							<texture background="true">dim.png</texture>
-							<aspectratio>stretch</aspectratio>
-							<bordersize>5</bordersize>
-							<visible>!IsEmpty(ListItem.Thumb)</visible>
-							<include>CoverDimAnim</include>
-						</control>
-						<control type="image">
 							<description>Default Cover</description>
 							<posx>0</posx>
 							<posy>4</posy>
@@ -93,19 +93,19 @@
 							<aspectratio>keep</aspectratio>
 							<visible>IsEmpty(ListItem.Thumb)</visible>
 							<animation effect="fade" end="40" condition="true">Conditional</animation>
-						</control>									
-						<control type="label">
-							<description>Label</description>
-							<posx>105</posx>
-							<posy>-1</posy>
-							<width>385</width>
-							<height>30</height>
-							<font>WideListFont</font>
-							<textcolor>ListColor</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<label>$INFO[ListItem.Title]</label>
-							<aligny>center</aligny>
 						</control>
+						<control type="image">
+							<description>Dim</description>
+							<posx>0</posx>
+							<posy>4</posy>
+							<width>94</width>
+							<height>128</height>
+							<texture background="true">dim.png</texture>
+							<aspectratio>stretch</aspectratio>
+							<bordersize>5</bordersize>
+							<visible>!IsEmpty(ListItem.Thumb)</visible>
+							<include>CoverDimAnim</include>
+						</control>								
 						<control type="image">
 							<description>Star Rating</description>
 							<posx>105</posx>
@@ -174,27 +174,42 @@
 							<wrapmultiline>true</wrapmultiline>
 							<visible>!Skin.HasSetting(HideMoviesWideListPlot)</visible> 
 						</control>	
-						<control type="image">
-							<description>Overlay</description>
-							<posx>1160</posx>
-							<posy>3</posy>
-							<width>22</width>
-							<height>22</height>
-							<texture background="true">$INFO[ListItem.Overlay]</texture>
-							<aspectratio align="right">keep</aspectratio>
+						<control type="group">
 							<visible>!Skin.HasSetting(HideMoviesWideListOverlay)</visible>
-							<include>ListViewOverlayFadeAnim</include>
-						</control>
-						<control type="image">
-							<description>Watched Partial</description>
-							<posx>1160</posx>
-							<posy>3</posy>
-							<width>22</width>
-							<height>22</height>
-							<texture background="true">$VAR[WatchedPartial]</texture>
-							<aspectratio align="right">keep</aspectratio>
-							<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(HideMoviesWideListOverlay)</visible>
-							<include>ListViewOverlayFadeAnim</include>
+							<control type="image">
+								<description>Quality</description>
+								<posx>1160</posx>
+								<posy>3</posy>
+								<width>22</width>
+								<height>22</height>
+								<texture background="true">$VAR[VideoQualityOverlayUnwatched]</texture>
+								<aspectratio>stretch</aspectratio>
+								<visible>!StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+								<include>ListViewOverlayFadeAnim</include>
+							</control>
+							<control type="image">
+								<description>Quality</description>
+								<posx>1160</posx>
+								<posy>3</posy>
+								<width>22</width>
+								<height>22</height>
+								<texture background="true">$VAR[VideoQualityOverlayWatched]</texture>
+								<aspectratio>stretch</aspectratio>
+								<visible>StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+								<include>ListViewOverlayFadeAnim</include>
+							</control>
+							<control type="image">
+								<description>Watched Partial</description>
+								<posx>1160</posx>
+								<posy>3</posy>
+								<width>22</width>
+								<height>22</height>
+								<texture background="true">$VAR[WatchedPartial]</texture>
+								<aspectratio>stretch</aspectratio>
+								<visible>ListItem.IsResumable</visible>
+								<include>ListViewPartialWatchedOverlayFadeAnim</include>
+								<include>ListViewWatchedOverlayFadeAnim</include>
+							</control>
 						</control>
 					</control>
 				</itemlayout>		
@@ -235,7 +250,20 @@
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Title)</visible>
 						<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
-					</control>	
+					</control>
+					<control type="label">
+						<description>Label</description>
+						<posx>105</posx>
+						<posy>-1</posy>
+						<width>385</width>
+						<height>30</height>
+						<font>WideListFont</font>
+						<textcolor>SelectedColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<aligny>center</aligny>
+						<scroll>yes</scroll>
+					</control>
 					<control type="group">
 						<visible>!IsEmpty(ListItem.Title)</visible>
 						<control type="image">
@@ -270,19 +298,6 @@
 							<aspectratio>keep</aspectratio>
 							<visible>IsEmpty(ListItem.Thumb)</visible>
 							<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
-						</control>									
-						<control type="label">
-							<description>Label</description>
-							<posx>105</posx>
-							<posy>-1</posy>
-							<width>385</width>
-							<height>30</height>
-							<font>WideListFont</font>
-							<textcolor>SelectedColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<label>$INFO[ListItem.Title]</label>
-							<aligny>center</aligny>
-							<scroll>yes</scroll>
 						</control>
 						<control type="image">
 							<description>Star Rating</description>
@@ -352,25 +367,40 @@
 							<wrapmultiline>true</wrapmultiline>
 							<autoscroll time="2000" delay="6000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollMoviesWideListPlot)</autoscroll>
 						</control>	
-						<control type="image">
-							<description>Overlay</description>
-							<posx>1160</posx>
-							<posy>3</posy>
-							<width>22</width>
-							<height>22</height>
-							<texture background="true">$INFO[ListItem.Overlay]</texture>
-							<aspectratio align="right">keep</aspectratio>
+						<control type="group">
 							<visible>!Skin.HasSetting(HideMoviesWideListOverlay)</visible>
-						</control>
-						<control type="image">
-							<description>Watched Partial</description>
-							<posx>1160</posx>
-							<posy>3</posy>
-							<width>22</width>
-							<height>22</height>
-							<texture background="true">$VAR[WatchedPartialAlt]</texture>
-							<aspectratio align="right">keep</aspectratio>
-							<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(HideMoviesWideListOverlay)</visible>
+							<control type="image">
+								<description>Quality</description>
+								<posx>1160</posx>
+								<posy>3</posy>
+								<width>22</width>
+								<height>22</height>
+								<texture background="true">$VAR[VideoQualityOverlayUnwatched]</texture>
+								<aspectratio>stretch</aspectratio>
+								<visible>!StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+							</control>
+							<control type="image">
+								<description>Quality</description>
+								<posx>1160</posx>
+								<posy>3</posy>
+								<width>22</width>
+								<height>22</height>
+								<texture background="true">$VAR[VideoQualityOverlayWatched]</texture>
+								<aspectratio>stretch</aspectratio>
+								<visible>StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+							</control>
+							<control type="image">
+								<description>Watched Partial</description>
+								<posx>1160</posx>
+								<posy>3</posy>
+								<width>22</width>
+								<height>22</height>
+								<texture background="true">$VAR[WatchedPartial]</texture>
+								<aspectratio>stretch</aspectratio>
+								<visible>ListItem.IsResumable</visible>
+								<include>ListViewPartialWatchedOverlayFadeAnim</include>
+								<include>ListViewWatchedOverlayFadeAnim</include>
+							</control>
 						</control>
 					</control>
 				</focusedlayout>		
@@ -608,7 +638,7 @@
 						<textcolor>ListColor</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<aligny>center</aligny>				
-						<info>ListItem.Title</info>
+						<info>ListItem.Label</info>
 					</control>
 					<control type="label">
 						<description>Label2</description>
@@ -623,39 +653,54 @@
 						<info>ListItem.Label2</info>
 						<visible>Skin.HasSetting(DoNotUseStarRatingMovies)</visible>
 					</control>
-					<control type="image">
-						<description>Star Rating</description>
-						<posx>395</posx>
-						<posy>10</posy>
-						<width>100</width>
-						<height>16</height>		
-						<texture background="true">$INFO[ListItem.StarRating]</texture>
-						<aspectratio align="right">keep</aspectratio>
-						<visible>!Skin.HasSetting(DoNotUseStarRatingMovies) + !IsEmpty(ListItem.Title)</visible>
-						<include>StarRatingFadeAnim</include>
+					<control type="group">
+						<visible>!IsEmpty(ListItem.Title)</visible>
+						<control type="image">
+							<description>Star Rating</description>
+							<posx>395</posx>
+							<posy>10</posy>
+							<width>100</width>
+							<height>16</height>		
+							<texture background="true">$INFO[ListItem.StarRating]</texture>
+							<aspectratio align="right">keep</aspectratio>
+							<visible>!Skin.HasSetting(DoNotUseStarRatingMovies)</visible>
+							<include>StarRatingFadeAnim</include>
+						</control>
+						<control type="image">
+							<description>Quality</description>
+							<posx>5</posx>
+							<posy>6</posy>
+							<width>24</width>
+							<height>24</height>
+							<texture background="true">$VAR[VideoQualityOverlayUnwatched]</texture>
+							<aspectratio>stretch</aspectratio>
+							<visible>!StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+							<include>ListViewOverlayFadeAnim</include>
+						</control>	
+						<control type="image">
+							<description>Quality</description>
+							<posx>5</posx>
+							<posy>6</posy>
+							<width>24</width>
+							<height>24</height>
+							<texture background="true">$VAR[VideoQualityOverlayWatched]</texture>
+							<aspectratio>stretch</aspectratio>
+							<visible>StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+							<include>ListViewOverlayFadeAnim</include>
+						</control>
+						<control type="image">
+							<description>Watched Partial</description>
+							<posx>5</posx>
+							<posy>6</posy>
+							<width>24</width>
+							<height>24</height>
+							<texture background="true">$VAR[WatchedPartial]</texture>
+							<aspectratio>stretch</aspectratio>
+							<visible>ListItem.IsResumable</visible>
+							<include>ListViewPartialWatchedOverlayFadeAnim</include>
+							<include>ListViewWatchedOverlayFadeAnim</include>
+						</control>
 					</control>
-					<control type="image">
-						<description>Overlay</description>
-						<posx>5</posx>
-						<posy>6</posy>
-						<width>24</width>
-						<height>24</height>
-						<texture background="true">watched/videos/$INFO[ListItem.Overlay]</texture>
-						<aspectratio>stretch</aspectratio>
-						<visible>!ListItem.IsResumable | StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
-						<include>ListViewOverlayFadeAnim</include>
-					</control>	
-					<control type="image">
-						<description>Watched Partial</description>
-						<posx>5</posx>
-						<posy>6</posy>
-						<width>24</width>
-						<height>24</height>
-						<texture background="true">$VAR[WatchedPartial]</texture>
-						<aspectratio>stretch</aspectratio>
-						<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
-						<include>ListViewOverlayFadeAnim</include>
-					</control>	
 				</itemlayout>		
 				<focusedlayout height="37">	
 					<control type="image">
@@ -705,7 +750,7 @@
 							<textcolor>SelectedColor</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<aligny>center</aligny>
-							<info>ListItem.Title</info>
+							<info>ListItem.Label</info>
 							<scroll>yes</scroll>
 						</control>
 						<control type="label">
@@ -721,35 +766,51 @@
 							<info>ListItem.Label2</info>
 							<visible>Skin.HasSetting(DoNotUseStarRatingMovies)</visible>
 						</control> 
-						<control type="image">
-							<description>Star Rating</description>
-							<posx>395</posx>
-							<posy>10</posy>
-							<width>100</width>
-							<height>16</height>		
-							<texture background="true">$INFO[ListItem.StarRating]</texture>
-							<aspectratio align="right">keep</aspectratio>
-							<visible>!Skin.HasSetting(DoNotUseStarRatingMovies) + !IsEmpty(ListItem.Title)</visible>
-						</control>
-						<control type="image">
-							<description>Overlay</description>
-							<posx>5</posx>
-							<posy>6</posy>
-							<width>24</width>
-							<height>24</height>
-							<texture background="true">watched/videos/$INFO[ListItem.Overlay]</texture>
-							<visible>!ListItem.IsResumable | StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
-							<aspectratio>stretch</aspectratio>
-						</control>
-						<control type="image">
-							<description>Watched Partial</description>
-							<posx>5</posx>
-							<posy>6</posy>
-							<width>24</width>
-							<height>24</height>
-							<texture background="true">$VAR[WatchedPartial]</texture>
-							<aspectratio>stretch</aspectratio>
-							<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+						<control type="group">
+							<visible>!IsEmpty(ListItem.Title)</visible>
+							<control type="image">
+								<description>Star Rating</description>
+								<posx>395</posx>
+								<posy>10</posy>
+								<width>100</width>
+								<height>16</height>		
+								<texture background="true">$INFO[ListItem.StarRating]</texture>
+								<aspectratio align="right">keep</aspectratio>
+								<visible>!Skin.HasSetting(DoNotUseStarRatingMovies)</visible>
+								<include>StarRatingFadeAnim</include>
+							</control>
+							<control type="image">
+								<description>Quality</description>
+								<posx>5</posx>
+								<posy>6</posy>
+								<width>24</width>
+								<height>24</height>
+								<texture background="true">$VAR[VideoQualityOverlayUnwatched]</texture>
+								<aspectratio>stretch</aspectratio>
+								<visible>!StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+							</control>	
+							<control type="image">
+								<description>Quality</description>
+								<posx>5</posx>
+								<posy>6</posy>
+								<width>24</width>
+								<height>24</height>
+								<texture background="true">$VAR[VideoQualityOverlayWatched]</texture>
+								<aspectratio>stretch</aspectratio>
+								<visible>StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+							</control>
+							<control type="image">
+								<description>Watched Partial</description>
+								<posx>5</posx>
+								<posy>6</posy>
+								<width>24</width>
+								<height>24</height>
+								<texture background="true">$VAR[WatchedPartial]</texture>
+								<aspectratio>stretch</aspectratio>
+								<visible>ListItem.IsResumable</visible>
+								<include>ListViewPartialWatchedOverlayFadeAnim</include>
+								<include>ListViewWatchedOverlayFadeAnim</include>
+							</control>
 						</control>
 					</control>
 				</focusedlayout>		
@@ -1034,7 +1095,7 @@
 				<aspectratio>stretch</aspectratio>
 				<visible>IsEmpty(ListItem.Title)</visible>
 				<include>ListViewOverlayFadeAnim</include>
-			</control>					
+			</control>
 			<control type="label">
 				<description>Label</description>
 				<posx>35</posx>
@@ -1044,7 +1105,7 @@
 				<textcolor>ListColor</textcolor>
 				<shadowcolor>ShadowColor</shadowcolor>
 				<aligny>center</aligny>				
-				<info>ListItem.Title</info>
+				<info>ListItem.Label</info>
 			</control>
 			<control type="label">
 				<description>Label2</description>
@@ -1058,40 +1119,55 @@
 				<aligny>center</aligny>				
 				<info>ListItem.Label2</info>
 				<visible>Skin.HasSetting(DoNotUseStarRatingMovies)</visible>
-			</control> 
-			<control type="image">
-				<description>Star Rating</description>
-				<posx>510</posx>
-				<posy>10</posy>
-				<width>100</width>
-				<height>16</height>		
-				<texture background="true">$INFO[ListItem.StarRating]</texture>
-				<aspectratio align="right">keep</aspectratio>
-				<visible>!IsEmpty(ListItem.Title) + !Skin.HasSetting(DoNotUseStarRatingMovies)</visible>
-				<include>StarRatingFadeAnim</include>
 			</control>
-			<control type="image">
-				<description>Overlay</description>
-				<posx>5</posx>
-				<posy>6</posy>
-				<width>24</width>
-				<height>24</height>
-				<texture background="true">watched/videos/$INFO[ListItem.Overlay]</texture>
-				<aspectratio>stretch</aspectratio>
-				<visible>!ListItem.IsResumable | StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
-				<include>ListViewOverlayFadeAnim</include>
+			<control type="group">
+				<visible>!IsEmpty(ListItem.Title)</visible>
+				<control type="image">
+					<description>Star Rating</description>
+					<posx>510</posx>
+					<posy>10</posy>
+					<width>100</width>
+					<height>16</height>		
+					<texture background="true">$INFO[ListItem.StarRating]</texture>
+					<aspectratio align="right">keep</aspectratio>
+					<visible>!Skin.HasSetting(DoNotUseStarRatingMovies)</visible>
+					<include>StarRatingFadeAnim</include>
+				</control>
+				<control type="image">
+					<description>Quality</description>
+					<posx>5</posx>
+					<posy>6</posy>
+					<width>24</width>
+					<height>24</height>
+					<texture background="true">$VAR[VideoQualityOverlayUnwatched]</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>!StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+					<include>ListViewOverlayFadeAnim</include>
+				</control>		
+				<control type="image">
+					<description>Quality</description>
+					<posx>5</posx>
+					<posy>6</posy>
+					<width>24</width>
+					<height>24</height>
+					<texture background="true">$VAR[VideoQualityOverlayWatched]</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+					<include>ListViewOverlayFadeAnim</include>
+				</control>
+				<control type="image">
+					<description>Watched Partial</description>
+					<posx>5</posx>
+					<posy>6</posy>
+					<width>24</width>
+					<height>24</height>
+					<texture background="true">$VAR[WatchedPartial]</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>ListItem.IsResumable</visible>
+					<include>ListViewPartialWatchedOverlayFadeAnim</include>
+					<include>ListViewWatchedOverlayFadeAnim</include>
+				</control>
 			</control>
-			<control type="image">
-				<description>Watched Partial</description>
-				<posx>5</posx>
-				<posy>6</posy>
-				<width>24</width>
-				<height>24</height>
-				<texture background="true">$VAR[WatchedPartial]</texture>
-				<aspectratio>stretch</aspectratio>
-				<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
-				<include>ListViewOverlayFadeAnim</include>
-			</control>	
 		</itemlayout>	
 	</include>
 	
@@ -1144,7 +1220,7 @@
 					<textcolor>SelectedColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<aligny>center</aligny>
-					<info>ListItem.Title</info>
+					<info>ListItem.Label</info>
 					<scroll>yes</scroll>
 				</control>
 				<control type="label">
@@ -1160,35 +1236,50 @@
 					<info>ListItem.Label2</info>
 					<visible>Skin.HasSetting(DoNotUseStarRatingMovies)</visible>
 				</control>
-				<control type="image">
-					<description>Star Rating</description>
-					<posx>510</posx>
-					<posy>10</posy>
-					<width>100</width>
-					<height>16</height>		
-					<texture background="true">$INFO[ListItem.StarRating]</texture>
-					<aspectratio align="right">keep</aspectratio>
-					<visible>!IsEmpty(ListItem.Title) + !Skin.HasSetting(DoNotUseStarRatingMovies)</visible>
-				</control>
-				<control type="image">
-					<description>Overlay</description>
-					<posx>5</posx>
-					<posy>6</posy>
-					<width>24</width>
-					<height>24</height>
-					<texture background="true">watched/videos/$INFO[ListItem.Overlay]</texture>
-					<aspectratio>stretch</aspectratio>
-					<visible>!ListItem.IsResumable | StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
-				</control>
-				<control type="image">
-					<description>Watched Partial</description>
-					<posx>5</posx>
-					<posy>6</posy>
-					<width>24</width>
-					<height>24</height>
-					<texture background="true">$VAR[WatchedPartial]</texture>
-					<aspectratio>stretch</aspectratio>
-					<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+				<control type="group">
+					<visible>!IsEmpty(ListItem.Title)</visible>
+					<control type="image">
+						<description>Star Rating</description>
+						<posx>510</posx>
+						<posy>10</posy>
+						<width>100</width>
+						<height>16</height>		
+						<texture background="true">$INFO[ListItem.StarRating]</texture>
+						<aspectratio align="right">keep</aspectratio>
+						<visible>!Skin.HasSetting(DoNotUseStarRatingMovies)</visible>
+					</control>
+					<control type="image">
+						<description>Quality</description>
+						<posx>5</posx>
+						<posy>6</posy>
+						<width>24</width>
+						<height>24</height>
+						<texture background="true">$VAR[VideoQualityOverlayUnwatched]</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>!StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+					</control>		
+					<control type="image">
+						<description>Quality</description>
+						<posx>5</posx>
+						<posy>6</posy>
+						<width>24</width>
+						<height>24</height>
+						<texture background="true">$VAR[VideoQualityOverlayWatched]</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+					</control>
+					<control type="image">
+						<description>Watched Partial</description>
+						<posx>5</posx>
+						<posy>6</posy>
+						<width>24</width>
+						<height>24</height>
+						<texture background="true">$VAR[WatchedPartial]</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>ListItem.IsResumable</visible>
+						<include>ListViewPartialWatchedOverlayFadeAnim</include>
+						<include>ListViewWatchedOverlayFadeAnim</include>
+					</control>
 				</control>
 			</control>
 		</focusedlayout>					
@@ -1246,7 +1337,7 @@
 				<font>ListFont</font>
 				<textcolor>ListColor</textcolor>
 				<shadowcolor>ShadowColor</shadowcolor>
-				<label>$INFO[ListItem.Title]</label>
+				<label>$INFO[ListItem.Label]</label>
 				<aligny>center</aligny>
 			</control>
 			<control type="label">
@@ -1260,52 +1351,70 @@
 				<aligny>center</aligny>				
 				<label>$INFO[ListItem.Year]$INFO[ListItem.Director,  -  ,]</label>
 			</control>
-			<control type="label">
-				<description>Rating</description>
-				<posx>610</posx>
-				<posy>22</posy>
-				<width>100</width>
-				<font>ListFont</font>
-				<textcolor>ListColor3</textcolor>
-				<shadowcolor>ShadowColor</shadowcolor>
-				<label>$INFO[ListItem.Rating]</label>
-				<align>right</align>
-				<aligny>center</aligny>
-				<visible>Skin.HasSetting(DoNotUseStarRatingMovies)</visible>
+			<control type="group">
+				<visible>!IsEmpty(ListItem.Title)</visible>
+				<control type="label">
+					<description>Rating</description>
+					<posx>610</posx>
+					<posy>22</posy>
+					<width>100</width>
+					<font>ListFont</font>
+					<textcolor>ListColor3</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>$INFO[ListItem.Rating]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<visible>Skin.HasSetting(DoNotUseStarRatingMovies)</visible>
+				</control>
+				<control type="image">
+					<description>Star Rating</description>
+					<posx>510</posx>
+					<posy>16</posy>
+					<width>100</width>
+					<height>16</height>		
+					<texture background="true">$INFO[ListItem.StarRating]</texture>
+					<aspectratio align="right">keep</aspectratio>
+					<visible>!Skin.HasSetting(DoNotUseStarRatingMovies)</visible>
+					<include>StarRatingFadeAnim</include>
+				</control>
+				<control type="group">
+					<visible>!Skin.HasSetting(HideMoviesListInfo2Overlay)</visible>
+					<control type="image">
+						<description>Quality</description>
+						<posx>586</posx>
+						<posy>39</posy>
+						<width>24</width>
+						<height>24</height>
+						<texture background="true">$VAR[VideoQualityOverlayUnwatched]</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>!StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+						<include>ListViewOverlayFadeAnim</include>
+					</control>	
+					<control type="image">
+						<description>Quality</description>
+						<posx>586</posx>
+						<posy>39</posy>
+						<width>24</width>
+						<height>24</height>
+						<texture background="true">$VAR[VideoQualityOverlayWatched]</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+						<include>ListViewOverlayFadeAnim</include>
+					</control>	
+					<control type="image">
+						<description>Watched Partial</description>
+						<posx>586</posx>
+						<posy>39</posy>
+						<width>24</width>
+						<height>24</height>
+						<texture background="true">$VAR[WatchedPartial]</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>ListItem.IsResumable</visible>
+						<include>ListViewPartialWatchedOverlayFadeAnim</include>
+						<include>ListViewWatchedOverlayFadeAnim</include>
+					</control>	
+				</control>
 			</control>
-			<control type="image">
-				<description>Star Rating</description>
-				<posx>510</posx>
-				<posy>16</posy>
-				<width>100</width>
-				<height>16</height>		
-				<texture background="true">$INFO[ListItem.StarRating]</texture>
-				<aspectratio align="right">keep</aspectratio>
-				<visible>!IsEmpty(ListItem.Title) + !Skin.HasSetting(DoNotUseStarRatingMovies)</visible>
-				<include>StarRatingFadeAnim</include>
-			</control>
-			<control type="image">
-				<description>Overlay</description>
-				<posx>586</posx>
-				<posy>39</posy>
-				<width>24</width>
-				<height>24</height>
-				<texture background="true">$INFO[ListItem.Overlay]</texture>
-				<aspectratio align="right">keep</aspectratio>
-				<visible>!Skin.HasSetting(HideMoviesListInfo2Overlay)</visible>
-				<include>ListViewOverlayFadeAnim</include>
-			</control>	
-			<control type="image">
-				<description>Watched Partial</description>
-				<posx>586</posx>
-				<posy>39</posy>
-				<width>24</width>
-				<height>24</height>
-				<texture background="true">$VAR[WatchedPartial]</texture>
-				<aspectratio align="right">keep</aspectratio>
-				<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(HideMoviesListInfo2Overlay)</visible>
-				<include>ListViewOverlayFadeAnim</include>
-			</control>	
 		</itemlayout>
 	</include>
 	
@@ -1371,7 +1480,7 @@
 					<font>ListFont</font>
 					<textcolor>SelectedColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<label>$INFO[ListItem.Title]</label>
+					<label>$INFO[ListItem.Label]</label>
 					<aligny>center</aligny>
 					<scroll>yes</scroll>
 				</control>
@@ -1386,49 +1495,67 @@
 					<aligny>center</aligny>				
 					<label>$INFO[ListItem.Year]$INFO[ListItem.Director,  -  ,]</label>
 				</control>
-				<control type="label">
-					<description>Rating</description>
-					<posx>610</posx>
-					<posy>22</posy>
-					<width>100</width>
-					<font>ListFont</font>
-					<textcolor>ListColor3</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<label>$INFO[ListItem.Rating]</label>
-					<align>right</align>
-					<aligny>center</aligny>
-					<visible>Skin.HasSetting(DoNotUseStarRatingMovies)</visible>
+				<control type="group">
+					<visible>!IsEmpty(ListItem.Title)</visible>
+					<control type="label">
+						<description>Rating</description>
+						<posx>610</posx>
+						<posy>22</posy>
+						<width>100</width>
+						<font>ListFont</font>
+						<textcolor>ListColor3</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$INFO[ListItem.Rating]</label>
+						<align>right</align>
+						<aligny>center</aligny>
+						<visible>Skin.HasSetting(DoNotUseStarRatingMovies)</visible>
+					</control>
+					<control type="image">
+						<description>Star Rating</description>
+						<posx>510</posx>
+						<posy>16</posy>
+						<width>100</width>
+						<height>16</height>		
+						<texture background="true">$INFO[ListItem.StarRating]</texture>
+						<aspectratio align="right">keep</aspectratio>
+						<visible>!Skin.HasSetting(DoNotUseStarRatingMovies)</visible>
+					</control>
+					<control type="group">
+						<visible>!Skin.HasSetting(HideMoviesListInfo2Overlay)</visible>
+						<control type="image">
+							<description>Quality</description>
+							<posx>586</posx>
+							<posy>39</posy>
+							<width>24</width>
+							<height>24</height>
+							<texture background="true">$VAR[VideoQualityOverlayUnwatched]</texture>
+							<aspectratio>stretch</aspectratio>
+							<visible>!StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+						</control>	
+						<control type="image">
+							<description>Quality</description>
+							<posx>586</posx>
+							<posy>39</posy>
+							<width>24</width>
+							<height>24</height>
+							<texture background="true">$VAR[VideoQualityOverlayWatched]</texture>
+							<aspectratio>stretch</aspectratio>
+							<visible>StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+						</control>	
+						<control type="image">
+							<description>Watched Partial</description>
+							<posx>586</posx>
+							<posy>39</posy>
+							<width>24</width>
+							<height>24</height>
+							<texture background="true">$VAR[WatchedPartial]</texture>
+							<aspectratio>stretch</aspectratio>
+							<visible>ListItem.IsResumable</visible>
+							<include>ListViewPartialWatchedOverlayFadeAnim</include>
+							<include>ListViewWatchedOverlayFadeAnim</include>
+						</control>	
+					</control>
 				</control>
-				<control type="image">
-					<description>Star Rating</description>
-					<posx>510</posx>
-					<posy>16</posy>
-					<width>100</width>
-					<height>16</height>		
-					<texture background="true">$INFO[ListItem.StarRating]</texture>
-					<aspectratio align="right">keep</aspectratio>
-					<visible>!IsEmpty(ListItem.Title) + !Skin.HasSetting(DoNotUseStarRatingMovies)</visible>
-				</control>
-				<control type="image">
-					<description>Overlay</description>
-					<posx>586</posx>
-					<posy>39</posy>
-					<width>24</width>
-					<height>24</height>
-					<texture background="true">$INFO[ListItem.Overlay]</texture>
-					<aspectratio align="right">keep</aspectratio>
-					<visible>!Skin.HasSetting(HideMoviesListInfo2Overlay)</visible>
-				</control>	
-				<control type="image">
-					<description>Watched Partial</description>
-					<posx>586</posx>
-					<posy>39</posy>
-					<width>24</width>
-					<height>24</height>
-					<texture background="true">$VAR[WatchedPartial]</texture>
-					<aspectratio align="right">keep</aspectratio>
-					<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(HideMoviesListInfo2Overlay)</visible>
-				</control>	
 			</control>
 		</focusedlayout>					
 	</include>
@@ -1676,29 +1803,44 @@
 						<textcolor>ListColor</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<aligny>center</aligny>				
-						<info>ListItem.Title</info>
+						<info>ListItem.Label</info>
 					</control>
-					<control type="image">
-						<description>Overlay</description>
-						<posx>5</posx>
-						<posy>6</posy>
-						<width>24</width>
-						<height>24</height>
-						<texture background="true">watched/videos/$INFO[ListItem.Overlay]</texture>
-						<aspectratio>stretch</aspectratio>
-						<visible>!ListItem.IsResumable | StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
-						<include>ListViewOverlayFadeAnim</include>
-					</control>
-					<control type="image">
-						<description>Watched Partial</description>
-						<posx>5</posx>
-						<posy>6</posy>
-						<width>24</width>
-						<height>24</height>
-						<texture background="true">$VAR[WatchedPartial]</texture>
-						<aspectratio>stretch</aspectratio>
-						<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
-						<include>ListViewOverlayFadeAnim</include>
+					<control type="group">
+						<visible>!IsEmpty(ListItem.Title)</visible>
+						<control type="image">
+							<description>Quality</description>
+							<posx>5</posx>
+							<posy>6</posy>
+							<width>24</width>
+							<height>24</height>
+							<texture background="true">$VAR[VideoQualityOverlayUnwatched]</texture>
+							<aspectratio>stretch</aspectratio>
+							<visible>!StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+							<include>ListViewOverlayFadeAnim</include>
+						</control>	
+						<control type="image">
+							<description>Quality</description>
+							<posx>5</posx>
+							<posy>6</posy>
+							<width>24</width>
+							<height>24</height>
+							<texture background="true">$VAR[VideoQualityOverlayWatched]</texture>
+							<aspectratio>stretch</aspectratio>
+							<visible>StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+							<include>ListViewOverlayFadeAnim</include>
+						</control>
+						<control type="image">
+							<description>Watched Partial</description>
+							<posx>5</posx>
+							<posy>6</posy>
+							<width>24</width>
+							<height>24</height>
+							<texture background="true">$VAR[WatchedPartial]</texture>
+							<aspectratio>stretch</aspectratio>
+							<visible>ListItem.IsResumable</visible>
+							<include>ListViewPartialWatchedOverlayFadeAnim</include>
+							<include>ListViewWatchedOverlayFadeAnim</include>
+						</control>
 					</control>
 				</itemlayout>		
 				<focusedlayout height="37">	
@@ -1749,28 +1891,43 @@
 							<textcolor>SelectedColor</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<aligny>center</aligny>
-							<info>ListItem.Title</info>
+							<info>ListItem.Label</info>
 							<scroll>yes</scroll>
 						</control>
-						<control type="image">
-							<description>Overlay</description>
-							<posx>5</posx>
-							<posy>6</posy>
-							<width>24</width>
-							<height>24</height>
-							<texture background="true">watched/videos/$INFO[ListItem.Overlay]</texture>
-							<aspectratio>stretch</aspectratio>
-							<visible>!ListItem.IsResumable | StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
-						</control>
-						<control type="image">
-							<description>Watched Partial</description>
-							<posx>5</posx>
-							<posy>6</posy>
-							<width>24</width>
-							<height>24</height>
-							<texture background="true">$VAR[WatchedPartial]</texture>
-							<aspectratio>stretch</aspectratio>
-							<visible>ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+						<control type="group">
+							<visible>!IsEmpty(ListItem.Title)</visible>
+							<control type="image">
+								<description>Quality</description>
+								<posx>5</posx>
+								<posy>6</posy>
+								<width>24</width>
+								<height>24</height>
+								<texture background="true">$VAR[VideoQualityOverlayUnwatched]</texture>
+								<aspectratio>stretch</aspectratio>
+								<visible>!StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+							</control>	
+							<control type="image">
+								<description>Quality</description>
+								<posx>5</posx>
+								<posy>6</posy>
+								<width>24</width>
+								<height>24</height>
+								<texture background="true">$VAR[VideoQualityOverlayWatched]</texture>
+								<aspectratio>stretch</aspectratio>
+								<visible>StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+							</control>
+							<control type="image">
+								<description>Watched Partial</description>
+								<posx>5</posx>
+								<posy>6</posy>
+								<width>24</width>
+								<height>24</height>
+								<texture background="true">$VAR[WatchedPartial]</texture>
+								<aspectratio>stretch</aspectratio>
+								<visible>ListItem.IsResumable</visible>
+								<include>ListViewPartialWatchedOverlayFadeAnim</include>
+								<include>ListViewWatchedOverlayFadeAnim</include>
+							</control>
 						</control>
 					</control>
 				</focusedlayout>		
@@ -2277,7 +2434,7 @@
 			<font>WrapListFont</font>
 			<textcolor>DefaultColor</textcolor>
 			<shadowcolor>ShadowColor</shadowcolor>
-			<label>$INFO[ListItem.Title]</label>
+			<label>$INFO[ListItem.Label]</label>
 			<aligny>center</aligny>
 			<scroll>yes</scroll>
 		</control>

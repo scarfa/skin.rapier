@@ -51,15 +51,6 @@
 							<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
 						</control>
 						<control type="image">
-							<description>Default Cover</description>
-							<posy>10</posy>
-							<width>590</width>
-							<height>127</height>
-							<bordersize>20</bordersize>
-							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-							<animation effect="fade" end="60" condition="true">Conditional</animation>
-						</control>
-						<control type="image">
 							<description>Cover</description>
 							<width>590</width>
 							<height>127</height>
@@ -128,14 +119,6 @@
 							<textcolor>SelectedColor</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>	
-						</control>
-						<control type="image">
-							<description>Default Cover</description>
-							<posy>10</posy>
-							<width>590</width>
-							<height>127</height>
-							<bordersize>20</bordersize>
-							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						</control>
 						<control type="image">
 							<description>Cover</description>
@@ -285,9 +268,20 @@
 				<bordersize>10</bordersize>
 				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
-				<visible>IsEmpty(ListItem.Title)</visible>
 				<animation effect="fade" end="40" condition="true">Conditional</animation>
-			</control>	
+			</control>
+			<control type="label">
+				<description>Label</description>
+				<posx>5</posx>
+				<posy>-1</posy>
+				<width>400</width>
+				<height>30</height>
+				<font>WideListFont</font>
+				<textcolor>ListColor</textcolor>
+				<shadowcolor>ShadowColor</shadowcolor>
+				<label>$INFO[ListItem.Label][COLOR=ListColor2]$INFO[ListItem.Year,  -  ,][/COLOR]</label>
+				<aligny>center</aligny>
+			</control>
 			<control type="group">
 				<visible>!IsEmpty(ListItem.Title)</visible>
 				<control type="image">
@@ -299,17 +293,6 @@
 					<texture border="7">covers/cover-case-nofocus.png</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>
-				<control type="image">
-					<description>Default Cover</description>
-					<posx>0</posx>
-					<posy>30</posy>
-					<width>509</width>
-					<height>104</height>
-					<bordersize>10</bordersize>
-					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-					<aspectratio>keep</aspectratio>
-					<animation effect="fade" end="40" condition="true">Conditional</animation>
-				</control>	
 				<control type="image">
 					<description>Cover</description>
 					<posx>0</posx>
@@ -330,18 +313,6 @@
 					<aspectratio>stretch</aspectratio>
 					<bordersize>5</bordersize>
 					<include>CoverDimAnim</include>
-				</control>
-				<control type="label">
-					<description>Label</description>
-					<posx>5</posx>
-					<posy>-1</posy>
-					<width>400</width>
-					<height>30</height>
-					<font>WideListFont</font>
-					<textcolor>ListColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<label>$INFO[ListItem.Title][COLOR=ListColor2]$INFO[ListItem.Year,  -  ,][/COLOR]</label>
-					<aligny>center</aligny>
 				</control>
 				<control type="label">
 					<description>Rating</description>
@@ -425,7 +396,19 @@
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Title)</visible>
 				<animation effect="fade" end="40" condition="true">Conditional</animation>
-			</control>	
+			</control>
+			<control type="label">
+				<description>Label</description>
+				<posx>5</posx>
+				<posy>-1</posy>
+				<width>400</width>
+				<height>30</height>
+				<font>WideListFont</font>
+				<textcolor>ListColor</textcolor>
+				<shadowcolor>ShadowColor</shadowcolor>
+				<label>$INFO[ListItem.Label][COLOR=ListColor2]$INFO[ListItem.Year,  -  ,][/COLOR]</label>
+				<aligny>center</aligny>
+			</control>
 			<control type="group">
 				<visible>!IsEmpty(ListItem.Title)</visible>
 				<control type="image">
@@ -437,18 +420,6 @@
 					<bordersize>6</bordersize>
 					<texture background="true">$INFO[ListItem.Path]logo.png</texture>
 					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="label">
-					<description>Label</description>
-					<posx>5</posx>
-					<posy>-1</posy>
-					<width>400</width>
-					<height>30</height>
-					<font>WideListFont</font>
-					<textcolor>ListColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<label>$INFO[ListItem.Title][COLOR=ListColor2]$INFO[ListItem.Year,  -  ,][/COLOR]</label>
-					<aligny>center</aligny>
 				</control>
 				<control type="label">
 					<description>Rating</description>
@@ -549,9 +520,21 @@
 				<bordersize>10</bordersize>
 				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
-				<visible>IsEmpty(ListItem.Title)</visible>
 				<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
-			</control>	
+			</control>
+			<control type="label">
+				<description>Label</description>
+				<posx>5</posx>
+				<posy>-1</posy>
+				<width>400</width>
+				<height>30</height>
+				<font>WideListFont</font>
+				<textcolor>SelectedColor2</textcolor>
+				<shadowcolor>ShadowColor</shadowcolor>
+				<label>$INFO[ListItem.Label]$INFO[ListItem.Year,  -  ,]</label>
+				<aligny>center</aligny>
+				<scroll>yes</scroll>
+			</control>
 			<control type="group">
 				<visible>!IsEmpty(ListItem.Title)</visible>
 				<control type="image">
@@ -565,17 +548,6 @@
 					<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewBannerFocusAnim</include>
 				</control>
 				<control type="image">
-					<description>Default Cover</description>
-					<posx>0</posx>
-					<posy>30</posy>
-					<width>509</width>
-					<height>104</height>
-					<bordersize>10</bordersize>
-					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-					<aspectratio>keep</aspectratio>
-					<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
-				</control>	
-				<control type="image">
 					<description>Cover</description>
 					<posx>0</posx>
 					<posy>30</posy>
@@ -586,19 +558,6 @@
 					<aspectratio>stretch</aspectratio>
 					<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewBannerFocusAnim</include>
 				</control>								
-				<control type="label">
-					<description>Label</description>
-					<posx>5</posx>
-					<posy>-1</posy>
-					<width>400</width>
-					<height>30</height>
-					<font>WideListFont</font>
-					<textcolor>SelectedColor2</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<label>$INFO[ListItem.Title]$INFO[ListItem.Year,  -  ,]</label>
-					<aligny>center</aligny>
-					<scroll>yes</scroll>
-				</control>
 				<control type="label">
 					<description>Rating</description>
 					<posx>504</posx>
@@ -699,7 +658,20 @@
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Title)</visible>
 				<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
-			</control>	
+			</control>
+			<control type="label">
+				<description>Label</description>
+				<posx>5</posx>
+				<posy>-1</posy>
+				<width>400</width>
+				<height>30</height>
+				<font>WideListFont</font>
+				<textcolor>SelectedColor2</textcolor>
+				<shadowcolor>ShadowColor</shadowcolor>
+				<label>$INFO[ListItem.Label]$INFO[ListItem.Year,  -  ,]</label>
+				<aligny>center</aligny>
+				<scroll>yes</scroll>
+			</control>
 			<control type="group">
 				<visible>!IsEmpty(ListItem.Title)</visible>
 				<control type="image">
@@ -713,19 +685,6 @@
 					<aspectratio>keep</aspectratio>
 					<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
 				</control>									
-				<control type="label">
-					<description>Label</description>
-					<posx>5</posx>
-					<posy>-1</posy>
-					<width>400</width>
-					<height>30</height>
-					<font>WideListFont</font>
-					<textcolor>SelectedColor2</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<label>$INFO[ListItem.Title]$INFO[ListItem.Year,  -  ,]</label>
-					<aligny>center</aligny>
-					<scroll>yes</scroll>
-				</control>
 				<control type="label">
 					<description>Rating</description>
 					<posx>504</posx>
@@ -809,9 +768,20 @@
 				<bordersize>10</bordersize>
 				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
-				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<animation effect="fade" end="40" condition="true">Conditional</animation>
-			</control>	
+			</control>
+			<control type="label">
+				<description>Label</description>
+				<posx>105</posx>
+				<posy>-1</posy>
+				<width>385</width>
+				<height>30</height>
+				<font>WideListFont</font>
+				<textcolor>ListColor</textcolor>
+				<shadowcolor>ShadowColor</shadowcolor>
+				<label>$INFO[ListItem.Label]</label>
+				<aligny>center</aligny>
+			</control>
 			<control type="group">
 				<visible>!IsEmpty(ListItem.Title)</visible>
 				<control type="image">
@@ -823,17 +793,6 @@
 					<texture border="7">covers/cover-case-nofocus.png</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>
-				<control type="image">
-					<description>Default Cover</description>
-					<posx>0</posx>
-					<posy>4</posy>
-					<width>94</width>
-					<height>128</height>
-					<bordersize>10</bordersize>
-					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-					<aspectratio>keep</aspectratio>
-					<animation effect="fade" end="40" condition="true">Conditional</animation>
-				</control>		
 				<control type="image">
 					<description>Cover</description>
 					<posx>0</posx>
@@ -855,18 +814,6 @@
 					<bordersize>5</bordersize>
 					<include>CoverDimAnim</include>
 				</control>							
-				<control type="label">
-					<description>Label</description>
-					<posx>105</posx>
-					<posy>-1</posy>
-					<width>385</width>
-					<height>30</height>
-					<font>WideListFont</font>
-					<textcolor>ListColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<label>$INFO[ListItem.Title]</label>
-					<aligny>center</aligny>
-				</control>
 				<control type="image">
 					<description>Star Rating</description>
 					<posx>105</posx>
@@ -984,8 +931,20 @@
 				<bordersize>10</bordersize>
 				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
-				<visible>IsEmpty(ListItem.Thumb)</visible>
 				<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
+			</control>
+			<control type="label">
+				<description>Label</description>
+				<posx>105</posx>
+				<posy>-1</posy>
+				<width>385</width>
+				<height>30</height>
+				<font>WideListFont</font>
+				<textcolor>SelectedColor2</textcolor>
+				<shadowcolor>ShadowColor</shadowcolor>
+				<label>$INFO[ListItem.Label]</label>
+				<aligny>center</aligny>
+				<scroll>yes</scroll>
 			</control>	
 			<control type="group">
 				<visible>!IsEmpty(ListItem.Title)</visible>
@@ -998,18 +957,7 @@
 					<texture border="7">covers/cover-case-nofocus.png</texture>
 					<aspectratio>stretch</aspectratio>
 					<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
-				</control>
-				<control type="image">
-					<description>Default Cover</description>
-					<posx>0</posx>
-					<posy>4</posy>
-					<width>94</width>
-					<height>128</height>
-					<bordersize>10</bordersize>
-					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-					<aspectratio>keep</aspectratio>
-					<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
-				</control>		
+				</control>	
 				<control type="image">
 					<description>Cover</description>
 					<posx>0</posx>
@@ -1021,19 +969,6 @@
 					<aspectratio>stretch</aspectratio>
 					<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
 				</control>						
-				<control type="label">
-					<description>Label</description>
-					<posx>105</posx>
-					<posy>-1</posy>
-					<width>385</width>
-					<height>30</height>
-					<font>WideListFont</font>
-					<textcolor>SelectedColor2</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<label>$INFO[ListItem.Title]</label>
-					<aligny>center</aligny>
-					<scroll>yes</scroll>
-				</control>
 				<control type="image">
 					<description>Star Rating</description>
 					<posx>105</posx>
@@ -1178,7 +1113,7 @@
 						<textcolor>ListColor</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<aligny>center</aligny>				
-						<info>ListItem.Title</info>
+						<info>ListItem.Label</info>
 					</control>
 					<control type="label">
 						<description>Label2</description>
@@ -1263,7 +1198,7 @@
 							<textcolor>SelectedColor</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<aligny>center</aligny>
-							<info>ListItem.Title</info>
+							<info>ListItem.Label</info>
 							<scroll>yes</scroll>
 						</control>
 						<control type="label">
@@ -1926,7 +1861,7 @@
 				<textcolor>ListColor</textcolor>
 				<shadowcolor>ShadowColor</shadowcolor>
 				<aligny>center</aligny>				
-				<info>ListItem.Title</info>
+				<info>ListItem.Label</info>
 			</control>
 			<control type="label">
 				<description>Label2</description>
@@ -2014,7 +1949,7 @@
 					<textcolor>SelectedColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<aligny>center</aligny>
-					<info>ListItem.Title</info>
+					<info>ListItem.Label</info>
 					<scroll>yes</scroll>
 				</control>
 				<control type="label">
@@ -2103,7 +2038,7 @@
 				<font>ListFont</font>
 				<textcolor>ListColor</textcolor>
 				<shadowcolor>ShadowColor</shadowcolor>
-				<label>$INFO[ListItem.Title]</label>
+				<label>$INFO[ListItem.Label]</label>
 				<aligny>center</aligny>
 			</control>
 			<control type="label">
@@ -2217,7 +2152,7 @@
 					<font>ListFont</font>
 					<textcolor>SelectedColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<label>$INFO[ListItem.Title]</label>
+					<label>$INFO[ListItem.Label]</label>
 					<aligny>center</aligny>
 					<scroll>yes</scroll>
 				</control>
