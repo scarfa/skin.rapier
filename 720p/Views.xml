@@ -38,7 +38,7 @@
 		<value condition="!IntegerGreaterThan(ListItem.VideoResolution,719) | [IsEmpty(ListItem.VideoResolution) + [substring(ListItem.filename,.iso,right) | substring(ListItem.filename,.img,right) 
 		| substring(ListItem.filename,.ifo,right) | substring(ListItem.filename,.vob,right)]]">OverlaySD.png</value>
 		<value condition="IntegerGreaterThan(ListItem.VideoResolution,719)">OverlayHD.png</value>
-		<value>OverlayUnknownAlt.png</value>
+		<value>OverlayUnknown.png</value>
 	</variable>
 
 	<include name="DVDThumbsStyleCoverImage">
