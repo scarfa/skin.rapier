@@ -1369,9 +1369,9 @@
 			<control type="image">
 				<description>Cover</description>
 				<posx>0</posx>
-				<posy>0</posy>
+				<posy>4</posy>
 				<width>97</width>
-				<height>73</height>
+				<height>65</height>
 				<bordertexture border="7">covers/cover-case-nofocus.png</bordertexture>
 				<bordersize>5</bordersize>
 				<texture background="true">$INFO[ListItem.Thumb]</texture>
@@ -1380,9 +1380,9 @@
 			<control type="image">
 				<description>Dim</description>
 				<posx>0</posx>
-				<posy>0</posy>
+				<posy>4</posy>
 				<width>97</width>
-				<height>73</height>
+				<height>65</height>
 				<bordersize>5</bordersize>
 				<texture background="true">dim.png</texture>
 				<aspectratio>stretch</aspectratio>
@@ -1392,9 +1392,9 @@
 			<control type="image">
 				<description>Default Cover</description>
 				<posx>0</posx>
-				<posy>0</posy>
+				<posy>4</posy>
 				<width>97</width>
-				<height>73</height>
+				<height>65</height>
 				<bordersize>5</bordersize>
 				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
@@ -2248,9 +2248,9 @@
 			<control type="image">
 				<description>Cover</description>
 				<posx>0</posx>
-				<posy>0</posy>
+				<posy>4</posy>
 				<width>97</width>
-				<height>73</height>
+				<height>65</height>
 				<bordertexture border="7">covers/cover-case-nofocus.png</bordertexture>
 				<bordersize>5</bordersize>
 				<texture background="true">$INFO[ListItem.Thumb]</texture>
@@ -2260,9 +2260,9 @@
 			<control type="image">
 				<description>Default Cover</description>
 				<posx>0</posx>
-				<posy>0</posy>
+				<posy>4</posy>
 				<width>97</width>
-				<height>73</height>
+				<height>65</height>
 				<bordersize>5</bordersize>
 				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
