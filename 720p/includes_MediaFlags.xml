@@ -32,7 +32,7 @@
 			<aspectratio>stretch</aspectratio>
 			<texture>flagging/$VAR[MediaFlagTheme]/video/dvd.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
-			<visible>substring(ListItem.filename,sddvd) | substring(ListItem.foldername,sddvd) | substring(ListItem.filename,.iso,right) | substring(ListItem.filename,.img,right) 
+			<visible>substring(ListItem.filename,.iso,right) | substring(ListItem.filename,.img,right) 
 			| substring(ListItem.filename,.ifo,right) | substring(ListItem.filename,.vob,right)</visible>
 		</control>
 		<control type="image" id="603">
