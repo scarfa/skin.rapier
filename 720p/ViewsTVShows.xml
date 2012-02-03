@@ -99,6 +99,7 @@
 						<texture border="7">covers/cover-case-focus.png</texture>
 						<aspectratio>stretch</aspectratio>
 						<visible>Control.HasFocus(56)</visible>
+						<animation effect="fade" start="40" end="100" time="400" delay="100" reversible="false">Focus</animation>
 					</control>
 					<control type="image">
 						<posy>10</posy>
