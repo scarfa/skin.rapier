@@ -127,6 +127,14 @@
 				<onclick>Skin.ToggleSetting(HideMoviesThumbnailOverlay)</onclick>	
 				<visible>Skin.String(CurrentViewMode,54) + Container.Content(Movies)</visible>
 			</control>
+			<control type="radiobutton" id="3090">
+				<description>Thumbnail Hide Overlay (TVShows)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31046]</label>
+				<selected>Skin.HasSetting(HideTVShowsThumbnailOverlay)</selected>
+				<onclick>Skin.ToggleSetting(HideTVShowsThumbnailOverlay)</onclick>	
+				<visible>Skin.String(CurrentViewMode,54) + Container.Content(TVShows)</visible>
+			</control>
 			<control type="radiobutton" id="1041">
 				<description>Thumbnail Show Fanart (Music)</description>
 				<include>DropDownMenuRadioBtn</include>

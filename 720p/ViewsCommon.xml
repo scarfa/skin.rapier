@@ -2950,6 +2950,7 @@
 					<height>24</height>
 					<texture background="true">$INFO[ListItem.Overlay]</texture>
 					<aspectratio>stretch</aspectratio>
+					<visible>!Skin.HasSetting(HideTVShowsThumbnailOverlay)</visible>
 				</control>	
 			</itemlayout>		
 			<itemlayout height="270" width="208">	
@@ -3046,6 +3047,7 @@
 						<height>24</height>
 						<texture background="true">$INFO[ListItem.Overlay]</texture>
 						<aspectratio>stretch</aspectratio>
+						<visible>!Skin.HasSetting(HideTVShowsThumbnailOverlay)</visible>
 					</control>
 				</control>	
 			</focusedlayout>																	
