@@ -1,112 +1,164 @@
 <window id="135">
-	<defaultcontrol always="true">11</defaultcontrol>
+	<defaultcontrol always="true">10</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
+	<include>DialogOpenCloseAnim</include>
 
 	<coordinates>
 		<system>1</system>
-		<origin x="215" y="180">true</origin>
+		<origin x="280" y="180">true</origin>
 	</coordinates>
 	
 	<controls>
 		<control type="group">
-			<include>DialogOpenCloseAnim</include>
+			<include>SongInfoDialogBox</include>
 			<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(MusicInformation)">Conditional</animation>	
-	
-			<include>SmallMediaInfoDialogBox</include>
-					
-			<control type="label" id="1">
-				<include>SmallMediaInfoDialogTitle</include>
+			
+			<control type="label">
+				<description>Title</description>
+				<posx>296</posx>
+				<posy>39</posy>
+				<width>388</width>
+				<height>16</height>
+				<font>DialogTitleFont</font>
+				<textcolor>DialogTitleColor</textcolor>
+				<aligny>center</aligny>
+				<scroll>yes</scroll>
 				<label>$LOCALIZE[658]</label>
 			</control>
 			
-			<control type="label" id="2">
-				<include>SmallMediaInfoDialogTitle</include>
-				<label>$INFO[ListItem.Title]</label>
-			</control>
-			
 			<control type="image">
-				<description>Cover</description>
-				<posx>DialogMarginOffsetX</posx>
-				<posy>DialogMarginOffsetY</posy>
-				<width>275</width>
-				<height>275</height>
-				<texture>$INFO[ListItem.Thumb]</texture>
-				<bordertexture border="5">controls/button-nofocus.png</bordertexture>
-				<bordersize>5</bordersize>
+				<description>Default Cover Background</description>
+				<posx>35</posx>
+				<posy>35</posy>
+				<width>254</width>
+				<height>254</height>
+				<texture border="5">panels/panel-content-border.png</texture>
 				<aspectratio>stretch</aspectratio>
+				<visible>IsEmpty(ListItem.Thumb)</visible>
+				<animation effect="fade" end="75" condition="true">Conditional</animation>
 			</control>
 			
 			<control type="image">
 				<description>Default Cover</description>
-				<posx>DialogMarginOffsetX</posx>
-				<posy>DialogMarginOffsetY</posy>
-				<width>275</width>
-				<height>275</height>
+				<posx>35</posx>
+				<posy>35</posy>
+				<width>254</width>
+				<height>254</height>
 				<texture>DefaultAudio.png</texture>
-				<bordertexture border="5">controls/button-nofocus.png</bordertexture>
-				<bordersize>50</bordersize>
+				<bordersize>35</bordersize>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
 			</control>
+
+			<control type="image">
+				<description>Cover</description>
+				<posx>35</posx>
+				<posy>35</posy>
+				<width>254</width>
+				<height>254</height>
+				<texture diffuse="covers/player-control-media-cover-border.png">$INFO[ListItem.Thumb]</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			
+			<control type="grouplist">
+				<description>Media Info Background</description>
+				<posx>296</posx>
+				<posy>65</posy>
+				<width>388</width>
+				<itemgap>0</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
+				<orientation>vertical</orientation>
+				<animation effect="fade" end="5" condition="true">Conditional</animation>
+				<control type="image">
+					<width>388</width>
+					<height>32</height>
+					<texture border="5">panels/panel-content-border2.png</texture>
+				</control>
+				<control type="image">
+					<height>32</height>
+				</control>
+				<control type="image">
+					<width>388</width>
+					<height>32</height>
+					<texture border="5">panels/panel-content-border2.png</texture>
+				</control>
+				<control type="image">
+					<height>32</height>
+				</control>
+				<control type="image">
+					<width>388</width>
+					<height>32</height>
+					<texture border="5">panels/panel-content-border2.png</texture>
+				</control>
+				<control type="image">
+					<height>32</height>
+				</control>
+				<control type="image">
+					<width>388</width>
+					<height>32</height>
+					<texture border="5">panels/panel-content-border2.png</texture>
+				</control>
+			</control>
 			
 			<control type="panel" id="901">
-				<posx>315</posx>
-				<posy>DialogMarginOffsetY</posy>
-				<width>500</width>
-				<height>280</height>
+				<posx>296</posx>
+				<posy>65</posy>
+				<width>388</width>
+				<height>224</height>
 				<viewtype label="">list</viewtype>
 				<scrolltime>200</scrolltime>
+				<itemgap>0</itemgap>
 				<onleft>256</onleft>
 				<onright>256</onright>
 				<onup>901</onup>
 				<ondown>901</ondown>
-				<itemlayout height="40" width="520">	
-					<control type="image">
-						<width>500</width>
-						<height>35</height>
-						<texture border="5">controls/button-nofocus.png</texture>
-					</control>		
+				<itemlayout height="32" width="388">	
 					<control type="label">
-						<posx>5</posx>
-						<width>170</width>
-						<height>35</height>
-						<font>DefaultHeadFont</font>
+						<posx>90</posx>
+						<posy>-1</posy>
+						<width>85</width>
+						<height>32</height>
+						<font>DialogMediaInfoFont</font>
 						<textcolor>MediaInfoItemColor</textcolor>
-						<selectedcolor>SelectedColor</selectedcolor>
+						<align>right</align>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
 					</control>
 					<control type="label">
-						<posx>175</posx>
-						<width>320</width>
-						<height>35</height>
-						<font>DefaultFontB</font>
+						<posx>100</posx>
+						<posy>-1</posy>
+						<width>283</width>
+						<height>32</height>
+						<font>DialogMediaInfoFont</font>
 						<textcolor>MediaInfoItemColor2</textcolor>
-						<selectedcolor>SelectedColor</selectedcolor>
 						<aligny>center</aligny>
 						<label fallback="31000">$INFO[ListItem.Label2]</label>
 					</control>		
 				</itemlayout>				
-				<focusedlayout height="40" width="520">
+				<focusedlayout height="32" width="388">
 					<control type="image">
-						<width>500</width>
-						<height>35</height>
-						<texture border="5">controls/button-focus.png</texture>
+						<width>388</width>
+						<height>32</height>
+						<texture border="4">views/list-focus.png</texture>
+						<include>ListViewSelectFadeAnim</include>
 					</control>									
 					<control type="label">
-						<posx>5</posx>
-						<width>170</width>
-						<height>35</height>
-						<font>DefaultHeadFont</font>
-						<textcolor>SelectedColor</textcolor>
+						<posx>90</posx>
+						<posy>-1</posy>
+						<width>85</width>
+						<height>32</height>
+						<font>DialogMediaInfoFont</font>
+						<textcolor>MediaInfoItemColor</textcolor>
+						<align>right</align>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
 					</control>
 					<control type="label">
-						<posx>175</posx>
-						<width>320</width>
-						<height>35</height>
-						<font>DefaultFontB</font>
+						<posx>100</posx>
+						<posy>-1</posy>
+						<width>283</width>
+						<height>32</height>
+						<font>DialogMediaInfoFont</font>
 						<textcolor>SelectedColor</textcolor>
 						<aligny>center</aligny>
 						<label fallback="31000">$INFO[ListItem.Label2]</label>
@@ -114,9 +166,9 @@
 				</focusedlayout>
 				<content>
 					<item id="1">
-						<description>Genre</description>
-						<label>$LOCALIZE[515]</label>
-						<label2>$INFO[MusicPlayer.Genre]</label2>
+						<description>Title</description>
+						<label>$LOCALIZE[556]</label>
+						<label2>$INFO[ListItem.Title]</label2>
 						<onclick>-</onclick>
 					</item>
 					<item id="2">
@@ -126,27 +178,27 @@
 						<onclick>-</onclick>
 					</item>
 					<item id="3">
+						<description>Genre</description>
+						<label>$LOCALIZE[515]</label>
+						<label2>$INFO[ListItem.Genre]</label2>
+						<onclick>-</onclick>
+					</item>
+					<item id="4">
 						<description>Album</description>
 						<label>$LOCALIZE[558]</label>
 						<label2>$INFO[ListItem.Album]</label2>
 						<onclick>-</onclick>
 					</item>
-					<item id="4">
+					<item id="5">
 						<description>Year</description>
 						<label>$LOCALIZE[345]</label>
 						<label2>$INFO[ListItem.Year]</label2>
 						<onclick>-</onclick>
 					</item>
-					<item id="5">
+					<item id="6">
 						<description>Track</description>
 						<label>$LOCALIZE[554]</label>
 						<label2>$INFO[ListItem.TrackNumber]</label2>
-						<onclick>-</onclick>
-					</item>
-					<item id="6">
-						<description>Comment</description>
-						<label>$LOCALIZE[569]</label>
-						<label2>$INFO[ListItem.Comment]</label2>
 						<onclick>-</onclick>
 					</item>
 					<item id="7">
@@ -161,22 +213,22 @@
 			<control type="group" id="256">
 				<control type="button" id="14">
 					<description>Decrease Rating</description>
-					<posx>55</posx>
-					<posy>346</posy>
+					<posx>44</posx>
+					<posy>306</posy>
 					<width>28</width>
 					<height>28</height>
 					<texturefocus>controls/arrow-scroll-left-focus2.png</texturefocus>
 					<texturenofocus>controls/arrow-scroll-left-nofocus2.png</texturenofocus>
 					<onclick>DecreaseRating</onclick>
 					<onup>901</onup>
-					<onleft>11</onleft>
+					<onleft>10</onleft>
 					<onright>15</onright>
 				</control>
 				
 				<control type="image">
 					<description>Star Rating</description>
-					<posx>115</posx>
-					<posy>337</posy>
+					<posx>104</posx>
+					<posy>297</posy>
 					<width>115</width>
 					<height>46</height>
 					<info>ListItem.Rating</info>
@@ -185,8 +237,8 @@
 				
 				<control type="button" id="15">
 					<description>Increase Rating</description>
-					<posx>262</posx>
-					<posy>346</posy>
+					<posx>251</posx>
+					<posy>306</posy>
 					<width>28</width>
 					<height>28</height>
 					<texturefocus flipx="true">controls/arrow-scroll-left-focus2.png</texturefocus>
@@ -198,8 +250,8 @@
 				</control>
 				
 				<control type="grouplist" id="505">
-					<posx>315</posx>
-					<posy>337</posy>
+					<posx>296</posx>
+					<posy>297</posy>
 					<itemgap>0</itemgap>
 					<orientation>horizontal</orientation>
 					<onup>901</onup>
@@ -219,11 +271,6 @@
 						<description>OK</description>
 						<include>DialogMenuBarSmallestBtn</include>
 						<label>$LOCALIZE[186]</label>
-					</control>
-					<control type="button" id="11">
-						<description>Cancel</description>
-						<include>DialogMenuBarSmallestBtn</include>
-						<label>$LOCALIZE[222]</label>
 					</control>
 				</control>
 			</control>

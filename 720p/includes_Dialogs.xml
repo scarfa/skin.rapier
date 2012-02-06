@@ -40,18 +40,6 @@
 		<scroll>yes</scroll>
 	</include>
 
-	<include name="SmallMediaInfoDialogTitle">
-		<posx>232</posx>
-		<posy>35</posy>
-		<width>310</width>
-		<font>DialogTitleFont</font>
-		<textcolor>DialogTitleColor</textcolor>
-		<shadowcolor>ShadowColor</shadowcolor>
-		<align>left</align>
-		<aligny>top</aligny>
-		<scroll>yes</scroll>
-	</include>
-
 	<include name="SettingsDialogTitle">
 		<posx>DialogHeadingOffsetX</posx>
 		<posy>DialogHeadingOffsetY</posy>
@@ -348,11 +336,37 @@
 		</control>
 	</include>
 
-	<include name="SmallMediaInfoDialogBox">
+	<include name="SongInfoDialogBox">
+		<control type="image">
+			<width>719</width>
+			<height>350</height>
+			<texture border="50,50,50,75">panels/dialog-background2.png</texture>
+		</control>
+
+		<control type="button">
+			<posx>810</posx>
+			<include>DialogCloseBtn</include>
+		</control>
+	</include>
+	
+	<include name="PictureInfoDialogBox">
+		<control type="image">
+			<width>719</width>
+			<height>350</height>
+			<texture border="50">panels/dialog-background4.png</texture>
+		</control>
+
+		<control type="button">
+			<posx>810</posx>
+			<include>DialogCloseBtn</include>
+		</control>
+	</include>
+	
+	<include name="PlayerControlsDialogBox">
 		<control type="image">
 			<width>655</width>
 			<height>317</height>
-			<texture border="50,70,50,75">panels/dialog-background4.png</texture>
+			<texture border="50">panels/dialog-background4.png</texture>
 		</control>
 
 		<control type="button">

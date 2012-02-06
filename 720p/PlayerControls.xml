@@ -9,7 +9,7 @@
 	</coordinates>
 	
 	<controls>
-		<include>SmallMediaInfoDialogBox</include>
+		<include>PlayerControlsDialogBox</include>
 				
 		<control type="group">
 			<visible>Player.HasVideo + !VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos) + !VideoPlayer.Content(LiveTV)</visible>
@@ -77,7 +77,7 @@
 				<posx>232</posx>
 				<posy>140</posy>
 				<width>400</width>
-				<font>PlayerControlsMediaInfoFont</font>
+				<font>DialogMediaInfoFont</font>
 				<textcolor>MediaInfoItemColor2</textcolor>
 				<label>$LOCALIZE[20159][CR]$LOCALIZE[416]</label>
 				<align>center</align>
@@ -197,7 +197,7 @@
 						<posy>-1</posy>
 						<width>85</width>
 						<height>32</height>
-						<font>PlayerControlsMediaInfoFont</font>
+						<font>DialogMediaInfoFont</font>
 						<textcolor>MediaInfoItemColor</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -208,7 +208,7 @@
 						<posy>-1</posy>
 						<width>283</width>
 						<height>32</height>
-						<font>PlayerControlsMediaInfoFont</font>
+						<font>DialogMediaInfoFont</font>
 						<textcolor>MediaInfoItemColor2</textcolor>
 						<aligny>center</aligny>
 						<label fallback="31000">$INFO[ListItem.Label2]</label>
@@ -226,7 +226,7 @@
 						<posy>-1</posy>
 						<width>85</width>
 						<height>32</height>
-						<font>PlayerControlsMediaInfoFont</font>
+						<font>DialogMediaInfoFont</font>
 						<textcolor>MediaInfoItemColor</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -237,7 +237,7 @@
 						<posy>-1</posy>
 						<width>283</width>
 						<height>32</height>
-						<font>PlayerControlsMediaInfoFont</font>
+						<font>DialogMediaInfoFont</font>
 						<textcolor>SelectedColor</textcolor>
 						<aligny>center</aligny>
 						<label fallback="31000">$INFO[ListItem.Label2]</label>
@@ -245,15 +245,15 @@
 				</focusedlayout>
 				<content>
 					<item id="1">
-						<description>Genre</description>
-						<label>$LOCALIZE[515]</label>
-						<label2>$INFO[MusicPlayer.Genre]</label2>
-						<onclick>-</onclick>
-					</item>
-					<item id="2">
 						<description>Artist</description>
 						<label>$LOCALIZE[557]</label>
 						<label2>$INFO[MusicPlayer.Artist]</label2>
+						<onclick>-</onclick>
+					</item>
+					<item id="2">
+						<description>Genre</description>
+						<label>$LOCALIZE[515]</label>
+						<label2>$INFO[MusicPlayer.Genre]</label2>
 						<onclick>-</onclick>
 					</item>
 					<item id="3">
@@ -390,7 +390,7 @@
 						<posy>-1</posy>
 						<width>85</width>
 						<height>32</height>
-						<font>PlayerControlsMediaInfoFont</font>
+						<font>DialogMediaInfoFont</font>
 						<textcolor>MediaInfoItemColor</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -401,7 +401,7 @@
 						<posy>-1</posy>
 						<width>283</width>
 						<height>32</height>
-						<font>PlayerControlsMediaInfoFont</font>
+						<font>DialogMediaInfoFont</font>
 						<textcolor>MediaInfoItemColor2</textcolor>
 						<aligny>center</aligny>
 						<label fallback="31000">$INFO[ListItem.Label2]</label>
@@ -419,7 +419,7 @@
 						<posy>-1</posy>
 						<width>85</width>
 						<height>32</height>
-						<font>PlayerControlsMediaInfoFont</font>
+						<font>DialogMediaInfoFont</font>
 						<textcolor>MediaInfoItemColor</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -430,7 +430,7 @@
 						<posy>-1</posy>
 						<width>283</width>
 						<height>32</height>
-						<font>PlayerControlsMediaInfoFont</font>
+						<font>DialogMediaInfoFont</font>
 						<textcolor>SelectedColor</textcolor>
 						<aligny>center</aligny>
 						<label fallback="31000">$INFO[ListItem.Label2]</label>
@@ -583,7 +583,7 @@
 						<posy>-1</posy>
 						<width>85</width>
 						<height>32</height>
-						<font>PlayerControlsMediaInfoFont</font>
+						<font>DialogMediaInfoFont</font>
 						<textcolor>MediaInfoItemColor</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -594,7 +594,7 @@
 						<posy>-1</posy>
 						<width>283</width>
 						<height>32</height>
-						<font>PlayerControlsMediaInfoFont</font>
+						<font>DialogMediaInfoFont</font>
 						<textcolor>MediaInfoItemColor2</textcolor>
 						<aligny>center</aligny>
 						<label fallback="31000">$INFO[ListItem.Label2]</label>
@@ -612,7 +612,7 @@
 						<posy>-1</posy>
 						<width>85</width>
 						<height>32</height>
-						<font>PlayerControlsMediaInfoFont</font>
+						<font>DialogMediaInfoFont</font>
 						<textcolor>MediaInfoItemColor</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -623,7 +623,7 @@
 						<posy>-1</posy>
 						<width>283</width>
 						<height>32</height>
-						<font>PlayerControlsMediaInfoFont</font>
+						<font>DialogMediaInfoFont</font>
 						<textcolor>SelectedColor</textcolor>
 						<aligny>center</aligny>
 						<label fallback="31000">$INFO[ListItem.Label2]</label>
@@ -776,7 +776,7 @@
 						<posy>-1</posy>
 						<width>85</width>
 						<height>32</height>
-						<font>PlayerControlsMediaInfoFont</font>
+						<font>DialogMediaInfoFont</font>
 						<textcolor>MediaInfoItemColor</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -787,7 +787,7 @@
 						<posy>-1</posy>
 						<width>283</width>
 						<height>32</height>
-						<font>PlayerControlsMediaInfoFont</font>
+						<font>DialogMediaInfoFont</font>
 						<textcolor>MediaInfoItemColor2</textcolor>
 						<aligny>center</aligny>
 						<label fallback="31000">$INFO[ListItem.Label2]</label>
@@ -805,7 +805,7 @@
 						<posy>-1</posy>
 						<width>85</width>
 						<height>32</height>
-						<font>PlayerControlsMediaInfoFont</font>
+						<font>DialogMediaInfoFont</font>
 						<textcolor>MediaInfoItemColor</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -816,7 +816,7 @@
 						<posy>-1</posy>
 						<width>283</width>
 						<height>32</height>
-						<font>PlayerControlsMediaInfoFont</font>
+						<font>DialogMediaInfoFont</font>
 						<textcolor>SelectedColor</textcolor>
 						<aligny>center</aligny>
 						<label fallback="31000">$INFO[ListItem.Label2]</label>
@@ -969,7 +969,7 @@
 						<posy>-1</posy>
 						<width>85</width>
 						<height>32</height>
-						<font>PlayerControlsMediaInfoFont</font>
+						<font>DialogMediaInfoFont</font>
 						<textcolor>MediaInfoItemColor</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -980,7 +980,7 @@
 						<posy>-1</posy>
 						<width>283</width>
 						<height>32</height>
-						<font>PlayerControlsMediaInfoFont</font>
+						<font>DialogMediaInfoFont</font>
 						<textcolor>MediaInfoItemColor2</textcolor>
 						<aligny>center</aligny>
 						<label fallback="31000">$INFO[ListItem.Label2]</label>
@@ -998,7 +998,7 @@
 						<posy>-1</posy>
 						<width>85</width>
 						<height>32</height>
-						<font>PlayerControlsMediaInfoFont</font>
+						<font>DialogMediaInfoFont</font>
 						<textcolor>MediaInfoItemColor</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -1009,7 +1009,7 @@
 						<posy>-1</posy>
 						<width>283</width>
 						<height>32</height>
-						<font>PlayerControlsMediaInfoFont</font>
+						<font>DialogMediaInfoFont</font>
 						<textcolor>SelectedColor</textcolor>
 						<aligny>center</aligny>
 						<label fallback="31000">$INFO[ListItem.Label2]</label>
