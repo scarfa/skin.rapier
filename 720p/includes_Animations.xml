@@ -245,6 +245,10 @@
 	<include name="WeatherHeaderFadeAnim">
 		<animation effect="fade" end="3" condition="true">Conditional</animation>
 	</include>
+	
+	<include name="WeatherContentBorderFadeAnim">
+		<animation effect="fade" end="4" condition="true">Conditional</animation>
+	</include>
 
 	<include name="WeatherPlusFadeAnim">
 		<animation type="Conditional" reversible="false" condition="true" loop="true">

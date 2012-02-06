@@ -13,6 +13,7 @@
 				<width>524</width>
 				<height>40</height>
 				<texture border="5">panels/panel-content-border2.png</texture>
+				<include>WeatherContentBorderFadeAnim</include>
 			</control> 
 
 			<control type="label">
@@ -61,6 +62,7 @@
 				<itemgap>0</itemgap>
 				<usecontrolcoords>true</usecontrolcoords>
 				<orientation>vertical</orientation>
+				<include>WeatherContentBorderFadeAnim</include>
 				<control type="image">
 					<width>524</width>
 					<height>35</height>
@@ -359,6 +361,7 @@
 				<width>524</width>
 				<height>40</height>
 				<texture border="5">panels/panel-content-border2.png</texture>
+				<include>WeatherContentBorderFadeAnim</include>
 			</control> 
 
 			<control type="label">
@@ -410,6 +413,7 @@
 				<itemgap>0</itemgap>
 				<usecontrolcoords>true</usecontrolcoords>
 				<orientation>vertical</orientation>
+				<include>WeatherContentBorderFadeAnim</include>
 				<control type="image">
 					<width>524</width>
 					<height>35</height>

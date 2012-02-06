@@ -744,4 +744,14 @@
 		<value condition="System.HasAddon(script.artistslideshow) + Skin.HasSetting(UseFanartForMusicPlayingBG) + Skin.HasSetting(EnableArtistFanartSlideshow)">$INFO[Window(Visualisation).Property(ArtistSlideshow.ArtistBiography)]</value>
 		<value>$INFO[MusicPlayer.Property(Album_Description)]</value>
 	</variable>
+	
+	<variable name="VideoPlayerSeasonVal">
+		<value condition="!IntegerGreaterThan(VideoPlayer.Season,9)">$INFO[VideoPlayer.Season,S0]</value>
+		<value>$INFO[VideoPlayer.Season,S]</value>
+	</variable>
+	
+	<variable name="VideoPlayerEpisodeVal">
+		<value condition="!IntegerGreaterThan(VideoPlayer.Episode,9)">$INFO[VideoPlayer.Episode,E0]</value>
+		<value>$INFO[VideoPlayer.Episode,E]</value>
+	</variable>
 </includes>

@@ -18,7 +18,7 @@
 			</control>
 			
 			<control type="label" id="2">
-				<include>SmallMediaInfoDialogTitle2</include>
+				<include>SmallMediaInfoDialogTitle</include>
 				<label>$INFO[ListItem.FileName]</label>
 			</control>
 				
