@@ -192,7 +192,7 @@
 				</control>
 			</control>
 			
-			<control type="image">
+			<control type="image" id="1">
 				<description>Cover</description>
 				<posx>983</posx>
 				<posy>92</posy>
