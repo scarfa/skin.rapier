@@ -15,8 +15,8 @@
 				<itemgap>0</itemgap>
 				<control type="image">
 					<width>344</width>
-					<height>50</height>
-					<texture border="40,49,40,0">gui/context-menu-top.png</texture>	
+					<height>32</height>
+					<texture border="40,30,40,0">gui/context-menu-top.png</texture>	
 				</control>
 				<control type="image">
 					<width>344</width>
@@ -99,14 +99,14 @@
 				</control>
 				<control type="image">
 					<width>344</width>
-					<height>50</height>
-					<texture flipy="true" border="40,0,40,49">gui/context-menu-top.png</texture>	
+					<height>32</height>
+					<texture flipy="true" border="40,0,40,30">gui/context-menu-top.png</texture>	
 				</control>
 			</control>
 			
 			<control type="group" id="307">
 				<posx>32</posx>
-				<posy>51</posy>
+				<posy>32</posy>
 				<defaultcontrol always="true">201</defaultcontrol>
 				
 				<control type="button" id="202">
@@ -187,7 +187,7 @@
 
 			<control type="grouplist" id="301">
 				<posx>32</posx>
-				<posy>88</posy>
+				<posy>69</posy>
 				<itemgap>2</itemgap>
 				<onup>201</onup>
 				<ondown>201</ondown>
@@ -290,15 +290,9 @@
 					<visible>Skin.HasSetting(HideSystemCategory)</visible>
 				</control>
 			</control>
-			
-			<control type="label">
-				<width>264</width>
-				<include>DialogTitle</include>
-				<label>$LOCALIZE[33061]</label>
-			</control>
 				
 			<control type="button">
-				<posx>304</posx>
+				<posx>284</posx>
 				<include>DialogCloseBtn</include>
 			</control>
 		</control>

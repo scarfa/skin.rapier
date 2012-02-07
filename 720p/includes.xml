@@ -33,6 +33,7 @@
 	<constant name="DialogHeadingOffsetY">26</constant>
 	<constant name="DialogMarginOffsetX">35</constant>
 	<constant name="DialogMarginOffsetY">53</constant>
+	<constant name="Dialog4MarginOffsetY">35</constant>
 	<constant name="MenuBarHeight">37</constant>
 	<constant name="MenuBarOffsetY">45</constant>
 	<constant name="StatusBarPosY">0</constant>

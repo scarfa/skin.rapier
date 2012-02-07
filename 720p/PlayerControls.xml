@@ -40,8 +40,8 @@
 			
 			<control type="image">
 				<description>Default Cover Background</description>
-				<posx>35</posx>
-				<posy>35</posy>
+				<posx>DialogMarginOffsetX</posx>
+				<posy>Dialog4MarginOffsetY</posy>
 				<width>190</width>
 				<height>190</height>
 				<texture border="5">panels/panel-content-border.png</texture>
@@ -52,8 +52,8 @@
 			
 			<control type="image">
 				<description>Default Cover</description>
-				<posx>35</posx>
-				<posy>35</posy>
+				<posx>DialogMarginOffsetX</posx>
+				<posy>Dialog4MarginOffsetY</posy>
 				<width>190</width>
 				<height>190</height>
 				<texture>DefaultVideo.png</texture>
@@ -64,8 +64,8 @@
 
 			<control type="image">
 				<description>Cover</description>
-				<posx>35</posx>
-				<posy>35</posy>
+				<posx>DialogMarginOffsetX</posx>
+				<posy>Dialog4MarginOffsetY</posy>
 				<width>190</width>
 				<height>190</height>
 				<texture diffuse="covers/player-control-media-cover-border.png">$INFO[VideoPlayer.Cover]</texture>
@@ -114,8 +114,8 @@
 			
 			<control type="image">
 				<description>Default Cover Background</description>
-				<posx>35</posx>
-				<posy>35</posy>
+				<posx>DialogMarginOffsetX</posx>
+				<posy>Dialog4MarginOffsetY</posy>
 				<width>190</width>
 				<height>190</height>
 				<texture border="5">panels/panel-content-border.png</texture>
@@ -126,8 +126,8 @@
 			
 			<control type="image">
 				<description>Default Cover</description>
-				<posx>35</posx>
-				<posy>35</posy>
+				<posx>DialogMarginOffsetX</posx>
+				<posy>Dialog4MarginOffsetY</posy>
 				<width>190</width>
 				<height>190</height>
 				<texture>DefaultAudio.png</texture>
@@ -138,8 +138,8 @@
 
 			<control type="image">
 				<description>Cover</description>
-				<posx>35</posx>
-				<posy>35</posy>
+				<posx>DialogMarginOffsetX</posx>
+				<posy>Dialog4MarginOffsetY</posy>
 				<width>190</width>
 				<height>190</height>
 				<texture diffuse="covers/player-control-media-cover-border.png">$INFO[MusicPlayer.Cover]</texture>
@@ -307,8 +307,8 @@
 			
 			<control type="image">
 				<description>Default Cover Background</description>
-				<posx>35</posx>
-				<posy>35</posy>
+				<posx>DialogMarginOffsetX</posx>
+				<posy>Dialog4MarginOffsetY</posy>
 				<width>190</width>
 				<height>190</height>
 				<texture border="5">panels/panel-content-border.png</texture>
@@ -319,8 +319,8 @@
 			
 			<control type="image">
 				<description>Default Cover</description>
-				<posx>35</posx>
-				<posy>35</posy>
+				<posx>DialogMarginOffsetX</posx>
+				<posy>Dialog4MarginOffsetY</posy>
 				<width>190</width>
 				<height>190</height>
 				<texture>DefaultVideo.png</texture>
@@ -331,8 +331,8 @@
 
 			<control type="image">
 				<description>Cover</description>
-				<posx>35</posx>
-				<posy>35</posy>
+				<posx>DialogMarginOffsetX</posx>
+				<posy>Dialog4MarginOffsetY</posy>
 				<width>190</width>
 				<height>190</height>
 				<texture diffuse="covers/player-control-media-cover-border.png">$INFO[VideoPlayer.Cover]</texture>
@@ -500,8 +500,8 @@
 			
 			<control type="image">
 				<description>Default Cover Background</description>
-				<posx>35</posx>
-				<posy>35</posy>
+				<posx>DialogMarginOffsetX</posx>
+				<posy>Dialog4MarginOffsetY</posy>
 				<width>190</width>
 				<height>190</height>
 				<texture border="5">panels/panel-content-border.png</texture>
@@ -512,8 +512,8 @@
 			
 			<control type="image">
 				<description>Default Cover</description>
-				<posx>35</posx>
-				<posy>35</posy>
+				<posx>DialogMarginOffsetX</posx>
+				<posy>Dialog4MarginOffsetY</posy>
 				<width>190</width>
 				<height>190</height>
 				<texture>DefaultVideo.png</texture>
@@ -524,8 +524,8 @@
 
 			<control type="image">
 				<description>Cover</description>
-				<posx>35</posx>
-				<posy>35</posy>
+				<posx>DialogMarginOffsetX</posx>
+				<posy>Dialog4MarginOffsetY</posy>
 				<width>190</width>
 				<height>190</height>
 				<texture diffuse="covers/player-control-media-cover-border.png">$INFO[VideoPlayer.Cover]</texture>
@@ -693,8 +693,8 @@
 			
 			<control type="image">
 				<description>Default Cover Background</description>
-				<posx>35</posx>
-				<posy>35</posy>
+				<posx>DialogMarginOffsetX</posx>
+				<posy>Dialog4MarginOffsetY</posy>
 				<width>190</width>
 				<height>190</height>
 				<texture border="5">panels/panel-content-border.png</texture>
@@ -705,8 +705,8 @@
 			
 			<control type="image">
 				<description>Default Cover</description>
-				<posx>35</posx>
-				<posy>35</posy>
+				<posx>DialogMarginOffsetX</posx>
+				<posy>Dialog4MarginOffsetY</posy>
 				<width>190</width>
 				<height>190</height>
 				<texture>DefaultVideo.png</texture>
@@ -717,8 +717,8 @@
 
 			<control type="image">
 				<description>Cover</description>
-				<posx>35</posx>
-				<posy>35</posy>
+				<posx>DialogMarginOffsetX</posx>
+				<posy>Dialog4MarginOffsetY</posy>
 				<width>190</width>
 				<height>190</height>
 				<texture diffuse="covers/player-control-media-cover-border.png">$INFO[VideoPlayer.Cover]</texture>
@@ -886,8 +886,8 @@
 			
 			<control type="image">
 				<description>Default Cover Background</description>
-				<posx>35</posx>
-				<posy>35</posy>
+				<posx>DialogMarginOffsetX</posx>
+				<posy>Dialog4MarginOffsetY</posy>
 				<width>190</width>
 				<height>190</height>
 				<texture border="5">panels/panel-content-border.png</texture>
@@ -898,8 +898,8 @@
 			
 			<control type="image">
 				<description>Default Cover</description>
-				<posx>35</posx>
-				<posy>35</posy>
+				<posx>DialogMarginOffsetX</posx>
+				<posy>Dialog4MarginOffsetY</posy>
 				<width>190</width>
 				<height>190</height>
 				<texture>DefaultVideo.png</texture>
@@ -910,8 +910,8 @@
 
 			<control type="image">
 				<description>Cover</description>
-				<posx>35</posx>
-				<posy>35</posy>
+				<posx>DialogMarginOffsetX</posx>
+				<posy>Dialog4MarginOffsetY</posy>
 				<width>190</width>
 				<height>190</height>
 				<texture diffuse="covers/player-control-media-cover-border.png">$INFO[VideoPlayer.Cover]</texture>
@@ -1052,7 +1052,7 @@
 		
 		<control type="image">
 			<description>Player Controls Background</description>
-			<posx>35</posx>
+			<posx>DialogMarginOffsetX</posx>
 			<posy>232</posy>
 			<width>585</width>
 			<height>50</height>
@@ -1061,7 +1061,7 @@
 		</control>
 			
 		<control type="group">
-			<posx>35</posx>
+			<posx>DialogMarginOffsetX</posx>
 			<posy>232</posy>
 			
 			<control type="label">

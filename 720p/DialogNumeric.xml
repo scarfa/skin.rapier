@@ -15,7 +15,7 @@
 			<control type="group">	
 				<desription>Input Area</desription>
 				<posx>DialogMarginOffsetX</posx>
-				<posy>DialogMarginOffsetY</posy>
+				<posy>Dialog4MarginOffsetY</posy>
 				
 				<control type="image">
 					<description>Input Background</description>

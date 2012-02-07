@@ -1,8 +1,7 @@
 <window id="139">
-	<defaultcontrol always="true">-</defaultcontrol>
+	<defaultcontrol always="true">5</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<include>DialogOpenCloseAnim</include>
-	
+
 	<coordinates>
 		<system>1</system>
 		<origin x="280" y="180">true</origin>
@@ -11,6 +10,7 @@
 	<controls>
 		<control type="group">
 			<include>PictureInfoDialogBox</include>
+			<include>DialogOpenCloseAnim</include>
 			
 			<control type="label">
 				<description>Title</description>
@@ -27,8 +27,8 @@
 				
 			<control type="image">
 				<description>Default Cover Background</description>
-				<posx>35</posx>
-				<posy>35</posy>
+				<posx>DialogMarginOffsetX</posx>
+				<posy>Dialog4MarginOffsetY</posy>
 				<width>254</width>
 				<height>254</height>
 				<texture border="5">panels/panel-content-border.png</texture>
@@ -39,8 +39,8 @@
 			
 			<control type="image">
 				<description>Default Cover</description>
-				<posx>35</posx>
-				<posy>35</posy>
+				<posx>DialogMarginOffsetX</posx>
+				<posy>Dialog4MarginOffsetY</posy>
 				<width>254</width>
 				<height>254</height>
 				<texture>DefaultPicture.png</texture>
@@ -51,8 +51,8 @@
 
 			<control type="image">
 				<description>Cover</description>
-				<posx>35</posx>
-				<posy>35</posy>
+				<posx>DialogMarginOffsetX</posx>
+				<posy>Dialog4MarginOffsetY</posy>
 				<width>254</width>
 				<height>254</height>
 				<texture diffuse="covers/player-control-media-cover-border.png">$INFO[ListItem.Thumb]</texture>

@@ -1,7 +1,6 @@
 <window id="135">
 	<defaultcontrol always="true">10</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<include>DialogOpenCloseAnim</include>
 
 	<coordinates>
 		<system>1</system>
@@ -11,6 +10,7 @@
 	<controls>
 		<control type="group">
 			<include>SongInfoDialogBox</include>
+			<include>DialogOpenCloseAnim</include>
 			<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(MusicInformation)">Conditional</animation>	
 			
 			<control type="label">
@@ -28,8 +28,8 @@
 			
 			<control type="image">
 				<description>Default Cover Background</description>
-				<posx>35</posx>
-				<posy>35</posy>
+				<posx>DialogMarginOffsetX</posx>
+				<posy>Dialog4MarginOffsetY</posy>
 				<width>254</width>
 				<height>254</height>
 				<texture border="5">panels/panel-content-border.png</texture>
@@ -40,8 +40,8 @@
 			
 			<control type="image">
 				<description>Default Cover</description>
-				<posx>35</posx>
-				<posy>35</posy>
+				<posx>DialogMarginOffsetX</posx>
+				<posy>Dialog4MarginOffsetY</posy>
 				<width>254</width>
 				<height>254</height>
 				<texture>DefaultAudio.png</texture>
@@ -52,8 +52,8 @@
 
 			<control type="image">
 				<description>Cover</description>
-				<posx>35</posx>
-				<posy>35</posy>
+				<posx>DialogMarginOffsetX</posx>
+				<posy>Dialog4MarginOffsetY</posy>
 				<width>254</width>
 				<height>254</height>
 				<texture diffuse="covers/player-control-media-cover-border.png">$INFO[ListItem.Thumb]</texture>

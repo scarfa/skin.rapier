@@ -269,8 +269,8 @@
 	<include name="NumericDialogBox">
 		<control type="image">
 			<width>268</width>
-			<height>341</height>
-			<texture border="50">panels/dialog-background3.png</texture>
+			<height>323</height>
+			<texture border="50">panels/dialog-background4.png</texture>
 		</control>
 
 		<control type="button">
