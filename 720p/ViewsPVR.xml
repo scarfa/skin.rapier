@@ -524,11 +524,117 @@
 
 				<itemlayout height="42" width="102">
 					<control type="image" id="2">
+						<description>movie / drama</description>
 						<width>98</width>
 						<height>38</height>
 						<texture border="8">pvr/column.png</texture>
-						<colordiffuse>$VAR[LiveTVTimelineGenre]</colordiffuse>
+						<colordiffuse>ff8b5015</colordiffuse>
 						<include>LiveTVColumnFadeAnim</include>
+						<visible>stringcompare(ListItem.Property(GenreType),16)</visible>
+					</control>
+					<control type="image" id="3">
+						<description>news</description>
+						<width>98</width>
+						<height>38</height>
+						<texture border="8">pvr/column.png</texture>
+						<colordiffuse>ff446444</colordiffuse>
+						<include>LiveTVColumnFadeAnim</include>
+						<visible>stringcompare(ListItem.Property(GenreType),32)</visible>
+					</control>
+					<control type="image" id="4">
+						<description>show / gameshow</description>
+						<width>98</width>
+						<height>38</height>
+						<texture border="8">pvr/column.png</texture>
+						<colordiffuse>ff8d8c17</colordiffuse>
+						<include>LiveTVColumnFadeAnim</include>
+						<visible>stringcompare(ListItem.Property(GenreType),48)</visible>
+					</control>
+					<control type="image" id="5">
+						<description>sports</description>
+						<width>98</width>
+						<height>38</height>
+						<texture border="8">pvr/column.png</texture>
+						<colordiffuse>ff930d1d</colordiffuse>
+						<include>LiveTVColumnFadeAnim</include>
+						<visible>stringcompare(ListItem.Property(GenreType),64)</visible>
+					</control>
+					<control type="image" id="6">
+						<description>children</description>
+						<width>98</width>
+						<height>38</height>
+						<texture border="8">pvr/column.png</texture>
+						<colordiffuse>ff13897a</colordiffuse>
+						<include>LiveTVColumnFadeAnim</include>
+						<visible>stringcompare(ListItem.Property(GenreType),80)</visible>
+					</control>
+					<control type="image" id="7">
+						<description>music / ballet / dance</description>
+						<width>98</width>
+						<height>38</height>
+						<texture border="8">pvr/column.png</texture>
+						<colordiffuse>ff2d9234</colordiffuse>
+						<include>LiveTVColumnFadeAnim</include>
+						<visible>stringcompare(ListItem.Property(GenreType),96)</visible>
+					</control>
+					<control type="image" id="8">
+						<description>arts / culture</description>
+						<width>98</width>
+						<height>38</height>
+						<texture border="8">pvr/column.png</texture>
+						<colordiffuse>ff022788</colordiffuse>
+						<include>LiveTVColumnFadeAnim</include>
+						<visible>stringcompare(ListItem.Property(GenreType),112)</visible>
+					</control>
+					<control type="image" id="9">
+						<description>social / political / economics</description>
+						<width>98</width>
+						<height>38</height>
+						<texture border="8">pvr/column.png</texture>
+						<colordiffuse>ff641864</colordiffuse>
+						<include>LiveTVColumnFadeAnim</include>
+						<visible>stringcompare(ListItem.Property(GenreType),128)</visible>
+					</control>
+					<control type="image" id="10">
+						<description>education / science / factual</description>
+						<width>98</width>
+						<height>38</height>
+						<texture border="8">pvr/column.png</texture>
+						<colordiffuse>ff797a7c</colordiffuse>
+						<include>LiveTVColumnFadeAnim</include>
+						<visible>stringcompare(ListItem.Property(GenreType),144)</visible>
+					</control>
+					<control type="image" id="11">
+						<description>leisure / hobbies</description>
+						<width>98</width>
+						<height>38</height>
+						<texture border="8">pvr/column.png</texture>
+						<colordiffuse>ff5a5a7e</colordiffuse>
+						<include>LiveTVColumnFadeAnim</include>
+						<visible>stringcompare(ListItem.Property(GenreType),160)</visible>
+					</control>
+					<control type="image" id="12">
+						<description>special event</description>
+						<width>98</width>
+						<height>38</height>
+						<texture border="8">pvr/column.png</texture>
+						<colordiffuse>ff1a6973</colordiffuse>
+						<include>LiveTVColumnFadeAnim</include>
+						<visible>stringcompare(ListItem.Property(GenreType),176)</visible>
+					</control>
+					<control type="image" id="13">
+						<description>other / unknown</description>
+						<width>98</width>
+						<height>38</height>
+						<texture border="8">pvr/column.png</texture>
+						<colordiffuse>LiveTVColumnColor2</colordiffuse>
+						<include>LiveTVColumnFadeAnim</include>
+						<visible>!stringcompare(ListItem.Property(GenreType),16) + !stringcompare(ListItem.Property(GenreType),32)
+						+ !stringcompare(ListItem.Property(GenreType),48) + !stringcompare(ListItem.Property(GenreType),64)
+						+ !stringcompare(ListItem.Property(GenreType),80) + !stringcompare(ListItem.Property(GenreType),96)
+						+ !stringcompare(ListItem.Property(GenreType),112) + !stringcompare(ListItem.Property(GenreType),128)
+						+ !stringcompare(ListItem.Property(GenreType),144) + !stringcompare(ListItem.Property(GenreType),160)
+						+ !stringcompare(ListItem.Property(GenreType),176)</visible>
 					</control>
 
 					<control type="label" id="1">
@@ -768,38 +874,6 @@
 			<include>ViewsDialogPopUpScreenDim</include>
 		</control>
 	</include>
-
-	<variable name="LiveTVTimelineGenre">
-		<!-- other / unknown -->
-		<value condition="!stringcompare(ListItem.Property(GenreType),16) + !stringcompare(ListItem.Property(GenreType),32)
-		+ !stringcompare(ListItem.Property(GenreType),48) + !stringcompare(ListItem.Property(GenreType),64)
-		+ !stringcompare(ListItem.Property(GenreType),80) + !stringcompare(ListItem.Property(GenreType),96)
-		+ !stringcompare(ListItem.Property(GenreType),112) + !stringcompare(ListItem.Property(GenreType),128)
-		+ !stringcompare(ListItem.Property(GenreType),144) + !stringcompare(ListItem.Property(GenreType),160)
-		+ !stringcompare(ListItem.Property(GenreType),176)">LiveTVColumnColor2</value>
-		<!-- movie / drama -->
-		<value condition="stringcompare(ListItem.Property(GenreType),16)">ff8b5015</value>
-		<!-- news -->
-		<value condition="stringcompare(ListItem.Property(GenreType),32)">ff446444</value>
-		<!-- show / gameshow -->
-		<value condition="stringcompare(ListItem.Property(GenreType),48)">ff8d8c17</value>
-		<!-- sports -->
-		<value condition="stringcompare(ListItem.Property(GenreType),64)">ff930d1d</value>
-		<!-- children -->
-		<value condition="stringcompare(ListItem.Property(GenreType),80)">ff13897a</value>
-		<!-- music / ballet / dance -->
-		<value condition="stringcompare(ListItem.Property(GenreType),96)">ff2d9234</value>
-		<!-- arts / culture -->
-		<value condition="stringcompare(ListItem.Property(GenreType),112)">ff022788</value>
-		<!-- social / political / economics -->
-		<value condition="stringcompare(ListItem.Property(GenreType),128)">ff641864</value>
-		<!-- education / science / factual -->
-		<value condition="stringcompare(ListItem.Property(GenreType),144)">ff797a7c</value>
-		<!-- leisure / hobbies -->
-		<value condition="stringcompare(ListItem.Property(GenreType),160)">ff5a5a7e</value>
-		<!-- special event -->
-		<value condition="stringcompare(ListItem.Property(GenreType),176)">ff1a6973</value>
-	</variable>
 
 	<include name="LiveTVColumnInfoArea">
 		<!-- LiveTVEPGTimelineView, LiveTVGuideNowNextView, LiveTVGuideChannelView,
