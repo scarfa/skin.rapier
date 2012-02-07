@@ -190,7 +190,7 @@
 				<description>Channel Logo</description>
 				<posx>983</posx>
 				<posy>92</posy>
-				<width>167</width>
+				<width>210</width>
 				<height>167</height>
 				<bordertexture border="8">panels/panel-content-border.png</bordertexture>
 				<aspectratio>keep</aspectratio>
