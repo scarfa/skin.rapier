@@ -3138,8 +3138,14 @@
 							<texture border="4">views/list-focus.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<visible>Control.HasFocus(6888)</visible>
-							<animation effect="slide" start="0,-24" time="150" tween="quadratic" easing="out" reversible="false" condition="Container(6888).OnNext">Focus</animation>
-							<animation effect="slide" start="0,24" time="150" tween="quadratic" easing="out" reversible="false" condition="Container(6888).OnPrevious">Focus</animation>
+							<animation type="Focus" condition="Container(6888).OnNext" reversible="false">
+								<effect type="Fade" start="40" end="100" time="400" tween="back" easing="in"/>
+								<effect type="slide" start="0,-24" time="150" tween="quadratic" easing="out"/>
+							</animation>
+							<animation type="Focus" condition="Container(6888).OnPrevious" reversible="false">
+								<effect type="Fade" start="40" end="100" time="400" tween="back" easing="in"/>
+								<effect type="slide" start="0,24" time="150" tween="quadratic" easing="out"/>
+							</animation>
 							<include>ListViewSelectFadeAnim</include>
 						</control>
 						<control type="label">
@@ -3319,8 +3325,14 @@
 							<texture border="4">views/list-focus.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<visible>Control.HasFocus(6889)</visible>
-							<animation effect="slide" start="0,-24" time="150" tween="quadratic" easing="out" reversible="false" condition="Container(6889).OnNext">Focus</animation>
-							<animation effect="slide" start="0,24" time="150" tween="quadratic" easing="out" reversible="false" condition="Container(6889).OnPrevious">Focus</animation>
+							<animation type="Focus" condition="Container(6889).OnNext" reversible="false">
+								<effect type="Fade" start="40" end="100" time="400" tween="back" easing="in"/>
+								<effect type="slide" start="0,-24" time="150" tween="quadratic" easing="out"/>
+							</animation>
+							<animation type="Focus" condition="Container(6889).OnPrevious" reversible="false">
+								<effect type="Fade" start="40" end="100" time="400" tween="back" easing="in"/>
+								<effect type="slide" start="0,24" time="150" tween="quadratic" easing="out"/>
+							</animation>
 							<include>ListViewSelectFadeAnim</include>
 						</control>
 						<control type="label">
@@ -3500,8 +3512,14 @@
 							<texture border="4">views/list-focus.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<visible>Control.HasFocus(6890)</visible>
-							<animation effect="slide" start="0,-24" time="150" tween="quadratic" easing="out" reversible="false" condition="Container(6890).OnNext">Focus</animation>
-							<animation effect="slide" start="0,24" time="150" tween="quadratic" easing="out" reversible="false" condition="Container(6890).OnPrevious">Focus</animation>
+							<animation type="Focus" condition="Container(6890).OnNext" reversible="false">
+								<effect type="Fade" start="40" end="100" time="400" tween="back" easing="in"/>
+								<effect type="slide" start="0,-24" time="150" tween="quadratic" easing="out"/>
+							</animation>
+							<animation type="Focus" condition="Container(6890).OnPrevious" reversible="false">
+								<effect type="Fade" start="40" end="100" time="400" tween="back" easing="in"/>
+								<effect type="slide" start="0,24" time="150" tween="quadratic" easing="out"/>
+							</animation>
 							<include>ListViewSelectFadeAnim</include>
 						</control>
 						<control type="label">
