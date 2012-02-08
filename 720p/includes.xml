@@ -381,6 +381,22 @@
 		<pulseonselect>false</pulseonselect>
 	</include>
 	
+	<include name="SettingsSystemInfoContentBtn">
+		<width>755</width>
+		<height>50</height>
+		<font>SettingsContentFont</font>
+		<textcolor>SettingsContentColor</textcolor>
+		<disabledcolor>SettingsContentColor</disabledcolor>
+		<shadowcolor>ShadowColor</shadowcolor>
+		<align>left</align>
+		<textoffsetx>10</textoffsetx>
+		<textwidth>735</textwidth>
+		<texturefocus border="5">-</texturefocus>
+		<texturenofocus border="5">-</texturenofocus>
+		<pulseonselect>false</pulseonselect>
+		<enable>false</enable>
+	</include>
+	
 	<include name="SettingsContentRadioBtn">
 		<width>755</width>
 		<height>50</height>

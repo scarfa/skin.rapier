@@ -69,6 +69,14 @@
 					<posy>185</posy>
 					<include>SettingsCatBtn</include>
 					<label>$LOCALIZE[19191]</label>
+					<visible>System.GetBool(pvrmanager.enabled) 
+					+ [system.hasaddon(pvr.fortherecord.argus) 
+					| system.hasaddon(pvr.fortherecord.argus-rtsp) 
+					| system.hasaddon(pvr.hts) 
+					| system.hasaddon(pvr.mythtv) 
+					| system.hasaddon(pvr.team-mediaportal.tvserver) 
+					| system.hasaddon(pvr.team-mediaportal.tvserver-tsreader) 
+					| system.hasaddon(pvr.vdr.vnsi)]</visible>
 				</control>
 			</control>
 			
@@ -84,34 +92,34 @@
 				<ondown>900</ondown>
 				<onleft>850</onleft>
 				<control type="button" id="2">
-					<include>SettingsContentRadioBtn</include>
+					<include>SettingsSystemInfoContentBtn</include>
 				</control>
 				<control type="button" id="3">
-					<include>SettingsContentRadioBtn</include>
+					<include>SettingsSystemInfoContentBtn</include>
 				</control>
 				<control type="button" id="4">
-					<include>SettingsContentRadioBtn</include>
+					<include>SettingsSystemInfoContentBtn</include>
 				</control>
 				<control type="button" id="5">
-					<include>SettingsContentRadioBtn</include>
+					<include>SettingsSystemInfoContentBtn</include>
 				</control>
 				<control type="button" id="6">
-					<include>SettingsContentRadioBtn</include>
+					<include>SettingsSystemInfoContentBtn</include>
 				</control>
 				<control type="button" id="7">
-					<include>SettingsContentRadioBtn</include>
+					<include>SettingsSystemInfoContentBtn</include>
 				</control>
 				<control type="button" id="8">
-					<include>SettingsContentRadioBtn</include>
+					<include>SettingsSystemInfoContentBtn</include>
 				</control>
 				<control type="button" id="9">
-					<include>SettingsContentRadioBtn</include>
+					<include>SettingsSystemInfoContentBtn</include>
 				</control>
 				<control type="button" id="10">
-					<include>SettingsContentRadioBtn</include>
+					<include>SettingsSystemInfoContentBtn</include>
 				</control>
 				<control type="button" id="11">
-					<include>SettingsContentRadioBtn</include>
+					<include>SettingsSystemInfoContentBtn</include>
 				</control>
 			</control>
 		</control>
