@@ -1555,7 +1555,7 @@
 					<control type="image">
 						<posx>8</posx>
 						<posy>8</posy>
-						<width>300</width>
+						<width>250</width>
 						<height>25</height>
 						<texture border="4">panels/panel3.png</texture>
 						<visible>!IsEmpty(ListItem.Genre)</visible>
@@ -1566,7 +1566,7 @@
 						<description>Genre</description>
 						<posx>16</posx>
 						<posy>19</posy>
-						<width>284</width>
+						<width>234</width>
 						<font>MediaInfoFont3</font>
 						<textcolor>WhiteColor</textcolor>
 						<aligny>center</aligny>
@@ -1855,7 +1855,7 @@
 					<control type="image">
 						<posx>8</posx>
 						<posy>8</posy>
-						<width>300</width>
+						<width>250</width>
 						<height>25</height>
 						<texture border="4">panels/panel3.png</texture>
 						<visible>!IsEmpty(ListItem.Property(Artist_Genre))</visible>
@@ -1866,7 +1866,7 @@
 						<description>Genre</description>
 						<posx>16</posx>
 						<posy>19</posy>
-						<width>284</width>
+						<width>234</width>
 						<font>MediaInfoFont3</font>
 						<textcolor>WhiteColor</textcolor>
 						<aligny>center</aligny>
@@ -2634,7 +2634,7 @@
 					<control type="image">
 						<posx>8</posx>
 						<posy>8</posy>
-						<width>300</width>
+						<width>250</width>
 						<height>25</height>
 						<texture border="4">panels/panel3.png</texture>
 						<visible>!IsEmpty(ListItem.Genre)</visible>
@@ -2645,7 +2645,7 @@
 						<description>Genre</description>
 						<posx>16</posx>
 						<posy>19</posy>
-						<width>284</width>
+						<width>234</width>
 						<font>MediaInfoFont3</font>
 						<textcolor>WhiteColor</textcolor>
 						<aligny>center</aligny>
@@ -2957,7 +2957,7 @@
 					<control type="image">
 						<posx>8</posx>
 						<posy>8</posy>
-						<width>300</width>
+						<width>250</width>
 						<height>25</height>
 						<texture border="4">panels/panel3.png</texture>
 						<visible>!IsEmpty(ListItem.Genre)</visible>
@@ -2968,7 +2968,7 @@
 						<description>Genre</description>
 						<posx>16</posx>
 						<posy>19</posy>
-						<width>284</width>
+						<width>234</width>
 						<font>MediaInfoFont3</font>
 						<textcolor>WhiteColor</textcolor>
 						<aligny>center</aligny>
