@@ -2136,7 +2136,7 @@
 							<aspectratio>stretch</aspectratio>
 							<visible>Control.HasFocus(500)</visible>
 							<include>ListViewSelectFadeAnim</include>
-							<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewWeatherScrollAnim</include>
+							<include>ListViewWeatherScrollAnim</include>
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -2148,7 +2148,7 @@
 							<include>ListViewSelectFadeAnim2</include>
 						</control>
 						<control type="group">
-							<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+							<include>ListViewFocusAnim</include>
 							<control type="image">
 								<description>Icon</description>
 								<posx>5</posx>

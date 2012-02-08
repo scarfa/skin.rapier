@@ -120,7 +120,7 @@
 						<aspectratio>stretch</aspectratio>
 						<visible>Control.HasFocus(20)</visible>
 						<include>ListViewSelectFadeAnim</include>
-						<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewFileManagerScrollAnim</include>
+						<include>ListViewFileManagerScrollAnim</include>
 					</control>
 					<control type="image">
 						<posx>0</posx>
@@ -132,7 +132,7 @@
 						<include>ListViewSelectFadeAnim2</include>
 					</control>
 					<control type="group">
-						<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+						<include>ListViewFocusAnim</include>
 						<control type="image">
 							<posx>5</posx>
 							<posy>6</posy>
@@ -229,7 +229,7 @@
 						<aspectratio>stretch</aspectratio>
 						<visible>Control.HasFocus(21)</visible>
 						<include>ListViewSelectFadeAnim</include>
-						<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewFileManagerScrollAnim2</include>
+						<include>ListViewFileManagerScrollAnim2</include>
 					</control>
 					<control type="image">
 						<posx>0</posx>
@@ -241,7 +241,7 @@
 						<include>ListViewSelectFadeAnim2</include>
 					</control>
 					<control type="group">
-						<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+						<include>ListViewFocusAnim</include>
 						<control type="image">
 							<posx>5</posx>
 							<posy>6</posy>

@@ -191,7 +191,7 @@
 								<texture border="4">views/list-focus.png</texture>
 								<visible>Control.HasFocus(450)</visible>
 								<include>ListViewSelectFadeAnim</include>
-								<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewDialogScrollAnim</include>
+								<include>ListViewDialogScrollAnim</include>
 							</control>
 							<control type="image">
 								<width>310</width>
@@ -201,7 +201,7 @@
 								<include>ListViewSelectFadeAnim2</include>
 							</control>
 							<control type="group">
-								<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+								<include>ListViewFocusAnim</include>
 								<control type="image">
 									<posx>5</posx>
 									<posy>6</posy>

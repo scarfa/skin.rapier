@@ -98,7 +98,7 @@
 							<aspectratio>stretch</aspectratio>
 							<visible>Control.HasFocus(11)</visible>
 							<include>ListViewSelectFadeAnim</include>
-							<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewScrollAnim</include>
+							<include>ListViewScrollAnim</include>
 						</control>
 
 						<control type="image">
@@ -112,7 +112,7 @@
 						</control>
 
 						<control type="group">
-							<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+							<include>ListViewFocusAnim</include>
 							<control type="label">
 								<description>Time</description>
 								<posx>75</posx>

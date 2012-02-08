@@ -124,7 +124,7 @@
 						<aspectratio>stretch</aspectratio>
 						<visible>Control.HasFocus(50)</visible>
 						<include>ListViewSelectFadeAnim</include>
-						<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewPlaylistEditorScrollAnim</include>
+						<include>ListViewPlaylistEditorScrollAnim</include>
 					</control>
 					<control type="image">
 						<posx>0</posx>
@@ -136,7 +136,7 @@
 						<include>ListViewSelectFadeAnim2</include>
 					</control>
 					<control type="group">
-						<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+						<include>ListViewFocusAnim</include>
 						<control type="image">
 							<posx>5</posx>
 							<posy>6</posy>
@@ -233,7 +233,7 @@
 						<aspectratio>stretch</aspectratio>
 						<visible>Control.HasFocus(100)</visible>
 						<include>ListViewSelectFadeAnim</include>
-						<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewPlaylistEditorScrollAnim2</include>
+						<include>ListViewPlaylistEditorScrollAnim2</include>
 					</control>
 					<control type="image">
 						<posx>0</posx>
@@ -245,7 +245,7 @@
 						<include>ListViewSelectFadeAnim2</include>
 					</control>
 					<control type="group">
-						<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+						<include>ListViewFocusAnim</include>
 						<control type="image">
 							<posx>5</posx>
 							<posy>6</posy>
