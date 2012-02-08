@@ -42,6 +42,15 @@
 					<selected>Skin.HasSetting(HideSeekBarOSD)</selected>
 					<onclick>Skin.ToggleSetting(HideSeekBarOSD)</onclick>
 				</control>
+				<control type="radiobutton" id="1010">
+					<description>Hide Date</description>
+					<include>SettingsContentRadioBtn</include>
+					<label>$LOCALIZE[31033]</label>
+					<selected>Skin.HasSetting(HideTopBarDate)</selected>
+					<onclick>Skin.ToggleSetting(HideTopBarDate)</onclick>
+					<onclick>ReloadSkin()</onclick>
+					<include>ReloadSkinNotification</include>
+				</control>
 				<control type="button" id="1002">
 					<description>Weather Label</description>
 					<include>SettingsHeaderBtn</include>

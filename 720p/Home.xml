@@ -34,7 +34,8 @@
 			<description>Top Bar Area</description>
 			<include>HomeTopBarImage</include>
 			<include>TopBarOpenCloseAnim</include>
-			<include condition="System.GetBool(LookAndFeel.EnableRSSFeeds)">RSSFeed</include>
+			<include condition="System.GetBool(LookAndFeel.EnableRSSFeeds) + !Skin.HasSetting(HideTopBarDate)">RSSFeed</include>
+			<include condition="System.GetBool(LookAndFeel.EnableRSSFeeds) + Skin.HasSetting(HideTopBarDate)">RSSFeedNoDate</include>
 			<include>HomeTopBarOverlay</include>
 			<include>XbmcLogo</include>
 			<include>Notifications</include>
