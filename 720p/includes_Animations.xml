@@ -649,7 +649,7 @@
 	</include>
 	
 	<include name="MediaFlagFadeAnim">
-		<animation effect="fade" end="70" condition="true">Conditional</animation>
+		<animation effect="fade" end="55" condition="true">Conditional</animation>
 	</include>
 	
 	<include name="MoviesWallViewTopLeftCornerFocusAnim">
