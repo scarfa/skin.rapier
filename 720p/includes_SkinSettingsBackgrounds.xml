@@ -21,12 +21,12 @@
 					<label>$LOCALIZE[33069]</label>
 				</control>
 				<control type="togglebutton" id="4011">
-					<description>Dim Fanart</description>
+					<description>Fanart Brightness</description>
 					<include>SettingsContentToggleBtn</include>
 					<label>$LOCALIZE[31059] - $LOCALIZE[391]</label>
 					<altlabel>$LOCALIZE[31059] - $LOCALIZE[392]</altlabel>
-					<usealttexture>Skin.HasSetting(DimFanartBackgroundLow)</usealttexture>
-					<onclick>Skin.ToggleSetting(DimFanartBackgroundLow)</onclick>
+					<usealttexture>Skin.HasSetting(FanartBackgroundBrightnessHigh)</usealttexture>
+					<onclick>Skin.ToggleSetting(FanartBackgroundBrightnessHigh)</onclick>
 				</control>
 				<control type="radiobutton" id="4010">
 					<description>Animate Background</description>
@@ -211,12 +211,12 @@
 						<visible>Skin.String(CustomDefaultBGType,2)</visible>
 					</control>
 					<control type="togglebutton" id="4202">
-						<description>Dim Background</description>
+						<description>Background Brightness</description>
 						<include>SettingsContentToggleBtn</include>
-						<label>$LOCALIZE[31060] - $LOCALIZE[392]</label>
-						<altlabel>$LOCALIZE[31060] - $LOCALIZE[391]</altlabel>
-						<usealttexture>Skin.HasSetting(DimDefaultBackgroundHigh)</usealttexture>
-						<onclick>Skin.ToggleSetting(DimDefaultBackgroundHigh)</onclick>
+						<label>$LOCALIZE[31060] - $LOCALIZE[391]</label>
+						<altlabel>$LOCALIZE[31060] - $LOCALIZE[392]</altlabel>
+						<usealttexture>Skin.HasSetting(DefaultBackgroundBrightnessHigh)</usealttexture>
+						<onclick>Skin.ToggleSetting(DefaultBackgroundBrightnessHigh)</onclick>
 					</control>
 				</control>
 				
@@ -331,12 +331,12 @@
 						<visible>Skin.String(CustomMusicBGType,3)</visible>
 					</control>
 					<control type="togglebutton" id="4212">
-						<description>Dim Background</description>
+						<description>Background Brightness</description>
 						<include>SettingsContentToggleBtn</include>
-						<label>$LOCALIZE[31060] - $LOCALIZE[392]</label>
-						<altlabel>$LOCALIZE[31060] - $LOCALIZE[391]</altlabel>
-						<usealttexture>Skin.HasSetting(DimMusicBackgroundHigh)</usealttexture>
-						<onclick>Skin.ToggleSetting(DimMusicBackgroundHigh)</onclick>
+						<label>$LOCALIZE[31060] - $LOCALIZE[391]</label>
+						<altlabel>$LOCALIZE[31060] - $LOCALIZE[392]</altlabel>
+						<usealttexture>Skin.HasSetting(MusicBackgroundBrightnessHigh)</usealttexture>
+						<onclick>Skin.ToggleSetting(MusicBackgroundBrightnessHigh)</onclick>
 						<visible>Skin.String(CustomMusicBGType,2) | Skin.String(CustomMusicBGType,3)</visible>
 					</control>
 					<control type="togglebutton" id="4213">
@@ -446,12 +446,12 @@
 						<visible>Skin.String(CustomPVRBGType,3)</visible>
 					</control>
 					<control type="togglebutton" id="94212">
-						<description>Dim Background</description>
+						<description>Background Brightness</description>
 						<include>SettingsContentToggleBtn</include>
-						<label>$LOCALIZE[31060] - $LOCALIZE[392]</label>
-						<altlabel>$LOCALIZE[31060] - $LOCALIZE[391]</altlabel>
-						<usealttexture>Skin.HasSetting(DimPVRBackgroundHigh)</usealttexture>
-						<onclick>Skin.ToggleSetting(DimPVRBackgroundHigh)</onclick>
+						<label>$LOCALIZE[31060] - $LOCALIZE[391]</label>
+						<altlabel>$LOCALIZE[31060] - $LOCALIZE[392]</altlabel>
+						<usealttexture>Skin.HasSetting(PVRBackgroundBrightnessHigh)</usealttexture>
+						<onclick>Skin.ToggleSetting(PVRBackgroundBrightnessHigh)</onclick>
 						<visible>Skin.String(CustomPVRBGType,2) | Skin.String(CustomPVRBGType,3)</visible>
 					</control>
 					<control type="togglebutton" id="94213">
@@ -576,12 +576,12 @@
 						<visible>Skin.String(CustomVideosBGType,3)</visible>
 					</control>
 					<control type="togglebutton" id="4222">
-						<description>Dim Background</description>
+						<description>Background Brightness</description>
 						<include>SettingsContentToggleBtn</include>
-						<label>$LOCALIZE[31060] - $LOCALIZE[392]</label>
-						<altlabel>$LOCALIZE[31060] - $LOCALIZE[391]</altlabel>
-						<usealttexture>Skin.HasSetting(DimVideosBackgroundHigh)</usealttexture>
-						<onclick>Skin.ToggleSetting(DimVideosBackgroundHigh)</onclick>
+						<label>$LOCALIZE[31060] - $LOCALIZE[391]</label>
+						<altlabel>$LOCALIZE[31060] - $LOCALIZE[392]</altlabel>
+						<usealttexture>Skin.HasSetting(VideosBackgroundBrightnessHigh)</usealttexture>
+						<onclick>Skin.ToggleSetting(VideosBackgroundBrightnessHigh)</onclick>
 						<visible>Skin.String(CustomVideosBGType,2) | Skin.String(CustomVideosBGType,3)</visible>
 					</control>
 					<control type="togglebutton" id="4223">
@@ -706,12 +706,12 @@
 						<visible>Skin.String(CustomMoviesBGType,3)</visible>
 					</control>
 					<control type="togglebutton" id="4232">
-						<description>Dim Background</description>
+						<description>Background Brightness</description>
 						<include>SettingsContentToggleBtn</include>
-						<label>$LOCALIZE[31060] - $LOCALIZE[392]</label>
-						<altlabel>$LOCALIZE[31060] - $LOCALIZE[391]</altlabel>
-						<usealttexture>Skin.HasSetting(DimMoviesBackgroundHigh)</usealttexture>
-						<onclick>Skin.ToggleSetting(DimMoviesBackgroundHigh)</onclick>
+						<label>$LOCALIZE[31060] - $LOCALIZE[391]</label>
+						<altlabel>$LOCALIZE[31060] - $LOCALIZE[392]</altlabel>
+						<usealttexture>Skin.HasSetting(MoviesBackgroundBrightnessHigh)</usealttexture>
+						<onclick>Skin.ToggleSetting(MoviesBackgroundBrightnessHigh)</onclick>
 						<visible>Skin.String(CustomMoviesBGType,2) | Skin.String(CustomMoviesBGType,3)</visible>
 					</control>	
 					<control type="togglebutton" id="4233">
@@ -836,12 +836,12 @@
 						<visible>Skin.String(CustomTVShowsBGType,3)</visible>
 					</control>
 					<control type="togglebutton" id="4242">
-						<description>Dim Background</description>
+						<description>Background Brightness</description>
 						<include>SettingsContentToggleBtn</include>
-						<label>$LOCALIZE[31060] - $LOCALIZE[392]</label>
-						<altlabel>$LOCALIZE[31060] - $LOCALIZE[391]</altlabel>
-						<usealttexture>Skin.HasSetting(DimTVShowsBackgroundHigh)</usealttexture>
-						<onclick>Skin.ToggleSetting(DimTVShowsBackgroundHigh)</onclick>
+						<label>$LOCALIZE[31060] - $LOCALIZE[391]</label>
+						<altlabel>$LOCALIZE[31060] - $LOCALIZE[392]</altlabel>
+						<usealttexture>Skin.HasSetting(TVShowsBackgroundBrightnessHigh)</usealttexture>
+						<onclick>Skin.ToggleSetting(TVShowsBackgroundBrightnessHigh)</onclick>
 						<visible>Skin.String(CustomTVShowsBGType,2) | Skin.String(CustomTVShowsBGType,3)</visible>
 					</control>
 					<control type="togglebutton" id="4243">
@@ -951,12 +951,12 @@
 						<visible>Skin.String(CustomProgramsBGType,3)</visible>
 					</control>
 					<control type="togglebutton" id="4252">
-						<description>Dim Background</description>
+						<description>Background Brightness</description>
 						<include>SettingsContentToggleBtn</include>
-						<label>$LOCALIZE[31060] - $LOCALIZE[392]</label>
-						<altlabel>$LOCALIZE[31060] - $LOCALIZE[391]</altlabel>
-						<usealttexture>Skin.HasSetting(DimProgramsBackgroundHigh)</usealttexture>
-						<onclick>Skin.ToggleSetting(DimProgramsBackgroundHigh)</onclick>
+						<label>$LOCALIZE[31060] - $LOCALIZE[391]</label>
+						<altlabel>$LOCALIZE[31060] - $LOCALIZE[392]</altlabel>
+						<usealttexture>Skin.HasSetting(ProgramsBackgroundBrightnessHigh)</usealttexture>
+						<onclick>Skin.ToggleSetting(ProgramsBackgroundBrightnessHigh)</onclick>
 						<visible>Skin.String(CustomProgramsBGType,2) | Skin.String(CustomProgramsBGType,3)</visible>
 					</control>
 					<control type="togglebutton" id="4253">
@@ -1066,12 +1066,12 @@
 						<visible>Skin.String(CustomPicturesBGType,3)</visible>
 					</control>
 					<control type="togglebutton" id="4262">
-						<description>Dim Background</description>
+						<description>Background Brightness</description>
 						<include>SettingsContentToggleBtn</include>
-						<label>$LOCALIZE[31060] - $LOCALIZE[392]</label>
-						<altlabel>$LOCALIZE[31060] - $LOCALIZE[391]</altlabel>
-						<usealttexture>Skin.HasSetting(DimPicturesBackgroundHigh)</usealttexture>
-						<onclick>Skin.ToggleSetting(DimPicturesBackgroundHigh)</onclick>
+						<label>$LOCALIZE[31060] - $LOCALIZE[391]</label>
+						<altlabel>$LOCALIZE[31060] - $LOCALIZE[392]</altlabel>
+						<usealttexture>Skin.HasSetting(PicturesBackgroundBrightnessHigh)</usealttexture>
+						<onclick>Skin.ToggleSetting(PicturesBackgroundBrightnessHigh)</onclick>
 						<visible>Skin.String(CustomPicturesBGType,2) | Skin.String(CustomPicturesBGType,3)</visible>
 					</control>
 					<control type="togglebutton" id="4263">
@@ -1390,12 +1390,12 @@
 						<visible>Skin.String(CustomWeatherBGType,3) | Skin.String(CustomWeatherBGType,4)</visible>
 					</control>
 					<control type="togglebutton" id="4412">
-						<description>Dim Background</description>
+						<description>Background Brightness</description>
 						<include>SettingsContentToggleBtn</include>
-						<label>$LOCALIZE[31060] - $LOCALIZE[392]</label>
-						<altlabel>$LOCALIZE[31060] - $LOCALIZE[391]</altlabel>
-						<usealttexture>Skin.HasSetting(DimWeatherBackgroundHigh)</usealttexture>
-						<onclick>Skin.ToggleSetting(DimWeatherBackgroundHigh)</onclick>
+						<label>$LOCALIZE[31060] - $LOCALIZE[391]</label>
+						<altlabel>$LOCALIZE[31060] - $LOCALIZE[392]</altlabel>
+						<usealttexture>Skin.HasSetting(WeatherBackgroundBrightnessHigh)</usealttexture>
+						<onclick>Skin.ToggleSetting(WeatherBackgroundBrightnessHigh)</onclick>
 						<visible>Skin.String(CustomWeatherBGType,2) | Skin.String(CustomWeatherBGType,3) | Skin.String(CustomWeatherBGType,4)</visible>
 					</control>
 				</control>

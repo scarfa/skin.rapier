@@ -8,7 +8,7 @@
 		</control>
 
 		<control type="image">
-			<description>Dim Background</description>
+			<description>Background Brightness</description>
 			<include>ScreenSize</include>
 			<texture>dim.png</texture>
 			<animation effect="fade" start="0" end="40" time="450">WindowOpen</animation>

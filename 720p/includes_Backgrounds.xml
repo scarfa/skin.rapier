@@ -51,8 +51,8 @@
 
 			<control type="image">
 				<include>BackgroundDim</include>
-				<animation effect="fade" end="50" reversible="false" condition="!Skin.HasSetting(DimDefaultBackgroundHigh)">Conditional</animation>
-				<animation effect="fade" end="75" reversible="false" condition="Skin.HasSetting(DimDefaultBackgroundHigh)">Conditional</animation>
+				<animation effect="fade" end="50" reversible="false" condition="!Skin.HasSetting(DefaultBackgroundBrightnessHigh)">Conditional</animation>
+				<animation effect="fade" end="75" reversible="false" condition="Skin.HasSetting(DefaultBackgroundBrightnessHigh)">Conditional</animation>
 			</control>
 		</control>
 	</include>
@@ -451,7 +451,6 @@
 	<include name="MediaPlayingVizDim">
 		<control type="image">
 			<include>BackgroundDim</include>
-			<animation effect="fade" end="75" reversible="false" condition="true">Conditional</animation>
 		</control>
 	</include>
 
@@ -459,8 +458,7 @@
 		<control type="image">
 			<include>BackgroundDim</include>
 			<visible>!IsEmpty(MusicPlayer.Property(Fanart_Image))</visible>
-			<animation effect="fade" end="50" reversible="false" condition="Skin.HasSetting(DimFanartBackgroundLow)">Conditional</animation>
-			<animation effect="fade" end="75" reversible="false" condition="!Skin.HasSetting(DimFanartBackgroundLow)">Conditional</animation>
+			<animation effect="fade" end="90" reversible="false" condition="Skin.HasSetting(FanartBackgroundBrightnessHigh)">Conditional</animation>
 		</control>
 	</include>
 
@@ -469,72 +467,63 @@
 			<include>BackgroundDim</include>
 			<visible>!IsEmpty(ListItem.Property(Fanart_Image))
 			| [[Container.Content(Episodes) | Container.Content(Seasons)] + !Skin.HasSetting(EnableTVShowsExtraFanart)]</visible>
-			<animation effect="fade" end="60" reversible="false" condition="Skin.HasSetting(DimFanartBackgroundLow)">Conditional</animation>
-			<animation effect="fade" end="85" reversible="false" condition="!Skin.HasSetting(DimFanartBackgroundLow)">Conditional</animation>
+			<animation effect="fade" end="90" reversible="false" condition="Skin.HasSetting(FanartBackgroundBrightnessHigh)">Conditional</animation>
 		</control>
 	</include>
 
 	<include name="MusicBackgroundDim">
 		<control type="image">
 			<include>BackgroundDim</include>
-			<animation effect="fade" end="60" reversible="false" condition="!Skin.HasSetting(DimMusicBackgroundHigh)">Conditional</animation>
-			<animation effect="fade" end="85" reversible="false" condition="Skin.HasSetting(DimMusicBackgroundHigh)">Conditional</animation>
+			<animation effect="fade" end="90" reversible="false" condition="Skin.HasSetting(MusicBackgroundBrightnessHigh)">Conditional</animation>
 		</control>
 	</include>
 
 	<include name="VideosBackgroundDim">
 		<control type="image">
 			<include>BackgroundDim</include>
-			<animation effect="fade" end="60" reversible="false" condition="!Skin.HasSetting(DimVideosBackgroundHigh)">Conditional</animation>
-			<animation effect="fade" end="85" reversible="false" condition="Skin.HasSetting(DimVideosBackgroundHigh)">Conditional</animation>
+			<animation effect="fade" end="90" reversible="false" condition="Skin.HasSetting(VideosBackgroundBrightnessHigh)">Conditional</animation>
 		</control>
 	</include>
 
 	<include name="MoviesBackgroundDim">
 		<control type="image">
 			<include>BackgroundDim</include>
-			<animation effect="fade" end="60" reversible="false" condition="!Skin.HasSetting(DimMoviesBackgroundHigh)">Conditional</animation>
-			<animation effect="fade" end="85" reversible="false" condition="Skin.HasSetting(DimMoviesBackgroundHigh)">Conditional</animation>
+			<animation effect="fade" end="90" reversible="false" condition="Skin.HasSetting(MoviesBackgroundBrightnessHigh)">Conditional</animation>
 		</control>
 	</include>
 
 	<include name="TVShowsBackgroundDim">
 		<control type="image">
 			<include>BackgroundDim</include>
-			<animation effect="fade" end="60" reversible="false" condition="!Skin.HasSetting(DimTVShowsBackgroundHigh)">Conditional</animation>
-			<animation effect="fade" end="85" reversible="false" condition="Skin.HasSetting(DimTVShowsBackgroundHigh)">Conditional</animation>
+			<animation effect="fade" end="90" reversible="false" condition="Skin.HasSetting(TVShowsBackgroundBrightnessHigh)">Conditional</animation>
 		</control>
 	</include>
 
 	<include name="ProgramsBackgroundDim">
 		<control type="image">
 			<include>BackgroundDim</include>
-			<animation effect="fade" end="60" reversible="false" condition="!Skin.HasSetting(DimProgramsBackgroundHigh)">Conditional</animation>
-			<animation effect="fade" end="85" reversible="false" condition="Skin.HasSetting(DimProgramsBackgroundHigh)">Conditional</animation>
+			<animation effect="fade" end="90" reversible="false" condition="Skin.HasSetting(ProgramsBackgroundBrightnessHigh)">Conditional</animation>
 		</control>
 	</include>
 
 	<include name="PicturesBackgroundDim">
 		<control type="image">
 			<include>BackgroundDim</include>
-			<animation effect="fade" end="60" reversible="false" condition="!Skin.HasSetting(DimPicturesBackgroundHigh)">Conditional</animation>
-			<animation effect="fade" end="85" reversible="false" condition="Skin.HasSetting(DimPicturesBackgroundHigh)">Conditional</animation>
+			<animation effect="fade" end="90" reversible="false" condition="Skin.HasSetting(PicturesBackgroundBrightnessHigh)">Conditional</animation>
 		</control>
 	</include>
 	
 	<include name="WeatherBackgroundDim">
 		<control type="image">
 			<include>BackgroundDim</include>
-			<animation effect="fade" end="60" reversible="false" condition="!Skin.HasSetting(DimWeatherBackgroundHigh)">Conditional</animation>
-			<animation effect="fade" end="85" reversible="false" condition="Skin.HasSetting(DimWeatherBackgroundHigh)">Conditional</animation>
+			<animation effect="fade" end="90" reversible="false" condition="Skin.HasSetting(WeatherBackgroundBrightnessHigh)">Conditional</animation>
 		</control>
 	</include>
 
 	<include name="PVRBackgroundDim">
 		<control type="image">
 			<include>BackgroundDim</include>
-			<animation effect="fade" end="60" reversible="false" condition="!Skin.HasSetting(DimPVRBackgroundHigh)">Conditional</animation>
-			<animation effect="fade" end="85" reversible="false" condition="Skin.HasSetting(DimPVRBackgroundHigh)">Conditional</animation>
+			<animation effect="fade" end="90" reversible="false" condition="Skin.HasSetting(PVRBackgroundBrightnessHigh)">Conditional</animation>
 		</control>
 	</include>
 
