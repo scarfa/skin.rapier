@@ -172,6 +172,11 @@
 			<filename>default-bold-caps.ttf</filename>
 			<size>15</size>
 		</font>
+		<font>
+			<name>PanelStatsFont</name>
+			<filename>default-bold-caps.ttf</filename>
+			<size>13</size>
+		</font>
 		<!-- Fullscreen Player -->	
 		<font>
 			<name>FSInfoTitleFont</name>
