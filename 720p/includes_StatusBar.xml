@@ -140,12 +140,6 @@
 			</control>
 			<include condition="!IsEmpty(Weather.Plugin) + !Skin.HasSetting(DisableWeather) + !Window.IsVisible(Weather) + Skin.HasSetting(ApplyAllWeather)">WeatherNotification</include>
 			<include condition="!Skin.HasSetting(HideTopBarDate)">DateNotification</include>
-			<control type="image">
-				<posy>3</posy>
-				<width>3</width>
-				<height>39</height>
-				<texture border="0,12,0,13">gui/status-bar-separator.png</texture>		
-			</control>
 			<control type="label" id="5569">
 				<width min="25" max="100">auto</width>
 				<height>42</height>
@@ -165,6 +159,12 @@
 			<textcolor>BreadCrumbColor</textcolor>
 			<label> [UPPERCASE]$INFO[System.Date(ddd. d mmm. yyyy)][/UPPERCASE] </label>
 			<aligny>center</aligny>
+		</control>
+		<control type="image">
+			<posy>3</posy>
+			<width>3</width>
+			<height>39</height>
+			<texture border="0,12,0,13">gui/status-bar-separator.png</texture>		
 		</control>
 	</include>
 	
