@@ -656,7 +656,7 @@
 
 				<control type="label">
 					<include>SettingsInfoLabel</include>
-					<label>$LOCALIZE[31085]</label>
+					<label>$LOCALIZE[553]: 256 x 256</label>
 				</control>
 
 				<control type="button" id="1940">
@@ -750,19 +750,19 @@
 
 				<control type="label">
 					<include>SettingsInfoLabel</include>
-					<label>$LOCALIZE[31085]</label>
+					<label>$LOCALIZE[553]: 256 x 256</label>
 					<visible>ControlGroup(921).HasFocus(2333)</visible>
 				</control>
 
 				<control type="label">
 					<include>SettingsInfoLabel</include>
-					<label>$LOCALIZE[31086]</label>
+					<label>$LOCALIZE[553]: 300 x 64</label>
 					<visible>ControlGroup(921).HasFocus(2335)</visible>
 				</control>
 
 				<control type="label">
 					<include>SettingsInfoLabel</include>
-					<label>$LOCALIZE[31087]</label>
+					<label>$LOCALIZE[553]: 300 x 96</label>
 					<visible>ControlGroup(921).HasFocus(2336)</visible>
 				</control>
 
