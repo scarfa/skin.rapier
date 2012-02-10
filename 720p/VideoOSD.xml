@@ -47,7 +47,19 @@
 					<onclick>Dialog.Close(VideoOSD,true)</onclick>
 					<onclick>FullScreen</onclick>
 					<pulseonselect>false</pulseonselect>
-				</control>		
+				</control>
+				<control type="button" id="117">
+					<description>Playlist</description>
+					<width>35</width>
+					<height>35</height>
+					<font>-</font>
+					<label>$LOCALIZE[10522]</label>
+					<texturefocus>osd/osd-playlist-focus.png</texturefocus>
+					<texturenofocus>osd/osd-playlist-nofocus.png</texturenofocus>
+					<onclick>Dialog.Close(VideoOSD,true)</onclick>
+					<onclick>ActivateWindow(VideoPlaylist)</onclick>
+					<pulseonselect>false</pulseonselect>
+				</control>	
 				<control type="button" id="101">
 					<description>Bookmarks</description>
 					<width>35</width>
