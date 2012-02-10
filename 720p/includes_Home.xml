@@ -2759,7 +2759,7 @@
 							<width>350</width>
 							<height>12</height>
 							<font>PanelInfoHeadFont</font>
-							<textcolor>DefaultColor3</textcolor>
+							<textcolor>WhiteColor</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<label>$INFO[VideoPlayer.Title] $INFO[VideoPlayer.Year,(,)]</label>
 							<scroll>yes</scroll>
@@ -2773,7 +2773,7 @@
 							<textcolor>WhiteColor</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<aligny>center</aligny>
-							<label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
+							<label>[COLOR=GreyColor]$INFO[Player.Time][/COLOR] / $INFO[Player.Duration]</label>
 							<visible>!Player.Seeking</visible>
 							<aligny>center</aligny>
 						</control>
@@ -2789,13 +2789,13 @@
 							<scroll>yes</scroll>
 						</control>
 						<control type="label">
-							<description>Director</description>
+							<description>Studio</description>
 							<width>350</width>
 							<height>12</height>
 							<font>PanelInfoFont</font>
 							<textcolor>MediaInfoItemColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
-							<label>$INFO[VideoPlayer.Director,$LOCALIZE[20339]: ,]</label>
+							<label>$INFO[VideoPlayer.Studio]</label>
 							<scroll>yes</scroll>
 						</control>
 					</control>
@@ -2833,7 +2833,7 @@
 							<width>272</width>
 							<height>12</height>
 							<font>PanelInfoHeadFont</font>
-							<textcolor>DefaultColor3</textcolor>
+							<textcolor>WhiteColor</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<label>$INFO[VideoPlayer.Title]</label>
 							<scroll>yes</scroll>
@@ -2847,7 +2847,7 @@
 							<textcolor>WhiteColor</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<aligny>center</aligny>
-							<label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
+							<label>[COLOR=GreyColor]$INFO[Player.Time][/COLOR] / $INFO[Player.Duration]</label>
 							<aligny>center</aligny>
 							<visible>!Player.Seeking</visible>
 						</control>
@@ -2900,7 +2900,7 @@
 							<width>272</width>
 							<height>12</height>
 							<font>PanelInfoHeadFont</font>
-							<textcolor>DefaultColor3</textcolor>
+							<textcolor>WhiteColor</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<label>$INFO[VideoPlayer.Title]</label>
 							<scroll>yes</scroll>
@@ -2914,7 +2914,7 @@
 							<textcolor>WhiteColor</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<aligny>center</aligny>
-							<label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
+							<label>[COLOR=GreyColor]$INFO[Player.Time][/COLOR] / $INFO[Player.Duration]</label>
 							<aligny>center</aligny>
 							<visible>!Player.Seeking</visible>
 						</control>	
@@ -2995,7 +2995,7 @@
 						<width>314</width>
 						<height>12</height>
 						<font>PanelInfoHeadFont</font>
-						<textcolor>DefaultColor3</textcolor>
+						<textcolor>WhiteColor</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<label>$INFO[MusicPlayer.Title]</label>
 						<scroll>yes</scroll>
@@ -3008,7 +3008,7 @@
 						<font>PanelInfoHeadFont</font>
 						<textcolor>WhiteColor</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
-						<label>$INFO[MusicPlayer.Time] / $INFO[Player.Duration]</label>
+						<label>[COLOR=GreyColor]$INFO[MusicPlayer.Time][/COLOR] / $INFO[Player.Duration]</label>
 						<aligny>center</aligny>
 					</control>
 					<control type="fadelabel">
