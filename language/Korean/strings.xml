@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 
-<!--  string id's 31000 thru 31999 are reserved for skins  -->
+<!--  string id's 31000 thru    are reserved for skins  -->
 
 <strings>
 <!-- common -->
@@ -30,8 +30,6 @@
 <string id="31212">버튼 5</string>
 <string id="31213">버튼 6</string>
 <string id="31214">버튼 7</string>
-<string id="31215">더보기...</string>
-<string id="31216">적게 보기...</string>
 <string id="31217">사용시간</string>
 <string id="31218">항목</string>
 <string id="31219">작업 성공</string>
@@ -76,7 +74,7 @@
 <string id="31030">아이콘 애니메이션 표시</string>
 <string id="31031">아이콘 애니메이션 모든 화면에 적용</string>
 <string id="31032">아이콘 애니메이션 날씨 화면에만 적용</string>
-<string id="31999">스킨 설정을 기본값으로 초기화</string>
+<string id="31033">날짜 숨기기</string>
 
 <!-- skin settings home -->
 <string id="31068">서브 메뉴 숨기기</string>
@@ -94,9 +92,6 @@
 <string id="31082">선택</string>
 <string id="31083">배경</string>
 <string id="31084">카테고리 이미지</string>
-<string id="31085">* 권장 크기: 256 x 256</string>
-<string id="31086">* 권장 크기: 300 x 64</string>
-<string id="31087">* 권장 크기: 300 x 96</string>
 <string id="31088">정보 패널</string>
 <string id="31095">버튼 형식</string>
 <string id="31097">제목</string>
