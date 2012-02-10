@@ -30,8 +30,6 @@
 <string id="31212">ปุ่ม 5</string>
 <string id="31213">ปุ่ม 6</string>
 <string id="31214">ปุ่ม 7</string>
-<string id="31215">เพิ่มเติม ...</string>
-<string id="31216">น้อยลง ...</string>
 <string id="31217">สถานะ</string>
 <string id="31218">รายการ</string>
 <string id="31219">การดำเนินงานประสบความสำเร็จ</string>
@@ -76,7 +74,7 @@
 <string id="31030">เปิดใช้ไอคอนแบบเคลื่อนไหว</string>
 <string id="31031">ใช้ไอคอนแบบเคลื่อนไหว กับทุกหน้าจอ</string>
 <string id="31032">ใช้ไอคอนแบบเคลื่อนไหว กับหน้าจอสภาพอากาศเท่านั้น</string>
-<string id="31999">รีเซ็ตการตั้งค่าหน้าตาเป็นค่าเริ่มต้น</string>
+<string id="31033">ซ่อนวันที่</string>
 
 <!-- skin settings home -->
 <string id="31068">ซ่อน เมนูย่อย</string>
@@ -94,9 +92,6 @@
 <string id="31082">มุ่งเน้น</string>
 <string id="31083">พื้นหลัง</string>
 <string id="31084">รูปภาพ ของหมวดหมู่</string>
-<string id="31085">* ขนาดที่แนะนำ: 256 x 256</string>
-<string id="31086">* ขนาดที่แนะนำ: 300 x 64</string>
-<string id="31087">* ขนาดที่แนะนำ: 300 x 96</string>
 <string id="31088">แผงข้อมูล</string>
 <string id="31095">ชนิดของ ปุ่ม</string>
 <string id="31097">ฉลาก</string>
