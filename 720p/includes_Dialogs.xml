@@ -536,4 +536,17 @@
 			<include>DialogCloseBtn</include>
 		</control>
 	</include>
+	
+	<include name="RSSEditorDialogBox">
+		<control type="image">
+			<width>670</width>
+			<height>250</height>
+			<texture border="50,70,50,75">panels/dialog-background.png</texture>
+		</control>
+
+		<control type="button">
+			<posx>610</posx>
+			<include>DialogCloseBtn</include>
+		</control>
+	</include>
 </includes>
