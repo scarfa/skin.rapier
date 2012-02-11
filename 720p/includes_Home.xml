@@ -684,7 +684,8 @@
 				</item>
 
 				<include condition="!Skin.HasSetting(HidePVRCategory) + System.GetBool(pvrmanager.enabled) 
-				+ [system.hasaddon(pvr.fortherecord.argus) 
+				+ [system.hasaddon(pvr.demo)
+				| system.hasaddon(pvr.fortherecord.argus)
 				| system.hasaddon(pvr.fortherecord.argus-rtsp) 
 				| system.hasaddon(pvr.hts) 
 				| system.hasaddon(pvr.mythtv) 

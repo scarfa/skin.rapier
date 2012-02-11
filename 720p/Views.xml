@@ -782,6 +782,11 @@
 		<value condition="Skin.String(ViewsPVR,1) | Skin.String(ViewsPVR,2)">$INFO[ListItem.Title]</value>
 		<value condition="Skin.String(ViewsPVR,6)">$INFO[ListItem.StartDate]$INFO[ListItem.StartTime, - ]</value>
 	</variable>
+	
+	<variable name="LiveTVListInfoItemImage">
+		<value condition="Skin.String(ViewsPVR,1) | Skin.String(ViewsPVR,2)">$INFO[ListItem.Icon]</value>
+		<value condition="Skin.String(ViewsPVR,6)">$INFO[ListItem.Thumb]</value>
+	</variable>
 
 	<include name="LiveTVProgressImage">
 		<control type="image">

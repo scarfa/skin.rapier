@@ -70,7 +70,8 @@
 					<include>SettingsCatBtn</include>
 					<label>$LOCALIZE[19191]</label>
 					<visible>System.GetBool(pvrmanager.enabled) 
-					+ [system.hasaddon(pvr.fortherecord.argus) 
+					+ [system.hasaddon(pvr.demo)
+					| system.hasaddon(pvr.fortherecord.argus) 
 					| system.hasaddon(pvr.fortherecord.argus-rtsp) 
 					| system.hasaddon(pvr.hts) 
 					| system.hasaddon(pvr.mythtv) 

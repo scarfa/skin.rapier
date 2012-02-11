@@ -630,14 +630,16 @@
 	</include>
 	
 	<include name="SettingsMenuBar">
-		<include condition="![system.hasaddon(pvr.fortherecord.argus)
+		<include condition="![system.hasaddon(pvr.demo)
+		| system.hasaddon(pvr.fortherecord.argus)
 		| system.hasaddon(pvr.fortherecord.argus-rtsp) 
 		| system.hasaddon(pvr.hts) 
 		| system.hasaddon(pvr.mythtv) 
 		| system.hasaddon(pvr.team-mediaportal.tvserver) 
 		| system.hasaddon(pvr.team-mediaportal.tvserver-tsreader) 
 		| system.hasaddon(pvr.vdr.vnsi)]">SettingsDefaultMenuBar</include>
-		<include condition="[system.hasaddon(pvr.fortherecord.argus)
+		<include condition="[system.hasaddon(pvr.demo)
+		| system.hasaddon(pvr.fortherecord.argus)
 		| system.hasaddon(pvr.fortherecord.argus-rtsp) 
 		| system.hasaddon(pvr.hts) 
 		| system.hasaddon(pvr.mythtv) 
