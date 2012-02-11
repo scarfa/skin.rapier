@@ -60,7 +60,8 @@
 					<onclick>Skin.SetBool(ExpandedSettings)</onclick>
 					<onclick>Control.SetFocus(941)</onclick>
 				</control>
-				<include condition="[system.hasaddon(pvr.fortherecord.argus)
+				<include condition="[system.hasaddon(pvr.demo)
+				| system.hasaddon(pvr.fortherecord.argus)
 				| system.hasaddon(pvr.fortherecord.argus-rtsp) 
 				| system.hasaddon(pvr.hts) 
 				| system.hasaddon(pvr.mythtv) 

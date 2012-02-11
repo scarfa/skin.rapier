@@ -466,7 +466,8 @@
 					</control>
 				</control>
 				
-				<include condition="[system.hasaddon(pvr.fortherecord.argus)
+				<include condition="[system.hasaddon(pvr.demo)
+				| system.hasaddon(pvr.fortherecord.argus)
 				| system.hasaddon(pvr.fortherecord.argus-rtsp) 
 				| system.hasaddon(pvr.hts) 
 				| system.hasaddon(pvr.mythtv) 
@@ -529,7 +530,8 @@
 						<label>$LOCALIZE[2] - [COLOR=DefaultColor2]$INFO[Skin.String(MusicCategoryIconPath)][/COLOR]</label>
 						<onclick>Skin.SetImage(MusicCategoryIconPath)</onclick>
 					</control>
-					<include condition="[system.hasaddon(pvr.fortherecord.argus)
+					<include condition="[system.hasaddon(pvr.demo)
+					| system.hasaddon(pvr.fortherecord.argus)
 					| system.hasaddon(pvr.fortherecord.argus-rtsp) 
 					| system.hasaddon(pvr.hts) 
 					| system.hasaddon(pvr.mythtv) 
