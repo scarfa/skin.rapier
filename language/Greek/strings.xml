@@ -30,8 +30,6 @@
 	<string id="31212">Κουμπί 5</string>
 	<string id="31213">Κουμπί 6</string>
 	<string id="31214">Κουμπί 7</string>
-	<string id="31215">Περισσότερα...</string>
-	<string id="31216">Λιγότερα...</string>
 	<string id="31217">Χρόνος Λειτουργίας</string>
 	<string id="31218">Αντικείμενο</string>
 	<string id="31219">Επιτυχής Διαδικασία</string>
@@ -76,7 +74,7 @@
 	<string id="31030">Χρήση Κινουμένων Εικονιδίων</string>
 	<string id="31031">Κινούμενα Εικονίδια σε όλα τα Παράθυρα</string>
 	<string id="31032">Κινούμενα Εικονίδια στο Παράθυρο Καιρού Μόνο</string>
-	<string id="31999">Επανατοποθέτηση Ρυθμίσεων Κελύφους στα Προεπιλεγμένα</string>
+	<string id="31033">Απόκρυψη Ημερομηνίας</string>
 
 	<!-- skin settings home -->
 	<string id="31068">Απόκρυψη Yπομενού</string>
@@ -94,9 +92,6 @@
 	<string id="31082">Εστίαση</string>
 	<string id="31083">Υπόβαθρο</string>
 	<string id="31084">Εικόνες Κατηγορίας</string>
-	<string id="31085">* Προτεινόμενο Μέγεθος: 256 x 256</string>
-	<string id="31086">* Προτεινόμενο Μέγεθος: 300 x 64</string>
-	<string id="31087">* Προτεινόμενο Μέγεθος: 300 x 96</string>
 	<string id="31088">Πίνακας Πληροφοριών</string>
 	<string id="31095">Τύπος Κουμπιού</string>
 	<string id="31097">Ετικέτα</string>
