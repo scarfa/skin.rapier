@@ -781,11 +781,6 @@
 			<include>LiveTVColumnHeaderArea</include>
 
 			<control type="group">
-				<posy>34</posy>
-				<include>LiveTVColumnItemLayout</include>
-				<visible>StringCompare(Container(15).ListItemPosition(0).ChannelName,)</visible>
-			</control>
-			<control type="group">
 				<posy>76</posy>
 				<include>LiveTVColumnItemLayout</include>
 				<visible>StringCompare(Container(15).ListItemPosition(1).ChannelName,)</visible>
@@ -836,10 +831,7 @@
 					<include>LiveTVColumnLayoutArea</include>
 				</itemlayout>
 				<focusedlayout height="42">
-					<control type="group">
-						<include>LiveTVColumnFocusedLayout</include>
-						<visible>!StringCompare(ListItemPosition(0).ChannelName,)</visible>
-					</control>
+					<include>LiveTVColumnFocusedLayout</include>
 					<include>LiveTVColumnLayoutArea</include>
 				</focusedlayout>
 			</control>
@@ -859,11 +851,6 @@
 
 			<include>LiveTVColumnHeaderArea</include>
 
-			<control type="group">
-				<posy>34</posy>
-				<include>LiveTVColumnItemLayout</include>
-				<visible>StringCompare(Container(17).ListItemPosition(0).ChannelName,)</visible>
-			</control>
 			<control type="group">
 				<posy>76</posy>
 				<include>LiveTVColumnItemLayout</include>
@@ -915,10 +902,7 @@
 					<include>LiveTVColumnLayoutArea</include>
 				</itemlayout>
 				<focusedlayout height="42">
-					<control type="group">
-						<include>LiveTVColumnFocusedLayout</include>
-						<visible>!StringCompare(ListItemPosition(0).ChannelName,)</visible>
-					</control>
+					<include>LiveTVColumnFocusedLayout</include>
 					<include>LiveTVColumnLayoutArea</include>
 				</focusedlayout>
 			</control>
