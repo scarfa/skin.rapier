@@ -11,7 +11,8 @@
 		<control type="group">
 			<include>RSSEditorDialogBox</include>
 			<include>DialogOpenCloseAnim</include>
-
+			<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(VirtualKeyboard)">Conditional</animation>	
+			
 			<control type="label" id="2">
 				<include>DialogTitle</include>
 			</control>
@@ -44,7 +45,7 @@
 						<posy>25</posy>
 						<width>465</width>
 						<height>105</height>
-						<ondown>12</ondown>
+						<ondown>9001</ondown>
 						<onleft>9001</onleft>
 						<onright>9000</onright>
 						<itemlayout height="35">
@@ -63,7 +64,7 @@
 								<width>465</width>
 								<height>35</height>
 								<texture border="5">controls/button-focus.png</texture>
-								<visible>Control.hasfocus(14) | Control.HasFocus(10)</visible>
+								<visible>Control.HasFocus(10)</visible>
 							</control>
 							<control type="label">
 								<posx>5</posx>
@@ -81,7 +82,7 @@
 						<posx>480</posx>
 						<posy>20</posy>
 						<itemgap>5</itemgap>
-						<ondown>12</ondown>
+						<ondown>9001</ondown>
 						<onleft>10</onleft>
 						<onright>9001</onright>		
 						<control type="button" id="11">
