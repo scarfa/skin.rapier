@@ -1202,6 +1202,42 @@
 		</control>
 	</include>
 
+	<include name="BreadCrumbPseudoTV">
+		<control type="grouplist">
+			<posx>10</posx>
+			<posy>StatusBarPosY</posy>
+			<height>43</height>
+			<width>740</width>
+			<itemgap>8</itemgap>
+			<orientation>horizontal</orientation>
+			<usecontrolcoords>true</usecontrolcoords>
+			<control type="button">
+				<posy>10</posy>
+				<width>24</width>
+				<height>24</height>
+				<texturenofocus>gui/breadcrumb-home-nofocus.png</texturenofocus>
+				<texturefocus>gui/breadcrumb-home-focus.png</texturefocus>
+				<onclick>Stop</onclick>
+				<onclick>Dialog.Close(all,true)</onclick>
+				<onclick>ActivateWindow(Home)</onclick>
+				<include>BreadCrumbSlideLvl1Anim</include>
+			</control>
+			<control type="image">
+				<include>BreadCrumbSeparator</include>
+				<include>BreadCrumbSlideLvl1Anim</include>
+			</control>
+			<control type="label">
+				<include>BreadCrumbLabel</include>
+				<label>[UPPERCASE]Pseudo TV[/UPPERCASE]</label>
+				<include>BreadCrumbSlideLvl2Anim</include>
+			</control>
+			<control type="image">
+				<include>BreadCrumbSeparator</include>
+				<include>BreadCrumbSlideLvl2Anim</include>
+			</control>
+		</control>
+	</include>
+
 	<include name="BreadCrumbNextAired">
 		<control type="grouplist">
 			<posx>10</posx>
