@@ -15,16 +15,7 @@
 		
 		<control type="group">	
 			<include>MediaViewOpenCloseAnim</include>
-			
-			<control type="image">
-				<description>Panel</description>
-				<posx>30</posx>
-				<posy>106</posy>
-				<width>1220</width>
-				<height>525</height>
-				<texture border="7">panels/content-panel.png</texture>
-				<include>PanelFadeAnim</include>
-			</control>
+			<include>ViewContentPanel</include>
 			
 			<control type="image">
 				<description>Divider</description>

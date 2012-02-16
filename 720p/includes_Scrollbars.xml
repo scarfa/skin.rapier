@@ -143,18 +143,10 @@
 		</control>
 	</include>
 	
-	<include name="ListInfo3ViewScrollbar">
-		<control type="image">
-			<posx>446</posx>
-			<posy>110</posy>
-			<width>12</width>
-			<height>517</height>
-			<texture border="4">controls/scrollbar-background.png</texture>
-		</control>
-			
+	<include name="ListInfo3ViewScrollbar">	
 		<control type="group" id="150">
 			<control type="image">
-				<posx>822</posx>
+				<posx>817</posx>
 				<posy>110</posy>
 				<width>12</width>
 				<height>517</height>
@@ -162,7 +154,7 @@
 			</control>
 			
 			<control type="scrollbar" id="917">
-				<posx>822</posx>
+				<posx>817</posx>
 				<posy>110</posy>
 				<width>12</width>
 				<height>517</height>

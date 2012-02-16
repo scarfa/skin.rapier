@@ -2735,7 +2735,7 @@
 						<posy>15</posy>
 						<width>98</width>
 						<height>134</height>
-						<texture diffuse="covers/home-panel-movie-cover-border.png" background="true">$INFO[VideoPlayer.cover]</texture>
+						<texture diffuse="covers/home-panel-movie-cover-diffuse.png" background="true">$INFO[VideoPlayer.cover]</texture>
 						<aspectratio>stretch</aspectratio>
 					</control>
 
@@ -2810,7 +2810,7 @@
 						<posy>27</posy>
 						<width>176</width>
 						<height>110</height>
-						<texture diffuse="covers/home-panel-episode-cover-border.png" background="true" fallback="DefaultVideo.png">$INFO[VideoPlayer.Cover]</texture>
+						<texture diffuse="covers/home-panel-episode-cover-diffuse.png" background="true" fallback="DefaultVideo.png">$INFO[VideoPlayer.Cover]</texture>
 						<bordersize>4</bordersize>
 						<aspectratio>keep</aspectratio>
 					</control>
@@ -2875,7 +2875,7 @@
 						<posy>27</posy>
 						<width>176</width>
 						<height>110</height>
-						<texture diffuse="covers/home-panel-episode-cover-border.png" background="true">$INFO[VideoPlayer.cover]</texture>
+						<texture diffuse="covers/home-panel-episode-cover-diffuse.png" background="true">$INFO[VideoPlayer.cover]</texture>
 						<bordersize>4</bordersize>
 						<aspectratio>keep</aspectratio>
 					</control>
@@ -2971,7 +2971,7 @@
 					<posy>15</posy>
 					<width>134</width>
 					<height>134</height>
-					<texture diffuse="covers/home-panel-album-cover-border.png" background="true">$INFO[MusicPlayer.cover]</texture>
+					<texture diffuse="covers/home-panel-album-cover-diffuse.png" background="true">$INFO[MusicPlayer.cover]</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>
 
@@ -3091,7 +3091,7 @@
 					<posy>15</posy>
 					<width>98</width>
 					<height>134</height>
-					<imagepath diffuse="covers/home-panel-movie-cover-border.png" background="true">$INFO[Container(6888).ListItem.Thumb]</imagepath>
+					<imagepath diffuse="covers/home-panel-movie-cover-diffuse.png" background="true">$INFO[Container(6888).ListItem.Thumb]</imagepath>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<visible>!Container(6888).HasFocus(11) + !Container(6888).HasFocus(12)</visible>
@@ -3311,7 +3311,7 @@
 					<posy>27</posy>
 					<width>176</width>
 					<height>110</height>
-					<imagepath diffuse="covers/home-panel-episode-cover-border.png" background="true">$INFO[Container(6889).ListItem.Thumb]</imagepath>
+					<imagepath diffuse="covers/home-panel-episode-cover-diffuse.png" background="true">$INFO[Container(6889).ListItem.Thumb]</imagepath>
 					<aspectratio align="right">keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<visible>!Container(6889).HasFocus(11) + !Container(6889).HasFocus(12)</visible>
@@ -3531,7 +3531,7 @@
 					<posy>15</posy>
 					<width>134</width>
 					<height>134</height>
-					<imagepath diffuse="covers/home-panel-album-cover-border.png" background="true">$INFO[Container(6890).ListItem.Thumb]</imagepath>
+					<imagepath diffuse="covers/home-panel-album-cover-diffuse.png" background="true">$INFO[Container(6890).ListItem.Thumb]</imagepath>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<visible>!Container(6890).HasFocus(11) + !Container(6890).HasFocus(12)</visible>

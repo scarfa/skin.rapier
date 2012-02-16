@@ -5,16 +5,7 @@
 	        <defaultcontrol always="true">90</defaultcontrol>
 			<visible>Control.IsVisible(90)</visible>
 			<include>MediaViewOpenCloseAnim</include>
-			
-			<control type="image">
-				<posx>30</posx>
-				<posy>87</posy>
-				<width>1220</width>
-				<height>544</height>	
-				<texture border="7">panels/content-panel.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<include>PanelFadeAnim</include>
-			</control>
+			<include>WideListViewContentPanel</include>
 			
 			<control type="list" id="90">	
 				<viewtype label="31114">Wide List</viewtype>
@@ -374,15 +365,7 @@
 			<defaultcontrol always="true">91</defaultcontrol>
 			<visible>Control.IsVisible(91)</visible>
 			<include>MediaViewOpenCloseAnim</include>
-
-			<control type="image">
-				<posx>30</posx>
-				<posy>328</posy>
-				<width>1220</width>
-				<height>303</height>
-				<texture border="7">panels/content-panel.png</texture>
-				<include>PanelFadeAnim</include>
-			</control> 
+			<include>ListInfoViewContentPanel</include>
 			
 			<control type="group">
 				<visible>!IsEmpty(ListItem.Property(Addon.Name))</visible>

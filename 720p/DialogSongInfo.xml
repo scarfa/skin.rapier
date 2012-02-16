@@ -56,7 +56,7 @@
 				<posy>Dialog4MarginOffsetY</posy>
 				<width>254</width>
 				<height>254</height>
-				<texture diffuse="covers/player-control-media-cover-border.png">$INFO[ListItem.Thumb]</texture>
+				<texture diffuse="covers/player-control-media-cover-diffuse.png">$INFO[ListItem.Thumb]</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
 			

@@ -602,6 +602,14 @@
 		</animation>
 	</include>
 	
+	<include name="ListInfoViewContentBackground">
+		<animation effect="fade" end="9" condition="true">Conditional</animation>
+	</include>
+	
+	<include name="ListInfoViewMediaInfoBackground">
+		<animation effect="fade" end="60" condition="true">Conditional</animation>
+	</include>
+	
 	<include name="CoverDimAnim">
 		<animation effect="fade" end="25" condition="true">Conditional</animation>
 	</include>
@@ -1077,6 +1085,6 @@
 	</include>
 
 	<include name="PanelFadeAnim">
-		<animation effect="fade" end="60" condition="true">Conditional</animation>
+		<animation effect="fade" end="70" condition="true">Conditional</animation>
 	</include>
 </includes>

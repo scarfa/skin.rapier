@@ -214,7 +214,7 @@
 				<width>167</width>
 				<height>167</height>
 				<bordertexture border="8">panels/panel-content-border.png</bordertexture>
-				<texture diffuse="covers/player-media-cover-border.png">$INFO[MusicPlayer.Cover]</texture>
+				<texture diffuse="covers/player-media-cover-diffuse.png">$INFO[MusicPlayer.Cover]</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
 		</control>

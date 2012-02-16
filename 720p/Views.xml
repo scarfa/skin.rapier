@@ -40,7 +40,44 @@
 		| substring(ListItem.filename,.img,right) | substring(ListItem.filename,.ifo,right) | substring(ListItem.filename,.vob,right)]]">OverlaySD.png</value>
 		<value>OverlayUnknown.png</value>
 	</variable>
+	
+	<include name="ViewContentPanel">
+		<control type="image">
+			<posx>30</posx>
+			<posy>106</posy>
+			<width>1220</width>
+			<height>525</height>
+			<texture border="7">panels/content-panel.png</texture>
+			<include>PanelFadeAnim</include>
+			<include>ControlsOpenCloseAnim</include>
+		</control> 
+	</include>
 
+	<include name="WideListViewContentPanel">
+		<control type="image">
+			<posx>30</posx>
+			<posy>87</posy>
+			<width>1220</width>
+			<height>544</height>	
+			<texture border="7">panels/content-panel.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<include>PanelFadeAnim</include>
+			<include>ControlsOpenCloseAnim</include>
+		</control>
+	</include>
+	
+	<include name="ListInfoViewContentPanel">
+		<control type="image">
+			<posx>30</posx>
+			<posy>328</posy>
+			<width>1220</width>
+			<height>303</height>
+			<texture border="7">panels/content-panel.png</texture>
+			<include>PanelFadeAnim</include>
+			<include>ControlsOpenCloseAnim</include>
+		</control> 
+	</include>
+	
 	<include name="DVDThumbsStyleCoverImage">
 		<control type="image">
 			<width>129</width>
@@ -544,57 +581,212 @@
 			</control>
 		</control>
 	</include>
-
+	
+	<include name="ListInfo2MediaInfoPanelCommon">
+		<control type="group">
+			<posx>34</posx>
+			<posy>110</posy>
+			
+			<control type="image">
+				<description>Content Background</description>
+				<width>554</width>
+				<height>517</height>
+				<texture border="4">panels/panel-content-border2.png</texture>
+				<include>ListInfoViewContentBackground</include>
+			</control>
+			
+			<control type="image">
+				<description>Media Info Background</description>
+				<posx>6</posx>
+				<posy>314</posy>
+				<width>542</width>
+				<height>58</height>
+				<texture border="4">panels/panel3.png</texture>
+				<include>ListInfoViewMediaInfoBackground</include>
+			</control>
+			
+			<control type="image">
+				<description>Description Background</description>
+				<posx>6</posx>
+				<posy>376</posy>
+				<width>542</width>
+				<height>135</height>
+				<texture border="4">panels/panel3.png</texture>
+				<include>ListInfoViewMediaInfoBackground</include>
+			</control>
+		</control>
+	</include>
+	
 	<include name="ListInfo2PanelFanart">
 		<control type="largeimage">
-			<width>554</width>
-			<height>310</height>
-			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
-			<bordersize>4</bordersize>
-			<aspectratio>scale</aspectratio>
+			<posx>40</posx>
+			<posy>116</posy>
+			<width>542</width>
+			<height>304</height>
+			<texture background="true" diffuse="covers/list-info-2-fanart-diffuse.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
 			<fadetime>FanartCrossfadeTime</fadetime>
+		</control>
+		
+		<control type="image">
+			<description>Genre Background</description>
+			<posx>43</posx>
+			<posy>119</posy>
+			<width>250</width>
+			<height>25</height>
+			<texture border="4">panels/panel3.png</texture>
+			<visible>!IsEmpty(ListItem.Genre)</visible>
+			<animation effect="fade" end="35" condition="true">Conditional</animation>
+		</control>
+					
+		<control type="label">
+			<description>Genre</description>
+			<posx>51</posx>
+			<posy>130</posy>
+			<width>234</width>
+			<font>MediaInfoFont3</font>
+			<textcolor>WhiteColor</textcolor>
+			<aligny>center</aligny>
+			<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+			<scroll>false</scroll>
+			<animation effect="fade" end="75" condition="true">Conditional</animation>
 		</control>
 	</include>
 
 	<include name="ListInfo2PanelExtraThumbs">	
 		<control type="image">
-			<posx>4</posx>
-			<posy>4</posy>
-			<width>273</width>
-			<height>151</height>
-			<texture background="true">$INFO[ListItem.Path]extrathumbs/thumb1.jpg</texture>	
-			<aspectratio>scale</aspectratio>
+			<posx>40</posx>
+			<posy>116</posy>
+			<width>269</width>
+			<height>150</height>
+			<texture background="true" diffuse="covers/list-info-2-extrathumbs-diffuse.png">$INFO[ListItem.Path]extrathumbs/thumb1.jpg</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
 		</control>
 
 		<control type="image">
-			<posx>277</posx>
-			<posy>4</posy>
-			<width>273</width>
-			<height>151</height>
-			<texture background="true">$INFO[ListItem.Path]extrathumbs/thumb2.jpg</texture>	
-			<aspectratio>scale</aspectratio>
+			<posx>313</posx>
+			<posy>116</posy>
+			<width>269</width>
+			<height>150</height>
+			<texture background="true" diffuse="covers/list-info-2-extrathumbs-diffuse.png">$INFO[ListItem.Path]extrathumbs/thumb2.jpg</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
 		</control>
 
 		<control type="image">
-			<posx>4</posx>
-			<posy>155</posy>
-			<width>273</width>
-			<height>151</height>
-			<texture background="true">$INFO[ListItem.Path]extrathumbs/thumb3.jpg</texture>	
-			<aspectratio>scale</aspectratio>
+			<posx>40</posx>
+			<posy>270</posy>
+			<width>269</width>
+			<height>150</height>
+			<texture background="true" diffuse="covers/list-info-2-extrathumbs-diffuse.png">$INFO[ListItem.Path]extrathumbs/thumb3.jpg</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
 		</control>
 
 		<control type="image">
-			<posx>277</posx>
-			<posy>155</posy>
-			<width>273</width>
-			<height>151</height>
-			<texture background="true">$INFO[ListItem.Path]extrathumbs/thumb4.jpg</texture>	
-			<aspectratio>scale</aspectratio>
+			<posx>313</posx>
+			<posy>270</posy>
+			<width>269</width>
+			<height>150</height>
+			<texture background="true" diffuse="covers/list-info-2-extrathumbs-diffuse.png">$INFO[ListItem.Path]extrathumbs/thumb4.jpg</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+		</control>
+		
+		<control type="image">
+			<description>Genre Background</description>
+			<posx>43</posx>
+			<posy>119</posy>
+			<width>250</width>
+			<height>25</height>
+			<texture border="4">panels/panel3.png</texture>
+			<visible>!IsEmpty(ListItem.Genre)</visible>
+			<animation effect="fade" end="35" condition="true">Conditional</animation>
+		</control>
+					
+		<control type="label">
+			<description>Genre</description>
+			<posx>51</posx>
+			<posy>130</posy>
+			<width>234</width>
+			<font>MediaInfoFont3</font>
+			<textcolor>WhiteColor</textcolor>
+			<aligny>center</aligny>
+			<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+			<scroll>false</scroll>
+			<animation effect="fade" end="75" condition="true">Conditional</animation>
 		</control>
 	</include>
 
-	<include name="ListInfo3PanelCover">
+	<include name="ListInfo3MediaInfoPanelCommon">
+		<control type="group">
+			<posx>34</posx>
+			<posy>110</posy>
+			
+			<control type="image">
+				<description>Content Background</description>
+				<width>416</width>
+				<height>517</height>
+				<texture border="4">panels/panel-content-border2.png</texture>
+				<include>ListInfoViewContentBackground</include>
+			</control>
+			
+			<control type="image">
+				<description>Media Info Background</description>
+				<posx>6</posx>
+				<posy>238</posy>
+				<width>404</width>
+				<height>58</height>
+				<texture border="4">panels/panel3.png</texture>
+				<include>ListInfoViewMediaInfoBackground</include>
+			</control>
+			
+			<control type="image">
+				<description>Description Background</description>
+				<posx>6</posx>
+				<posy>300</posy>
+				<width>404</width>
+				<height>211</height>
+				<texture border="4">panels/panel3.png</texture>
+				<include>ListInfoViewMediaInfoBackground</include>
+			</control>
+		</control>
+	</include>
+	
+	<include name="ListInfo3PanelFanart">
+		<control type="largeimage">
+			<posx>40</posx>
+			<posy>116</posy>
+			<width>404</width>
+			<height>228</height>
+			<texture background="true" diffuse="covers/list-info-3-fanart-diffuse.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<fadetime>FanartCrossfadeTime</fadetime>
+		</control>
+		
+		<control type="image">
+			<description>Genre Background</description>
+			<posx>43</posx>
+			<posy>119</posy>
+			<width>250</width>
+			<height>25</height>
+			<texture border="4">panels/panel3.png</texture>
+			<visible>!IsEmpty(ListItem.Genre)</visible>
+			<animation effect="fade" end="35" condition="true">Conditional</animation>
+		</control>
+					
+		<control type="label">
+			<description>Genre</description>
+			<posx>51</posx>
+			<posy>130</posy>
+			<width>234</width>
+			<font>MediaInfoFont3</font>
+			<textcolor>WhiteColor</textcolor>
+			<aligny>center</aligny>
+			<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+			<scroll>false</scroll>
+			<animation effect="fade" end="75" condition="true">Conditional</animation>
+		</control>
+	</include>
+	
+	<include name="ListInfo3RightPanelCover">
 		<control type="group">					
 			<posx>880</posx>
 			<posy>150</posy>
@@ -635,7 +827,33 @@
 		</control>
 	</include>
 
-	<include name="ListInfo3PanelExtraThumbs">
+	<include name="ListInfo3RightPanelEpisodeThumb">
+		<control type="largeimage">
+			<posx>40</posx>
+			<posy>116</posy>
+			<width>404</width>
+			<height>228</height>
+			<texture background="true" diffuse="covers/list-info-3-fanart-diffuse.png">$INFO[ListItem.Thumb]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<fadetime>FanartCrossfadeTime</fadetime>
+		</control>
+	</include>
+
+	<include name="ListInfo3RightPanelEpisodeExtraThumbs">
+		<control type="multiimage">
+			<posx>40</posx>
+			<posy>116</posy>
+			<width>404</width>
+			<height>228</height>
+			<imagepath background="true" diffuse="covers/list-info-3-fanart-diffuse.png">$INFO[ListItem.Path]extrathumbs</imagepath>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<timeperimage>3000</timeperimage>
+			<fadetime>FanartCrossfadeTime</fadetime>
+			<randomize>true</randomize>
+		</control>
+	</include>
+	
+	<include name="ListInfo3RightPanelMovieExtraThumbs">
 		<control type="grouplist">
 			<posx>880</posx>
 			<posy>116</posy>
@@ -667,32 +885,6 @@
 				<bordersize>4</bordersize>
 				<aspectratio>keep</aspectratio>
 			</control>
-		</control>
-	</include>
-
-	<include name="ListInfo3PanelCover2">
-		<control type="largeimage">
-			<width>400</width>
-			<height>225</height>
-			<texture background="true">$INFO[ListItem.Thumb]</texture>
-			<bordersize>4</bordersize>
-			<aspectratio>scale</aspectratio>
-			<fadetime>FanartCrossfadeTime</fadetime>
-		</control>
-	</include>
-
-	<include name="ListInfo3PanelExtraThumbs2">
-		<control type="multiimage">
-			<posx>4</posx>
-			<posy>4</posy>
-			<width>392</width>
-			<height>217</height>
-			<imagepath background="true">$INFO[ListItem.Path]extrathumbs</imagepath>	
-			<bordersize>4</bordersize>
-			<aspectratio>scale</aspectratio>
-			<timeperimage>3000</timeperimage>
-			<fadetime>FanartCrossfadeTime</fadetime>
-			<randomize>true</randomize>
 		</control>
 	</include>
 
