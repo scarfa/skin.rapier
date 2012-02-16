@@ -30,8 +30,6 @@
 <string id="31212">Przycisk 5</string>
 <string id="31213">Przycisk 6</string>
 <string id="31214">Przycisk 7</string>
-<string id="31215">Więcej...</string>
-<string id="31216">Mniej...</string>
 <string id="31217">Czas pracy</string>
 <string id="31218">Pozycja</string>
 <string id="31219">Operacja zakończona sukcesem</string>
@@ -76,7 +74,7 @@
 <string id="31030">Użyj animowanych ikon</string>
 <string id="31031">Na wszystkich ekranach</string>
 <string id="31032">Tylko na ekranie pogody</string>
-<string id="31999">Zresetuj ustawienia skóry do domyślnych</string>
+<string id="31033">Ukryj datę</string>
 
 <!-- skin settings home -->
 <string id="31068">Ukryj podmenu</string>
@@ -94,9 +92,6 @@
 <string id="31082">Aktywny</string>
 <string id="31083">Tło</string>
 <string id="31084">Ikony kategorii</string>
-<string id="31085">* Zalecany rozmiar: 256 x 256</string>
-<string id="31086">* Zalecany rozmiar: 300 x 64</string>
-<string id="31087">* Zalecany rozmiar: 300 x 96</string>
 <string id="31088">Panel info</string>
 <string id="31095">Typ przycisku</string>
 <string id="31097">Identyfikator</string>

@@ -9,7 +9,7 @@
 			<control type="list" id="11">
 				<posx>605</posx>
 				<posy>110</posy>
-				<width>630</width>
+				<width>620</width>
 				<height>518</height>
 				<pagecontrol>906</pagecontrol>
 				<preloaditems>2</preloaditems>
@@ -58,7 +58,7 @@
 			<control type="list" id="12">
 				<posx>605</posx>
 				<posy>110</posy>
-				<width>630</width>
+				<width>620</width>
 				<height>518</height>
 				<pagecontrol>906</pagecontrol>
 				<preloaditems>2</preloaditems>
@@ -95,7 +95,7 @@
 			<control type="list" id="13">
 				<posx>605</posx>
 				<posy>110</posy>
-				<width>630</width>
+				<width>620</width>
 				<height>518</height>
 				<pagecontrol>906</pagecontrol>
 				<preloaditems>2</preloaditems>
@@ -127,7 +127,15 @@
 		<control type="group">
 			<visible>Skin.String(ViewsPVR,1) | Skin.String(ViewsPVR,2) | Skin.String(ViewsPVR,6)</visible>
 			<include>ControlsOpenCloseAnim</include>
-			<include>ViewContentPanel</include>
+
+			<control type="image">
+				<posx>30</posx>
+				<posy>106</posy>
+				<width>1220</width>
+				<height>525</height>
+				<texture border="7">panels/content-panel.png</texture>
+				<include>PanelFadeAnim</include>
+			</control>
 
 			<control type="group">
 				<description>Cover Area</description>
@@ -291,7 +299,7 @@
 	<include name="LiveTVListInfoStyleItemLayout">
 		<control type="image">
 			<posx>0</posx>
-			<width>630</width>
+			<width>620</width>
 			<height>74</height>	
 			<texture border="0,0,10,2">views/list-separator.png</texture>
 			<aspectratio>stretch</aspectratio>
@@ -336,7 +344,7 @@
 	<include name="LiveTVListInfoStyleFocusedLayout">
 		<control type="image">
 			<posx>0</posx>
-			<width>630</width>
+			<width>620</width>
 			<height>74</height>	
 			<texture border="0,0,10,2">views/list-separator.png</texture>
 			<aspectratio>stretch</aspectratio>
@@ -344,7 +352,7 @@
 
 		<control type="image">
 			<posx>0</posx>
-			<width>630</width>
+			<width>620</width>
 			<height>73</height>
 			<texture border="4">views/list-focus.png</texture>
 			<aspectratio>stretch</aspectratio>
@@ -357,7 +365,7 @@
 
 		<control type="image">
 			<posx>0</posx>
-			<width>630</width>
+			<width>620</width>
 			<height>73</height>
 			<texture border="4">views/list-alt-focus.png</texture>
 			<aspectratio>stretch</aspectratio>
@@ -773,11 +781,6 @@
 			<include>LiveTVColumnHeaderArea</include>
 
 			<control type="group">
-				<posy>34</posy>
-				<include>LiveTVColumnItemLayout</include>
-				<visible>StringCompare(Container(15).ListItemPosition(0).ChannelName,)</visible>
-			</control>
-			<control type="group">
 				<posy>76</posy>
 				<include>LiveTVColumnItemLayout</include>
 				<visible>StringCompare(Container(15).ListItemPosition(1).ChannelName,)</visible>
@@ -828,10 +831,7 @@
 					<include>LiveTVColumnLayoutArea</include>
 				</itemlayout>
 				<focusedlayout height="42">
-					<control type="group">
-						<include>LiveTVColumnFocusedLayout</include>
-						<visible>!StringCompare(ListItemPosition(0).ChannelName,)</visible>
-					</control>
+					<include>LiveTVColumnFocusedLayout</include>
 					<include>LiveTVColumnLayoutArea</include>
 				</focusedlayout>
 			</control>
@@ -851,11 +851,6 @@
 
 			<include>LiveTVColumnHeaderArea</include>
 
-			<control type="group">
-				<posy>34</posy>
-				<include>LiveTVColumnItemLayout</include>
-				<visible>StringCompare(Container(17).ListItemPosition(0).ChannelName,)</visible>
-			</control>
 			<control type="group">
 				<posy>76</posy>
 				<include>LiveTVColumnItemLayout</include>
@@ -907,10 +902,7 @@
 					<include>LiveTVColumnLayoutArea</include>
 				</itemlayout>
 				<focusedlayout height="42">
-					<control type="group">
-						<include>LiveTVColumnFocusedLayout</include>
-						<visible>!StringCompare(ListItemPosition(0).ChannelName,)</visible>
-					</control>
+					<include>LiveTVColumnFocusedLayout</include>
 					<include>LiveTVColumnLayoutArea</include>
 				</focusedlayout>
 			</control>
@@ -1255,7 +1247,7 @@
 			<description>Title Area</description>
 			<posx>220</posx>
 			<control type="image">
-				<width>630</width>
+				<width>620</width>
 				<height>30</height>
 				<texture border="8">pvr/column.png</texture>
 				<colordiffuse>LiveTVColumnColor</colordiffuse>
@@ -1263,7 +1255,7 @@
 			</control>
 			<control type="label">
 				<posx>10</posx>
-				<width>630</width>
+				<width>620</width>
 				<width>200</width>
 				<height>30</height>
 				<include>LiveTVColumnHeaderLabel</include>
@@ -1609,7 +1601,7 @@
 
 		<control type="image">
 			<posx>220</posx>
-			<width>630</width>
+			<width>620</width>
 			<height>38</height>
 			<texture border="8">pvr/column.png</texture>
 			<colordiffuse>LiveTVColumnColor2</colordiffuse>

@@ -198,7 +198,6 @@
 				<posy>92</posy>
 				<width>210</width>
 				<height>167</height>
-				<bordertexture border="8">panels/panel-content-border.png</bordertexture>
 				<texture diffuse="covers/player-media-cover-diffuse.png">$INFO[VideoPlayer.Cover]</texture>
 				<aspectratio>keep</aspectratio>
 			</control>

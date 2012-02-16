@@ -7,33 +7,6 @@
 	</coordinates>
 
 	<controls>
-		<control type="image" id="101">
-			<visible>false</visible>
-		</control>
-		<control type="label" id="502">
-			<visible>false</visible>
-		</control>
-		<control type="label" id="503">
-			<visible>false</visible>
-		</control>
-		<control type="label" id="504">
-			<visible>false</visible>
-		</control>
-		<control type="label" id="505">
-			<visible>false</visible>
-		</control>
-
-		<control type="image" id="103">
-			<description>Channel Bug</description>
-			<posx>220r</posx>
-			<posy>120r</posy>
-			<width>150</width>
-			<height>100</height>
-			<aspectratio>keep</aspectratio>
-			<texture></texture>
-			<animation effect="fade" start="40" end="40" condition="True">Conditional</animation>
-		</control>
-
 		<control type="group" id="102">
 			<description>Video Info Panel</description>
 			<posx>28</posx>
@@ -45,7 +18,7 @@
 			<control type="group">			
 				<posx>18</posx>
 				<posy>10</posy>
-				
+
 				<control type="grouplist">
 					<width>820</width>
 					<height>60</height>
@@ -119,12 +92,12 @@
 					<width>820</width>
 					<orientation>horizontal</orientation>
 					<control type="label">
-						<width min="10" max="110">auto</width>
+						<width min="10" max="320">auto</width>
 						<height>40</height>
 						<font>MediaInfoFont</font>
 						<textcolor>MediaInfoItemColor</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>							
-						<label>$VAR[FSInfoLabel2]</label>
+						<label>$INFO[Control.GetLabel(502)]</label>
 						<aligny>center</aligny>
 					</control>
 					<control type="label">
@@ -133,25 +106,7 @@
 						<font>MediaInfoFont</font>
 						<textcolor>MediaInfoItemColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
-						<label fallback="31001">$VAR[FSInfoLabel2Val]</label>
-						<aligny>center</aligny>
-					</control>
-					<control type="label">
-						<width min="10" max="110">auto</width>
-						<height>40</height>
-						<font>MediaInfoFont</font>
-						<textcolor>MediaInfoItemColor</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
-						<label>     $VAR[FSInfoLabel3]</label>
-						<aligny>center</aligny>
-					</control>
-					<control type="label">
-						<width min="10" max="320">auto</width>
-						<height>40</height>
-						<font>MediaInfoFont</font>
-						<textcolor>MediaInfoItemColor2</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
-						<label fallback="31001">$VAR[FSInfoLabel3Val]</label>
+						<label>$INFO[Control.GetLabel(503)]</label>
 						<aligny>center</aligny>
 					</control>
 				</control>
@@ -165,7 +120,7 @@
 					<textcolor>MediaInfoColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<align>justify</align>
-					<label fallback="31203">$INFO[VideoPlayer.Plot]</label>
+					<label fallback="31203">$INFO[Control.GetLabel(505)]</label>
 					<wrapmultiline>true</wrapmultiline>
 					<autoscroll time="2000" delay="6000" repeat="10000">true</autoscroll>
 				</control>
@@ -185,14 +140,53 @@
 					<include>PlayerRatingMediaFlags</include>
 				</control>
 			</control>
-			
-			<control type="image" id="506">
+
+			<control type="image">
 				<description>Channel Logo</description>
 				<posx>983</posx>
 				<posy>92</posy>
 				<width>210</width>
 				<height>167</height>
+				<texture diffuse="covers/player-media-cover-diffuse.png" fallback="pvr/DefaultPVRLogo.png">$INFO[Control.GetLabel(506)]</texture>
 				<aspectratio>keep</aspectratio>
+			</control>
+		</control>
+
+		<control type="image">
+			<description>Channel Bug</description>
+			<posx>220r</posx>
+			<posy>120r</posy>
+			<width>150</width>
+			<height>100</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[Control.GetLabel(103)]</texture>
+			<animation effect="fade" start="40" end="40" condition="True">Conditional</animation>
+		</control>
+
+		<control type="group">
+			<control type="image" id="101">
+				<visible>false</visible>
+			</control>
+			<control type="image" id="103">
+				<visible>false</visible>
+			</control>
+			<control type="label" id="501">
+				<visible>false</visible>
+			</control>
+			<control type="label" id="502">
+				<visible>false</visible>
+			</control>
+			<control type="label" id="503">
+				<visible>false</visible>
+			</control>
+			<control type="label" id="504">
+				<visible>false</visible>
+			</control>
+			<control type="label" id="505">
+				<visible>false</visible>
+			</control>
+			<control type="image" id="506">
+				<visible>false</visible>
 			</control>
 		</control>
 	</controls>

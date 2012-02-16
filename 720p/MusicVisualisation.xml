@@ -213,7 +213,6 @@
 				<posy>92</posy>
 				<width>167</width>
 				<height>167</height>
-				<bordertexture border="8">panels/panel-content-border.png</bordertexture>
 				<texture diffuse="covers/player-media-cover-diffuse.png">$INFO[MusicPlayer.Cover]</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
