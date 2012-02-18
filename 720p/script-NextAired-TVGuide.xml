@@ -413,7 +413,7 @@
 				| [Control.HasFocus(205) + !IsEmpty(Container(205).ListItem.Label)]
 				| [Control.HasFocus(206) + !IsEmpty(Container(206).ListItem.Label)]</visible>
 
-				<control type="largeimage">
+				<control type="image">
 					<description>Fanart</description>
 					<posy>54</posy>
 					<width>298</width>

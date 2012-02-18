@@ -2842,7 +2842,7 @@
 					<animation effect="fade" end="50" condition="true">Conditional</animation>
 				</control>
 
-				<control type="largeimage">
+				<control type="image">
 					<description>Load Weather Maps</description>
 					<width>850</width>
 					<height>505</height>

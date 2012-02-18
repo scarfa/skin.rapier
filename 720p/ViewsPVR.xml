@@ -158,10 +158,10 @@
 					<animation effect="fade" end="50" condition="true">Conditional</animation>
 				</control>
 
-				<control type="largeimage">
+				<control type="image">
 					<width>554</width>
 					<height>310</height>
-					<texture fallback="background-default.png">$VAR[LiveTVListInfoCoverImage]</texture>
+					<texture background="true" fallback="background-default.png">$VAR[LiveTVListInfoCoverImage]</texture>
 					<bordersize>4</bordersize>
 					<aspectratio>scale</aspectratio>
 					<visible>!Player.HasVideo</visible>

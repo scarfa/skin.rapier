@@ -381,7 +381,7 @@
 	</include>
 
 	<include name="FanartImage">
-		<control type="largeimage">
+		<control type="image">
 			<include>BackgroundSize</include>
 			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
 			<aspectratio>scale</aspectratio>
@@ -391,7 +391,7 @@
 	</include>
 
 	<include name="ParentFanartImage">
-		<control type="largeimage">
+		<control type="image">
 			<include>BackgroundSize</include>
 			<texture background="true">$INFO[Fanart.Image]</texture>
 			<aspectratio>scale</aspectratio>

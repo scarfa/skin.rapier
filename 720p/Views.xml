@@ -618,7 +618,7 @@
 	</include>
 	
 	<include name="ListInfo2PanelFanart">
-		<control type="largeimage">
+		<control type="image">
 			<posx>40</posx>
 			<posy>116</posy>
 			<width>542</width>
@@ -663,7 +663,7 @@
 			<include>ListInfoViewMediaInfoBackgroundFadeAnim</include>
 		</control>
 		
-		<control type="largeimage">
+		<control type="image">
 			<posx>40</posx>
 			<posy>116</posy>
 			<width>542</width>
@@ -673,7 +673,7 @@
 			<fadetime>FanartCrossfadeTime</fadetime>
 		</control>
 		
-		<control type="largeimage">
+		<control type="image">
 			<posx>40</posx>
 			<posy>116</posy>
 			<width>542</width>
@@ -683,7 +683,7 @@
 			<fadetime>FanartCrossfadeTime</fadetime>
 		</control>
 		
-		<control type="largeimage">
+		<control type="image">
 			<posx>40</posx>
 			<posy>116</posy>
 			<width>542</width>
@@ -693,7 +693,7 @@
 			<fadetime>FanartCrossfadeTime</fadetime>
 		</control>
 		
-		<control type="largeimage">
+		<control type="image">
 			<posx>40</posx>
 			<posy>116</posy>
 			<width>542</width>
@@ -826,7 +826,7 @@
 	</include>
 	
 	<include name="ListInfo3PanelFanart">
-		<control type="largeimage">
+		<control type="image">
 			<posx>40</posx>
 			<posy>116</posy>
 			<width>404</width>
@@ -871,7 +871,7 @@
 			<include>ListInfoViewMediaInfoBackgroundFadeAnim</include>
 		</control>
 		
-		<control type="largeimage">
+		<control type="image">
 			<posx>40</posx>
 			<posy>116</posy>
 			<width>404</width>
@@ -881,7 +881,7 @@
 			<fadetime>FanartCrossfadeTime</fadetime>
 		</control>
 		
-		<control type="largeimage">
+		<control type="image">
 			<posx>40</posx>
 			<posy>116</posy>
 			<width>404</width>
@@ -891,7 +891,7 @@
 			<fadetime>FanartCrossfadeTime</fadetime>
 		</control>
 		
-		<control type="largeimage">
+		<control type="image">
 			<posx>40</posx>
 			<posy>116</posy>
 			<width>404</width>
@@ -901,7 +901,7 @@
 			<fadetime>FanartCrossfadeTime</fadetime>
 		</control>
 		
-		<control type="largeimage">
+		<control type="image">
 			<posx>40</posx>
 			<posy>116</posy>
 			<width>404</width>
@@ -978,7 +978,7 @@
 	</include>
 
 	<include name="ListInfo3RightPanelEpisodeThumb">
-		<control type="largeimage">
+		<control type="image">
 			<posx>40</posx>
 			<posy>116</posy>
 			<width>404</width>
