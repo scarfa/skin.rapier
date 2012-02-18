@@ -133,7 +133,7 @@
 	
 	<include name="DropDownMenuBtn">	
 		<width>212</width>
-		<height>40</height>
+		<height>37</height>
 		<font>MenuItemFont</font>
 		<textcolor>MenuItemColor</textcolor>
 		<focusedcolor>MenuItemFocusColor</focusedcolor>
@@ -147,7 +147,7 @@
 	
 	<include name="DropDownMenuViewModeBtn">	
 		<width>212</width>
-		<height>40</height>
+		<height>37</height>
 		<font>MenuItemFont</font>
 		<textcolor>MenuItemColor</textcolor>
 		<focusedcolor>MenuItemFocusColor</focusedcolor>
@@ -161,7 +161,7 @@
 	
 	<include name="DropDownMenuRadioBtn">	
 		<width>212</width>
-		<height>40</height>
+		<height>37</height>
 		<font>MenuItemFont</font>
 		<textcolor>MenuItemColor</textcolor>
 		<focusedcolor>MenuItemFocusColor</focusedcolor>
@@ -181,7 +181,7 @@
 	
 	<include name="DropDownMenuRadioBtn2">	
 		<width>212</width>
-		<height>40</height>
+		<height>37</height>
 		<font>MenuItemFont</font>
 		<textcolor>MenuItemColor</textcolor>
 		<focusedcolor>MenuItemFocusColor</focusedcolor>

@@ -358,26 +358,26 @@
 			<include>MenuOpenCloseAnim</include>
 			<control type="image">
 				<posx>18</posx>
-				<height>40</height>
+				<height>37</height>
 				<texture>gui/view-icon.png</texture>
 				<aspectratio>keep</aspectratio>
 			</control>
 			<control type="image">
 				<posx>18</posx>
-				<height>40</height>
+				<height>37</height>
 				<texture>gui/view-big-icon.png</texture>
 				<aspectratio>keep</aspectratio>
 			</control>
 			<control type="image">
 				<posx>18</posx>
-				<height>40</height>
+				<height>37</height>
 				<texture>gui/view-wide-icon.png</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>Window.IsActive(VideoLibrary) + Container.Content(TVShows) + !Skin.HasSetting(UseTVShowsPosterCover)</visible>
 			</control>
 			<control type="image">
 				<posx>18</posx>
-				<height>40</height>
+				<height>37</height>
 				<texture>gui/view-thumbnail.png</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>Container.Content(Movies) | Container.Content(Seasons) | [Container.Content(TVShows) + Skin.HasSetting(UseTVShowsPosterCover)]
@@ -385,13 +385,13 @@
 			</control>
 			<control type="image">
 				<posx>18</posx>
-				<height>40</height>
+				<height>37</height>
 				<texture>gui/view-list.png</texture>
 				<aspectratio>keep</aspectratio>
 			</control>
 			<control type="image">
 				<posx>18</posx>
-				<height>40</height>
+				<height>37</height>
 				<texture>gui/view-wide-list.png</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>[Window.IsActive(VideoLibrary) + [Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Episodes)]]
@@ -400,7 +400,7 @@
 			</control>
 			<control type="image">
 				<posx>18</posx>
-				<height>40</height>
+				<height>37</height>
 				<texture>gui/view-list-info.png</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>[Window.IsActive(VideoLibrary) + [Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Episodes)]] 
@@ -409,7 +409,7 @@
 			</control>
 			<control type="image">
 				<posx>18</posx>
-				<height>40</height>
+				<height>37</height>
 				<texture>gui/view-list-info-2.png</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>[Window.IsActive(VideoLibrary) + [Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Episodes)]] 
@@ -417,7 +417,7 @@
 			</control>
 			<control type="image">
 				<posx>18</posx>
-				<height>40</height>
+				<height>37</height>
 				<texture>gui/view-list-info-3.png</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>[Window.IsActive(VideoLibrary) + [Container.Content(Movies) | Container.Content(Episodes)]]
@@ -425,14 +425,14 @@
 			</control>
 			<control type="image">
 				<posx>18</posx>
-				<height>40</height>
+				<height>37</height>
 				<texture>gui/view-thumbs-info.png</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>[Window.IsActive(VideoLibrary) + [Container.Content(Movies) | [Container.Content(TVShows) + Skin.HasSetting(UseTVShowsPosterCover)]]] | [Window.IsActive(MusicLibrary) + Container.Content(Albums)]</visible>
 			</control>
 			<control type="image">
 				<posx>18</posx>
-				<height>40</height>
+				<height>37</height>
 				<texture>gui/view-wrap-info.png</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>[Window.IsActive(VideoLibrary) + Container.Content(Movies)] | [Window.IsActive(MusicLibrary) + Container.Content(Albums)]
@@ -440,70 +440,70 @@
 			</control>
 			<control type="image">
 				<posx>18</posx>
-				<height>40</height>
+				<height>37</height>
 				<texture>gui/view-wall.png</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>Container.Content(Movies) | Container.Content(Albums)</visible>
 			</control>
 			<control type="image">
 				<posx>18</posx>
-				<height>40</height>
+				<height>37</height>
 				<texture>gui/view-list-info-2.png</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
 			</control>
 			<control type="image">
 				<posx>18</posx>
-				<height>40</height>
+				<height>37</height>
 				<texture>gui/view-list-info-2.png</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
 			</control>
 			<control type="image">
 				<posx>18</posx>
-				<height>40</height>
+				<height>37</height>
 				<texture>gui/view-list-info-2.png</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
 			</control>
 			<control type="image">
 				<posx>18</posx>
-				<height>40</height>
+				<height>37</height>
 				<texture>gui/view-thumbs-info.png</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
 			</control>
 			<control type="image">
 				<posx>18</posx>
-				<height>40</height>
+				<height>37</height>
 				<texture>gui/view-thumbs-info.png</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
 			</control>
 			<control type="image">
 				<posx>18</posx>
-				<height>40</height>
+				<height>37</height>
 				<texture>gui/view-thumbs-info.png</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
 			</control>
 			<control type="image">
 				<posx>18</posx>
-				<height>40</height>
+				<height>37</height>
 				<texture>gui/view-wrap-info.png</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
 			</control>
 			<control type="image">
 				<posx>18</posx>
-				<height>40</height>
+				<height>37</height>
 				<texture>gui/view-wrap-info.png</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
 			</control>
 			<control type="image">
 				<posx>18</posx>
-				<height>40</height>
+				<height>37</height>
 				<texture>gui/view-wrap-info.png</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>Substring(Container.FolderPath,plugin://plugin.program)</visible>
