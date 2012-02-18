@@ -1585,7 +1585,8 @@
 
 			<control type="group">
 				<visible>!IsEmpty(ListItem.Title)</visible>
-				<include>ListInfo2PanelFanart</include>
+				<include condition="!Skin.HasSetting(ShowLandscape)">ListInfo2PanelFanart</include>
+				<include condition="Skin.HasSetting(ShowLandscape)">ListInfo2PanelLandscape</include>
 				
 				<control type="group">
 					<description>Media Info Area</description>
@@ -2164,7 +2165,7 @@
 					<description>Cover</description>
 					<posx>5</posx>
 					<posy>7</posy>
-					<width>610</width>
+					<width>620</width>
 					<height>114</height>
 					<texture background="true">$VAR[TVShowsThumbTexture]</texture>
 					<aspectratio>stretch</aspectratio>
@@ -2173,7 +2174,7 @@
 					<description>Dim</description>
 					<posx>5</posx>
 					<posy>7</posy>
-					<width>610</width>
+					<width>620</width>
 					<height>114</height>
 					<texture background="true">dim.png</texture>
 					<aspectratio>stretch</aspectratio>
@@ -2208,7 +2209,7 @@
 					<description>Logo</description>
 					<posx>5</posx>
 					<posy>7</posy>
-					<width>610</width>
+					<width>620</width>
 					<height>114</height>
 					<texture background="true">$INFO[ListItem.Path]logo.png</texture>
 					<aspectratio>keep</aspectratio>
@@ -2293,7 +2294,7 @@
 					<description>Cover</description>
 					<posx>5</posx>
 					<posy>7</posy>
-					<width>610</width>
+					<width>620</width>
 					<height>114</height>
 					<texture background="true">$VAR[TVShowsThumbTexture]</texture>
 					<aspectratio>stretch</aspectratio>
@@ -2326,7 +2327,7 @@
 					<description>Cover</description>
 					<posx>5</posx>
 					<posy>7</posy>
-					<width>610</width>
+					<width>620</width>
 					<height>114</height>
 					<texture background="true">$INFO[ListItem.Path]logo.png</texture>
 					<aspectratio>keep</aspectratio>
@@ -2367,7 +2368,8 @@
 			
 			<control type="group">
 				<visible>!IsEmpty(ListItem.Title)</visible>
-				<include>ListInfo3PanelFanart</include>
+				<include condition="!Skin.HasSetting(ShowLandscape)">ListInfo3PanelFanart</include>
+				<include condition="Skin.HasSetting(ShowLandscape)">ListInfo3PanelLandscape</include>
 				
 				<control type="group">
 					<description>Media Info Area</description>

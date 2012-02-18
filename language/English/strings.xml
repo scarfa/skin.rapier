@@ -21,6 +21,7 @@
 <string id="31203">No overview found.</string>
 <string id="31204">No description found.</string>
 <string id="31205">No comment found.</string>
+<string id="31215">No timer found.</string>
 <string id="31206">View Styles</string>
 <string id="31207">Cover Options</string>
 <string id="31208">Button 1</string>
@@ -124,9 +125,6 @@
 <string id="31404">Poster Layout</string>
 <string id="31014">Extra Thumbs</string>
 <string id="31015">Extra Fanart</string>
-<string id="31016">Use Local Logo</string>
-<string id="31017">Use Local Poster</string>
-<string id="31019">Use Local Banner</string>
 <string id="31407">Use Visualization For Background</string>
 <string id="31408">Use Artist Fanart For Background</string>
 <string id="31409">Enable Music Visualization / Artist Fanart In The Background</string>

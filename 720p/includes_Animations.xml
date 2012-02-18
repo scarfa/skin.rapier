@@ -602,11 +602,11 @@
 		</animation>
 	</include>
 	
-	<include name="ListInfoViewContentBackground">
+	<include name="ListInfoViewContentBackgroundFadeAnim">
 		<animation effect="fade" end="9" condition="true">Conditional</animation>
 	</include>
 	
-	<include name="ListInfoViewMediaInfoBackground">
+	<include name="ListInfoViewMediaInfoBackgroundFadeAnim">
 		<animation effect="fade" end="60" condition="true">Conditional</animation>
 	</include>
 	

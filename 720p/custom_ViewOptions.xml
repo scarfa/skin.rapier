@@ -8,7 +8,7 @@
 			<include>DropDownMenuCloseHitRect</include>
 		</control>
 		
-		<control type="grouplist" id="900"> <!-- 3087 -->
+		<control type="grouplist" id="900"> <!-- 3091 -->
 			<description>View Options Menu</description>
 			<posx>299</posx>
 			<posy>80</posy>
@@ -580,7 +580,7 @@
 				<onclick>Skin.ToggleSetting(DoNotAutoScrollTVShowsListInfo2Plot)</onclick>
 				<enable>!Skin.HasSetting(HideTVShowsListInfo2Plot)</enable>
 				<visible>Skin.String(CurrentViewMode,65) + Container.Content(TVShows)</visible>
-			</control>	
+			</control> 
 			<control type="radiobutton" id="2054">
 				<description>List Info 2 Do Not Auto Scroll Plot (Episodes)</description>
 				<include>DropDownMenuRadioBtn</include>
@@ -1298,9 +1298,18 @@
 				<onclick>Skin.ToggleSetting(AnimateFanart)</onclick>
 				<onclick>ReloadSkin()</onclick>
 				<include>ReloadSkinNotification</include>
-				<enable></enable>
 				<visible>![Skin.String(CurrentViewMode,50) | Skin.String(CurrentViewMode,51) | Skin.String(CurrentViewMode,69) | Skin.String(CurrentViewMode,70)]</visible>
 			</control>
+			<control type="radiobutton" id="3091">
+				<description>Show Landscape.jpg</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>Landscape.jpg</label>
+				<selected>Skin.HasSetting(ShowLandscape)</selected>
+				<onclick>Skin.ToggleSetting(ShowLandscape)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<include>ReloadSkinNotification</include>
+				<visible>Skin.String(CurrentViewMode,65) | Skin.String(CurrentViewMode,100) | Skin.String(CurrentViewMode,68) | Skin.String(CurrentViewMode,94)</visible>
+			</control>	
 			<control type="radiobutton" id="1035">
 				<description>Do Not Show Star Rating (Music)</description>
 				<include>DropDownMenuRadioBtn</include>
@@ -1546,7 +1555,7 @@
 			<control type="radiobutton" id="3088">
 				<description>Use Poster.jpg (TVShows)</description>
 				<include>DropDownMenuRadioBtn</include>
-				<label>$LOCALIZE[31017]</label>
+				<label>poster.jpg</label>
 				<selected>Skin.HasSetting(UseTVShowsLocalPosterThumb)</selected>
 				<onclick>Skin.ToggleSetting(UseTVShowsLocalPosterThumb)</onclick>
 				<onclick>ReloadSkin()</onclick>
@@ -1556,7 +1565,7 @@
 			<control type="radiobutton" id="3089">
 				<description>Use Banner.jpg (TVShows)</description>
 				<include>DropDownMenuRadioBtn</include>
-				<label>$LOCALIZE[31019]</label>
+				<label>banner.jpg</label>
 				<selected>Skin.HasSetting(UseTVShowsLocalBannerThumb)</selected>
 				<onclick>Skin.ToggleSetting(UseTVShowsLocalBannerThumb)</onclick>
 				<onclick>ReloadSkin()</onclick>
@@ -1566,7 +1575,7 @@
 			<control type="radiobutton" id="3048">
 				<description>Icon TV Show Logo (TVShows)</description>
 				<include>DropDownMenuRadioBtn</include>
-				<label>$LOCALIZE[31016]</label>
+				<label>logo.png</label>
 				<selected>Skin.HasSetting(EnableIconTVShowsLogo)</selected>
 				<onclick>Skin.ToggleSetting(EnableIconTVShowsLogo)</onclick>
 				<onclick>ReloadSkin()</onclick>
@@ -1576,7 +1585,7 @@
 			<control type="radiobutton" id="3049">
 				<description>Big Icon TV Show Logo (TVShows)</description>
 				<include>DropDownMenuRadioBtn</include>
-				<label>$LOCALIZE[31016]</label>
+				<label>logo.png</label>
 				<selected>Skin.HasSetting(EnableBigIconTVShowsLogo)</selected>
 				<onclick>Skin.ToggleSetting(EnableBigIconTVShowsLogo)</onclick>
 				<onclick>ReloadSkin()</onclick>
@@ -1586,7 +1595,7 @@
 			<control type="radiobutton" id="3044">
 				<description>Wide Icon TV Show Logo (TVShows)</description>
 				<include>DropDownMenuRadioBtn</include>
-				<label>$LOCALIZE[31016]</label>
+				<label>logo.png</label>
 				<selected>Skin.HasSetting(EnableWideIconTVShowsLogo)</selected>
 				<onclick>Skin.ToggleSetting(EnableWideIconTVShowsLogo)</onclick>
 				<onclick>ReloadSkin()</onclick>
@@ -1597,7 +1606,7 @@
 			<control type="radiobutton" id="3043">
 				<description>List TV Show Logo (TVShows)</description>
 				<include>DropDownMenuRadioBtn</include>
-				<label>$LOCALIZE[31016]</label>
+				<label>logo.png</label>
 				<selected>Skin.HasSetting(EnableListTVShowsLogo)</selected>
 				<onclick>Skin.ToggleSetting(EnableListTVShowsLogo)</onclick>
 				<onclick>ReloadSkin()</onclick>
@@ -1608,7 +1617,7 @@
 			<control type="radiobutton" id="3045">
 				<description>Wide List TV Show Logo (TVShows)</description>
 				<include>DropDownMenuRadioBtn</include>
-				<label>$LOCALIZE[31016]</label>
+				<label>logo.png</label>
 				<selected>Skin.HasSetting(EnableWideListTVShowsLogo)</selected>
 				<onclick>Skin.ToggleSetting(EnableWideListTVShowsLogo)</onclick>
 				<onclick>ReloadSkin()</onclick>
@@ -1619,7 +1628,7 @@
 			<control type="radiobutton" id="3046">
 				<description>List Info TV Show Logo (TVShows)</description>
 				<include>DropDownMenuRadioBtn</include>
-				<label>$LOCALIZE[31016]</label>
+				<label>logo.png</label>
 				<selected>Skin.HasSetting(EnableListInfoTVShowsLogo)</selected>
 				<onclick>Skin.ToggleSetting(EnableListInfoTVShowsLogo)</onclick>
 				<onclick>ReloadSkin()</onclick>
@@ -1630,7 +1639,7 @@
 			<control type="radiobutton" id="3047">
 				<description>List Info 2 TV Show Logo (TVShows)</description>
 				<include>DropDownMenuRadioBtn</include>
-				<label>$LOCALIZE[31016]</label>
+				<label>logo.png</label>
 				<selected>Skin.HasSetting(EnableListInfo2TVShowsLogo)</selected>
 				<onclick>Skin.ToggleSetting(EnableListInfo2TVShowsLogo)</onclick>
 				<onclick>ReloadSkin()</onclick>
@@ -1641,7 +1650,7 @@
 			<control type="radiobutton" id="3079">
 				<description>ThumbsInfo Show Logo (TVShows)</description>
 				<include>DropDownMenuRadioBtn</include>
-				<label>$LOCALIZE[31016]</label>
+				<label>logo.png</label>
 				<selected>Skin.HasSetting(EnableThumbsInfoTVShowsLogo)</selected>
 				<onclick>Skin.ToggleSetting(EnableThumbsInfoTVShowsLogo)</onclick>
 				<onclick>ReloadSkin()</onclick>

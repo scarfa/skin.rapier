@@ -592,7 +592,7 @@
 				<width>554</width>
 				<height>517</height>
 				<texture border="4">panels/panel-content-border2.png</texture>
-				<include>ListInfoViewContentBackground</include>
+				<include>ListInfoViewContentBackgroundFadeAnim</include>
 			</control>
 			
 			<control type="image">
@@ -602,7 +602,7 @@
 				<width>542</width>
 				<height>58</height>
 				<texture border="4">panels/panel3.png</texture>
-				<include>ListInfoViewMediaInfoBackground</include>
+				<include>ListInfoViewMediaInfoBackgroundFadeAnim</include>
 			</control>
 			
 			<control type="image">
@@ -612,7 +612,7 @@
 				<width>542</width>
 				<height>135</height>
 				<texture border="4">panels/panel3.png</texture>
-				<include>ListInfoViewMediaInfoBackground</include>
+				<include>ListInfoViewMediaInfoBackgroundFadeAnim</include>
 			</control>
 		</control>
 	</include>
@@ -625,6 +625,81 @@
 			<height>304</height>
 			<texture background="true" diffuse="covers/list-info-2-fanart-diffuse.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
+			<fadetime>FanartCrossfadeTime</fadetime>
+		</control>
+		
+		<control type="image">
+			<description>Genre Background</description>
+			<posx>43</posx>
+			<posy>119</posy>
+			<width>250</width>
+			<height>25</height>
+			<texture border="4">panels/panel3.png</texture>
+			<visible>!IsEmpty(ListItem.Genre)</visible>
+			<animation effect="fade" end="35" condition="true">Conditional</animation>
+		</control>
+					
+		<control type="label">
+			<description>Genre</description>
+			<posx>51</posx>
+			<posy>130</posy>
+			<width>234</width>
+			<font>MediaInfoFont3</font>
+			<textcolor>WhiteColor</textcolor>
+			<aligny>center</aligny>
+			<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+			<scroll>false</scroll>
+			<animation effect="fade" end="75" condition="true">Conditional</animation>
+		</control>
+	</include>
+	
+	<include name="ListInfo2PanelLandscape">
+		<control type="image">
+			<posx>40</posx>
+			<posy>116</posy>
+			<width>542</width>
+			<height>304</height>
+			<texture border="4">panels/panel3.png</texture>
+			<include>ListInfoViewMediaInfoBackgroundFadeAnim</include>
+		</control>
+		
+		<control type="largeimage">
+			<posx>40</posx>
+			<posy>116</posy>
+			<width>542</width>
+			<height>304</height>
+			<texture background="true" diffuse="covers/list-info-2-fanart-diffuse.png">$INFO[ListItem.Path]landscape.jpg</texture>
+			<aspectratio scalediffuse="false">keep</aspectratio>
+			<fadetime>FanartCrossfadeTime</fadetime>
+		</control>
+		
+		<control type="largeimage">
+			<posx>40</posx>
+			<posy>116</posy>
+			<width>542</width>
+			<height>304</height>
+			<texture background="true" diffuse="covers/list-info-2-fanart-diffuse.png">$INFO[ListItem.Path]../landscape.jpg</texture>
+			<aspectratio scalediffuse="false">keep</aspectratio>
+			<fadetime>FanartCrossfadeTime</fadetime>
+		</control>
+		
+		<control type="largeimage">
+			<posx>40</posx>
+			<posy>116</posy>
+			<width>542</width>
+			<height>304</height>
+			<texture background="true" diffuse="covers/list-info-2-fanart-diffuse.png">$INFO[ListItem.Path]../../landscape.jpg</texture>
+			<aspectratio scalediffuse="false">keep</aspectratio>
+			<fadetime>FanartCrossfadeTime</fadetime>
+		</control>
+		
+		<control type="largeimage">
+			<posx>40</posx>
+			<posy>116</posy>
+			<width>542</width>
+			<height>304</height>
+			<texture background="true" diffuse="covers/list-info-2-fanart-diffuse.png">$INFO[ListItem.Path]../../../landscape.jpg</texture>
+			<aspectratio scalediffuse="false">keep</aspectratio>
 			<fadetime>FanartCrossfadeTime</fadetime>
 		</control>
 		
@@ -725,7 +800,7 @@
 				<width>416</width>
 				<height>517</height>
 				<texture border="4">panels/panel-content-border2.png</texture>
-				<include>ListInfoViewContentBackground</include>
+				<include>ListInfoViewContentBackgroundFadeAnim</include>
 			</control>
 			
 			<control type="image">
@@ -735,7 +810,7 @@
 				<width>404</width>
 				<height>58</height>
 				<texture border="4">panels/panel3.png</texture>
-				<include>ListInfoViewMediaInfoBackground</include>
+				<include>ListInfoViewMediaInfoBackgroundFadeAnim</include>
 			</control>
 			
 			<control type="image">
@@ -745,7 +820,7 @@
 				<width>404</width>
 				<height>211</height>
 				<texture border="4">panels/panel3.png</texture>
-				<include>ListInfoViewMediaInfoBackground</include>
+				<include>ListInfoViewMediaInfoBackgroundFadeAnim</include>
 			</control>
 		</control>
 	</include>
@@ -758,6 +833,81 @@
 			<height>228</height>
 			<texture background="true" diffuse="covers/list-info-3-fanart-diffuse.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
+			<fadetime>FanartCrossfadeTime</fadetime>
+		</control>
+		
+		<control type="image">
+			<description>Genre Background</description>
+			<posx>43</posx>
+			<posy>119</posy>
+			<width>250</width>
+			<height>25</height>
+			<texture border="4">panels/panel3.png</texture>
+			<visible>!IsEmpty(ListItem.Genre)</visible>
+			<animation effect="fade" end="35" condition="true">Conditional</animation>
+		</control>
+					
+		<control type="label">
+			<description>Genre</description>
+			<posx>51</posx>
+			<posy>130</posy>
+			<width>234</width>
+			<font>MediaInfoFont3</font>
+			<textcolor>WhiteColor</textcolor>
+			<aligny>center</aligny>
+			<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+			<scroll>false</scroll>
+			<animation effect="fade" end="75" condition="true">Conditional</animation>
+		</control>
+	</include>
+	
+	<include name="ListInfo3PanelLandscape">
+		<control type="image">
+			<posx>40</posx>
+			<posy>116</posy>
+			<width>404</width>
+			<height>228</height>
+			<texture border="4">panels/panel3.png</texture>
+			<include>ListInfoViewMediaInfoBackgroundFadeAnim</include>
+		</control>
+		
+		<control type="largeimage">
+			<posx>40</posx>
+			<posy>116</posy>
+			<width>404</width>
+			<height>228</height>
+			<texture background="true" diffuse="covers/list-info-3-fanart-diffuse.png">$INFO[ListItem.Path]landscape.jpg</texture>
+			<aspectratio scalediffuse="false">keep</aspectratio>
+			<fadetime>FanartCrossfadeTime</fadetime>
+		</control>
+		
+		<control type="largeimage">
+			<posx>40</posx>
+			<posy>116</posy>
+			<width>404</width>
+			<height>228</height>
+			<texture background="true" diffuse="covers/list-info-3-fanart-diffuse.png">$INFO[ListItem.Path]../landscape.jpg</texture>
+			<aspectratio scalediffuse="false">keep</aspectratio>
+			<fadetime>FanartCrossfadeTime</fadetime>
+		</control>
+		
+		<control type="largeimage">
+			<posx>40</posx>
+			<posy>116</posy>
+			<width>404</width>
+			<height>228</height>
+			<texture background="true" diffuse="covers/list-info-3-fanart-diffuse.png">$INFO[ListItem.Path]../../landscape.jpg</texture>
+			<aspectratio scalediffuse="false">keep</aspectratio>
+			<fadetime>FanartCrossfadeTime</fadetime>
+		</control>
+		
+		<control type="largeimage">
+			<posx>40</posx>
+			<posy>116</posy>
+			<width>404</width>
+			<height>228</height>
+			<texture background="true" diffuse="covers/list-info-3-fanart-diffuse.png">$INFO[ListItem.Path]../../../landscape.jpg</texture>
+			<aspectratio scalediffuse="false">keep</aspectratio>
 			<fadetime>FanartCrossfadeTime</fadetime>
 		</control>
 		

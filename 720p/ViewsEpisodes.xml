@@ -890,8 +890,9 @@
 			
 			<control type="group">
 				<visible>!IsEmpty(ListItem.Title)</visible>
-				<include condition="!Skin.HasSetting(EnableEpisodesListInfo2ExtraThumbs)">ListInfo2PanelFanart</include>
+				<include condition="!Skin.HasSetting(EnableEpisodesListInfo2ExtraThumbs) + !Skin.HasSetting(ShowLandscape)">ListInfo2PanelFanart</include>
 				<include condition="Skin.HasSetting(EnableEpisodesListInfo2ExtraThumbs)">ListInfo2PanelExtraThumbs</include>
+				<include condition="Skin.HasSetting(ShowLandscape) + !Skin.HasSetting(EnableEpisodesListInfo2ExtraThumbs)">ListInfo2PanelLandscape</include>
 				
 				<control type="group">
 					<description>Media Info Area</description>
@@ -1611,7 +1612,8 @@
 			
 			<control type="group">
 				<visible>!IsEmpty(ListItem.Title)</visible>
-				<include>ListInfo3PanelFanart</include>
+				<include condition="!Skin.HasSetting(ShowLandscape)">ListInfo3PanelFanart</include>
+				<include condition="Skin.HasSetting(ShowLandscape)">ListInfo3PanelLandscape</include>
 				
 				<control type="group">
 					<description>Media Info Area</description>
