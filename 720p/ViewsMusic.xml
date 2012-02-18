@@ -1740,6 +1740,7 @@
 			
 			<control type="group">
 				<visible>!IsEmpty(ListItem.Artist) + Container.Content(Artists)</visible>
+				<include>ListInfo2PanelFanart</include>
 
 				<control type="group">
 					<description>Media Info Area</description>

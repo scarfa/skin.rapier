@@ -210,7 +210,7 @@
 			<control type="list" id="150">
 				<posx>97</posx>
 				<posy>458</posy>
-				<width>600</width>
+				<width>450</width>
 				<height>44</height>
 				<orientation>horizontal</orientation>
 				<onleft>121</onleft>

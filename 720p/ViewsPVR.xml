@@ -7,9 +7,9 @@
 			<include>ControlsOpenCloseAnim</include>
 
 			<control type="list" id="11">
-				<posx>605</posx>
+				<posx>595</posx>
 				<posy>110</posy>
-				<width>620</width>
+				<width>630</width>
 				<height>518</height>
 				<pagecontrol>906</pagecontrol>
 				<preloaditems>2</preloaditems>
@@ -22,7 +22,7 @@
 					<include>LiveTVListInfoStyleItemLayout</include>
 					<control type="group">
 						<description>Progress</description>
-						<posx>580</posx>
+						<posx>586</posx>
 						<posy>25</posy>
 						<include>LiveTVProgressImage</include>
 					</control>	
@@ -31,7 +31,7 @@
 					<include>LiveTVListInfoStyleFocusedLayout</include>
 					<control type="group">
 						<description>Progress</description>
-						<posx>580</posx>
+						<posx>586</posx>
 						<posy>25</posy>
 						<include>LiveTVProgressImage</include>
 					</control>
@@ -56,9 +56,9 @@
 			<include>ControlsOpenCloseAnim</include>
 
 			<control type="list" id="12">
-				<posx>605</posx>
+				<posx>595</posx>
 				<posy>110</posy>
-				<width>620</width>
+				<width>630</width>
 				<height>518</height>
 				<pagecontrol>906</pagecontrol>
 				<preloaditems>2</preloaditems>
@@ -93,9 +93,9 @@
 			<include>ControlsOpenCloseAnim</include> 
 
 			<control type="list" id="13">
-				<posx>605</posx>
+				<posx>595</posx>
 				<posy>110</posy>
-				<width>620</width>
+				<width>630</width>
 				<height>518</height>
 				<pagecontrol>906</pagecontrol>
 				<preloaditems>2</preloaditems>
@@ -127,61 +127,15 @@
 		<control type="group">
 			<visible>Skin.String(ViewsPVR,1) | Skin.String(ViewsPVR,2) | Skin.String(ViewsPVR,6)</visible>
 			<include>ControlsOpenCloseAnim</include>
-
-			<control type="image">
-				<posx>30</posx>
-				<posy>106</posy>
-				<width>1220</width>
-				<height>525</height>
-				<texture border="7">panels/content-panel.png</texture>
-				<include>PanelFadeAnim</include>
-			</control>
-
-			<control type="group">
-				<description>Cover Area</description>
-				<posx>40</posx>
-				<posy>116</posy>
-				<control type="image">
-					<description>Media Info Background</description>
-					<width>554</width>
-					<height>373</height>
-					<texture border="4">panels/panel2.png</texture>
-					<animation effect="fade" end="20" condition="true">Conditional</animation>
-				</control>
-
-				<control type="image">
-					<description>Cover Background</description>
-					<width>554</width>
-					<height>310</height>
-					<texture border="4">covers/cover-case2.png</texture>
-					<bordersize>1</bordersize>
-					<animation effect="fade" end="50" condition="true">Conditional</animation>
-				</control>
-
-				<control type="image">
-					<width>554</width>
-					<height>310</height>
-					<texture background="true" fallback="background-default.png">$VAR[LiveTVListInfoCoverImage]</texture>
-					<bordersize>4</bordersize>
-					<aspectratio>scale</aspectratio>
-					<visible>!Player.HasVideo</visible>
-				</control>
-
-				<control type="videowindow">
-					<description>Video</description>
-					<posx>4</posx>
-					<posy>4</posy>
-					<width>546</width>
-					<height>302</height>
-					<aspectratio>stretch</aspectratio>
-					<visible>Player.HasVideo</visible>
-				</control>
-			</control>
+			<include>ViewContentPanel</include>
+			<include>ListInfo2MediaInfoPanelCommon</include>
+			<include>LiveTVListInfoPanelCover</include>			
 
 			<control type="group">
 				<description>Media Info Area</description>
-				<posx>42</posx>
-				<posy>434</posy>
+				<posx>38</posx>
+				<posy>430</posy>
+
 				<control type="grouplist">
 					<posx>10</posx>
 					<posy>0</posy>
@@ -195,7 +149,7 @@
 						<label>$VAR[LiveTVListInfoLabel1]</label>
 					</control>
 					<control type="label">
-						<width min="0" max="290">auto</width>
+						<width min="0" max="270">auto</width>
 						<font>MediaInfoFont</font>
 						<textcolor>MediaInfoItemColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
@@ -217,7 +171,7 @@
 						<label>$VAR[LiveTVListInfoLabel2]</label>
 					</control>
 					<control type="label">
-						<width min="0" max="290">auto</width>
+						<width min="0" max="270">auto</width>
 						<font>MediaInfoFont</font>
 						<textcolor>MediaInfoItemColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
@@ -227,10 +181,9 @@
 				</control>
 
 				<control type="grouplist">
-					<description>Start Time</description>
-					<posx>390</posx>
+					<posx>366</posx>
 					<posy>0</posy>
-					<width>150</width>
+					<width>170</width>
 					<orientation>horizontal</orientation>
 					<align>right</align>
 					<control type="label">
@@ -252,10 +205,9 @@
 				</control>
 
 				<control type="grouplist">
-					<description>End Time</description>
-					<posx>390</posx>
+					<posx>366</posx>
 					<posy>22</posy>
-					<width>150</width>
+					<width>170</width>
 					<orientation>horizontal</orientation>
 					<align>right</align>
 					<control type="label">
@@ -279,9 +231,9 @@
 
 			<control type="textbox">
 				<description>Plot</description>
-				<posx>42</posx>
-				<posy>497</posy>
-				<width>550</width>
+				<posx>48</posx>
+				<posy>492</posy>
+				<width>526</width>
 				<height>122</height>
 				<font>MediaInfoDescFont</font>
 				<textcolor>MediaInfoColor</textcolor>
@@ -299,7 +251,7 @@
 	<include name="LiveTVListInfoStyleItemLayout">
 		<control type="image">
 			<posx>0</posx>
-			<width>620</width>
+			<width>630</width>
 			<height>74</height>	
 			<texture border="0,0,10,2">views/list-separator.png</texture>
 			<aspectratio>stretch</aspectratio>
@@ -344,7 +296,7 @@
 	<include name="LiveTVListInfoStyleFocusedLayout">
 		<control type="image">
 			<posx>0</posx>
-			<width>620</width>
+			<width>630</width>
 			<height>74</height>	
 			<texture border="0,0,10,2">views/list-separator.png</texture>
 			<aspectratio>stretch</aspectratio>
@@ -352,7 +304,7 @@
 
 		<control type="image">
 			<posx>0</posx>
-			<width>620</width>
+			<width>630</width>
 			<height>73</height>
 			<texture border="4">views/list-focus.png</texture>
 			<aspectratio>stretch</aspectratio>
@@ -365,7 +317,7 @@
 
 		<control type="image">
 			<posx>0</posx>
-			<width>620</width>
+			<width>630</width>
 			<height>73</height>
 			<texture border="4">views/list-alt-focus.png</texture>
 			<aspectratio>stretch</aspectratio>
@@ -1080,7 +1032,7 @@
 					<description>Plot</description>
 					<posy>53</posy>
 					<width>980</width>
-					<height>70</height>
+					<height>77</height>
 					<font>MediaInfoDescFont</font>
 					<textcolor>MediaInfoColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
@@ -1200,24 +1152,10 @@
 					<textcolor>MediaInfoColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<align>justify</align>
-					<label>$INFO[PVR.NextTimer]</label>
+					<label fallback="31215">$INFO[PVR.NextTimer]</label>
 					<wrapmultiline>true</wrapmultiline>
 					<autoscroll time="2000" delay="6000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollLiveTVPlot)</autoscroll>
-					<visible>PVR.HasTimer + !Skin.HasSetting(HideLiveTVPlot) + !Container.OnNext + !Container.OnPrevious</visible>
-				</control>
-				<control type="textbox">
-					<description>Timer</description>
-					<posy>53</posy>
-					<width>980</width>
-					<height>70</height>
-					<font>MediaInfoDescFont</font>
-					<textcolor>MediaInfoColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<align>justify</align>
-					<label>$LOCALIZE[19040]: $LOCALIZE[31000]</label>
-					<wrapmultiline>true</wrapmultiline>
-					<autoscroll time="2000" delay="6000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollLiveTVPlot)</autoscroll>
-					<visible>!PVR.HasTimer + !Skin.HasSetting(HideLiveTVPlot) + !Container.OnNext + !Container.OnPrevious</visible>
+					<visible>!Skin.HasSetting(HideLiveTVPlot) + !Container.OnNext + !Container.OnPrevious</visible>
 				</control>
 			</control>
 		</control>
