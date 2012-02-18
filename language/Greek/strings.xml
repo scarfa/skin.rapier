@@ -21,6 +21,7 @@
 	<string id="31203">Δεν βρέθηκε επισκόπηση.</string>
 	<string id="31204">Δεν βρέθηκε περιγραφή.</string>
 	<string id="31205">Δεν βρέθηκαν σχόλια.</string>
+	<string id="31215">Δεν βρέθηκε χρονοδιακόπτης.</string>
 	<string id="31206">Στυλ Προβολών</string>
 	<string id="31207">Επιλογές Εξωφύλλων</string>
 	<string id="31208">Κουμπί 1</string>
@@ -124,9 +125,6 @@
 	<string id="31404">Διάταξη Αφίσας</string>
 	<string id="31014">Έξτρα Μικρογραφίες</string>
 	<string id="31015">Έξτρα Fanart</string>
-	<string id="31016">Τοπικό Logo</string>
-	<string id="31017">Τοπική Αφίσα</string>
-	<string id="31019">Τοπικό Πανό</string>
 	<string id="31407">Απεικόνιση για Υπόβαθρο</string>
 	<string id="31408">Fanart Καλλιτέχνη για Υπόβαθρο</string>
 	<string id="31409">Ενεργοποίηση Υποβάθρου στο Παρασκήνιο</string>
@@ -144,6 +142,7 @@
 	<string id="31429">Απόκρυψη Λόγου Απεικόνισης</string>
 	<string id="31430">Απενεργοποίηση εφέ Κύλισης σε Λίστες</string>
 	<string id="31431">Απενεργοποίηση εφέ Εστίασης σε Λίστες</string>
+	<string id="31432">Εμφάνιση τηλεοπτικού 'clearart.png' στο OSD</string>
 
 	<!-- skin settings backgrounds -->
 	<string id="31051">Μόνο στο Αρχικό Παράθυρο</string>
