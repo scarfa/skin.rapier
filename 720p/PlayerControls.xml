@@ -530,6 +530,51 @@
 				<height>190</height>
 				<texture diffuse="covers/player-control-media-cover-diffuse.png">$INFO[VideoPlayer.Cover]</texture>
 				<aspectratio>keep</aspectratio>
+				<visible>!Skin.HasSetting(ShowTVShowClearArtOSD)</visible>
+			</control>
+			
+			<control type="group">
+				<visible>Skin.HasSetting(ShowTVShowClearArtOSD)</visible>
+				
+				<control type="image">
+					<description>Cover</description>
+					<posx>DialogMarginOffsetX</posx>
+					<posy>Dialog4MarginOffsetY</posy>
+					<width>190</width>
+					<height>190</height>
+					<texture diffuse="covers/player-control-media-cover-diffuse.png">$INFO[Player.FolderPath]clearart.png</texture>
+					<aspectratio aligny="bottom">keep</aspectratio>
+				</control>
+				
+				<control type="image">
+					<description>Cover</description>
+					<posx>DialogMarginOffsetX</posx>
+					<posy>Dialog4MarginOffsetY</posy>
+					<width>190</width>
+					<height>190</height>
+					<texture diffuse="covers/player-control-media-cover-diffuse.png">$INFO[Player.FolderPath]../clearart.png</texture>
+					<aspectratio aligny="bottom">keep</aspectratio>
+				</control>
+				
+				<control type="image">
+					<description>Cover</description>
+					<posx>DialogMarginOffsetX</posx>
+					<posy>Dialog4MarginOffsetY</posy>
+					<width>190</width>
+					<height>190</height>
+					<texture diffuse="covers/player-control-media-cover-diffuse.png">$INFO[Player.FolderPath]../../clearart.png</texture>
+					<aspectratio aligny="bottom">keep</aspectratio>
+				</control>
+				
+				<control type="image">
+					<description>Cover</description>
+					<posx>DialogMarginOffsetX</posx>
+					<posy>Dialog4MarginOffsetY</posy>
+					<width>190</width>
+					<height>190</height>
+					<texture diffuse="covers/player-control-media-cover-diffuse.png">$INFO[Player.FolderPath]../../../clearart.png</texture>
+					<aspectratio aligny="bottom">keep</aspectratio>
+				</control>
 			</control>
 			
 			<control type="grouplist">

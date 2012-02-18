@@ -34,6 +34,13 @@
 					<selected>Skin.HasSetting(DisableListFocusAnim)</selected>
 					<onclick>Skin.ToggleSetting(DisableListFocusAnim)</onclick>
 				</control>
+				<control type="radiobutton" id="3019">
+					<description>Show TV Show Clear Art On OSD</description>
+					<include>SettingsContentRadioBtn</include>
+					<label>$LOCALIZE[31432]</label>
+					<selected>Skin.HasSetting(ShowTVShowClearArtOSD)</selected>
+					<onclick>Skin.ToggleSetting(ShowTVShowClearArtOSD)</onclick>
+				</control>
 				<control type="button" id="3002">
 					<description>Music Playing Label</description>
 					<include>SettingsHeaderBtn</include>

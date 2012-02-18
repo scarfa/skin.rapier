@@ -192,6 +192,51 @@
 				<height>167</height>
 				<texture diffuse="covers/player-media-cover-diffuse.png">$INFO[VideoPlayer.Cover]</texture>
 				<aspectratio>keep</aspectratio>
+				<visible>![Skin.HasSetting(ShowTVShowClearArtOSD) + VideoPlayer.Content(Episodes)]</visible>
+			</control>
+			
+			<control type="group">
+				<visible>Skin.HasSetting(ShowTVShowClearArtOSD) + VideoPlayer.Content(Episodes)</visible>
+				
+				<control type="image">
+					<description>Cover</description>
+					<posx>983</posx>
+					<posy>92</posy>
+					<width>210</width>
+					<height>167</height>
+					<texture diffuse="covers/player-media-cover-diffuse.png">$INFO[Player.FolderPath]clearart.png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				
+				<control type="image">
+					<description>Cover</description>
+					<posx>983</posx>
+					<posy>92</posy>
+					<width>210</width>
+					<height>167</height>
+					<texture diffuse="covers/player-media-cover-diffuse.png">$INFO[Player.FolderPath]../clearart.png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				
+				<control type="image">
+					<description>Cover</description>
+					<posx>983</posx>
+					<posy>92</posy>
+					<width>210</width>
+					<height>167</height>
+					<texture diffuse="covers/player-media-cover-diffuse.png">$INFO[Player.FolderPath]../../clearart.png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				
+				<control type="image">
+					<description>Cover</description>
+					<posx>983</posx>
+					<posy>92</posy>
+					<width>210</width>
+					<height>167</height>
+					<texture diffuse="covers/player-media-cover-diffuse.png">$INFO[Player.FolderPath]../../../clearart.png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
 			</control>
 		</control>
 	</controls>
