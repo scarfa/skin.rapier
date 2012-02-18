@@ -1090,6 +1090,40 @@
 		</control>
 	</include>
 
+	<include name="LiveTVListInfoPanelCover">
+		<control type="group">
+			<posx>40</posx>
+			<posy>116</posy>
+
+			<control type="image">
+				<width>542</width>
+				<height>304</height>
+				<texture background="true" diffuse="covers/list-info-2-fanart-diffuse.png">$VAR[LiveTVListInfoCoverImage]</texture>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<visible>!Player.HasVideo</visible>
+			</control>
+
+			<control type="image">
+				<description>Cover Background</description>
+				<width>542</width>
+				<height>304</height>
+				<texture border="4">panels/panel3.png</texture>
+				<include>ListInfoViewMediaInfoBackground</include>
+				<visible>Player.HasVideo</visible>
+			</control>
+
+			<control type="videowindow">
+				<description>Video</description>
+				<posx>4</posx>
+				<posy>4</posy>
+				<width>534</width>
+				<height>296</height>
+				<aspectratio>stretch</aspectratio>
+				<visible>Player.HasVideo</visible>
+			</control>
+		</control>
+	</include>
+
 	<variable name="LiveTVListInfoCoverImage">
 		<value condition="Skin.String(ViewsPVR,1) | Skin.String(ViewsPVR,6)">pvr\pvr-background.jpg</value>
 		<value condition="Skin.String(ViewsPVR,2)">pvr\pvr-radio-background.jpg</value>
@@ -1137,6 +1171,7 @@
 			<texture background="true">watched/watched-10pct.png</texture>
 			<aspectratio>stretch</aspectratio>
 			<visible>!IntegerGreaterThan(ListItem.Progress,20)</visible>
+			<include>ListViewOverlayFadeAnim</include>
 		</control>
 		<control type="image">
 			<width>24</width>
@@ -1144,6 +1179,7 @@
 			<texture background="true">watched/watched-30pct.png</texture>
 			<aspectratio>stretch</aspectratio>
 			<visible>IntegerGreaterThan(ListItem.Progress,20) + !IntegerGreaterThan(ListItem.Progress,40)</visible>
+			<include>ListViewOverlayFadeAnim</include>
 		</control>
 		<control type="image">
 			<width>24</width>
@@ -1151,6 +1187,7 @@
 			<texture background="true">watched/watched-50pct.png</texture>
 			<aspectratio>stretch</aspectratio>
 			<visible>IntegerGreaterThan(ListItem.Progress,40) + !IntegerGreaterThan(ListItem.Progress,60)</visible>
+			<include>ListViewOverlayFadeAnim</include>
 		</control>
 		<control type="image">
 			<width>24</width>
@@ -1158,6 +1195,7 @@
 			<texture background="true">watched/watched-70pct.png</texture>
 			<aspectratio>stretch</aspectratio>
 			<visible>IntegerGreaterThan(ListItem.Progress,60) + !IntegerGreaterThan(ListItem.Progress,80)</visible>
+			<include>ListViewOverlayFadeAnim</include>
 		</control>
 		<control type="image">
 			<width>24</width>
@@ -1165,6 +1203,7 @@
 			<texture background="true">watched/watched-90pct.png</texture>
 			<aspectratio>stretch</aspectratio>
 			<visible>IntegerGreaterThan(ListItem.Progress,80)</visible>
+			<include>ListViewOverlayFadeAnim</include>
 		</control>
 	</include>
 
