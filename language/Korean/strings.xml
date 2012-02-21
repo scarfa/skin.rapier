@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 
-<!--  string id's 31000 thru    are reserved for skins  -->
+<!--  string id's 31000 thru 31999 are reserved for skins  -->
 
 <strings>
 <!-- common -->
@@ -21,6 +21,7 @@
 <string id="31203">줄거리 없음</string>
 <string id="31204">상세 정보 없음</string>
 <string id="31205">주석 없음</string>
+<string id="31215">타이머 없음</string>
 <string id="31206">보기 형식</string>
 <string id="31207">커버 옵션</string>
 <string id="31208">버튼 1</string>
@@ -124,9 +125,6 @@
 <string id="31404">포스터</string>
 <string id="31014">추가 썸네일</string>
 <string id="31015">추가 팬아트</string>
-<string id="31016">로컬의 TV 로고 사용</string>
-<string id="31017">로컬의 포스터 사용</string>
-<string id="31019">로컬의 배너 사용</string>
 <string id="31407">배경에 시각화 사용</string>
 <string id="31408">배경에 아티스트 팬아트 사용</string>
 <string id="31409">배경에 음악 시각화 / 아티스트 팬아트 사용</string>
@@ -144,6 +142,7 @@
 <string id="31429">화면비 숨기기</string>
 <string id="31430">목록 스크롤 애니메이션 사용하지 않음</string>
 <string id="31431">목록 포커스 애니메이션 사용하지 않음</string>
+<string id="31432">OSD에 TV 쇼 'clearart.png' 보기</string>
 
 <!-- skin settings backgrounds -->
 <string id="31051">홈 화면에만 보이기</string>
