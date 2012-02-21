@@ -143,6 +143,8 @@
 <string id="31430">Disable List Scroll Animation</string>
 <string id="31431">Disable List Focus Animation</string>
 <string id="31432">Show TV Show 'clearart.png' On OSD</string>
+<string id="31433">Enable Music CDArt</string>
+<string id="31434">Show CDArt In Fullscreen Playback</string>
 
 <!-- skin settings backgrounds -->
 <string id="31051">Show In Home Window Only</string>
