@@ -1080,8 +1080,77 @@
 		</animation>
 	</include>
 	
+	<include name="CdArtImageOpenCloseAnim">
+		<animation type="WindowOpen">
+			<effect type="slide" end="85" tween="cubic" easing="out" delay="500" time="1500"/>
+			<effect type="rotate" center="auto" end="162" time="2250"/>
+		</animation>
+		<animation type="WindowClose" reversible="false" condition="Player.Playing">
+			<effect type="slide" start="85" end="0" tween="cubic" easing="out" time="900"/>
+			<effect type="rotate" center="auto" start="0" end="20" time="300"/>
+			<effect type="rotate" center="auto" start="0" end="25" time="300" delay="300"/>
+			<effect type="rotate" center="auto" start="0" end="30" time="300" delay="600"/>
+		</animation>
+	</include>
+	
+	<include name="CdArtImageOpenCloseAnim2">
+		<animation type="WindowOpen">
+			<effect type="slide" end="65" tween="cubic" easing="out" delay="500" time="1500"/>
+			<effect type="rotate" center="auto" end="162" time="2250"/>
+		</animation>
+		<animation type="WindowClose" reversible="false" condition="Player.Playing">
+			<effect type="slide" start="65" end="0" tween="cubic" easing="out" time="900"/>
+			<effect type="rotate" center="auto" start="0" end="20" time="300"/>
+			<effect type="rotate" center="auto" start="0" end="25" time="300" delay="300"/>
+			<effect type="rotate" center="auto" start="0" end="30" time="300" delay="600"/>
+		</animation>
+	</include>
+	
+	<include name="CdArtLabelOpenCloseAnim">
+		<animation effect="fade" start="0" end="100" time="400" delay="1600">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="100" delay="400" condition="Player.Playing">WindowClose</animation>
+	</include>
+	
+	<include name="CdArtLabelOpenCloseAnim2">
+		<animation effect="fade" start="0" end="100" time="400" delay="2000">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="100" delay="300" condition="Player.Playing">WindowClose</animation>
+	</include>
+	
+	<include name="CdArtLabelOpenCloseAnim3">
+		<animation effect="fade" start="0" end="100" time="400" delay="2400">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="100" delay="200" condition="Player.Playing">WindowClose</animation>
+	</include>
+	
+	<include name="CdArtLabelOpenCloseAnim4">
+		<animation effect="fade" start="0" end="100" time="400" delay="2800">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="100" delay="100" condition="Player.Playing">WindowClose</animation>
+	</include>
+	
+	<include name="CdArtLabelOpenCloseAnim5">
+		<animation effect="fade" start="0" end="100" time="400" delay="3200">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="100" delay="0" condition="Player.Playing">WindowClose</animation>
+	</include>
+	
+	<include name="CdArtImageRotateAnim">
+		<animation effect="rotate" end="-36000" center="auto" time="500000" loop="true" reversible="false" condition="true">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="3000" loop="true" reversible="false" condition="Player.Forwarding2x">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" condition="Player.Forwarding4x">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="1500" loop="true" reversible="false" condition="Player.Forwarding8x">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="1000" loop="true" reversible="false" condition="Player.Forwarding16x">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="500" loop="true" reversible="false" condition="Player.Forwarding32x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="3000" loop="true" reversible="false" condition="Player.Rewinding2x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="2000" loop="true" reversible="false" condition="Player.Rewinding4x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="1500" loop="true" reversible="false" condition="Player.Rewinding8x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="1000" loop="true" reversible="false" condition="Player.Rewinding16x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="500" loop="true" reversible="false" condition="Player.Rewinding32x">Conditional</animation>
+		<animation effect="rotate" end="36000" center="auto" time="500000" loop="true" reversible="false" condition="Player.Paused">Conditional</animation>
+		<animation effect="rotate" end="-28" center="auto" time="500" reversible="false" condition="Player.Paused">Conditional</animation>
+		<animation effect="rotate" end="-15" center="auto" time="500" delay="500" reversible="false" condition="Player.Paused">Conditional</animation>
+		<animation effect="rotate" end="-3" center="auto" time="250" delay="1000" reversible="false" condition="Player.Paused">Conditional</animation>
+	</include>
+	
 	<include name="LiveTVColumnFadeAnim">
-		<animation effect="fade" end="60" condition="true">conditional</animation>
+		<animation effect="fade" end="60" condition="true">Conditional</animation>
 	</include>
 
 	<include name="PanelFadeAnim">

@@ -41,6 +41,13 @@
 					<selected>Skin.HasSetting(ShowTVShowClearArtOSD)</selected>
 					<onclick>Skin.ToggleSetting(ShowTVShowClearArtOSD)</onclick>
 				</control>
+				<control type="radiobutton" id="3020">
+					<description>Enable Music CDArt</description>
+					<include>SettingsContentRadioBtn</include>
+					<label>$LOCALIZE[31433]</label>
+					<selected>Skin.HasSetting(EnableMusicCdArt)</selected>
+					<onclick>Skin.ToggleSetting(EnableMusicCdArt)</onclick>
+				</control>
 				<control type="button" id="3002">
 					<description>Music Playing Label</description>
 					<include>SettingsHeaderBtn</include>
@@ -77,6 +84,13 @@
 					<selected>Skin.HasSetting(AnimateFanartMusicPlayingBG)</selected>
 					<onclick>Skin.ToggleSetting(AnimateFanartMusicPlayingBG)</onclick>
 					<visible>Skin.HasSetting(UseFanartForMusicPlayingBG)</visible>
+				</control>
+				<control type="radiobutton" id="3021">
+					<description>Show CDArt In Fullscreen Music Playback</description>
+					<include>SettingsContentRadioBtn</include>
+					<label>$LOCALIZE[31434]</label>
+					<selected>Skin.HasSetting(UseCdArtInMusicPlayingBG)</selected>
+					<onclick>Skin.ToggleSetting(UseCdArtInMusicPlayingBG)</onclick>
 				</control>
 				<control type="button" id="3007">
 					<description>Video Playing Label</description>
