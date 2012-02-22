@@ -45,7 +45,8 @@
 				<label>$LOCALIZE[31042]</label>
 				<selected>!Skin.HasSetting(ShowTVShowsIconLabel)</selected>
 				<onclick>Skin.ToggleSetting(ShowTVShowsIconLabel)</onclick>
-				<visible>Skin.String(CurrentViewMode,50) + Container.Content(TVShows) + !Skin.HasSetting(UseTVShowsPosterCover)</visible>
+				<visible>Skin.String(CurrentViewMode,50) + Container.Content(TVShows)</visible>
+				<enable>!Skin.String(CommonIconTVShowStyle,2)</enable>
 			</control>
 			<control type="radiobutton" id="3000">
 				<description>Icon Hide Label (Pictures)</description>
@@ -77,7 +78,8 @@
 				<label>$LOCALIZE[31042]</label>
 				<selected>!Skin.HasSetting(ShowTVShowsBigIconLabel)</selected>
 				<onclick>Skin.ToggleSetting(ShowTVShowsBigIconLabel)</onclick>	
-				<visible>Skin.String(CurrentViewMode,51) + Container.Content(TVShows) + !Skin.HasSetting(EnableBigIconTVShowsLogo)</visible>
+				<visible>Skin.String(CurrentViewMode,51) + Container.Content(TVShows)</visible>
+				<enable>!Skin.String(CommonBigIconTVShowStyle,2)</enable>
 			</control>
 			<control type="radiobutton" id="3035">
 				<description>Wide Icon Hide Overlay (TVShows)</description>
@@ -1300,6 +1302,30 @@
 				<include>ReloadSkinNotification</include>
 				<visible>![Skin.String(CurrentViewMode,50) | Skin.String(CurrentViewMode,51) | Skin.String(CurrentViewMode,69) | Skin.String(CurrentViewMode,70)]</visible>
 			</control>
+			<control type="radiobutton" id="3043">
+				<description>List Clear Logo (TVShows)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31508]</label>
+				<selected>Skin.HasSetting(EnableListTVShowsLogo)</selected>
+				<onclick>Skin.ToggleSetting(EnableListTVShowsLogo)</onclick>
+				<visible>Skin.String(CurrentViewMode,52) + Container.Content(TVShows)</visible>
+			</control>
+			<control type="radiobutton" id="3046">
+				<description>List Info Clear Logo (TVShows)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31508]</label>
+				<selected>Skin.HasSetting(EnableListInfoTVShowsLogo)</selected>
+				<onclick>Skin.ToggleSetting(EnableListInfoTVShowsLogo)</onclick>
+				<visible>Skin.String(CurrentViewMode,61) + Container.Content(TVShows)</visible>
+			</control>
+			<control type="radiobutton" id="3047">
+				<description>List Info 2 Clear Logo (TVShows)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31508]</label>
+				<selected>Skin.HasSetting(EnableListInfo2TVShowsLogo)</selected>
+				<onclick>Skin.ToggleSetting(EnableListInfo2TVShowsLogo)</onclick>
+				<visible>Skin.String(CurrentViewMode,65) + Container.Content(TVShows)</visible>
+			</control>
 			<control type="radiobutton" id="3091">
 				<description>Show Landscape.jpg</description>
 				<include>DropDownMenuRadioBtn</include>
@@ -1536,127 +1562,6 @@
 				<onclick>Skin.ToggleSetting(ShowWrapInfoViewScrollbar)</onclick>
 				<visible>Skin.String(CurrentViewMode,598)</visible>
 			</control>
-			<control type="button" id="3087">
-				<description>Cover Options Header</description>
-				<include>DropDownMenuHeader</include>
-				<label>$LOCALIZE[31207]</label>
-				<visible>Control.IsVisible(2058)</visible>
-			</control>
-			<control type="radiobutton" id="2058">
-				<description>Use Poster Layout (TVShows)</description>
-				<include>DropDownMenuRadioBtn</include>
-				<label>$LOCALIZE[31404]</label>
-				<selected>Skin.HasSetting(UseTVShowsPosterCover)</selected>
-				<onclick>Skin.ToggleSetting(UseTVShowsPosterCover)</onclick>
-				<onclick>ReloadSkin()</onclick>
-				<include>ReloadSkinNotification</include>
-				<visible>Container.Content(TVShows)</visible>
-			</control>
-			<control type="radiobutton" id="3088">
-				<description>Use Poster.jpg (TVShows)</description>
-				<include>DropDownMenuRadioBtn</include>
-				<label>poster.jpg</label>
-				<selected>Skin.HasSetting(UseTVShowsLocalPosterThumb)</selected>
-				<onclick>Skin.ToggleSetting(UseTVShowsLocalPosterThumb)</onclick>
-				<onclick>ReloadSkin()</onclick>
-				<include>ReloadSkinNotification</include>
-				<visible>Container.Content(TVShows) + Skin.HasSetting(UseTVShowsPosterCover)</visible>
-			</control>
-			<control type="radiobutton" id="3089">
-				<description>Use Banner.jpg (TVShows)</description>
-				<include>DropDownMenuRadioBtn</include>
-				<label>banner.jpg</label>
-				<selected>Skin.HasSetting(UseTVShowsLocalBannerThumb)</selected>
-				<onclick>Skin.ToggleSetting(UseTVShowsLocalBannerThumb)</onclick>
-				<onclick>ReloadSkin()</onclick>
-				<include>ReloadSkinNotification</include>
-				<visible>Container.Content(TVShows) + !Skin.HasSetting(UseTVShowsPosterCover)</visible>
-			</control>
-			<control type="radiobutton" id="3048">
-				<description>Icon TV Show Logo (TVShows)</description>
-				<include>DropDownMenuRadioBtn</include>
-				<label>logo.png</label>
-				<selected>Skin.HasSetting(EnableIconTVShowsLogo)</selected>
-				<onclick>Skin.ToggleSetting(EnableIconTVShowsLogo)</onclick>
-				<onclick>ReloadSkin()</onclick>
-				<include>ReloadSkinNotification</include>
-				<visible>Skin.String(CurrentViewMode,50) + Container.Content(TVShows)</visible>
-			</control>
-			<control type="radiobutton" id="3049">
-				<description>Big Icon TV Show Logo (TVShows)</description>
-				<include>DropDownMenuRadioBtn</include>
-				<label>logo.png</label>
-				<selected>Skin.HasSetting(EnableBigIconTVShowsLogo)</selected>
-				<onclick>Skin.ToggleSetting(EnableBigIconTVShowsLogo)</onclick>
-				<onclick>ReloadSkin()</onclick>
-				<include>ReloadSkinNotification</include>
-				<visible>Skin.String(CurrentViewMode,51) + Container.Content(TVShows)</visible>
-			</control>
-			<control type="radiobutton" id="3044">
-				<description>Wide Icon TV Show Logo (TVShows)</description>
-				<include>DropDownMenuRadioBtn</include>
-				<label>logo.png</label>
-				<selected>Skin.HasSetting(EnableWideIconTVShowsLogo)</selected>
-				<onclick>Skin.ToggleSetting(EnableWideIconTVShowsLogo)</onclick>
-				<onclick>ReloadSkin()</onclick>
-				<include>ReloadSkinNotification</include>
-				<enable>!Skin.HasSetting(UseTVShowsPosterCover)</enable>
-				<visible>Skin.String(CurrentViewMode,56) + Container.Content(TVShows)</visible>
-			</control>
-			<control type="radiobutton" id="3043">
-				<description>List TV Show Logo (TVShows)</description>
-				<include>DropDownMenuRadioBtn</include>
-				<label>logo.png</label>
-				<selected>Skin.HasSetting(EnableListTVShowsLogo)</selected>
-				<onclick>Skin.ToggleSetting(EnableListTVShowsLogo)</onclick>
-				<onclick>ReloadSkin()</onclick>
-				<include>ReloadSkinNotification</include>
-				<enable>!Skin.HasSetting(UseTVShowsPosterCover)</enable>
-				<visible>Skin.String(CurrentViewMode,52) + Container.Content(TVShows)</visible>
-			</control>
-			<control type="radiobutton" id="3045">
-				<description>Wide List TV Show Logo (TVShows)</description>
-				<include>DropDownMenuRadioBtn</include>
-				<label>logo.png</label>
-				<selected>Skin.HasSetting(EnableWideListTVShowsLogo)</selected>
-				<onclick>Skin.ToggleSetting(EnableWideListTVShowsLogo)</onclick>
-				<onclick>ReloadSkin()</onclick>
-				<include>ReloadSkinNotification</include>
-				<enable>!Skin.HasSetting(UseTVShowsPosterCover)</enable>
-				<visible>Skin.String(CurrentViewMode,76) + Container.Content(TVShows)</visible>
-			</control>
-			<control type="radiobutton" id="3046">
-				<description>List Info TV Show Logo (TVShows)</description>
-				<include>DropDownMenuRadioBtn</include>
-				<label>logo.png</label>
-				<selected>Skin.HasSetting(EnableListInfoTVShowsLogo)</selected>
-				<onclick>Skin.ToggleSetting(EnableListInfoTVShowsLogo)</onclick>
-				<onclick>ReloadSkin()</onclick>
-				<include>ReloadSkinNotification</include>
-				<enable>!Skin.HasSetting(UseTVShowsPosterCover)</enable>
-				<visible>Skin.String(CurrentViewMode,61) + Container.Content(TVShows)</visible>
-			</control>
-			<control type="radiobutton" id="3047">
-				<description>List Info 2 TV Show Logo (TVShows)</description>
-				<include>DropDownMenuRadioBtn</include>
-				<label>logo.png</label>
-				<selected>Skin.HasSetting(EnableListInfo2TVShowsLogo)</selected>
-				<onclick>Skin.ToggleSetting(EnableListInfo2TVShowsLogo)</onclick>
-				<onclick>ReloadSkin()</onclick>
-				<include>ReloadSkinNotification</include>
-				<enable>!Skin.HasSetting(UseTVShowsPosterCover)</enable>
-				<visible>Skin.String(CurrentViewMode,65) + Container.Content(TVShows)</visible>
-			</control>
-			<control type="radiobutton" id="3079">
-				<description>ThumbsInfo Show Logo (TVShows)</description>
-				<include>DropDownMenuRadioBtn</include>
-				<label>logo.png</label>
-				<selected>Skin.HasSetting(EnableThumbsInfoTVShowsLogo)</selected>
-				<onclick>Skin.ToggleSetting(EnableThumbsInfoTVShowsLogo)</onclick>
-				<onclick>ReloadSkin()</onclick>
-				<include>ReloadSkinNotification</include>
-				<visible>Skin.String(CurrentViewMode,100) + Container.Content(TVShows)</visible>
-			</control>
 			<control type="button" id="3023">
 				<description>Add-on Options Header</description>
 				<include>DropDownMenuHeader</include>
@@ -1681,37 +1586,54 @@
 				<label>$LOCALIZE[31206]</label>
 				<visible>Control.IsVisible(3050) | Control.IsVisible(3052) | Control.IsVisible(3018) | Control.IsVisible(3019)
 				| Control.IsVisible(1006) | Control.IsVisible(1012) | Control.IsVisible(2010) | Control.IsVisible(2017) 
-				| Control.IsVisible(2044) | Control.IsVisible(2050) | Control.IsVisible(3008) | Control.IsVisible(3012)</visible>
+				| Control.IsVisible(2044) | Control.IsVisible(2050) | Control.IsVisible(3008) | Control.IsVisible(3012)
+				| Control.IsVisible(4026) | Control.IsVisible(4036) | Control.IsVisible(4046) | Control.IsVisible(4087)
+				| Control.IsVisible(4097) | Control.IsVisible(3092) | Control.IsVisible(3094) | Control.IsVisible(3096)
+				| Control.IsVisible(3098)</visible>
 			</control>
-			<control type="button" id="4025">
-				<description>List Info View Styles Header (Programs)</description>
-				<include>DropDownMenuHeader</include>
-				<label>$LOCALIZE[31206]</label>
-				<visible>Control.IsVisible(4026)</visible>
+			<control type="radiobutton" id="3092">
+				<description>Common Icon Use Style 1 (TVShow)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31418]</label>
+				<selected>Skin.String(CommonIconTVShowStyle,1) | Skin.String(CommonIconTVShowStyle,)</selected>
+				<onclick>Skin.SetString(CommonIconTVShowStyle,1)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<include>ReloadSkinNotification</include>
+				<onclick>Container.SetViewMode(50)</onclick>
+				<visible>Container.Content(TVShows) + Skin.String(CurrentViewMode,50)</visible>
 			</control>
-			<control type="button" id="4035">
-				<description>List Info 2 View Styles Header (Programs)</description>
-				<include>DropDownMenuHeader</include>
-				<label>$LOCALIZE[31206]</label>
-				<visible>Control.IsVisible(4036)</visible>
+			<control type="radiobutton" id="3093">
+				<description>Common Icon Use Style 2 (TVShow)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31508]</label>
+				<selected>Skin.String(CommonIconTVShowStyle,2)</selected>
+				<onclick>Skin.SetString(CommonIconTVShowStyle,2)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<include>ReloadSkinNotification</include>
+				<onclick>Container.SetViewMode(50)</onclick>
+				<visible>Container.Content(TVShows) + Skin.String(CurrentViewMode,50)</visible>
 			</control>
-			<control type="button" id="4045">
-				<description>List Info 3 View Styles Header (Programs)</description>
-				<include>DropDownMenuHeader</include>
-				<label>$LOCALIZE[31206]</label>
-				<visible>Control.IsVisible(4046)</visible>
+			<control type="radiobutton" id="3094">
+				<description>Common Big Icon Use Style 1 (TVShow)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31418]</label>
+				<selected>Skin.String(CommonBigIconTVShowStyle,1) | Skin.String(CommonBigIconTVShowStyle,)</selected>
+				<onclick>Skin.SetString(CommonBigIconTVShowStyle,1)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<include>ReloadSkinNotification</include>
+				<onclick>Container.SetViewMode(51)</onclick>
+				<visible>Container.Content(TVShows) + Skin.String(CurrentViewMode,51)</visible>
 			</control>
-			<control type="button" id="4086">
-				<description>Wrap Info View Styles Header (Programs)</description>
-				<include>DropDownMenuHeader</include>
-				<label>$LOCALIZE[31206]</label>
-				<visible>Control.IsVisible(4087)</visible>
-			</control>
-			<control type="button" id="4096">
-				<description>Wrap Info 2 View Styles Header (Programs)</description>
-				<include>DropDownMenuHeader</include>
-				<label>$LOCALIZE[31206]</label>
-				<visible>Control.IsVisible(4097)</visible>
+			<control type="radiobutton" id="3095">
+				<description>Common Big Icon Use Style 2 (TVShow)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31508]</label>
+				<selected>Skin.String(CommonBigIconTVShowStyle,2)</selected>
+				<onclick>Skin.SetString(CommonBigIconTVShowStyle,2)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<include>ReloadSkinNotification</include>
+				<onclick>Container.SetViewMode(51)</onclick>
+				<visible>Container.Content(TVShows) + Skin.String(CurrentViewMode,51)</visible>
 			</control>
 			<control type="radiobutton" id="3050">
 				<description>Common DVD Thumbs Use Style 1</description>
@@ -1789,6 +1711,50 @@
 				<include>ReloadSkinNotification</include>
 				<onclick>Container.SetViewMode(52)</onclick>
 				<visible>Skin.String(CurrentViewMode,52)</visible>
+			</control>
+			<control type="radiobutton" id="3096">
+				<description>Wide List Use Style 1 (TVShow)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31418]</label>
+				<selected>Skin.String(WideListTVShowStyle,1) | Skin.String(WideListTVShowStyle,)</selected>
+				<onclick>Skin.SetString(WideListTVShowStyle,1)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<include>ReloadSkinNotification</include>
+				<onclick>Container.SetViewMode(76)</onclick>
+				<visible>Container.Content(TVShows) + Skin.String(CurrentViewMode,76)</visible>
+			</control>
+			<control type="radiobutton" id="3097">
+				<description>Wide List Use Style 2 (TVShow)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31508]</label>
+				<selected>Skin.String(WideListTVShowStyle,2)</selected>
+				<onclick>Skin.SetString(WideListTVShowStyle,2)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<include>ReloadSkinNotification</include>
+				<onclick>Container.SetViewMode(76)</onclick>
+				<visible>Container.Content(TVShows) + Skin.String(CurrentViewMode,76)</visible>
+			</control>
+			<control type="radiobutton" id="3098">
+				<description>Thumbs Info Use Style 1 (TVShow)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31418]</label>
+				<selected>Skin.String(ThumbsInfoTVShowStyle,1) | Skin.String(ThumbsInfoTVShowStyle,)</selected>
+				<onclick>Skin.SetString(ThumbsInfoTVShowStyle,1)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<include>ReloadSkinNotification</include>
+				<onclick>Container.SetViewMode(100)</onclick>
+				<visible>Container.Content(TVShows) + Skin.String(CurrentViewMode,100)</visible>
+			</control>
+			<control type="radiobutton" id="3099">
+				<description>Thumbs Info Use Style 2 (TVShow)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31508]</label>
+				<selected>Skin.String(ThumbsInfoTVShowStyle,2)</selected>
+				<onclick>Skin.SetString(ThumbsInfoTVShowStyle,2)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<include>ReloadSkinNotification</include>
+				<onclick>Container.SetViewMode(100)</onclick>
+				<visible>Container.Content(TVShows) + Skin.String(CurrentViewMode,100)</visible>
 			</control>
 			<control type="radiobutton" id="4026">
 				<description>List Info Use Style 1 (Programs)</description>

@@ -122,7 +122,9 @@
 <string id="31050">Star Rating</string>
 <string id="31401">Scroll Plot</string>
 <string id="31402">Scroll Description</string>
-<string id="31404">Poster Layout</string>
+<string id="31404">Use Poster Layout</string>
+<string id="31405">Use Banner Layout</string>
+<string id="31406">Use Local Covers</string>
 <string id="31014">Extra Thumbs</string>
 <string id="31015">Extra Fanart</string>
 <string id="31407">Use Visualization For Background</string>
@@ -142,7 +144,7 @@
 <string id="31429">Hide Aspect Ratio</string>
 <string id="31430">Disable List Scroll Animation</string>
 <string id="31431">Disable List Focus Animation</string>
-<string id="31432">Show TV Show 'clearart.png' On OSD</string>
+<string id="31432">Show Clear Art On OSD</string>
 
 <!-- skin settings backgrounds -->
 <string id="31051">Show In Home Window Only</string>

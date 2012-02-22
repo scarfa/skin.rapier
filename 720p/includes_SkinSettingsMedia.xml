@@ -34,6 +34,26 @@
 					<selected>Skin.HasSetting(DisableListFocusAnim)</selected>
 					<onclick>Skin.ToggleSetting(DisableListFocusAnim)</onclick>
 				</control>
+				<control type="button" id="3020">
+					<description>View Options Label (TVShows)</description>
+					<include>SettingsHeaderBtn</include>
+					<label>$LOCALIZE[20343]</label>
+				</control>
+				<control type="togglebutton" id="3021">
+					<description>Toggle Banner / Poster</description>
+					<include>SettingsContentToggleBtn</include>
+					<label>$LOCALIZE[31405]</label>
+					<altlabel>$LOCALIZE[31404]</altlabel>
+					<usealttexture>Skin.HasSetting(UseTVShowsPosterCover)</usealttexture>
+					<onclick>Skin.ToggleSetting(UseTVShowsPosterCover)</onclick>
+				</control>
+				<control type="radiobutton" id="3022">
+					<description>Use Local Covers</description>
+					<include>SettingsContentRadioBtn</include>
+					<label>$LOCALIZE[31406] [COLOR=DisabledColor](Banner.jpg or Poster.jpg)[/COLOR]</label>
+					<selected>Skin.HasSetting(UseTVShowLocalCovers)</selected>
+					<onclick>Skin.ToggleSetting(UseTVShowLocalCovers)</onclick>
+				</control>
 				<control type="radiobutton" id="3019">
 					<description>Show TV Show Clear Art On OSD</description>
 					<include>SettingsContentRadioBtn</include>

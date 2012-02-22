@@ -39,7 +39,7 @@
 						<animation effect="fade" end="60" condition="true">Conditional</animation>
 					</control>
 					<control type="group">
-						<visible>!IsEmpty(ListItem.Title) + !Skin.HasSetting(EnableWideIconTVShowsLogo)</visible>
+						<visible>!IsEmpty(ListItem.Title)</visible>
 						<control type="label">
 							<description>Label</description>
 							<posx>17</posx>
@@ -57,27 +57,6 @@
 							<bordersize>12</bordersize>
 							<texture background="true">$VAR[TVShowsThumbTexture]</texture>
 							<aspectratio>stretch</aspectratio>
-						</control>
-						<control type="image">
-							<description>Overlay</description>
-							<posx>544</posx>
-							<posy>81</posy>
-							<width>26</width>
-							<height>26</height>
-							<texture background="true">$INFO[ListItem.Overlay]</texture>
-							<aspectratio align="right">keep</aspectratio>
-							<visible>!Skin.HasSetting(HideTVShowsWideIconOverlay)</visible>
-						</control>
-					</control>
-					<control type="group">
-						<visible>!IsEmpty(ListItem.Title) + Skin.HasSetting(EnableWideIconTVShowsLogo)</visible>	
-						<control type="image">
-							<description>Cover</description>
-							<width>590</width>
-							<height>127</height>
-							<bordersize>12</bordersize>
-							<texture background="true">$INFO[ListItem.Path]logo.png</texture>
-							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="image">
 							<description>Overlay</description>
@@ -110,7 +89,7 @@
 						<visible>IsEmpty(ListItem.Title)</visible>
 					</control>
 					<control type="group">
-						<visible>!IsEmpty(ListItem.Title) + !Skin.HasSetting(EnableWideIconTVShowsLogo)</visible>
+						<visible>!IsEmpty(ListItem.Title)</visible>
 						<control type="label">
 							<description>Label</description>
 							<posx>17</posx>
@@ -140,28 +119,7 @@
 							<visible>!Skin.HasSetting(HideTVShowsWideIconOverlay)</visible>
 						</control>
 					</control>
-					<control type="group">
-						<visible>!IsEmpty(ListItem.Title) + Skin.HasSetting(EnableWideIconTVShowsLogo)</visible>
-						<control type="image">
-							<description>Cover</description>
-							<width>590</width>
-							<height>127</height>
-							<bordersize>12</bordersize>
-							<texture background="true">$INFO[ListItem.Path]logo.png</texture>
-							<aspectratio>keep</aspectratio>
-						</control>
-						<control type="image">
-							<description>Overlay</description>
-							<posx>544</posx>
-							<posy>81</posy>
-							<width>26</width>
-							<height>26</height>
-							<texture background="true">$INFO[ListItem.Overlay]</texture>
-							<aspectratio align="right">keep</aspectratio>
-							<visible>!Skin.HasSetting(HideTVShowsWideIconOverlay)</visible>
-						</control>
-					</control>	
-				</focusedlayout>			
+				</focusedlayout>		
 			</control>
 			
 			<include>WideIconViewScrollbar</include>
@@ -214,8 +172,9 @@
 				<onleft>850</onleft>
 				<onright>150</onright>
 				<visible>Container.Content(TVShows)</visible>
-				<include condition="!Skin.HasSetting(UseTVShowsPosterCover)">TVShowsWideListBannerModeLayout</include>
-				<include condition="Skin.HasSetting(UseTVShowsPosterCover)">TVShowsWideListPosterModeLayout</include>
+				<include condition="!Skin.HasSetting(UseTVShowsPosterCover) + !Skin.String(WideListTVShowStyle,2)">TVShowsWideListBannerModeLayout</include>
+				<include condition="Skin.HasSetting(UseTVShowsPosterCover) + !Skin.String(WideListTVShowStyle,2)">TVShowsWideListPosterModeLayout</include>
+				<include condition="Skin.String(WideListTVShowStyle,2)">TVShowsWideListLogoModeLayout</include>
 			</control>
 				
 			<include>WideListViewScrollbar</include>
@@ -244,7 +203,7 @@
 	</include>
 	
 	<include name="TVShowsWideListBannerModeLayout">
-		<itemlayout condition="!Skin.HasSetting(EnableWideListTVShowsLogo)" height="134">
+		<itemlayout height="134">
 			<control type="image">
 				<width>1188</width>
 				<height>28</height>	
@@ -370,114 +329,7 @@
 				</control>
 			</control>
 		</itemlayout>
-		<itemlayout condition="Skin.HasSetting(EnableWideListTVShowsLogo)" height="134">	
-			<control type="image">
-				<width>1188</width>
-				<height>28</height>	
-				<texture border="0,0,0,2">views/wide-list-header.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<include>WideListHeaderFadeAnim</include>
-			</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>30</posy>
-				<width>104</width>
-				<height>104</height>
-				<bordersize>10</bordersize>
-				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-				<aspectratio>keep</aspectratio>
-				<visible>IsEmpty(ListItem.Title)</visible>
-				<animation effect="fade" end="40" condition="true">Conditional</animation>
-			</control>
-			<control type="label">
-				<description>Label</description>
-				<posx>5</posx>
-				<posy>-1</posy>
-				<width>400</width>
-				<height>30</height>
-				<font>WideListFont</font>
-				<textcolor>ListColor</textcolor>
-				<shadowcolor>ShadowColor</shadowcolor>
-				<label>$INFO[ListItem.Label][COLOR=ListColor2]$INFO[ListItem.Year,  -  ,][/COLOR]</label>
-				<aligny>center</aligny>
-			</control>
-			<control type="group">
-				<visible>!IsEmpty(ListItem.Title)</visible>
-				<control type="image">
-					<description>Cover</description>
-					<posx>0</posx>
-					<posy>30</posy>
-					<width>509</width>
-					<height>104</height>
-					<bordersize>6</bordersize>
-					<texture background="true">$INFO[ListItem.Path]logo.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="label">
-					<description>Rating</description>
-					<posx>504</posx>
-					<posy>-1</posy>
-					<width>100</width>
-					<height>30</height>
-					<font>WideListFont</font>
-					<textcolor>ListColor3</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<label>$INFO[ListItem.Rating]</label>
-					<align>right</align>
-					<aligny>center</aligny>
-					<visible>Skin.HasSetting(DoNotUseStarRatingTVShows)</visible>
-				</control>
-				<control type="image">
-					<description>Star Rating</description>
-					<posx>405</posx>
-					<posy>7</posy>
-					<width>100</width>
-					<height>16</height>		
-					<texture background="true">$INFO[ListItem.StarRating]</texture>
-					<aspectratio align="right">keep</aspectratio>
-					<visible>!Skin.HasSetting(DoNotUseStarRatingTVShows)</visible>
-					<include>StarRatingFadeAnim</include>
-				</control>
-				<control type="label">
-					<description>Genre</description>
-					<posx>525</posx>
-					<posy>-1</posy>
-					<width>618</width>
-					<height>30</height>
-					<font>WideListFont2</font>
-					<textcolor>ListColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
-					<aligny>center</aligny>
-				</control>
-				<control type="textbox">
-					<description>Plot</description>
-					<posx>525</posx>
-					<posy>35</posy>
-					<width>658</width>
-					<height>93</height>
-					<font>MediaInfoDescFont</font>
-					<textcolor>ListColor2</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<label fallback="31203">$INFO[ListItem.Plot]</label>
-					<align>justify</align>
-					<wrapmultiline>true</wrapmultiline>
-					<visible>!Skin.HasSetting(HideTVShowsWideListPlot)</visible>
-				</control>	
-				<control type="image">
-					<description>Overlay</description>
-					<posx>1160</posx>
-					<posy>3</posy>
-					<width>22</width>
-					<height>22</height>
-					<texture background="true">$INFO[ListItem.Overlay]</texture>
-					<aspectratio align="right">keep</aspectratio>
-					<visible>!Skin.HasSetting(HideTVShowsWideListOverlay)</visible>
-					<include>ListViewOverlayFadeAnim</include>
-				</control>
-			</control>
-		</itemlayout>		
-		<focusedlayout condition="!Skin.HasSetting(EnableWideListTVShowsLogo)" height="134">
+		<focusedlayout height="134">
 			<control type="image">
 				<width>1188</width>
 				<height>28</height>	
@@ -550,133 +402,6 @@
 					<aspectratio>stretch</aspectratio>
 					<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewBannerFocusAnim</include>
 				</control>								
-				<control type="label">
-					<description>Rating</description>
-					<posx>504</posx>
-					<posy>-1</posy>
-					<width>100</width>
-					<height>30</height>
-					<font>WideListFont</font>
-					<textcolor>ListColor3</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<label>$INFO[ListItem.Rating]</label>
-					<align>right</align>
-					<aligny>center</aligny>
-					<visible>Skin.HasSetting(DoNotUseStarRatingTVShows)</visible>
-				</control>
-				<control type="image">
-					<description>Star Rating</description>
-					<posx>405</posx>
-					<posy>7</posy>
-					<width>100</width>
-					<height>16</height>			
-					<texture background="true">$INFO[ListItem.StarRating]</texture>
-					<aspectratio align="right">keep</aspectratio>
-					<visible>!Skin.HasSetting(DoNotUseStarRatingTVShows)</visible>
-					<include>StarRatingFadeAnim</include>
-				</control>
-				<control type="label">
-					<description>Genre</description>
-					<posx>525</posx>
-					<posy>-1</posy>
-					<width>618</width>
-					<height>30</height>
-					<font>WideListFont2</font>
-					<textcolor>SelectedColor2</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
-					<aligny>center</aligny>
-				</control>
-				<control type="textbox">
-					<description>Plot</description>
-					<posx>525</posx>
-					<posy>35</posy>
-					<width>658</width>
-					<height>93</height>
-					<font>MediaInfoDescFont</font>
-					<textcolor>MediaInfoColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<label fallback="31203">$INFO[ListItem.Plot]</label>
-					<align>justify</align>
-					<wrapmultiline>true</wrapmultiline>
-					<autoscroll time="2000" delay="6000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollTVShowsWideListPlot)</autoscroll>
-				</control>	
-				<control type="image">
-					<description>Overlay</description>
-					<posx>1160</posx>
-					<posy>3</posy>
-					<width>22</width>
-					<height>22</height>
-					<texture background="true">$INFO[ListItem.Overlay]</texture>
-					<aspectratio align="right">keep</aspectratio>
-					<visible>!Skin.HasSetting(HideTVShowsWideListOverlay)</visible>
-				</control>
-			</control>
-		</focusedlayout>
-		<focusedlayout condition="Skin.HasSetting(EnableWideListTVShowsLogo)" height="134">
-			<control type="image">
-				<width>1188</width>
-				<height>28</height>	
-				<texture border="0,0,0,2">views/wide-list-header.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<include>WideListHeaderFadeAnim</include>
-			</control>
-			<control type="image">
-				<posy>28</posy>
-				<width>1188</width>
-				<height>109</height>
-				<texture border="0,2,0,2">views/wide-list-focus.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<visible>Control.HasFocus(76)</visible>
-				<include>ListViewSelectFadeAnim</include>
-				<include>WideListViewFocusAnim</include>
-			</control>
-			<control type="image">
-				<posy>28</posy>
-				<width>1188</width>
-				<height>109</height>
-				<texture border="0,2,0,2">views/wide-list-alt-focus.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<visible>!Control.HasFocus(76)</visible>
-				<include>ListViewSelectFadeAnim2</include>
-			</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>30</posy>
-				<width>104</width>
-				<height>104</height>
-				<bordersize>10</bordersize>
-				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-				<aspectratio>keep</aspectratio>
-				<visible>IsEmpty(ListItem.Title)</visible>
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
-			</control>
-			<control type="label">
-				<description>Label</description>
-				<posx>5</posx>
-				<posy>-1</posy>
-				<width>400</width>
-				<height>30</height>
-				<font>WideListFont</font>
-				<textcolor>SelectedColor2</textcolor>
-				<shadowcolor>ShadowColor</shadowcolor>
-				<label>$INFO[ListItem.Label]$INFO[ListItem.Year,  -  ,]</label>
-				<aligny>center</aligny>
-				<scroll>yes</scroll>
-			</control>
-			<control type="group">
-				<visible>!IsEmpty(ListItem.Title)</visible>
-				<control type="image">
-					<description>Cover</description>
-					<posx>0</posx>
-					<posy>30</posy>
-					<width>509</width>
-					<height>104</height>
-					<bordersize>6</bordersize>
-					<texture background="true">$INFO[ListItem.Path]logo.png</texture>
-					<aspectratio>keep</aspectratio>
-					<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
-				</control>									
 				<control type="label">
 					<description>Rating</description>
 					<posx>504</posx>
@@ -1042,6 +767,218 @@
 			</control>
 		</focusedlayout>		
 	</include>
+	
+	<include name="TVShowsWideListLogoModeLayout">
+		<itemlayout height="134">	
+			<control type="image">
+				<width>1188</width>
+				<height>28</height>	
+				<texture border="0,0,0,2">views/wide-list-header.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<include>WideListHeaderFadeAnim</include>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>30</posy>
+				<width>104</width>
+				<height>104</height>
+				<bordersize>10</bordersize>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>IsEmpty(ListItem.Title)</visible>
+				<animation effect="fade" end="40" condition="true">Conditional</animation>
+			</control>
+			<control type="group">
+				<visible>!IsEmpty(ListItem.Title)</visible>
+				<control type="image">
+					<description>Cover</description>
+					<posx>0</posx>
+					<posy>30</posy>
+					<width>322</width>
+					<height>104</height>
+					<bordersize>6</bordersize>
+					<texture background="true">$INFO[ListItem.Path]logo.png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<description>Rating</description>
+					<posx>161</posx>
+					<posy>-1</posy>
+					<width>100</width>
+					<height>30</height>
+					<font>WideListFont</font>
+					<textcolor>ListColor3</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>$INFO[ListItem.Rating]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<visible>Skin.HasSetting(DoNotUseStarRatingTVShows)</visible>
+				</control>
+				<control type="image">
+					<description>Star Rating</description>
+					<posx>111</posx>
+					<posy>7</posy>
+					<width>100</width>
+					<height>16</height>		
+					<texture background="true">$INFO[ListItem.StarRating]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>!Skin.HasSetting(DoNotUseStarRatingTVShows)</visible>
+					<include>StarRatingFadeAnim</include>
+				</control>
+				<control type="label">
+					<description>Genre</description>
+					<posx>325</posx>
+					<posy>-1</posy>
+					<width>818</width>
+					<height>30</height>
+					<font>WideListFont2</font>
+					<textcolor>ListColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+					<aligny>center</aligny>
+				</control>
+				<control type="textbox">
+					<description>Plot</description>
+					<posx>325</posx>
+					<posy>35</posy>
+					<width>858</width>
+					<height>93</height>
+					<font>MediaInfoDescFont</font>
+					<textcolor>ListColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label fallback="31203">$INFO[ListItem.Plot]</label>
+					<align>justify</align>
+					<wrapmultiline>true</wrapmultiline>
+					<visible>!Skin.HasSetting(HideTVShowsWideListPlot)</visible>
+				</control>	
+				<control type="image">
+					<description>Overlay</description>
+					<posx>1160</posx>
+					<posy>3</posy>
+					<width>22</width>
+					<height>22</height>
+					<texture background="true">$INFO[ListItem.Overlay]</texture>
+					<aspectratio align="right">keep</aspectratio>
+					<visible>!Skin.HasSetting(HideTVShowsWideListOverlay)</visible>
+					<include>ListViewOverlayFadeAnim</include>
+				</control>
+			</control>
+		</itemlayout>
+		<focusedlayout height="134">
+			<control type="image">
+				<width>1188</width>
+				<height>28</height>	
+				<texture border="0,0,0,2">views/wide-list-header.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<include>WideListHeaderFadeAnim</include>
+			</control>
+			<control type="image">
+				<posy>28</posy>
+				<width>1188</width>
+				<height>109</height>
+				<texture border="0,2,0,2">views/wide-list-focus.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<visible>Control.HasFocus(76)</visible>
+				<include>ListViewSelectFadeAnim</include>
+				<include>WideListViewFocusAnim</include>
+			</control>
+			<control type="image">
+				<posy>28</posy>
+				<width>1188</width>
+				<height>109</height>
+				<texture border="0,2,0,2">views/wide-list-alt-focus.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<visible>!Control.HasFocus(76)</visible>
+				<include>ListViewSelectFadeAnim2</include>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>30</posy>
+				<width>104</width>
+				<height>104</height>
+				<bordersize>10</bordersize>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>IsEmpty(ListItem.Title)</visible>
+				<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
+			</control>
+			<control type="group">
+				<visible>!IsEmpty(ListItem.Title)</visible>
+				<control type="image">
+					<description>Cover</description>
+					<posx>0</posx>
+					<posy>30</posy>
+					<width>322</width>
+					<height>104</height>
+					<bordersize>6</bordersize>
+					<texture background="true">$INFO[ListItem.Path]logo.png</texture>
+					<aspectratio>keep</aspectratio>
+					<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
+				</control>									
+				<control type="label">
+					<description>Rating</description>
+					<posx>161</posx>
+					<posy>-1</posy>
+					<width>100</width>
+					<height>30</height>
+					<font>WideListFont</font>
+					<textcolor>ListColor3</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>$INFO[ListItem.Rating]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<visible>Skin.HasSetting(DoNotUseStarRatingTVShows)</visible>
+				</control>
+				<control type="image">
+					<description>Star Rating</description>
+					<posx>111</posx>
+					<posy>7</posy>
+					<width>100</width>
+					<height>16</height>			
+					<texture background="true">$INFO[ListItem.StarRating]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>!Skin.HasSetting(DoNotUseStarRatingTVShows)</visible>
+					<include>StarRatingFadeAnim</include>
+				</control>
+				<control type="label">
+					<description>Genre</description>
+					<posx>325</posx>
+					<posy>-1</posy>
+					<width>818</width>
+					<height>30</height>
+					<font>WideListFont2</font>
+					<textcolor>SelectedColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+					<aligny>center</aligny>
+				</control>
+				<control type="textbox">
+					<description>Plot</description>
+					<posx>325</posx>
+					<posy>35</posy>
+					<width>858</width>
+					<height>93</height>
+					<font>MediaInfoDescFont</font>
+					<textcolor>MediaInfoColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label fallback="31203">$INFO[ListItem.Plot]</label>
+					<align>justify</align>
+					<wrapmultiline>true</wrapmultiline>
+					<autoscroll time="2000" delay="6000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollTVShowsWideListPlot)</autoscroll>
+				</control>	
+				<control type="image">
+					<description>Overlay</description>
+					<posx>1160</posx>
+					<posy>3</posy>
+					<width>22</width>
+					<height>22</height>
+					<texture background="true">$INFO[ListItem.Overlay]</texture>
+					<aspectratio align="right">keep</aspectratio>
+					<visible>!Skin.HasSetting(HideTVShowsWideListOverlay)</visible>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
 	<!--//// END WIDE LIST VIEW ///////////////////////////////////////////////////////////////////////-->
 	
 	<!--//// START LIST INFO VIEW /////////////////////////////////////////////////////////////////////-->
@@ -1051,6 +988,20 @@
 			<visible>Control.IsVisible(61)</visible>
 			<include>MediaViewOpenCloseAnim</include>
 			<include>ListInfoViewContentPanel</include>
+			
+			<control type="image">
+				<description>Logo</description>
+				<posx>30</posx>
+				<posy>85</posy>
+				<width>200</width>
+				<height>78</height>
+				<texture background="true">$INFO[ListItem.Path]logo.png</texture>
+				<aspectratio align="left">keep</aspectratio>
+				<bordersize>4</bordersize>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<visible>Skin.HasSetting(EnableListInfoTVShowsLogo)</visible>
+				<animation effect="fade" end="75" condition="true">Conditional</animation>
+			</control>
 			
 			<include condition="!Skin.HasSetting(UseTVShowsPosterCover)">TVShowsListInfoBannerMode</include>
 			<include condition="Skin.HasSetting(UseTVShowsPosterCover)">TVShowsListInfoPosterMode</include>
@@ -1250,10 +1201,9 @@
 	<include name="TVShowsListInfoBannerMode">
 		<control type="group">
 			<visible>!IsEmpty(ListItem.Title)</visible>
-			
+
 			<control type="group">
 				<description>Cover</description>
-				<visible>!Skin.HasSetting(EnableListInfoTVShowsLogo)</visible>
 				
 				<control type="image">
 					<description>Cover Case</description>
@@ -1292,20 +1242,7 @@
 					<fadetime>IconCrossfadeTime</fadetime>
 				</control>
 			</control>
-							
-			<control type="image">
-				<description>Logo</description>
-				<posx>36</posx>
-				<posy>334</posy>
-				<width>671</width>
-				<height>130</height>
-				<texture background="true">$INFO[ListItem.Path]logo.png</texture>
-				<aspectratio>keep</aspectratio>
-				<bordersize>4</bordersize>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<visible>Skin.HasSetting(EnableListInfoTVShowsLogo)</visible>
-			</control>
-			
+
 			<control type="image">
 				<posx>44</posx>
 				<posy>342</posy>
@@ -1588,6 +1525,19 @@
 				<include condition="!Skin.HasSetting(ShowLandscape)">ListInfo2PanelFanart</include>
 				<include condition="Skin.HasSetting(ShowLandscape)">ListInfo2PanelLandscape</include>
 				
+				<control type="image">
+					<description>Logo</description>
+					<posx>382</posx>
+					<posy>332</posy>
+					<width>200</width>
+					<height>78</height>
+					<texture background="true">$INFO[ListItem.Path]logo.png</texture>
+					<aspectratio align="left">keep</aspectratio>
+					<bordersize>4</bordersize>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<visible>Skin.HasSetting(EnableListInfo2TVShowsLogo)</visible>
+				</control>
+			
 				<control type="group">
 					<description>Media Info Area</description>
 					<posx>38</posx>
@@ -2149,7 +2099,7 @@
 				<animation effect="fade" end="40" condition="true">Conditional</animation>
 			</control>
 			<control type="group">
-				<visible>!IsEmpty(ListItem.Title) + !Skin.HasSetting(EnableListInfo2TVShowsLogo)</visible>
+				<visible>!IsEmpty(ListItem.Title)</visible>
 				<control type="image">
 					<description>Default Cover</description>
 					<posx>5</posx>
@@ -2203,40 +2153,6 @@
 					<include>ListViewOverlayFadeAnim</include>
 				</control>	
 			</control>
-			<control type="group">
-				<visible>!IsEmpty(ListItem.Title) + Skin.HasSetting(EnableListInfo2TVShowsLogo)</visible>
-				<control type="image">
-					<description>Logo</description>
-					<posx>5</posx>
-					<posy>7</posy>
-					<width>620</width>
-					<height>114</height>
-					<texture background="true">$INFO[ListItem.Path]logo.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="image">
-					<description>Star Rating</description>
-					<posx>520</posx>
-					<posy>10</posy>
-					<width>100</width>
-					<height>16</height>		
-					<texture background="true">$INFO[ListItem.StarRating]</texture>
-					<aspectratio align="right">keep</aspectratio>
-					<visible>!Skin.HasSetting(DoNotUseStarRatingTVShows)</visible>
-					<include>StarRatingFadeAnim</include>
-				</control>
-				<control type="image">
-					<description>Overlay</description>
-					<posx>578</posx>
-					<posy>84</posy>
-					<width>26</width>
-					<height>26</height>
-					<texture background="true">$INFO[ListItem.Overlay]</texture>
-					<aspectratio align="right">keep</aspectratio>
-					<visible>!Skin.HasSetting(HideTVShowsListInfo2Overlay)</visible>
-					<include>ListViewOverlayFadeAnim</include>
-				</control>
-			</control>
 		</itemlayout>	
 	</include>
 	
@@ -2279,7 +2195,7 @@
 				<visible>IsEmpty(ListItem.Title)</visible>
 			</control>				
 			<control type="group">
-				<visible>!IsEmpty(ListItem.Title) + !Skin.HasSetting(EnableListInfo2TVShowsLogo)</visible>
+				<visible>!IsEmpty(ListItem.Title)</visible>
 				<control type="image">
 					<description>Default Cover</description>
 					<posx>5</posx>
@@ -2303,39 +2219,6 @@
 					<description>Star Rating</description>
 					<posx>520</posx>
 					<posy>16</posy>
-					<width>100</width>
-					<height>16</height>		
-					<texture background="true">$INFO[ListItem.StarRating]</texture>
-					<aspectratio align="right">keep</aspectratio>
-					<visible>!Skin.HasSetting(DoNotUseStarRatingTVShows)</visible>
-				</control>
-				<control type="image">
-					<description>Overlay</description>
-					<posx>578</posx>
-					<posy>84</posy>
-					<width>26</width>
-					<height>26</height>
-					<texture background="true">$INFO[ListItem.Overlay]</texture>
-					<aspectratio align="right">keep</aspectratio>
-					<visible>!Skin.HasSetting(HideTVShowsListInfo2Overlay)</visible>
-				</control>
-			</control>
-			<control type="group">
-				<visible>!IsEmpty(ListItem.Title) + Skin.HasSetting(EnableListInfo2TVShowsLogo)</visible>
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
-				<control type="image">
-					<description>Cover</description>
-					<posx>5</posx>
-					<posy>7</posy>
-					<width>620</width>
-					<height>114</height>
-					<texture background="true">$INFO[ListItem.Path]logo.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>				
-				<control type="image">
-					<description>Star Rating</description>
-					<posx>520</posx>
-					<posy>10</posy>
 					<width>100</width>
 					<height>16</height>		
 					<texture background="true">$INFO[ListItem.StarRating]</texture>
@@ -2493,8 +2376,8 @@
 				</control>
 			</control>
 			
-			<include condition="!Skin.HasSetting(EnableThumbsInfoTVShowsLogo)">TVShowsThumbsInfoDefaultStyle</include>
-			<include condition="Skin.HasSetting(EnableThumbsInfoTVShowsLogo)">TVShowsThumbsInfoLogoStyle</include>
+			<include condition="Skin.String(ThumbsInfoTVShowStyle,1) | Skin.String(ThumbsInfoTVShowStyle,)">TVShowsThumbsInfoDefaultStyle</include>
+			<include condition="Skin.String(ThumbsInfoTVShowStyle,2)">TVShowsThumbsInfoLogoStyle</include>
 
 			<include>ThumbsInfoViewScrollbar</include>
 			
