@@ -2,18 +2,18 @@
 	<defaultcontrol always="true">107</defaultcontrol>
 	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(Visualisation)</visible>
 	<include>DialogOpenCloseAnim</include>
-	
+
 	<coordinates>
 		<system>1</system>
 		<origin x="312" y="180">true</origin>
 	</coordinates>
-	
+
 	<controls>
 		<include>PlayerControlsDialogBox</include>
-				
+
 		<control type="group">
 			<visible>Player.HasVideo + !VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos) + !VideoPlayer.Content(LiveTV)</visible>
-			
+
 			<control type="label">
 				<description>Title</description>
 				<posx>232</posx>
@@ -26,7 +26,7 @@
 				<scroll>yes</scroll>
 				<label>$INFO[VideoPlayer.Title]</label>
 			</control>
-			
+
 			<control type="image">
 				<description>Star Rating</description>
 				<posx>550</posx>
@@ -37,7 +37,7 @@
 				<aspectratio align="right">keep</aspectratio>
 				<include>StarRatingFadeAnim</include>
 			</control>
-			
+
 			<control type="image">
 				<description>Default Cover Background</description>
 				<posx>DialogMarginOffsetX</posx>
@@ -49,7 +49,7 @@
 				<visible>IsEmpty(VideoPlayer.Cover)</visible>
 				<animation effect="fade" end="75" condition="true">Conditional</animation>
 			</control>
-			
+
 			<control type="image">
 				<description>Default Cover</description>
 				<posx>DialogMarginOffsetX</posx>
@@ -71,7 +71,7 @@
 				<texture diffuse="covers/player-control-media-cover-diffuse.png">$INFO[VideoPlayer.Cover]</texture>
 				<aspectratio>keep</aspectratio>
 			</control>
-			
+
 			<control type="label">
 				<description>No Information</description>
 				<posx>232</posx>
@@ -84,10 +84,10 @@
 				<aligny>center</aligny>
 			</control>
 		</control>
-		
+
 		<control type="group">
 			<visible>Player.HasAudio</visible>
-			
+
 			<control type="label">
 				<description>Title</description>
 				<posx>232</posx>
@@ -100,7 +100,7 @@
 				<scroll>yes</scroll>
 				<label>$INFO[MusicPlayer.Title]</label>
 			</control>
-			
+
 			<control type="image">
 				<description>Star Rating</description>
 				<posx>550</posx>
@@ -111,41 +111,81 @@
 				<aspectratio align="right">keep</aspectratio>
 				<include>StarRatingFadeAnim</include>
 			</control>
-			
-			<control type="image">
-				<description>Default Cover Background</description>
+
+			<control type="group">
+				<visible>!Skin.HasSetting(EnableMusicCdArt)</visible>
 				<posx>DialogMarginOffsetX</posx>
 				<posy>Dialog4MarginOffsetY</posy>
-				<width>190</width>
-				<height>190</height>
-				<texture border="5">panels/panel-content-border.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<visible>IsEmpty(MusicPlayer.Cover)</visible>
-				<animation effect="fade" end="75" condition="true">Conditional</animation>
-			</control>
-			
-			<control type="image">
-				<description>Default Cover</description>
-				<posx>DialogMarginOffsetX</posx>
-				<posy>Dialog4MarginOffsetY</posy>
-				<width>190</width>
-				<height>190</height>
-				<texture>DefaultAudio.png</texture>
-				<bordersize>25</bordersize>
-				<aspectratio>keep</aspectratio>
-				<visible>IsEmpty(MusicPlayer.Cover)</visible>
+
+				<control type="image">
+					<description>Default Cover Background</description>
+					<width>190</width>
+					<height>190</height>
+					<texture border="5">panels/panel-content-border.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>IsEmpty(MusicPlayer.Cover)</visible>
+					<animation effect="fade" end="75" condition="true">Conditional</animation>
+				</control>
+
+				<control type="image">
+					<description>Default Cover</description>
+					<width>190</width>
+					<height>190</height>
+					<texture>DefaultAudio.png</texture>
+					<bordersize>25</bordersize>
+					<aspectratio>keep</aspectratio>
+					<visible>IsEmpty(MusicPlayer.Cover)</visible>
+				</control>
+
+				<control type="image">
+					<description>Cover</description>
+					<width>190</width>
+					<height>190</height>
+					<texture diffuse="covers/player-control-media-cover-diffuse.png">$INFO[MusicPlayer.Cover]</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
 			</control>
 
-			<control type="image">
-				<description>Cover</description>
+			<control type="group">
+				<visible>Skin.HasSetting(EnableMusicCdArt)</visible>
 				<posx>DialogMarginOffsetX</posx>
 				<posy>Dialog4MarginOffsetY</posy>
-				<width>190</width>
-				<height>190</height>
-				<texture diffuse="covers/player-control-media-cover-diffuse.png">$INFO[MusicPlayer.Cover]</texture>
-				<aspectratio>stretch</aspectratio>
+				
+				<control type="image">
+					<description>Default Cover Background</description>
+					<width>190</width>
+					<height>190</height>
+					<texture border="5">panels/panel-content-border.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="fade" end="75" condition="true">Conditional</animation>
+				</control>
+				
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>170</width>
+					<height>170</height>
+					<bordertexture>icons/cdart/cdart-mask.png</bordertexture>
+					<texture diffuse="icons/cdart/cdart-mask.png">icons/cdart/cdart.png</texture>
+					<aspectratio align="bottom">keep</aspectratio>
+					<include>CdArtImageRotateAnim</include>
+					<visible>IsEmpty(MusicPlayer.Cover)</visible>
+				</control>
+
+				<control type="image">
+					<description>Cover</description>
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>170</width>
+					<height>170</height>
+					<bordertexture>icons/cdart/cdart-mask.png</bordertexture>
+					<texture fallback="icons/cdart/cdart.png" diffuse="icons/cdart/cdart-mask.png">$INFO[MusicPlayer.Cover]</texture>
+					<aspectratio align="bottom">keep</aspectratio>
+					<include>CdArtImageRotateAnim</include>
+				</control>
 			</control>
-			
+
 			<control type="grouplist">
 				<description>Media Info Background</description>
 				<posx>232</posx>
@@ -177,7 +217,7 @@
 					<texture border="5">panels/panel-content-border2.png</texture>
 				</control>
 			</control>
-	
+
 			<control type="panel" id="901">
 				<description>Media Info</description>
 				<posx>232</posx>
@@ -277,10 +317,10 @@
 				</content>
 			</control>
 		</control>
-		
+
 		<control type="group">
 			<visible>VideoPlayer.Content(Movies)</visible>
-			
+
 			<control type="label">
 				<description>Title</description>
 				<posx>232</posx>
@@ -293,7 +333,7 @@
 				<scroll>yes</scroll>
 				<label>$INFO[VideoPlayer.Title]</label>
 			</control>
-			
+
 			<control type="image">
 				<description>Star Rating</description>
 				<posx>550</posx>
@@ -304,7 +344,7 @@
 				<aspectratio align="right">keep</aspectratio>
 				<include>StarRatingFadeAnim</include>
 			</control>
-			
+
 			<control type="image">
 				<description>Default Cover Background</description>
 				<posx>DialogMarginOffsetX</posx>
@@ -316,7 +356,7 @@
 				<visible>IsEmpty(VideoPlayer.Cover)</visible>
 				<animation effect="fade" end="75" condition="true">Conditional</animation>
 			</control>
-			
+
 			<control type="image">
 				<description>Default Cover</description>
 				<posx>DialogMarginOffsetX</posx>
@@ -338,7 +378,7 @@
 				<texture diffuse="covers/player-control-media-cover-diffuse.png">$INFO[VideoPlayer.Cover]</texture>
 				<aspectratio>keep</aspectratio>
 			</control>
-			
+
 			<control type="grouplist">
 				<description>Media Info Background</description>
 				<posx>232</posx>
@@ -370,7 +410,7 @@
 					<texture border="5">panels/panel-content-border2.png</texture>
 				</control>
 			</control>
-	
+
 			<control type="panel" id="901">
 				<description>Media Info</description>
 				<posx>232</posx>
@@ -473,7 +513,7 @@
 
 		<control type="group">
 			<visible>VideoPlayer.Content(Episodes)</visible>
-			
+
 			<control type="label">
 				<description>Title</description>
 				<posx>232</posx>
@@ -486,7 +526,7 @@
 				<scroll>yes</scroll>
 				<label>$INFO[VideoPlayer.Title]</label>
 			</control>
-			
+
 			<control type="image">
 				<description>Star Rating</description>
 				<posx>550</posx>
@@ -497,7 +537,7 @@
 				<aspectratio align="right">keep</aspectratio>
 				<include>StarRatingFadeAnim</include>
 			</control>
-			
+
 			<control type="image">
 				<description>Default Cover Background</description>
 				<posx>DialogMarginOffsetX</posx>
@@ -509,7 +549,7 @@
 				<visible>IsEmpty(VideoPlayer.Cover)</visible>
 				<animation effect="fade" end="75" condition="true">Conditional</animation>
 			</control>
-			
+
 			<control type="image">
 				<description>Default Cover</description>
 				<posx>DialogMarginOffsetX</posx>
@@ -532,10 +572,10 @@
 				<aspectratio>keep</aspectratio>
 				<visible>!Skin.HasSetting(ShowTVShowClearArtOSD)</visible>
 			</control>
-			
+
 			<control type="group">
 				<visible>Skin.HasSetting(ShowTVShowClearArtOSD)</visible>
-				
+
 				<control type="image">
 					<description>Cover</description>
 					<posx>DialogMarginOffsetX</posx>
@@ -545,7 +585,7 @@
 					<texture diffuse="covers/player-control-media-cover-diffuse.png">$INFO[Player.FolderPath]clearart.png</texture>
 					<aspectratio aligny="bottom">keep</aspectratio>
 				</control>
-				
+
 				<control type="image">
 					<description>Cover</description>
 					<posx>DialogMarginOffsetX</posx>
@@ -555,7 +595,7 @@
 					<texture diffuse="covers/player-control-media-cover-diffuse.png">$INFO[Player.FolderPath]../clearart.png</texture>
 					<aspectratio aligny="bottom">keep</aspectratio>
 				</control>
-				
+
 				<control type="image">
 					<description>Cover</description>
 					<posx>DialogMarginOffsetX</posx>
@@ -565,7 +605,7 @@
 					<texture diffuse="covers/player-control-media-cover-diffuse.png">$INFO[Player.FolderPath]../../clearart.png</texture>
 					<aspectratio aligny="bottom">keep</aspectratio>
 				</control>
-				
+
 				<control type="image">
 					<description>Cover</description>
 					<posx>DialogMarginOffsetX</posx>
@@ -576,7 +616,7 @@
 					<aspectratio aligny="bottom">keep</aspectratio>
 				</control>
 			</control>
-			
+
 			<control type="grouplist">
 				<description>Media Info Background</description>
 				<posx>232</posx>
@@ -608,7 +648,7 @@
 					<texture border="5">panels/panel-content-border2.png</texture>
 				</control>
 			</control>
-	
+
 			<control type="panel" id="901">
 				<description>Media Info</description>
 				<posx>232</posx>
@@ -708,10 +748,10 @@
 				</content>
 			</control>
 		</control>
-		
+
 		<control type="group">
 			<visible>VideoPlayer.Content(MusicVideos)</visible>
-			
+
 			<control type="label">
 				<description>Title</description>
 				<posx>232</posx>
@@ -724,7 +764,7 @@
 				<scroll>yes</scroll>
 				<label>$INFO[VideoPlayer.Title]</label>
 			</control>
-			
+
 			<control type="image">
 				<description>Star Rating</description>
 				<posx>550</posx>
@@ -735,7 +775,7 @@
 				<aspectratio align="right">keep</aspectratio>
 				<include>StarRatingFadeAnim</include>
 			</control>
-			
+
 			<control type="image">
 				<description>Default Cover Background</description>
 				<posx>DialogMarginOffsetX</posx>
@@ -747,7 +787,7 @@
 				<visible>IsEmpty(VideoPlayer.Cover)</visible>
 				<animation effect="fade" end="75" condition="true">Conditional</animation>
 			</control>
-			
+
 			<control type="image">
 				<description>Default Cover</description>
 				<posx>DialogMarginOffsetX</posx>
@@ -769,7 +809,7 @@
 				<texture diffuse="covers/player-control-media-cover-diffuse.png">$INFO[VideoPlayer.Cover]</texture>
 				<aspectratio>keep</aspectratio>
 			</control>
-			
+
 			<control type="grouplist">
 				<description>Media Info Background</description>
 				<posx>232</posx>
@@ -801,7 +841,7 @@
 					<texture border="5">panels/panel-content-border2.png</texture>
 				</control>
 			</control>
-	
+
 			<control type="panel" id="901">
 				<description>Media Info</description>
 				<posx>232</posx>
@@ -901,7 +941,7 @@
 				</content>
 			</control>
 		</control>
-		
+
 		<control type="group">
 			<visible>!Player.HasAudio + VideoPlayer.Content(LiveTV)</visible>
 
@@ -917,7 +957,7 @@
 				<scroll>yes</scroll>
 				<label>$INFO[VideoPlayer.Title]</label>
 			</control>
-			
+
 			<control type="image">
 				<description>Star Rating</description>
 				<posx>550</posx>
@@ -928,7 +968,7 @@
 				<aspectratio align="right">keep</aspectratio>
 				<include>StarRatingFadeAnim</include>
 			</control>
-			
+
 			<control type="image">
 				<description>Default Cover Background</description>
 				<posx>DialogMarginOffsetX</posx>
@@ -940,7 +980,7 @@
 				<visible>IsEmpty(VideoPlayer.Cover)</visible>
 				<animation effect="fade" end="75" condition="true">Conditional</animation>
 			</control>
-			
+
 			<control type="image">
 				<description>Default Cover</description>
 				<posx>DialogMarginOffsetX</posx>
@@ -962,7 +1002,7 @@
 				<texture diffuse="covers/player-control-media-cover-diffuse.png">$INFO[VideoPlayer.Cover]</texture>
 				<aspectratio>keep</aspectratio>
 			</control>
-			
+
 			<control type="grouplist">
 				<description>Media Info Background</description>
 				<posx>232</posx>
@@ -994,7 +1034,7 @@
 					<texture border="5">panels/panel-content-border2.png</texture>
 				</control>
 			</control>
-	
+
 			<control type="panel" id="901">
 				<description>Media Info</description>
 				<posx>232</posx>
@@ -1094,7 +1134,7 @@
 				</content>
 			</control>
 		</control>
-		
+
 		<control type="image">
 			<description>Player Controls Background</description>
 			<posx>DialogMarginOffsetX</posx>
@@ -1104,11 +1144,11 @@
 			<texture border="5">panels/panel-content-border2.png</texture>
 			<animation effect="fade" end="8" condition="true">Conditional</animation>
 		</control>
-			
+
 		<control type="group">
 			<posx>DialogMarginOffsetX</posx>
 			<posy>232</posy>
-			
+
 			<control type="label">
 				<description>Duration</description>
 				<posx>5</posx>
@@ -1120,7 +1160,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 			</control>
-		
+
 			<control type="progress">
 				<description>Progressbar Cache</description>
 				<posx>5</posx>
@@ -1130,7 +1170,7 @@
 				<info>Player.ProgressCache</info>
 				<animation effect="fade" end="20" condition="true">Conditional</animation>
 			</control>
-			
+
 			<control type="progress">
 				<description>Progressbar</description>
 				<posx>5</posx>
@@ -1138,7 +1178,7 @@
 				<width>185</width>
 				<info>Player.Progress</info>
 			</control>
-			
+
 			<control type="slider">
 				<description>Seek Slider</description>
 				<posx>5</posx>
@@ -1151,7 +1191,7 @@
 				<textureslidernibfocus border="2">controls/progress-nib-focus.png</textureslidernibfocus>
 			</control>
 		</control>
-		
+
 		<control type="grouplist" id="202">
 			<description>Player Controls</description>
 			<visible>Player.HasAudio | !VideoPlayer.Content(LiveTV)</visible>
@@ -1342,7 +1382,7 @@
 				<pulseonselect>false</pulseonselect>
 			</control>
 		</control>
-		
+
 		<control type="grouplist" id="202">
 			<description>Player Controls</description>
 			<visible>Player.HasVideo + VideoPlayer.Content(LiveTV)</visible>

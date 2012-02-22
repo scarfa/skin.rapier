@@ -143,6 +143,8 @@
 	<string id="31430">Απενεργοποίηση εφέ Κύλισης σε Λίστες</string>
 	<string id="31431">Απενεργοποίηση εφέ Εστίασης σε Λίστες</string>
 	<string id="31432">Εμφάνιση τηλεοπτικού 'clearart.png' στο OSD</string>
+	<string id="31433">Ενεργοποίηση Μουσικού CDArt</string>
+	<string id="31434">Εμφάνιση CDArt σε Πλήρη Οθόνη</string>
 
 	<!-- skin settings backgrounds -->
 	<string id="31051">Μόνο στο Αρχικό Παράθυρο</string>

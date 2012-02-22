@@ -2956,23 +2956,65 @@
 					<texture border="8">panels/panel.png</texture>
 				</control>
 
-				<control type="image">
-					<description>Cover Border</description>
-					<posx>15</posx>
-					<posy>15</posy>
-					<width>134</width>
-					<height>134</height>
-					<texture border="5">panels/panel-content-border.png</texture>
+				<control type="group">
+					<visible>!Skin.HasSetting(EnableMusicCdArt)</visible>
+
+					<control type="image">
+						<description>Cover Border</description>
+						<posx>15</posx>
+						<posy>15</posy>
+						<width>134</width>
+						<height>134</height>
+						<texture border="5">panels/panel-content-border.png</texture>
+					</control>
+
+					<control type="image">
+						<description>Cover</description>
+						<posx>15</posx>
+						<posy>15</posy>
+						<width>134</width>
+						<height>134</height>
+						<texture diffuse="covers/home-panel-album-cover-diffuse.png" background="true">$INFO[MusicPlayer.cover]</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
 				</control>
 
-				<control type="image">
-					<description>Cover</description>
-					<posx>15</posx>
-					<posy>15</posy>
-					<width>134</width>
-					<height>134</height>
-					<texture diffuse="covers/home-panel-album-cover-diffuse.png" background="true">$INFO[MusicPlayer.cover]</texture>
-					<aspectratio>stretch</aspectratio>
+				<control type="group">
+					<visible>Skin.HasSetting(EnableMusicCdArt)</visible>
+
+					<control type="image">
+						<description>Cover Border</description>
+						<posx>15</posx>
+						<posy>15</posy>
+						<width>134</width>
+						<height>134</height>
+						<texture border="5">panels/panel-content-border.png</texture>
+					</control>
+
+					<control type="image">
+						<description>Default Cover</description>
+						<posx>25</posx>
+						<posy>25</posy>
+						<width>114</width>
+						<height>114</height>
+						<bordertexture>icons/cdart/cdart-mask.png</bordertexture>
+						<texture diffuse="icons/cdart/cdart-mask.png">icons/cdart/cdart.png</texture>
+						<aspectratio align="bottom">keep</aspectratio>
+						<include>CdArtImageRotateAnim</include>
+						<visible>IsEmpty(MusicPlayer.Cover)</visible>
+					</control>
+
+					<control type="image">
+						<description>Cover</description>
+						<posx>25</posx>
+						<posy>25</posy>
+						<width>114</width>
+						<height>114</height>
+						<bordertexture>icons/cdart/cdart-mask.png</bordertexture>
+						<texture fallback="icons/cdart/cdart.png" diffuse="icons/cdart/cdart-mask.png">$INFO[MusicPlayer.Cover]</texture>
+						<aspectratio align="bottom">keep</aspectratio>
+						<include>CdArtImageRotateAnim</include>
+					</control>
 				</control>
 
 				<control type="label">
