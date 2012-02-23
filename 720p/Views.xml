@@ -182,17 +182,19 @@
 
 	<include name="LogoThumbsStyleCoverImage">
 		<control type="image">
-			<width>129</width>
-			<height>129</height>
+			<posx>-5</posx>
+			<posy>-5</posy>
+			<width>268</width>
+			<height>139</height>
 			<texture border="7">covers/cover-case-focus.png</texture>
 			<aspectratio>stretch</aspectratio>
 			<animation effect="fade" start="0" end="100" time="150" reversible="false">Focus</animation>
 		</control>
 
 		<control type="image">
-			<width>129</width>
+			<width>258</width>
 			<height>129</height>
-			<bordersize>10</bordersize>
+			<bordersize>5</bordersize>
 			<texture background="true">dim.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
@@ -207,9 +209,9 @@
 		</control>
 
 		<control type="image">
-			<width>129</width>
+			<width>258</width>
 			<height>129</height>
-			<bordersize>14</bordersize>
+			<bordersize>10</bordersize>
 			<texture background="true">$INFO[ListItem.Path]logo.png</texture>
 			<aspectratio>keep</aspectratio>
 		</control>
