@@ -21,6 +21,7 @@
 <string id="31203">Nie znaleziono opisu.</string>
 <string id="31204">Nie znaleziono fabuły.</string>
 <string id="31205">Nie znaleziono komentarza.</string>
+<string id="31215">Nie znaleziono timera.</string>
 <string id="31206">Style widoku</string>
 <string id="31207">Opcje okładki</string>
 <string id="31208">Przycisk 1</string>
@@ -124,9 +125,6 @@
 <string id="31404">Widok Plakatu</string>
 <string id="31014">ExtraMiniatury</string>
 <string id="31015">ExtraFanArt</string>
-<string id="31016">Lokalne Logo</string>
-<string id="31017">Lokalny Plakat</string>
-<string id="31019">Lokalny Banner</string>
 <string id="31407">Użyj wizualizacji jako tła</string>
 <string id="31408">Użyj FanArtu wykonawcy jako tła</string>
 <string id="31409">Wizualizacja / FanArt wykonawcy jako tło podczas odtwarzania muzyki</string>
@@ -144,6 +142,9 @@
 <string id="31429">Ukryj proporcje wideo</string>
 <string id="31430">Wyłącz animację przewijania listy</string>
 <string id="31431">Wyłącz animację aktywności na liście</string>
+<string id="31432">Pokazuj 'cleart.png' serialu na OSD</string>
+<string id="31433">Włącz CDArt albumów muzycznych</string>
+<string id="31434">Pokazuj CDArt w trybie odtwarzania pełnoekranowego</string>
 
 <!-- skin settings backgrounds -->
 <string id="31051">Pokaż tylko na ekranie głównym</string>
