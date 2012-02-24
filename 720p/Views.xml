@@ -218,8 +218,8 @@
 
 		<control type="image">
 			<description>Overlay</description>
-			<posx>90</posx>
-			<posy>90</posy>
+			<posx>225</posx>
+			<posy>9</posy>
 			<width>24</width>
 			<height>24</height>
 			<texture background="true">$INFO[ListItem.Overlay]</texture>

@@ -903,7 +903,7 @@
 	<include name="LogoThumbsStyleTopLeftCornerFocusAnim">
 		<animation type="Focus" reversible="false">
 			<effect type="zoom" start="100" end="121" center="auto" time="200" delay="600" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="12,12" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="23,12" time="200" delay="600" tween="circle" easing="out"/>
 		</animation>
 	</include>
 	
@@ -917,14 +917,14 @@
 	<include name="LogoThumbsStyleTopRightCornerFocusAnim">
 		<animation type="Focus" reversible="false">
 			<effect type="zoom" start="100" end="121" center="auto" time="200" delay="600" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="-34,12" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="-23,12" time="200" delay="600" tween="circle" easing="out"/>
 		</animation>
 	</include>
 	
 	<include name="LogoThumbsStyleLeftEdgeFocusAnim">
 		<animation type="Focus" reversible="false">
 			<effect type="zoom" start="100" end="121" center="auto" time="200" delay="600" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="12,0" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="23,0" time="200" delay="600" tween="circle" easing="out"/>
 		</animation>
 	</include>
 	
@@ -935,14 +935,14 @@
 	<include name="LogoThumbsStyleRightEdgeFocusAnim">
 		<animation type="Focus" reversible="false">
 			<effect type="zoom" start="100" end="121" center="auto" time="200" delay="600" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="-34,0" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="-23,0" time="200" delay="600" tween="circle" easing="out"/>
 		</animation>
 	</include>
 	
 	<include name="LogoThumbsStyleBottomLeftCornerFocusAnim">
 		<animation type="Focus" reversible="false">
 			<effect type="zoom" start="100" end="121" center="auto" time="200" delay="600" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="12,-12" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="23,-12" time="200" delay="600" tween="circle" easing="out"/>
 		</animation>
 	</include>	
 	
@@ -956,7 +956,7 @@
 	<include name="LogoThumbsStyleBottomRightCornerFocusAnim">
 		<animation type="Focus" reversible="false">
 			<effect type="zoom" start="100" end="121" center="auto" time="200" delay="600" tween="circle" easing="out"/>
-			<effect type="slide" start="0,0" end="-34,-12" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="-23,-12" time="200" delay="600" tween="circle" easing="out"/>
 		</animation>
 	</include>
 
