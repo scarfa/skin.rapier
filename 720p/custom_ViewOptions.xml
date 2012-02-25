@@ -1756,6 +1756,17 @@
 				<onclick>Container.SetViewMode(100)</onclick>
 				<visible>Container.Content(TVShows) + Skin.String(CurrentViewMode,100)</visible>
 			</control>
+			<control type="radiobutton" id="4000">
+				<description>Thumbs Info Use Style 3 (TVShow)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31507]</label>
+				<selected>Skin.String(ThumbsInfoTVShowStyle,3)</selected>
+				<onclick>Skin.SetString(ThumbsInfoTVShowStyle,3)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<include>ReloadSkinNotification</include>
+				<onclick>Container.SetViewMode(100)</onclick>
+				<visible>Container.Content(TVShows) + Skin.String(CurrentViewMode,100)</visible>
+			</control>
 			<control type="radiobutton" id="4026">
 				<description>List Info Use Style 1 (Programs)</description>
 				<include>DropDownMenuRadioBtn</include>

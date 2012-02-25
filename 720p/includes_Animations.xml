@@ -611,7 +611,7 @@
 	</include>
 	
 	<include name="CoverDimAnim">
-		<animation effect="fade" end="25" condition="true">Conditional</animation>
+		<animation effect="fade" end="15" condition="true">Conditional</animation>
 	</include>
 	
 	<include name="WrapListInfoCoverGlowScrollAnim">
@@ -957,6 +957,66 @@
 		<animation type="Focus" reversible="false">
 			<effect type="zoom" start="100" end="121" center="auto" time="200" delay="600" tween="circle" easing="out"/>
 			<effect type="slide" start="0,0" end="-23,-12" time="200" delay="600" tween="circle" easing="out"/>
+		</animation>
+	</include>
+	
+	<include name="ClearArtThumbsStyleTopLeftCornerFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="100" end="121" center="auto" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="23,16" time="200" delay="600" tween="circle" easing="out"/>
+		</animation>
+	</include>
+	
+	<include name="ClearArtThumbsStyleTopEdgeFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="100" end="121" center="auto" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="0,16" time="200" delay="600" tween="circle" easing="out"/>
+		</animation>
+	</include>
+	
+	<include name="ClearArtThumbsStyleTopRightCornerFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="100" end="121" center="auto" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="-23,16" time="200" delay="600" tween="circle" easing="out"/>
+		</animation>
+	</include>
+	
+	<include name="ClearArtThumbsStyleLeftEdgeFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="100" end="121" center="auto" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="23,0" time="200" delay="600" tween="circle" easing="out"/>
+		</animation>
+	</include>
+	
+	<include name="ClearArtThumbsStyleMidRowFocusAnim">
+		<animation effect="zoom" start="100" end="121" center="auto" time="200" delay="600" tween="circle" easing="out" reversible="false">Focus</animation>
+	</include>
+	
+	<include name="ClearArtThumbsStyleRightEdgeFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="100" end="121" center="auto" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="-23,0" time="200" delay="600" tween="circle" easing="out"/>
+		</animation>
+	</include>
+	
+	<include name="ClearArtThumbsStyleBottomLeftCornerFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="100" end="121" center="auto" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="23,-16" time="200" delay="600" tween="circle" easing="out"/>
+		</animation>
+	</include>	
+	
+	<include name="ClearArtThumbsStyleBottomEdgeFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="100" end="121" center="auto" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="0,-16" time="200" delay="600" tween="circle" easing="out"/>
+		</animation>
+	</include>
+	
+	<include name="ClearArtThumbsStyleBottomRightCornerFocusAnim">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" start="100" end="121" center="auto" time="200" delay="600" tween="circle" easing="out"/>
+			<effect type="slide" start="0,0" end="-23,-16" time="200" delay="600" tween="circle" easing="out"/>
 		</animation>
 	</include>
 
