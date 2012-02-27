@@ -30,6 +30,7 @@
 				<selected>Skin.HasSetting(HideMusicIconLabel)</selected>
 				<onclick>Skin.ToggleSetting(HideMusicIconLabel)</onclick>
 				<visible>Skin.String(CurrentViewMode,50) + [Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)]</visible>
+				<enable>![Container.Content(Songs) | Container.Content(Artists)]</enable>
 			</control>
 			<control type="radiobutton" id="2000">
 				<description>Icon Hide Label (Movies)</description>
@@ -43,10 +44,10 @@
 				<description>Icon Hide Label (TVShows)</description>
 				<include>DropDownMenuRadioBtn</include>
 				<label>$LOCALIZE[31042]</label>
-				<selected>!Skin.HasSetting(ShowTVShowsIconLabel)</selected>
-				<onclick>Skin.ToggleSetting(ShowTVShowsIconLabel)</onclick>
+				<selected>Skin.HasSetting(HideTVShowsIconLabel)</selected>
+				<onclick>Skin.ToggleSetting(HideTVShowsIconLabel)</onclick>
 				<visible>Skin.String(CurrentViewMode,50) + Container.Content(TVShows)</visible>
-				<enable>!Skin.String(CommonIconTVShowStyle,2)</enable>
+				<enable>Skin.String(CommonIconTVShowStyle,1) | Skin.String(CommonIconTVShowStyle,)</enable>
 			</control>
 			<control type="radiobutton" id="3000">
 				<description>Icon Hide Label (Pictures)</description>
@@ -1608,6 +1609,28 @@
 				<label>$LOCALIZE[31508]</label>
 				<selected>Skin.String(CommonIconTVShowStyle,2)</selected>
 				<onclick>Skin.SetString(CommonIconTVShowStyle,2)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<include>ReloadSkinNotification</include>
+				<onclick>Container.SetViewMode(50)</onclick>
+				<visible>Container.Content(TVShows) + Skin.String(CurrentViewMode,50)</visible>
+			</control>
+			<control type="radiobutton" id="4001">
+				<description>Common Icon Use Style 3 (TVShow)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31507]</label>
+				<selected>Skin.String(CommonIconTVShowStyle,3)</selected>
+				<onclick>Skin.SetString(CommonIconTVShowStyle,3)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<include>ReloadSkinNotification</include>
+				<onclick>Container.SetViewMode(50)</onclick>
+				<visible>Container.Content(TVShows) + Skin.String(CurrentViewMode,50)</visible>
+			</control>
+			<control type="radiobutton" id="4002">
+				<description>Common Icon Use Style 4 (TVShow)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31509]</label>
+				<selected>Skin.String(CommonIconTVShowStyle,4)</selected>
+				<onclick>Skin.SetString(CommonIconTVShowStyle,4)</onclick>
 				<onclick>ReloadSkin()</onclick>
 				<include>ReloadSkinNotification</include>
 				<onclick>Container.SetViewMode(50)</onclick>

@@ -90,7 +90,7 @@
 		<control type="image">
 			<width>129</width>
 			<height>172</height>
-			<bordersize>10</bordersize>
+			<bordersize>9</bordersize>
 			<texture background="true">dim.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
@@ -157,7 +157,7 @@
 		<control type="image">
 			<width>129</width>
 			<height>129</height>
-			<bordersize>10</bordersize>
+			<bordersize>9</bordersize>
 			<texture background="true">dim.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>

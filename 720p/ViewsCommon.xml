@@ -23,75 +23,101 @@
 				<itemlayout condition="Container.Content(TVShows)" height="185" width="203">
 					<control type="image">
 						<description>Default Cover</description>
-						<posx>20</posx>
-						<posy>20</posy>
-						<width>164</width>
-						<height>122</height>
+						<posx>6</posx> 
+						<posy>6</posy>
+						<width>192</width>
+						<height>150</height>
 						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+						<bordersize>6</bordersize>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Title)</visible>
 					</control>
 					<control type="image">
 						<description>Cover</description>
-						<posx>20</posx> 
-						<posy>20</posy>
-						<width>164</width>
-						<height>122</height>
+						<posx>6</posx> 
+						<posy>6</posy>
+						<width>192</width>
+						<height>150</height>
 						<texture background="true">$VAR[TVShowsThumbTexture]</texture>
 						<aspectratio aligny="bottom">keep</aspectratio>
 						<bordertexture border="7">covers/cover-case-nofocus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<bordersize>6</bordersize>
 						<visible>Skin.String(CommonIconTVShowStyle,1) | Skin.String(CommonIconTVShowStyle,)</visible>
 					</control>
 					<control type="image">
-						<description>TV Logo</description>
-						<posx>20</posx> 
-						<posy>20</posy>
-						<width>164</width>
-						<height>122</height>
+						<description>Clear Logo</description>
+						<posx>14</posx> 
+						<posy>9</posy>
+						<width>176</width>
+						<height>144</height>
 						<texture background="true">$INFO[ListItem.Path]logo.png</texture>
+						<bordersize>6</bordersize>
 						<aspectratio>keep</aspectratio>
 						<visible>Skin.String(CommonIconTVShowStyle,2)</visible>
+					</control>
+					<control type="image">
+						<description>Clear Art</description>
+						<posx>14</posx> 
+						<posy>9</posy>
+						<width>176</width>
+						<height>144</height>
+						<texture background="true">$INFO[ListItem.Path]clearart.png</texture>
+						<bordersize>6</bordersize>
+						<aspectratio>keep</aspectratio>
+						<visible>Skin.String(CommonIconTVShowStyle,3)</visible>
+					</control>
+					<control type="image">
+						<description>TV Thumb</description>
+						<posx>6</posx> 
+						<posy>6</posy>
+						<width>192</width>
+						<height>150</height>
+						<texture background="true">$INFO[ListItem.Path]landscape.jpg</texture>
+						<bordertexture border="7">covers/cover-case-nofocus.png</bordertexture>
+						<bordersize>6</bordersize>
+						<aspectratio>keep</aspectratio>
+						<visible>Skin.String(CommonIconTVShowStyle,4)</visible>
 					</control>
 					<control type="label">
 						<description>Label</description>
 						<posx>102</posx>
-						<posy>150</posy>
+						<posy>160</posy>
 						<width>164</width>
 						<font>IconFont</font>
 						<textcolor>GreyColor</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<align>center</align>
 						<info>ListItem.Label</info>
-						<visible>Skin.HasSetting(ShowTVShowsIconLabel) + !Skin.String(CommonIconTVShowStyle,2)</visible>
+						<visible>[Skin.String(CommonIconTVShowStyle,1) | Skin.String(CommonIconTVShowStyle,)] + !Skin.HasSetting(HideTVShowsIconLabel)</visible>
 					</control>
 				</itemlayout>
 				<itemlayout height="185" width="203">
 					<control type="image">
+						<description>Default Cover</description>
+						<posx>6</posx> 
+						<posy>6</posy>
+						<width>192</width>
+						<height>150</height>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+						<bordersize>6</bordersize>
+						<aspectratio>keep</aspectratio>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
 						<description>Cover</description>
-						<posx>20</posx> 
-						<posy>20</posy>
-						<width>164</width>
-						<height>122</height>
+						<posx>6</posx> 
+						<posy>6</posy>
+						<width>192</width>
+						<height>150</height>
 						<texture background="true">$INFO[ListItem.Thumb]</texture>
 						<aspectratio aligny="bottom">keep</aspectratio>
 						<bordertexture border="7">covers/cover-case-nofocus.png</bordertexture>
-						<bordersize>5</bordersize>
-					</control>
-					<control type="image">
-						<description>Default Cover</description>
-						<posx>20</posx>
-						<posy>20</posy>
-						<width>164</width>
-						<height>122</height>
-						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-						<aspectratio>keep</aspectratio>
-						<visible>IsEmpty(ListItem.Thumb)</visible>
+						<bordersize>6</bordersize>
 					</control>
 					<control type="label">
 						<description>Label</description>
 						<posx>102</posx>
-						<posy>150</posy>
+						<posy>160</posy>
 						<width>164</width>
 						<font>IconFont</font>
 						<textcolor>GreyColor</textcolor>
@@ -99,7 +125,7 @@
 						<align>center</align>
 						<info>ListItem.Label</info>
 						<visible>![Container.Content(Movies) + Skin.HasSetting(HideMoviesIconLabel)] 
-						+ ![[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(HideMusicIconLabel)]
+						+ ![Container.Content(Albums) + Skin.HasSetting(HideMusicIconLabel)]
 						+ ![Window.IsActive(Pictures) + Skin.HasSetting(HidePicturesIconLabel)]</visible>
 					</control>
 				</itemlayout>															
@@ -110,91 +136,108 @@
 						<posy>0</posy>
 						<width>203</width>
 						<height>185</height>
-						<texture border="4">views/list-focus.png</texture>
-						<aspectratio>stretch</aspectratio>
-						<animation effect="fade" end="60" condition="true">Conditional</animation>
+						<texture border="12">covers/cover-case-focus2.png</texture>
+						<visible>!IsEmpty(ListItem.Title) + [Skin.String(CommonIconTVShowStyle,2) | Skin.String(CommonIconTVShowStyle,3)]</visible>
 					</control>
 					<control type="image">
 						<description>Default Cover</description>
-						<posx>20</posx>
-						<posy>20</posy>
-						<width>164</width>
-						<height>122</height>
+						<posx>0</posx> 
+						<posy>0</posy>
+						<width>204</width>
+						<height>162</height>
 						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+						<bordertexture border="12">covers/cover-case-focus2.png</bordertexture>
+						<bordersize>12</bordersize>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Title)</visible>
 					</control>
 					<control type="image">
 						<description>Cover</description>
-						<posx>20</posx> 
-						<posy>20</posy>
-						<width>164</width>
-						<height>122</height>
+						<posx>0</posx> 
+						<posy>0</posy>
+						<width>204</width>
+						<height>162</height>
 						<texture background="true">$VAR[TVShowsThumbTexture]</texture>
+						<bordertexture border="12">covers/cover-case-focus2.png</bordertexture>
+						<bordersize>12</bordersize>
 						<aspectratio aligny="bottom">keep</aspectratio>
-						<bordertexture border="7">covers/cover-case-nofocus.png</bordertexture>
-						<bordersize>5</bordersize>
 						<visible>Skin.String(CommonIconTVShowStyle,1) | Skin.String(CommonIconTVShowStyle,)</visible>
 					</control>
 					<control type="image">
-						<description>TV Logo</description>
-						<posx>20</posx> 
-						<posy>20</posy>
-						<width>164</width>
-						<height>122</height>
+						<description>Clear Logo</description>
+						<posx>14</posx> 
+						<posy>9</posy>
+						<width>176</width>
+						<height>144</height>
 						<texture background="true">$INFO[ListItem.Path]logo.png</texture>
+						<bordersize>6</bordersize>
 						<aspectratio>keep</aspectratio>
 						<visible>Skin.String(CommonIconTVShowStyle,2)</visible>
+					</control>
+					<control type="image">
+						<description>Clear Art</description>
+						<posx>14</posx> 
+						<posy>9</posy>
+						<width>176</width>
+						<height>144</height>
+						<texture background="true">$INFO[ListItem.Path]clearart.png</texture>
+						<bordersize>6</bordersize>
+						<aspectratio>keep</aspectratio>
+						<visible>Skin.String(CommonIconTVShowStyle,3)</visible>
+					</control>
+					<control type="image">
+						<description>TV Thumb</description>
+						<posx>0</posx> 
+						<posy>0</posy>
+						<width>204</width>
+						<height>162</height>
+						<texture background="true">$INFO[ListItem.Path]landscape.jpg</texture>
+						<bordertexture border="12">covers/cover-case-focus2.png</bordertexture>
+						<bordersize>12</bordersize>
+						<aspectratio>keep</aspectratio>
+						<visible>Skin.String(CommonIconTVShowStyle,4)</visible>
 					</control>
 					<control type="label">
 						<description>Label</description>
 						<posx>102</posx>
-						<posy>150</posy>
+						<posy>160</posy>
 						<width>164</width>
 						<font>IconFont</font>
 						<textcolor>SelectedColor</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<align>center</align>
 						<info>ListItem.Label</info>
-						<visible>!Skin.String(CommonIconTVShowStyle,2)</visible>
+						<visible>Skin.String(CommonIconTVShowStyle,1) | Skin.String(CommonIconTVShowStyle,)</visible>
 					</control>
 				</focusedlayout>
 				<focusedlayout height="185" width="203">
 					<control type="image">
-						<description>Cover Focus</description>
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>203</width>
-						<height>185</height>
-						<texture border="4">views/list-focus.png</texture>
-						<aspectratio>stretch</aspectratio>
-						<animation effect="fade" end="60" condition="true">Conditional</animation>
-					</control>
-					<control type="image">
-						<description>Cover</description>
-						<posx>20</posx>
-						<posy>20</posy>
-						<width>164</width>
-						<height>122</height>
-						<texture background="true">$INFO[ListItem.Thumb]</texture>
-						<aspectratio aligny="bottom">keep</aspectratio>
-						<bordertexture border="7">covers/cover-case-nofocus.png</bordertexture>
-						<bordersize>5</bordersize>
-					</control>
-					<control type="image">
 						<description>Default Cover</description>
-						<posx>20</posx>
-						<posy>20</posy>
-						<width>164</width>
-						<height>122</height>
+						<posx>0</posx> 
+						<posy>0</posy>
+						<width>204</width>
+						<height>162</height>
 						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+						<bordertexture border="12">covers/cover-case-focus2.png</bordertexture>
+						<bordersize>12</bordersize>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 					</control>	
+					<control type="image">
+						<description>Cover</description>
+						<posx>0</posx> 
+						<posy>0</posy>
+						<width>204</width>
+						<height>162</height>
+						<texture background="true">$INFO[ListItem.Thumb]</texture>
+						<bordertexture border="12">covers/cover-case-focus2.png</bordertexture>
+						<bordersize>12</bordersize>
+						<aspectratio aligny="bottom">keep</aspectratio>
+					</control>
 					<control type="label">
 						<description>Label</description>
 						<posx>102</posx>
-						<posy>150</posy>
+						<posy>160</posy>
 						<width>164</width>
 						<font>IconFont</font>
 						<textcolor>SelectedColor</textcolor>
