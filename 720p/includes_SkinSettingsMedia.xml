@@ -15,25 +15,6 @@
 				<onright>150</onright>
 				<visible>!Skin.HasSetting(ExpandedSettings)</visible>
 				<include>ContentSettingsOpenCloseAnim</include>
-				<control type="button" id="3014">
-					<description>Media Label</description>
-					<include>SettingsHeaderBtn</include>
-					<label>$LOCALIZE[31013]</label>
-				</control>
-				<control type="radiobutton" id="3015">
-					<description>Disable List Scroll Animation</description>
-					<include>SettingsContentRadioBtn</include>
-					<label>$LOCALIZE[31430]</label>
-					<selected>Skin.HasSetting(DisableListScrollAnim)</selected>
-					<onclick>Skin.ToggleSetting(DisableListScrollAnim)</onclick>
-				</control>
-				<control type="radiobutton" id="3016">
-					<description>Disable List Focus Animation</description>
-					<include>SettingsContentRadioBtn</include>
-					<label>$LOCALIZE[31431]</label>
-					<selected>Skin.HasSetting(DisableListFocusAnim)</selected>
-					<onclick>Skin.ToggleSetting(DisableListFocusAnim)</onclick>
-				</control>
 				<control type="button" id="3020">
 					<description>View Options Label (TVShows)</description>
 					<include>SettingsHeaderBtn</include>
@@ -123,6 +104,53 @@
 					<label>$LOCALIZE[31410]</label>
 					<selected>!Skin.HasSetting(DisableVideoPlayingBG)</selected>
 					<onclick>Skin.ToggleSetting(DisableVideoPlayingBG)</onclick>
+				</control>
+				<control type="button" id="3014">
+					<description>Animations Label</description>
+					<include>SettingsHeaderBtn</include>
+					<label>$LOCALIZE[31419]</label>
+				</control>
+				<control type="radiobutton" id="3025">
+					<description>Disable Thumbnail View Cover Focus Animation</description>
+					<include>SettingsContentRadioBtn</include>
+					<label>$LOCALIZE[31431] - $LOCALIZE[31107]</label>
+					<selected>Skin.HasSetting(DisableThumbnailViewCoverFocusAnim)</selected>
+					<onclick>Skin.ToggleSetting(DisableThumbnailViewCoverFocusAnim)</onclick>
+				</control>
+				<control type="radiobutton" id="3026">
+					<description>Disable Wide List View Cover Focus Animation</description>
+					<include>SettingsContentRadioBtn</include>
+					<label>$LOCALIZE[31431] - $LOCALIZE[31114]</label>
+					<selected>Skin.HasSetting(DisableWideListViewCoverFocusAnim)</selected>
+					<onclick>Skin.ToggleSetting(DisableWideListViewCoverFocusAnim)</onclick>
+				</control>
+				<control type="radiobutton" id="3027">
+					<description>Disable List Info 2 View Cover Focus Animation</description>
+					<include>SettingsContentRadioBtn</include>
+					<label>$LOCALIZE[31431] - $LOCALIZE[31105], $LOCALIZE[31112]</label>
+					<selected>Skin.HasSetting(DisableListViewCoverFocusAnim)</selected>
+					<onclick>Skin.ToggleSetting(DisableListViewCoverFocusAnim)</onclick>
+				</control>
+				<control type="radiobutton" id="3028">
+					<description>Disable Thumbs Info View Cover Focus Animation</description>
+					<include>SettingsContentRadioBtn</include>
+					<label>$LOCALIZE[31431] - $LOCALIZE[31116]</label>
+					<selected>Skin.HasSetting(DisableThumbsInfoViewCoverFocusAnim)</selected>
+					<onclick>Skin.ToggleSetting(DisableThumbsInfoViewCoverFocusAnim)</onclick>
+				</control>
+				<control type="radiobutton" id="3029">
+					<description>Disable Wall View Cover Focus Animation</description>
+					<include>SettingsContentRadioBtn</include>
+					<label>$LOCALIZE[31431] - $LOCALIZE[31113]</label>
+					<selected>Skin.HasSetting(DisableWallViewCoverFocusAnim)</selected>
+					<onclick>Skin.ToggleSetting(DisableWallViewCoverFocusAnim)</onclick>
+				</control>
+				<control type="radiobutton" id="3015">
+					<description>Disable List View Scroll Animation</description>
+					<include>SettingsContentRadioBtn</include>
+					<label>$LOCALIZE[31430] - $LOCALIZE[31105], $LOCALIZE[31111], $LOCALIZE[31112]</label>
+					<selected>Skin.HasSetting(DisableListViewScrollAnim)</selected>
+					<onclick>Skin.ToggleSetting(DisableListViewScrollAnim)</onclick>
 				</control>
 				<control type="button" id="3010">
 					<description>Media Flagging Label</description>

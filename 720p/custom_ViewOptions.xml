@@ -8,7 +8,7 @@
 			<include>DropDownMenuCloseHitRect</include>
 		</control>
 		
-		<control type="grouplist" id="900"> <!-- 3091 -->
+		<control type="grouplist" id="900"> <!-- 4029 -->
 			<description>View Options Menu</description>
 			<posx>299</posx>
 			<posy>80</posy>
@@ -1330,7 +1330,7 @@
 			<control type="radiobutton" id="3091">
 				<description>Show Landscape.jpg</description>
 				<include>DropDownMenuRadioBtn</include>
-				<label>Landscape.jpg</label>
+				<label>$LOCALIZE[31509]</label>
 				<selected>Skin.HasSetting(ShowLandscape)</selected>
 				<onclick>Skin.ToggleSetting(ShowLandscape)</onclick>
 				<onclick>ReloadSkin()</onclick>

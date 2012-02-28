@@ -574,7 +574,7 @@
 	</include>
 
 	<include name="ListViewFocusAnim">
-		<animation effect="fade" start="30" end="100" time="200" tween="back" easing="in" reversible="false">Focus</animation>
+		<!-- <animation effect="fade" start="30" end="100" time="200" tween="back" easing="in" reversible="false">Focus</animation> -->
 	</include>
 	
 	<include name="ListViewCoverFocusAnim">
@@ -582,6 +582,21 @@
 			<effect effect="fade" start="0" end="100" delay="100" time="100"/>
 			<effect type="zoom" start="60" end="100" time="300" delay="100" center="auto" easing="out" tween="back"/>
 		</animation>
+	</include>
+	
+	<include name="ThumbnailViewCoverFocusAnim">
+		<animation effect="zoom" end="112" center="auto" time="100">Focus</animation>
+		<animation effect="zoom" start="112" end="100" center="auto" time="100">UnFocus</animation>
+	</include>
+	
+	<include name="ThumbnailViewCoverFocusAnim2">
+		<animation effect="zoom" end="116" center="auto" time="100">Focus</animation>
+		<animation effect="zoom" start="116" end="100" center="auto" time="100">UnFocus</animation>
+	</include>
+	
+	<include name="ThumbnailViewCoverFocusAnim3">
+		<animation effect="zoom" end="108" center="auto" time="100">Focus</animation>
+		<animation effect="zoom" start="108" end="100" center="auto" time="100">UnFocus</animation>
 	</include>
 	
 	<include name="WideListViewFocusAnim">

@@ -914,7 +914,7 @@
 				<aspectratio>stretch</aspectratio>
 				<visible>Control.HasFocus(52)</visible>
 				<include>ListViewSelectFadeAnim</include>
-				<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewScrollAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewScrollAnim)">ListViewScrollAnim</include>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -926,7 +926,7 @@
 				<include>ListViewSelectFadeAnim2</include>
 			</control>
 			<control type="group">
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+				<include>ListViewFocusAnim</include>
 				<control type="image">
 					<description>Icon</description>
 					<posx>5</posx>
@@ -1027,7 +1027,7 @@
 				<aspectratio>stretch</aspectratio>
 				<visible>Control.HasFocus(52)</visible>
 				<include>ListViewSelectFadeAnim</include>
-				<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewScrollAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewScrollAnim)">ListViewScrollAnim</include>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -1039,7 +1039,7 @@
 				<include>ListViewSelectFadeAnim2</include>
 			</control>
 			<control type="group">
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+				<include>ListViewFocusAnim</include>
 				<control type="image">
 					<description>Icon</description>
 					<posx>5</posx>
@@ -1112,7 +1112,7 @@
 				<aspectratio>stretch</aspectratio>
 				<visible>Control.HasFocus(52)</visible>
 				<include>ListViewSelectFadeAnim</include>
-				<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewScrollAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewScrollAnim)">ListViewScrollAnim</include>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -1124,7 +1124,7 @@
 				<include>ListViewSelectFadeAnim2</include>
 			</control>
 			<control type="group">
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+				<include>ListViewFocusAnim</include>
 				<control type="image">
 					<description>Icon</description>
 					<posx>5</posx>
@@ -2103,7 +2103,7 @@
 				<bordersize>5</bordersize>
 				<texture background="true">$INFO[ListItem.Thumb]</texture>
 				<aspectratio>scale</aspectratio>
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewCoverFocusAnim)">ListViewCoverFocusAnim</include>
 			</control>
 			<control type="image">
 				<description>Default Cover</description>
@@ -2115,10 +2115,10 @@
 				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewCoverFocusAnim)">ListViewCoverFocusAnim</include>
 			</control>	
 			<control type="group">
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+				<include>ListViewFocusAnim</include>
 				<control type="label">
 					<description>Label</description>
 					<posx>60</posx>
@@ -2217,7 +2217,7 @@
 				<bordersize>5</bordersize>
 				<texture background="true">$INFO[ListItem.Thumb]</texture>
 				<aspectratio>scale</aspectratio>
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewCoverFocusAnim)">ListViewCoverFocusAnim</include>
 			</control>
 			<control type="image">
 				<description>Default Cover</description>
@@ -2229,10 +2229,10 @@
 				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewCoverFocusAnim)">ListViewCoverFocusAnim</include>
 			</control>	
 			<control type="group">
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+				<include>ListViewFocusAnim</include>
 				<control type="label">
 					<description>Label</description>
 					<posx>80</posx>
@@ -2313,7 +2313,7 @@
 				<bordersize>5</bordersize>
 				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewCoverFocusAnim)">ListViewCoverFocusAnim</include>
 			</control>
 			<control type="image">
 				<description>Cover</description>
@@ -2325,10 +2325,10 @@
 				<bordersize>5</bordersize>
 				<texture background="true">$VAR[TVShowsThumbTexture]</texture>
 				<aspectratio>scale</aspectratio>
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewCoverFocusAnim)">ListViewCoverFocusAnim</include>
 			</control>
 			<control type="group">
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+				<include>ListViewFocusAnim</include>
 				<control type="label">
 					<description>Label</description>
 					<posx>60</posx>
@@ -2399,7 +2399,7 @@
 				<bordersize>5</bordersize>
 				<texture background="true">$INFO[ListItem.Thumb]</texture>
 				<aspectratio>scale</aspectratio>
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewCoverFocusAnim)">ListViewCoverFocusAnim</include>
 			</control>
 			<control type="image">
 				<description>Default Cover</description>
@@ -2411,10 +2411,10 @@
 				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewCoverFocusAnim)">ListViewCoverFocusAnim</include>
 			</control>	
 			<control type="group">
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+				<include>ListViewFocusAnim</include>
 				<control type="label">
 					<description>Label</description>
 					<posx>104</posx>
@@ -2526,7 +2526,7 @@
 				<bordersize>5</bordersize>
 				<texture background="true">$INFO[ListItem.Thumb]</texture>
 				<aspectratio>scale</aspectratio>
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewCoverFocusAnim)">ListViewCoverFocusAnim</include>
 			</control>
 			<control type="image">
 				<description>Default Cover</description>
@@ -2538,10 +2538,10 @@
 				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewCoverFocusAnim)">ListViewCoverFocusAnim</include>
 			</control>	
 			<control type="group">
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+				<include>ListViewFocusAnim</include>
 				<control type="label">
 					<description>Label</description>
 					<posx>60</posx>
@@ -2589,7 +2589,7 @@
 				<bordersize>5</bordersize>
 				<texture background="true">$INFO[ListItem.Thumb]</texture>
 				<aspectratio>scale</aspectratio>
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewCoverFocusAnim)">ListViewCoverFocusAnim</include>
 			</control>
 			<control type="image">
 				<description>Default Cover</description>
@@ -2601,10 +2601,10 @@
 				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewCoverFocusAnim)">ListViewCoverFocusAnim</include>
 			</control>
 			<control type="group">
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+				<include>ListViewFocusAnim</include>
 				<control type="label">
 					<description>Label</description>
 					<posx>80</posx>
@@ -2665,7 +2665,7 @@
 				<bordersize>5</bordersize>
 				<texture background="true">$INFO[ListItem.Thumb]</texture>
 				<aspectratio>scale</aspectratio>
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewCoverFocusAnim)">ListViewCoverFocusAnim</include>
 			</control>
 			<control type="image">
 				<description>Default Cover</description>
@@ -2677,10 +2677,10 @@
 				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewCoverFocusAnim)">ListViewCoverFocusAnim</include>
 			</control>
 			<control type="group">
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+				<include>ListViewFocusAnim</include>
 				<control type="label">
 					<description>Label</description>
 					<posx>80</posx>
@@ -2741,7 +2741,7 @@
 				<bordersize>5</bordersize>
 				<texture background="true">$INFO[ListItem.Thumb]</texture>
 				<aspectratio>scale</aspectratio>
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewCoverFocusAnim)">ListViewCoverFocusAnim</include>
 			</control>
 			<control type="image">
 				<description>Default Cover</description>
@@ -2753,10 +2753,10 @@
 				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewCoverFocusAnim)">ListViewCoverFocusAnim</include>
 			</control>
 			<control type="group">
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+				<include>ListViewFocusAnim</include>
 				<control type="label">
 					<description>Label</description>
 					<posx>80</posx>
@@ -2807,7 +2807,7 @@
 				<bordersize>5</bordersize>
 				<texture background="true">$INFO[ListItem.Thumb]</texture>
 				<aspectratio>scale</aspectratio>
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewCoverFocusAnim)">ListViewCoverFocusAnim</include>
 			</control>
 			<control type="image">
 				<description>Default Cover</description>
@@ -2819,10 +2819,10 @@
 				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewCoverFocusAnim)">ListViewCoverFocusAnim</include>
 			</control>
 			<control type="group">
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>	
+				<include>ListViewFocusAnim</include>	
 				<control type="label">
 					<description>Label</description>
 					<posx>80</posx>
@@ -2872,7 +2872,7 @@
 				<bordersize>5</bordersize>
 				<texture background="true">$INFO[ListItem.Thumb]</texture>
 				<aspectratio>scale</aspectratio>
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewCoverFocusAnim)">ListViewCoverFocusAnim</include>
 			</control>
 			<control type="image">
 				<description>Default Cover</description>
@@ -2884,10 +2884,10 @@
 				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewCoverFocusAnim)">ListViewCoverFocusAnim</include>
 			</control>	
 			<control type="group">
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+				<include>ListViewFocusAnim</include>
 				<control type="label">
 					<description>Label</description>
 					<posx>80</posx>
@@ -2931,8 +2931,8 @@
 			<aspectratio>stretch</aspectratio>
 			<visible>Control.HasFocus(52)</visible>
 			<include>ListViewSelectFadeAnim</include>
-			<include condition="!Skin.HasSetting(DisableListScrollAnim) + !Skin.String(CommonListStyle,3)">ListViewScrollAnim2</include>
-			<include condition="!Skin.HasSetting(DisableListScrollAnim) + Skin.String(CommonListStyle,3)">ListViewScrollAnim</include>
+			<include condition="!Skin.HasSetting(DisableListViewScrollAnim) + !Skin.String(CommonListStyle,3)">ListViewScrollAnim2</include>
+			<include condition="!Skin.HasSetting(DisableListViewScrollAnim) + Skin.String(CommonListStyle,3)">ListViewScrollAnim</include>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -3152,8 +3152,7 @@
 			</itemlayout>
 			<focusedlayout condition="Container.Content(TVShows)" height="270" width="208">	
 				<control type="group">
-					<animation effect="zoom" end="112" center="auto" time="100">Focus</animation>
-					<animation effect="zoom" start="112" end="100" center="auto" time="100">UnFocus</animation>
+					<include condition="!Skin.HasSetting(DisableThumbnailViewCoverFocusAnim)">ThumbnailViewCoverFocusAnim</include>
 					<control type="image">
 						<description>Cover Case</description>
 						<posx>11</posx>
@@ -3197,8 +3196,7 @@
 			</focusedlayout>																	
 			<focusedlayout height="270" width="208">	
 				<control type="group">
-					<animation effect="zoom" end="112" center="auto" time="100">Focus</animation>
-					<animation effect="zoom" start="112" end="100" center="auto" time="100">UnFocus</animation>
+					<include condition="!Skin.HasSetting(DisableThumbnailViewCoverFocusAnim)">ThumbnailViewCoverFocusAnim</include>
 					<control type="image">
 						<description>Cover Case</description>
 						<posx>11</posx>
@@ -3365,8 +3363,7 @@
 			</itemlayout>			
 			<focusedlayout condition="Container.Content(TVShows)" height="179" width="138">	
 				<control type="group">
-					<animation effect="zoom" end="116" center="auto" time="100">Focus</animation>
-					<animation effect="zoom" start="116" end="100" center="auto" time="100">UnFocus</animation>
+					<include condition="!Skin.HasSetting(DisableThumbnailViewCoverFocusAnim)">ThumbnailViewCoverFocusAnim2</include>
 					<control type="image">
 						<description>Cover Case</description>
 						<posx>15</posx>
@@ -3409,8 +3406,7 @@
 			</focusedlayout>
 			<focusedlayout height="179" width="138">	
 				<control type="group">
-					<animation effect="zoom" end="116" center="auto" time="100">Focus</animation>
-					<animation effect="zoom" start="116" end="100" center="auto" time="100">UnFocus</animation>
+					<include condition="!Skin.HasSetting(DisableThumbnailViewCoverFocusAnim)">ThumbnailViewCoverFocusAnim2</include>
 					<control type="image">
 						<description>Cover Case</description>
 						<posx>15</posx>
@@ -3575,8 +3571,7 @@
 			</itemlayout>															
 			<focusedlayout height="270" width="249">
 				<control type="group">
-					<animation effect="zoom" end="108" center="auto" time="100">Focus</animation>
-					<animation effect="zoom" start="108" end="100" center="auto" time="100">UnFocus</animation>
+					<include condition="!Skin.HasSetting(DisableThumbnailViewCoverFocusAnim)">ThumbnailViewCoverFocusAnim3</include>
 					<control type="image">
 						<description>Cover Case</description>
 						<posx>10</posx>
@@ -3662,8 +3657,7 @@
 			</itemlayout>															
 			<focusedlayout height="177" width="177">					
 				<control type="group">
-					<animation effect="zoom" end="116" center="auto" time="100">Focus</animation>
-					<animation effect="zoom" start="116" end="100" center="auto" time="100">UnFocus</animation>
+					<include condition="!Skin.HasSetting(DisableThumbnailViewCoverFocusAnim)">ThumbnailViewCoverFocusAnim2</include>
 					<control type="image">
 						<description>Cover Case</description>
 						<posx>5</posx>
