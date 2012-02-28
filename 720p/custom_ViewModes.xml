@@ -30,13 +30,6 @@
 				<onclick>Container.SetViewMode(50)</onclick>
 				<onclick>Dialog.Close(3002)</onclick>
 			</control>
-			<control type="button" id="2">
-				<description>Big Icon</description>
-				<include>DropDownMenuViewModeBtn</include>
-				<label>$LOCALIZE[31104]</label>
-				<onclick>Container.SetViewMode(51)</onclick>
-				<onclick>Dialog.Close(3002)</onclick>
-			</control>
 			<control type="button" id="3">
 				<description>Wide Icon (TVShows)</description>
 				<include>DropDownMenuViewModeBtn</include>
@@ -360,12 +353,6 @@
 				<posx>18</posx>
 				<height>37</height>
 				<texture>gui/view-icon.png</texture>
-				<aspectratio>keep</aspectratio>
-			</control>
-			<control type="image">
-				<posx>18</posx>
-				<height>37</height>
-				<texture>gui/view-big-icon.png</texture>
 				<aspectratio>keep</aspectratio>
 			</control>
 			<control type="image">
