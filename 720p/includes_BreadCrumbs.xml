@@ -190,7 +190,7 @@
 				<description>TV Show Title</description>
 				<include>BreadCrumbLabel</include>
 				<label>$VAR[BreadCrumbTVShowTitleLabel]</label>
-				<visible>!StringCompare(Container.FolderPath,videodb://5/) + [Container.Content(Seasons) | Container.Content(Episodes)]</visible>
+				<visible>!StringCompare(Container.FolderPath,videodb://5/) + !Substring(Container.FolderPath,plugin:) + [Container.Content(Seasons) | Container.Content(Episodes)]</visible>
 				<include>BreadCrumbSlideLvl3Anim</include>
 			</control>
 			<control type="image">
@@ -204,7 +204,7 @@
 				<description>Folder</description>
 				<include>BreadCrumbLabel</include>
 				<label>[UPPERCASE][B]$INFO[Container.FolderName][/B][/UPPERCASE]</label>
-				<visible>![Container.Content(Episodes) | Container.Content(Seasons)]</visible>
+				<visible>!Container.Content(Episodes) | !Container.Content(Seasons) | [Container.Content(Episodes) + Substring(Container.FolderPath,plugin:)] | [Container.Content(Seasons) + Substring(Container.FolderPath,plugin:)]</visible>
 				<visible>[!Container.Content(Genres) + [Substring(Container.FolderPath,videodb://1/1/) | Substring(Container.FolderPath,videodb://2/1/) | Substring(Container.FolderPath,videodb://3/1/)]]
 				| [!Container.Content(Years) + [Substring(Container.FolderPath,videodb://1/3/) | Substring(Container.FolderPath,videodb://2/3/) | Substring(Container.FolderPath,videodb://3/3/)]]
 				| [!Container.Content(Actors) + [Substring(Container.FolderPath,videodb://1/4/) | Substring(Container.FolderPath,videodb://2/4/)]]
