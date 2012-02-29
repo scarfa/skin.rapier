@@ -17,6 +17,7 @@
 <string id="31308">Komiksy</string>
 <string id="31309">Ostatnio odtwarzane</string>
 <string id="31310">Nie wybrano źródła prognozy pogody. Sprawdź ustawienia pogody i upewnij się, że wtyczka pogody jest zainstalowana.</string>
+<string id="31311">W toku</string>
 <string id="31202">Pozycji</string>
 <string id="31203">Nie znaleziono opisu.</string>
 <string id="31204">Nie znaleziono fabuły.</string>
@@ -79,10 +80,12 @@
 
 <!-- skin settings home -->
 <string id="31068">Ukryj podmenu</string>
+<string id="31080">Ukryj informacje o nagrywaniu</string>
 <string id="31069">Ukryj informacje o systemie</string>
 <string id="31070">Ukryj kategorie</string>
 <string id="31071">Ukryj teraz odtwarzane</string>
 <string id="31072">Ukryj ostatnio dodane</string>
+<string id="31079">Ukryj "W toku"</string>
 <string id="31073">Ukryj pogodę</string>
 <string id="31074">Ukryj ikony kategorii</string>
 <string id="31075">Pokazuj przyciski nawigacyjne</string>
@@ -122,9 +125,11 @@
 <string id="31050">Ocena "gwiazdkowa"</string>
 <string id="31401">Automatyczne przewijanie opisu</string>
 <string id="31402">Automatyczne przewijanie fabuły</string>
-<string id="31404">Widok Plakatu</string>
-<string id="31014">ExtraMiniatury</string>
-<string id="31015">ExtraFanArt</string>
+<string id="31404">Użyj widoku plakatów</string>
+<string id="31405">Użyj widoku bannerów</string>
+<string id="31406">Użyj lokalnych okładek</string>
+<string id="31014">Extra miniatury</string>
+<string id="31015">Extra FanArty</string>
 <string id="31407">Użyj wizualizacji jako tła</string>
 <string id="31408">Użyj FanArtu wykonawcy jako tła</string>
 <string id="31409">Wizualizacja / FanArt wykonawcy jako tło podczas odtwarzania muzyki</string>
@@ -136,15 +141,17 @@
 <string id="31416">Użyj szarych ikon</string>
 <string id="31417">Rozszerzony</string>
 <string id="31418">Normalny</string>
+<string id="31419">Pokazuj animacje</string>
 <string id="31424">Przyciemnij okładkę</string>
 <string id="31427">Ikony metadanych</string>
 <string id="31428">Ukryj rozdzielczość wideo</string>
 <string id="31429">Ukryj proporcje wideo</string>
-<string id="31430">Wyłącz animację przewijania listy</string>
-<string id="31431">Wyłącz animację aktywności na liście</string>
-<string id="31432">Pokazuj 'cleart.png' serialu na OSD</string>
-<string id="31433">Włącz CDArt albumów muzycznych</string>
-<string id="31434">Pokazuj CDArt w trybie odtwarzania pełnoekranowego</string>
+<string id="31430">Wyłącz efekt przesuwania wskaźnika</string>
+<string id="31431">Wyłącz efekt powiększania okładki</string>
+<string id="31432">Pokazuj Clear Art na OSD</string>
+<string id="31435">Pokazuj Clear Logo na OSD</string>
+<string id="31433">Włącz CD Art albumów muzycznych</string>
+<string id="31434">Pokazuj CD Art w trybie odtwarzania pełnoekranowego</string>
 
 <!-- skin settings backgrounds -->
 <string id="31051">Pokaż tylko na ekranie głównym</string>
@@ -166,8 +173,8 @@
 <string id="31502">Artwork Downloader</string>
 <string id="31503">Plakat</string>
 <string id="31504">Banery</string>
-<string id="31507">ClearArt</string>
-<string id="31508">ClearLogo</string>
+<string id="31507">Clear Art</string>
+<string id="31508">Clear Logo</string>
 <string id="31509">Miniatura TV</string>
 <string id="31510">Grafika postaci</string>
 <string id="31511">Miniatura domyślna</string>
