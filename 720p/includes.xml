@@ -16,6 +16,7 @@
 	<include file="includes_StatusBar.xml"/>
 	<include file="includes_BreadCrumbs.xml"/>
 	<include file="includes_Animations.xml"/>
+	<include file="includes_AnimationsViews.xml"/>
 	<include file="includes_Dialogs.xml"/>
 	<include file="includes_Backgrounds.xml"/>
 	<include file="includes_MediaFlags.xml"/>
