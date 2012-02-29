@@ -192,50 +192,64 @@
 				<height>167</height>
 				<texture diffuse="covers/player-media-cover-diffuse.png">$INFO[VideoPlayer.Cover]</texture>
 				<aspectratio>keep</aspectratio>
-				<visible>![Skin.HasSetting(ShowTVShowClearArtOSD) + VideoPlayer.Content(Episodes)]</visible>
+				<visible>![[Skin.HasSetting(ShowTVShowClearArtOSD) | Skin.HasSetting(ShowTVShowClearLogoOSD)] + VideoPlayer.Content(Episodes)]</visible>
 			</control>
 			
 			<control type="group">
-				<visible>Skin.HasSetting(ShowTVShowClearArtOSD) + VideoPlayer.Content(Episodes)</visible>
+				<visible>[Skin.HasSetting(ShowTVShowClearArtOSD) | Skin.HasSetting(ShowTVShowClearLogoOSD)] + VideoPlayer.Content(Episodes)</visible>
 				
-				<control type="image">
+				<control type="image" id="1000">
 					<description>Cover</description>
 					<posx>983</posx>
 					<posy>92</posy>
 					<width>210</width>
 					<height>167</height>
-					<texture diffuse="covers/player-media-cover-diffuse.png">$INFO[Player.FolderPath]clearart.png</texture>
+					<texture diffuse="covers/player-media-cover-diffuse.png">$INFO[Player.FolderPath]$VAR[TVShowClearImageOSD]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
 				
-				<control type="image">
+				<control type="image" id="1001">
 					<description>Cover</description>
 					<posx>983</posx>
 					<posy>92</posy>
 					<width>210</width>
 					<height>167</height>
-					<texture diffuse="covers/player-media-cover-diffuse.png">$INFO[Player.FolderPath]../clearart.png</texture>
+					<texture diffuse="covers/player-media-cover-diffuse.png">$INFO[Player.FolderPath]../$VAR[TVShowClearImageOSD]</texture>
 					<aspectratio>keep</aspectratio>
+					<visible>IsEmpty(Control.GetLabel(1000))</visible>
 				</control>
 				
-				<control type="image">
+				<control type="image" id="1002">
 					<description>Cover</description>
 					<posx>983</posx>
 					<posy>92</posy>
 					<width>210</width>
 					<height>167</height>
-					<texture diffuse="covers/player-media-cover-diffuse.png">$INFO[Player.FolderPath]../../clearart.png</texture>
+					<texture diffuse="covers/player-media-cover-diffuse.png">$INFO[Player.FolderPath]../../$VAR[TVShowClearImageOSD]</texture>
 					<aspectratio>keep</aspectratio>
+					<visible>IsEmpty(Control.GetLabel(1000)) + IsEmpty(Control.GetLabel(1001))</visible>
 				</control>
 				
-				<control type="image">
+				<control type="image" id="1003">
 					<description>Cover</description>
 					<posx>983</posx>
 					<posy>92</posy>
 					<width>210</width>
 					<height>167</height>
-					<texture diffuse="covers/player-media-cover-diffuse.png">$INFO[Player.FolderPath]../../../clearart.png</texture>
+					<texture diffuse="covers/player-media-cover-diffuse.png">$INFO[Player.FolderPath]../../../$VAR[TVShowClearImageOSD]</texture>
 					<aspectratio>keep</aspectratio>
+					<visible>IsEmpty(Control.GetLabel(1000)) + IsEmpty(Control.GetLabel(1001)) + IsEmpty(Control.GetLabel(1002))</visible>
+				</control>
+				
+				<control type="image" id="1004">
+					<description>Cover</description>
+					<posx>983</posx>
+					<posy>92</posy>
+					<width>210</width>
+					<height>167</height>
+					<texture diffuse="covers/player-media-cover-diffuse.png">$INFO[VideoPlayer.Cover]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>IsEmpty(Control.GetLabel(1000)) + IsEmpty(Control.GetLabel(1001)) + IsEmpty(Control.GetLabel(1002)) + IsEmpty(Control.GetLabel(1003))</visible>
 				</control>
 			</control>
 		</control>
