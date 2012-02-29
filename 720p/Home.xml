@@ -2,6 +2,8 @@
 	<defaultcontrol always="true">850</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<onload condition="System.HasAddon(script.artistslideshow) + Skin.HasSetting(UseFanartForMusicPlayingBG) + Skin.HasSetting(EnableArtistFanartSlideshow)">RunScript(script.artistslideshow)</onload>
+	<onload condition="System.HasAddon(script.watchlist) + !Skin.HasSetting(HideWatchListHomePanel) + IsEmpty(Window(Home).Property(Watchlist_Running))">RunScript(script.watchlist,movies=true&amp;episodes=true&amp;albums=true&amp;limit=20)</onload>
+	<onload condition="System.HasAddon(script.watchlist) + !Skin.HasSetting(HideWatchListHomePanel) + IsEmpty(Window(Home).Property(Watchlist_Running))">SetProperty(Watchlist_Running,True)</onload>
 	
 	<controls>		
 		<control type="group">	
@@ -11,10 +13,13 @@
 			<include>BackgroundOpenCloseAnim</include>	
 		</control>
 
+		<include condition="!Skin.HasSetting(HideRecentlyAddedHomePanel)">HomePanelFanart</include>
 		<include condition="!Skin.HasSetting(HideRecentlyAddedHomePanel)">RecentlyAddedPanel</include>
+		<include condition="!Skin.HasSetting(HideRecentlyAddedHomePanel) + System.HasAddon(script.watchlist) + !Skin.HasSetting(HideWatchListHomePanel)">WatchListPanel</include>
 		<include condition="!Skin.HasSetting(HideNowPlayingHomePanel)">NowPlayingPanel</include>
 		<include condition="!Skin.HasSetting(HideWeatherHomePanel) + !Skin.HasSetting(DisableWeather) + !IsEmpty(Weather.Plugin)">WeatherPanel</include>
 		<include condition="!Skin.HasSetting(HideSystemInfoHomePanel)">SystemInfoPanel</include>
+		<include condition="!Skin.HasSetting(HideRecordingInfoHomePanel)">RecordingInfoPanel</include>
 		<include condition="!Skin.HasSetting(HideHomeCategoryIcons)">HomeCategoryIcons</include>
 		<include>DialogPopUpScreenDim</include>	
 					

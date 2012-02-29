@@ -17,6 +17,7 @@
 	<string id="31308">Κόμικς</string>
 	<string id="31309">Πρόσφατες Αναπαραγωγές</string>
 	<string id="31310">Δεν έχει οριστεί Πάροχος Καιρού. Ελέγξτε τις Ρυθμίσεις Καιρού και βεβαιωθείτε ότι κάποιο Πρόσθετο είναι εγκατεστημένο.</string>
+	<string id="31311">Σε Εξέλιξη</string>
 	<string id="31202">Αντικείμενα</string>
 	<string id="31203">Δεν βρέθηκε επισκόπηση.</string>
 	<string id="31204">Δεν βρέθηκε περιγραφή.</string>
@@ -79,10 +80,12 @@
 
 	<!-- skin settings home -->
 	<string id="31068">Απόκρυψη Yπομενού</string>
+	<string id="31080">Απόκρυψη Πληροφοριών Εγγραφής</string>
 	<string id="31069">Απόκρυψη Πληροφοριών Συστήματος</string>
 	<string id="31070">Απόκρυψη Κατηγοριών</string>
 	<string id="31071">Απόκρυψη Τώρα εκτελείται</string>
 	<string id="31072">Απόκρυψη Πρόσφατων Προσθηκών</string>
+	<string id="31079">Απόκρυψη "Σε Εξέλιξη"</string>
 	<string id="31073">Απόκρυψη Καιρού</string>
 	<string id="31074">Απόκρυψη Εικονιδίων</string>
 	<string id="31075">Εμφάνιση Κουμπιών Πλοήγησης</string>
@@ -122,7 +125,9 @@
 	<string id="31050">Αστέρια Αξιολόγησης</string>
 	<string id="31401">Κύλιση Πλοκής</string>
 	<string id="31402">Κύλιση Περιγραφής</string>
-	<string id="31404">Διάταξη Αφίσας</string>
+	<string id="31404">Χρήση Διάταξης Αφίσας</string>
+	<string id="31405">Χρήση Διάταξης Banner</string>
+	<string id="31406">Χρήση Τοπικών Εξωφύλλων</string>
 	<string id="31014">Έξτρα Μικρογραφίες</string>
 	<string id="31015">Έξτρα Fanart</string>
 	<string id="31407">Απεικόνιση για Υπόβαθρο</string>
@@ -136,13 +141,15 @@
 	<string id="31416">Λευκό Χρώμα</string>
 	<string id="31417">Εκτεταμένο</string>
 	<string id="31418">Κανονικό</string>
+	<string id="31419">Εφέ κίνησης Προβολών</string>
 	<string id="31424">Αμυδρό Εξώφυλλο</string>
 	<string id="31427">Σημαίες Πολυμέσων</string>
 	<string id="31428">Απόκρυψη Ανάλυσης Βίντεο</string>
 	<string id="31429">Απόκρυψη Λόγου Απεικόνισης</string>
-	<string id="31430">Απενεργοποίηση εφέ Κύλισης σε Λίστες</string>
-	<string id="31431">Απενεργοποίηση εφέ Εστίασης σε Λίστες</string>
-	<string id="31432">Εμφάνιση τηλεοπτικού 'clearart.png' στο OSD</string>
+	<string id="31430">Απενεργοποίηση εφέ ολίσθησης</string>
+	<string id="31431">Απενεργοποίηση Εστιασμένου Ζουμ Εξωφύλλων</string>
+	<string id="31432">Εμφάνιση Clear Art στο OSD</string>
+	<string id="31435">Εμφάνιση Clear Logo στο OSD</string>
 	<string id="31433">Ενεργοποίηση Μουσικού CDArt</string>
 	<string id="31434">Εμφάνιση CDArt σε Πλήρη Οθόνη</string>
 
