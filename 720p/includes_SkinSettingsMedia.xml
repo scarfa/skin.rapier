@@ -41,6 +41,20 @@
 					<label>$LOCALIZE[31432]</label>
 					<selected>Skin.HasSetting(ShowTVShowClearArtOSD)</selected>
 					<onclick>Skin.ToggleSetting(ShowTVShowClearArtOSD)</onclick>
+					<onclick>Skin.Reset(ShowTVShowClearLogoOSD)</onclick>
+				</control>
+				<control type="radiobutton" id="3030">
+					<description>Show TV Show Clear Logo On OSD</description>
+					<include>SettingsContentRadioBtn</include>
+					<label>$LOCALIZE[31435]</label>
+					<selected>Skin.HasSetting(ShowTVShowClearLogoOSD)</selected>
+					<onclick>Skin.ToggleSetting(ShowTVShowClearLogoOSD)</onclick>
+					<onclick>Skin.Reset(ShowTVShowClearArtOSD)</onclick>
+				</control>
+				<control type="button" id="3031">
+					<description>View Options Label (Music)</description>
+					<include>SettingsHeaderBtn</include>
+					<label>$LOCALIZE[2]</label>
 				</control>
 				<control type="radiobutton" id="3023">
 					<description>Enable Music CDArt</description>
