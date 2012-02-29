@@ -532,10 +532,9 @@
 			<posx>43</posx>
 			<posy>119</posy>
 			<width>250</width>
-			<height>25</height>
-			<texture border="4">panels/panel3.png</texture>
+			<height>27</height>
+			<texture border="8">views/genre-background.png</texture>
 			<visible>!IsEmpty(ListItem.Genre)</visible>
-			<animation effect="fade" end="35" condition="true">Conditional</animation>
 		</control>
 					
 		<control type="label">
@@ -545,10 +544,11 @@
 			<width>234</width>
 			<font>MediaInfoFont3</font>
 			<textcolor>WhiteColor</textcolor>
+			<shadowcolor>ShadowColor</shadowcolor>
 			<aligny>center</aligny>
 			<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
 			<scroll>false</scroll>
-			<animation effect="fade" end="75" condition="true">Conditional</animation>
+			<animation effect="fade" end="65" condition="true">Conditional</animation>
 		</control>
 	</include>
 	
@@ -607,8 +607,8 @@
 			<posx>43</posx>
 			<posy>119</posy>
 			<width>250</width>
-			<height>25</height>
-			<texture border="4">panels/panel3.png</texture>
+			<height>27</height>
+			<texture border="8">views/genre-background.png</texture>
 			<visible>!IsEmpty(ListItem.Genre)</visible>
 			<animation effect="fade" end="35" condition="true">Conditional</animation>
 		</control>
@@ -620,6 +620,7 @@
 			<width>234</width>
 			<font>MediaInfoFont3</font>
 			<textcolor>WhiteColor</textcolor>
+			<shadowcolor>ShadowColor</shadowcolor>
 			<aligny>center</aligny>
 			<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
 			<scroll>false</scroll>
@@ -669,8 +670,8 @@
 			<posx>43</posx>
 			<posy>119</posy>
 			<width>250</width>
-			<height>25</height>
-			<texture border="4">panels/panel3.png</texture>
+			<height>27</height>
+			<texture border="8">views/genre-background.png</texture>
 			<visible>!IsEmpty(ListItem.Genre)</visible>
 			<animation effect="fade" end="35" condition="true">Conditional</animation>
 		</control>
@@ -682,6 +683,7 @@
 			<width>234</width>
 			<font>MediaInfoFont3</font>
 			<textcolor>WhiteColor</textcolor>
+			<shadowcolor>ShadowColor</shadowcolor>
 			<aligny>center</aligny>
 			<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
 			<scroll>false</scroll>
@@ -786,8 +788,8 @@
 			<posx>43</posx>
 			<posy>119</posy>
 			<width>250</width>
-			<height>25</height>
-			<texture border="4">panels/panel3.png</texture>
+			<height>27</height>
+			<texture border="8">views/genre-background.png</texture>
 			<visible>!IsEmpty(ListItem.Genre)</visible>
 			<animation effect="fade" end="35" condition="true">Conditional</animation>
 		</control>
@@ -799,6 +801,7 @@
 			<width>234</width>
 			<font>MediaInfoFont3</font>
 			<textcolor>WhiteColor</textcolor>
+			<shadowcolor>ShadowColor</shadowcolor>
 			<aligny>center</aligny>
 			<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
 			<scroll>false</scroll>
@@ -861,8 +864,8 @@
 			<posx>43</posx>
 			<posy>119</posy>
 			<width>250</width>
-			<height>25</height>
-			<texture border="4">panels/panel3.png</texture>
+			<height>27</height>
+			<texture border="8">views/genre-background.png</texture>
 			<visible>!IsEmpty(ListItem.Genre)</visible>
 			<animation effect="fade" end="35" condition="true">Conditional</animation>
 		</control>
@@ -874,6 +877,7 @@
 			<width>234</width>
 			<font>MediaInfoFont3</font>
 			<textcolor>WhiteColor</textcolor>
+			<shadowcolor>ShadowColor</shadowcolor>
 			<aligny>center</aligny>
 			<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
 			<scroll>false</scroll>
