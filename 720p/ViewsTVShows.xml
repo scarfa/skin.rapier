@@ -2486,10 +2486,10 @@
 		</itemlayout>
 		<focusedlayout width="387" height="86">
 			<control type="image">
-				<posx>-4</posx>
-				<posy>-4</posy>
-				<width>395</width>
-				<height>94</height>
+				<posx>-5</posx>
+				<posy>-5</posy>
+				<width>397</width>
+				<height>96</height>
 				<texture border="7">covers/cover-case-focus.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="0" end="100" time="150" reversible="false">Focus</animation>
@@ -2497,7 +2497,7 @@
 			<control type="image">
 				<width>387</width>
 				<height>86</height>
-				<bordersize>6</bordersize>
+				<bordersize>5</bordersize>
 				<texture background="true">dim.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
