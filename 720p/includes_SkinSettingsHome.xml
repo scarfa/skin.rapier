@@ -375,12 +375,36 @@
 					<selected>Skin.HasSetting(HideRecentlyAddedHomePanel)</selected>
 					<onclick>Skin.ToggleSetting(HideRecentlyAddedHomePanel)</onclick>
 				</control>
+				<control type="radiobutton" id="2340">
+					<description>Hide in Progress Info Panel</description>
+					<include>SettingsContentRadioBtn</include>
+					<label>$LOCALIZE[31079]</label>
+					<selected>Skin.HasSetting(HideWatchListHomePanel)</selected>
+					<onclick>Skin.ToggleSetting(HideWatchListHomePanel)</onclick>
+					<enable>!Skin.HasSetting(HideRecentlyAddedHomePanel)</enable>
+					<visible>System.HasAddon(script.watchlist)</visible>
+				</control>
 				<control type="radiobutton" id="2019">
 					<description>Hide Weather Info Panel</description>
 					<include>SettingsContentRadioBtn</include>
 					<label>$LOCALIZE[31073]</label>
 					<selected>Skin.HasSetting(HideWeatherHomePanel)</selected>
 					<onclick>Skin.ToggleSetting(HideWeatherHomePanel)</onclick>
+				</control>
+				<control type="radiobutton" id="2341">
+					<description>Hide Recording Info Panel</description>
+					<include>SettingsContentRadioBtn</include>
+					<label>$LOCALIZE[31080]</label>
+					<selected>Skin.HasSetting(HideRecordingInfoHomePanel)</selected>
+					<onclick>Skin.ToggleSetting(HideRecordingInfoHomePanel)</onclick>
+					<visible>[system.hasaddon(pvr.demo)
+					| system.hasaddon(pvr.fortherecord.argus)
+					| system.hasaddon(pvr.fortherecord.argus-rtsp) 
+					| system.hasaddon(pvr.hts) 
+					| system.hasaddon(pvr.mythtv) 
+					| system.hasaddon(pvr.team-mediaportal.tvserver) 
+					| system.hasaddon(pvr.team-mediaportal.tvserver-tsreader) 
+					| system.hasaddon(pvr.vdr.vnsi)]</visible>
 				</control>
 				<control type="radiobutton" id="2020">
 					<description>Hide System Info Panel</description>
