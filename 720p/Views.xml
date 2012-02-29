@@ -194,7 +194,7 @@
 		<control type="image">
 			<width>258</width>
 			<height>129</height>
-			<bordersize>5</bordersize>
+			<bordersize>4</bordersize>
 			<texture background="true">dim.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
@@ -242,7 +242,7 @@
 		<control type="image">
 			<width>258</width>
 			<height>172</height>
-			<bordersize>5</bordersize>
+			<bordersize>4</bordersize>
 			<texture background="true">dim.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
@@ -288,7 +288,7 @@
 		<control type="image">
 			<width>129</width>
 			<height>172</height>
-			<bordersize>10</bordersize>
+			<bordersize>9</bordersize>
 			<texture background="true">dim.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
@@ -323,7 +323,7 @@
 		<control type="image">
 			<width>129</width>
 			<height>129</height>
-			<bordersize>10</bordersize>
+			<bordersize>9</bordersize>
 			<texture background="true">dim.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
@@ -358,7 +358,7 @@
 		<control type="image">
 			<width>155</width>
 			<height>129</height>
-			<bordersize>10</bordersize>
+			<bordersize>9</bordersize>
 			<texture background="true">dim.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
@@ -391,31 +391,27 @@
 		</control>
 
 		<control type="image">
-			<posx>10</posx>
-			<posy>10</posy>
-			<width>160</width>
-			<height>225</height>
+			<width>180</width>
+			<height>245</height>
 			<texture>dim.png</texture>
+			<bordersize>9</bordersize>
 			<aspectratio>stretch</aspectratio>
 		</control>
 
 		<control type="image">
-			<posx>10</posx>
-			<posy>10</posy>
-			<width>160</width>
-			<height>225</height>
-			<bordersize>18</bordersize>
+			<width>180</width>
+			<height>245</height>
+			<bordersize>28</bordersize>
 			<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 			<aspectratio>keep</aspectratio>
 			<visible>IsEmpty(ListItem.Thumb)</visible>
 		</control>
 
 		<control type="image">
-			<posx>10</posx>
-			<posy>10</posy>
-			<width>160</width>
-			<height>225</height>
+			<width>180</width>
+			<height>245</height>
 			<texture background="true">$INFO[ListItem.Thumb]</texture>
+			<bordersize>10</bordersize>
 			<aspectratio>stretch</aspectratio>
 		</control>
 	</include>
@@ -452,31 +448,27 @@
 		</control>
 
 		<control type="image">
-			<posx>10</posx>
-			<posy>10</posy>
-			<width>214</width>
-			<height>225</height>
+			<width>234</width>
+			<height>245</height>
 			<texture>dim.png</texture>
+			<bordersize>9</bordersize>
 			<aspectratio>stretch</aspectratio>
 		</control>
 
 		<control type="image">
-			<posx>10</posx>
-			<posy>10</posy>
-			<width>214</width>
-			<height>225</height>
-			<bordersize>40</bordersize>
+			<width>234</width>
+			<height>245</height>
+			<bordersize>50</bordersize>
 			<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 			<aspectratio>keep</aspectratio>
 			<visible>IsEmpty(ListItem.Thumb)</visible>
 		</control>
 
 		<control type="image">
-			<posx>10</posx>
-			<posy>10</posy>
-			<width>214</width>
-			<height>225</height>
+			<width>234</width>
+			<height>245</height>
 			<texture background="true">$INFO[ListItem.Thumb]</texture>
+			<bordersize>10</bordersize>
 			<aspectratio>stretch</aspectratio>
 		</control>
 	</include>

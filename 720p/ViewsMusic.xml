@@ -3642,15 +3642,6 @@
 				<visible>Container.Content(Albums)</visible>
 				<itemlayout width="214" height="225">
 					<control type="image">
-						<description>Cover</description>
-						<posx>10</posx>
-						<posy>10</posy>
-						<width>214</width>
-						<height>225</height>
-						<texture background="true">$INFO[ListItem.Thumb]</texture>
-						<aspectratio>stretch</aspectratio>
-					</control>
-					<control type="image">
 						<description>Default Cover</description>
 						<posx>10</posx>
 						<posy>10</posy>
@@ -3660,6 +3651,15 @@
 						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 						<animation effect="fade" end="60" condition="true">Conditional</animation>
+					</control>
+					<control type="image">
+						<description>Cover</description>
+						<posx>10</posx>
+						<posy>10</posy>
+						<width>214</width>
+						<height>225</height>
+						<texture background="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>stretch</aspectratio>
 					</control>
 					<control type="image">
 						<description>Dim</description>

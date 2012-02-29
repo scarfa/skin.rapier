@@ -2901,17 +2901,6 @@
 				<visible>Container.Content(Movies)</visible>
 				<itemlayout width="160" height="225">
 					<control type="image">
-						<description>Default Cover Case</description>
-						<posx>10</posx>
-						<posy>10</posy>
-						<width>160</width>
-						<height>225</height>
-						<texture border="2">covers/cover-case-noshadow-focus.png</texture>
-						<aspectratio>stretch</aspectratio>
-						<visible>IsEmpty(ListItem.Thumb)</visible>
-						<animation effect="fade" end="70" condition="true">Conditional</animation>
-					</control>
-					<control type="image">
 						<description>Default Cover</description>
 						<posx>10</posx>
 						<posy>10</posy>
