@@ -442,6 +442,7 @@
 				<posy>BottomPaneOffsetY</posy>	
 				<!--<include>InfoPaneImage</include>-->
 				<include>InfoPaneMediaDetails</include>
+				<include condition="!Skin.HasSetting(DisableTVShowsLogo)">InfoPaneClearLogo</include>
 				<include>BottomPaneOpenCloseAnim</include>
 			</control>
 			
@@ -871,6 +872,7 @@
 				<posy>BottomPaneOffsetY</posy>	
 				<!--<include>InfoPaneImage</include>-->
 				<include>InfoPaneMediaDetails</include>
+				<include condition="!Skin.HasSetting(DisableTVShowsLogo)">InfoPaneClearLogo</include>
 				<include>BottomPaneOpenCloseAnim</include>
 			</control>
 			
@@ -893,6 +895,7 @@
 				<include condition="!Skin.HasSetting(EnableEpisodesListInfo2ExtraThumbs) + !Skin.HasSetting(ShowLandscape)">ListInfo2PanelFanart</include>
 				<include condition="Skin.HasSetting(EnableEpisodesListInfo2ExtraThumbs)">ListInfo2PanelExtraThumbs</include>
 				<include condition="Skin.HasSetting(ShowLandscape) + !Skin.HasSetting(EnableEpisodesListInfo2ExtraThumbs)">ListInfo2PanelLandscape</include>
+				<include condition="!Skin.HasSetting(DisableTVShowsLogo) + !Skin.HasSetting(ShowLandscape) + !Skin.HasSetting(EnableEpisodesListInfo2ExtraThumbs)">ListInfo2PanelLogo</include>
 				
 				<control type="group">
 					<description>Media Info Area</description>
@@ -1052,6 +1055,7 @@
 				<posy>BottomPaneOffsetY</posy>	
 				<!--<include>InfoPaneImage</include>-->
 				<include>InfoPaneMediaDetails</include>
+				<include condition="!Skin.HasSetting(DisableTVShowsLogo)">InfoPaneClearLogo</include>
 				<include>BottomPaneOpenCloseAnim</include>
 			</control>	
 
@@ -1614,6 +1618,7 @@
 				<visible>!IsEmpty(ListItem.Title)</visible>
 				<include condition="!Skin.HasSetting(ShowLandscape)">ListInfo3PanelFanart</include>
 				<include condition="Skin.HasSetting(ShowLandscape)">ListInfo3PanelLandscape</include>
+				<include condition="!Skin.HasSetting(DisableTVShowsLogo) + !Skin.HasSetting(ShowLandscape)">ListInfo3PanelLogo</include>
 				
 				<control type="group">
 					<description>Media Info Area</description>
@@ -2027,6 +2032,7 @@
 				<posy>BottomPaneOffsetY</posy>	
 				<!--<include>InfoPaneImage</include>-->
 				<include>InfoPaneMediaDetails</include>
+				<include condition="!Skin.HasSetting(DisableTVShowsLogo)">InfoPaneClearLogo</include>
 				<include>BottomPaneOpenCloseAnim</include>
 			</control>	
 

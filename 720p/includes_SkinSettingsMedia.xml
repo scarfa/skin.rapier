@@ -148,7 +148,7 @@
 				<control type="radiobutton" id="3015">
 					<description>Disable List View Scroll Animation</description>
 					<include>SettingsContentRadioBtn</include>
-					<label>$LOCALIZE[31430] - $LOCALIZE[31105], $LOCALIZE[31111], $LOCALIZE[31112]</label>
+					<label>$LOCALIZE[31430] - $LOCALIZE[31105], $LOCALIZE[31111], $LOCALIZE[31112], $LOCALIZE[31115]</label>
 					<selected>Skin.HasSetting(DisableListViewScrollAnim)</selected>
 					<onclick>Skin.ToggleSetting(DisableListViewScrollAnim)</onclick>
 				</control>

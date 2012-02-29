@@ -142,6 +142,7 @@
 				<posy>BottomPaneOffsetY</posy>	
 				<!--<include>InfoPaneImage</include>-->
 				<include>InfoPaneMediaDetails</include>
+				<include condition="!Skin.HasSetting(DisableTVShowsLogo)">InfoPaneClearLogo</include>
 				<include>BottomPaneOpenCloseAnim</include>
 			</control>
 
@@ -195,6 +196,7 @@
 				<posy>BottomPaneOffsetY</posy>	
 				<!--<include>InfoPaneImage</include>-->
 				<include>InfoPaneMediaDetails</include>
+				<include condition="!Skin.HasSetting(DisableTVShowsLogo)">InfoPaneClearLogo</include>
 				<include>BottomPaneOpenCloseAnim</include>
 			</control>
 
@@ -1191,6 +1193,7 @@
 				<posy>BottomPaneOffsetY</posy>	
 				<!--<include>InfoPaneImage</include>-->
 				<include>InfoPaneMediaDetails</include>
+				<include condition="!Skin.HasSetting(DisableTVShowsLogo)">InfoPaneClearLogo</include>
 				<include>BottomPaneOpenCloseAnim</include>
 			</control>
 			
@@ -1524,19 +1527,7 @@
 				<visible>!IsEmpty(ListItem.Title)</visible>
 				<include condition="!Skin.HasSetting(ShowLandscape)">ListInfo2PanelFanart</include>
 				<include condition="Skin.HasSetting(ShowLandscape)">ListInfo2PanelLandscape</include>
-				
-				<control type="image">
-					<description>Logo</description>
-					<posx>382</posx>
-					<posy>332</posy>
-					<width>200</width>
-					<height>78</height>
-					<texture background="true">$INFO[ListItem.Path]logo.png</texture>
-					<aspectratio align="left">keep</aspectratio>
-					<bordersize>4</bordersize>
-					<fadetime>IconCrossfadeTime</fadetime>
-					<visible>Skin.HasSetting(EnableListInfo2TVShowsLogo)</visible>
-				</control>
+				<include condition="!Skin.HasSetting(DisableTVShowsLogo) + !Skin.HasSetting(ShowLandscape)">ListInfo2PanelLogo</include>
 			
 				<control type="group">
 					<description>Media Info Area</description>
@@ -1698,6 +1689,7 @@
 				<posy>BottomPaneOffsetY</posy>	
 				<!--<include>InfoPaneImage</include>-->
 				<include>InfoPaneMediaDetails</include>
+				<include condition="!Skin.HasSetting(DisableTVShowsLogo)">InfoPaneClearLogo</include>
 				<include>BottomPaneOpenCloseAnim</include>
 			</control>
 
@@ -2253,6 +2245,7 @@
 				<visible>!IsEmpty(ListItem.Title)</visible>
 				<include condition="!Skin.HasSetting(ShowLandscape)">ListInfo3PanelFanart</include>
 				<include condition="Skin.HasSetting(ShowLandscape)">ListInfo3PanelLandscape</include>
+				<include condition="!Skin.HasSetting(DisableTVShowsLogo) + !Skin.HasSetting(ShowLandscape)">ListInfo3PanelLogo</include>
 				
 				<control type="group">
 					<description>Media Info Area</description>

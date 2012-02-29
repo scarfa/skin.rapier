@@ -266,6 +266,7 @@
 				<posy>BottomPaneOffsetY</posy>	
 				<!--<include>InfoPaneImage</include>-->
 				<include>InfoPaneMediaDetails</include>
+				<include condition="!Skin.HasSetting(DisableTVShowsLogo)">InfoPaneClearLogo</include>
 				<include>BottomPaneOpenCloseAnim</include>
 			</control>
 
@@ -352,19 +353,6 @@
 					</control>
 				</control>
 			</control>
-					
-			<control type="image">
-				<description>Logo</description>
-				<posx>940</posx>
-				<posy>550</posy>
-				<width>200</width>
-				<height>78</height>
-				<texture background="true">$INFO[ListItem.Path]logo.png</texture>
-				<aspectratio aligny="top">keep</aspectratio>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<animation effect="fade" end="75" condition="true">Conditional</animation>
-				<visible>Skin.HasSetting(EnableListTVShowsLogo)</visible>
-			</control>
 			
 			<control type="grouplist">
 				<posx>880</posx>
@@ -437,6 +425,7 @@
 				<posy>BottomPaneOffsetY</posy>	
 				<!--<include>InfoPaneImage</include>-->
 				<include>InfoPaneMediaDetails</include>
+				<include condition="!Skin.HasSetting(DisableTVShowsLogo)">InfoPaneClearLogo</include>
 				<include>BottomPaneOpenCloseAnim</include>
 			</control>
 			

@@ -1279,28 +1279,14 @@
 				<visible>![Skin.String(CurrentViewMode,50) | Skin.String(CurrentViewMode,69) | Skin.String(CurrentViewMode,70)]</visible>
 			</control>
 			<control type="radiobutton" id="3043">
-				<description>List Clear Logo (TVShows)</description>
+				<description>Clear Logo (TVShows)</description>
 				<include>DropDownMenuRadioBtn</include>
 				<label>$LOCALIZE[31508]</label>
-				<selected>Skin.HasSetting(EnableListTVShowsLogo)</selected>
-				<onclick>Skin.ToggleSetting(EnableListTVShowsLogo)</onclick>
-				<visible>Skin.String(CurrentViewMode,52) + Container.Content(TVShows)</visible>
-			</control>
-			<control type="radiobutton" id="3046">
-				<description>List Info Clear Logo (TVShows)</description>
-				<include>DropDownMenuRadioBtn</include>
-				<label>$LOCALIZE[31508]</label>
-				<selected>Skin.HasSetting(EnableListInfoTVShowsLogo)</selected>
-				<onclick>Skin.ToggleSetting(EnableListInfoTVShowsLogo)</onclick>
-				<visible>Skin.String(CurrentViewMode,61) + Container.Content(TVShows)</visible>
-			</control>
-			<control type="radiobutton" id="3047">
-				<description>List Info 2 Clear Logo (TVShows)</description>
-				<include>DropDownMenuRadioBtn</include>
-				<label>$LOCALIZE[31508]</label>
-				<selected>Skin.HasSetting(EnableListInfo2TVShowsLogo)</selected>
-				<onclick>Skin.ToggleSetting(EnableListInfo2TVShowsLogo)</onclick>
-				<visible>Skin.String(CurrentViewMode,65) + Container.Content(TVShows)</visible>
+				<selected>!Skin.HasSetting(DisableTVShowsLogo)</selected>
+				<onclick>Skin.ToggleSetting(DisableTVShowsLogo)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<include>ReloadSkinNotification</include>
+				<visible>Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)</visible>
 			</control>
 			<control type="radiobutton" id="3091">
 				<description>Show Landscape.jpg</description>
