@@ -312,7 +312,7 @@
 				| [Skin.String(ViewsPVR,2) + Control.HasFocus(12)]
 				| [Skin.String(ViewsPVR,6) + Control.HasFocus(13)]</visible>
 			<include>ListViewSelectFadeAnim</include>
-			<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewScrollAnim</include>
+			<include condition="!Skin.HasSetting(DisableListViewScrollAnim)">ListViewScrollAnim</include>
 		</control>
 
 		<control type="image">
@@ -336,11 +336,11 @@
 			<bordersize>5</bordersize>
 			<texture background="true" fallback="pvr/DefaultPVR.png">$VAR[LiveTVListInfoItemImage]</texture>
 			<aspectratio>keep</aspectratio>
-			<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
+			<include condition="!Skin.HasSetting(DisableViewFocusAnim)">ListViewCoverFocusAnim</include>
 		</control>
 
 		<control type="group">
-			<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+			<include>ListViewFocusAnim</include>
 			<control type="label">
 				<description>Label</description>
 				<posx>80</posx>

@@ -253,7 +253,7 @@
 						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Title)</visible>
-						<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
+						<include condition="!Skin.HasSetting(DisableWideListViewCoverFocusAnim)">WideListViewCoverFocusAnim</include>
 					</control>
 					<control type="label">
 						<description>Label</description>
@@ -279,7 +279,7 @@
 							<height>128</height>
 							<texture border="7">covers/cover-case-nofocus.png</texture>
 							<aspectratio>stretch</aspectratio>
-							<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
+							<include condition="!Skin.HasSetting(DisableWideListViewCoverFocusAnim)">WideListViewCoverFocusAnim</include>
 						</control>
 						<control type="image">
 							<description>Cover</description>
@@ -290,7 +290,7 @@
 							<bordersize>6</bordersize>
 							<texture background="true">$INFO[ListItem.Thumb]</texture>
 							<aspectratio>scale</aspectratio>
-							<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
+							<include condition="!Skin.HasSetting(DisableWideListViewCoverFocusAnim)">WideListViewCoverFocusAnim</include>
 						</control>
 						<control type="image">
 							<description>Default Cover</description>
@@ -302,7 +302,7 @@
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<aspectratio>keep</aspectratio>
 							<visible>IsEmpty(ListItem.Thumb)</visible>
-							<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
+							<include condition="!Skin.HasSetting(DisableWideListViewCoverFocusAnim)">WideListViewCoverFocusAnim</include>
 						</control>
 						<control type="label">
 							<description>Label</description>
@@ -442,6 +442,7 @@
 				<posy>BottomPaneOffsetY</posy>	
 				<!--<include>InfoPaneImage</include>-->
 				<include>InfoPaneMediaDetails</include>
+				<include condition="!Skin.HasSetting(DisableTVShowsLogo)">InfoPaneClearLogo</include>
 				<include>BottomPaneOpenCloseAnim</include>
 			</control>
 			
@@ -741,7 +742,7 @@
 						<aspectratio>stretch</aspectratio>
 						<visible>Control.HasFocus(73)</visible>
 						<include>ListViewSelectFadeAnim</include>
-						<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewScrollAnim</include>
+						<include condition="!Skin.HasSetting(DisableListViewScrollAnim)">ListViewScrollAnim</include>
 					</control>
 					<control type="image">
 						<posx>0</posx>
@@ -753,7 +754,7 @@
 						<include>ListViewSelectFadeAnim2</include>
 					</control>
 					<control type="group">
-						<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+						<include>ListViewFocusAnim</include>
 						<control type="image">
 							<description>Icon</description>
 							<posx>5</posx>
@@ -871,6 +872,7 @@
 				<posy>BottomPaneOffsetY</posy>	
 				<!--<include>InfoPaneImage</include>-->
 				<include>InfoPaneMediaDetails</include>
+				<include condition="!Skin.HasSetting(DisableTVShowsLogo)">InfoPaneClearLogo</include>
 				<include>BottomPaneOpenCloseAnim</include>
 			</control>
 			
@@ -893,6 +895,7 @@
 				<include condition="!Skin.HasSetting(EnableEpisodesListInfo2ExtraThumbs) + !Skin.HasSetting(ShowLandscape)">ListInfo2PanelFanart</include>
 				<include condition="Skin.HasSetting(EnableEpisodesListInfo2ExtraThumbs)">ListInfo2PanelExtraThumbs</include>
 				<include condition="Skin.HasSetting(ShowLandscape) + !Skin.HasSetting(EnableEpisodesListInfo2ExtraThumbs)">ListInfo2PanelLandscape</include>
+				<include condition="!Skin.HasSetting(DisableTVShowsLogo) + !Skin.HasSetting(ShowLandscape) + !Skin.HasSetting(EnableEpisodesListInfo2ExtraThumbs)">ListInfo2PanelLogo</include>
 				
 				<control type="group">
 					<description>Media Info Area</description>
@@ -1052,6 +1055,7 @@
 				<posy>BottomPaneOffsetY</posy>	
 				<!--<include>InfoPaneImage</include>-->
 				<include>InfoPaneMediaDetails</include>
+				<include condition="!Skin.HasSetting(DisableTVShowsLogo)">InfoPaneClearLogo</include>
 				<include>BottomPaneOpenCloseAnim</include>
 			</control>	
 
@@ -1183,7 +1187,7 @@
 				<aspectratio>stretch</aspectratio>
 				<visible>Control.HasFocus(68)</visible>
 				<include>ListViewSelectFadeAnim</include>
-				<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewScrollAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewScrollAnim)">ListViewScrollAnim</include>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -1195,7 +1199,7 @@
 				<include>ListViewSelectFadeAnim2</include>
 			</control>
 			<control type="group">
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+				<include>ListViewFocusAnim</include>
 				<control type="image">
 					<description>Icon</description>
 					<posx>5</posx>
@@ -1456,8 +1460,8 @@
 				<aspectratio>stretch</aspectratio>
 				<visible>Control.HasFocus(68)</visible>
 				<include>ListViewSelectFadeAnim</include>
-				<include condition="!Skin.HasSetting(DisableListScrollAnim) + ![Skin.String(EpisodesListInfo2Style,) | Skin.String(EpisodesListInfo2Style,3)]">ListViewScrollAnim2</include>
-				<include condition="!Skin.HasSetting(DisableListScrollAnim) + [Skin.String(EpisodesListInfo2Style,) | Skin.String(EpisodesListInfo2Style,3)]">ListViewScrollAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewScrollAnim) + ![Skin.String(EpisodesListInfo2Style,) | Skin.String(EpisodesListInfo2Style,3)]">ListViewScrollAnim2</include>
+				<include condition="!Skin.HasSetting(DisableListViewScrollAnim) + [Skin.String(EpisodesListInfo2Style,) | Skin.String(EpisodesListInfo2Style,3)]">ListViewScrollAnim</include>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -1478,7 +1482,7 @@
 				<bordersize>5</bordersize>
 				<texture background="true">$INFO[ListItem.Thumb]</texture>
 				<aspectratio>scale</aspectratio>
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewCoverFocusAnim)">ListViewCoverFocusAnim</include>
 			</control>
 			<control type="image">
 				<description>Default Cover</description>
@@ -1490,10 +1494,10 @@
 				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>IsEmpty(ListItem.Thumb)</visible>
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewCoverFocusAnim)">ListViewCoverFocusAnim</include>
 			</control>	
 			<control type="group">
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+				<include>ListViewFocusAnim</include>
 				<control type="label">
 					<description>Label</description>
 					<posx>104</posx>
@@ -1614,6 +1618,7 @@
 				<visible>!IsEmpty(ListItem.Title)</visible>
 				<include condition="!Skin.HasSetting(ShowLandscape)">ListInfo3PanelFanart</include>
 				<include condition="Skin.HasSetting(ShowLandscape)">ListInfo3PanelLandscape</include>
+				<include condition="!Skin.HasSetting(DisableTVShowsLogo) + !Skin.HasSetting(ShowLandscape)">ListInfo3PanelLogo</include>
 				
 				<control type="group">
 					<description>Media Info Area</description>
@@ -1922,7 +1927,7 @@
 						<aspectratio>stretch</aspectratio>
 						<visible>Control.HasFocus(94)</visible>
 						<include>ListViewSelectFadeAnim</include>
-						<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewScrollAnim</include>
+						<include condition="!Skin.HasSetting(DisableListViewScrollAnim)">ListViewScrollAnim</include>
 					</control>
 					<control type="image">
 						<posx>0</posx>
@@ -1934,7 +1939,7 @@
 						<include>ListViewSelectFadeAnim2</include>
 					</control>
 					<control type="group">
-						<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+						<include>ListViewFocusAnim</include>
 						<control type="image">
 							<description>Icon</description>
 							<posx>5</posx>
@@ -2027,6 +2032,7 @@
 				<posy>BottomPaneOffsetY</posy>	
 				<!--<include>InfoPaneImage</include>-->
 				<include>InfoPaneMediaDetails</include>
+				<include condition="!Skin.HasSetting(DisableTVShowsLogo)">InfoPaneClearLogo</include>
 				<include>BottomPaneOpenCloseAnim</include>
 			</control>	
 

@@ -30,13 +30,6 @@
 				<onclick>Container.SetViewMode(50)</onclick>
 				<onclick>Dialog.Close(3002)</onclick>
 			</control>
-			<control type="button" id="2">
-				<description>Big Icon</description>
-				<include>DropDownMenuViewModeBtn</include>
-				<label>$LOCALIZE[31104]</label>
-				<onclick>Container.SetViewMode(51)</onclick>
-				<onclick>Dialog.Close(3002)</onclick>
-			</control>
 			<control type="button" id="3">
 				<description>Wide Icon (TVShows)</description>
 				<include>DropDownMenuViewModeBtn</include>
@@ -267,7 +260,7 @@
 				<label>$LOCALIZE[31116]</label>
 				<onclick>Container.SetViewMode(100)</onclick>
 				<onclick>Dialog.Close(3002)</onclick>
-				<visible>Window.IsActive(VideoLibrary) + Container.Content(TVShows) + Skin.HasSetting(UseTVShowsPosterCover)</visible>
+				<visible>Window.IsActive(VideoLibrary) + Container.Content(TVShows)</visible>
 			</control>
 			<control type="button" id="32">
 				<description>Thumbs Media Info (Movies)</description>
@@ -365,12 +358,6 @@
 			<control type="image">
 				<posx>18</posx>
 				<height>37</height>
-				<texture>gui/view-big-icon.png</texture>
-				<aspectratio>keep</aspectratio>
-			</control>
-			<control type="image">
-				<posx>18</posx>
-				<height>37</height>
 				<texture>gui/view-wide-icon.png</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>Window.IsActive(VideoLibrary) + Container.Content(TVShows) + !Skin.HasSetting(UseTVShowsPosterCover)</visible>
@@ -428,7 +415,7 @@
 				<height>37</height>
 				<texture>gui/view-thumbs-info.png</texture>
 				<aspectratio>keep</aspectratio>
-				<visible>[Window.IsActive(VideoLibrary) + [Container.Content(Movies) | [Container.Content(TVShows) + Skin.HasSetting(UseTVShowsPosterCover)]]] | [Window.IsActive(MusicLibrary) + Container.Content(Albums)]</visible>
+				<visible>[Window.IsActive(VideoLibrary) + [Container.Content(Movies) | Container.Content(TVShows)]] | [Window.IsActive(MusicLibrary) + Container.Content(Albums)]</visible>
 			</control>
 			<control type="image">
 				<posx>18</posx>

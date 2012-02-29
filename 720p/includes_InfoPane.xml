@@ -105,6 +105,48 @@
 		</control>
 	</include>
 	
+	<include name="InfoPaneClearLogo">
+		<control type="image">
+			<posx>582</posx>
+			<posy>-4</posy>
+			<width>116</width>
+			<height>45</height>
+			<texture>$INFO[ListItem.Path]logo.png</texture>
+			<aspectratio>keep</aspectratio>
+			<animation effect="fade" end="70" condition="true">Conditional</animation>
+		</control>
+		
+		<control type="image">
+			<posx>582</posx>
+			<posy>-4</posy>
+			<width>116</width>
+			<height>45</height>
+			<texture>$INFO[ListItem.Path]../logo.png</texture>
+			<aspectratio>keep</aspectratio>
+			<animation effect="fade" end="70" condition="true">Conditional</animation>
+		</control>
+		
+		<control type="image">
+			<posx>582</posx>
+			<posy>-4</posy>
+			<width>116</width>
+			<height>45</height>
+			<texture>$INFO[ListItem.Path]../../logo.png</texture>
+			<aspectratio>keep</aspectratio>
+			<animation effect="fade" end="70" condition="true">Conditional</animation>
+		</control>
+		
+		<control type="image">
+			<posx>582</posx>
+			<posy>-4</posy>
+			<width>116</width>
+			<height>45</height>
+			<texture>$INFO[ListItem.Path]../../../logo.png</texture>
+			<aspectratio>keep</aspectratio>
+			<animation effect="fade" end="70" condition="true">Conditional</animation>
+		</control>
+	</include>
+	
 	<include name="InfoPaneMediaDetails">	
 		<control type="group">
 			<control type="label">

@@ -240,7 +240,7 @@
 						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>IsEmpty(ListItem.Title)</visible>
-						<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
+						<include condition="!Skin.HasSetting(DisableWideListViewCoverFocusAnim)">WideListViewCoverFocusAnim</include>
 					</control>
 					<control type="label">
 						<description>Label</description>
@@ -265,7 +265,7 @@
 							<height>128</height>
 							<texture border="7">covers/cover-case-nofocus.png</texture>
 							<aspectratio>stretch</aspectratio>
-							<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
+							<include condition="!Skin.HasSetting(DisableWideListViewCoverFocusAnim)">WideListViewCoverFocusAnim</include>
 						</control>
 						<control type="image">
 							<description>Cover</description>
@@ -276,7 +276,7 @@
 							<bordersize>6</bordersize>
 							<texture background="true">$INFO[ListItem.Thumb]</texture>
 							<aspectratio>stretch</aspectratio>
-							<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
+							<include condition="!Skin.HasSetting(DisableWideListViewCoverFocusAnim)">WideListViewCoverFocusAnim</include>
 						</control>
 						<control type="image">
 							<description>Default Cover</description>
@@ -288,7 +288,7 @@
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<aspectratio>keep</aspectratio>
 							<visible>IsEmpty(ListItem.Thumb)</visible>
-							<include condition="!Skin.HasSetting(DisableListFocusAnim)">WideListViewCoverFocusAnim</include>
+							<include condition="!Skin.HasSetting(DisableWideListViewCoverFocusAnim)">WideListViewCoverFocusAnim</include>
 						</control>
 						<control type="image">
 							<description>Star Rating</description>
@@ -701,7 +701,7 @@
 						<aspectratio>stretch</aspectratio>
 						<visible>Control.HasFocus(58)</visible>
 						<include>ListViewSelectFadeAnim</include>
-						<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewScrollAnim</include>
+						<include condition="!Skin.HasSetting(DisableListViewScrollAnim)">ListViewScrollAnim</include>
 					</control>
 					<control type="image">
 						<posx>0</posx>
@@ -713,7 +713,7 @@
 						<include>ListViewSelectFadeAnim2</include>
 					</control>
 					<control type="group">
-						<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+						<include>ListViewFocusAnim</include>
 						<control type="image">
 							<description>Icon</description>
 							<posx>5</posx>
@@ -1117,7 +1117,7 @@
 				<aspectratio>stretch</aspectratio>
 				<visible>Control.HasFocus(66)</visible>
 				<include>ListViewSelectFadeAnim</include>
-				<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewScrollAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewScrollAnim)">ListViewScrollAnim</include>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -1129,7 +1129,7 @@
 				<include>ListViewSelectFadeAnim2</include>
 			</control>
 			<control type="group">
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+				<include>ListViewFocusAnim</include>
 				<control type="image">
 					<description>Icon</description>
 					<posx>5</posx>
@@ -1364,8 +1364,8 @@
 				<aspectratio>stretch</aspectratio>
 				<visible>Control.HasFocus(66)</visible>
 				<include>ListViewSelectFadeAnim</include>
-				<include condition="!Skin.HasSetting(DisableListScrollAnim) + ![Skin.String(MoviesListInfo2Style,) | Skin.String(MoviesListInfo2Style,3)]">ListViewScrollAnim2</include>
-				<include condition="!Skin.HasSetting(DisableListScrollAnim) + [Skin.String(MoviesListInfo2Style,) | Skin.String(MoviesListInfo2Style,3)]">ListViewScrollAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewScrollAnim) + ![Skin.String(MoviesListInfo2Style,) | Skin.String(MoviesListInfo2Style,3)]">ListViewScrollAnim2</include>
+				<include condition="!Skin.HasSetting(DisableListViewScrollAnim) + [Skin.String(MoviesListInfo2Style,) | Skin.String(MoviesListInfo2Style,3)]">ListViewScrollAnim</include>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -1386,10 +1386,10 @@
 				<bordersize>5</bordersize>
 				<texture background="true">$INFO[ListItem.Thumb]</texture>
 				<aspectratio>scale</aspectratio>
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewCoverFocusAnim</include>
+				<include condition="!Skin.HasSetting(DisableListViewCoverFocusAnim)">ListViewCoverFocusAnim</include>
 			</control>
 			<control type="group">
-				<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+				<include>ListViewFocusAnim</include>
 				<control type="image">
 					<description>Default Cover</description>
 					<posx>0</posx>
@@ -1726,7 +1726,7 @@
 						<aspectratio>stretch</aspectratio>
 						<visible>Control.HasFocus(95)</visible>
 						<include>ListViewSelectFadeAnim</include>
-						<include condition="!Skin.HasSetting(DisableListScrollAnim)">ListViewScrollAnim</include>
+						<include condition="!Skin.HasSetting(DisableListViewScrollAnim)">ListViewScrollAnim</include>
 					</control>
 					<control type="image">
 						<posx>0</posx>
@@ -1738,7 +1738,7 @@
 						<include>ListViewSelectFadeAnim2</include>
 					</control>
 					<control type="group">
-						<include condition="!Skin.HasSetting(DisableListFocusAnim)">ListViewFocusAnim</include>
+						<include>ListViewFocusAnim</include>
 						<control type="image">
 							<description>Icon</description>
 							<posx>5</posx>
@@ -2037,73 +2037,73 @@
 				<focusedlayout width="129" height="172" condition="Container.Column(0) + Container.Row(0)">
 					<control type="group">
 						<description>Top Left Corner Cover</description>
-						<include>DVDThumbsStyleTopLeftCornerFocusAnim</include>
 						<include>DVDThumbsStyleCoverImage</include>
 						<include>DVDThumbsStyleOverlayImage</include>
+						<include condition="!Skin.HasSetting(DisableThumbsInfoViewCoverFocusAnim)">DVDThumbsStyleTopLeftCornerFocusAnim</include>
 					</control>
 				</focusedlayout>
 				<focusedlayout width="129" height="172" condition="!Container.Column(0) + !Container.Column(5) + Container.Row(0)">
 					<control type="group">
 						<description>Top Edge Cover</description>
-						<include>DVDThumbsStyleTopEdgeFocusAnim</include>
 						<include>DVDThumbsStyleCoverImage</include>
 						<include>DVDThumbsStyleOverlayImage</include>
+						<include condition="!Skin.HasSetting(DisableThumbsInfoViewCoverFocusAnim)">DVDThumbsStyleTopEdgeFocusAnim</include>
 					</control>
 				</focusedlayout>
 				<focusedlayout width="129" height="172" condition="Container.Column(5) + Container.Row(0)">
 					<control type="group">
 						<description>Top Right Corner Cover</description>
 						<include>DVDThumbsStyleCoverImage</include>
-						<include>DVDThumbsStyleTopRightCornerFocusAnim</include>
 						<include>DVDThumbsStyleOverlayImage</include>
+						<include condition="!Skin.HasSetting(DisableThumbsInfoViewCoverFocusAnim)">DVDThumbsStyleTopRightCornerFocusAnim</include>
 					</control>
 				</focusedlayout>
 				<focusedlayout width="129" height="172" condition="Container.Column(0) + Container.Row(1)">
 					<control type="group">
 						<description>Left Edge Cover</description>
 						<include>DVDThumbsStyleCoverImage</include>
-						<include>DVDThumbsStyleLeftEdgeFocusAnim</include>
 						<include>DVDThumbsStyleOverlayImage</include>
+						<include condition="!Skin.HasSetting(DisableThumbsInfoViewCoverFocusAnim)">DVDThumbsStyleLeftEdgeFocusAnim</include>
 					</control>
 				</focusedlayout>
 				<focusedlayout width="129" height="172" condition="!Container.Row(0) + !Container.Row(2) + !Container.Column(0) + !Container.Column(5)">
 					<control type="group">
 						<description>Mid Row Cover</description>
 						<include>DVDThumbsStyleCoverImage</include>
-						<include>DVDThumbsStyleMidRowFocusAnim</include>
 						<include>DVDThumbsStyleOverlayImage</include>
+						<include condition="!Skin.HasSetting(DisableThumbsInfoViewCoverFocusAnim)">DVDThumbsStyleMidRowFocusAnim</include>
 					</control>
 				</focusedlayout>
 				<focusedlayout width="129" height="172" condition="Container.Column(5) + Container.Row(1)">
 					<control type="group">
 						<description>Right Edge Cover</description>
 						<include>DVDThumbsStyleCoverImage</include>
-						<include>DVDThumbsStyleRightEdgeFocusAnim</include>
 						<include>DVDThumbsStyleOverlayImage</include>
+						<include condition="!Skin.HasSetting(DisableThumbsInfoViewCoverFocusAnim)">DVDThumbsStyleRightEdgeFocusAnim</include>
 					</control>
 				</focusedlayout>
 				<focusedlayout width="129" height="172" condition="Container.Column(0) + Container.Row(2)">
 					<control type="group">
 						<description>Bottom Left Corner Cover</description>
 						<include>DVDThumbsStyleCoverImage</include>
-						<include>DVDThumbsStyleBottomLeftCornerFocusAnim</include>
 						<include>DVDThumbsStyleOverlayImage</include>
+						<include condition="!Skin.HasSetting(DisableThumbsInfoViewCoverFocusAnim)">DVDThumbsStyleBottomLeftCornerFocusAnim</include>
 					</control>
 				</focusedlayout>
 				<focusedlayout width="129" height="172" condition="!Container.Column(0) + !Container.Column(5) + Container.Row(2)">
 					<control type="group">
 						<description>Bottom Edge Cover</description>
 						<include>DVDThumbsStyleCoverImage</include>
-						<include>DVDThumbsStyleBottomEdgeFocusAnim</include>
 						<include>DVDThumbsStyleOverlayImage</include>
+						<include condition="!Skin.HasSetting(DisableThumbsInfoViewCoverFocusAnim)">DVDThumbsStyleBottomEdgeFocusAnim</include>
 					</control>
 				</focusedlayout>
 				<focusedlayout width="129" height="172" condition="Container.Column(5) + Container.Row(2)">
 					<control type="group">
 						<description>Bottom Right Corner Cover</description>
 						<include>DVDThumbsStyleCoverImage</include>
-						<include>DVDThumbsStyleBottomRightCornerFocusAnim</include>
 						<include>DVDThumbsStyleOverlayImage</include>
+						<include condition="!Skin.HasSetting(DisableThumbsInfoViewCoverFocusAnim)">DVDThumbsStyleBottomRightCornerFocusAnim</include>
 					</control>
 				</focusedlayout>
 			</control>
@@ -2969,7 +2969,7 @@
 						<description>Top Left Corner Cover</description>
 						<include>DVDWallCoverImage</include>
 						<include>DVDWallOverlayImage</include>
-						<include>MoviesWallViewTopLeftCornerFocusAnim</include>
+						<include condition="!Skin.HasSetting(DisableWallViewCoverFocusAnim)">MoviesWallViewTopLeftCornerFocusAnim</include>
 					</control>
 				</focusedlayout>
 				<focusedlayout width="160" height="225" condition="!Container.Column(0) + !Container.Column(7) + Container.Row(0)">
@@ -2977,7 +2977,7 @@
 						<description>Top Edge Cover</description>
 						<include>DVDWallCoverImage</include>
 						<include>DVDWallOverlayImage</include>
-						<include>MoviesWallViewTopEdgeFocusAnim</include>
+						<include condition="!Skin.HasSetting(DisableWallViewCoverFocusAnim)">MoviesWallViewTopEdgeFocusAnim</include>
 					</control>
 				</focusedlayout>
 				<focusedlayout width="160" height="225" condition="Container.Column(7) + Container.Row(0)">
@@ -2985,7 +2985,7 @@
 						<description>Top Right Corner Cover</description>
 						<include>DVDWallCoverImage</include>
 						<include>DVDWallOverlayImage</include>
-						<include>MoviesWallViewTopRightCornerFocusAnim</include>
+						<include condition="!Skin.HasSetting(DisableWallViewCoverFocusAnim)">MoviesWallViewTopRightCornerFocusAnim</include>
 					</control>
 				</focusedlayout>
 				<focusedlayout width="160" height="225" condition="Container.Column(0) + Container.Row(1)">
@@ -2993,7 +2993,7 @@
 						<description>Left Edge Cover</description>
 						<include>DVDWallCoverImage</include>
 						<include>DVDWallOverlayImage</include>
-						<include>MoviesWallViewLeftEdgeFocusAnim</include>
+						<include condition="!Skin.HasSetting(DisableWallViewCoverFocusAnim)">MoviesWallViewLeftEdgeFocusAnim</include>
 					</control>
 				</focusedlayout>
 				<focusedlayout width="160" height="225" condition="!Container.Row(0) + !Container.Row(2) + !Container.Column(0) + !Container.Column(7)">
@@ -3001,7 +3001,7 @@
 						<description>Mid Row Cover</description>
 						<include>DVDWallCoverImage</include>
 						<include>DVDWallOverlayImage</include>
-						<include>MoviesWallViewMidRowFocusAnim</include>
+						<include condition="!Skin.HasSetting(DisableWallViewCoverFocusAnim)">MoviesWallViewMidRowFocusAnim</include>
 					</control>
 				</focusedlayout>
 				<focusedlayout width="160" height="225" condition="Container.Column(7) + Container.Row(1)">
@@ -3009,7 +3009,7 @@
 						<description>Right Edge Cover</description>
 						<include>DVDWallCoverImage</include>
 						<include>DVDWallOverlayImage</include>
-						<include>MoviesWallViewRightEdgeFocusAnim</include>
+						<include condition="!Skin.HasSetting(DisableWallViewCoverFocusAnim)">MoviesWallViewRightEdgeFocusAnim</include>
 					</control>
 				</focusedlayout>
 				<focusedlayout width="160" height="225" condition="Container.Column(0) + Container.Row(2)">
@@ -3017,7 +3017,7 @@
 						<description>Bottom Left Corner Cover</description>
 						<include>DVDWallCoverImage</include>
 						<include>DVDWallOverlayImage</include>
-						<include>MoviesWallViewBottomLeftCornerFocusAnim</include>
+						<include condition="!Skin.HasSetting(DisableWallViewCoverFocusAnim)">MoviesWallViewBottomLeftCornerFocusAnim</include>
 					</control>
 				</focusedlayout>
 				<focusedlayout width="160" height="225" condition="!Container.Column(0) + !Container.Column(7) + Container.Row(2)">
@@ -3025,7 +3025,7 @@
 						<description>Bottom Edge Cover</description>
 						<include>DVDWallCoverImage</include>
 						<include>DVDWallOverlayImage</include>
-						<include>MoviesWallViewBottomEdgeFocusAnim</include>
+						<include condition="!Skin.HasSetting(DisableWallViewCoverFocusAnim)">MoviesWallViewBottomEdgeFocusAnim</include>
 					</control>
 				</focusedlayout>
 				<focusedlayout width="160" height="225" condition="Container.Column(7) + Container.Row(2)">
@@ -3033,7 +3033,7 @@
 						<description>Bottom Right Corner Cover</description>
 						<include>DVDWallCoverImage</include>
 						<include>DVDWallOverlayImage</include>
-						<include>MoviesWallViewBottomRightCornerFocusAnim</include>
+						<include condition="!Skin.HasSetting(DisableWallViewCoverFocusAnim)">MoviesWallViewBottomRightCornerFocusAnim</include>
 					</control>
 				</focusedlayout>
 			</control>
