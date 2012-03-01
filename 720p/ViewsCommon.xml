@@ -609,7 +609,7 @@
 				<height>24</height>
 				<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
 				<aspectratio>stretch</aspectratio>
-				<visible>IsEmpty(ListItem.Overlay)</visible>
+				<visible>IsEmpty(ListItem.Overlay) | !StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
 				<include>ListViewOverlayFadeAnim</include>
 			</control>
 			<control type="label">
@@ -656,6 +656,17 @@
 				<texture background="true">watched/seasons/$INFO[ListItem.Overlay]</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>Container.Content(Seasons)</visible>
+				<include>ListViewOverlayFadeAnim</include>
+			</control>
+			<control type="image">
+				<description>Overlay</description>
+				<posx>5</posx>
+				<posy>6</posy>
+				<width>24</width>
+				<height>24</height>
+				<texture background="true">$INFO[ListItem.Overlay]</texture>
+				<aspectratio>stretch</aspectratio>
+				<visible>!Container.Content(Seasons)</visible>
 				<include>ListViewOverlayFadeAnim</include>
 			</control>
 		</itemlayout>		
@@ -896,6 +907,7 @@
 					<width>24</width>
 					<height>24</height>
 					<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
+					<visible>!StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
 					<aspectratio>stretch</aspectratio>
 				</control>
 				<control type="label">
@@ -942,6 +954,16 @@
 					<texture background="true">watched/seasons/$INFO[ListItem.Overlay]</texture>
 					<aspectratio>stretch</aspectratio>
 					<visible>Container.Content(Seasons)</visible>
+				</control>
+				<control type="image">
+					<description>Overlay</description>
+					<posx>5</posx>
+					<posy>6</posy>
+					<width>24</width>
+					<height>24</height>
+					<texture background="true">$INFO[ListItem.Overlay]</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>!Container.Content(Seasons)</visible>
 				</control>
 			</control>
 		</focusedlayout>		
@@ -1851,6 +1873,16 @@
 				<aligny>center</aligny>				
 				<label>$INFO[ListItem.Label2]</label>
 			</control>
+			<control type="image">
+				<description>Overlay</description>
+				<posx>689</posx>
+				<posy>41</posy>
+				<width>20</width>
+				<height>20</height>
+				<texture background="true">$INFO[ListItem.Overlay]</texture>
+				<aspectratio align="right">keep</aspectratio>
+				<include>ListViewOverlayFadeAnim</include>
+			</control>	
 		</itemlayout>
 	</include>
 	
@@ -2676,6 +2708,15 @@
 					<label>$INFO[ListItem.Label2]</label>
 				</control>
 			</control>
+			<control type="image">
+				<description>Overlay</description>
+				<posx>689</posx>
+				<posy>41</posy>
+				<width>20</width>
+				<height>20</height>
+				<texture background="true">$INFO[ListItem.Overlay]</texture>
+				<aspectratio align="right">keep</aspectratio>
+			</control>	
 		</focusedlayout>			
 	</include>
 	
