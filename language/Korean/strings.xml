@@ -17,6 +17,7 @@
 <string id="31308">만화</string>
 <string id="31309">최근 재생</string>
 <string id="31310">날씨 공급자가 설정되지 않았습니다. 날씨 설정을 확인하고 날씨 애드온을 설치하세요.</string>
+<string id="31311">감상중</string>
 <string id="31202">항목</string>
 <string id="31203">줄거리 없음</string>
 <string id="31204">상세 정보 없음</string>
@@ -79,10 +80,12 @@
 
 <!-- skin settings home -->
 <string id="31068">서브 메뉴 숨기기</string>
+<string id="31080">녹화 정보 숨기기</string>
 <string id="31069">시스템정보 숨기기</string>
 <string id="31070">카테고리 숨기기</string>
 <string id="31071">지금 재생중 숨기기</string>
 <string id="31072">최근 추가 숨기기</string>
+<string id="31079">"감상중" 숨기기</string>
 <string id="31073">날씨 숨기기</string>
 <string id="31074">카테고리 아이콘 숨기기</string>
 <string id="31075">메뉴 좌우 화살표 보이기</string>
@@ -122,7 +125,9 @@
 <string id="31050">별표시 평점</string>
 <string id="31401">줄거리 스크롤</string>
 <string id="31402">상제정보 스크롤</string>
-<string id="31404">포스터</string>
+<string id="31404">포스터 레이아웃 사용</string>
+<string id="31405">배너 레이아웃 사용</string>
+<string id="31406">로컬 커버 사용</string>
 <string id="31014">추가 썸네일</string>
 <string id="31015">추가 팬아트</string>
 <string id="31407">배경에 시각화 사용</string>
@@ -131,18 +136,22 @@
 <string id="31410">배경에 재생중인 동영상 보이기</string>
 <string id="31412">작게</string>
 <string id="31413">크게</string>
-<string id="31414">팬아트 구성</string>
+<string id="31414">팬아트 레이아웃</string>
 <string id="31415">기본 테마 색상 사용</string>
 <string id="31416">화이트 테마 색상 사용</string>
 <string id="31417">확장</string>
 <string id="31418">보통</string>
+<string id="31419">애니메이션 보기</string>
 <string id="31424">포스터 어둡게</string>
 <string id="31427">미디어 정보</string>
 <string id="31428">비디오 해상도 숨기기</string>
 <string id="31429">화면비 숨기기</string>
-<string id="31430">목록 스크롤 애니메이션 사용하지 않음</string>
-<string id="31431">목록 포커스 애니메이션 사용하지 않음</string>
-<string id="31432">OSD에 TV 쇼 'clearart.png' 보기</string>
+<string id="31430">스크롤에 슬라이드 효과 사용하지 않음</string>
+<string id="31431">커버에 포커스 줌 효과 사용하지 않음</string>
+<string id="31432">OSD에 클리어 아트 보기</string>
+<string id="31435">OSD에 클리어 로고 보기</string>
+<string id="31433">음악 CD 아트 사용</string>
+<string id="31434">전체화면 재생시 CD 아트 보기</string>
 
 <!-- skin settings backgrounds -->
 <string id="31051">홈 화면에만 보이기</string>
