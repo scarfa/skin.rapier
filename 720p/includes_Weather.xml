@@ -2884,8 +2884,8 @@
 					<posx>8</posx>
 					<posy>8</posy>
 					<width>250</width>
-					<height>25</height>
-					<texture border="4">panels/panel3.png</texture>
+					<height>27</height>
+					<texture border="8">views/genre-background.png</texture>
 					<animation effect="fade" end="35" condition="true">Conditional</animation>
 					<visible>!Player.HasVideo + !IsEmpty(Window.Property(Weather.CurrentMap))</visible>
 				</control>
@@ -2897,6 +2897,7 @@
 					<width>234</width>
 					<font>MediaInfoFont3</font>
 					<textcolor>WhiteColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
 					<aligny>center</aligny>
 					<label>$INFO[Window.Property(Weather.CurrentMap)]</label>
 					<scroll>false</scroll>
