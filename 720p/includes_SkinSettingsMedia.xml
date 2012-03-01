@@ -56,18 +56,6 @@
 					<include>SettingsHeaderBtn</include>
 					<label>$LOCALIZE[2]</label>
 				</control>
-				<control type="radiobutton" id="3023">
-					<description>Enable Music CDArt</description>
-					<include>SettingsContentRadioBtn</include>
-					<label>$LOCALIZE[31433]</label>
-					<selected>Skin.HasSetting(EnableMusicCdArt)</selected>
-					<onclick>Skin.ToggleSetting(EnableMusicCdArt)</onclick>
-				</control>
-				<control type="button" id="3002">
-					<description>Music Playing Label</description>
-					<include>SettingsHeaderBtn</include>
-					<label>$LOCALIZE[10517]</label>
-				</control>
 				<control type="radiobutton" id="3003">
 					<description>Enable Music Visualization / Artist Fanart In The Background</description>
 					<include>SettingsContentRadioBtn</include>
@@ -100,6 +88,13 @@
 					<onclick>Skin.ToggleSetting(AnimateFanartMusicPlayingBG)</onclick>
 					<visible>Skin.HasSetting(UseFanartForMusicPlayingBG)</visible>
 				</control>
+				<control type="radiobutton" id="3023">
+					<description>Enable Music CDArt</description>
+					<include>SettingsContentRadioBtn</include>
+					<label>$LOCALIZE[31433]</label>
+					<selected>Skin.HasSetting(EnableMusicCdArt)</selected>
+					<onclick>Skin.ToggleSetting(EnableMusicCdArt)</onclick>
+				</control>
 				<control type="radiobutton" id="3024">
 					<description>Show CDArt In Fullscreen Music Playback</description>
 					<include>SettingsContentRadioBtn</include>
@@ -108,9 +103,9 @@
 					<onclick>Skin.ToggleSetting(UseCdArtInMusicPlayingBG)</onclick>
 				</control>
 				<control type="button" id="3007">
-					<description>Video Playing Label</description>
+					<description>Videos Label</description>
 					<include>SettingsHeaderBtn</include>
-					<label>$LOCALIZE[10522]</label>
+					<label>$LOCALIZE[3]</label>
 				</control>
 				<control type="radiobutton" id="3008">
 					<description>Enable Video Playing In The Background</description>
