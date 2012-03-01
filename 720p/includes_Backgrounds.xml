@@ -444,12 +444,14 @@
 		<include>BackgroundSize</include>
 		<texture background="true">views/fanart-dim.png</texture>
 	</include>
-
+	
 	<include name="HomeBackgroundDim">
+		<!--
 		<control type="image">
-			<include>BackgroundDim</include>
+			<include>BackgroundSize</include>
+			<texture background="true">dim.png</texture>
 			<animation effect="fade" end="30" condition="true">Conditional</animation>
-		</control>
+		</control> -->
 	</include>
 
 	<include name="MediaPlayingVizDim">
