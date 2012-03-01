@@ -274,6 +274,7 @@
 			<control type="group">
 				<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
 				<visible>Window.IsActive(MovieInformation)
+				| [Control.IsVisible(50) + Skin.HasSetting(ShowMoviesIconFanart)]
 				| [Control.IsVisible(54) + Skin.HasSetting(ShowMoviesThumbnailFanart)]
 				| [Control.IsVisible(52) + !Skin.HasSetting(HideMoviesListFanart)] 
 				| [Control.IsVisible(53) + !Skin.HasSetting(HideMoviesWrapListInfoFanart)] 
@@ -291,6 +292,7 @@
 
 			<control type="group">
 				<visible>Window.IsActive(MovieInformation)
+				| [Control.IsVisible(50) + Skin.HasSetting(ShowTVShowsIconFanart)]
 				| [Control.IsVisible(54) + Skin.HasSetting(ShowTVShowsThumbnailFanart)]
 				| [Control.IsVisible(56) + !Skin.HasSetting(HideTVShowsWideIconFanart)] 
 				| [Control.IsVisible(52) + !Skin.HasSetting(HideTVShowsListFanart)] 
@@ -330,6 +332,7 @@
 			<include condition="![Skin.HasSetting(DisableMusicPlayingBG) | Skin.HasSetting(DisableVideoPlayingBG)]">IsMediaPlayingCondition</include>
 			<visible>Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)</visible>
 			<visible>Window.IsActive(MusicInformation)
+			| [Control.IsVisible(50) + Skin.HasSetting(ShowMusicIconFanart)]
 			| [Control.IsVisible(63) + Skin.HasSetting(ShowMusicThumbnailFanart)]
 			| [Control.IsVisible(52) + !Skin.HasSetting(HideMusicListFanart)] 
 			| [Control.IsVisible(62) + !Skin.HasSetting(HideMusicListInfoFanart)]
@@ -348,6 +351,7 @@
 			<include condition="![Skin.HasSetting(DisableMusicPlayingBG) | Skin.HasSetting(DisableVideoPlayingBG)]">IsMediaPlayingCondition</include>
 			<visible>Container.Content(Addons)</visible>
 			<visible>Window.IsActive(AddonInformation)
+			| [Control.IsVisible(50) + Skin.HasSetting(ShowAddonsIconFanart)]
 			| [Control.IsVisible(63) + Skin.HasSetting(ShowAddonsThumbnailFanart)]
 			| [Control.IsVisible(52) + !Skin.HasSetting(HideAddonsListFanart)] 
 			| [Control.IsVisible(90) + !Skin.HasSetting(HideAddonsWideListFanart)]

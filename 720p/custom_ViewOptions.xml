@@ -8,7 +8,7 @@
 			<include>DropDownMenuCloseHitRect</include>
 		</control>
 		
-		<control type="grouplist" id="900"> <!-- 4029 -->
+		<control type="grouplist" id="900"> <!-- 5004 -->
 			<description>View Options Menu</description>
 			<posx>299</posx>
 			<posy>80</posy>
@@ -56,6 +56,38 @@
 				<selected>Skin.HasSetting(HidePicturesIconLabel)</selected>
 				<onclick>Skin.ToggleSetting(HidePicturesIconLabel)</onclick>
 				<visible>Skin.String(CurrentViewMode,50) + Window.IsActive(Pictures)</visible>
+			</control>
+			<control type="radiobutton" id="5000">
+				<description>Icon Hide Fanart (Music)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31043]</label>
+				<selected>!Skin.HasSetting(ShowMusicIconFanart)</selected>
+				<onclick>Skin.ToggleSetting(ShowMusicIconFanart)</onclick>	
+				<visible>Skin.String(CurrentViewMode,50) + [Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)]</visible>
+			</control>
+			<control type="radiobutton" id="5001">
+				<description>Icon Hide Fanart (Movies)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31043]</label>
+				<selected>!Skin.HasSetting(ShowMoviesIconFanart)</selected>
+				<onclick>Skin.ToggleSetting(ShowMoviesIconFanart)</onclick>	
+				<visible>Skin.String(CurrentViewMode,50) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="5002">
+				<description>Icon Hide Fanart (TVShows)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31043]</label>
+				<selected>!Skin.HasSetting(ShowTVShowsIconFanart)</selected>
+				<onclick>Skin.ToggleSetting(ShowTVShowsIconFanart)</onclick>	
+				<visible>Skin.String(CurrentViewMode,50) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]</visible>
+			</control>
+			<control type="radiobutton" id="5004">
+				<description>Icon Hide Fanart (Addons)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31043]</label>
+				<selected>!Skin.HasSetting(ShowAddonsIconFanart)</selected>
+				<onclick>Skin.ToggleSetting(ShowAddonsIconFanart)</onclick>	
+				<visible>Skin.String(CurrentViewMode,50) + Container.Content(Addons)</visible>
 			</control>
 			<control type="radiobutton" id="3035">
 				<description>Wide Icon Hide Overlay (TVShows)</description>
@@ -135,7 +167,7 @@
 				<label>$LOCALIZE[31043]</label>
 				<selected>!Skin.HasSetting(ShowTVShowsThumbnailFanart)</selected>
 				<onclick>Skin.ToggleSetting(ShowTVShowsThumbnailFanart)</onclick>	
-				<visible>Skin.String(CurrentViewMode,54) + Container.Content(TVShows)</visible>
+				<visible>Skin.String(CurrentViewMode,54) + [Container.Content(TVShows) | Container.Content(Seasons)]</visible>
 			</control>
 			<control type="radiobutton" id="3002">
 				<description>Thumbnail Show Fanart (Addons)</description>
