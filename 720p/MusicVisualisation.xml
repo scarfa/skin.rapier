@@ -16,7 +16,7 @@
 
 		<control type="group">
 			<description>cdart now Playing</description>
-			<visible>Skin.HasSetting(UseCdArtInMusicPlayingBG) + ![Player.ShowInfo | Window.IsActive(VisualisationPresetList) | Window.IsActive(AddonSettings) | Window.IsActive(SelectDialog) | Window.IsActive(script-XBMC_Lyrics-main.xml)]</visible>
+			<visible>!Skin.HasSetting(HideCdArtInMusicPlayingBG) + ![Player.ShowInfo | Window.IsActive(VisualisationPresetList) | Window.IsActive(AddonSettings) | Window.IsActive(SelectDialog) | Window.IsActive(script-XBMC_Lyrics-main.xml)]</visible>
 			<posx>29</posx>
 			<posy>503</posy>
 

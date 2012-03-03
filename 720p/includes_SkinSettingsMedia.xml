@@ -94,13 +94,15 @@
 					<label>$LOCALIZE[31433]</label>
 					<selected>Skin.HasSetting(EnableMusicCdArt)</selected>
 					<onclick>Skin.ToggleSetting(EnableMusicCdArt)</onclick>
+					<onclick condition="Skin.HasSetting(EnableMusicCdArt)">Skin.Reset(HideCdArtInMusicPlayingBG)</onclick>
+					<onclick condition="!Skin.HasSetting(EnableMusicCdArt) + !Skin.HasSetting(HideCdArtInMusicPlayingBG)">Skin.ToggleSetting(HideCdArtInMusicPlayingBG)</onclick>
 				</control>
 				<control type="radiobutton" id="3024">
 					<description>Show CDArt In Fullscreen Music Playback</description>
 					<include>SettingsContentRadioBtn</include>
 					<label>$LOCALIZE[31434]</label>
-					<selected>Skin.HasSetting(UseCdArtInMusicPlayingBG)</selected>
-					<onclick>Skin.ToggleSetting(UseCdArtInMusicPlayingBG)</onclick>
+					<selected>!Skin.HasSetting(HideCdArtInMusicPlayingBG)</selected>
+					<onclick>Skin.ToggleSetting(HideCdArtInMusicPlayingBG)</onclick>
 				</control>
 				<control type="button" id="3007">
 					<description>Videos Label</description>
