@@ -1944,7 +1944,7 @@
 			</control>
 			<control type="image">
 				<description>Overlay</description>
-				<posx>586</posx>
+				<posx>596</posx>
 				<posy>39</posy>
 				<width>24</width>
 				<height>24</height>
@@ -2058,14 +2058,13 @@
 				</control>
 				<control type="image">
 					<description>Overlay</description>
-					<posx>586</posx>
+					<posx>596</posx>
 					<posy>39</posy>
 					<width>24</width>
 					<height>24</height>
 					<texture background="true">$INFO[ListItem.Overlay]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!Skin.HasSetting(HideTVShowsListInfo2Overlay)</visible>
-					<include condition="!Skin.HasSetting(DisableViewFocusAnim)">ListViewCoverFocusAnim</include>
 				</control>
 			</control>
 		</focusedlayout>					
@@ -2136,7 +2135,7 @@
 				</control>
 				<control type="image">
 					<description>Overlay</description>
-					<posx>578</posx>
+					<posx>594</posx>
 					<posy>84</posy>
 					<width>26</width>
 					<height>26</height>
@@ -2220,7 +2219,7 @@
 				</control>
 				<control type="image">
 					<description>Overlay</description>
-					<posx>578</posx>
+					<posx>594</posx>
 					<posy>84</posy>
 					<width>26</width>
 					<height>26</height>

@@ -1406,7 +1406,7 @@
 					<visible>!Skin.HasSetting(HideEpisodesListInfo2Overlay)</visible>
 					<control type="image">
 						<description>Quality</description>
-						<posx>586</posx>
+						<posx>596</posx>
 						<posy>39</posy>
 						<width>24</width>
 						<height>24</height>
@@ -1417,7 +1417,7 @@
 					</control>	
 					<control type="image">
 						<description>Quality</description>
-						<posx>586</posx>
+						<posx>596</posx>
 						<posy>39</posy>
 						<width>24</width>
 						<height>24</height>
@@ -1428,7 +1428,7 @@
 					</control>	
 					<control type="image">
 						<description>Watched Partial</description>
-						<posx>586</posx>
+						<posx>596</posx>
 						<posy>39</posy>
 						<width>24</width>
 						<height>24</height>
@@ -1564,7 +1564,7 @@
 						<visible>!Skin.HasSetting(HideEpisodesListInfo2Overlay)</visible>
 						<control type="image">
 							<description>Quality</description>
-							<posx>586</posx>
+							<posx>596</posx>
 							<posy>39</posy>
 							<width>24</width>
 							<height>24</height>
@@ -1574,7 +1574,7 @@
 						</control>	
 						<control type="image">
 							<description>Quality</description>
-							<posx>586</posx>
+							<posx>596</posx>
 							<posy>39</posy>
 							<width>24</width>
 							<height>24</height>
@@ -1584,7 +1584,7 @@
 						</control>	
 						<control type="image">
 							<description>Watched Partial</description>
-							<posx>586</posx>
+							<posx>596</posx>
 							<posy>39</posy>
 							<width>24</width>
 							<height>24</height>

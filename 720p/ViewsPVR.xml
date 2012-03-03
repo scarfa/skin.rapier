@@ -22,7 +22,7 @@
 					<include>LiveTVListInfoStyleItemLayout</include>
 					<control type="group">
 						<description>Progress</description>
-						<posx>586</posx>
+						<posx>596</posx>
 						<posy>25</posy>
 						<include>LiveTVProgressImage</include>
 					</control>	
@@ -31,7 +31,7 @@
 					<include>LiveTVListInfoStyleFocusedLayout</include>
 					<control type="group">
 						<description>Progress</description>
-						<posx>586</posx>
+						<posx>596</posx>
 						<posy>25</posy>
 						<include>LiveTVProgressImage</include>
 					</control>
