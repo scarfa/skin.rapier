@@ -17,10 +17,12 @@
 <string id="31308">Comics</string>
 <string id="31309">Últimas Reproducciones</string>
 <string id="31310">El Proveedor Del Clima No Se Ha Establecido. Compruebe Su Configuración Del Clima Y Asegurese Que El Add-on Está Instalado</string>
+<string id="31311">En Progreso</string>
 <string id="31202">Entradas</string>
 <string id="31203">No encontrado.</string>
 <string id="31204">Ninguna descripción.</string>
 <string id="31205">Sin comentarios.</string>
+<string id="31215">Temporizador no encontrado.</string>
 <string id="31206">Estilos de Vistas</string>
 <string id="31207">Opciones de Portada</string>
 <string id="31208">Botón 1</string>
@@ -30,8 +32,6 @@
 <string id="31212">Botón 5</string>
 <string id="31213">Botón 6</string>
 <string id="31214">Botón 7</string>
-<string id="31215">Más...</string>
-<string id="31216">Menos...</string>
 <string id="31217">Duración</string>
 <string id="31218">Entrada</string>
 <string id="31219">Operación Exitosa</string>
@@ -76,16 +76,18 @@
 <string id="31030">Activar Iconos Animados</string>
 <string id="31031">Iconos Animados se Aplica en Todas las Ventanas</string>
 <string id="31032">Iconos Animados Sólo se Aplican a la Ventana del Clima</string>
-<string id="31999">Restablecer configuración de Piel a valores por defecto</string>
+<string id="31033">Ocultar Fecha</string>
 
 <!-- skin settings home -->
 <string id="31068">Ocultar Submenús</string>
+<string id="31080">Ocultar Información de Grabación</string>
 <string id="31069">Ocultar Información del Sistema</string>
-<string id="31070">Ocultar Categorias</string>
+<string id="31070">Ocultar Categorías</string>
 <string id="31071">Ocultar Reproducción en Curso</string>
 <string id="31072">Ocultar Últimos Añadidos</string>
+<string id="31079">Ocultar "En Progreso"</string>
 <string id="31073">Ocultar Clima</string>
-<string id="31074">Ocultar Categoria Iconos</string>
+<string id="31074">Ocultar Categoría Iconos</string>
 <string id="31075">Mostrar Botones de Navegación</string>
 <string id="31076">Categoría Submenú</string>
 <string id="31077">Mostrar Indicador Submenú</string>
@@ -93,10 +95,7 @@
 <string id="31081">Sin Reflejos</string>
 <string id="31082">Reflejos</string>
 <string id="31083">Fondo</string>
-<string id="31084">Categoria Imagenes</string>
-<string id="31085">* Tamaño Recomendado: 256 x 256</string>
-<string id="31086">* Tamaño Recomendado: 300 x 64</string>
-<string id="31087">* Tamaño Recomendado: 300 x 96</string>
+<string id="31084">Categoría Imagenes</string>
 <string id="31088">Info Panel</string>
 <string id="31095">Tipo Botón</string>
 <string id="31097">Etiqueta</string>
@@ -104,10 +103,10 @@
 <string id="31602">Plugin</string>
 <string id="31603">Favorito</string>
 <string id="31704">Personalizar Submenú</string>
-<string id="31712">Categoria Menú</string>
-<string id="31713">Añadir Más Categorias</string>
-<string id="31714">Categoria Icono</string>
-<string id="31715">Personalizar Categoria Iconos</string>
+<string id="31712">Categoría Menú</string>
+<string id="31713">Añadir Más Categorías</string>
+<string id="31714">Categoría Icono</string>
+<string id="31715">Personalizar Categoría Iconos</string>
 <string id="31716">Definida Categoría Música Para Redireccionar A Los Archivos</string>
 <string id="31717">Definida Categoría Música Para Redireccionar A La Biblioteca</string>
 <string id="31718">Definida Categoría Videos Para Redireccionar A Los Archivos</string>
@@ -126,14 +125,13 @@
 <string id="31050">Rating con Estrellas</string>
 <string id="31401">Desplazar Trama</string>
 <string id="31402">Desplazar Descripción</string>
-<string id="31404">Diseño Poster</string>
+<string id="31404">Usar Diseño Poster</string>
+<string id="31405">Usar Diseño Banner</string>
+<string id="31406">Usar Cubierta Local</string>
 <string id="31014">Extra Thumbs</string>
 <string id="31015">Extra Fanart</string>
-<string id="31016">Usar Logo Local</string>
-<string id="31017">Usar Poster Local</string>
-<string id="31019">Usar Banner Local</string>
-<string id="31407">Usa Visualización Para Fondo</string>
-<string id="31408">Usa Artista Fanart Para Fondo</string>
+<string id="31407">Usar Visualización Para Fondo</string>
+<string id="31408">Usar Artista Fanart Para Fondo</string>
 <string id="31409">Activa Música Visualización / Artista Fanart En Fondo</string>
 <string id="31410">Activa Reproducción de Video en Fondo</string>
 <string id="31412">Pequeño</string>
@@ -143,12 +141,17 @@
 <string id="31416">Usar Color Flag Blanco</string>
 <string id="31417">Expandido</string>
 <string id="31418">Normal</string>
+<string id="31419">Ver Animaciones</string>
 <string id="31424">Oscurecer</string>
 <string id="31427">Marcas de Medios</string>
 <string id="31428">Ocultar Resolución de Video</string>
 <string id="31429">Ocultar Relación de Aspecto</string>
-<string id="31430">Desactivar Animación de Desplazamiento</string>
-<string id="31431">Desactivar Animación de Reflejo</string>
+<string id="31430">Desactivar Efecto al Desplazar</string>
+<string id="31431">Desactivar Ampliación de Cubierta</string>
+<string id="31432">Mostrar Clear Art en OSD</string>
+<string id="31435">Mostrar Clear Logo en OSD</string>
+<string id="31433">Activar CD Art en Música</string>
+<string id="31434">Mostrar CD Art en Reproducción a Pantalla Completa</string>
 
 <!-- skin settings backgrounds -->
 <string id="31051">Mostrar Solo En Ventana Principal</string>
