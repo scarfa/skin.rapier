@@ -54,7 +54,7 @@
 				<description>Videos</description>
 				<include>BreadCrumbLabel</include>
 				<label>[UPPERCASE][B]$LOCALIZE[3][/B][/UPPERCASE]</label>
-				<visible>IsEmpty(Container.FolderPath) | Container.Content(Files) | Container.Content(Addons) | Substring(Container.FolderPath,plugin:)
+				<visible>StringCompare(Container.FolderPath,sources://video/) | IsEmpty(Container.FolderPath) | Container.Content(Files) | Container.Content(Addons) | Substring(Container.FolderPath,plugin:)
 				| Substring(Container.FolderPath,videodb://4/) | Substring(Container.FolderPath,videodb://5/) | Substring(Container.FolderPath,videodb://6/)
 				| Substring(Container.FolderPath,.xsp,Right)</visible>
 				<include>BreadCrumbSlideLvl2Anim</include>
@@ -91,7 +91,7 @@
 				<description>Files</description>
 				<include>BreadCrumbLabel</include>
 				<label>[UPPERCASE][B]$LOCALIZE[1214][/B][/UPPERCASE]</label>
-				<visible>Container.Content(Files) + ![IsEmpty(Container.FolderPath) | StringCompare(Container.FolderPath,special://videoplaylists/)
+				<visible>[StringCompare(Container.FolderPath,sources://video/) | Container.Content(Files)] + ![IsEmpty(Container.FolderPath) | StringCompare(Container.FolderPath,special://videoplaylists/)
 				| Substring(Container.FolderPath,plugin:)]</visible>
 				<include>BreadCrumbSlideLvl3Anim</include>
 			</control>	
