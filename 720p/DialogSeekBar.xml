@@ -8,7 +8,7 @@
 		<control type="group" id="682">
 			<posx>772</posx>
 			<posy>655</posy>
-			<visible>Window.IsActive(FullscreenVideo) | Window.IsActive(Visualisation]</visible>
+			<visible>Window.IsActive(FullscreenVideo) | Window.IsActive(Visualisation)</visible>
 			<include>FSSeekBar</include>
 			<include>BottomPaneOpenCloseAnim</include>
 			
