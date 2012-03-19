@@ -244,7 +244,7 @@
 			</control>	
 			
 			<include condition="[Skin.HasSetting(UseFanartForMusicPlayingBG) + !Skin.HasSetting(EnableArtistFanartSlideshow)]
-			| [Skin.HasSetting(UseFanartForMusicPlayingBG + !System.HasAddon(script.artistslideshow)]">MusicPlayingArtistFanart</include>
+			| [Skin.HasSetting(UseFanartForMusicPlayingBG) + !System.HasAddon(script.artistslideshow)]">MusicPlayingArtistFanart</include>
 			<include condition="System.HasAddon(script.artistslideshow) + Skin.HasSetting(UseFanartForMusicPlayingBG) + Skin.HasSetting(EnableArtistFanartSlideshow)">MusicPlayingArtistFanartSlideshow</include>
 			<include condition="!Skin.HasSetting(UseFanartForMusicPlayingBG) + !Window.IsActive(Home)">MediaPlayingVizDim</include>
 			<include condition="Skin.HasSetting(UseFanartForMusicPlayingBG) + !Window.IsActive(Home)">MediaPlayingFanartDim</include>
