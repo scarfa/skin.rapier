@@ -731,6 +731,8 @@
 						<onclick>$VAR[AddMoreCategoryBtn1Click4]</onclick>
 						<onclick>$VAR[AddMoreCategoryBtn1Click5]</onclick>
 						<onclick>$VAR[AddMoreCategoryBtn1Click6]</onclick>
+						<onclick>$VAR[AddMoreCategoryBtn1Click7]</onclick>
+						<onclick>$VAR[AddMoreCategoryBtn1Click8]</onclick>
 						<onfocus>Skin.SetString(SelectedExpandedBtn,1)</onfocus>
 					</control>
 					<control type="radiobutton" id="2302">
@@ -744,6 +746,8 @@
 						<onclick>$VAR[AddMoreCategoryBtn2Click4]</onclick>
 						<onclick>$VAR[AddMoreCategoryBtn2Click5]</onclick>
 						<onclick>$VAR[AddMoreCategoryBtn2Click6]</onclick>
+						<onclick>$VAR[AddMoreCategoryBtn2Click7]</onclick>
+						<onclick>$VAR[AddMoreCategoryBtn2Click8]</onclick>
 						<onfocus>Skin.SetString(SelectedExpandedBtn,2)</onfocus>
 					</control>
 					<control type="radiobutton" id="2303">
@@ -757,6 +761,8 @@
 						<onclick>$VAR[AddMoreCategoryBtn3Click4]</onclick>
 						<onclick>$VAR[AddMoreCategoryBtn3Click5]</onclick>
 						<onclick>$VAR[AddMoreCategoryBtn3Click6]</onclick>
+						<onclick>$VAR[AddMoreCategoryBtn3Click7]</onclick>
+						<onclick>$VAR[AddMoreCategoryBtn3Click8]</onclick>
 						<onfocus>Skin.SetString(SelectedExpandedBtn,3)</onfocus>
 					</control>
 					<control type="radiobutton" id="2304">
@@ -770,6 +776,8 @@
 						<onclick>$VAR[AddMoreCategoryBtn4Click4]</onclick>
 						<onclick>$VAR[AddMoreCategoryBtn4Click5]</onclick>
 						<onclick>$VAR[AddMoreCategoryBtn4Click6]</onclick>
+						<onclick>$VAR[AddMoreCategoryBtn4Click7]</onclick>
+						<onclick>$VAR[AddMoreCategoryBtn4Click8]</onclick>
 						<onfocus>Skin.SetString(SelectedExpandedBtn,4)</onfocus>
 					</control>
 				</control>
@@ -803,12 +811,13 @@
 						<posx>215</posx>
 						<posy>65</posy>
 						<width>540</width>
-						<height>500</height>
+						<height>450</height>
+						<pagecontrol>912</pagecontrol>
 						<itemgap>0</itemgap>
 						<onup>921</onup>
 						<ondown>921</ondown>
 						<onleft>2301</onleft>
-						<onright>-</onright>
+						<onright>151</onright>
 						<control type="button" id="2330">
 							<description>Button Properties Label</description>
 							<height>45</height>
@@ -835,6 +844,28 @@
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn1IconPath][/COLOR]</label>
 							<onclick>$VAR[AddMoreCategoryBtn1IconPathClick]</onclick>
+						</control>
+						<control type="button" id="2342">
+							<description>Custom Panel Path Label</description>
+							<height>45</height>
+							<include>ExpandedSettingsHeaderBtn</include>
+							<label>$LOCALIZE[31085]</label>
+						</control>
+						<control type="button" id="2343">
+							<description>Custom Panel Type</description>
+							<height>45</height>
+							<include>ExpandedSettingsListBtn</include>
+							<label>$LOCALIZE[564] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn1PanelTypeLabel][/COLOR]</label>
+							<onclick>ActivateWindow(1130)</onclick>
+						</control>
+						<control type="button" id="2344">
+							<description>Custom Panel Playlist</description>
+							<height>45</height>
+							<include>ExpandedSettingsListBtn</include>
+							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn1PanelPlaylist][/COLOR]</label>
+							<onclick>$VAR[AddMoreCategoryBtn1PanelPlaylistClick]</onclick>
+							<include>AddMoreCategoryBtn1PanelWarning</include>
+							<include>AddMoreCategoryBtn1PanelEnable</include>
 						</control>
 						<control type="button" id="2334">
 							<description>Custom Category Images Path Label</description>
@@ -955,12 +986,13 @@
 						<posx>215</posx>
 						<posy>65</posy>
 						<width>540</width>
-						<height>500</height>
+						<height>450</height>
+						<pagecontrol>912</pagecontrol>
 						<itemgap>0</itemgap>
 						<onup>921</onup>
 						<ondown>921</ondown>
 						<onleft>2302</onleft>
-						<onright>-</onright>
+						<onright>151</onright>
 						<control type="button" id="2330">
 							<description>Button Properties Label</description>
 							<height>45</height>
@@ -987,6 +1019,28 @@
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn2IconPath][/COLOR]</label>
 							<onclick>$VAR[AddMoreCategoryBtn2IconPathClick]</onclick>
+						</control>
+						<control type="button" id="2342">
+							<description>Custom Panel Path Label</description>
+							<height>45</height>
+							<include>ExpandedSettingsHeaderBtn</include>
+							<label>$LOCALIZE[31085]</label>
+						</control>
+						<control type="button" id="2343">
+							<description>Custom Panel Type</description>
+							<height>45</height>
+							<include>ExpandedSettingsListBtn</include>
+							<label>$LOCALIZE[564] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn2PanelTypeLabel][/COLOR]</label>
+							<onclick>ActivateWindow(1130)</onclick>
+						</control>
+						<control type="button" id="2344">
+							<description>Custom Panel Playlist</description>
+							<height>45</height>
+							<include>ExpandedSettingsListBtn</include>
+							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn2PanelPlaylist][/COLOR]</label>
+							<onclick>$VAR[AddMoreCategoryBtn2PanelPlaylistClick]</onclick>
+							<include>AddMoreCategoryBtn2PanelWarning</include>
+							<include>AddMoreCategoryBtn2PanelEnable</include>
 						</control>
 						<control type="button" id="2334">
 							<description>Custom Category Images Path Label</description>
@@ -1107,12 +1161,13 @@
 						<posx>215</posx>
 						<posy>65</posy>
 						<width>540</width>
-						<height>500</height>
+						<height>450</height>
+						<pagecontrol>912</pagecontrol>
 						<itemgap>0</itemgap>
 						<onup>921</onup>
 						<ondown>921</ondown>
 						<onleft>2303</onleft>
-						<onright>-</onright>
+						<onright>151</onright>
 						<control type="button" id="2330">
 							<description>Button Properties Label</description>
 							<height>45</height>
@@ -1139,6 +1194,28 @@
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn3IconPath][/COLOR]</label>
 							<onclick>$VAR[AddMoreCategoryBtn3IconPathClick]</onclick>
+						</control>
+						<control type="button" id="2342">
+							<description>Custom Panel Path Label</description>
+							<height>45</height>
+							<include>ExpandedSettingsHeaderBtn</include>
+							<label>$LOCALIZE[31085]</label>
+						</control>
+						<control type="button" id="2343">
+							<description>Custom Panel Type</description>
+							<height>45</height>
+							<include>ExpandedSettingsListBtn</include>
+							<label>$LOCALIZE[564] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn3PanelTypeLabel][/COLOR]</label>
+							<onclick>ActivateWindow(1130)</onclick>
+						</control>
+						<control type="button" id="2344">
+							<description>Custom Panel Playlist</description>
+							<height>45</height>
+							<include>ExpandedSettingsListBtn</include>
+							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn3PanelPlaylist][/COLOR]</label>
+							<onclick>$VAR[AddMoreCategoryBtn3PanelPlaylistClick]</onclick>
+							<include>AddMoreCategoryBtn3PanelWarning</include>
+							<include>AddMoreCategoryBtn3PanelEnable</include>
 						</control>
 						<control type="button" id="2334">
 							<description>Custom Category Images Path Label</description>
@@ -1259,12 +1336,13 @@
 						<posx>215</posx>
 						<posy>65</posy>
 						<width>540</width>
-						<height>500</height>
+						<height>450</height>
+						<pagecontrol>912</pagecontrol>
 						<itemgap>0</itemgap>
 						<onup>921</onup>
 						<ondown>921</ondown>
 						<onleft>2304</onleft>
-						<onright>-</onright>
+						<onright>151</onright>
 						<control type="button" id="2330">
 							<description>Button Properties Label</description>
 							<height>45</height>
@@ -1291,6 +1369,28 @@
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn4IconPath][/COLOR]</label>
 							<onclick>$VAR[AddMoreCategoryBtn4IconPathClick]</onclick>
+						</control>
+						<control type="button" id="2342">
+							<description>Custom Panel Path Label</description>
+							<height>45</height>
+							<include>ExpandedSettingsHeaderBtn</include>
+							<label>$LOCALIZE[31085]</label>
+						</control>
+						<control type="button" id="2343">
+							<description>Custom Panel Type</description>
+							<height>45</height>
+							<include>ExpandedSettingsListBtn</include>
+							<label>$LOCALIZE[564] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn4PanelTypeLabel][/COLOR]</label>
+							<onclick>ActivateWindow(1130)</onclick>
+						</control>
+						<control type="button" id="2344">
+							<description>Custom Panel Playlist</description>
+							<height>45</height>
+							<include>ExpandedSettingsListBtn</include>
+							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn4PanelPlaylist][/COLOR]</label>
+							<onclick>$VAR[AddMoreCategoryBtn4PanelPlaylistClick]</onclick>
+							<include>AddMoreCategoryBtn4PanelWarning</include>
+							<include>AddMoreCategoryBtn4PanelEnable</include>
 						</control>
 						<control type="button" id="2334">
 							<description>Custom Category Images Path Label</description>
@@ -2266,7 +2366,6 @@
 			<label>$LOCALIZE[31900]</label>
 			<selected>Skin.HasSetting(HidePVRCategory)</selected>
 			<onclick>Skin.ToggleSetting(HidePVRCategory)</onclick>
-			<include>PvrVisible</include>
 			<onup>2308</onup>
 			<ondown>2308</ondown>
 			<onleft>938</onleft>
@@ -2374,6 +2473,20 @@
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4)">Skin.Reset(Custom13BackgroundImagePath)</value>
 	</variable>
 
+	<variable name="AddMoreCategoryBtn1Click7">
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(SelectedExpandedBtn,1)">Skin.Reset(Custom1PanelPlaylist)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(SelectedExpandedBtn,1)">Skin.Reset(Custom5PanelPlaylist)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(SelectedExpandedBtn,1)">Skin.Reset(Custom9PanelPlaylist)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(SelectedExpandedBtn,1)">Skin.Reset(Custom13PanelPlaylist)</value>
+	</variable>
+
+	<variable name="AddMoreCategoryBtn1Click8">
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(SelectedExpandedBtn,1)">Skin.SetString(Custom1PanelType,1)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(SelectedExpandedBtn,1)">Skin.SetString(Custom5PanelType,1)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(SelectedExpandedBtn,1)">Skin.SetString(Custom9PanelType,1)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(SelectedExpandedBtn,1)">Skin.SetString(Custom13PanelType,1)</value>
+	</variable>
+
 	<variable name="AddMoreCategoryBtn1Param">
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings)">$INFO[Skin.String(Custom1BtnParam)]</value>
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2)">$INFO[Skin.String(Custom5BtnParam)]</value>
@@ -2386,6 +2499,65 @@
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2)">Skin.SetString(CustomBtnFavouritesParam,Custom5BtnParam)</value>
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3)">Skin.SetString(CustomBtnFavouritesParam,Custom9BtnParam)</value>
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4)">Skin.SetString(CustomBtnFavouritesParam,Custom13BtnParam)</value>
+	</variable>
+
+	<variable name="AddMoreCategoryBtn1PanelPlaylist">
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings)">$INFO[Skin.String(Custom1PanelPlaylist)]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2)">$INFO[Skin.String(Custom5PanelPlaylist)]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3)">$INFO[Skin.String(Custom9PanelPlaylist)]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4)">$INFO[Skin.String(Custom13PanelPlaylist)]</value>
+	</variable>
+
+	<variable name="AddMoreCategoryBtn1PanelPlaylistClick">
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings)">Skin.SetFile(Custom1PanelPlaylist,.xsp,special://profile/playlists/video/)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2)">Skin.SetFile(Custom5PanelPlaylist,.xsp,special://profile/playlists/video/)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3)">Skin.SetFile(Custom9PanelPlaylist,.xsp,special://profile/playlists/video/)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4)">Skin.SetFile(Custom13PanelPlaylist,.xsp,special://profile/playlists/video/)</value>
+	</variable>
+
+	<include name="AddMoreCategoryBtn1PanelEnable">
+		<enable>[Skin.HasSetting(ExpandAddMoreCategorySettings) + [Skin.String(Custom1PanelType,4) | Skin.String(Custom1PanelType,5)]] |
+		[Skin.HasSetting(ExpandAddMoreCategorySettings2) + [Skin.String(Custom5PanelType,4) | Skin.String(Custom5PanelType,5)]] |
+		[Skin.HasSetting(ExpandAddMoreCategorySettings3) + [Skin.String(Custom9PanelType,4) | Skin.String(Custom9PanelType,5)]] |
+		[Skin.HasSetting(ExpandAddMoreCategorySettings4) + [Skin.String(Custom13PanelType,4) | Skin.String(Custom13PanelType,5)]]</enable>
+	</include>
+
+	<include name="AddMoreCategoryBtn1PanelWarning">
+		<onclick condition="[Skin.HasSetting(ExpandAddMoreCategorySettings) + !IsEmpty(Skin.String(Custom1PanelPlaylist))] | 
+		[Skin.HasSetting(ExpandAddMoreCategorySettings2) + !IsEmpty(Skin.String(Custom5PanelPlaylist))] | 
+		[Skin.HasSetting(ExpandAddMoreCategorySettings3) + !IsEmpty(Skin.String(Custom9PanelPlaylist))] | 
+		[Skin.HasSetting(ExpandAddMoreCategorySettings4) + !IsEmpty(Skin.String(Custom13PanelPlaylist))]">ActivateWindow(1131)</onclick>
+	</include>
+
+	<variable name="AddMoreCategoryBtn1PanelTypeLabel">
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(Custom1PanelType,2)">$LOCALIZE[342]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(Custom1PanelType,3)">$LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(Custom1PanelType,4)">$LOCALIZE[559] ($LOCALIZE[342])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(Custom1PanelType,5)">$LOCALIZE[559] ($LOCALIZE[20360])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(Custom1PanelType,6)">$LOCALIZE[132]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(Custom1PanelType,7)">$LOCALIZE[20389]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(Custom1PanelType,8)">$LOCALIZE[24001]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(Custom5PanelType,2)">$LOCALIZE[342]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(Custom5PanelType,3)">$LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(Custom5PanelType,4)">$LOCALIZE[559] ($LOCALIZE[342])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(Custom5PanelType,5)">$LOCALIZE[559] ($LOCALIZE[20360])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(Custom5PanelType,6)">$LOCALIZE[132]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(Custom5PanelType,7)">$LOCALIZE[20389]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(Custom5PanelType,8)">$LOCALIZE[24001]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(Custom9PanelType,2)">$LOCALIZE[342]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(Custom9PanelType,3)">$LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(Custom9PanelType,4)">$LOCALIZE[559] ($LOCALIZE[342])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(Custom9PanelType,5)">$LOCALIZE[559] ($LOCALIZE[20360])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(Custom9PanelType,6)">$LOCALIZE[132]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(Custom9PanelType,7)">$LOCALIZE[20389]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(Custom9PanelType,8)">$LOCALIZE[24001]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(Custom13PanelType,2)">$LOCALIZE[342]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(Custom13PanelType,3)">$LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(Custom13PanelType,4)">$LOCALIZE[559] ($LOCALIZE[342])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(Custom13PanelType,5)">$LOCALIZE[559] ($LOCALIZE[20360])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(Custom13PanelType,6)">$LOCALIZE[132]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(Custom13PanelType,7)">$LOCALIZE[20389]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(Custom13PanelType,8)">$LOCALIZE[24001]</value>
 	</variable>
 
 	<variable name="AddMoreCategoryBtn1IconPath">
@@ -2574,6 +2746,20 @@
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4)">Skin.Reset(Custom14BackgroundImagePath)</value>
 	</variable>
 
+	<variable name="AddMoreCategoryBtn2Click7">
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(SelectedExpandedBtn,2)">Skin.Reset(Custom2PanelPlaylist)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(SelectedExpandedBtn,2)">Skin.Reset(Custom6PanelPlaylist)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(SelectedExpandedBtn,2)">Skin.Reset(Custom10PanelPlaylist)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(SelectedExpandedBtn,2)">Skin.Reset(Custom14PanelPlaylist)</value>
+	</variable>
+
+	<variable name="AddMoreCategoryBtn2Click8">
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(SelectedExpandedBtn,2)">Skin.SetString(Custom2PanelType,1)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(SelectedExpandedBtn,2)">Skin.SetString(Custom6PanelType,1)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(SelectedExpandedBtn,2)">Skin.SetString(Custom10PanelType,1)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(SelectedExpandedBtn,2)">Skin.SetString(Custom14PanelType,1)</value>
+	</variable>
+
 	<variable name="AddMoreCategoryBtn2Param">
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings)">$INFO[Skin.String(Custom2BtnParam)]</value>
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2)">$INFO[Skin.String(Custom6BtnParam)]</value>
@@ -2586,6 +2772,65 @@
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2)">Skin.SetString(CustomBtnFavouritesParam,Custom6BtnParam)</value>
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3)">Skin.SetString(CustomBtnFavouritesParam,Custom10BtnParam)</value>
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4)">Skin.SetString(CustomBtnFavouritesParam,Custom14BtnParam)</value>
+	</variable>
+
+	<variable name="AddMoreCategoryBtn2PanelPlaylist">
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings)">$INFO[Skin.String(Custom2PanelPlaylist)]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2)">$INFO[Skin.String(Custom6PanelPlaylist)]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3)">$INFO[Skin.String(Custom10PanelPlaylist)]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4)">$INFO[Skin.String(Custom14PanelPlaylist)]</value>
+	</variable>
+
+	<variable name="AddMoreCategoryBtn2PanelPlaylistClick">
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings)">Skin.SetFile(Custom2PanelPlaylist,.xsp,special://profile/playlists/video/)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2)">Skin.SetFile(Custom6PanelPlaylist,.xsp,special://profile/playlists/video/)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3)">Skin.SetFile(Custom10PanelPlaylist,.xsp,special://profile/playlists/video/)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4)">Skin.SetFile(Custom14PanelPlaylist,.xsp,special://profile/playlists/video/)</value>
+	</variable>
+
+	<include name="AddMoreCategoryBtn2PanelEnable">
+		<enable>[Skin.HasSetting(ExpandAddMoreCategorySettings) + [Skin.String(Custom2PanelType,4) | Skin.String(Custom2PanelType,5)]] |
+		[Skin.HasSetting(ExpandAddMoreCategorySettings2) + [Skin.String(Custom6PanelType,4) | Skin.String(Custom6PanelType,5)]] |
+		[Skin.HasSetting(ExpandAddMoreCategorySettings3) + [Skin.String(Custom10PanelType,4) | Skin.String(Custom10PanelType,5)]] |
+		[Skin.HasSetting(ExpandAddMoreCategorySettings4) + [Skin.String(Custom14PanelType,4) | Skin.String(Custom14PanelType,5)]]</enable>
+	</include>
+
+	<include name="AddMoreCategoryBtn2PanelWarning">
+		<onclick condition="[Skin.HasSetting(ExpandAddMoreCategorySettings) + !IsEmpty(Skin.String(Custom2PanelPlaylist))] | 
+		[Skin.HasSetting(ExpandAddMoreCategorySettings2) + !IsEmpty(Skin.String(Custom6PanelPlaylist))] | 
+		[Skin.HasSetting(ExpandAddMoreCategorySettings3) + !IsEmpty(Skin.String(Custom10PanelPlaylist))] | 
+		[Skin.HasSetting(ExpandAddMoreCategorySettings4) + !IsEmpty(Skin.String(Custom14PanelPlaylist))]">ActivateWindow(1131)</onclick>
+	</include>
+
+	<variable name="AddMoreCategoryBtn2PanelTypeLabel">
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(Custom2PanelType,2)">$LOCALIZE[342]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(Custom2PanelType,3)">$LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(Custom2PanelType,4)">$LOCALIZE[559] ($LOCALIZE[342])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(Custom2PanelType,5)">$LOCALIZE[559] ($LOCALIZE[20360])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(Custom2PanelType,6)">$LOCALIZE[132]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(Custom2PanelType,7)">$LOCALIZE[20389]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(Custom2PanelType,8)">$LOCALIZE[24001]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(Custom6PanelType,2)">$LOCALIZE[342]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(Custom6PanelType,3)">$LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(Custom6PanelType,4)">$LOCALIZE[559] ($LOCALIZE[342])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(Custom6PanelType,5)">$LOCALIZE[559] ($LOCALIZE[20360])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(Custom6PanelType,6)">$LOCALIZE[132]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(Custom6PanelType,7)">$LOCALIZE[20389]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(Custom6PanelType,8)">$LOCALIZE[24001]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(Custom10PanelType,2)">$LOCALIZE[342]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(Custom10PanelType,3)">$LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(Custom10PanelType,4)">$LOCALIZE[559] ($LOCALIZE[342])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(Custom10PanelType,5)">$LOCALIZE[559] ($LOCALIZE[20360])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(Custom10PanelType,6)">$LOCALIZE[132]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(Custom10PanelType,7)">$LOCALIZE[20389]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(Custom10PanelType,8)">$LOCALIZE[24001]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(Custom14PanelType,2)">$LOCALIZE[342]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(Custom14PanelType,3)">$LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(Custom14PanelType,4)">$LOCALIZE[559] ($LOCALIZE[342])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(Custom14PanelType,5)">$LOCALIZE[559] ($LOCALIZE[20360])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(Custom14PanelType,6)">$LOCALIZE[132]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(Custom14PanelType,7)">$LOCALIZE[20389]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(Custom14PanelType,8)">$LOCALIZE[24001]</value>
 	</variable>
 
 	<variable name="AddMoreCategoryBtn2IconPath">
@@ -2774,6 +3019,20 @@
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4)">Skin.Reset(Custom15BackgroundImagePath)</value>
 	</variable>
 
+	<variable name="AddMoreCategoryBtn3Click7">
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(SelectedExpandedBtn,3)">Skin.Reset(Custom3PanelPlaylist)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(SelectedExpandedBtn,3)">Skin.Reset(Custom7PanelPlaylist)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(SelectedExpandedBtn,3)">Skin.Reset(Custom11PanelPlaylist)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(SelectedExpandedBtn,3)">Skin.Reset(Custom15PanelPlaylist)</value>
+	</variable>
+
+	<variable name="AddMoreCategoryBtn3Click8">
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(SelectedExpandedBtn,3)">Skin.SetString(Custom3PanelType,1)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(SelectedExpandedBtn,3)">Skin.SetString(Custom7PanelType,1)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(SelectedExpandedBtn,3)">Skin.SetString(Custom11PanelType,1)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(SelectedExpandedBtn,3)">Skin.SetString(Custom15PanelType,1)</value>
+	</variable>
+
 	<variable name="AddMoreCategoryBtn3Param">
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings)">$INFO[Skin.String(Custom3BtnParam)]</value>
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2)">$INFO[Skin.String(Custom7BtnParam)]</value>
@@ -2786,6 +3045,65 @@
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2)">Skin.SetString(CustomBtnFavouritesParam,Custom7BtnParam)</value>
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3)">Skin.SetString(CustomBtnFavouritesParam,Custom11BtnParam)</value>
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4)">Skin.SetString(CustomBtnFavouritesParam,Custom15BtnParam)</value>
+	</variable>
+
+	<variable name="AddMoreCategoryBtn3PanelPlaylist">
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings)">$INFO[Skin.String(Custom3PanelPlaylist)]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2)">$INFO[Skin.String(Custom7PanelPlaylist)]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3)">$INFO[Skin.String(Custom11PanelPlaylist)]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4)">$INFO[Skin.String(Custom15PanelPlaylist)]</value>
+	</variable>
+
+	<variable name="AddMoreCategoryBtn3PanelPlaylistClick">
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings)">Skin.SetFile(Custom3PanelPlaylist,.xsp,special://profile/playlists/video/)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2)">Skin.SetFile(Custom7PanelPlaylist,.xsp,special://profile/playlists/video/)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3)">Skin.SetFile(Custom11PanelPlaylist,.xsp,special://profile/playlists/video/)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4)">Skin.SetFile(Custom15PanelPlaylist,.xsp,special://profile/playlists/video/)</value>
+	</variable>
+
+	<include name="AddMoreCategoryBtn3PanelEnable">
+		<enable>[Skin.HasSetting(ExpandAddMoreCategorySettings) + [Skin.String(Custom3PanelType,4) | Skin.String(Custom3PanelType,5)]] |
+		[Skin.HasSetting(ExpandAddMoreCategorySettings2) + [Skin.String(Custom7PanelType,4) | Skin.String(Custom7PanelType,5)]] |
+		[Skin.HasSetting(ExpandAddMoreCategorySettings3) + [Skin.String(Custom11PanelType,4) | Skin.String(Custom11PanelType,5)]] |
+		[Skin.HasSetting(ExpandAddMoreCategorySettings4) + [Skin.String(Custom15PanelType,4) | Skin.String(Custom15PanelType,5)]]</enable>
+	</include>
+
+	<include name="AddMoreCategoryBtn3PanelWarning">
+		<onclick condition="[Skin.HasSetting(ExpandAddMoreCategorySettings) + !IsEmpty(Skin.String(Custom3PanelPlaylist))] | 
+		[Skin.HasSetting(ExpandAddMoreCategorySettings2) + !IsEmpty(Skin.String(Custom7PanelPlaylist))] | 
+		[Skin.HasSetting(ExpandAddMoreCategorySettings3) + !IsEmpty(Skin.String(Custom11PanelPlaylist))] | 
+		[Skin.HasSetting(ExpandAddMoreCategorySettings4) + !IsEmpty(Skin.String(Custom15PanelPlaylist))]">ActivateWindow(1131)</onclick>
+	</include>
+
+	<variable name="AddMoreCategoryBtn3PanelTypeLabel">
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(Custom3PanelType,2)">$LOCALIZE[342]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(Custom3PanelType,3)">$LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(Custom3PanelType,4)">$LOCALIZE[559] ($LOCALIZE[342])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(Custom3PanelType,5)">$LOCALIZE[559] ($LOCALIZE[20360])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(Custom3PanelType,6)">$LOCALIZE[132]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(Custom3PanelType,7)">$LOCALIZE[20389]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(Custom3PanelType,8)">$LOCALIZE[24001]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(Custom7PanelType,2)">$LOCALIZE[342]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(Custom7PanelType,3)">$LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(Custom7PanelType,4)">$LOCALIZE[559] ($LOCALIZE[342])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(Custom7PanelType,5)">$LOCALIZE[559] ($LOCALIZE[20360])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(Custom7PanelType,6)">$LOCALIZE[132]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(Custom7PanelType,7)">$LOCALIZE[20389]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(Custom7PanelType,8)">$LOCALIZE[24001]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(Custom11PanelType,2)">$LOCALIZE[342]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(Custom11PanelType,3)">$LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(Custom11PanelType,4)">$LOCALIZE[559] ($LOCALIZE[342])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(Custom11PanelType,5)">$LOCALIZE[559] ($LOCALIZE[20360])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(Custom11PanelType,6)">$LOCALIZE[132]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(Custom11PanelType,7)">$LOCALIZE[20389]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(Custom11PanelType,8)">$LOCALIZE[24001]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(Custom15PanelType,2)">$LOCALIZE[342]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(Custom15PanelType,3)">$LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(Custom15PanelType,4)">$LOCALIZE[559] ($LOCALIZE[342])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(Custom15PanelType,5)">$LOCALIZE[559] ($LOCALIZE[20360])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(Custom15PanelType,6)">$LOCALIZE[132]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(Custom15PanelType,7)">$LOCALIZE[20389]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(Custom15PanelType,8)">$LOCALIZE[24001]</value>
 	</variable>
 
 	<variable name="AddMoreCategoryBtn3IconPath">
@@ -2974,6 +3292,20 @@
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4)">Skin.Reset(Custom16BackgroundImagePath)</value>
 	</variable>
 
+	<variable name="AddMoreCategoryBtn4Click7">
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(SelectedExpandedBtn,4)">Skin.Reset(Custom4PanelPlaylist)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(SelectedExpandedBtn,4)">Skin.Reset(Custom8PanelPlaylist)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(SelectedExpandedBtn,4)">Skin.Reset(Custom12PanelPlaylist)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(SelectedExpandedBtn,4)">Skin.Reset(Custom16PanelPlaylist)</value>
+	</variable>
+
+	<variable name="AddMoreCategoryBtn4Click8">
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(SelectedExpandedBtn,4)">Skin.SetString(Custom4PanelType,1)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(SelectedExpandedBtn,4)">Skin.SetString(Custom8PanelType,1)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(SelectedExpandedBtn,4)">Skin.SetString(Custom12PanelType,1)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(SelectedExpandedBtn,4)">Skin.SetString(Custom16PanelType,1)</value>
+	</variable>
+
 	<variable name="AddMoreCategoryBtn4Param">
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings)">$INFO[Skin.String(Custom4BtnParam)]</value>
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2)">$INFO[Skin.String(Custom8BtnParam)]</value>
@@ -2986,6 +3318,65 @@
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2)">Skin.SetString(CustomBtnFavouritesParam,Custom8BtnParam)</value>
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3)">Skin.SetString(CustomBtnFavouritesParam,Custom12BtnParam)</value>
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4)">Skin.SetString(CustomBtnFavouritesParam,Custom16BtnParam)</value>
+	</variable>
+
+	<variable name="AddMoreCategoryBtn4PanelPlaylist">
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings)">$INFO[Skin.String(Custom4PanelPlaylist)]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2)">$INFO[Skin.String(Custom8PanelPlaylist)]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3)">$INFO[Skin.String(Custom12PanelPlaylist)]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4)">$INFO[Skin.String(Custom16PanelPlaylist)]</value>
+	</variable>
+
+	<variable name="AddMoreCategoryBtn4PanelPlaylistClick">
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings)">Skin.SetFile(Custom4PanelPlaylist,.xsp,special://profile/playlists/video/)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2)">Skin.SetFile(Custom8PanelPlaylist,.xsp,special://profile/playlists/video/)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3)">Skin.SetFile(Custom12PanelPlaylist,.xsp,special://profile/playlists/video/)</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4)">Skin.SetFile(Custom16PanelPlaylist,.xsp,special://profile/playlists/video/)</value>
+	</variable>
+
+	<include name="AddMoreCategoryBtn4PanelEnable">
+		<enable>[Skin.HasSetting(ExpandAddMoreCategorySettings) + [Skin.String(Custom4PanelType,4) | Skin.String(Custom4PanelType,5)]] |
+		[Skin.HasSetting(ExpandAddMoreCategorySettings2) + [Skin.String(Custom8PanelType,4) | Skin.String(Custom8PanelType,5)]] |
+		[Skin.HasSetting(ExpandAddMoreCategorySettings3) + [Skin.String(Custom12PanelType,4) | Skin.String(Custom12PanelType,5)]] |
+		[Skin.HasSetting(ExpandAddMoreCategorySettings4) + [Skin.String(Custom16PanelType,4) | Skin.String(Custom16PanelType,5)]]</enable>
+	</include>
+
+	<include name="AddMoreCategoryBtn4PanelWarning">
+		<onclick condition="[Skin.HasSetting(ExpandAddMoreCategorySettings) + !IsEmpty(Skin.String(Custom4PanelPlaylist))] | 
+		[Skin.HasSetting(ExpandAddMoreCategorySettings2) + !IsEmpty(Skin.String(Custom8PanelPlaylist))] | 
+		[Skin.HasSetting(ExpandAddMoreCategorySettings3) + !IsEmpty(Skin.String(Custom12PanelPlaylist))] | 
+		[Skin.HasSetting(ExpandAddMoreCategorySettings4) + !IsEmpty(Skin.String(Custom16PanelPlaylist))]">ActivateWindow(1131)</onclick>
+	</include>
+
+	<variable name="AddMoreCategoryBtn4PanelTypeLabel">
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(Custom4PanelType,2)">$LOCALIZE[342]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(Custom4PanelType,3)">$LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(Custom4PanelType,4)">$LOCALIZE[559] ($LOCALIZE[342])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(Custom4PanelType,5)">$LOCALIZE[559] ($LOCALIZE[20360])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(Custom4PanelType,6)">$LOCALIZE[132]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(Custom4PanelType,7)">$LOCALIZE[20389]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.String(Custom4PanelType,8)">$LOCALIZE[24001]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(Custom8PanelType,2)">$LOCALIZE[342]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(Custom8PanelType,3)">$LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(Custom8PanelType,4)">$LOCALIZE[559] ($LOCALIZE[342])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(Custom8PanelType,5)">$LOCALIZE[559] ($LOCALIZE[20360])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(Custom8PanelType,6)">$LOCALIZE[132]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(Custom8PanelType,7)">$LOCALIZE[20389]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.String(Custom8PanelType,8)">$LOCALIZE[24001]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(Custom12PanelType,2)">$LOCALIZE[342]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(Custom12PanelType,3)">$LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(Custom12PanelType,4)">$LOCALIZE[559] ($LOCALIZE[342])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(Custom12PanelType,5)">$LOCALIZE[559] ($LOCALIZE[20360])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(Custom12PanelType,6)">$LOCALIZE[132]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(Custom12PanelType,7)">$LOCALIZE[20389]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.String(Custom12PanelType,8)">$LOCALIZE[24001]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(Custom16PanelType,2)">$LOCALIZE[342]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(Custom16PanelType,3)">$LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(Custom16PanelType,4)">$LOCALIZE[559] ($LOCALIZE[342])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(Custom16PanelType,5)">$LOCALIZE[559] ($LOCALIZE[20360])</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(Custom16PanelType,6)">$LOCALIZE[132]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(Custom16PanelType,7)">$LOCALIZE[20389]</value>
+		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(Custom16PanelType,8)">$LOCALIZE[24001]</value>
 	</variable>
 
 	<variable name="AddMoreCategoryBtn4IconPath">
