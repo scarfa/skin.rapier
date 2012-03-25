@@ -1471,7 +1471,7 @@
 				<posx>10</posx>
 				<width>1260</width>
 				<height>34</height>
-				<onup>-</onup>
+				<onup>6894</onup>
 				<ondown>850</ondown>
 				<orientation>horizontal</orientation>
 				<visible>Container(850).HasFocus(7)</visible>
@@ -1529,7 +1529,7 @@
 				<posx>10</posx>
 				<width>1260</width>
 				<height>34</height>
-				<onup>-</onup>
+				<onup>6896</onup>
 				<ondown>850</ondown>
 				<orientation>horizontal</orientation>
 				<visible>Container(850).HasFocus(8)</visible>
@@ -1587,7 +1587,7 @@
 				<posx>10</posx>
 				<width>1260</width>
 				<height>34</height>
-				<onup>-</onup>
+				<onup>6898</onup>
 				<ondown>850</ondown>
 				<orientation>horizontal</orientation>
 				<visible>Container(850).HasFocus(9)</visible>
@@ -1645,7 +1645,7 @@
 				<posx>10</posx>
 				<width>1260</width>
 				<height>34</height>
-				<onup>-</onup>
+				<onup>6900</onup>
 				<ondown>850</ondown>
 				<orientation>horizontal</orientation>
 				<visible>Container(850).HasFocus(10)</visible>
@@ -1703,7 +1703,7 @@
 				<posx>10</posx>
 				<width>1260</width>
 				<height>34</height>
-				<onup>-</onup>
+				<onup>6902</onup>
 				<ondown>850</ondown>
 				<orientation>horizontal</orientation>
 				<visible>Container(850).HasFocus(11)</visible>
@@ -1761,7 +1761,7 @@
 				<posx>10</posx>
 				<width>1260</width>
 				<height>34</height>
-				<onup>-</onup>
+				<onup>6904</onup>
 				<ondown>850</ondown>
 				<orientation>horizontal</orientation>
 				<visible>Container(850).HasFocus(12)</visible>
@@ -1819,7 +1819,7 @@
 				<posx>10</posx>
 				<width>1260</width>
 				<height>34</height>
-				<onup>-</onup>
+				<onup>6906</onup>
 				<ondown>850</ondown>
 				<orientation>horizontal</orientation>
 				<visible>Container(850).HasFocus(13)</visible>
@@ -1877,7 +1877,7 @@
 				<posx>10</posx>
 				<width>1260</width>
 				<height>34</height>
-				<onup>-</onup>
+				<onup>6908</onup>
 				<ondown>850</ondown>
 				<orientation>horizontal</orientation>
 				<visible>Container(850).HasFocus(14)</visible>
@@ -1935,7 +1935,7 @@
 				<posx>10</posx>
 				<width>1260</width>
 				<height>34</height>
-				<onup>-</onup>
+				<onup>6910</onup>
 				<ondown>850</ondown>
 				<orientation>horizontal</orientation>
 				<visible>Container(850).HasFocus(17)</visible>
@@ -1993,7 +1993,7 @@
 				<posx>10</posx>
 				<width>1260</width>
 				<height>34</height>
-				<onup>-</onup>
+				<onup>6912</onup>
 				<ondown>850</ondown>
 				<orientation>horizontal</orientation>
 				<visible>Container(850).HasFocus(18)</visible>
@@ -2051,7 +2051,7 @@
 				<posx>10</posx>
 				<width>1260</width>
 				<height>34</height>
-				<onup>-</onup>
+				<onup>6914</onup>
 				<ondown>850</ondown>
 				<orientation>horizontal</orientation>
 				<visible>Container(850).HasFocus(19)</visible>
@@ -2109,7 +2109,7 @@
 				<posx>10</posx>
 				<width>1260</width>
 				<height>34</height>
-				<onup>-</onup>
+				<onup>6916</onup>
 				<ondown>850</ondown>
 				<orientation>horizontal</orientation>
 				<visible>Container(850).HasFocus(20)</visible>
@@ -2167,7 +2167,7 @@
 				<posx>10</posx>
 				<width>1260</width>
 				<height>34</height>
-				<onup>-</onup>
+				<onup>6918</onup>
 				<ondown>850</ondown>
 				<orientation>horizontal</orientation>
 				<visible>Container(850).HasFocus(21)</visible>
@@ -2225,7 +2225,7 @@
 				<posx>10</posx>
 				<width>1260</width>
 				<height>34</height>
-				<onup>-</onup>
+				<onup>6920</onup>
 				<ondown>850</ondown>
 				<orientation>horizontal</orientation>
 				<visible>Container(850).HasFocus(22)</visible>
@@ -2283,7 +2283,7 @@
 				<posx>10</posx>
 				<width>1260</width>
 				<height>34</height>
-				<onup>-</onup>
+				<onup>6922</onup>
 				<ondown>850</ondown>
 				<orientation>horizontal</orientation>
 				<visible>Container(850).HasFocus(23)</visible>
@@ -2341,7 +2341,7 @@
 				<posx>10</posx>
 				<width>1260</width>
 				<height>34</height>
-				<onup>-</onup>
+				<onup>6924</onup>
 				<ondown>850</ondown>
 				<orientation>horizontal</orientation>
 				<visible>Container(850).HasFocus(24)</visible>

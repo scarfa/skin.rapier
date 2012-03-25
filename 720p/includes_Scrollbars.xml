@@ -421,6 +421,17 @@
 				<animation effect="fade" start="100" end="0" time="150" condition="!ControlGroup(150).HasFocus">Conditional</animation>
 			</control>	
 		</control>
+
+		<control type="group" id="151">
+			<control type="scrollbar" id="912">
+				<posx>1262</posx>
+				<posy>175</posy>
+				<height>450</height>
+				<onleft>921</onleft>
+				<include>ExpandAddMoreCategoryVisible</include>
+				<animation effect="fade" start="100" end="0" time="150" condition="!ControlGroup(151).HasFocus">Conditional</animation>
+			</control>	
+		</control>
 	</include>
 	
 	<include name="FileManagerScrollbar">
