@@ -18,6 +18,7 @@
 <string id="31309">최근 재생</string>
 <string id="31310">날씨 공급자가 설정되지 않았습니다. 날씨 설정을 확인하고 날씨 애드온을 설치하세요.</string>
 <string id="31311">감상중</string>
+<string id="31312">추천</string>
 <string id="31202">항목</string>
 <string id="31203">줄거리 없음</string>
 <string id="31204">상세 정보 없음</string>
@@ -92,6 +93,7 @@
 <string id="31076">카테고리 서브메뉴</string>
 <string id="31077">서브 메뉴 있음 표시</string>
 <string id="31078">사용자 아이콘</string>
+<string id="31085">사용자 패널</string>
 <string id="31081">선택 안됨</string>
 <string id="31082">선택</string>
 <string id="31083">배경</string>
@@ -111,6 +113,7 @@
 <string id="31717">음악 카테고리 선택시 라이브러리 모드로 이동</string>
 <string id="31718">비디오 카테고리 선택시 파일 모드로 이동</string>
 <string id="31719">비디오 카테고리 선택시 라이브러리 모드로 이동</string>
+<string id="31720">너무 많은 사용자 패널을 사용하면[CR]스킨의 성능을 떨어뜨릴 수 있습니다.[CR]주의해서 사용하세요.</string>
 
 <!-- skin settings media -->
 <string id="31041">상세정보 숨기기</string>
