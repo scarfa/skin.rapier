@@ -488,8 +488,8 @@
 	<include name="PVRChannelsOSDDialogBox">
 		<control type="image">
 			<width>500</width>
-			<height>606</height>
-			<texture border="50,70,50,75">panels/dialog-background3.png</texture>
+			<height>558</height>
+			<texture border="50,70,50,75">panels/dialog-background.png</texture>
 		</control>
 
 		<control type="button">
@@ -501,8 +501,8 @@
 	<include name="PVRGuideOSDDialogBox">
 		<control type="image">
 			<width>500</width>
-			<height>606</height>
-			<texture border="50,70,50,75">panels/dialog-background3.png</texture>
+			<height>558</height>
+			<texture border="50,70,50,75">panels/dialog-background.png</texture>
 		</control>
 
 		<control type="button">

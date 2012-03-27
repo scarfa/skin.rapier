@@ -4,7 +4,7 @@
 
 	<coordinates>
 		<system>1</system>
-		<origin x="758" y="44">true</origin>
+		<origin x="758" y="92">true</origin>
 	</coordinates>
 
 	<controls>
@@ -25,12 +25,12 @@
 
 				<control type="list" id="11">
 					<width>430</width>
-					<height>518</height>
+					<height>444</height>
 					<onleft>-</onleft>
-					<onright>-</onright>
+					<onright>12</onright>
 					<onup>11</onup>
 					<ondown>11</ondown>
-					<pagecontrol>70</pagecontrol>
+					<pagecontrol>12</pagecontrol>
 					<preloaditems>2</preloaditems>
 					<scrolltime tween="sine" easing="inout">300</scrolltime>
 					<itemlayout height="74">
@@ -153,6 +153,14 @@
 						</control>
 					</focusedlayout>
 				</control>
+			</control>
+
+			<control type="spincontrol" id="12">
+				<description>Next Page</description>
+				<posx>425</posx>
+				<posy>513</posy>
+				<font>-</font>
+				<onup>11</onup>
 			</control>
 		</control>
 	</controls>
