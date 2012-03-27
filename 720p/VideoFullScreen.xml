@@ -118,6 +118,34 @@
 						<aligny>top</aligny>
 					</control>
 				</control>
+				
+				<control type="grouplist" id="1">
+					<description>NextTitle</description>
+					<posx>588</posx>
+					<posy>30</posy>
+					<width>600</width>
+					<align>right</align>
+					<orientation>horizontal</orientation>
+					<control type="label" id="1">
+						<width min="10" max="140">auto</width>
+						<height>26</height>
+						<font>FSInfoFont2</font>
+						<textcolor>MediaInfoItemColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>[UPPERCASE]$LOCALIZE[209]:[/UPPERCASE]</label>
+						<aligny>center</aligny>
+					</control>
+					<control type="label" id="1">
+						<width min="10" max="460">auto</width>
+						<height>26</height>
+						<font>FSInfoFont2</font>
+						<textcolor>MediaInfoItemColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label fallback="31001">$INFO[VideoPlayer.NextTitle]</label>
+						<aligny>center</aligny>
+						<scroll>yes</scroll>
+					</control>
+				</control>
 	
 				<control type="grouplist" id="1">
 					<description>Media Info Labels</description>
