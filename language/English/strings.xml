@@ -113,6 +113,8 @@
 <string id="31717">Clicking Music Category Redirects To Library</string>
 <string id="31718">Clicking Videos Category Redirects To Files</string>
 <string id="31719">Clicking Videos Category Redirects To Library</string>
+<string id="31721">Clicking Live TV Category Redirects To Channels</string>
+<string id="31722">Clicking Live TV Category Redirects To EPG</string>
 <string id="31720">Enabling too many custom panels with playlists[CR]could result in performance decline of skin.[CR]Consider yourself warned.</string>
 
 <!-- skin settings media -->

@@ -182,6 +182,7 @@
 					<onclick condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(SelectedExpandedBtn,4)">Skin.SetString(Custom16PanelType,4)</onclick>
 					<include>CustomPanelClearScripts</include>
 					<onclick>Dialog.Close(1130)</onclick>
+					<enable>System.HasAddon(script.randomandlastitems)</enable>
 				</control>
 				<control type="button" id="105">
 					<description>Playlist (Episodes)</description>
@@ -205,6 +206,7 @@
 					<onclick condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.String(SelectedExpandedBtn,4)">Skin.SetString(Custom16PanelType,5)</onclick>
 					<include>CustomPanelClearScripts</include>
 					<onclick>Dialog.Close(1130)</onclick>
+					<enable>System.HasAddon(script.randomandlastitems)</enable>
 				</control>		
 				<control type="button" id="106">
 					<description>Music Videos</description>

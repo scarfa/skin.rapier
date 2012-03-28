@@ -185,14 +185,23 @@
 		<label>$LOCALIZE[14022]</label>
 		<onclick>ActivateWindow(VideoLibrary)</onclick>
 	</include>
-	
+
+	<include name="RedirectPVRCategoryChannels">
+		<onclick>ActivateWindowAndFocus(MyPVR, 850,0, 32,0)</onclick>
+	</include>
+
+	<include name="RedirectPVRCategoryEPG">
+		<onclick>ActivateWindowAndFocus(MyPVR, 850,0, 31,0)</onclick>
+	</include>
+
 	<include name="HomePVRCategory">
 		<item id="50">
 			<description>PVR Category</description>
 			<label>pvr</label>
 			<icon>homecategories/$INFO[System.Language]/pvr-text-nofocus.png</icon>
 			<thumb>$INFO[Skin.String(CustomPVRBGPath)]</thumb>
-			<onclick>ActivateWindowAndFocus(MyPVR, 850,0, 32,0)</onclick>
+			<include condition="!Skin.HasSetting(RedirectPVRCategoryEPG)">RedirectPVRCategoryChannels</include>
+			<include condition="Skin.HasSetting(RedirectPVRCategoryEPG)">RedirectPVRCategoryEPG</include>
 		</item>
 	</include>
 

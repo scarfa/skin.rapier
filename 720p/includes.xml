@@ -752,13 +752,13 @@
 	<variable name="FSInfoLabel3">
 		<value condition="VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes)">$LOCALIZE[20417]:</value>
 		<value condition="VideoPlayer.Content(MusicVideos)">$LOCALIZE[558]:</value>
-		<value condition="VideoPlayer.Content(LiveTV)">$LOCALIZE[19113]:</value>
+		<value condition="VideoPlayer.Content(LiveTV)">$LOCALIZE[19141]:</value>
 	</variable>
 	
 	<variable name="FSInfoLabel3Val">
 		<value condition="VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes)">$INFO[VideoPlayer.Writer]</value>
 		<value condition="VideoPlayer.Content(MusicVideos)">$INFO[VideoPlayer.Album]</value>
-		<value condition="VideoPlayer.Content(LiveTV)">$INFO[VideoPlayer.NextTitle]</value>
+		<value condition="VideoPlayer.Content(LiveTV)">$INFO[VideoPlayer.ChannelGroup]</value>
 	</variable>
 	
 	<variable name="TVShowClearImageOSD">
