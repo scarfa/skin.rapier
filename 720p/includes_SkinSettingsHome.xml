@@ -809,13 +809,11 @@
 						<onright>151</onright>
 						<control type="button" id="2330">
 							<description>Button Properties Label</description>
-							<height>45</height>
 							<include>ExpandedSettingsHeaderBtn</include>
 							<label>$LOCALIZE[31098]</label>
 						</control>
 						<control type="button" id="2331">
 							<description>Favourite Path</description>
-							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn1Param][/COLOR]</label>
 							<onclick>$VAR[AddMoreCategoryBtn1ParamClick]</onclick>
@@ -823,26 +821,22 @@
 						</control>
 						<control type="button" id="2332">
 							<description>Custom Icon Path Label</description>
-							<height>45</height>
 							<include>ExpandedSettingsHeaderBtn</include>
 							<label>$LOCALIZE[31078]</label>
 						</control>
 						<control type="button" id="2333">
 							<description>Custom Icon Path</description>
-							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn1IconPath][/COLOR]</label>
 							<onclick>$VAR[AddMoreCategoryBtn1IconPathClick]</onclick>
 						</control>
 						<control type="button" id="2342">
 							<description>Custom Panel Path Label</description>
-							<height>45</height>
 							<include>ExpandedSettingsHeaderBtn</include>
 							<label>$LOCALIZE[31085]</label>
 						</control>
 						<control type="button" id="2343">
 							<description>Custom Panel Type</description>
-							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[564] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn1PanelTypeLabel][/COLOR]</label>
 							<onclick condition="!System.HasAddon(script.randomitems)">Notification($LOCALIZE[24076],script.randomitems,5000,)</onclick>
@@ -851,7 +845,6 @@
 						</control>
 						<control type="button" id="2344">
 							<description>Custom Panel Playlist</description>
-							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn1PanelPlaylist][/COLOR]</label>
 							<onclick>$VAR[AddMoreCategoryBtn1PanelPlaylistClick]</onclick>
@@ -860,13 +853,11 @@
 						</control>
 						<control type="button" id="2334">
 							<description>Custom Category Images Path Label</description>
-							<height>45</height>
 							<include>ExpandedSettingsHeaderBtn</include>
 							<label>$LOCALIZE[31084]</label>
 						</control>
 						<control type="button" id="2335">
 							<description>Custom Category No Focus Image Path</description>
-							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[31081] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn1NoFocusImagePath][/COLOR]</label>
 							<onclick>Skin.SetString(ExtraCategoriesPath,special://skin/extras/)</onclick>
@@ -875,7 +866,6 @@
 						</control>
 						<control type="button" id="2336">
 							<description>Custom Category Focus Image Path</description>
-							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[31082] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn1FocusImagePath][/COLOR]</label>
 							<onclick>Skin.SetString(ExtraCategoriesPath,special://skin/extras/)</onclick>
@@ -884,24 +874,21 @@
 						</control>
 						<control type="button" id="2337">
 							<description>Custom Background Path Label</description>
-							<height>45</height>
 							<include>ExpandedSettingsHeaderBtn</include>
 							<label>$LOCALIZE[31083]</label>
 						</control>
 						<control type="button" id="2338">
 							<description>Custom Background Image Path</description>
-							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn1BackgroundImagePath][/COLOR]</label>
 							<onclick>$VAR[AddMoreCategoryBtn1BackgroundImagePathClick]</onclick>
 						</control>
-						<control type="radiobutton" id="2339">
-							<description>Use Multi Background Image</description>
-							<width>540</width>
-							<height>45</height>
-							<include>SettingsContentRadioBtn</include>
-							<label>$LOCALIZE[31057]</label>
-							<include>AddMoreCategoryBtn1BackgroundImageSelected</include>
+						<control type="togglebutton" id="2339">
+							<description>Redirect Background Image</description>
+							<include>ExpandedSettingsToggleBtn</include>
+							<label>$LOCALIZE[564] - $LOCALIZE[31056]</label>
+							<altlabel>$LOCALIZE[564] - $LOCALIZE[31057]</altlabel>
+							<include>AddMoreCategoryBtn1BackgroundAltImage</include>
 							<onclick>$VAR[AddMoreCategoryBtn1BackgroundImageClick]</onclick>
 							<onclick>$VAR[AddMoreCategoryBtn1BackgroundImageClick2]</onclick>
 						</control>
@@ -986,13 +973,11 @@
 						<onright>151</onright>
 						<control type="button" id="2330">
 							<description>Button Properties Label</description>
-							<height>45</height>
 							<include>ExpandedSettingsHeaderBtn</include>
 							<label>$LOCALIZE[31098]</label>
 						</control>
 						<control type="button" id="2331">
 							<description>Favourite Path</description>
-							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn2Param][/COLOR]</label>
 							<onclick>$VAR[AddMoreCategoryBtn2ParamClick]</onclick>
@@ -1000,26 +985,22 @@
 						</control>
 						<control type="button" id="2332">
 							<description>Custom Icon Path Label</description>
-							<height>45</height>
 							<include>ExpandedSettingsHeaderBtn</include>
 							<label>$LOCALIZE[31078]</label>
 						</control>
 						<control type="button" id="2333">
 							<description>Custom Icon Path</description>
-							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn2IconPath][/COLOR]</label>
 							<onclick>$VAR[AddMoreCategoryBtn2IconPathClick]</onclick>
 						</control>
 						<control type="button" id="2342">
 							<description>Custom Panel Path Label</description>
-							<height>45</height>
 							<include>ExpandedSettingsHeaderBtn</include>
 							<label>$LOCALIZE[31085]</label>
 						</control>
 						<control type="button" id="2343">
 							<description>Custom Panel Type</description>
-							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[564] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn2PanelTypeLabel][/COLOR]</label>
 							<onclick condition="!System.HasAddon(script.randomitems)">Notification($LOCALIZE[24076],script.randomitems,5000,)</onclick>
@@ -1028,7 +1009,6 @@
 						</control>
 						<control type="button" id="2344">
 							<description>Custom Panel Playlist</description>
-							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn2PanelPlaylist][/COLOR]</label>
 							<onclick>$VAR[AddMoreCategoryBtn2PanelPlaylistClick]</onclick>
@@ -1037,13 +1017,11 @@
 						</control>
 						<control type="button" id="2334">
 							<description>Custom Category Images Path Label</description>
-							<height>45</height>
 							<include>ExpandedSettingsHeaderBtn</include>
 							<label>$LOCALIZE[31084]</label>
 						</control>
 						<control type="button" id="2335">
 							<description>Custom Category No Focus Image Path</description>
-							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[31081] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn2NoFocusImagePath][/COLOR]</label>
 							<onclick>Skin.SetString(ExtraCategoriesPath,special://skin/extras/)</onclick>
@@ -1052,7 +1030,6 @@
 						</control>
 						<control type="button" id="2336">
 							<description>Custom Category Focus Image Path</description>
-							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[31082] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn2FocusImagePath][/COLOR]</label>
 							<onclick>Skin.SetString(ExtraCategoriesPath,special://skin/extras/)</onclick>
@@ -1061,24 +1038,21 @@
 						</control>
 						<control type="button" id="2337">
 							<description>Custom Background Path Label</description>
-							<height>45</height>
 							<include>ExpandedSettingsHeaderBtn</include>
 							<label>$LOCALIZE[31083]</label>
 						</control>
 						<control type="button" id="2338">
 							<description>Custom Background Image Path</description>
-							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn2BackgroundImagePath][/COLOR]</label>
 							<onclick>$VAR[AddMoreCategoryBtn2BackgroundImagePathClick]</onclick>
 						</control>
-						<control type="radiobutton" id="2339">
-							<description>Use Multi Background Image</description>
-							<width>540</width>
-							<height>45</height>
-							<include>SettingsContentRadioBtn</include>
-							<label>$LOCALIZE[31057]</label>
-							<include>AddMoreCategoryBtn2BackgroundImageSelected</include>
+						<control type="togglebutton" id="2339">
+							<description>Redirect Background Image</description>
+							<include>ExpandedSettingsToggleBtn</include>
+							<label>$LOCALIZE[564] - $LOCALIZE[31056]</label>
+							<altlabel>$LOCALIZE[564] - $LOCALIZE[31057]</altlabel>
+							<include>AddMoreCategoryBtn2BackgroundAltImage</include>
 							<onclick>$VAR[AddMoreCategoryBtn2BackgroundImageClick]</onclick>
 							<onclick>$VAR[AddMoreCategoryBtn2BackgroundImageClick2]</onclick>
 						</control>
@@ -1163,13 +1137,11 @@
 						<onright>151</onright>
 						<control type="button" id="2330">
 							<description>Button Properties Label</description>
-							<height>45</height>
 							<include>ExpandedSettingsHeaderBtn</include>
 							<label>$LOCALIZE[31098]</label>
 						</control>
 						<control type="button" id="2331">
 							<description>Favourite Path</description>
-							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn3Param][/COLOR]</label>
 							<onclick>$VAR[AddMoreCategoryBtn3ParamClick]</onclick>
@@ -1177,26 +1149,22 @@
 						</control>
 						<control type="button" id="2332">
 							<description>Custom Icon Path Label</description>
-							<height>45</height>
 							<include>ExpandedSettingsHeaderBtn</include>
 							<label>$LOCALIZE[31078]</label>
 						</control>
 						<control type="button" id="2333">
 							<description>Custom Icon Path</description>
-							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn3IconPath][/COLOR]</label>
 							<onclick>$VAR[AddMoreCategoryBtn3IconPathClick]</onclick>
 						</control>
 						<control type="button" id="2342">
 							<description>Custom Panel Path Label</description>
-							<height>45</height>
 							<include>ExpandedSettingsHeaderBtn</include>
 							<label>$LOCALIZE[31085]</label>
 						</control>
 						<control type="button" id="2343">
 							<description>Custom Panel Type</description>
-							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[564] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn3PanelTypeLabel][/COLOR]</label>
 							<onclick condition="!System.HasAddon(script.randomitems)">Notification($LOCALIZE[24076],script.randomitems,5000,)</onclick>
@@ -1205,7 +1173,6 @@
 						</control>
 						<control type="button" id="2344">
 							<description>Custom Panel Playlist</description>
-							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn3PanelPlaylist][/COLOR]</label>
 							<onclick>$VAR[AddMoreCategoryBtn3PanelPlaylistClick]</onclick>
@@ -1214,13 +1181,11 @@
 						</control>
 						<control type="button" id="2334">
 							<description>Custom Category Images Path Label</description>
-							<height>45</height>
 							<include>ExpandedSettingsHeaderBtn</include>
 							<label>$LOCALIZE[31084]</label>
 						</control>
 						<control type="button" id="2335">
 							<description>Custom Category No Focus Image Path</description>
-							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[31081] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn3NoFocusImagePath][/COLOR]</label>
 							<onclick>Skin.SetString(ExtraCategoriesPath,special://skin/extras/)</onclick>
@@ -1229,7 +1194,6 @@
 						</control>
 						<control type="button" id="2336">
 							<description>Custom Category Focus Image Path</description>
-							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[31082] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn3FocusImagePath][/COLOR]</label>
 							<onclick>Skin.SetString(ExtraCategoriesPath,special://skin/extras/)</onclick>
@@ -1238,24 +1202,21 @@
 						</control>
 						<control type="button" id="2337">
 							<description>Custom Background Path Label</description>
-							<height>45</height>
 							<include>ExpandedSettingsHeaderBtn</include>
 							<label>$LOCALIZE[31083]</label>
 						</control>
 						<control type="button" id="2338">
 							<description>Custom Background Image Path</description>
-							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn3BackgroundImagePath][/COLOR]</label>
 							<onclick>$VAR[AddMoreCategoryBtn3BackgroundImagePathClick]</onclick>
 						</control>
-						<control type="radiobutton" id="2339">
-							<description>Use Multi Background Image</description>
-							<width>540</width>
-							<height>45</height>
-							<include>SettingsContentRadioBtn</include>
-							<label>$LOCALIZE[31057]</label>
-							<include>AddMoreCategoryBtn3BackgroundImageSelected</include>
+						<control type="togglebutton" id="2339">
+							<description>Redirect Background Image</description>
+							<include>ExpandedSettingsToggleBtn</include>
+							<label>$LOCALIZE[564] - $LOCALIZE[31056]</label>
+							<altlabel>$LOCALIZE[564] - $LOCALIZE[31057]</altlabel>
+							<include>AddMoreCategoryBtn3BackgroundAltImage</include>
 							<onclick>$VAR[AddMoreCategoryBtn3BackgroundImageClick]</onclick>
 							<onclick>$VAR[AddMoreCategoryBtn3BackgroundImageClick2]</onclick>
 						</control>
@@ -1340,13 +1301,11 @@
 						<onright>151</onright>
 						<control type="button" id="2330">
 							<description>Button Properties Label</description>
-							<height>45</height>
 							<include>ExpandedSettingsHeaderBtn</include>
 							<label>$LOCALIZE[31098]</label>
 						</control>
 						<control type="button" id="2331">
 							<description>Favourite Path</description>
-							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn4Param][/COLOR]</label>
 							<onclick>$VAR[AddMoreCategoryBtn4ParamClick]</onclick>
@@ -1354,26 +1313,22 @@
 						</control>
 						<control type="button" id="2332">
 							<description>Custom Icon Path Label</description>
-							<height>45</height>
 							<include>ExpandedSettingsHeaderBtn</include>
 							<label>$LOCALIZE[31078]</label>
 						</control>
 						<control type="button" id="2333">
 							<description>Custom Icon Path</description>
-							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn4IconPath][/COLOR]</label>
 							<onclick>$VAR[AddMoreCategoryBtn4IconPathClick]</onclick>
 						</control>
 						<control type="button" id="2342">
 							<description>Custom Panel Path Label</description>
-							<height>45</height>
 							<include>ExpandedSettingsHeaderBtn</include>
 							<label>$LOCALIZE[31085]</label>
 						</control>
 						<control type="button" id="2343">
 							<description>Custom Panel Type</description>
-							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[564] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn4PanelTypeLabel][/COLOR]</label>
 							<onclick condition="!System.HasAddon(script.randomitems)">Notification($LOCALIZE[24076],script.randomitems,5000,)</onclick>
@@ -1382,7 +1337,6 @@
 						</control>
 						<control type="button" id="2344">
 							<description>Custom Panel Playlist</description>
-							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn4PanelPlaylist][/COLOR]</label>
 							<onclick>$VAR[AddMoreCategoryBtn4PanelPlaylistClick]</onclick>
@@ -1391,13 +1345,11 @@
 						</control>
 						<control type="button" id="2334">
 							<description>Custom Category Images Path Label</description>
-							<height>45</height>
 							<include>ExpandedSettingsHeaderBtn</include>
 							<label>$LOCALIZE[31084]</label>
 						</control>
 						<control type="button" id="2335">
 							<description>Custom Category No Focus Image Path</description>
-							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[31081] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn4NoFocusImagePath][/COLOR]</label>
 							<onclick>Skin.SetString(ExtraCategoriesPath,special://skin/extras/)</onclick>
@@ -1406,7 +1358,6 @@
 						</control>
 						<control type="button" id="2336">
 							<description>Custom Category Focus Image Path</description>
-							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[31082] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn4FocusImagePath][/COLOR]</label>
 							<onclick>Skin.SetString(ExtraCategoriesPath,special://skin/extras/)</onclick>
@@ -1415,24 +1366,21 @@
 						</control>
 						<control type="button" id="2337">
 							<description>Custom Background Path Label</description>
-							<height>45</height>
 							<include>ExpandedSettingsHeaderBtn</include>
 							<label>$LOCALIZE[31083]</label>
 						</control>
 						<control type="button" id="2338">
 							<description>Custom Background Image Path</description>
-							<height>45</height>
 							<include>ExpandedSettingsListBtn</include>
 							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn4BackgroundImagePath][/COLOR]</label>
 							<onclick>$VAR[AddMoreCategoryBtn4BackgroundImagePathClick]</onclick>
 						</control>
-						<control type="radiobutton" id="2339">
-							<description>Use Multi Background Image</description>
-							<width>540</width>
-							<height>45</height>
-							<include>SettingsContentRadioBtn</include>
-							<label>$LOCALIZE[31057]</label>
-							<include>AddMoreCategoryBtn4BackgroundImageSelected</include>
+						<control type="togglebutton" id="2339">
+							<description>Redirect Background Image</description>
+							<include>ExpandedSettingsToggleBtn</include>
+							<label>$LOCALIZE[564] - $LOCALIZE[31056]</label>
+							<altlabel>$LOCALIZE[564] - $LOCALIZE[31057]</altlabel>
+							<include>AddMoreCategoryBtn4BackgroundAltImage</include>
 							<onclick>$VAR[AddMoreCategoryBtn4BackgroundImageClick]</onclick>
 							<onclick>$VAR[AddMoreCategoryBtn4BackgroundImageClick2]</onclick>
 						</control>
@@ -2618,11 +2566,11 @@
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.HasSetting(Custom13BGType)">Skin.SetPath(Custom13BackgroundImagePath)</value>
 	</variable>
 
-	<include name="AddMoreCategoryBtn1BackgroundImageSelected">
-		<selected>[Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.HasSetting(Custom1BGType)] 
+	<include name="AddMoreCategoryBtn1BackgroundAltImage">
+		<usealttexture>[Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.HasSetting(Custom1BGType)] 
 		| [Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.HasSetting(Custom5BGType)] 
 		| [Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.HasSetting(Custom9BGType)] 
-		| [Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.HasSetting(Custom13BGType)]</selected>
+		| [Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.HasSetting(Custom13BGType)]</usealttexture>
 	</include>
 
 	<include name="AddMoreCategoryBtn1BackgroundImageVisible">
@@ -2892,11 +2840,11 @@
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.HasSetting(Custom14BGType)">Skin.SetPath(Custom14BackgroundImagePath)</value>
 	</variable>
 
-	<include name="AddMoreCategoryBtn2BackgroundImageSelected">
-		<selected>[Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.HasSetting(Custom2BGType)] 
+	<include name="AddMoreCategoryBtn2BackgroundAltImage">
+		<usealttexture>[Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.HasSetting(Custom2BGType)] 
 		| [Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.HasSetting(Custom6BGType)] 
 		| [Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.HasSetting(Custom10BGType)] 
-		| [Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.HasSetting(Custom14BGType)]</selected>
+		| [Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.HasSetting(Custom14BGType)]</usealttexture>
 	</include>
 
 	<include name="AddMoreCategoryBtn2BackgroundImageVisible">
@@ -3166,11 +3114,11 @@
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.HasSetting(Custom15BGType)">Skin.SetPath(Custom15BackgroundImagePath)</value>
 	</variable>
 
-	<include name="AddMoreCategoryBtn3BackgroundImageSelected">
-		<selected>[Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.HasSetting(Custom3BGType)] 
+	<include name="AddMoreCategoryBtn3BackgroundAltImage">
+		<usealttexture>[Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.HasSetting(Custom3BGType)] 
 		| [Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.HasSetting(Custom7BGType)] 
 		| [Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.HasSetting(Custom11BGType)] 
-		| [Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.HasSetting(Custom15BGType)]</selected>
+		| [Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.HasSetting(Custom15BGType)]</usealttexture>
 	</include>
 
 	<include name="AddMoreCategoryBtn3BackgroundImageVisible">
@@ -3440,11 +3388,11 @@
 		<value condition="Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.HasSetting(Custom16BGType)">Skin.SetPath(Custom16BackgroundImagePath)</value>
 	</variable>
 
-	<include name="AddMoreCategoryBtn4BackgroundImageSelected">
-		<selected>[Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.HasSetting(Custom4BGType)] 
+	<include name="AddMoreCategoryBtn4BackgroundAltImage">
+		<usealttexture>[Skin.HasSetting(ExpandAddMoreCategorySettings) + Skin.HasSetting(Custom4BGType)] 
 		| [Skin.HasSetting(ExpandAddMoreCategorySettings2) + Skin.HasSetting(Custom8BGType)] 
 		| [Skin.HasSetting(ExpandAddMoreCategorySettings3) + Skin.HasSetting(Custom12BGType)] 
-		| [Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.HasSetting(Custom16BGType)]</selected>
+		| [Skin.HasSetting(ExpandAddMoreCategorySettings4) + Skin.HasSetting(Custom16BGType)]</usealttexture>
 	</include>
 
 	<include name="AddMoreCategoryBtn4BackgroundImageVisible">
