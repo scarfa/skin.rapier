@@ -54,15 +54,7 @@
 					<visible>!Skin.HasSetting(HideMusicCategory)</visible>
 				</item>
 
-				<include condition="!Skin.HasSetting(HidePVRCategory) + System.GetBool(pvrmanager.enabled) 
-				+ [system.hasaddon(pvr.demo)
-				| system.hasaddon(pvr.fortherecord.argus)
-				| system.hasaddon(pvr.fortherecord.argus-rtsp) 
-				| system.hasaddon(pvr.hts) 
-				| system.hasaddon(pvr.mythtv) 
-				| system.hasaddon(pvr.team-mediaportal.tvserver) 
-				| system.hasaddon(pvr.team-mediaportal.tvserver-tsreader) 
-				| system.hasaddon(pvr.vdr.vnsi)]">HomePVRCategoryFallback</include>
+				<include condition="!Skin.HasSetting(HidePVRCategory) + System.GetBool(pvrmanager.enabled)">HomePVRCategoryFallback</include>
 				
 				<item id="2">
 					<description>Videos Category</description>

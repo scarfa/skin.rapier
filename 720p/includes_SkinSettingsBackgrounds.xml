@@ -60,14 +60,7 @@
 					<onclick>Skin.SetBool(ExpandedSettings)</onclick>
 					<onclick>Control.SetFocus(941)</onclick>
 				</control>
-				<include condition="[system.hasaddon(pvr.demo)
-				| system.hasaddon(pvr.fortherecord.argus)
-				| system.hasaddon(pvr.fortherecord.argus-rtsp) 
-				| system.hasaddon(pvr.hts) 
-				| system.hasaddon(pvr.mythtv) 
-				| system.hasaddon(pvr.team-mediaportal.tvserver) 
-				| system.hasaddon(pvr.team-mediaportal.tvserver-tsreader) 
-				| system.hasaddon(pvr.vdr.vnsi)]">CustomPVRBGRadioBtn</include>
+				<include condition="System.GetBool(pvrmanager.enabled)">CustomPVRBGRadioBtn</include>
 				<control type="radiobutton" id="4002">
 					<description>Customize Videos Background Settings</description>
 					<include>SettingsContentExpandBtn</include>

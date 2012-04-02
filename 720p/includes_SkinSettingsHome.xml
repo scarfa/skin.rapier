@@ -55,14 +55,7 @@
 					<altlabel>$LOCALIZE[31722]</altlabel>
 					<usealttexture>Skin.HasSetting(RedirectPVRCategoryEPG)</usealttexture>
 					<onclick>Skin.ToggleSetting(RedirectPVRCategoryEPG)</onclick>
-					<visible>[system.hasaddon(pvr.demo)
-					| system.hasaddon(pvr.fortherecord.argus)
-					| system.hasaddon(pvr.fortherecord.argus-rtsp) 
-					| system.hasaddon(pvr.hts) 
-					| system.hasaddon(pvr.mythtv) 
-					| system.hasaddon(pvr.team-mediaportal.tvserver) 
-					| system.hasaddon(pvr.team-mediaportal.tvserver-tsreader) 
-					| system.hasaddon(pvr.vdr.vnsi)]</visible>
+					<visible>System.GetBool(pvrmanager.enabled)</visible>
 				</control>
 				<control type="radiobutton" id="2009">
 					<description>Hide Categories</description>
@@ -414,14 +407,7 @@
 					<label>$LOCALIZE[31080]</label>
 					<selected>Skin.HasSetting(HideRecordingInfoHomePanel)</selected>
 					<onclick>Skin.ToggleSetting(HideRecordingInfoHomePanel)</onclick>
-					<visible>[system.hasaddon(pvr.demo)
-					| system.hasaddon(pvr.fortherecord.argus)
-					| system.hasaddon(pvr.fortherecord.argus-rtsp) 
-					| system.hasaddon(pvr.hts) 
-					| system.hasaddon(pvr.mythtv) 
-					| system.hasaddon(pvr.team-mediaportal.tvserver) 
-					| system.hasaddon(pvr.team-mediaportal.tvserver-tsreader) 
-					| system.hasaddon(pvr.vdr.vnsi)]</visible>
+					<visible>System.GetBool(pvrmanager.enabled)</visible>
 				</control>
 				<control type="radiobutton" id="2020">
 					<description>Hide System Info Panel</description>
@@ -507,14 +493,7 @@
 					</control>
 				</control>
 				
-				<include condition="[system.hasaddon(pvr.demo)
-				| system.hasaddon(pvr.fortherecord.argus)
-				| system.hasaddon(pvr.fortherecord.argus-rtsp) 
-				| system.hasaddon(pvr.hts) 
-				| system.hasaddon(pvr.mythtv) 
-				| system.hasaddon(pvr.team-mediaportal.tvserver) 
-				| system.hasaddon(pvr.team-mediaportal.tvserver-tsreader) 
-				| system.hasaddon(pvr.vdr.vnsi)]">PVRCategoryBtn</include>
+				<include condition="System.GetBool(pvrmanager.enabled)">PVRCategoryBtn</include>
 				
 				<control type="radiobutton" id="2308">
 					<description>System</description>
@@ -571,14 +550,7 @@
 						<label>$LOCALIZE[2] - [COLOR=DefaultColor2]$INFO[Skin.String(MusicCategoryIconPath)][/COLOR]</label>
 						<onclick>Skin.SetImage(MusicCategoryIconPath)</onclick>
 					</control>
-					<include condition="[system.hasaddon(pvr.demo)
-					| system.hasaddon(pvr.fortherecord.argus)
-					| system.hasaddon(pvr.fortherecord.argus-rtsp) 
-					| system.hasaddon(pvr.hts) 
-					| system.hasaddon(pvr.mythtv) 
-					| system.hasaddon(pvr.team-mediaportal.tvserver) 
-					| system.hasaddon(pvr.team-mediaportal.tvserver-tsreader) 
-					| system.hasaddon(pvr.vdr.vnsi)]">PVRCategoryIconBtn</include>
+					<include condition="System.GetBool(pvrmanager.enabled)">PVRCategoryIconBtn</include>
 					<control type="button" id="2302">
 						<description>Videos</description>
 						<include>ExpandedSettingsListBtn</include>
