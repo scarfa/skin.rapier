@@ -498,7 +498,23 @@
 		<alttexturenofocus border="5">controls/button-nofocus.png</alttexturenofocus>
 		<pulseonselect>false</pulseonselect>
 	</include>
-	
+
+	<include name="ExpandedSettingsToggleBtn">
+		<width>540</width>
+		<height>50</height>
+		<font>SettingsContentFont</font>
+		<textcolor>SettingsContentColor</textcolor>
+		<shadowcolor>ShadowColor</shadowcolor>
+		<align>left</align>
+		<textoffsetx>10</textoffsetx>
+		<textwidth>460</textwidth>
+		<texturefocus border="5">controls/settings-toggle-button2-focus.png</texturefocus>
+		<texturenofocus border="5">controls/settings-toggle-button2-nofocus.png</texturenofocus>
+		<alttexturefocus border="5">controls/settings-toggle-button2-focus2.png</alttexturefocus>
+		<alttexturenofocus border="5">controls/settings-toggle-button2-nofocus2.png</alttexturenofocus>
+		<pulseonselect>false</pulseonselect>
+	</include>
+
 	<include name="ExpandedSettingsRadioBtn">
 		<width>205</width>
 		<height>50</height>
