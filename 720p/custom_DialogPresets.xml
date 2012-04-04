@@ -52,6 +52,7 @@
 					<onup>450</onup>
 					<ondown>450</ondown>
 					<onleft>9001</onleft>
+					<onright>Control.SetFocus(451,0)</onright>
 					<onright>451</onright>
 					<itemlayout height="35">
 						<control type="label">
@@ -168,6 +169,7 @@
 					<scrolltime tween="sine" easing="inout">300</scrolltime>
 					<onup>451</onup>
 					<ondown>451</ondown>
+					<onleft>Control.SetFocus(451,0)</onleft>
 					<onleft>450</onleft>
 					<onright>9001</onright>
 					<itemlayout height="35">
@@ -189,13 +191,6 @@
 							<visible>Control.HasFocus(451)</visible>
 							<include>ListViewSelectFadeAnim</include>
 							<include>ListViewDialogScrollAnim</include>
-						</control>
-						<control type="image">
-							<width>235</width>
-							<height>35</height>
-							<texture border="4">views/list-alt-focus.png</texture>
-							<visible>!Control.HasFocus(451)</visible>
-							<include>ListViewSelectFadeAnim2</include>
 						</control>
 						<control type="group">
 							<include>ListViewFocusAnim</include>
