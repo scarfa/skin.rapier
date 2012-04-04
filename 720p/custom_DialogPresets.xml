@@ -151,6 +151,12 @@
 							<onclick>-</onclick>
 						</item>
 						<item id="10">
+							<description>Settings</description>
+							<label>$LOCALIZE[10004]</label>
+							<icon>home-system-icon.png</icon>
+							<onclick>-</onclick>
+						</item>
+						<item id="11">
 							<description>System</description>
 							<label>$LOCALIZE[13000]</label>
 							<icon>home-system-icon.png</icon>
@@ -263,6 +269,14 @@
 							<visible>Container(450).HasFocus(1)</visible>
 						</item>
 						<item id="8">
+							<description>Singles</description>
+							<label>$LOCALIZE[1050]</label>
+							<icon>home-music-icon.png</icon>
+							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(MusicLibrary,Singles,Return))</onclick>
+							<onclick>Dialog.Close(3006)</onclick>
+							<visible>Container(450).HasFocus(1)</visible>
+						</item>
+						<item id="9">
 							<description>Top 100</description>
 							<label>$LOCALIZE[271]</label>
 							<icon>home-music-icon.png</icon>
@@ -270,7 +284,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(1)</visible>
 						</item>
-						<item id="9">
+						<item id="10">
 							<description>Recently Added Albums</description>
 							<label>$LOCALIZE[359]</label>
 							<icon>home-music-icon.png</icon>
@@ -278,7 +292,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(1)</visible>
 						</item>
-						<item id="10">
+						<item id="11">
 							<description>Recently Played Albums</description>
 							<label>$LOCALIZE[517]</label>
 							<icon>home-music-icon.png</icon>
@@ -286,7 +300,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(1)</visible>
 						</item>
-						<item id="11">
+						<item id="12">
 							<description>Music Playlists</description>
 							<label>$LOCALIZE[136]</label>
 							<icon>home-music-icon.png</icon>
@@ -294,7 +308,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(1)</visible>
 						</item>
-						<item id="12">
+						<item id="13">
 							<description>Party Mode</description>
 							<label>$LOCALIZE[589]</label>
 							<icon>home-music-icon.png</icon>
@@ -302,7 +316,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(1)</visible>
 						</item>
-						<item id="13">
+						<item id="14">
 							<description>Music Add-ons</description>
 							<label>$LOCALIZE[24001]</label>
 							<icon>home-music-icon.png</icon>
@@ -311,7 +325,7 @@
 							<visible>Container(450).HasFocus(1)</visible>
 						</item>
 
-						<item id="14">
+						<item id="15">
 							<description>TV Channels</description>
 							<label>$LOCALIZE[19019]</label>
 							<icon>home-pvr-icon.png</icon>
@@ -319,7 +333,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(2)</visible>
 						</item>
-						<item id="15">
+						<item id="16">
 							<description>Radio Channels</description>
 							<label>$LOCALIZE[19021]</label>
 							<icon>home-pvr-icon.png</icon>
@@ -328,7 +342,7 @@
 							<visible>Container(450).HasFocus(2)</visible>
 							<visible>!Skin.HasSetting(HideLiveRadio)</visible>
 						</item>
-						<item id="16">
+						<item id="17">
 							<description>Guide</description>
 							<label>$LOCALIZE[19069]</label>
 							<icon>home-pvr-icon.png</icon>
@@ -336,7 +350,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(2)</visible>
 						</item>
-						<item id="17">
+						<item id="18">
 							<description>Search</description>
 							<label>$LOCALIZE[137]</label>
 							<icon>home-pvr-icon.png</icon>
@@ -344,7 +358,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(2)</visible>
 						</item>
-						<item id="18">
+						<item id="19">
 							<description>Recordings</description>
 							<label>$LOCALIZE[19163]</label>
 							<icon>home-pvr-icon.png</icon>
@@ -352,7 +366,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(2)</visible>
 						</item>
-						<item id="19">
+						<item id="20">
 							<description>Timer</description>
 							<label>$LOCALIZE[19040]</label>
 							<icon>home-pvr-icon.png</icon>
@@ -361,7 +375,7 @@
 							<visible>Container(450).HasFocus(2)</visible>
 						</item>
 
-						<item id="20">
+						<item id="21">
 							<description>Video Files</description>
 							<label>$LOCALIZE[1214]</label>
 							<icon>home-videos-icon.png</icon>
@@ -369,7 +383,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(3)</visible>
 						</item>
-						<item id="21">
+						<item id="22">
 							<description>Video Library</description>
 							<label>$LOCALIZE[14022]</label>
 							<icon>home-videos-icon.png</icon>
@@ -377,7 +391,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(3)</visible>
 						</item>
-						<item id="22">
+						<item id="23">
 							<description>Video Playlists</description>
 							<label>$LOCALIZE[136]</label>
 							<icon>home-videos-icon.png</icon>
@@ -385,7 +399,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(3)</visible>
 						</item>
-						<item id="23">
+						<item id="24">
 							<description>Party Mode</description>
 							<label>$LOCALIZE[589]</label>
 							<icon>home-videos-icon.png</icon>
@@ -393,7 +407,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(3)</visible>
 						</item>
-						<item id="24">
+						<item id="25">
 							<description>Video Add-ons</description>
 							<label>$LOCALIZE[24001]</label>
 							<icon>home-videos-icon.png</icon>
@@ -402,7 +416,7 @@
 							<visible>Container(450).HasFocus(3)</visible>
 						</item>
 
-						<item id="25">
+						<item id="26">
 							<description>Movies</description>
 							<label>$LOCALIZE[369]</label>
 							<icon>home-movies-icon.png</icon>
@@ -410,7 +424,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(4)</visible>
 						</item>
-						<item id="26">
+						<item id="27">
 							<description>Genres</description>
 							<label>$LOCALIZE[135]</label>						
 							<icon>home-movies-icon.png</icon>
@@ -418,7 +432,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(4)</visible>
 						</item>
-						<item id="27">
+						<item id="28">
 							<description>Year</description>
 							<label>$LOCALIZE[345]</label>
 							<icon>home-movies-icon.png</icon>
@@ -426,7 +440,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(4)</visible>
 						</item>
-						<item id="28">
+						<item id="29">
 							<description>Actors</description>
 							<label>$LOCALIZE[344]</label>
 							<icon>home-movies-icon.png</icon>
@@ -434,7 +448,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(4)</visible>
 						</item>
-						<item id="29">
+						<item id="30">
 							<description>Directors</description>
 							<label>$LOCALIZE[20348]</label>
 							<icon>home-movies-icon.png</icon>
@@ -442,7 +456,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(4)</visible>
 						</item>
-						<item id="30">
+						<item id="31">
 							<description>Studios</description>
 							<label>$LOCALIZE[20388]</label>						
 							<icon>home-movies-icon.png</icon>
@@ -450,7 +464,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(4)</visible>
 						</item>
-						<item id="31">
+						<item id="32">
 							<description>Countries</description>
 							<label>$LOCALIZE[20451]</label>
 							<icon>home-movies-icon.png</icon>
@@ -458,7 +472,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(4)</visible>
 						</item>
-						<item id="32">
+						<item id="33">
 							<description>Recently Added Movies</description>
 							<label>$LOCALIZE[31303]</label>					
 							<icon>home-movies-icon.png</icon>
@@ -467,7 +481,7 @@
 							<visible>Container(450).HasFocus(4)</visible>
 						</item>
 
-						<item id="33">
+						<item id="34">
 							<description>TV Shows</description>
 							<label>$LOCALIZE[369]</label>
 							<icon>home-tvshows-icon.png</icon>
@@ -475,7 +489,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(5)</visible>
 						</item>
-						<item id="34">
+						<item id="35">
 							<description>Genres</description>
 							<label>$LOCALIZE[135]</label>
 							<icon>home-tvshows-icon.png</icon>
@@ -483,7 +497,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(5)</visible>
 						</item>
-						<item id="35">
+						<item id="36">
 							<description>Year</description>
 							<label>$LOCALIZE[345]</label>
 							<icon>home-tvshows-icon.png</icon>
@@ -491,7 +505,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(5)</visible>
 						</item>
-						<item id="36">
+						<item id="37">
 							<description>Actors</description>
 							<label>$LOCALIZE[344]</label>
 							<icon>home-tvshows-icon.png</icon>
@@ -499,7 +513,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(5)</visible>
 						</item>
-						<item id="37">
+						<item id="38">
 							<description>Studios</description>
 							<label>$LOCALIZE[20388]</label>
 							<icon>home-tvshows-icon.png</icon>
@@ -507,7 +521,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(5)</visible>
 						</item>
-						<item id="38">
+						<item id="39">
 							<description>Recently Added Episodes</description>
 							<label>$LOCALIZE[31303]</label>
 							<icon>home-tvshows-icon.png</icon>
@@ -516,7 +530,7 @@
 							<visible>Container(450).HasFocus(5)</visible>
 						</item>
 
-						<item id="39">
+						<item id="40">
 							<description>Music Videos</description>
 							<label>$LOCALIZE[369]</label>
 							<icon>home-music-icon.png</icon>
@@ -524,7 +538,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(6)</visible>
 						</item>
-						<item id="40">
+						<item id="41">
 							<description>Genres</description>
 							<label>$LOCALIZE[135]</label>
 							<icon>home-music-icon.png</icon>
@@ -532,7 +546,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(6)</visible>
 						</item>
-						<item id="41">
+						<item id="42">
 							<description>Year</description>
 							<label>$LOCALIZE[345]</label>
 							<icon>home-music-icon.png</icon>
@@ -540,7 +554,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(6)</visible>
 						</item>
-						<item id="42">
+						<item id="43">
 							<description>Artists</description>
 							<label>$LOCALIZE[133]</label>
 							<icon>home-music-icon.png</icon>
@@ -548,7 +562,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(6)</visible>
 						</item>
-						<item id="43">
+						<item id="44">
 							<description>Albums</description>
 							<label>$LOCALIZE[132]</label>
 							<icon>home-music-icon.png</icon>
@@ -556,7 +570,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(6)</visible>
 						</item>
-						<item id="44">
+						<item id="45">
 							<description>Directors</description>
 							<label>$LOCALIZE[20348]</label>
 							<icon>home-music-icon.png</icon>
@@ -564,7 +578,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(6)</visible>
 						</item>
-						<item id="45">
+						<item id="46">
 							<description>Studios</description>
 							<label>$LOCALIZE[20388]</label>
 							<icon>home-music-icon.png</icon>
@@ -572,7 +586,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(6)</visible>
 						</item>
-						<item id="46">
+						<item id="47">
 							<description>Recently Added Music Videos</description>
 							<label>$LOCALIZE[31303]</label>
 							<icon>home-music-icon.png</icon>
@@ -581,7 +595,7 @@
 							<visible>Container(450).HasFocus(6)</visible>
 						</item>
 
-						<item id="47">
+						<item id="48">
 							<description>Programs</description>
 							<label>$LOCALIZE[1214]</label>
 							<icon>home-programs-icon.png</icon>
@@ -589,7 +603,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(7)</visible>
 						</item>
-						<item id="48">
+						<item id="49">
 							<description>Program Add-ons</description>
 							<label>$LOCALIZE[24001]</label>
 							<icon>home-programs-icon.png</icon>
@@ -598,7 +612,7 @@
 							<visible>Container(450).HasFocus(7)</visible>
 						</item>
 
-						<item id="49">
+						<item id="50">
 							<description>Pictures</description>
 							<label>$LOCALIZE[1214]</label>
 							<icon>home-pictures-icon.png</icon>
@@ -606,7 +620,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(8)</visible>
 						</item>
-						<item id="50">
+						<item id="51">
 							<description>Pictures Add-ons</description>
 							<label>$LOCALIZE[24001]</label>
 							<icon>home-pictures-icon.png</icon>
@@ -615,7 +629,7 @@
 							<visible>Container(450).HasFocus(8)</visible>
 						</item>
 
-						<item id="51">
+						<item id="52">
 							<description>Favourites</description>
 							<label>$LOCALIZE[1036]</label>
 							<icon>home-general-icon.png</icon>
@@ -623,7 +637,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(9)</visible>
 						</item>
-						<item id="52">
+						<item id="53">
 							<description>Filemanager</description>
 							<label>$LOCALIZE[10003]</label>
 							<icon>home-general-icon.png</icon>
@@ -631,7 +645,7 @@
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(9)</visible>
 						</item>
-						<item id="53">
+						<item id="54">
 							<description>Weather</description>
 							<label>$LOCALIZE[8]</label>
 							<icon>home-general-icon.png</icon>
@@ -640,61 +654,190 @@
 							<visible>Container(450).HasFocus(9)</visible>
 						</item>
 
-						<item id="54">
-							<description>Power</description>
-							<label>$LOCALIZE[33060]</label>
-							<icon>home-system-icon.png</icon>
-							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(ShutdownMenu))</onclick>
-							<onclick>Dialog.Close(3006)</onclick>
-							<visible>Container(450).HasFocus(10)</visible>
-						</item>
 						<item id="55">
-							<description>Settings</description>
-							<label>$LOCALIZE[5]</label>
+							<description>Appearance Settings</description>
+							<label>$LOCALIZE[480]</label>
 							<icon>home-system-icon.png</icon>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(AppearanceSettings))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(10)</visible>
 						</item>
 						<item id="56">
+							<description>Videos Settings</description>
+							<label>$LOCALIZE[3]</label>
+							<icon>home-system-icon.png</icon>
+							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(VideosSettings))</onclick>
+							<onclick>Dialog.Close(3006)</onclick>
+							<visible>Container(450).HasFocus(10)</visible>
+						</item>
+						<item id="57">
+							<description>PVR Settings</description>
+							<label>$LOCALIZE[31900]</label>
+							<icon>home-system-icon.png</icon>
+							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(PVRSettings))</onclick>
+							<onclick>Dialog.Close(3006)</onclick>
+							<visible>Container(450).HasFocus(10)</visible>
+						</item>
+						<item id="58">
+							<description>Music Settings</description>
+							<label>$LOCALIZE[2]</label>
+							<icon>home-system-icon.png</icon>
+							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(MusicSettings))</onclick>
+							<onclick>Dialog.Close(3006)</onclick>
+							<visible>Container(450).HasFocus(10)</visible>
+						</item>
+						<item id="59">
+							<description>Pictures Settings</description>
+							<label>$LOCALIZE[1]</label>
+							<icon>home-system-icon.png</icon>
+							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(PicturesSettings))</onclick>
+							<onclick>Dialog.Close(3006)</onclick>
+							<visible>Container(450).HasFocus(10)</visible>
+						</item>
+						<item id="60">
+							<description>Weather Settings</description>
+							<label>$LOCALIZE[8]</label>
+							<icon>home-system-icon.png</icon>
+							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(WeatherSettings))</onclick>
+							<onclick>Dialog.Close(3006)</onclick>
+							<visible>Container(450).HasFocus(10)</visible>
+						</item>
+						<item id="61">
+							<description>Network Settings</description>
+							<label>$LOCALIZE[13279]</label>
+							<icon>home-system-icon.png</icon>
+							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(NetworkSettings))</onclick>
+							<onclick>Dialog.Close(3006)</onclick>
+							<visible>Container(450).HasFocus(10)</visible>
+						</item>
+						<item id="62">
+							<description>System Settings</description>
+							<label>$LOCALIZE[13000]</label>
+							<icon>home-system-icon.png</icon>
+							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(SystemSettings))</onclick>
+							<onclick>Dialog.Close(3006)</onclick>
+							<visible>Container(450).HasFocus(10)</visible>
+						</item>
+						<item id="63">
 							<description>Skin Settings</description>
-							<label>$LOCALIZE[20077]</label>
+							<label>$LOCALIZE[166]</label>
 							<icon>home-system-icon.png</icon>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(3001))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(10)</visible>
 						</item>
-						<item id="57">
+
+						<item id="64">
 							<description>Add-ons</description>
 							<label>$LOCALIZE[24001]</label>
 							<icon>home-system-icon.png</icon>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(AddonBrowser))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
-							<visible>Container(450).HasFocus(10)</visible>
+							<visible>Container(450).HasFocus(11)</visible>
 						</item>
-						<item id="58">
+						<item id="65">
 							<description>Profiles</description>
 							<label>$LOCALIZE[13200]</label>
 							<icon>home-system-icon.png</icon>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Profiles))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
-							<visible>Container(450).HasFocus(10)</visible>
+							<visible>Container(450).HasFocus(11)</visible>
 						</item>
-						<item id="59">
+						<item id="66">
 							<description>System Info</description>
 							<label>$LOCALIZE[130]</label>
 							<icon>home-system-icon.png</icon>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(SystemInfo))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
-							<visible>Container(450).HasFocus(10)</visible>
+							<visible>Container(450).HasFocus(11)</visible>
 						</item>
-						<item id="60">
+						<item id="67">
+							<description>Power</description>
+							<label>$LOCALIZE[33060]</label>
+							<icon>home-system-icon.png</icon>
+							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(ShutdownMenu))</onclick>
+							<onclick>Dialog.Close(3006)</onclick>
+							<visible>Container(450).HasFocus(11)</visible>
+						</item>
+						<item id="68">
+							<description>Shutdown</description>
+							<label>$LOCALIZE[13005]</label>
+							<icon>home-system-icon.png</icon>
+							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],Shutdown())</onclick>
+							<onclick>Dialog.Close(3006)</onclick>
+							<visible>Container(450).HasFocus(11)</visible>
+						</item>
+						<item id="69">
+							<description>Suspend</description>
+							<label>$LOCALIZE[13011]</label>
+							<icon>home-system-icon.png</icon>
+							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],Suspend())</onclick>
+							<onclick>Dialog.Close(3006)</onclick>
+							<visible>Container(450).HasFocus(11)</visible>
+						</item>
+						<item id="70">
+							<description>Hibernate</description>
+							<label>$LOCALIZE[13010]</label>
+							<icon>home-system-icon.png</icon>
+							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],Hibernate())</onclick>
+							<onclick>Dialog.Close(3006)</onclick>
+							<visible>Container(450).HasFocus(11)</visible>
+						</item>
+						<item id="71">
+							<description>Reboot</description>
+							<label>$LOCALIZE[13013]</label>
+							<icon>home-system-icon.png</icon>
+							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],Reset())</onclick>
+							<onclick>Dialog.Close(3006)</onclick>
+							<visible>Container(450).HasFocus(11)</visible>
+						</item>
+						<item id="72">
+							<description>Quit XBMC</description>
+							<label>$LOCALIZE[13009] XBMC</label>
+							<icon>home-system-icon.png</icon>
+							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],Quit())</onclick>
+							<onclick>Dialog.Close(3006)</onclick>
+							<visible>Container(450).HasFocus(11)</visible>
+						</item>
+						<item id="73">
+							<description>Restart XBMC</description>
+							<label>$LOCALIZE[13313] XBMC</label>
+							<icon>home-system-icon.png</icon>
+							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],RestartApp())</onclick>
+							<onclick>Dialog.Close(3006)</onclick>
+							<visible>Container(450).HasFocus(11)</visible>
+						</item>
+						<item id="74">
+							<description>Reload Skin</description>
+							<label>$LOCALIZE[20183]</label>
+							<icon>home-system-icon.png</icon>
+							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ReloadSkin())</onclick>
+							<onclick>Dialog.Close(3006)</onclick>
+							<visible>Container(450).HasFocus(11)</visible>
+						</item>
+						<item id="75">
+							<description>Play Disc</description>
+							<label>$LOCALIZE[341]</label>
+							<icon>home-system-icon.png</icon>
+							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],PlayDVD())</onclick>
+							<onclick>Dialog.Close(3006)</onclick>
+							<visible>Container(450).HasFocus(11)</visible>
+						</item>
+						<item id="76">
+							<description>Eject/Load Disc</description>
+							<label>$LOCALIZE[13391]</label>
+							<icon>home-system-icon.png</icon>
+							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],EjectTray())</onclick>
+							<onclick>Dialog.Close(3006)</onclick>
+							<visible>Container(450).HasFocus(11)</visible>
+						</item>
+						<item id="77">
 							<description>Credits</description>
 							<label>$LOCALIZE[31004]</label>
 							<icon>home-system-icon.png</icon>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(3010))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
-							<visible>Container(450).HasFocus(10)</visible>
+							<visible>Container(450).HasFocus(11)</visible>
 						</item>
 					</content>
 				</control>
