@@ -812,13 +812,6 @@
 							<include>ExpandedSettingsHeaderBtn</include>
 							<label>$LOCALIZE[31098]</label>
 						</control>
-						<control type="button" id="2331">
-							<description>Button Path</description>
-							<include>ExpandedSettingsListBtn</include>
-							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn1Param][/COLOR]</label>
-							<onclick>$VAR[AddMoreCategoryBtn1ParamClick]</onclick>
-							<onclick>$VAR[AddMoreCategoryBtn1ParamClick2]</onclick>
-						</control>
 						<control type="togglebutton" id="2345">
 							<description>Redirect Button Path</description>
 							<include>ExpandedSettingsToggleBtn</include>
@@ -827,6 +820,13 @@
 							<include>AddMoreCategoryBtn1ParamAltType</include>
 							<onclick>$VAR[AddMoreCategoryBtn1ParamTypeClick]</onclick>
 							<onclick>$VAR[AddMoreCategoryBtn1ParamTypeClick2]</onclick>
+						</control>
+						<control type="button" id="2331">
+							<description>Button Path</description>
+							<include>ExpandedSettingsListBtn</include>
+							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn1Param][/COLOR]</label>
+							<onclick>$VAR[AddMoreCategoryBtn1ParamClick]</onclick>
+							<onclick>$VAR[AddMoreCategoryBtn1ParamClick2]</onclick>
 						</control>
 						<control type="button" id="2332">
 							<description>Custom Icon Path Label</description>
@@ -886,12 +886,6 @@
 							<include>ExpandedSettingsHeaderBtn</include>
 							<label>$LOCALIZE[31083]</label>
 						</control>
-						<control type="button" id="2338">
-							<description>Custom Background Image Path</description>
-							<include>ExpandedSettingsListBtn</include>
-							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn1BackgroundImagePath][/COLOR]</label>
-							<onclick>$VAR[AddMoreCategoryBtn1BackgroundImagePathClick]</onclick>
-						</control>
 						<control type="togglebutton" id="2339">
 							<description>Redirect Background Image</description>
 							<include>ExpandedSettingsToggleBtn</include>
@@ -900,6 +894,12 @@
 							<include>AddMoreCategoryBtn1BackgroundAltImage</include>
 							<onclick>$VAR[AddMoreCategoryBtn1BackgroundImageClick]</onclick>
 							<onclick>$VAR[AddMoreCategoryBtn1BackgroundImageClick2]</onclick>
+						</control>
+						<control type="button" id="2338">
+							<description>Custom Background Image Path</description>
+							<include>ExpandedSettingsListBtn</include>
+							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn1BackgroundImagePath][/COLOR]</label>
+							<onclick>$VAR[AddMoreCategoryBtn1BackgroundImagePathClick]</onclick>
 						</control>
 					</control>
 
@@ -985,13 +985,6 @@
 							<include>ExpandedSettingsHeaderBtn</include>
 							<label>$LOCALIZE[31098]</label>
 						</control>
-						<control type="button" id="2331">
-							<description>Button Path</description>
-							<include>ExpandedSettingsListBtn</include>
-							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn2Param][/COLOR]</label>
-							<onclick>$VAR[AddMoreCategoryBtn2ParamClick]</onclick>
-							<onclick>$VAR[AddMoreCategoryBtn2ParamClick2]</onclick>
-						</control>
 						<control type="togglebutton" id="2345">
 							<description>Redirect Button Path</description>
 							<include>ExpandedSettingsToggleBtn</include>
@@ -1000,6 +993,13 @@
 							<include>AddMoreCategoryBtn2ParamAltType</include>
 							<onclick>$VAR[AddMoreCategoryBtn2ParamTypeClick]</onclick>
 							<onclick>$VAR[AddMoreCategoryBtn2ParamTypeClick2]</onclick>
+						</control>
+						<control type="button" id="2331">
+							<description>Button Path</description>
+							<include>ExpandedSettingsListBtn</include>
+							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn2Param][/COLOR]</label>
+							<onclick>$VAR[AddMoreCategoryBtn2ParamClick]</onclick>
+							<onclick>$VAR[AddMoreCategoryBtn2ParamClick2]</onclick>
 						</control>
 						<control type="button" id="2332">
 							<description>Custom Icon Path Label</description>
@@ -1059,12 +1059,6 @@
 							<include>ExpandedSettingsHeaderBtn</include>
 							<label>$LOCALIZE[31083]</label>
 						</control>
-						<control type="button" id="2338">
-							<description>Custom Background Image Path</description>
-							<include>ExpandedSettingsListBtn</include>
-							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn2BackgroundImagePath][/COLOR]</label>
-							<onclick>$VAR[AddMoreCategoryBtn2BackgroundImagePathClick]</onclick>
-						</control>
 						<control type="togglebutton" id="2339">
 							<description>Redirect Background Image</description>
 							<include>ExpandedSettingsToggleBtn</include>
@@ -1073,6 +1067,12 @@
 							<include>AddMoreCategoryBtn2BackgroundAltImage</include>
 							<onclick>$VAR[AddMoreCategoryBtn2BackgroundImageClick]</onclick>
 							<onclick>$VAR[AddMoreCategoryBtn2BackgroundImageClick2]</onclick>
+						</control>
+						<control type="button" id="2338">
+							<description>Custom Background Image Path</description>
+							<include>ExpandedSettingsListBtn</include>
+							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn2BackgroundImagePath][/COLOR]</label>
+							<onclick>$VAR[AddMoreCategoryBtn2BackgroundImagePathClick]</onclick>
 						</control>
 					</control>
 
@@ -1158,13 +1158,6 @@
 							<include>ExpandedSettingsHeaderBtn</include>
 							<label>$LOCALIZE[31098]</label>
 						</control>
-						<control type="button" id="2331">
-							<description>Button Path</description>
-							<include>ExpandedSettingsListBtn</include>
-							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn3Param][/COLOR]</label>
-							<onclick>$VAR[AddMoreCategoryBtn3ParamClick]</onclick>
-							<onclick>$VAR[AddMoreCategoryBtn3ParamClick2]</onclick>
-						</control>
 						<control type="togglebutton" id="2345">
 							<description>Redirect Button Path</description>
 							<include>ExpandedSettingsToggleBtn</include>
@@ -1173,6 +1166,13 @@
 							<include>AddMoreCategoryBtn3ParamAltType</include>
 							<onclick>$VAR[AddMoreCategoryBtn3ParamTypeClick]</onclick>
 							<onclick>$VAR[AddMoreCategoryBtn3ParamTypeClick2]</onclick>
+						</control>
+						<control type="button" id="2331">
+							<description>Button Path</description>
+							<include>ExpandedSettingsListBtn</include>
+							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn3Param][/COLOR]</label>
+							<onclick>$VAR[AddMoreCategoryBtn3ParamClick]</onclick>
+							<onclick>$VAR[AddMoreCategoryBtn3ParamClick2]</onclick>
 						</control>
 						<control type="button" id="2332">
 							<description>Custom Icon Path Label</description>
@@ -1232,12 +1232,6 @@
 							<include>ExpandedSettingsHeaderBtn</include>
 							<label>$LOCALIZE[31083]</label>
 						</control>
-						<control type="button" id="2338">
-							<description>Custom Background Image Path</description>
-							<include>ExpandedSettingsListBtn</include>
-							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn3BackgroundImagePath][/COLOR]</label>
-							<onclick>$VAR[AddMoreCategoryBtn3BackgroundImagePathClick]</onclick>
-						</control>
 						<control type="togglebutton" id="2339">
 							<description>Redirect Background Image</description>
 							<include>ExpandedSettingsToggleBtn</include>
@@ -1246,6 +1240,12 @@
 							<include>AddMoreCategoryBtn3BackgroundAltImage</include>
 							<onclick>$VAR[AddMoreCategoryBtn3BackgroundImageClick]</onclick>
 							<onclick>$VAR[AddMoreCategoryBtn3BackgroundImageClick2]</onclick>
+						</control>
+						<control type="button" id="2338">
+							<description>Custom Background Image Path</description>
+							<include>ExpandedSettingsListBtn</include>
+							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn3BackgroundImagePath][/COLOR]</label>
+							<onclick>$VAR[AddMoreCategoryBtn3BackgroundImagePathClick]</onclick>
 						</control>
 					</control>
 
@@ -1331,13 +1331,6 @@
 							<include>ExpandedSettingsHeaderBtn</include>
 							<label>$LOCALIZE[31098]</label>
 						</control>
-						<control type="button" id="2331">
-							<description>Button Path</description>
-							<include>ExpandedSettingsListBtn</include>
-							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn4Param][/COLOR]</label>
-							<onclick>$VAR[AddMoreCategoryBtn4ParamClick]</onclick>
-							<onclick>$VAR[AddMoreCategoryBtn4ParamClick2]</onclick>
-						</control>
 						<control type="togglebutton" id="2345">
 							<description>Redirect Button Path</description>
 							<include>ExpandedSettingsToggleBtn</include>
@@ -1346,6 +1339,13 @@
 							<include>AddMoreCategoryBtn4ParamAltType</include>
 							<onclick>$VAR[AddMoreCategoryBtn4ParamTypeClick]</onclick>
 							<onclick>$VAR[AddMoreCategoryBtn4ParamTypeClick2]</onclick>
+						</control>
+						<control type="button" id="2331">
+							<description>Button Path</description>
+							<include>ExpandedSettingsListBtn</include>
+							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn4Param][/COLOR]</label>
+							<onclick>$VAR[AddMoreCategoryBtn4ParamClick]</onclick>
+							<onclick>$VAR[AddMoreCategoryBtn4ParamClick2]</onclick>
 						</control>
 						<control type="button" id="2332">
 							<description>Custom Icon Path Label</description>
@@ -1405,12 +1405,6 @@
 							<include>ExpandedSettingsHeaderBtn</include>
 							<label>$LOCALIZE[31083]</label>
 						</control>
-						<control type="button" id="2338">
-							<description>Custom Background Image Path</description>
-							<include>ExpandedSettingsListBtn</include>
-							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn4BackgroundImagePath][/COLOR]</label>
-							<onclick>$VAR[AddMoreCategoryBtn4BackgroundImagePathClick]</onclick>
-						</control>
 						<control type="togglebutton" id="2339">
 							<description>Redirect Background Image</description>
 							<include>ExpandedSettingsToggleBtn</include>
@@ -1419,6 +1413,12 @@
 							<include>AddMoreCategoryBtn4BackgroundAltImage</include>
 							<onclick>$VAR[AddMoreCategoryBtn4BackgroundImageClick]</onclick>
 							<onclick>$VAR[AddMoreCategoryBtn4BackgroundImageClick2]</onclick>
+						</control>
+						<control type="button" id="2338">
+							<description>Custom Background Image Path</description>
+							<include>ExpandedSettingsListBtn</include>
+							<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$VAR[AddMoreCategoryBtn4BackgroundImagePath][/COLOR]</label>
+							<onclick>$VAR[AddMoreCategoryBtn4BackgroundImagePathClick]</onclick>
 						</control>
 					</control>
 
