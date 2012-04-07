@@ -157,7 +157,7 @@
 			<height>42</height>
 			<font>BreadCrumbFont</font>
 			<textcolor>BreadCrumbColor</textcolor>
-			<label> [UPPERCASE]$INFO[System.Date(ddd. d mmm. yyyy)][/UPPERCASE] </label>
+			<label> [UPPERCASE]$INFO[System.Date(mmm)] $INFO[System.Date(d)], $INFO[System.Date(yyyy)][/UPPERCASE] </label>
 			<aligny>center</aligny>
 		</control>
 		<control type="image">
