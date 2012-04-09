@@ -168,7 +168,7 @@
 					<height>170</height>
 					<bordertexture>icons/cdart/cdart-mask.png</bordertexture>
 					<texture diffuse="icons/cdart/cdart-mask.png">icons/cdart/cdart.png</texture>
-					<aspectratio align="bottom">keep</aspectratio>
+					<aspectratio align="bottom">stretch</aspectratio>
 					<include>CdArtImageRotateAnim</include>
 					<visible>IsEmpty(MusicPlayer.Cover)</visible>
 				</control>
@@ -181,7 +181,7 @@
 					<height>170</height>
 					<bordertexture>icons/cdart/cdart-mask.png</bordertexture>
 					<texture fallback="icons/cdart/cdart.png" diffuse="icons/cdart/cdart-mask.png">$INFO[MusicPlayer.Cover]</texture>
-					<aspectratio align="bottom">keep</aspectratio>
+					<aspectratio align="bottom">stretch</aspectratio>
 					<include>CdArtImageRotateAnim</include>
 				</control>
 			</control>
