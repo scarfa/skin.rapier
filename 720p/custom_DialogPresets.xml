@@ -210,6 +210,7 @@
 								<textcolor>ButtonFocusColor</textcolor>
 								<aligny>center</aligny>
 								<info>ListItem.Label</info>
+								<scroll>yes</scroll>
 							</control>
 						</control>
 					</focusedlayout>
@@ -758,6 +759,20 @@
 							<visible>Container(450).HasFocus(11)</visible>
 						</item>
 						<item id="77">
+							<description>Player Controls OSD</description>
+							<label>$LOCALIZE[32031]</label>
+							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(PlayerControls))</onclick>
+							<onclick>Dialog.Close(3006)</onclick>
+							<visible>Container(450).HasFocus(11)</visible>
+						</item>
+						<item id="78">
+							<description>Go To Fullscreen Playback</description>
+							<label>$LOCALIZE[32030]</label>
+							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],Fullscreen)</onclick>
+							<onclick>Dialog.Close(3006)</onclick>
+							<visible>Container(450).HasFocus(11)</visible>
+						</item>
+						<item id="79">
 							<description>Credits</description>
 							<label>$LOCALIZE[31004]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(3010))</onclick>
