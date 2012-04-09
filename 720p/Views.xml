@@ -1236,6 +1236,16 @@
 		</control>
 	</include>
 
+	<include name="LiveTVOverlayImage">
+		<control type="image">
+			<width>24</width>
+			<height>24</height>
+			<texture background="true">OverlayWatched.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<visible>StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+		</control>
+	</include>
+
 	<include name="LiveTVColumnHeaderLabel">
 		<aligny>center</aligny>
 		<align>left</align>
