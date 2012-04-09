@@ -1112,8 +1112,10 @@
 	</include>
 
 	<variable name="LiveTVListInfoCoverImage">
-		<value condition="Skin.String(ViewsPVR,1) | Skin.String(ViewsPVR,6)">pvr\pvr-background.jpg</value>
+		<value condition="Skin.String(ViewsPVR,1)">pvr\pvr-background.jpg</value>
 		<value condition="Skin.String(ViewsPVR,2)">pvr\pvr-radio-background.jpg</value>
+		<value condition="Skin.String(ViewsPVR,6) + IsEmpty(ListItem.Thumb)">pvr\pvr-background.jpg</value>
+		<value condition="Skin.String(ViewsPVR,6) + !IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
 	</variable>
 
 	<variable name="LiveTVListInfoLabel1">
