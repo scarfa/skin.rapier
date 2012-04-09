@@ -30,8 +30,7 @@
 			<posy>606</posy>
 			<include>HomeMenuPaneImage</include>
 			<include>HomeMenuPaneOpenCloseAnim</include>
-			<include condition="!IsEmpty(System.Language)">HomeMenu</include>
-			<include condition="IsEmpty(System.Language)">HomeMenuFallback</include>
+			<include>HomeMenu</include>
 			<include>HomeMenuPaneOverlay</include>
 			<include condition="!Skin.HasSetting(HideHomeSubMenus)">HomeSubMenus</include>
 			<include>HomeSystemSubMenus</include>
