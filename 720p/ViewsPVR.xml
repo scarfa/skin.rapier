@@ -106,9 +106,21 @@
 				<onright>150</onright>
 				<itemlayout height="74">
 					<include>LiveTVListInfoStyleItemLayout</include>
+					<control type="group">
+						<description>Overlay</description>
+						<posx>596</posx>
+						<posy>25</posy>
+						<include>LiveTVOverlayImage</include>
+					</control>
 				</itemlayout>
 				<focusedlayout height="74">	
 					<include>LiveTVListInfoStyleFocusedLayout</include>
+					<control type="group">
+						<description>Overlay</description>
+						<posx>596</posx>
+						<posy>25</posy>
+						<include>LiveTVOverlayImage</include>
+					</control>
 				</focusedlayout>
 			</control>
 
