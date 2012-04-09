@@ -40,195 +40,103 @@
 				<posx>DialogMarginOffsetX</posx>
 				<posy>DialogMarginOffsetY</posy>
 
-				<control type="group">
-					<description>Title</description>
-					<control type="image">
-						<width>530</width>
-						<height>35</height>
-						<texture background="true" border="7">controls/button-nofocus.png</texture>
-					</control>
-					<control type="label">
-						<posx>170</posx>
-						<width>160</width>
-						<height>35</height>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>MediaInfoFont</font>
-						<textcolor>MediaInfoItemColor</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
-						<label>$LOCALIZE[369]:</label>
-					</control>
-					<control type="label">
-						<posx>180</posx>
-						<width>340</width>
-						<height>35</height>
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>MediaInfoFont</font>
-						<textcolor>MediaInfoItemColor2</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
-						<label fallback="31001">$INFO[ListItem.Title]</label>
-					</control>
-				</control>
-
-				<control type="group">
-					<description>Start Date</description>
-					<posy>40</posy>
-					<control type="image">
-						<width>530</width>
-						<height>35</height>
-						<texture background="true" border="7">controls/button-nofocus.png</texture>
-					</control>
-					<control type="label">
-						<posx>170</posx>
-						<width>160</width>
-						<height>35</height>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>MediaInfoFont</font>
-						<textcolor>MediaInfoItemColor</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
-						<label>$LOCALIZE[552]:</label>
-					</control>
-					<control type="label">
-						<posx>180</posx>
-						<width>340</width>
-						<height>35</height>
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>MediaInfoFont</font>
-						<textcolor>MediaInfoItemColor2</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
-						<label fallback="31001">$INFO[ListItem.StartDate]</label>
-					</control>
-				</control>
-
-				<control type="group">
-					<description>Start time</description>
-					<posy>80</posy>
-					<control type="image">
-						<width>530</width>
-						<height>35</height>
-						<texture background="true" border="7">controls/button-nofocus.png</texture>
-					</control>
-					<control type="label">
-						<posx>170</posx>
-						<width>160</width>
-						<height>35</height>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>MediaInfoFont</font>
-						<textcolor>MediaInfoItemColor</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
-						<label>$LOCALIZE[142]</label>
-					</control>
-					<control type="label">
-						<posx>180</posx>
-						<width>340</width>
-						<height>35</height>
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>MediaInfoFont</font>
-						<textcolor>MediaInfoItemColor2</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
-						<label fallback="31001">$INFO[ListItem.StartTime]</label>
-					</control>
-				</control>
-
-				<control type="group">
-					<description>Channel Name</description>
-					<posy>120</posy>
-					<control type="image">
-						<width>530</width>
-						<height>35</height>
-						<texture background="true" border="7">controls/button-nofocus.png</texture>
-					</control>
-					<control type="label">
-						<posx>170</posx>
-						<width>160</width>
-						<height>35</height>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>MediaInfoFont</font>
-						<textcolor>MediaInfoItemColor</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
-						<label>$LOCALIZE[19148]:</label>
-					</control>
-					<control type="label">
-						<posx>180</posx>
-						<width>340</width>
-						<height>35</height>
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>MediaInfoFont</font>
-						<textcolor>MediaInfoItemColor2</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
-						<label fallback="31001">$INFO[ListItem.ChannelName]</label>
-					</control>
-				</control>
-
-				<control type="group">
-					<description>Duration</description>
-					<posy>160</posy>
-					<control type="image">
-						<width>530</width>
-						<height>35</height>
-						<texture background="true" border="7">controls/button-nofocus.png</texture>
-					</control>
-					<control type="label">
-						<posx>170</posx>
-						<width>160</width>
-						<height>35</height>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>MediaInfoFont</font>
-						<textcolor>MediaInfoItemColor</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
-						<label>$LOCALIZE[180]:</label>
-					</control>
-					<control type="label">
-						<posx>180</posx>
-						<width>340</width>
-						<height>35</height>
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>MediaInfoFont</font>
-						<textcolor>MediaInfoItemColor2</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
-						<label fallback="31001">$INFO[ListItem.Duration]</label>
-					</control>
-				</control>
-
-				<control type="group">
-					<description>Genre</description>
-					<posy>200</posy>
-					<control type="image">
-						<width>530</width>
-						<height>35</height>
-						<texture background="true" border="7">controls/button-nofocus.png</texture>
-					</control>
-					<control type="label">
-						<posx>170</posx>
-						<width>160</width>
-						<height>35</height>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>MediaInfoFont</font>
-						<textcolor>MediaInfoItemColor</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
-						<label>$LOCALIZE[515]:</label>
-					</control>
-					<control type="label">
-						<posx>180</posx>
-						<width>340</width>
-						<height>35</height>
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>MediaInfoFont</font>
-						<textcolor>MediaInfoItemColor2</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
-						<label fallback="161">$INFO[ListItem.Genre]</label>
-					</control>
+				<control type="panel">
+					<description>Recording Info</description>
+					<width>530</width>
+					<height>280</height>
+					<viewtype label="">list</viewtype>
+					<scrolltime>200</scrolltime>
+					<itemgap>0</itemgap>
+					<itemlayout height="40" width="530">
+						<control type="image">
+							<width>530</width>
+							<height>35</height>
+							<texture background="true" border="7">controls/button-nofocus.png</texture>
+						</control>
+						<control type="label">
+							<posx>170</posx>
+							<width>165</width>
+							<height>35</height>
+							<font>MediaInfoFont</font>
+							<textcolor>MediaInfoItemColor</textcolor>
+							<align>right</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+						</control>
+						<control type="label">
+							<posx>180</posx>
+							<width>283</width>
+							<height>35</height>
+							<font>MediaInfoFont</font>
+							<textcolor>MediaInfoItemColor2</textcolor>
+							<aligny>center</aligny>
+							<label fallback="31001">$INFO[ListItem.Label2]</label>
+						</control>		
+					</itemlayout>				
+					<focusedlayout height="40" width="530">
+						<control type="image">
+							<width>530</width>
+							<height>35</height>
+							<texture background="true" border="7">controls/button-nofocus.png</texture>
+						</control>
+						<control type="label">
+							<posx>170</posx>
+							<width>165</width>
+							<height>35</height>
+							<font>MediaInfoFont</font>
+							<textcolor>MediaInfoItemColor</textcolor>
+							<align>right</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+						</control>
+						<control type="label">
+							<posx>180</posx>
+							<width>283</width>
+							<height>35</height>
+							<font>MediaInfoFont</font>
+							<textcolor>MediaInfoItemColor2</textcolor>
+							<aligny>center</aligny>
+							<label fallback="31001">$INFO[ListItem.Label2]</label>
+						</control>		
+					</focusedlayout>
+					<content>
+						<item id="1">
+							<description>Title</description>
+							<label>$LOCALIZE[369]</label>
+							<label2>$INFO[ListItem.Title]</label2>
+							<onclick>-</onclick>
+						</item>
+						<item id="2">
+							<description>Start Date</description>
+							<label>$LOCALIZE[552]</label>
+							<label2>$INFO[ListItem.StartDate]</label2>
+							<onclick>-</onclick>
+						</item>
+						<item id="3">
+							<description>Start Time</description>
+							<label>$LOCALIZE[555]</label>
+							<label2>$INFO[ListItem.StartTime]</label2>
+							<onclick>-</onclick>
+						</item>
+						<item id="4">
+							<description>Channel Name</description>
+							<label>$LOCALIZE[19148]</label>
+							<label2>$INFO[ListItem.ChannelName]</label2>
+							<onclick>-</onclick>
+						</item>
+						<item id="5">
+							<description>Duration</description>
+							<label>$LOCALIZE[180]</label>
+							<label2>$INFO[ListItem.Duration]</label2>
+							<onclick>-</onclick>
+						</item>
+						<item id="6">
+							<description>Genre</description>
+							<label>$LOCALIZE[515]</label>
+							<label2>$INFO[ListItem.Genre]</label2>
+							<onclick>-</onclick>
+						</item>
+					</content>
 				</control>
 
 				<control type="group">
