@@ -2550,6 +2550,87 @@
 				<onfocus>Control.SetFocus(6890)</onfocus>
 				<visible>Container(850).HasFocus(1)</visible>
 			</control>
+
+			<control type="button" id="110">
+				<include>RedirectBtn</include>
+				<onfocus>Control.SetFocus(6894)</onfocus>
+				<visible>Container(850).HasFocus(7)</visible>
+			</control>		
+			<control type="button" id="110">
+				<include>RedirectBtn</include>
+				<onfocus>Control.SetFocus(6896)</onfocus>
+				<visible>Container(850).HasFocus(8)</visible>
+			</control>
+			<control type="button" id="110">
+				<include>RedirectBtn</include>
+				<onfocus>Control.SetFocus(6898)</onfocus>
+				<visible>Container(850).HasFocus(9)</visible>
+			</control>
+			<control type="button" id="110">
+				<include>RedirectBtn</include>
+				<onfocus>Control.SetFocus(6900)</onfocus>
+				<visible>Container(850).HasFocus(10)</visible>
+			</control>
+			<control type="button" id="110">
+				<include>RedirectBtn</include>
+				<onfocus>Control.SetFocus(6902)</onfocus>
+				<visible>Container(850).HasFocus(11)</visible>
+			</control>
+			<control type="button" id="110">
+				<include>RedirectBtn</include>
+				<onfocus>Control.SetFocus(6904)</onfocus>
+				<visible>Container(850).HasFocus(12)</visible>
+			</control>
+			<control type="button" id="110">
+				<include>RedirectBtn</include>
+				<onfocus>Control.SetFocus(6906)</onfocus>
+				<visible>Container(850).HasFocus(13)</visible>
+			</control>
+			<control type="button" id="110">
+				<include>RedirectBtn</include>
+				<onfocus>Control.SetFocus(6908)</onfocus>
+				<visible>Container(850).HasFocus(14)</visible>
+			</control>
+			<control type="button" id="110">
+				<include>RedirectBtn</include>
+				<onfocus>Control.SetFocus(6910)</onfocus>
+				<visible>Container(850).HasFocus(17)</visible>
+			</control>
+			<control type="button" id="110">
+				<include>RedirectBtn</include>
+				<onfocus>Control.SetFocus(6912)</onfocus>
+				<visible>Container(850).HasFocus(18)</visible>
+			</control>
+			<control type="button" id="110">
+				<include>RedirectBtn</include>
+				<onfocus>Control.SetFocus(6914)</onfocus>
+				<visible>Container(850).HasFocus(19)</visible>
+			</control>
+			<control type="button" id="110">
+				<include>RedirectBtn</include>
+				<onfocus>Control.SetFocus(6916)</onfocus>
+				<visible>Container(850).HasFocus(20)</visible>
+			</control>
+			<control type="button" id="110">
+				<include>RedirectBtn</include>
+				<onfocus>Control.SetFocus(6918)</onfocus>
+				<visible>Container(850).HasFocus(21)</visible>
+			</control>
+			<control type="button" id="110">
+				<include>RedirectBtn</include>
+				<onfocus>Control.SetFocus(6920)</onfocus>
+				<visible>Container(850).HasFocus(22)</visible>
+			</control>
+			<control type="button" id="110">
+				<include>RedirectBtn</include>
+				<onfocus>Control.SetFocus(6922)</onfocus>
+				<visible>Container(850).HasFocus(23)</visible>
+			</control>
+			<control type="button" id="110">
+				<include>RedirectBtn</include>
+				<onfocus>Control.SetFocus(6924)</onfocus>
+				<visible>Container(850).HasFocus(24)</visible>
+			</control>		
 		</control>
 	</include>
 
