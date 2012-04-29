@@ -92,11 +92,13 @@
 	</include>
 
 	<include name="NextAiredItemImage">
-		<width>120</width>
-		<height>114</height>
-		<texture>white.png</texture>
-		<colordiffuse>DefaultColor</colordiffuse>
-		<include>NextAiredItemFadeAnim</include>
+		<posx>-6</posx>	
+		<posy>-5</posy>
+		<width>132</width>
+		<height>124</height>
+		<texture background="true">black.png</texture>						
+		<bordertexture border="12">covers/cover-case-focus2.png</bordertexture>
+		<bordersize>12</bordersize>
 	</include>
 
 	<include name="NextAiredItemLayout">
