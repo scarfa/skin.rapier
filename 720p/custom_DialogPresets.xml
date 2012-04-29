@@ -223,90 +223,111 @@
 							<visible>Container(450).HasFocus(1)</visible>
 						</item>
 						<item id="2">
+							<description>Music Files (Root)</description>
+							<label>$LOCALIZE[1214] ($LOCALIZE[20108])</label>
+							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(MusicFiles,root))</onclick>
+							<onclick>Dialog.Close(3006)</onclick>
+							<visible>Container(450).HasFocus(1)</visible>
+						</item>
+						<item id="3">
 							<description>Music Library</description>
 							<label>$LOCALIZE[14022]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(MusicLibrary))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(1)</visible>
 						</item>
-						<item id="3">
+						<item id="4">
+							<description>Music Library (Root)</description>
+							<label>$LOCALIZE[14022] ($LOCALIZE[20108])</label>
+							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(MusicLibrary,root))</onclick>
+							<onclick>Dialog.Close(3006)</onclick>
+							<visible>Container(450).HasFocus(1)</visible>
+						</item>
+						<item id="5">
+							<description>Update Library</description>
+							<label>$LOCALIZE[653]</label>
+							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],UpdateLibrary(Music))</onclick>
+							<onclick>Dialog.Close(3006)</onclick>
+							<visible>Container(450).HasFocus(1)</visible>
+						</item>
+						<item id="6">
 							<description>Genres</description>
 							<label>$LOCALIZE[135]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(MusicLibrary,Genres,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(1)</visible>
 						</item>
-						<item id="4">
+						<item id="7">
 							<description>Year</description>
 							<label>$LOCALIZE[345]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(MusicLibrary,Years,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(1)</visible>
 						</item>
-						<item id="5">
+						<item id="8">
 							<description>Artists</description>
 							<label>$LOCALIZE[133]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(MusicLibrary,Artists,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(1)</visible>
 						</item>
-						<item id="6">
+						<item id="9">
 							<description>Albums</description>
 							<label>$LOCALIZE[132]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(MusicLibrary,Albums,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(1)</visible>
 						</item>
-						<item id="7">
+						<item id="10">
 							<description>Songs</description>
 							<label>$LOCALIZE[134]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(MusicLibrary,Songs,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(1)</visible>
 						</item>
-						<item id="8">
+						<item id="11">
 							<description>Singles</description>
 							<label>$LOCALIZE[1050]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(MusicLibrary,Singles,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(1)</visible>
 						</item>
-						<item id="9">
+						<item id="12">
 							<description>Top 100</description>
 							<label>$LOCALIZE[271]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(MusicLibrary,Top100,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(1)</visible>
 						</item>
-						<item id="10">
+						<item id="13">
 							<description>Recently Added Albums</description>
 							<label>$LOCALIZE[359]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(MusicLibrary,RecentlyAddedAlbums,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(1)</visible>
 						</item>
-						<item id="11">
+						<item id="14">
 							<description>Recently Played Albums</description>
 							<label>$LOCALIZE[517]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(MusicLibrary,RecentlyPlayedAlbums,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(1)</visible>
 						</item>
-						<item id="12">
+						<item id="15">
 							<description>Music Playlists</description>
 							<label>$LOCALIZE[136]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(MusicLibrary,Playlists,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(1)</visible>
 						</item>
-						<item id="13">
+						<item id="16">
 							<description>Party Mode</description>
 							<label>$LOCALIZE[589]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],PlayerControl(Partymode(music)))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(1)</visible>
 						</item>
-						<item id="14">
+						<item id="17">
 							<description>Music Add-ons</description>
 							<label>$LOCALIZE[24001]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(MusicLibrary,Addons,Return))</onclick>
@@ -314,14 +335,14 @@
 							<visible>Container(450).HasFocus(1)</visible>
 						</item>
 
-						<item id="15">
+						<item id="18">
 							<description>TV Channels</description>
 							<label>$LOCALIZE[19019]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindowAndFocus(MyPVR, 32,0, 11,0))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(2)</visible>
 						</item>
-						<item id="16">
+						<item id="19">
 							<description>Radio Channels</description>
 							<label>$LOCALIZE[19021]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindowAndFocus(MyPVR, 33,0, 12,0))</onclick>
@@ -329,28 +350,28 @@
 							<visible>Container(450).HasFocus(2)</visible>
 							<visible>!Skin.HasSetting(HideLiveRadio)</visible>
 						</item>
-						<item id="17">
+						<item id="20">
 							<description>Guide</description>
 							<label>$LOCALIZE[19069]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindowAndFocus(MyPVR, 31,0, 10,0))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(2)</visible>
 						</item>
-						<item id="18">
+						<item id="21">
 							<description>Search</description>
 							<label>$LOCALIZE[137]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindowAndFocus(MyPVR, 36,0, 15,0))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(2)</visible>
 						</item>
-						<item id="19">
+						<item id="22">
 							<description>Recordings</description>
 							<label>$LOCALIZE[19163]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindowAndFocus(MyPVR, 34,0, 13,0))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(2)</visible>
 						</item>
-						<item id="20">
+						<item id="23">
 							<description>Timer</description>
 							<label>$LOCALIZE[19040]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindowAndFocus(MyPVR, 35,0, 14,0))</onclick>
@@ -358,35 +379,49 @@
 							<visible>Container(450).HasFocus(2)</visible>
 						</item>
 
-						<item id="21">
+						<item id="24">
 							<description>Video Files</description>
 							<label>$LOCALIZE[1214]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Videos,Files,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(3)</visible>
 						</item>
-						<item id="22">
+						<item id="25">
 							<description>Video Library</description>
 							<label>$LOCALIZE[14022]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(VideoLibrary))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(3)</visible>
 						</item>
-						<item id="23">
+						<item id="26">
+							<description>Video Library (Root)</description>
+							<label>$LOCALIZE[14022] ($LOCALIZE[20108])</label>
+							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(VideoLibrary,root))</onclick>
+							<onclick>Dialog.Close(3006)</onclick>
+							<visible>Container(450).HasFocus(3)</visible>
+						</item>
+						<item id="27">
+							<description>Update Library</description>
+							<label>$LOCALIZE[653]</label>
+							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],UpdateLibrary(Video))</onclick>
+							<onclick>Dialog.Close(3006)</onclick>
+							<visible>Container(450).HasFocus(3)</visible>
+						</item>
+						<item id="28">
 							<description>Video Playlists</description>
 							<label>$LOCALIZE[136]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Videos,Playlists,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(3)</visible>
 						</item>
-						<item id="24">
+						<item id="29">
 							<description>Party Mode</description>
 							<label>$LOCALIZE[589]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],PlayerControl(Partymode(video)))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(3)</visible>
 						</item>
-						<item id="25">
+						<item id="30">
 							<description>Video Add-ons</description>
 							<label>$LOCALIZE[24001]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Videos,Addons,Return))</onclick>
@@ -394,56 +429,56 @@
 							<visible>Container(450).HasFocus(3)</visible>
 						</item>
 
-						<item id="26">
+						<item id="31">
 							<description>Movies</description>
 							<label>$LOCALIZE[369]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Videos,MovieTitles,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(4)</visible>
 						</item>
-						<item id="27">
+						<item id="32">
 							<description>Genres</description>
 							<label>$LOCALIZE[135]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Videos,MovieGenres,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(4)</visible>
 						</item>
-						<item id="28">
+						<item id="33">
 							<description>Year</description>
 							<label>$LOCALIZE[345]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Videos,MovieYears,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(4)</visible>
 						</item>
-						<item id="29">
+						<item id="34">
 							<description>Actors</description>
 							<label>$LOCALIZE[344]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Videos,MovieActors,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(4)</visible>
 						</item>
-						<item id="30">
+						<item id="35">
 							<description>Directors</description>
 							<label>$LOCALIZE[20348]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Videos,MovieDirectors,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(4)</visible>
 						</item>
-						<item id="31">
+						<item id="36">
 							<description>Studios</description>
 							<label>$LOCALIZE[20388]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Videos,MovieStudios,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(4)</visible>
 						</item>
-						<item id="32">
+						<item id="37">
 							<description>Countries</description>
 							<label>$LOCALIZE[20451]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Videos,MovieCountries,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(4)</visible>
 						</item>
-						<item id="33">
+						<item id="38">
 							<description>Recently Added Movies</description>
 							<label>$LOCALIZE[31303]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Videos,RecentlyAddedMovies,Return))</onclick>
@@ -451,42 +486,42 @@
 							<visible>Container(450).HasFocus(4)</visible>
 						</item>
 
-						<item id="34">
+						<item id="39">
 							<description>TV Shows</description>
 							<label>$LOCALIZE[369]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Videos,TVShowTitles,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(5)</visible>
 						</item>
-						<item id="35">
+						<item id="40">
 							<description>Genres</description>
 							<label>$LOCALIZE[135]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Videos,TVShowGenres,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(5)</visible>
 						</item>
-						<item id="36">
+						<item id="41">
 							<description>Year</description>
 							<label>$LOCALIZE[345]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Videos,TVShowYears,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(5)</visible>
 						</item>
-						<item id="37">
+						<item id="42">
 							<description>Actors</description>
 							<label>$LOCALIZE[344]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Videos,TVShowActors,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(5)</visible>
 						</item>
-						<item id="38">
+						<item id="43">
 							<description>Studios</description>
 							<label>$LOCALIZE[20388]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Videos,TVShowStudios,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(5)</visible>
 						</item>
-						<item id="39">
+						<item id="44">
 							<description>Recently Added Episodes</description>
 							<label>$LOCALIZE[31303]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Videos,RecentlyAddedEpisodes,Return))</onclick>
@@ -494,56 +529,56 @@
 							<visible>Container(450).HasFocus(5)</visible>
 						</item>
 
-						<item id="40">
+						<item id="45">
 							<description>Music Videos</description>
 							<label>$LOCALIZE[369]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Videos,MusicVideoTitles,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(6)</visible>
 						</item>
-						<item id="41">
+						<item id="46">
 							<description>Genres</description>
 							<label>$LOCALIZE[135]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Videos,MusicVideoGenres,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(6)</visible>
 						</item>
-						<item id="42">
+						<item id="47">
 							<description>Year</description>
 							<label>$LOCALIZE[345]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Videos,MusicVideoYears,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(6)</visible>
 						</item>
-						<item id="43">
+						<item id="48">
 							<description>Artists</description>
 							<label>$LOCALIZE[133]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Videos,MusicVideoArtists,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(6)</visible>
 						</item>
-						<item id="44">
+						<item id="49">
 							<description>Albums</description>
 							<label>$LOCALIZE[132]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Videos,MusicVideoAlbums,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(6)</visible>
 						</item>
-						<item id="45">
+						<item id="50">
 							<description>Directors</description>
 							<label>$LOCALIZE[20348]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Videos,MusicVideoDirectors,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(6)</visible>
 						</item>
-						<item id="46">
+						<item id="51">
 							<description>Studios</description>
 							<label>$LOCALIZE[20388]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Videos,MusicVideoStudios,Return))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(6)</visible>
 						</item>
-						<item id="47">
+						<item id="52">
 							<description>Recently Added Music Videos</description>
 							<label>$LOCALIZE[31303]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Videos,RecentlyAddedMusicVideos,Return))</onclick>
@@ -551,14 +586,21 @@
 							<visible>Container(450).HasFocus(6)</visible>
 						</item>
 
-						<item id="48">
+						<item id="53">
 							<description>Programs</description>
 							<label>$LOCALIZE[1214]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Programs))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(7)</visible>
 						</item>
-						<item id="49">
+						<item id="54">
+							<description>Programs (Root)</description>
+							<label>$LOCALIZE[1214] ($LOCALIZE[20108])</label>
+							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Programs,root))</onclick>
+							<onclick>Dialog.Close(3006)</onclick>
+							<visible>Container(450).HasFocus(7)</visible>
+						</item>
+						<item id="55">
 							<description>Program Add-ons</description>
 							<label>$LOCALIZE[24001]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Programs,Addons,Return))</onclick>
@@ -566,14 +608,21 @@
 							<visible>Container(450).HasFocus(7)</visible>
 						</item>
 
-						<item id="50">
+						<item id="56">
 							<description>Pictures</description>
 							<label>$LOCALIZE[1214]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Pictures))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(8)</visible>
 						</item>
-						<item id="51">
+						<item id="57">
+							<description>Pictures (Root)</description>
+							<label>$LOCALIZE[1214] ($LOCALIZE[20108])</label>
+							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Pictures,root))</onclick>
+							<onclick>Dialog.Close(3006)</onclick>
+							<visible>Container(450).HasFocus(8)</visible>
+						</item>
+						<item id="58">
 							<description>Pictures Add-ons</description>
 							<label>$LOCALIZE[24001]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Pictures,Addons,Return))</onclick>
@@ -581,21 +630,21 @@
 							<visible>Container(450).HasFocus(8)</visible>
 						</item>
 
-						<item id="52">
+						<item id="59">
 							<description>Favourites</description>
 							<label>$LOCALIZE[1036]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Favourites))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(9)</visible>
 						</item>
-						<item id="53">
+						<item id="60">
 							<description>Filemanager</description>
 							<label>$LOCALIZE[10003]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Filemanager))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(9)</visible>
 						</item>
-						<item id="54">
+						<item id="61">
 							<description>Weather</description>
 							<label>$LOCALIZE[8]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Weather))</onclick>
@@ -603,63 +652,63 @@
 							<visible>Container(450).HasFocus(9)</visible>
 						</item>
 
-						<item id="55">
+						<item id="62">
 							<description>Appearance Settings</description>
 							<label>$LOCALIZE[480]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(AppearanceSettings))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(10)</visible>
 						</item>
-						<item id="56">
+						<item id="63">
 							<description>Videos Settings</description>
 							<label>$LOCALIZE[3]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(VideosSettings))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(10)</visible>
 						</item>
-						<item id="57">
+						<item id="64">
 							<description>PVR Settings</description>
 							<label>$LOCALIZE[31900]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(PVRSettings))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(10)</visible>
 						</item>
-						<item id="58">
+						<item id="65">
 							<description>Music Settings</description>
 							<label>$LOCALIZE[2]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(MusicSettings))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(10)</visible>
 						</item>
-						<item id="59">
+						<item id="66">
 							<description>Pictures Settings</description>
 							<label>$LOCALIZE[1]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(PicturesSettings))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(10)</visible>
 						</item>
-						<item id="60">
+						<item id="67">
 							<description>Weather Settings</description>
 							<label>$LOCALIZE[8]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(WeatherSettings))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(10)</visible>
 						</item>
-						<item id="61">
+						<item id="68">
 							<description>Network Settings</description>
 							<label>$LOCALIZE[13279]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(NetworkSettings))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(10)</visible>
 						</item>
-						<item id="62">
+						<item id="69">
 							<description>System Settings</description>
 							<label>$LOCALIZE[13000]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(SystemSettings))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(10)</visible>
 						</item>
-						<item id="63">
+						<item id="70">
 							<description>Skin Settings</description>
 							<label>$LOCALIZE[166]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(3001))</onclick>
@@ -667,112 +716,112 @@
 							<visible>Container(450).HasFocus(10)</visible>
 						</item>
 
-						<item id="64">
+						<item id="71">
 							<description>Add-ons</description>
 							<label>$LOCALIZE[24001]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(AddonBrowser))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(11)</visible>
 						</item>
-						<item id="65">
+						<item id="72">
 							<description>Profiles</description>
 							<label>$LOCALIZE[13200]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(Profiles))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(11)</visible>
 						</item>
-						<item id="66">
+						<item id="73">
 							<description>System Info</description>
 							<label>$LOCALIZE[130]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(SystemInfo))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(11)</visible>
 						</item>
-						<item id="67">
+						<item id="74">
 							<description>Power</description>
 							<label>$LOCALIZE[33060]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(ShutdownMenu))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(11)</visible>
 						</item>
-						<item id="68">
+						<item id="75">
 							<description>Shutdown</description>
 							<label>$LOCALIZE[13005]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],Shutdown())</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(11)</visible>
 						</item>
-						<item id="69">
+						<item id="76">
 							<description>Suspend</description>
 							<label>$LOCALIZE[13011]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],Suspend())</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(11)</visible>
 						</item>
-						<item id="70">
+						<item id="77">
 							<description>Hibernate</description>
 							<label>$LOCALIZE[13010]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],Hibernate())</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(11)</visible>
 						</item>
-						<item id="71">
+						<item id="78">
 							<description>Reboot</description>
 							<label>$LOCALIZE[13013]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],Reset())</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(11)</visible>
 						</item>
-						<item id="72">
+						<item id="79">
 							<description>Quit XBMC</description>
 							<label>$LOCALIZE[13009] XBMC</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],Quit())</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(11)</visible>
 						</item>
-						<item id="73">
+						<item id="80">
 							<description>Restart XBMC</description>
 							<label>$LOCALIZE[13313] XBMC</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],RestartApp())</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(11)</visible>
 						</item>
-						<item id="74">
+						<item id="81">
 							<description>Reload Skin</description>
 							<label>$LOCALIZE[20183]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ReloadSkin())</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(11)</visible>
 						</item>
-						<item id="75">
+						<item id="82">
 							<description>Play Disc</description>
 							<label>$LOCALIZE[341]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],PlayDVD())</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(11)</visible>
 						</item>
-						<item id="76">
+						<item id="83">
 							<description>Eject/Load Disc</description>
 							<label>$LOCALIZE[13391]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],EjectTray())</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(11)</visible>
 						</item>
-						<item id="77">
+						<item id="84">
 							<description>Player Controls OSD</description>
 							<label>$LOCALIZE[32031]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(PlayerControls))</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(11)</visible>
 						</item>
-						<item id="78">
+						<item id="85">
 							<description>Go To Fullscreen Playback</description>
 							<label>$LOCALIZE[32030]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],Fullscreen)</onclick>
 							<onclick>Dialog.Close(3006)</onclick>
 							<visible>Container(450).HasFocus(11)</visible>
 						</item>
-						<item id="79">
+						<item id="86">
 							<description>Credits</description>
 							<label>$LOCALIZE[31004]</label>
 							<onclick>Skin.SetString($INFO[Skin.String(CustomBtnPresetsParam)],ActivateWindow(3010))</onclick>
