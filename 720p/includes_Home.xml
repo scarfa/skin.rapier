@@ -158,6 +158,14 @@
 		<thumb>$INFO[Skin.String(CustomPicturesBGPath)]</thumb>
 	</include>
 
+	<include name="HomeWeatherCustomBGPath">
+		<thumb>$INFO[Skin.String(CustomWeatherBGPath)]</thumb>
+	</include>
+
+	<include name="HomeWeatherFanartBGPath">
+		<thumb>$INFO[Skin.String(CustomWeatherBGPath)]$INFO[Window(Weather).Property(Current.FanartCode)]</thumb>
+	</include>
+
 	<include name="HomeGeneralCustomBGPath">
 		<thumb>$INFO[Skin.String(CustomGeneralBGPath)]</thumb>
 	</include>
@@ -202,6 +210,17 @@
 			<thumb>$INFO[Skin.String(CustomPVRBGPath)]</thumb>
 			<include condition="!Skin.HasSetting(RedirectPVRCategoryEPG)">RedirectPVRCategoryChannels</include>
 			<include condition="Skin.HasSetting(RedirectPVRCategoryEPG)">RedirectPVRCategoryEPG</include>
+		</item>
+	</include>
+
+	<include name="HomeWeatherCategory">
+		<item id="51">
+			<description>Weather Category</description>
+			<label>weather</label>
+			<icon>homecategories/$INFO[System.Language]/weather-text-nofocus.png</icon>
+			<include condition="Skin.String(CustomWeatherBGType,2) | Skin.String(CustomWeatherBGType,3)">HomeWeatherCustomBGPath</include>
+			<include condition="Skin.String(CustomWeatherBGType,4)">HomeWeatherFanartBGPath</include>
+			<onclick>ActivateWindow(Weather)</onclick>	
 		</item>
 	</include>
 
@@ -754,6 +773,9 @@
 				<include condition="Skin.HasSetting(EnableCustomCategory14)">HomeCustomCategory14</include>
 				<include condition="Skin.HasSetting(EnableCustomCategory15)">HomeCustomCategory15</include>
 				<include condition="Skin.HasSetting(EnableCustomCategory16)">HomeCustomCategory16</include>
+
+				<include condition="Skin.HasSetting(EnableWeatherCategory)">HomeWeatherCategory</include>
+
 				<item id="15">
 					<description>General Category</description>
 					<label>general</label>
@@ -864,6 +886,15 @@
 				<texture fallback="home-pictures-icon.png">$INFO[Skin.String(PicturesCategoryIconPath)]</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>Container(850).HasFocus(6)</visible>
+				<include>HomeMenuIconAnim</include>
+			</control>
+
+			<control type="image">
+				<description>Weather Icon</description>
+				<include>HomeMenuIconDim</include>
+				<texture fallback="home-weather-icon.png">$INFO[Skin.String(WeatherCategoryIconPath)]</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Container(850).HasFocus(51)</visible>
 				<include>HomeMenuIconAnim</include>
 			</control>
 
@@ -2443,7 +2474,7 @@
 						<description>Weather</description>
 						<label>$LOCALIZE[8]</label>
 						<onclick>ActivateWindow(Weather)</onclick>
-						<visible>!Skin.HasSetting(EditGeneralSubMenuBtn3)</visible>
+						<visible>!Skin.HasSetting(EditGeneralSubMenuBtn3) + !Skin.HasSetting(EnableWeatherCategory)</visible>
 					</item>
 					<item id="3">
 						<description>Custom Button</description>
@@ -4197,7 +4228,7 @@
 		<control type="group">
 			<posx>5</posx>
 			<posy>280</posy>
-			<visible>Container(850).HasFocus(15)</visible>
+			<visible>[!Skin.HasSetting(EnableWeatherCategory) + Container(850).HasFocus(15)] | [Skin.HasSetting(EnableWeatherCategory) + Container(850).HasFocus(51)]</visible>
 			<visible>!Window.IsActive(PlayerControls) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(NumericInput)</visible>
 			<include>HomeLeftPanelOpenCloseAnim</include>
 

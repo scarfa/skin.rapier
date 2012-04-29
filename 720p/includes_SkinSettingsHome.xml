@@ -438,7 +438,7 @@
 					<onup>938</onup>
 					<ondown>938</ondown>
 					<onleft>1938</onleft>
-					<onright>2308</onright>
+					<onright>941</onright>
 					<include>ControlsOpenCloseAnim</include>
 					<control type="radiobutton" id="2301">
 						<description>Music</description>
@@ -493,19 +493,40 @@
 					</control>
 				</control>
 				
-				<include condition="System.GetBool(pvrmanager.enabled)">PVRCategoryBtn</include>
-				
-				<control type="radiobutton" id="2308">
-					<description>System</description>
+				<control type="grouplist" id="941">
+					<description>Hide Categories 2 Area</description>
 					<posx>220</posx>
 					<posy>65</posy>
-					<include>ExpandedSettingsRadioBtn</include>
-					<label>$LOCALIZE[13000]</label>
-					<selected>Skin.HasSetting(HideSystemCategory)</selected>
-					<onclick>Skin.ToggleSetting(HideSystemCategory)</onclick>
-					<onup>2309</onup>
-					<ondown>2309</ondown>
+					<width>205</width>
+					<height>500</height>
+					<itemgap>15</itemgap>
+					<onup>941</onup>
+					<ondown>941</ondown>
 					<onleft>938</onleft>
+					<onright>-</onright>
+					<include>ControlsOpenCloseAnim</include>
+					<control type="radiobutton" id="2308">
+						<description>System</description>
+						<include>ExpandedSettingsRadioBtn</include>
+						<label>$LOCALIZE[13000]</label>
+						<selected>Skin.HasSetting(HideSystemCategory)</selected>
+						<onclick>Skin.ToggleSetting(HideSystemCategory)</onclick>
+					</control>
+					<control type="radiobutton" id="2309">
+						<description>PVR</description>
+						<include>ExpandedSettingsRadioBtn</include>
+						<label>$LOCALIZE[31900]</label>
+						<selected>Skin.HasSetting(HidePVRCategory)</selected>
+						<onclick>Skin.ToggleSetting(HidePVRCategory)</onclick>
+						<visible>System.GetBool(pvrmanager.enabled)</visible>
+					</control>
+					<control type="radiobutton" id="2310">
+						<description>Weather</description>
+						<include>ExpandedSettingsRadioBtn</include>
+						<label>$LOCALIZE[8]</label>
+						<selected>!Skin.HasSetting(EnableWeatherCategory)</selected>
+						<onclick>Skin.ToggleSetting(EnableWeatherCategory)</onclick>
+					</control>
 				</control>
 
 				<control type="button" id="1938">
@@ -537,7 +558,7 @@
 					<posx>215</posx>
 					<posy>65</posy>
 					<width>540</width>
-					<height>500</height>
+					<height>450</height>
 					<itemgap>0</itemgap>
 					<onup>940</onup>
 					<ondown>940</ondown>
@@ -550,46 +571,59 @@
 						<label>$LOCALIZE[2] - [COLOR=DefaultColor2]$INFO[Skin.String(MusicCategoryIconPath)][/COLOR]</label>
 						<onclick>Skin.SetImage(MusicCategoryIconPath)</onclick>
 					</control>
-					<include condition="System.GetBool(pvrmanager.enabled)">PVRCategoryIconBtn</include>
 					<control type="button" id="2302">
+						<description>PVR</description>
+						<include>ExpandedSettingsListBtn</include>
+						<label>$LOCALIZE[31900] - [COLOR=DefaultColor2]$INFO[Skin.String(PVRCategoryIconPath)][/COLOR]</label>
+						<onclick>Skin.SetImage(PVRCategoryIconPath)</onclick>
+						<visible>System.GetBool(pvrmanager.enabled)</visible>
+					</control>
+					<control type="button" id="2303">
 						<description>Videos</description>
 						<include>ExpandedSettingsListBtn</include>
 						<label>$LOCALIZE[3] - [COLOR=DefaultColor2]$INFO[Skin.String(VideosCategoryIconPath)][/COLOR]</label>
 						<onclick>Skin.SetImage(VideosCategoryIconPath)</onclick>
 					</control>
-					<control type="button" id="2303">
+					<control type="button" id="2304">
 						<description>Movies</description>
 						<include>ExpandedSettingsListBtn</include>
 						<label>$LOCALIZE[20342] - [COLOR=DefaultColor2]$INFO[Skin.String(MoviesCategoryIconPath)][/COLOR]</label>
 						<onclick>Skin.SetImage(MoviesCategoryIconPath)</onclick>
 						<enable>Library.HasContent(Movies)</enable>
 					</control>
-					<control type="button" id="2304">
+					<control type="button" id="2305">
 						<description>TV Shows</description>
 						<include>ExpandedSettingsListBtn</include>
 						<label>$LOCALIZE[20343] - [COLOR=DefaultColor2]$INFO[Skin.String(TVShowsCategoryIconPath)][/COLOR]</label>
 						<onclick>Skin.SetImage(TVShowsCategoryIconPath)</onclick>
 						<enable>Library.HasContent(TVShows)</enable>
 					</control>
-					<control type="button" id="2305">
+					<control type="button" id="2306">
 						<description>Programs</description>
 						<include>ExpandedSettingsListBtn</include>
 						<label>$LOCALIZE[0] - [COLOR=DefaultColor2]$INFO[Skin.String(ProgramsCategoryIconPath)][/COLOR]</label>
 						<onclick>Skin.SetImage(ProgramsCategoryIconPath)</onclick>
 					</control>
-					<control type="button" id="2306">
+					<control type="button" id="2307">
 						<description>Pictures</description>
 						<include>ExpandedSettingsListBtn</include>
 						<label>$LOCALIZE[1] - [COLOR=DefaultColor2]$INFO[Skin.String(PicturesCategoryIconPath)][/COLOR]</label>
 						<onclick>Skin.SetImage(PicturesCategoryIconPath)</onclick>
 					</control>
-					<control type="button" id="2307">
+					<control type="button" id="2308">
+						<description>Weather</description>
+						<include>ExpandedSettingsListBtn</include>
+						<label>$LOCALIZE[8] - [COLOR=DefaultColor2]$INFO[Skin.String(WeatherCategoryIconPath)][/COLOR]</label>
+						<onclick>Skin.SetImage(WeatherCategoryIconPath)</onclick>
+						<enable>Skin.HasSetting(EnableWeatherCategory)</enable>
+					</control>
+					<control type="button" id="2309">
 						<description>General</description>
 						<include>ExpandedSettingsListBtn</include>
 						<label>$LOCALIZE[128] - [COLOR=DefaultColor2]$INFO[Skin.String(GeneralCategoryIconPath)][/COLOR]</label>
 						<onclick>Skin.SetImage(GeneralCategoryIconPath)</onclick>
 					</control>
-					<control type="button" id="2308">
+					<control type="button" id="2310">
 						<description>System</description>
 						<include>ExpandedSettingsListBtn</include>
 						<label>$LOCALIZE[13000] - [COLOR=DefaultColor2]$INFO[Skin.String(SystemCategoryIconPath)][/COLOR]</label>
@@ -617,56 +651,63 @@
 					<posy>65</posy>
 					<include>ExpandedSettingsImagePreview</include>
 					<texture>$INFO[Skin.String(PVRCategoryIconPath)]</texture>
-					<visible>ControlGroup(940).HasFocus(2309)</visible>
-				</control>
-
-				<control type="image">
-					<posy>65</posy>
-					<include>ExpandedSettingsImagePreview</include>
-					<texture>$INFO[Skin.String(VideosCategoryIconPath)]</texture>
 					<visible>ControlGroup(940).HasFocus(2302)</visible>
 				</control>
 
 				<control type="image">
 					<posy>65</posy>
 					<include>ExpandedSettingsImagePreview</include>
-					<texture>$INFO[Skin.String(MoviesCategoryIconPath)]</texture>
+					<texture>$INFO[Skin.String(VideosCategoryIconPath)]</texture>
 					<visible>ControlGroup(940).HasFocus(2303)</visible>
 				</control>
 
 				<control type="image">
 					<posy>65</posy>
 					<include>ExpandedSettingsImagePreview</include>
-					<texture>$INFO[Skin.String(TVShowsCategoryIconPath)]</texture>
+					<texture>$INFO[Skin.String(MoviesCategoryIconPath)]</texture>
 					<visible>ControlGroup(940).HasFocus(2304)</visible>
 				</control>
 
 				<control type="image">
 					<posy>65</posy>
 					<include>ExpandedSettingsImagePreview</include>
-					<texture>$INFO[Skin.String(ProgramsCategoryIconPath)]</texture>
+					<texture>$INFO[Skin.String(TVShowsCategoryIconPath)]</texture>
 					<visible>ControlGroup(940).HasFocus(2305)</visible>
 				</control>
 
 				<control type="image">
 					<posy>65</posy>
 					<include>ExpandedSettingsImagePreview</include>
-					<texture>$INFO[Skin.String(PicturesCategoryIconPath)]</texture>
+					<texture>$INFO[Skin.String(ProgramsCategoryIconPath)]</texture>
 					<visible>ControlGroup(940).HasFocus(2306)</visible>
 				</control>
 
 				<control type="image">
 					<posy>65</posy>
 					<include>ExpandedSettingsImagePreview</include>
-					<texture>$INFO[Skin.String(GeneralCategoryIconPath)]</texture>
+					<texture>$INFO[Skin.String(PicturesCategoryIconPath)]</texture>
 					<visible>ControlGroup(940).HasFocus(2307)</visible>
 				</control>
 
 				<control type="image">
 					<posy>65</posy>
 					<include>ExpandedSettingsImagePreview</include>
-					<texture>$INFO[Skin.String(SystemCategoryIconPath)]</texture>
+					<texture>$INFO[Skin.String(WeatherCategoryIconPath)]</texture>
 					<visible>ControlGroup(940).HasFocus(2308)</visible>
+				</control>
+
+				<control type="image">
+					<posy>65</posy>
+					<include>ExpandedSettingsImagePreview</include>
+					<texture>$INFO[Skin.String(GeneralCategoryIconPath)]</texture>
+					<visible>ControlGroup(940).HasFocus(2309)</visible>
+				</control>
+
+				<control type="image">
+					<posy>65</posy>
+					<include>ExpandedSettingsImagePreview</include>
+					<texture>$INFO[Skin.String(SystemCategoryIconPath)]</texture>
+					<visible>ControlGroup(940).HasFocus(2310)</visible>
 				</control>
 
 				<control type="label">
@@ -2552,30 +2593,6 @@
 					<onclick>$VAR[ExpandSubMenuFocus]</onclick>
 				</control>
 			</control>
-		</control>
-	</include>
-	
-	<include name="PVRCategoryBtn">
-		<control type="radiobutton" id="2309">
-			<description>PVR</description>
-			<posx>220</posx>
-			<posy>130</posy>
-			<include>ExpandedSettingsRadioBtn</include>
-			<label>$LOCALIZE[31900]</label>
-			<selected>Skin.HasSetting(HidePVRCategory)</selected>
-			<onclick>Skin.ToggleSetting(HidePVRCategory)</onclick>
-			<onup>2308</onup>
-			<ondown>2308</ondown>
-			<onleft>938</onleft>
-		</control>
-	</include>
-					
-	<include name="PVRCategoryIconBtn">
-		<control type="button" id="2309">
-			<description>PVR</description>
-			<include>ExpandedSettingsListBtn</include>
-			<label>$LOCALIZE[31900] - [COLOR=DefaultColor2]$INFO[Skin.String(PVRCategoryIconPath)][/COLOR]</label>
-			<onclick>Skin.SetImage(PVRCategoryIconPath)</onclick>
 		</control>
 	</include>
 

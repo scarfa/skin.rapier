@@ -1139,13 +1139,13 @@
 	</variable>
 
 	<variable name="LiveTVListInfoItemLabel">
-		<value condition="Skin.String(ViewsPVR,1) | Skin.String(ViewsPVR,2)">$INFO[ListItem.Label]</value>
-		<value condition="Skin.String(ViewsPVR,6)">$INFO[ListItem.ChannelNumber,,  ]$INFO[ListItem.Label]</value>
+		<value condition="Skin.String(ViewsPVR,1) | Skin.String(ViewsPVR,2)">$INFO[ListItem.Title]</value>
+		<value condition="Skin.String(ViewsPVR,6)">$INFO[ListItem.Label]</value>
 	</variable>
 
 	<variable name="LiveTVListInfoItemLabel2">
-		<value condition="Skin.String(ViewsPVR,1) | Skin.String(ViewsPVR,2)">$INFO[ListItem.Title]</value>
-		<value condition="Skin.String(ViewsPVR,6)">$INFO[ListItem.StartDate]$INFO[ListItem.StartTime, - ]</value>
+		<value condition="Skin.String(ViewsPVR,1) | Skin.String(ViewsPVR,2)">$INFO[ListItem.ChannelNumber]$INFO[ListItem.ChannelName,  -  ]</value>
+		<value condition="Skin.String(ViewsPVR,6)">$INFO[ListItem.StartDate]$INFO[ListItem.StartTime,  -  ]</value>
 	</variable>
 	
 	<variable name="LiveTVListInfoItemImage">

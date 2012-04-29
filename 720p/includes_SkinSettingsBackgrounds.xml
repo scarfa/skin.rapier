@@ -108,15 +108,6 @@
 					<onclick>Skin.SetBool(ExpandedSettings)</onclick>
 					<onclick>Control.SetFocus(946)</onclick>
 				</control>
-				<control type="radiobutton" id="4007">
-					<description>Customize General Background Settings</description>
-					<include>SettingsContentExpandBtn</include>
-					<label>$LOCALIZE[128]</label>
-					<selected>Skin.HasSetting(ExpandCustomGeneralBGSettings)</selected>
-					<onclick>Skin.SetBool(ExpandCustomGeneralBGSettings)</onclick>
-					<onclick>Skin.SetBool(ExpandedSettings)</onclick>
-					<onclick>Control.SetFocus(947)</onclick>
-				</control>
 				<control type="radiobutton" id="4013">
 					<description>Customize Weather Background Settings</description>
 					<include>SettingsContentExpandBtn</include>
@@ -126,6 +117,15 @@
 					<onclick>Skin.SetBool(ExpandedSettings)</onclick>
 					<onclick>Control.SetFocus(951)</onclick>
 					<enable>!IsEmpty(Weather.Plugin)</enable>
+				</control>
+				<control type="radiobutton" id="4007">
+					<description>Customize General Background Settings</description>
+					<include>SettingsContentExpandBtn</include>
+					<label>$LOCALIZE[128]</label>
+					<selected>Skin.HasSetting(ExpandCustomGeneralBGSettings)</selected>
+					<onclick>Skin.SetBool(ExpandCustomGeneralBGSettings)</onclick>
+					<onclick>Skin.SetBool(ExpandedSettings)</onclick>
+					<onclick>Control.SetFocus(947)</onclick>
 				</control>
 				<control type="radiobutton" id="4008">
 					<description>Customize System Background Settings</description>
@@ -1390,6 +1390,15 @@
 						<altlabel>$LOCALIZE[31060] - $LOCALIZE[392]</altlabel>
 						<usealttexture>Skin.HasSetting(WeatherBackgroundBrightnessHigh)</usealttexture>
 						<onclick>Skin.ToggleSetting(WeatherBackgroundBrightnessHigh)</onclick>
+						<visible>Skin.String(CustomWeatherBGType,2) | Skin.String(CustomWeatherBGType,3) | Skin.String(CustomWeatherBGType,4)</visible>
+					</control>
+					<control type="togglebutton" id="4413">
+						<description>Apply To All Windows</description>
+						<include>SettingsContentToggleBtn</include>
+						<label>$LOCALIZE[31052]</label>
+						<altlabel>$LOCALIZE[31051]</altlabel>
+						<usealttexture>!Skin.HasSetting(ApplyAllWeatherCustomBG)</usealttexture>
+						<onclick>Skin.ToggleSetting(ApplyAllWeatherCustomBG)</onclick>
 						<visible>Skin.String(CustomWeatherBGType,2) | Skin.String(CustomWeatherBGType,3) | Skin.String(CustomWeatherBGType,4)</visible>
 					</control>
 				</control>

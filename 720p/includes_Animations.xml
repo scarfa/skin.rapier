@@ -277,10 +277,6 @@
 		<animation effect="fade" end="4" condition="true">Conditional</animation>
 	</include>
 
-	<include name="NextAiredItemFadeAnim">
-		<animation effect="fade" end="80" condition="true">Conditional</animation>
-	</include>
-
 	<include name="NextAiredHeaderInfoFadeAnim">
 		<animation effect="fade" end="1" condition="true">Conditional</animation>
 	</include>		
