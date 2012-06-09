@@ -19,7 +19,7 @@ https://github.com/scarfa/skin.rapier
 
 SUPPORT: 
 
-http://blog.xbmc.org/forum/forumdisplay.php?f=120
+http://forum.xbmc.org/forumdisplay.php?fid=120
 
 ---------- INSTALL --------------------------------------------------------------------------
 
